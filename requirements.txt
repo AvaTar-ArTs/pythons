@@ -1,43 +1,79 @@
-# Core dependencies
-requests>=2.31.0
-pathlib2>=2.3.7
-typing-extensions>=4.7.0
+# Python Scripts Collection - Requirements
+# Generated from analyzing 500+ files
 
-# Data processing
-pandas>=2.0.0
-numpy>=1.24.0
-openpyxl>=3.1.0
+# ═══════════════════════════════════════════════════════════════
+# AI & ML PLATFORMS
+# ═══════════════════════════════════════════════════════════════
+openai
+anthropic
+groq
 
-# Web frameworks
-flask>=2.3.0
-fastapi>=0.100.0
-django>=4.2.0
+# ═══════════════════════════════════════════════════════════════
+# MEDIA PROCESSING
+# ═══════════════════════════════════════════════════════════════
+moviepy
+pydub
+whisper
 
-# AI/ML
-openai>=1.0.0
-transformers>=4.30.0
-torch>=2.0.0
-scikit-learn>=1.3.0
+# ═══════════════════════════════════════════════════════════════
+# DATA & WEB
+# ═══════════════════════════════════════════════════════════════
+pandas
+requests
+selenium
+numpy
 
-# Image processing
-Pillow>=10.0.0
-opencv-python>=4.8.0
-matplotlib>=3.7.0
+# ═══════════════════════════════════════════════════════════════
+# SOCIAL MEDIA & AUTOMATION
+# ═══════════════════════════════════════════════════════════════
+spotipy
 
-# Audio/Video
-moviepy>=1.0.3
-pydub>=0.25.1
-whisper-openai>=20231117
+# ═══════════════════════════════════════════════════════════════
+# UTILITIES
+# ═══════════════════════════════════════════════════════════════
+rich
+tqdm
+jinja2
 
-# Development tools
-pytest>=7.4.0
-black>=23.7.0
-flake8>=6.0.0
-mypy>=1.5.0
-isort>=5.12.0
-
-# Utilities
-python-dotenv>=1.0.0
-click>=8.1.0
-tqdm>=4.65.0
-rich>=13.5.0
+# ═══════════════════════════════════════════════════════════════
+# OTHER PACKAGES
+# ═══════════════════════════════════════════════════════════════
+PIL
+simplegallery
+numpy
+ytdl
+core
+dataclasses
+helper_funcs
+config
+psd_tools
+glob
+utils
+cv2
+hachoir
+bs4
+asyncio
+mutagen
+pytest
+difflib
+threading
+radon
+zipfile
+pypdf
+concurrent
+PyQt5
+tempfile
+pyrogram
+translation
+sample_config
+utilities
+uuid
+mimetypes
+reportlab
+platform
+googleapiclient
+enum
+llm_engineering
+pptx
+pkg_resources
+termcolor
