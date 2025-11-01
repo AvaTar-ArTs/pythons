@@ -1,0 +1,16 @@
+API KEY FIX REPORT
+======================================================================
+
+Fixed: 0 files
+Errors: 1
+
+
+FIXED FILES:
+----------------------------------------------------------------------
+
+
+ERRORS:
+----------------------------------------------------------------------
+
+_versions/SOCIAL_PLATFORMS/youtube/youtube_13.py:
+  ? ERROR: 'utf-8' codec can't decode byte 0x87 in position 15: invalid start byte

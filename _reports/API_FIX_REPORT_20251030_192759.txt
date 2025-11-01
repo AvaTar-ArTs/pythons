@@ -1,0 +1,168 @@
+API KEY FIX REPORT
+======================================================================
+
+Fixed: 38 files
+Errors: 1
+
+
+FIXED FILES:
+----------------------------------------------------------------------
+
+mistral.py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+yt-thumbnail-dl.py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+dthumb.py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+quiz_image_enrichment_stub.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+upscalecreateimages.py:
+  ? OPENAI: 2 replacements
+  ? Added ~/.env.d loader
+
+YTubeDLthumbs.py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+2..py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+gpt.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/SOCIAL_PLATFORMS/youtube/YTubeDLthumbs(1).py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/SOCIAL_PLATFORMS/youtube/yt_17.py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/SOCIAL_PLATFORMS/youtube/YTubeDLthumbscopy_2.py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/DEVELOPMENT/script/script_62.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/DEVELOPMENT/script/script_167.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/WEB_SCRAPING/download/YTdownloadthumbcopy_1.py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/WEB_SCRAPING/download/YTdownloadthumb_1.py:
+  ? ELEVENLABS: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/FILE_MANAGEMENT/organize/cleaned_30.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/FILE_MANAGEMENT/organize/cleaned_26.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/curld_1.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/quiz-time_3.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/trek_15.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/trek_10.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/trek_14.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/trek_13.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/Quiz-txt2speech_2.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/Quiz22sec_7.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/curl_3.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/trek_16.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/Quiz22sec_6.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/trek_12.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/Quiz22sec(1).py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/trek_9.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/quiz/quiz_7.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/CONTENT_CREATION/suno/suno_csv_generator_v2.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/UTILITIES/misc/GenerateTexts_3.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/MEDIA_PROCESSING/image/upcreatmod_5.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/MEDIA_PROCESSING/image/upcreatmod(1).py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/MEDIA_PROCESSING/image/dalle_2.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+_versions/MEDIA_PROCESSING/audio/trek_8.py:
+  ? OPENAI: 1 replacements
+  ? Added ~/.env.d loader
+
+
+ERRORS:
+----------------------------------------------------------------------
+
+_versions/SOCIAL_PLATFORMS/youtube/youtube_13.py:
+  ? ERROR: 'utf-8' codec can't decode byte 0x87 in position 15: invalid start byte

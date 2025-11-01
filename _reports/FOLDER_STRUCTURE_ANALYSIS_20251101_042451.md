@@ -1,0 +1,2256 @@
+# 🌳 CONTENT-AWARE FOLDER STRUCTURE ANALYSIS
+
+**Generated:** 2025-11-01 04:24:51
+
+---
+
+## 📊 EXECUTIVE SUMMARY
+
+| Metric | Value |
+|--------|-------|
+| Total Folders | 1,152 |
+| Total Python Files | 3,157 |
+| Maximum Depth | 7 levels |
+| Categories Found | 13 |
+
+## 🎯 CATEGORY DISTRIBUTION
+
+- **ai_tools**: 186 folders
+- **media_processing**: 134 folders
+- **data_analysis**: 120 folders
+- **configuration**: 116 folders
+- **testing**: 72 folders
+- **automation**: 66 folders
+- **utilities**: 59 folders
+- **api_integrations**: 59 folders
+- **content_creation**: 50 folders
+- **social_media**: 41 folders
+- **documentation**: 33 folders
+- **file_management**: 31 folders
+- **web_scraping**: 7 folders
+
+## 🌳 FOLDER HIERARCHY
+
+├── 📁 **tiktok-video-downloader** 
+├── 📁 **quiz-talk** (8 .py) [ai_tools, media_processing]
+│   ├── 📁 **quizly** 
+│   ├── 📁 **quiz329** (2 .py) [ai_tools]
+│   │   └── 📁 **question** 
+│   └── 📁 **Otras** 
+├── 📁 **InstagramReportBot** (2 .py) [automation, social_media]
+│   ├── 📁 **InstaReport** 
+│   │   └── 📁 **InstaReport** 
+│   │       └── 📁 **InstaReport** (1 .py) [automation, social_media]
+│   │           └── 📁 **libs** (3 .py) [media_processing, automation]
+│   ├── 📁 **libs** (1 .py) [automation, social_media]
+│   └── 📁 **assets** 
+├── 📁 **background** 
+├── 📁 **POD-auto** (8 .py) [media_processing]
+├── 📁 **reddit-text-extract** 
+│   ├── 📁 **app** (1 .py) [social_media]
+│   └── 📁 **config** 
+├── 📁 **AutomatedYoutubeShorts** (5 .py) [ai_tools, media_processing]
+├── 📁 **redbubble.group** 
+│   └── 📁 **Redbubble.ns** 
+│       ├── 📁 **RecognitionFiles** 
+│       ├── 📁 **Annotations** 
+│       ├── 📁 **Templates** 
+│       └── 📁 **Metadata** 
+├── 📁 **Instagram-mass-reporter** 
+├── 📁 **tablecontentspython** 
+├── 📁 **bare_except_backup_20251101_033421** (55 .py) [utilities, testing]
+│   ├── 📁 **InstagramReportBot** 
+│   │   └── 📁 **InstaReport** 
+│   │       └── 📁 **InstaReport** 
+│   │           └── 📁 **InstaReport** 
+│   │               └── 📁 **libs** (1 .py) [social_media, automation]
+│   ├── 📁 **analyzers** (1 .py) [ai_tools]
+│   ├── 📁 **Automated Reddit to Youtube Bot** (2 .py) [automation, configuration]
+│   ├── 📁 **FOSS-Voice-Assistant** 
+│   │   └── 📁 **src** (1 .py)
+│   ├── 📁 **SpotifyMP3** 
+│   │   └── 📁 **.history** (1 .py) [data_analysis]
+│   ├── 📁 **TikTok-Compilation-Video-Generator** 
+│   │   └── 📁 **TikTok Client** (1 .py) [social_media, content_creation]
+│   ├── 📁 **one-offs** (1 .py) [ai_tools, documentation]
+│   ├── 📁 **Instagram-Mass-report** 
+│   │   └── 📁 **libs** (2 .py) [media_processing, social_media]
+│   ├── 📁 **_versions** 
+│   │   ├── 📁 **SOCIAL_PLATFORMS** 
+│   │   │   ├── 📁 **youtube** (5 .py) [ai_tools, api_integrations]
+│   │   │   ├── 📁 **reddit** (1 .py) [social_media]
+│   │   │   └── 📁 **instagram** (4 .py) [social_media, data_analysis]
+│   │   ├── 📁 **DEVELOPMENT** 
+│   │   │   ├── 📁 **gui_apps** (1 .py)
+│   │   │   ├── 📁 **utils** (2 .py) [utilities]
+│   │   │   ├── 📁 **script** (10 .py) [testing, data_analysis]
+│   │   │   ├── 📁 **testing** (2 .py) [testing, data_analysis]
+│   │   │   ├── 📁 **batch** (1 .py) [testing, ai_tools]
+│   │   │   └── 📁 **main** (1 .py) [data_analysis, ai_tools]
+│   │   ├── 📁 **WEB_SCRAPING** 
+│   │   │   ├── 📁 **download** (5 .py) [testing, ai_tools]
+│   │   │   └── 📁 **api_clients** (1 .py) [api_integrations]
+│   │   ├── 📁 **PROJECTS** 
+│   │   │   └── 📁 **tehSiTes** (1 .py) [ai_tools]
+│   │   ├── 📁 **DATA_PROCESSING** 
+│   │   │   └── 📁 **json** (2 .py) [data_analysis, configuration]
+│   │   ├── 📁 **FILE_MANAGEMENT** 
+│   │   │   └── 📁 **organize** (13 .py) [media_processing, api_integrations]
+│   │   ├── 📁 **CONTENT_CREATION** 
+│   │   │   ├── 📁 **nocturne** (5 .py) [data_analysis, ai_tools]
+│   │   │   └── 📁 **video_automation** (1 .py) [data_analysis, automation]
+│   │   ├── 📁 **UTILITIES** 
+│   │   │   ├── 📁 **misc** (3 .py) [utilities]
+│   │   │   └── 📁 **file_operations** (10 .py) [utilities, testing]
+│   │   ├── 📁 **MEDIA_PROCESSING** 
+│   │   │   ├── 📁 **video** (1 .py) [media_processing]
+│   │   │   ├── 📁 **upscale** (2 .py) [testing, ai_tools]
+│   │   │   ├── 📁 **image** (3 .py) [testing, file_management]
+│   │   │   ├── 📁 **audio** (2 .py) [media_processing]
+│   │   │   └── 📁 **convert** (6 .py) [data_analysis, configuration]
+│   │   ├── 📁 **AUTOMATION** 
+│   │   │   └── 📁 **selenium** (2 .py) [data_analysis, automation]
+│   │   └── 📁 **AI_TOOLS** 
+│   │       ├── 📁 **claude** (2 .py) [data_analysis, utilities]
+│   │       └── 📁 **stability** (2 .py) [utilities, data_analysis]
+│   ├── 📁 **leonardo** 
+│   │   ├── 📁 **myenv_lib_python3.11_site-packages_pip__vendor_pygments_formatters** (1 .py) [configuration, ai_tools]
+│   │   ├── 📁 **myenv_lib_python3.11_site-packages_pip** 
+│   │   ├── 📁 **myenv_lib_python3.11_site-packages_pip__vendor_pygments** 
+│   │   ├── 📁 **myenv_lib_python3.11_site-packages_pip__vendor_cachecontrol_caches** (1 .py) [configuration]
+│   │   ├── 📁 **myenv_lib_python3.11_site-packages_pip__vendor** 
+│   │   ├── 📁 **myenv** 
+│   │   │   └── 📁 **lib** 
+│   │   │       └── 📁 **python3.11** 
+│   │   │           └── 📁 **site-packages** 
+│   │   └── 📁 **myenv_lib_python3.11_site-packages_pip__vendor_cachecontrol** 
+│   ├── 📁 **videoGenerator** 
+│   │   └── 📁 **.history** (1 .py) [data_analysis, content_creation]
+│   ├── 📁 **YouTube-Livestream-Botter** (1 .py) [api_integrations, ai_tools]
+│   ├── 📁 **PrNdOwN** 
+│   │   └── 📁 **PrNdOwN** (1 .py) [data_analysis, configuration]
+│   ├── 📁 **advanced_workflows** (3 .py) [data_analysis, automation]
+│   ├── 📁 **Youtube** 
+│   │   └── 📁 **YoutubeBot** 
+│   │       └── 📁 **Firefox** (1 .py) [automation]
+│   ├── 📁 **TG-MegaBot** 
+│   │   ├── 📁 **plugins** (10 .py) [automation]
+│   │   └── 📁 **helper_funcs** (1 .py) [utilities, automation]
+│   ├── 📁 **redditVideoGenerator** (2 .py) [media_processing, content_creation]
+│   ├── 📁 **Twitch-Best-Of** (1 .py) [ai_tools]
+│   ├── 📁 **Backlinker** (1 .py)
+│   ├── 📁 **python3.9** 
+│   │   ├── 📁 **lib_python3.12_site-packages_pip__vendor_pygments** 
+│   │   ├── 📁 **lib_python3.12_site-packages_pip__vendor_rich** (2 .py)
+│   │   ├── 📁 **lib_python3.12_site-packages_pip__vendor_pygments_formatters** (1 .py) [ai_tools]
+│   │   ├── 📁 **lib_python3.12_site-packages_pip__vendor_msgpack** (1 .py) [data_analysis, ai_tools]
+│   │   ├── 📁 **lib** 
+│   │   │   └── 📁 **python3.12** 
+│   │   │       └── 📁 **site-packages** 
+│   │   │           └── 📁 **pip** 
+│   │   └── 📁 **lib_python3.12_site-packages_pip__vendor** 
+│   ├── 📁 **simple-photo-gallery** 
+│   │   └── 📁 **simplegallery** (1 .py) [data_analysis, ai_tools]
+│   ├── 📁 **reddit-to-instagram-bot** 
+│   │   └── 📁 **RDT-IG bot** (1 .py) [social_media, automation]
+│   ├── 📁 **Untitled** 
+│   │   └── 📁 **src** (2 .py) [automation]
+│   ├── 📁 **007spam-BOT** 
+│   │   └── 📁 **libs** (2 .py) [api_integrations, automation]
+│   └── 📁 **TwitchCompilationCreator** 
+│       └── 📁 **src** (1 .py) [content_creation]
+├── 📁 **analyzers** (8 .py) [utilities, testing]
+├── 📁 **comprehensive_docs** 
+│   ├── 📁 **pydoc** 
+│   │   └── 📁 **html** 
+│   ├── 📁 **projects** 
+│   │   ├── 📁 **01_core_ai_analysis** 
+│   │   ├── 📁 **comprehensive_docs** 
+│   │   ├── 📁 **github_improvements** 
+│   │   ├── 📁 **code_browser** 
+│   │   ├── 📁 **04_content_creation** 
+│   │   ├── 📁 **This script is related to processing and categorizing output from the Flake8 static code analysis tool. A suitable category for this script could be "Static Code Analysis".** 
+│   │   ├── 📁 **github_templates** 
+│   │   ├── 📁 **05_audio_video** 
+│   │   ├── 📁 **config** 
+│   │   ├── 📁 **04_web_scraping** 
+│   │   ├── 📁 **_py_audit** 
+│   │   ├── 📁 **tests** 
+│   │   ├── 📁 **docs** 
+│   │   ├── 📁 **01_core_tools** 
+│   │   ├── 📁 **06_utilities** 
+│   │   ├── 📁 **02_youtube_automation** 
+│   │   ├── 📁 **quality_reports** 
+│   │   ├── 📁 **02_media_processing** 
+│   │   ├── 📁 **06_development_tools** 
+│   │   ├── 📁 **08_archived** 
+│   │   ├── 📁 **business_setup** 
+│   │   ├── 📁 **scrape-youtube-channel-videos-url** 
+│   │   ├── 📁 **gemini_storybook_downloader** 
+│   │   ├── 📁 **03_ai_creative_tools** 
+│   │   ├── 📁 **03_automation_platforms** 
+│   │   ├── 📁 **07_experimental** 
+│   │   ├── 📁 **github_repo** 
+│   │   ├── 📁 **focused_analysis_output** 
+│   │   ├── 📁 **05_data_management** 
+│   │   ├── 📁 **00_shared_libraries** 
+│   │   ├── 📁 **MIGRATION_BACKUP** 
+│   │   ├── 📁 **09_documentation** 
+│   │   ├── 📁 **-p_segments** 
+│   │   ├── 📁 **transcription_analyzer** 
+│   │   └── 📁 **reports** 
+│   ├── 📁 **sphinx** 
+│   │   └── 📁 **source** (1 .py) [documentation]
+│   │       ├── 📁 **projects** 
+│   │       ├── 📁 **api** 
+│   │       └── 📁 **tutorials** 
+│   ├── 📁 **portfolio** 
+│   └── 📁 **api** 
+├── 📁 **Automated Reddit to Youtube Bot** (4 .py) [media_processing, automation]
+│   ├── 📁 **docs** 
+│   └── 📁 **assets** 
+│       └── 📁 **scary** 
+│           └── 📁 **transition** 
+├── 📁 **github_improvements** (1 .py) [ai_tools]
+│   └── 📁 **github_workflows** 
+├── 📁 **Instagram-Bot** 
+├── 📁 **FOSS-Voice-Assistant** 
+│   └── 📁 **src** (2 .py)
+│       └── 📁 **.vscode** 
+├── 📁 **tui.editor** 
+│   ├── 📁 **__mocks__** 
+│   ├── 📁 **types** 
+│   ├── 📁 **plugins** 
+│   │   ├── 📁 **uml** 
+│   │   │   ├── 📁 **demo** 
+│   │   │   │   └── 📁 **esm** 
+│   │   │   └── 📁 **src** 
+│   │   │       └── 📁 **__test__** 
+│   │   │           └── 📁 **integration** 
+│   │   ├── 📁 **color-syntax** 
+│   │   │   ├── 📁 **demo** 
+│   │   │   │   └── 📁 **esm** 
+│   │   │   ├── 📁 **types** 
+│   │   │   └── 📁 **src** 
+│   │   │       ├── 📁 **css** 
+│   │   │       ├── 📁 **__test__** 
+│   │   │       │   └── 📁 **integration** 
+│   │   │       ├── 📁 **utils** 
+│   │   │       └── 📁 **i18n** 
+│   │   ├── 📁 **chart** 
+│   │   │   ├── 📁 **demo** 
+│   │   │   │   └── 📁 **esm** 
+│   │   │   ├── 📁 **types** 
+│   │   │   └── 📁 **src** 
+│   │   │       └── 📁 **__test__** 
+│   │   │           └── 📁 **unit** 
+│   │   ├── 📁 **code-syntax-highlight_src___test___integration___snapshots__** 
+│   │   ├── 📁 **table-merged-cell_src___test___integration_wysiwyg** 
+│   │   ├── 📁 **table-merged-cell** 
+│   │   │   ├── 📁 **demo** 
+│   │   │   │   └── 📁 **esm** 
+│   │   │   ├── 📁 **types** 
+│   │   │   └── 📁 **src** 
+│   │   │       ├── 📁 **css** 
+│   │   │       ├── 📁 **markdown** 
+│   │   │       ├── 📁 **wysiwyg** 
+│   │   │       │   └── 📁 **command** 
+│   │   │       ├── 📁 **__test__** 
+│   │   │       │   └── 📁 **integration** 
+│   │   │       └── 📁 **i18n** 
+│   │   ├── 📁 **code-syntax-highlight** 
+│   │   │   ├── 📁 **demo** 
+│   │   │   │   └── 📁 **esm** 
+│   │   │   ├── 📁 **types** 
+│   │   │   └── 📁 **src** 
+│   │   │       ├── 📁 **renderers** 
+│   │   │       ├── 📁 **css** 
+│   │   │       ├── 📁 **plugins** 
+│   │   │       ├── 📁 **__test__** 
+│   │   │       │   ├── 📁 **unit** 
+│   │   │       │   └── 📁 **integration** 
+│   │   │       ├── 📁 **utils** 
+│   │   │       └── 📁 **nodeViews** 
+│   │   ├── 📁 **table-merged-cell_src___test___integration_wysiwyg_helper** 
+│   │   └── 📁 **table-merged-cell_src___test___integration_markdown** 
+│   ├── 📁 **docs** 
+│   │   └── 📁 **ko** 
+│   ├── 📁 **libs** 
+│   │   ├── 📁 **toastmark_src_commonmark_custom___test__** 
+│   │   ├── 📁 **toastmark** 
+│   │   │   ├── 📁 **demo** 
+│   │   │   ├── 📁 **types** 
+│   │   │   └── 📁 **src** 
+│   │   │       ├── 📁 **__test__** 
+│   │   │       ├── 📁 **__sample__** 
+│   │   │       ├── 📁 **html** 
+│   │   │       │   └── 📁 **__test__** 
+│   │   │       └── 📁 **commonmark** 
+│   │   │           ├── 📁 **__test__** 
+│   │   │           ├── 📁 **frontMatter** 
+│   │   │           ├── 📁 **custom** 
+│   │   │           └── 📁 **gfm** 
+│   │   ├── 📁 **toastmark_src_commonmark_frontMatter___test__** 
+│   │   └── 📁 **toastmark_src_commonmark_gfm___test__** 
+│   ├── 📁 **scripts** 
+│   └── 📁 **apps** 
+│       ├── 📁 **editor_src___test___unit_wysiwyg_helper** 
+│       ├── 📁 **editor_src_wysiwyg_plugins_selection** 
+│       ├── 📁 **editor_src___test___unit_wysiwyg** 
+│       ├── 📁 **editor_src___test___integration_widget** 
+│       ├── 📁 **editor_src___test___unit_helper** 
+│       ├── 📁 **editor_src_ui_components_toolbar** 
+│       ├── 📁 **editor_src___test___integration_ui** 
+│       ├── 📁 **editor_src___test___unit_vdom** 
+│       ├── 📁 **editor_src_markdown_plugins_helper** 
+│       ├── 📁 **editor_src___test___unit_markdown___snapshots__** 
+│       ├── 📁 **editor_src___test___integration_vdom** 
+│       ├── 📁 **vue-editor** 
+│       │   ├── 📁 **demo** 
+│       │   │   └── 📁 **esm** 
+│       │   └── 📁 **src** 
+│       │       └── 📁 **mixin** 
+│       ├── 📁 **editor_src___test___unit_markdown** 
+│       ├── 📁 **editor** 
+│       │   ├── 📁 **types** 
+│       │   ├── 📁 **examples** 
+│       │   │   ├── 📁 **css** 
+│       │   │   └── 📁 **data** 
+│       │   ├── 📁 **scripts** 
+│       │   └── 📁 **src** 
+│       │       ├── 📁 **ui** 
+│       │       │   ├── 📁 **components** 
+│       │       │   └── 📁 **vdom** 
+│       │       ├── 📁 **widget** 
+│       │       ├── 📁 **css** 
+│       │       ├── 📁 **esm** 
+│       │       ├── 📁 **plugins** 
+│       │       ├── 📁 **markdown** 
+│       │       │   ├── 📁 **scroll** 
+│       │       │   ├── 📁 **marks** 
+│       │       │   ├── 📁 **nodes** 
+│       │       │   ├── 📁 **plugins** 
+│       │       │   └── 📁 **helper** 
+│       │       ├── 📁 **wysiwyg** 
+│       │       │   ├── 📁 **marks** 
+│       │       │   ├── 📁 **nodes** 
+│       │       │   ├── 📁 **plugins** 
+│       │       │   ├── 📁 **nodeview** 
+│       │       │   ├── 📁 **adaptor** 
+│       │       │   ├── 📁 **command** 
+│       │       │   ├── 📁 **helper** 
+│       │       │   └── 📁 **clipboard** 
+│       │       ├── 📁 **__test__** 
+│       │       │   ├── 📁 **unit** 
+│       │       │   └── 📁 **integration** 
+│       │       ├── 📁 **spec** 
+│       │       ├── 📁 **sanitizer** 
+│       │       ├── 📁 **convertors** 
+│       │       │   ├── 📁 **toWysiwyg** 
+│       │       │   └── 📁 **toMarkdown** 
+│       │       ├── 📁 **queries** 
+│       │       ├── 📁 **utils** 
+│       │       ├── 📁 **img** 
+│       │       ├── 📁 **commands** 
+│       │       ├── 📁 **i18n** 
+│       │       ├── 📁 **helper** 
+│       │       └── 📁 **event** 
+│       └── 📁 **react-editor** 
+│           ├── 📁 **demo** 
+│           │   └── 📁 **esm** 
+│           └── 📁 **src** 
+├── 📁 **trashy-python** (3 .py) [media_processing]
+│   └── 📁 **music_project** 
+├── 📁 **ygpt** (1 .py) [ai_tools]
+│   ├── 📁 **youtube-gpt** 
+│   │   └── 📁 **.vscode** 
+│   └── 📁 **utils** (2 .py) [utilities, content_creation]
+├── 📁 **fdupes** (2 .py) [data_analysis, media_processing]
+│   └── 📁 **clean** (2 .py) [data_analysis, media_processing]
+├── 📁 **cleaners** (6 .py) [file_management, ai_tools]
+├── 📁 **igbot** 
+│   ├── 📁 **instabot** 
+│   │   ├── 📁 **api** (2 .py) [api_integrations, automation]
+│   │   └── 📁 **bot** (5 .py) [data_analysis, automation]
+│   │       └── 📁 **state** (2 .py) [automation]
+│   ├── 📁 **tests** (7 .py) [data_analysis, testing]
+│   └── 📁 **examples** (44 .py) [content_creation, automation]
+│       ├── 📁 **video** (1 .py) [automation, media_processing]
+│       ├── 📁 **config** 
+│       ├── 📁 **comment** 
+│       ├── 📁 **autopost** (1 .py) [automation]
+│       ├── 📁 **ultimate** 
+│       ├── 📁 **ultimate_schedule** (1 .py) [automation, media_processing]
+│       ├── 📁 **photos** 
+│       └── 📁 **black-whitelist** 
+├── 📁 **llm-course-main** 
+│   ├── 📁 **.history** 
+│   └── 📁 **img** 
+├── 📁 **SpotifyMP3** (1 .py)
+│   └── 📁 **.history** (4 .py) [data_analysis]
+├── 📁 **backlink-checker** 
+├── 📁 **download-all-the-gifs** 
+├── 📁 **TikTok-Compilation-Video-Generator** 
+│   ├── 📁 **TikTok Server** (7 .py) [testing, media_processing]
+│   │   └── 📁 **UI** 
+│   ├── 📁 **TikTok Video Generator** (5 .py) [testing, media_processing]
+│   │   └── 📁 **UI** 
+│   └── 📁 **TikTok Client** (4 .py) [testing, media_processing]
+│       └── 📁 **UI** 
+├── 📁 **Nice-seemingly-macOS-backup-utility-based-on-rsync-called-grsyncx** 
+│   ├── 📁 **grsyncx** 
+│   │   ├── 📁 **Resources** 
+│   │   │   └── 📁 **Assets.xcassets** 
+│   │   │       ├── 📁 **custom_title_color.colorset** 
+│   │   │       ├── 📁 **icon-play.imageset** 
+│   │   │       ├── 📁 **source_wrap_hint.imageset** 
+│   │   │       ├── 📁 **AppIcon.appiconset** 
+│   │   │       └── 📁 **icon-chess.imageset** 
+│   │   ├── 📁 **Models** 
+│   │   ├── 📁 **Support** 
+│   │   ├── 📁 **Controllers** 
+│   │   │   ├── 📁 **SyncingView** 
+│   │   │   ├── 📁 **Window** 
+│   │   │   └── 📁 **MainView** 
+│   │   └── 📁 **Helpers** 
+│   └── 📁 **grsyncx.xcodeproj** 
+│       └── 📁 **xcshareddata** 
+│           └── 📁 **xcschemes** 
+├── 📁 **Drive-image-link-converter** 
+│   └── 📁 **assets** 
+│       ├── 📁 **css** 
+│       └── 📁 **js** 
+├── 📁 **sora-video-generator** (1 .py) [content_creation, media_processing]
+├── 📁 **spicetify-themes** 
+│   ├── 📁 **Nightlight** 
+│   │   └── 📁 **screenshots** 
+│   ├── 📁 **Dreary** 
+│   ├── 📁 **Onepunch** 
+│   │   └── 📁 **screenshots** 
+│   ├── 📁 **SharkBlue** 
+│   ├── 📁 **Sleek** 
+│   ├── 📁 **Blossom** 
+│   │   └── 📁 **images** 
+│   ├── 📁 **Default** 
+│   ├── 📁 **Matte** 
+│   │   └── 📁 **screenshots** 
+│   ├── 📁 **Dribbblish** 
+│   │   └── 📁 **images** 
+│   ├── 📁 **StarryNight** 
+│   │   └── 📁 **images** 
+│   ├── 📁 **text** 
+│   │   └── 📁 **screenshots** 
+│   ├── 📁 **BurntSienna** 
+│   ├── 📁 **Turntable** 
+│   │   └── 📁 **screenshots** 
+│   └── 📁 **Flow** 
+│       └── 📁 **screenshots** 
+├── 📁 **RedditVideoMakerBot-master** 
+│   ├── 📁 **RedditVideoMakerBot-master** (2 .py) [media_processing, content_creation]
+│   │   └── 📁 **GUI** 
+│   │       └── 📁 **voices** 
+│   ├── 📁 **utils** (3 .py) [utilities, media_processing]
+│   └── 📁 **TTS** (3 .py) [media_processing, content_creation]
+├── 📁 **one-offs** (15 .py) [data_analysis, content_creation]
+├── 📁 **Instagram-Mass-report** (1 .py) [social_media, ai_tools]
+│   ├── 📁 **.proxmark3** 
+│   │   └── 📁 **logs** 
+│   └── 📁 **libs** (5 .py) [media_processing, social_media]
+├── 📁 **This script is related to processing and categorizing output from the Flake8 static code analysis tool. A suitable category for this script could be "Static Code Analysis".** 
+├── 📁 **Manga-Colorization-FJ** (2 .py) [media_processing]
+│   ├── 📁 **denoising** (4 .py) [data_analysis, media_processing]
+│   │   └── 📁 **models** 
+│   ├── 📁 **input** 
+│   ├── 📁 **output** 
+│   ├── 📁 **utils** (1 .py) [utilities]
+│   ├── 📁 **networks** (2 .py) [automation]
+│   └── 📁 **assets** 
+├── 📁 **Redbubble-Auto-Uploader-stickers** 
+│   └── 📁 **data** 
+├── 📁 **instapy-quickstart** 
+│   ├── 📁 **quickstart_templates** (8 .py)
+│   ├── 📁 **installation** 
+│   │   ├── 📁 **MacOs** 
+│   │   ├── 📁 **Linux** 
+│   │   └── 📁 **Windows** 
+│   └── 📁 **run** 
+├── 📁 **test** (1 .py) [testing]
+├── 📁 **tiktok-comment-liker** 
+├── 📁 **fancybox** 
+│   ├── 📁 **dist** 
+│   └── 📁 **src** 
+│       ├── 📁 **css** 
+│       └── 📁 **js** 
+├── 📁 **github_templates** 
+│   ├── 📁 **workflow_templates** 
+│   ├── 📁 **gitignore_templates** 
+│   ├── 📁 **readme_templates** 
+│   └── 📁 **license_templates** 
+├── 📁 **Sort** (3 .py) [ai_tools]
+├── 📁 **_versions** 
+│   ├── 📁 **DATABASE** 
+│   │   └── 📁 **clients** (1 .py) [data_analysis, ai_tools]
+│   ├── 📁 **CLOUD_SERVICES** 
+│   │   └── 📁 **aws** (8 .py) [utilities, content_creation]
+│   ├── 📁 **ECOMMERCE** 
+│   │   ├── 📁 **payments** (1 .py) [testing, ai_tools]
+│   │   ├── 📁 **printify** (3 .py)
+│   │   ├── 📁 **redbubble** (1 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **etsy** (1 .py)
+│   ├── 📁 **SOCIAL_PLATFORMS** 
+│   │   ├── 📁 **etsy** (1 .py)
+│   │   ├── 📁 **youtube** (59 .py) [utilities, testing]
+│   │   ├── 📁 **telegram** (1 .py)
+│   │   ├── 📁 **reddit** (5 .py) [social_media]
+│   │   └── 📁 **instagram** (44 .py) [testing, media_processing]
+│   ├── 📁 **DEVELOPMENT** 
+│   │   ├── 📁 **gui_apps** (6 .py) [ai_tools]
+│   │   ├── 📁 **config** (1 .py) [configuration]
+│   │   ├── 📁 **setup** (13 .py) [testing, api_integrations]
+│   │   ├── 📁 **utils** (11 .py) [utilities, testing]
+│   │   ├── 📁 **script** (172 .py) [utilities, testing]
+│   │   ├── 📁 **testing** (35 .py) [testing, content_creation]
+│   │   ├── 📁 **batch** (7 .py) [testing, configuration]
+│   │   ├── 📁 **git_tools** (1 .py) [utilities, ai_tools]
+│   │   ├── 📁 **web_frameworks** (2 .py) [configuration, ai_tools]
+│   │   ├── 📁 **main** (22 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **process** (20 .py) [data_analysis, configuration]
+│   ├── 📁 **WEB_SCRAPING** 
+│   │   ├── 📁 **download** (29 .py) [testing, api_integrations]
+│   │   ├── 📁 **api_clients** (9 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **image_search** (1 .py) [api_integrations, media_processing]
+│   ├── 📁 **PROJECTS** 
+│   │   ├── 📁 **tehSiTes** (3 .py) [ai_tools]
+│   │   ├── 📁 **dr_adu_seo** (1 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **avatararts** (1 .py)
+│   ├── 📁 **DATA_PROCESSING** 
+│   │   ├── 📁 **parse** (22 .py) [data_analysis, file_management]
+│   │   ├── 📁 **json** (14 .py) [data_analysis, utilities]
+│   │   ├── 📁 **csv** (16 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **pandas** (11 .py) [data_analysis, testing]
+│   ├── 📁 **FILE_MANAGEMENT** 
+│   │   ├── 📁 **organize** (103 .py) [utilities, testing]
+│   │   └── 📁 **upload** (17 .py) [ai_tools, api_integrations]
+│   ├── 📁 **CONTENT_CREATION** 
+│   │   ├── 📁 **leonardo** (15 .py) [data_analysis, ai_tools]
+│   │   ├── 📁 **nocturne** (57 .py) [testing, api_integrations]
+│   │   ├── 📁 **quiz** (35 .py) [media_processing, configuration]
+│   │   ├── 📁 **video_automation** (1 .py) [data_analysis, automation]
+│   │   └── 📁 **suno** (19 .py) [data_analysis, configuration]
+│   ├── 📁 **UTILITIES** 
+│   │   ├── 📁 **misc** (140 .py) [utilities, testing]
+│   │   ├── 📁 **file_operations** (35 .py) [utilities, testing]
+│   │   ├── 📁 **scripts** (6 .py) [data_analysis, utilities]
+│   │   └── 📁 **cli_tools** (4 .py) [utilities, testing]
+│   ├── 📁 **MEDIA_PROCESSING** 
+│   │   ├── 📁 **video** (43 .py) [testing, content_creation]
+│   │   ├── 📁 **upscale** (20 .py) [testing, configuration]
+│   │   ├── 📁 **image** (82 .py) [testing, social_media]
+│   │   ├── 📁 **audio** (49 .py) [utilities, media_processing]
+│   │   ├── 📁 **convert** (23 .py) [data_analysis, testing]
+│   │   └── 📁 **image_processing** (2 .py) [media_processing]
+│   ├── 📁 **AUTOMATION** 
+│   │   ├── 📁 **selenium** (4 .py) [content_creation, web_scraping]
+│   │   └── 📁 **playwright** (2 .py) [automation, social_media]
+│   └── 📁 **AI_TOOLS** 
+│       ├── 📁 **gpt** (16 .py) [utilities, ai_tools]
+│       ├── 📁 **claude** (16 .py) [utilities, testing]
+│       ├── 📁 **elevenlabs** (1 .py) [utilities, ai_tools]
+│       ├── 📁 **stability** (3 .py) [utilities, content_creation]
+│       ├── 📁 **analyze** (14 .py) [utilities, configuration]
+│       └── 📁 **whisper** (9 .py) [utilities, data_analysis]
+├── 📁 **suno-analytics** (1 .py) [data_analysis]
+│   ├── 📁 **.jupyter** 
+│   └── 📁 **notebooks** 
+│       └── 📁 **.ipynb_checkpoints** 
+├── 📁 **analysis_tools** (7 .py) [utilities, api_integrations]
+├── 📁 **spidy** 
+│   ├── 📁 **cmd** 
+│   │   └── 📁 **spidy** 
+│   │       └── 📁 **api** 
+│   ├── 📁 **config** 
+│   └── 📁 **internal** 
+│       ├── 📁 **service** 
+│       │   ├── 📁 **cache** 
+│       │   └── 📁 **writer** 
+│       └── 📁 **pkg** 
+│           ├── 📁 **spider** 
+│           │   └── 📁 **v1** 
+│           └── 📁 **hbyte** 
+├── 📁 **remove-bg-cli** 
+│   └── 📁 **.circleci** 
+├── 📁 **organize** (1 .py) [data_analysis, ai_tools]
+├── 📁 **youtube-uploader-main** 
+│   └── 📁 **src** (1 .py) [ai_tools]
+├── 📁 **04_web_scraping** 
+├── 📁 **instagram-follower-scraper** 
+├── 📁 **backlink_checker** (3 .py) [testing]
+│   └── 📁 **xgoogle** (2 .py)
+├── 📁 **reddit_video_maker** 
+│   ├── 📁 **images** 
+│   └── 📁 **src** (4 .py) [media_processing, content_creation]
+│       └── 📁 **examples** (2 .py) [media_processing, content_creation]
+├── 📁 **LLM-Engineers-Handbook-main** 
+│   ├── 📁 **llm_engineering** 
+│   │   ├── 📁 **model** (1 .py) [file_management, configuration]
+│   │   │   ├── 📁 **finetuning** (2 .py) [ai_tools, content_creation]
+│   │   │   └── 📁 **evaluation** (2 .py) [data_analysis, ai_tools]
+│   │   ├── 📁 **application** 
+│   │   │   └── 📁 **rag** (6 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **infrastructure** (2 .py) [file_management, ai_tools]
+│   │       └── 📁 **aws** 
+│   │           └── 📁 **deploy** (2 .py) [content_creation, configuration]
+│   │               └── 📁 **huggingface** (3 .py) [api_integrations, ai_tools]
+│   ├── 📁 **tools** (1 .py) [utilities, ai_tools]
+│   ├── 📁 **tests** 
+│   │   ├── 📁 **unit** (1 .py) [testing, ai_tools]
+│   │   └── 📁 **integration** (1 .py) [testing, ai_tools]
+│   └── 📁 **.vscode** 
+├── 📁 **upscale** (6 .py) [ai_tools, media_processing]
+├── 📁 **_unknown_files** 
+├── 📁 **leonardo** (7 .py) [media_processing]
+│   ├── 📁 **.history** (8 .py) [data_analysis, media_processing]
+│   ├── 📁 **.lh** 
+│   └── 📁 **myenv** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools_config** (3 .py) [utilities, testing]
+│       │   └── 📁 **_validate_pyproject** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_commands** (7 .py) [configuration, testing]
+│       ├── 📁 **lib_python3.11_site-packages_urllib3-2.2.1.dist-info_licenses** 
+│       ├── 📁 **lib_python3.11_site-packages_urllib3_contrib** (2 .py) [file_management, configuration]
+│       │   └── 📁 **emscripten** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_urllib3** (3 .py) [file_management, configuration]
+│       │   ├── 📁 **util** 
+│       │   ├── 📁 **contrib** 
+│       │   └── 📁 **packages** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_locations** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__vendor_importlib_metadata** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__vendor_importlib_resources** (3 .py) [utilities, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_urllib3_contrib_emscripten** (4 .py) [data_analysis, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_vcs** (3 .py) [configuration, ai_tools]
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_metadata_importlib** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_metadata** (2 .py) [data_analysis, utilities]
+│       │   └── 📁 **importlib** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_urllib3_packages** 
+│       │   └── 📁 **backports** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__vendor_tomli** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_req** (5 .py) [data_analysis, testing]
+│       ├── 📁 **bin** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__vendor_more_itertools** (2 .py) [utilities, content_creation]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_platformdirs** (6 .py) [data_analysis, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__vendor_pyparsing** (1 .py) [utilities, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_operations_build** (1 .py) [file_management, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_colorama_tests** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_requests** (4 .py) [file_management, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_rich** (2 .py) [configuration, ai_tools]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_urllib3_packages_backports** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_resolution** 
+│       │   ├── 📁 **legacy** 
+│       │   └── 📁 **resolvelib** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_certifi** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__vendor** (3 .py) [utilities, testing]
+│       │   ├── 📁 **packaging** 
+│       │   ├── 📁 **jaraco** 
+│       │   ├── 📁 **pyparsing** 
+│       │   ├── 📁 **importlib_metadata** 
+│       │   ├── 📁 **more_itertools** 
+│       │   ├── 📁 **importlib_resources** 
+│       │   └── 📁 **tomli** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_models** (6 .py) [data_analysis, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_network** (5 .py) [utilities, file_management]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor** (1 .py) [data_analysis, configuration]
+│       │   ├── 📁 **packaging** 
+│       │   ├── 📁 **chardet** 
+│       │   ├── 📁 **webencodings** 
+│       │   ├── 📁 **pygments** 
+│       │   ├── 📁 **distlib** 
+│       │   ├── 📁 **pyparsing** 
+│       │   ├── 📁 **distro** 
+│       │   ├── 📁 **colorama** 
+│       │   ├── 📁 **cachecontrol** 
+│       │   ├── 📁 **idna** 
+│       │   ├── 📁 **tenacity** 
+│       │   ├── 📁 **requests** 
+│       │   ├── 📁 **tomli** 
+│       │   ├── 📁 **certifi** 
+│       │   ├── 📁 **pyproject_hooks** 
+│       │   ├── 📁 **rich** 
+│       │   ├── 📁 **urllib3** 
+│       │   ├── 📁 **resolvelib** 
+│       │   └── 📁 **platformdirs** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_cachecontrol_caches** (2 .py) [configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_utils** (8 .py) [utilities, data_analysis]
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__vendor_packaging** (2 .py) [utilities, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_idna** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools_command** (25 .py) [utilities, testing]
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_operations_install** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_pyparsing** (9 .py) [utilities, testing]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_cachecontrol** (8 .py) [configuration]
+│       │   └── 📁 **caches** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_chardet_metadata** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_colorama** 
+│       │   └── 📁 **tests** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_urllib3_contrib** 
+│       │   └── 📁 **_securetransport** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_tenacity** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_index** (3 .py) [configuration, ai_tools]
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__distutils_command** (21 .py) [utilities, data_analysis]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_urllib3_contrib__securetransport** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_packaging** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_operations** (2 .py) [configuration, ai_tools]
+│       │   ├── 📁 **install** 
+│       │   └── 📁 **build** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__distutils** (27 .py) [utilities, testing]
+│       │   └── 📁 **command** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_resolution_resolvelib** (6 .py) [data_analysis, testing]
+│       ├── 📁 **lib** 
+│       │   └── 📁 **python3.11** 
+│       │       └── 📁 **site-packages** 
+│       │           ├── 📁 **pip-23.1.2.dist-info** 
+│       │           ├── 📁 **pillow-10.3.0.dist-info** 
+│       │           ├── 📁 **idna** (5 .py) [configuration]
+│       │           ├── 📁 **setuptools-65.5.0.dist-info** 
+│       │           ├── 📁 **charset_normalizer** (7 .py) [testing, configuration]
+│       │           ├── 📁 **PIL** (88 .py) [utilities, testing]
+│       │           ├── 📁 **requests** (8 .py) [file_management, configuration]
+│       │           ├── 📁 **pip** 
+│       │           │   ├── 📁 **_internal** 
+│       │           │   └── 📁 **_vendor** 
+│       │           ├── 📁 **requests-2.31.0.dist-info** 
+│       │           ├── 📁 **certifi** (1 .py) [configuration]
+│       │           ├── 📁 **charset_normalizer-3.3.2.dist-info** 
+│       │           ├── 📁 **urllib3-2.2.1.dist-info** 
+│       │           ├── 📁 **certifi-2024.2.2.dist-info** 
+│       │           ├── 📁 **idna-3.7.dist-info** 
+│       │           ├── 📁 **urllib3** (8 .py) [data_analysis, file_management]
+│       │           │   ├── 📁 **util** 
+│       │           │   └── 📁 **contrib** 
+│       │           └── 📁 **setuptools** (19 .py) [utilities, testing]
+│       │               ├── 📁 **_vendor** 
+│       │               ├── 📁 **config** 
+│       │               ├── 📁 **command** 
+│       │               └── 📁 **_distutils** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_distributions** (4 .py) [data_analysis, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_pyproject_hooks** 
+│       │   └── 📁 **_in_process** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_pyproject_hooks__in_process** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_tomli** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools_config__validate_pyproject** (5 .py) [utilities, testing]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_pygments_lexers** (1 .py) [data_analysis, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_resolvelib_compat** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_cli** (3 .py) [configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_resolvelib** 
+│       │   └── 📁 **compat** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal_resolution_legacy** (1 .py) [configuration]
+│       ├── 📁 **lib_python3.11_site-packages_urllib3_util** (12 .py) [utilities, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_chardet** 
+│       │   ├── 📁 **cli** 
+│       │   └── 📁 **metadata** 
+│       ├── 📁 **lib_python3.11_site-packages_PIL_.dylibs** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_chardet_cli** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_pygments_formatters** (12 .py) [testing, file_management]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_pygments** (14 .py) [testing, configuration]
+│       │   ├── 📁 **lexers** 
+│       │   └── 📁 **formatters** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_webencodings** 
+│       ├── 📁 **lib_python3.11_site-packages_setuptools__vendor_jaraco** (2 .py) [utilities, testing]
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_urllib3_util** (1 .py) [utilities, configuration]
+│       ├── 📁 **lib_python3.11_site-packages_pip__internal** (6 .py) [data_analysis, configuration]
+│       │   ├── 📁 **network** 
+│       │   ├── 📁 **utils** 
+│       │   ├── 📁 **models** 
+│       │   ├── 📁 **cli** 
+│       │   ├── 📁 **operations** 
+│       │   ├── 📁 **req** 
+│       │   ├── 📁 **resolution** 
+│       │   ├── 📁 **vcs** 
+│       │   ├── 📁 **locations** 
+│       │   ├── 📁 **index** 
+│       │   ├── 📁 **commands** 
+│       │   ├── 📁 **metadata** 
+│       │   └── 📁 **distributions** 
+│       ├── 📁 **lib_python3.11_site-packages_pip__vendor_distlib** (11 .py) [utilities, testing]
+│       └── 📁 **lib_python3.11_site-packages_pip__vendor_distro** 
+├── 📁 **transcribe-keywords** (21 .py) [data_analysis, ai_tools]
+├── 📁 **_py_audit** 
+│   └── 📁 **modules** 
+├── 📁 **rsync-macos-utility** 
+│   ├── 📁 **Tests** 
+│   │   └── 📁 **RsyncTests** 
+│   ├── 📁 **Sources** 
+│   │   └── 📁 **Rsync** 
+│   │       ├── 📁 **Models** 
+│   │       └── 📁 **Scripts** 
+│   └── 📁 **.swiftpm** 
+│       └── 📁 **xcode** 
+│           └── 📁 **package.xcworkspace** 
+│               └── 📁 **xcshareddata** 
+├── 📁 **videoGenerator** 
+│   ├── 📁 **intro_clip** 
+│   ├── 📁 **.history** (1 .py) [data_analysis, content_creation]
+│   └── 📁 **tempFiles** 
+├── 📁 **folder-file-sorter** (3 .py) [file_management]
+│   └── 📁 **.lh** 
+├── 📁 **TwitchClipGenerator-main** 
+├── 📁 **rsnapshot** 
+│   ├── 📁 **autom4te.cache** 
+│   ├── 📁 **utils** 
+│   │   └── 📁 **rsnapshotdb** 
+│   ├── 📁 **docs** 
+│   │   └── 📁 **HOWTOs** 
+│   ├── 📁 **t** 
+│   │   ├── 📁 **link-dest_-t_when_only_one_snapshot** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **configtest** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **ssh_args** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **rsnapshot_meta** 
+│   │   ├── 📁 **rsync** 
+│   │   ├── 📁 **snapshot_root_with_space** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **backup_exec** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **gnu_cp** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **long_and_short_args** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **relative_delete_bugfix** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **support** 
+│   │   │   ├── 📁 **skel** 
+│   │   │   └── 📁 **files** 
+│   │   │       └── 📁 **template** 
+│   │   │           └── 📁 **a** 
+│   │   ├── 📁 **cmd-post_pre-exec** 
+│   │   │   └── 📁 **conf** 
+│   │   ├── 📁 **native_cp_al** 
+│   │   │   └── 📁 **conf** 
+│   │   └── 📁 **rsync-exitcode** 
+│   │       └── 📁 **conf** 
+│   └── 📁 **contrib** 
+├── 📁 **ai-comic-factory-main** 
+│   ├── 📁 **public** 
+│   │   └── 📁 **favicon** 
+│   └── 📁 **src** 
+│       └── 📁 **app** 
+│           ├── 📁 **interface** 
+│           │   ├── 📁 **bottom-bar** 
+│           │   ├── 📁 **discord** 
+│           │   ├── 📁 **advert** 
+│           │   └── 📁 **about** 
+│           ├── 📁 **queries** 
+│           ├── 📁 **layouts** 
+│           └── 📁 **engine** 
+├── 📁 **tests** (6 .py) [testing, ai_tools]
+├── 📁 **pdf-img-html** (3 .py) [ai_tools, media_processing]
+├── 📁 **simplegallery-bin** 
+│   ├── 📁 **simplegallery2** 
+│   │   ├── 📁 **test** 
+│   │   │   └── 📁 **logic** 
+│   │   │       └── 📁 **variants** (1 .py) [data_analysis, testing]
+│   │   ├── 📁 **logic** (1 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **data** 
+│   │       └── 📁 **public** 
+│   │           └── 📁 **js** 
+│   ├── 📁 **simplegallery-app** 
+│   │   └── 📁 **simple_photo_gallery-1.5.6.dist-info** 
+│   ├── 📁 **.history** 
+│   │   └── 📁 **simplegallery** 
+│   │       └── 📁 **data** 
+│   │           ├── 📁 **public** 
+│   │           │   └── 📁 **js** 
+│   │           └── 📁 **templates** 
+│   ├── 📁 **simplegallery** (2 .py) [configuration, ai_tools]
+│   │   ├── 📁 **test** (1 .py) [configuration, testing]
+│   │   │   ├── 📁 **logic** 
+│   │   │   │   └── 📁 **variants** (1 .py) [data_analysis, testing]
+│   │   │   └── 📁 **upload** (1 .py) [testing]
+│   │   │       └── 📁 **variants** (2 .py) [configuration, testing]
+│   │   ├── 📁 **bin** 
+│   │   ├── 📁 **logic** 
+│   │   │   └── 📁 **variants** (2 .py) [data_analysis, ai_tools]
+│   │   ├── 📁 **data** 
+│   │   │   ├── 📁 **netlify** 
+│   │   │   ├── 📁 **public** 
+│   │   │   │   ├── 📁 **css** 
+│   │   │   │   ├── 📁 **images** 
+│   │   │   │   └── 📁 **js** 
+│   │   │   └── 📁 **templates** 
+│   │   └── 📁 **upload** (1 .py)
+│   └── 📁 **.lh** 
+├── 📁 **rsync-downloader** 
+│   ├── 📁 **mac** 
+│   └── 📁 **linux** 
+├── 📁 **YouTube-Livestream-Botter** (1 .py) [api_integrations, ai_tools]
+├── 📁 **PrNdOwN** (1 .py) [configuration]
+│   └── 📁 **PrNdOwN** (1 .py) [data_analysis, configuration]
+│       └── 📁 **ascii** 
+├── 📁 **HTML-Embed-youtube-videos-on-webpage** 
+├── 📁 **advanced_workflows** (15 .py) [testing, content_creation]
+├── 📁 **docs** 
+│   ├── 📁 **html** 
+│   │   ├── 📁 **css** 
+│   │   ├── 📁 **js** 
+│   │   └── 📁 **tutorials** 
+│   └── 📁 **consolidation_reports** 
+├── 📁 **01_core_tools** 
+├── 📁 **Youtube** (6 .py) [ai_tools, api_integrations]
+│   ├── 📁 **Youtube-Gmail-Account-Generator** 
+│   ├── 📁 **YouTube-Subscriber-Generator-by-VenomX** 
+│   │   └── 📁 **VenoxLauncher** 
+│   │       └── 📁 **.rsrc** 
+│   │           └── 📁 **MANIFEST** 
+│   ├── 📁 **YouTube-Upload-Bot** 
+│   │   └── 📁 **src** 
+│   │       ├── 📁 **json** 
+│   │       └── 📁 **helpers** 
+│   ├── 📁 **youtube-bulk-upload-main** 
+│   ├── 📁 **ygpt** (1 .py) [ai_tools]
+│   │   └── 📁 **utils** (2 .py) [utilities, content_creation]
+│   ├── 📁 **YT-AnalyticsDashboard** 
+│   │   ├── 📁 **public** 
+│   │   └── 📁 **src** 
+│   ├── 📁 **youtube-shorts-reddit-scraper** (1 .py) [web_scraping, social_media]
+│   │   └── 📁 **.history** (1 .py) [web_scraping, social_media]
+│   ├── 📁 **YouTube-playlists-to-csv-** 
+│   ├── 📁 **youtubegen** (1 .py)
+│   ├── 📁 **youtube_id** 
+│   │   └── 📁 **spec** 
+│   ├── 📁 **youtube-uploader-main** (1 .py) [ai_tools]
+│   │   └── 📁 **src** (2 .py) [configuration, ai_tools]
+│   ├── 📁 **YouTube-shorts-generator** (3 .py) [content_creation, web_scraping]
+│   │   └── 📁 **.history** 
+│   ├── 📁 **youtube-gpt-content-maker** 
+│   │   └── 📁 **utils** (1 .py) [utilities, ai_tools]
+│   ├── 📁 **YouTUBE-SUBSCRIBE-GENERATOR-MADE-BY-M3** 
+│   │   └── 📁 **.lh** 
+│   ├── 📁 **Youtube** (2 .py) [ai_tools, media_processing]
+│   ├── 📁 **.history** (16 .py) [api_integrations, media_processing]
+│   ├── 📁 **youtube-upload** (3 .py)
+│   │   ├── 📁 **bin** 
+│   │   ├── 📁 **youtube** 
+│   │   │   └── 📁 **bin** 
+│   │   └── 📁 **.history** 
+│   ├── 📁 **.lh** 
+│   ├── 📁 **ytdl** 
+│   │   └── 📁 **ytdl** (10 .py) [data_analysis, configuration]
+│   ├── 📁 **YouTube-Viewer** 
+│   │   └── 📁 **youtubeviewer** (1 .py)
+│   ├── 📁 **youtube-csv** (3 .py)
+│   └── 📁 **YoutubeBot** 
+│       └── 📁 **Firefox** (1 .py) [automation]
+├── 📁 **TG-MegaBot** (3 .py) [configuration, automation]
+│   ├── 📁 **plugins** (15 .py) [automation]
+│   └── 📁 **helper_funcs** (3 .py) [utilities, automation]
+├── 📁 **redditVideoGenerator** (11 .py) [media_processing, content_creation]
+│   └── 📁 **assets** 
+├── 📁 **Twitch-Best-Of** (2 .py) [ai_tools]
+│   └── 📁 **Images** 
+├── 📁 **Backlinker** (1 .py)
+├── 📁 **tiktok-generator** 
+├── 📁 **file_handling_data_processing_backup** (1 .py) [data_analysis]
+├── 📁 **this_script_falls_under_the_category_of_system_administration_as_it_performs_tasks_related_to_checking_and_listing_various_software_installations_on_the_system_and_exporting_the_data_to_a_csv_file** (1 .py) [data_analysis]
+├── 📁 **zip** 
+├── 📁 **comics_generator** (5 .py) [content_creation, media_processing]
+│   └── 📁 **output** 
+├── 📁 **clean** (2 .py) [data_analysis, media_processing]
+│   └── 📁 **ogPro** 
+├── 📁 **02_youtube_automation** 
+│   ├── 📁 **youtube_tools** 
+│   │   ├── 📁 **AutomatedYoutubeShorts** 
+│   │   │   └── 📁 **media** 
+│   │   ├── 📁 **youtube-shorts-reddit-scraper** 
+│   │   ├── 📁 **shorts_service_mvp_v1** 
+│   │   │   ├── 📁 **app** 
+│   │   │   ├── 📁 **web** 
+│   │   │   └── 📁 **worker** 
+│   │   ├── 📁 **YTube** 
+│   │   │   ├── 📁 **YouTube-shorts-generator** 
+│   │   │   └── 📁 **youtube-upload** 
+│   │   │       └── 📁 **examples** 
+│   │   ├── 📁 **Youtube** 
+│   │   │   ├── 📁 **YT-detail-info-Story** 
+│   │   │   │   ├── 📁 **mp4-mp3-trans-keys** 
+│   │   │   │   └── 📁 **lyrics-keys-indo** 
+│   │   │   ├── 📁 **Youtube-Gmail-Account-Generator** 
+│   │   │   │   └── 📁 **extension** 
+│   │   │   ├── 📁 **youtube-bulk-upload-main** 
+│   │   │   ├── 📁 **ygpt** 
+│   │   │   ├── 📁 **youtubegen** 
+│   │   │   ├── 📁 **youtube-uploader-main** 
+│   │   │   ├── 📁 **YouTube-shorts-generator** 
+│   │   │   ├── 📁 **Youtube** 
+│   │   │   ├── 📁 **YouTube-Viewer** 
+│   │   │   └── 📁 **youtube-csv** 
+│   │   └── 📁 **YoutubeBot** 
+│   │       └── 📁 **Firefox** 
+│   ├── 📁 **video_generators** 
+│   │   └── 📁 **Automatic-Video-Generator-for-youtube** 
+│   └── 📁 **reddit_tools** 
+│       └── 📁 **RedditVideoMakerBot-master** 
+│           ├── 📁 **RedditVideoMakerBot-master** 
+│           │   ├── 📁 **video_creation** 
+│           │   │   └── 📁 **data** 
+│           │   └── 📁 **GUI** 
+│           └── 📁 **utils** 
+├── 📁 **Automatic-Video-Generator-for-youtube** (2 .py) [content_creation, media_processing]
+├── 📁 **simple-photo-gallery** (1 .py)
+│   ├── 📁 **simplegallery** (4 .py) [data_analysis, ai_tools]
+│   │   ├── 📁 **test** (1 .py) [configuration, testing]
+│   │   │   └── 📁 **logic** 
+│   │   │       └── 📁 **variants** (3 .py) [testing, data_analysis]
+│   │   ├── 📁 **logic** 
+│   │   │   └── 📁 **variants** (3 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **data** 
+│   │       ├── 📁 **public** 
+│   │       │   ├── 📁 **css** 
+│   │       │   └── 📁 **js** 
+│   │       └── 📁 **templates** 
+│   ├── 📁 **examples** 
+│   │   ├── 📁 **test_gallery** 
+│   │   │   └── 📁 **src_photos** 
+│   │   ├── 📁 **gallery_usa_simple** 
+│   │   │   ├── 📁 **public** 
+│   │   │   │   ├── 📁 **css** 
+│   │   │   │   └── 📁 **js** 
+│   │   │   └── 📁 **templates** 
+│   │   └── 📁 **gallery_usa_multi** 
+│   │       ├── 📁 **public** 
+│   │       │   ├── 📁 **css** 
+│   │       │   └── 📁 **js** 
+│   │       └── 📁 **templates** 
+│   └── 📁 **doc** 
+├── 📁 **autoblog using the ChatGPT** (2 .py) [data_analysis, ai_tools]
+├── 📁 **github-audit-bundle** (1 .py) [ai_tools]
+├── 📁 **Riddle-Game** 
+│   └── 📁 **riddle** 
+│       └── 📁 **bin** 
+├── 📁 **scrape-youtube-channel-videos-url** (1 .py) [media_processing]
+├── 📁 **gemini_storybook_downloader** 
+├── 📁 **03_ai_creative_tools** 
+│   ├── 📁 **comic_factory** 
+│   │   ├── 📁 **main_src_app_interface_edit-modal** 
+│   │   ├── 📁 **main_src_app_interface_grid** 
+│   │   ├── 📁 **main_src_app_interface_auth-wall** 
+│   │   ├── 📁 **main_src_app_interface_zoom** 
+│   │   ├── 📁 **main_src_app_interface_advert** 
+│   │   ├── 📁 **main_src_app_interface_display** 
+│   │   ├── 📁 **main_src_app_interface_discord** 
+│   │   ├── 📁 **main_src_app_interface_select-layout** 
+│   │   ├── 📁 **main_src_app_interface_select-global-layout** 
+│   │   ├── 📁 **main_src_app_interface_about** 
+│   │   ├── 📁 **main_src_app_interface_maintenance** 
+│   │   ├── 📁 **main** 
+│   │   │   └── 📁 **src** 
+│   │   │       └── 📁 **app** 
+│   │   │           └── 📁 **interface** 
+│   │   └── 📁 **main_src_app_interface_page** 
+│   ├── 📁 **text_generators** 
+│   │   └── 📁 **typography** 
+│   └── 📁 **image_generation** 
+│       ├── 📁 **upscaler** 
+│       │   └── 📁 **upscale-python** 
+│       ├── 📁 **leonardo** 
+│       │   └── 📁 **leonardo** 
+│       └── 📁 **background_removal** 
+│           └── 📁 **remove-bg-cli** 
+│               ├── 📁 **test** 
+│               └── 📁 **remove-bg-tools** 
+├── 📁 **FB-Script-Auto-Post-All-Group** 
+│   └── 📁 **.lh** 
+├── 📁 **deep_rename_backup_20251101_042419** 
+│   ├── 📁 **igbot** 
+│   │   └── 📁 **examples** (1 .py) [automation]
+│   ├── 📁 **SpotifyMP3** 
+│   │   └── 📁 **.history** (4 .py) [data_analysis]
+│   ├── 📁 **_versions** 
+│   │   ├── 📁 **SOCIAL_PLATFORMS** 
+│   │   │   └── 📁 **youtube** (1 .py)
+│   │   ├── 📁 **WEB_SCRAPING** 
+│   │   │   └── 📁 **download** (1 .py) [configuration, ai_tools]
+│   │   └── 📁 **AI_TOOLS** 
+│   │       └── 📁 **analyze** (1 .py) [utilities, ai_tools]
+│   ├── 📁 **leonardo** 
+│   │   ├── 📁 **.history** (3 .py) [data_analysis, media_processing]
+│   │   └── 📁 **myenv** 
+│   │       ├── 📁 **lib_python3.11_site-packages_pip__vendor_platformdirs** (1 .py) [data_analysis, configuration]
+│   │       └── 📁 **lib_python3.11_site-packages_urllib3_util** (1 .py) [utilities, configuration]
+│   └── 📁 **sorting** (1 .py)
+├── 📁 **DALLe** 
+├── 📁 **_legacy** 
+├── 📁 **twitchtube** (1 .py)
+│   ├── 📁 **.history** 
+│   └── 📁 **twitchtube** (1 .py) [configuration, media_processing]
+├── 📁 **Reddit-Tiktok-Video-Bot** (1 .py) [social_media, automation]
+│   ├── 📁 **video_creation** (3 .py) [media_processing, automation]
+│   ├── 📁 **tests** 
+│   └── 📁 **utils** (1 .py) [utilities, social_media]
+├── 📁 **telegraph-image-downloader** 
+├── 📁 **scripts** (14 .py) [utilities, data_analysis]
+├── 📁 **Twitch-TikTok-Youtube-Viewbot** 
+│   ├── 📁 **.vs** 
+│   │   └── 📁 **Youtube-Viewers** 
+│   │       └── 📁 **v17** 
+│   ├── 📁 **Properties** 
+│   └── 📁 **Helpers** 
+├── 📁 **savify** (1 .py)
+│   ├── 📁 **docker-scripts** 
+│   ├── 📁 **tests** (1 .py) [testing]
+│   ├── 📁 **docs** (1 .py) [documentation]
+│   ├── 📁 **.history** 
+│   └── 📁 **savify** (8 .py) [configuration, api_integrations]
+├── 📁 **sorting** (3 .py) [data_analysis, media_processing]
+├── 📁 **deep_rename_backup_20251101_041453** 
+│   ├── 📁 **igbot** 
+│   │   └── 📁 **examples** 
+│   ├── 📁 **instapy-quickstart** 
+│   │   └── 📁 **quickstart_templates** 
+│   ├── 📁 **_versions** 
+│   │   ├── 📁 **CONTENT_CREATION** 
+│   │   │   ├── 📁 **leonardo** 
+│   │   │   └── 📁 **quiz** 
+│   │   └── 📁 **MEDIA_PROCESSING** 
+│   │       ├── 📁 **image** 
+│   │       └── 📁 **audio** 
+│   ├── 📁 **analysis_tools** 
+│   ├── 📁 **leonardo** 
+│   │   └── 📁 **.history** 
+│   ├── 📁 **videoGenerator** 
+│   │   └── 📁 **.history** 
+│   ├── 📁 **folder-file-sorter** 
+│   └── 📁 **Youtube** 
+│       └── 📁 **youtube-shorts-reddit-scraper** 
+│           └── 📁 **.history** 
+├── 📁 **redditSentiment** 
+├── 📁 **youtube_bulk_upload** (1 .py) [utilities, configuration]
+├── 📁 **youtube_channel_downloader** 
+├── 📁 **Auto-YouTube-Shorts-Maker** 
+│   └── 📁 **RedditVideoMakerBot-master** 
+├── 📁 **reddit-to-instagram-bot** 
+│   └── 📁 **RDT-IG bot** (1 .py) [social_media, automation]
+├── 📁 **photoshop-mockup-automation** 
+│   └── 📁 **photoshop-mockup-automation** 
+│       ├── 📁 **output** 
+│       └── 📁 **script** 
+├── 📁 **Untitled** 
+│   └── 📁 **src** (2 .py) [automation]
+├── 📁 **organizers** (3 .py) [file_management, ai_tools]
+├── 📁 **upscale-python** (6 .py) [ai_tools, media_processing]
+├── 📁 **Tiktok-Trending-Data-Scraper** 
+│   └── 📁 **utils** 
+├── 📁 **Auto-YouTube** (1 .py) [media_processing]
+│   ├── 📁 **processing** (1 .py) [data_analysis]
+│   └── 📁 **audiobook-service** (1 .py) [api_integrations, media_processing]
+├── 📁 **this_script_can_be_categorized_as_a_system_administration_or_automation_script_as_it_gathers_informa_107bf7cb** (1 .py) [automation]
+├── 📁 **YouTube-Viewer** (1 .py) [ai_tools]
+│   ├── 📁 **extension** 
+│   │   └── 📁 **custom_extension** 
+│   └── 📁 **youtubeviewer** (6 .py) [data_analysis, api_integrations]
+│       └── 📁 **web** 
+│           ├── 📁 **static** 
+│           └── 📁 **templates** 
+├── 📁 **YouTube-Bot** 
+├── 📁 **transcribe** (1 .py)
+├── 📁 **automated-yt-channel** 
+│   └── 📁 **procedures** (1 .py) [social_media]
+├── 📁 **007spam-BOT** (1 .py) [automation]
+│   └── 📁 **libs** (2 .py) [api_integrations, automation]
+├── 📁 **-p_segments** 
+├── 📁 **simplegallery-MY-TEMPLATE** (5 .py) [data_analysis, ai_tools]
+│   ├── 📁 **test** (4 .py) [testing, data_analysis]
+│   │   ├── 📁 **update** 
+│   │   ├── 📁 **logic** (1 .py) [testing]
+│   │   │   └── 📁 **variants** (2 .py) [testing, data_analysis]
+│   │   └── 📁 **upload** 
+│   │       └── 📁 **variants** (2 .py) [configuration, testing]
+│   ├── 📁 **logic** (2 .py) [data_analysis, ai_tools]
+│   │   └── 📁 **variants** (3 .py) [data_analysis, ai_tools]
+│   ├── 📁 **data** 
+│   │   ├── 📁 **public** 
+│   │   │   ├── 📁 **css** 
+│   │   │   └── 📁 **js** 
+│   │   └── 📁 **templates** 
+│   └── 📁 **upload** (1 .py)
+│       └── 📁 **variants** (2 .py)
+├── 📁 **SEO-Link-Building-Rank-in-Google-with-EDU-and-GOV-Backlinks** 
+│   └── 📁 **CODES** 
+│       └── 📁 **Keyword Research Tool** 
+│           └── 📁 **Keyword Tool Source Code** 
+└── 📁 **TwitchCompilationCreator** 
+    ├── 📁 **assets** 
+    │   ├── 📁 **leagueOfLegends** 
+    │   ├── 📁 **templates** 
+    │   ├── 📁 **emojis** 
+    │   └── 📁 **fortnite** 
+    └── 📁 **src** (6 .py) [data_analysis, content_creation]
+
+## 📁 DETAILED FOLDER ANALYSIS
+
+### Ai Tools
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > igbot > examples`
+- **Purpose:** content_creation (44 files)
+- **Files:** 44 (44 Python)
+- **Depth:** 2 levels
+- **Size:** 57.2 KB
+- **Technologies:** getpass, instabot.bot.bot_support, tqdm, instabot, datetime
+- **Avg Complexity:** 0.8
+
+### Api Integrations
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > _versions > SOCIAL_PLATFORMS > instagram`
+- **Purpose:** Test suites and testing utilities (44 tests)
+- **Files:** 44 (44 Python)
+- **Depth:** 3 levels
+- **Size:** 294.6 KB
+- **Technologies:** webbot, IPython.core.magic, shutil, investment_agents.editor, botocore.exceptions
+- **Avg Complexity:** 5.3
+
+### Automation
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > igbot > examples`
+- **Purpose:** content_creation (44 files)
+- **Files:** 44 (44 Python)
+- **Depth:** 2 levels
+- **Size:** 57.2 KB
+- **Technologies:** getpass, instabot.bot.bot_support, tqdm, instabot, datetime
+- **Avg Complexity:** 0.8
+
+#### `python > _versions > SOCIAL_PLATFORMS > instagram`
+- **Purpose:** Test suites and testing utilities (44 tests)
+- **Files:** 44 (44 Python)
+- **Depth:** 3 levels
+- **Size:** 294.6 KB
+- **Technologies:** webbot, IPython.core.magic, shutil, investment_agents.editor, botocore.exceptions
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > DEVELOPMENT > testing`
+- **Purpose:** Test suites and testing utilities (35 tests)
+- **Files:** 35 (35 Python)
+- **Depth:** 3 levels
+- **Size:** 458.5 KB
+- **Technologies:** io, mock, parso.tree, jedi.inference.cache, simplegallery.test.helpers
+- **Avg Complexity:** 12.6
+
+#### `python > _versions > UTILITIES > file_operations`
+- **Purpose:** Utility scripts and helpers (35 scripts)
+- **Files:** 35 (35 Python)
+- **Depth:** 3 levels
+- **Size:** 246.7 KB
+- **Technologies:** io, constants, IPython.core.magic, shutil, threading
+- **Avg Complexity:** 4.1
+
+### Configuration
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > _versions > SOCIAL_PLATFORMS > instagram`
+- **Purpose:** Test suites and testing utilities (44 tests)
+- **Files:** 44 (44 Python)
+- **Depth:** 3 levels
+- **Size:** 294.6 KB
+- **Technologies:** webbot, IPython.core.magic, shutil, investment_agents.editor, botocore.exceptions
+- **Avg Complexity:** 5.3
+
+### Content Creation
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > igbot > examples`
+- **Purpose:** content_creation (44 files)
+- **Files:** 44 (44 Python)
+- **Depth:** 2 levels
+- **Size:** 57.2 KB
+- **Technologies:** getpass, instabot.bot.bot_support, tqdm, instabot, datetime
+- **Avg Complexity:** 0.8
+
+#### `python > _versions > SOCIAL_PLATFORMS > instagram`
+- **Purpose:** Test suites and testing utilities (44 tests)
+- **Files:** 44 (44 Python)
+- **Depth:** 3 levels
+- **Size:** 294.6 KB
+- **Technologies:** webbot, IPython.core.magic, shutil, investment_agents.editor, botocore.exceptions
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > MEDIA_PROCESSING > video`
+- **Purpose:** Test suites and testing utilities (43 tests)
+- **Files:** 43 (43 Python)
+- **Depth:** 3 levels
+- **Size:** 261.0 KB
+- **Technologies:** io, PIL, mutagen.easymp4, pytesseract, shutil
+- **Avg Complexity:** 3.1
+
+### Data Analysis
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > _versions > SOCIAL_PLATFORMS > instagram`
+- **Purpose:** Test suites and testing utilities (44 tests)
+- **Files:** 44 (44 Python)
+- **Depth:** 3 levels
+- **Size:** 294.6 KB
+- **Technologies:** webbot, IPython.core.magic, shutil, investment_agents.editor, botocore.exceptions
+- **Avg Complexity:** 5.3
+
+### Documentation
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > _versions > DEVELOPMENT > testing`
+- **Purpose:** Test suites and testing utilities (35 tests)
+- **Files:** 35 (35 Python)
+- **Depth:** 3 levels
+- **Size:** 458.5 KB
+- **Technologies:** io, mock, parso.tree, jedi.inference.cache, simplegallery.test.helpers
+- **Avg Complexity:** 12.6
+
+#### `python > _versions > CONTENT_CREATION > quiz`
+- **Purpose:** Media processing tools (35 scripts)
+- **Files:** 35 (35 Python)
+- **Depth:** 3 levels
+- **Size:** 779.7 KB
+- **Technologies:** io, PIL, re, subprocess, shutil
+- **Avg Complexity:** 1.3
+
+#### `python > _versions > UTILITIES > file_operations`
+- **Purpose:** Utility scripts and helpers (35 scripts)
+- **Files:** 35 (35 Python)
+- **Depth:** 3 levels
+- **Size:** 246.7 KB
+- **Technologies:** io, constants, IPython.core.magic, shutil, threading
+- **Avg Complexity:** 4.1
+
+### File Management
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > SOCIAL_PLATFORMS > instagram`
+- **Purpose:** Test suites and testing utilities (44 tests)
+- **Files:** 44 (44 Python)
+- **Depth:** 3 levels
+- **Size:** 294.6 KB
+- **Technologies:** webbot, IPython.core.magic, shutil, investment_agents.editor, botocore.exceptions
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > UTILITIES > file_operations`
+- **Purpose:** Utility scripts and helpers (35 scripts)
+- **Files:** 35 (35 Python)
+- **Depth:** 3 levels
+- **Size:** 246.7 KB
+- **Technologies:** io, constants, IPython.core.magic, shutil, threading
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > DATA_PROCESSING > parse`
+- **Purpose:** data_analysis (22 files)
+- **Files:** 22 (22 Python)
+- **Depth:** 3 levels
+- **Size:** 151.0 KB
+- **Technologies:** PIL, shutil, collections, datetime, requests
+- **Avg Complexity:** 2.6
+
+### Media Processing
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > igbot > examples`
+- **Purpose:** content_creation (44 files)
+- **Files:** 44 (44 Python)
+- **Depth:** 2 levels
+- **Size:** 57.2 KB
+- **Technologies:** getpass, instabot.bot.bot_support, tqdm, instabot, datetime
+- **Avg Complexity:** 0.8
+
+### Social Media
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > _versions > SOCIAL_PLATFORMS > instagram`
+- **Purpose:** Test suites and testing utilities (44 tests)
+- **Files:** 44 (44 Python)
+- **Depth:** 3 levels
+- **Size:** 294.6 KB
+- **Technologies:** webbot, IPython.core.magic, shutil, investment_agents.editor, botocore.exceptions
+- **Avg Complexity:** 5.3
+
+#### `python > redditVideoGenerator`
+- **Purpose:** Media processing tools (11 scripts)
+- **Files:** 11 (11 Python)
+- **Depth:** 1 levels
+- **Size:** 19.4 KB
+- **Technologies:** numpy, PIL, tinydb, textwrap, pandas
+- **Avg Complexity:** 2.2
+
+#### `python > TikTok-Compilation-Video-Generator > TikTok Server`
+- **Purpose:** Test suites and testing utilities (7 tests)
+- **Files:** 7 (7 Python)
+- **Depth:** 2 levels
+- **Size:** 50.9 KB
+- **Technologies:** server, settings, threading, mysql.connector, datetime
+- **Avg Complexity:** 8.3
+
+#### `python > TikTok-Compilation-Video-Generator > TikTok Video Generator`
+- **Purpose:** Test suites and testing utilities (5 tests)
+- **Files:** 5 (5 Python)
+- **Depth:** 2 levels
+- **Size:** 20.5 KB
+- **Technologies:** cgi, server, settings, shutil, threading
+- **Avg Complexity:** 6.5
+
+#### `python > Instagram-Mass-report > libs`
+- **Purpose:** Media processing tools (5 scripts)
+- **Files:** 5 (5 Python)
+- **Depth:** 2 levels
+- **Size:** 16.1 KB
+- **Technologies:** re, proxybroker, warnings, libs.utils, requests
+- **Avg Complexity:** 1.8
+
+#### `python > _versions > SOCIAL_PLATFORMS > reddit`
+- **Purpose:** social_media (5 files)
+- **Files:** 5 (5 Python)
+- **Depth:** 3 levels
+- **Size:** 23.2 KB
+- **Technologies:** AskReddit, utils.subreddit, praw.models, re, utils.posttextparser
+- **Avg Complexity:** 0.6
+
+### Testing
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > MEDIA_PROCESSING > image`
+- **Purpose:** Test suites and testing utilities (82 tests)
+- **Files:** 82 (82 Python)
+- **Depth:** 3 levels
+- **Size:** 520.9 KB
+- **Technologies:** io, PIL, client, pytesseract, settings
+- **Avg Complexity:** 3.4
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > _versions > CONTENT_CREATION > nocturne`
+- **Purpose:** Test suites and testing utilities (57 tests)
+- **Files:** 57 (57 Python)
+- **Depth:** 3 levels
+- **Size:** 545.8 KB
+- **Technologies:** io, PIL, secret, shutil, gyp.common
+- **Avg Complexity:** 6.0
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > SOCIAL_PLATFORMS > instagram`
+- **Purpose:** Test suites and testing utilities (44 tests)
+- **Files:** 44 (44 Python)
+- **Depth:** 3 levels
+- **Size:** 294.6 KB
+- **Technologies:** webbot, IPython.core.magic, shutil, investment_agents.editor, botocore.exceptions
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > MEDIA_PROCESSING > video`
+- **Purpose:** Test suites and testing utilities (43 tests)
+- **Files:** 43 (43 Python)
+- **Depth:** 3 levels
+- **Size:** 261.0 KB
+- **Technologies:** io, PIL, mutagen.easymp4, pytesseract, shutil
+- **Avg Complexity:** 3.1
+
+### Utilities
+
+#### `python > _versions > DEVELOPMENT > script`
+- **Purpose:** Utility scripts and helpers (172 scripts)
+- **Files:** 172 (172 Python)
+- **Depth:** 3 levels
+- **Size:** 1474.9 KB
+- **Technologies:** io, ffmpeg, PIL, mock, cgi
+- **Avg Complexity:** 5.0
+
+#### `python > _versions > UTILITIES > misc`
+- **Purpose:** Utility scripts and helpers (140 scripts)
+- **Files:** 140 (140 Python)
+- **Depth:** 3 levels
+- **Size:** 734.5 KB
+- **Technologies:** io, PyPDF2, aiohttp._http_writer, colorsys, advanced_cleanup_renamer
+- **Avg Complexity:** 5.3
+
+#### `python > _versions > FILE_MANAGEMENT > organize`
+- **Purpose:** Utility scripts and helpers (103 scripts)
+- **Files:** 103 (103 Python)
+- **Depth:** 3 levels
+- **Size:** 778.7 KB
+- **Technologies:** ffmpeg, PIL, mock, pytesseract, IPython.core.magic
+- **Avg Complexity:** 4.7
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > SOCIAL_PLATFORMS > youtube`
+- **Purpose:** Utility scripts and helpers (59 scripts)
+- **Files:** 59 (59 Python)
+- **Depth:** 3 levels
+- **Size:** 433.2 KB
+- **Technologies:** io, threading, collections, google.auth.transport.requests, selenium.webdriver.common.by
+- **Avg Complexity:** 4.1
+
+#### `python > bare_except_backup_20251101_033421`
+- **Purpose:** Utility scripts and helpers (55 scripts)
+- **Files:** 55 (55 Python)
+- **Depth:** 1 levels
+- **Size:** 621.2 KB
+- **Technologies:** PIL, threading, collections, IPython.core.release, argparse
+- **Avg Complexity:** 7.3
+
+#### `python > _versions > MEDIA_PROCESSING > audio`
+- **Purpose:** Utility scripts and helpers (49 scripts)
+- **Files:** 49 (49 Python)
+- **Depth:** 3 levels
+- **Size:** 372.0 KB
+- **Technologies:** PIL, mutagen.id3, settings, shutil, collections
+- **Avg Complexity:** 3.5
+
+#### `python > _versions > UTILITIES > file_operations`
+- **Purpose:** Utility scripts and helpers (35 scripts)
+- **Files:** 35 (35 Python)
+- **Depth:** 3 levels
+- **Size:** 246.7 KB
+- **Technologies:** io, constants, IPython.core.magic, shutil, threading
+- **Avg Complexity:** 4.1
+
+#### `python > leonardo > myenv > lib_python3.11_site-packages_setuptools__distutils`
+- **Purpose:** Utility scripts and helpers (27 scripts)
+- **Files:** 27 (27 Python)
+- **Depth:** 3 levels
+- **Size:** 316.5 KB
+- **Technologies:** cgi, distutils, distutils.config, importlib.util, distutils.sysconfig
+- **Avg Complexity:** 8.8
+
+#### `python > leonardo > myenv > lib_python3.11_site-packages_setuptools_command`
+- **Purpose:** Utility scripts and helpers (25 scripts)
+- **Files:** 25 (25 Python)
+- **Depth:** 3 levels
+- **Size:** 260.6 KB
+- **Technologies:** io, distutils, importlib.util, build, shutil
+- **Avg Complexity:** 12.3
+
+### Web Scraping
+
+#### `python > leonardo > myenv > lib > python3.11 > site-packages > PIL`
+- **Purpose:** Utility scripts and helpers (88 scripts)
+- **Files:** 88 (88 Python)
+- **Depth:** 6 levels
+- **Size:** 1020.4 KB
+- **Technologies:** io, JpegImagePlugin, PIL, colorsys, shutil
+- **Avg Complexity:** 12.5
+
+#### `python > _versions > CONTENT_CREATION > suno`
+- **Purpose:** data_analysis (19 files)
+- **Files:** 19 (19 Python)
+- **Depth:** 3 levels
+- **Size:** 138.7 KB
+- **Technologies:** bark, audiocraft.utils.notebook, shutil, collections, datetime
+- **Avg Complexity:** 3.3
+
+#### `python > _versions > AUTOMATION > selenium`
+- **Purpose:** content_creation (4 files)
+- **Files:** 4 (4 Python)
+- **Depth:** 3 levels
+- **Size:** 113.5 KB
+- **Technologies:** logging, re, datetime, random, sqlite3
+- **Avg Complexity:** 7.5
+
+#### `python > Youtube > YouTube-shorts-generator`
+- **Purpose:** content_creation (3 files)
+- **Files:** 3 (3 Python)
+- **Depth:** 2 levels
+- **Size:** 8.8 KB
+- **Technologies:** config, oauth2client.client, apiclient.errors, apiclient.discovery, reddit_scraper
+- **Avg Complexity:** 1.6
+
+#### `python > bare_except_backup_20251101_033421 > _versions > AUTOMATION > selenium`
+- **Purpose:** data_analysis (2 files)
+- **Files:** 2 (2 Python)
+- **Depth:** 4 levels
+- **Size:** 73.0 KB
+- **Technologies:** logging, re, random, sqlite3, string
+- **Avg Complexity:** 10.5
+
+#### `python > Youtube > youtube-shorts-reddit-scraper`
+- **Purpose:** Web scraping and data extraction (1 scripts)
+- **Files:** 1 (1 Python)
+- **Depth:** 2 levels
+- **Size:** 3.7 KB
+- **Technologies:** io, urllib.request, chromedriver_autoinstaller, bs4, imutils
+- **Avg Complexity:** 1.0
+
+#### `python > Youtube > youtube-shorts-reddit-scraper > .history`
+- **Purpose:** Web scraping and data extraction (1 scripts)
+- **Files:** 1 (1 Python)
+- **Depth:** 3 levels
+- **Size:** 3.7 KB
+- **Technologies:** io, urllib.request, chromedriver_autoinstaller, bs4, imutils
+- **Avg Complexity:** 1.0
+
+## 💡 RECOMMENDATIONS
+
+### Organization Suggestions
+
+- Consider consolidating 186 `ai_tools` folders
+- Consider consolidating 134 `media_processing` folders
+- Consider consolidating 66 `automation` folders
+- Consider consolidating 41 `social_media` folders
+- Consider consolidating 59 `utilities` folders
+- Consider consolidating 72 `testing` folders
+- Consider consolidating 59 `api_integrations` folders
+- Consider consolidating 120 `data_analysis` folders
+- Consider consolidating 31 `file_management` folders
+- Consider consolidating 116 `configuration` folders
+- Consider consolidating 33 `documentation` folders
+- Consider consolidating 50 `content_creation` folders
+- Consider consolidating 7 `web_scraping` folders
+
+### Folder Structure Improvements
+
+- 156 folders are deeply nested (>4 levels)
+  - Consider flattening the structure for better organization
+
+- 23 folders contain >20 files
+  - Consider splitting into subcategories
+

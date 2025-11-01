@@ -1,0 +1,70 @@
+"""
+Agent
+
+This module provides functionality for agent.
+
+Author: Auto-generated
+Date: 2025-11-01
+"""
+
+from langchain.agents import create_openai_functions_agent, AgentExecutor
+from langchain import hub
+from langchain_openai import ChatOpenAI
+from langchain.memory import ConversationBufferMemory
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from composio_langchain import ComposioToolSet, App
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+# Constants
+CONSTANT_1000 = 1000
+
+
+class GrokAgent:
+    def __init__(self, api_key, model="grok-4-0709", base_url="https://api.x.ai/v1"):
+        """__init__ function."""
+
+        self.llm = ChatOpenAI(
+            api_key=api_key, model=model, base_url=base_url, temperature=0.7, max_tokens=CONSTANT_1000
+        )
+
+        self.composio_toolset = ComposioToolSet()
+        self.tools = self.composio_toolset.get_tools(apps=[App.FILETOOL])
+
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    "You are a helpful AI assistant with access to file tools. Use the tools when needed to help the user.",
+                ),
+                MessagesPlaceholder(variable_name="chat_history"),
+                ("user", "{input}"),
+                MessagesPlaceholder(variable_name="agent_scratchpad"),
+            ]
+        )
+
+        self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+
+        self.agent = create_openai_functions_agent(self.llm, self.tools, prompt)
+        self.agent_executor = AgentExecutor(
+            agent=self.agent, tools=self.tools, memory=self.memory, verbose=False, max_iterations=10
+        )
+
+    def chat(self, user_message):
+        """Chat with the agent using LangChain's built-in tool calling"""
+        try:
+            response = self.agent_executor.invoke({"input": user_message})
+            output = response.get("output", "Sorry, I couldn't generate a response.")
+            logger.info(output)
+            return output
+        except Exception as e:
+            if "rate_limit" in str(e).lower() or "429" in str(e):
+                error_msg = "Rate limit exceeded. Please try again later."
+                logger.info(error_msg)
+                return error_msg
+            error_msg = f"An error occurred: {str(e)}"
+            logger.info(error_msg)
+            return error_msg
