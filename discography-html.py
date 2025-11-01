@@ -22,7 +22,7 @@ CONSTANT_444 = 444
 CONSTANT_666 = 666
 
 
-albums_dir = Path(Path("/Users/steven/Music/nocTurneMeLoDieS/Mp3"))
+albums_dir = Path(Path(str(Path.home()) + "/Music/nocTurneMeLoDieS/Mp3"))
 output_file = albums_dir / "disco25.html"
 
 html_header = """<!DOCTYPE html>

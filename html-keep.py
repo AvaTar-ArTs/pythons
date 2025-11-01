@@ -39,7 +39,7 @@ class HTMLContentAnalyzer:
     def __init__(self):
         """__init__ function."""
 
-        self.html_path = Path(Path("/Users/steven/Documents/HTML"))
+        self.html_path = Path(Path(str(Path.home()) + "/Documents/HTML"))
         self.max_depth = 6
 
         # Analysis results
@@ -374,7 +374,7 @@ class HTMLContentAnalyzer:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
         # Create comprehensive report
-        csv_file = f"/Users/steven/Documents/python/html_analysis_{timestamp}.csv"
+        csv_file = fstr(Path.home()) + "/Documents/python/html_analysis_{timestamp}.csv"
         logger.info(f"\n📊 Creating detailed analysis report: {csv_file}")
 
         with open(csv_file, "w", newline="", encoding="utf-8") as csvfile:
@@ -450,7 +450,7 @@ class HTMLContentAnalyzer:
 
     def _create_removal_recommendations(self, timestamp):
         """Create specific removal recommendations."""
-        rec_file = f"/Users/steven/Documents/python/html_removal_recommendations_{timestamp}.md"
+        rec_file = fstr(Path.home()) + "/Documents/python/html_removal_recommendations_{timestamp}.md"
         logger.info(f"📋 Creating removal recommendations: {rec_file}")
 
         with open(rec_file, "w") as f:

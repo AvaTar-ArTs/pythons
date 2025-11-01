@@ -33,7 +33,7 @@ def execute_renaming():
     logger.info("=" * 60)
 
     # Create backup directory
-    backup_dir = Path(Path("/Users/steven/python_rename_backup"))
+    backup_dir = Path(Path(str(Path.home()) + "/python_rename_backup"))
     backup_dir.mkdir(exist_ok=True)
 
     renaming_operations = [
@@ -57,7 +57,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/base_from_csv-processor.py",
+            "old_path": str(Path.home()) + "/Documents/python/base_from_csv-processor.py",
             "old_name": "base_from_csv-processor.py",
             "new_name": "FileManagementProcessCleanIgnorableNamespaces.py",
             "purpose": "file_management",
@@ -85,7 +85,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-prompt-1.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-prompt-1.py",
             "old_name": "analyze-prompt-1.py",
             "new_name": "FileManagementAnalyzeAnalyzeTextForSectionAudio_1.py",
             "purpose": "file_management",
@@ -98,7 +98,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/archive-file-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/archive-file-reader.py",
             "old_name": "archive-file-reader.py",
             "new_name": "FileManagementAnalyzeAnalyzeFileContentAudio_1.py",
             "purpose": "file_management",
@@ -121,7 +121,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/docx.py",
+            "old_path": str(Path.home()) + "/Documents/python/docx.py",
             "old_name": "docx.py",
             "new_name": "FileManagementProcess_1.py",
             "purpose": "file_management",
@@ -137,7 +137,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/Instagram Report Bot2_from_api-development_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/Instagram Report Bot2_from_api-development_1.py",
             "old_name": "Instagram Report Bot2_from_api-development_1.py",
             "new_name": "FileManagement_1.py",
             "purpose": "file_management",
@@ -145,7 +145,7 @@ def execute_renaming():
             "key_functions": ["getOptions"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyzer_config.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyzer_config.py",
             "old_name": "analyzer_config.py",
             "new_name": "FileManagementAnalyzeExampleBatchProcessingVideo.py",
             "purpose": "file_management",
@@ -158,7 +158,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-youtube-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-youtube-reader.py",
             "old_name": "analyze-youtube-reader.py",
             "new_name": "FileManagementAnalyzeAnalyzeRepositories.py",
             "purpose": "file_management",
@@ -187,7 +187,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-prompt (1) 2_1_2.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-prompt (1) 2_1_2.py",
             "old_name": "analyze-prompt (1) 2_1_2.py",
             "new_name": "FileManagementAnalyzeAnalyzeTextForSectionAudio_1.py",
             "purpose": "file_management",
@@ -200,7 +200,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/15days.py",
+            "old_path": str(Path.home()) + "/Documents/python/15days.py",
             "old_name": "15days.py",
             "new_name": "FileManagementGenerateData_1.py",
             "purpose": "file_management",
@@ -208,7 +208,7 @@ def execute_renaming():
             "key_functions": ["ensure_dir"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/CONSTANT_169-11.py",
+            "old_path": str(Path.home()) + "/Documents/python/CONSTANT_169-11.py",
             "old_name": "CONSTANT_169-11.py",
             "new_name": "FileManagementMerge_1.py",
             "purpose": "file_management",
@@ -216,7 +216,7 @@ def execute_renaming():
             "key_functions": ["upscale_and_replace_images", "main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-file-writer.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-file-writer.py",
             "old_name": "analyze-file-writer.py",
             "new_name": "FileManagementAnalyzeGenerateReport.py",
             "purpose": "file_management",
@@ -237,7 +237,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/300dpi_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/300dpi_1.py",
             "old_name": "300dpi_1.py",
             "new_name": "FileManagementProcessProcessDirectory.py",
             "purpose": "file_management",
@@ -245,7 +245,7 @@ def execute_renaming():
             "key_functions": ["set_dpi", "process_directory"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/convertupscale.py",
+            "old_path": str(Path.home()) + "/Documents/python/convertupscale.py",
             "old_name": "convertupscale.py",
             "new_name": "FileManagementProcess_1.py",
             "purpose": "file_management",
@@ -253,7 +253,7 @@ def execute_renaming():
             "key_functions": ["convert_and_upscale_images", "main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/token_conflict.py",
+            "old_path": str(Path.home()) + "/Documents/python/token_conflict.py",
             "old_name": "token_conflict.py",
             "new_name": "FileManagementProcess_1.py",
             "purpose": "file_management",
@@ -271,7 +271,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-prompt.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-prompt.py",
             "old_name": "analyze-prompt.py",
             "new_name": "FileManagementAnalyzeAnalyzeTextForSectionAudio_1.py",
             "purpose": "file_management",
@@ -284,7 +284,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/batch-img_from_image-converter_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/batch-img_from_image-converter_1.py",
             "old_name": "batch-img_from_image-converter_1.py",
             "new_name": "FileManagementProcessProcessBatch.py",
             "purpose": "file_management",
@@ -296,7 +296,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/alphabet-html-gall_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/alphabet-html-gall_1.py",
             "old_name": "alphabet-html-gall_1.py",
             "new_name": "FileManagementGenerateGenerateGroupedGalleryVideo.py",
             "purpose": "file_management",
@@ -304,7 +304,7 @@ def execute_renaming():
             "key_functions": ["generate_grouped_gallery"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/batch-text.py",
+            "old_path": str(Path.home()) + "/Documents/python/batch-text.py",
             "old_name": "batch-text.py",
             "new_name": "FileManagementProcessGetTokensUnprocessed.py",
             "purpose": "file_management",
@@ -322,7 +322,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/download-file-util.py",
+            "old_path": str(Path.home()) + "/Documents/python/download-file-util.py",
             "old_name": "download-file-util.py",
             "new_name": "FileManagementClean.py",
             "purpose": "file_management",
@@ -330,7 +330,7 @@ def execute_renaming():
             "key_functions": ["test_all", "setup_method", "teardown_method"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/direct_url_helpers_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/direct_url_helpers_1.py",
             "old_name": "direct_url_helpers_1.py",
             "new_name": "FileManagementAnalyze_1.py",
             "purpose": "file_management",
@@ -342,7 +342,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/data_txt-csv_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/data_txt-csv_1.py",
             "old_name": "data_txt-csv_1.py",
             "new_name": "FileManagementGenerateData_1.py",
             "purpose": "file_management",
@@ -350,7 +350,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/compress-text-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/compress-text-reader.py",
             "old_name": "compress-text-reader.py",
             "new_name": "FileManagementProcessData.py",
             "purpose": "file_management",
@@ -573,7 +573,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/clean-file.py",
+            "old_path": str(Path.home()) + "/Documents/python/clean-file.py",
             "old_name": "clean-file.py",
             "new_name": "FileManagementGenerate_1.py",
             "purpose": "file_management",
@@ -581,7 +581,7 @@ def execute_renaming():
             "key_functions": ["_to_str", "pick_unit_and_suffix", "decimal"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/confcli.py",
+            "old_path": str(Path.home()) + "/Documents/python/confcli.py",
             "old_name": "confcli.py",
             "new_name": "FileManagementProcessVideo.py",
             "purpose": "file_management",
@@ -589,7 +589,7 @@ def execute_renaming():
             "key_functions": ["remove_old_files", "main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/100sort_from_general-scripts.py",
+            "old_path": str(Path.home()) + "/Documents/python/100sort_from_general-scripts.py",
             "old_name": "100sort_from_general-scripts.py",
             "new_name": "FileManagementGenerate_1.py",
             "purpose": "file_management",
@@ -615,7 +615,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/batch-writer.py",
+            "old_path": str(Path.home()) + "/Documents/python/batch-writer.py",
             "old_name": "batch-writer.py",
             "new_name": "FileManagementProcess_1.py",
             "purpose": "file_management",
@@ -630,7 +630,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/50_from_ai-image-generator.py",
+            "old_path": str(Path.home()) + "/Documents/python/50_from_ai-image-generator.py",
             "old_name": "50_from_ai-image-generator.py",
             "new_name": "FileManagementGenerateData_1.py",
             "purpose": "file_management",
@@ -638,7 +638,7 @@ def execute_renaming():
             "key_functions": ["split_csv", "write_chunk"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/archive-file.py",
+            "old_path": str(Path.home()) + "/Documents/python/archive-file.py",
             "old_name": "archive-file.py",
             "new_name": "FileManagementGenerate_1.py",
             "purpose": "file_management",
@@ -646,7 +646,7 @@ def execute_renaming():
             "key_functions": ["raise_for_status", "response_chunks"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/execute_consolidation.py",
+            "old_path": str(Path.home()) + "/Documents/python/execute_consolidation.py",
             "old_name": "execute_consolidation.py",
             "new_name": "FileManagementAnalyze_1.py",
             "purpose": "file_management",
@@ -654,7 +654,7 @@ def execute_renaming():
             "key_functions": ["main", "create_final_summary"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-text-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-text-reader.py",
             "old_name": "analyze-text-reader.py",
             "new_name": "FileManagementAnalyzeAnalyzeUltraImprovements.py",
             "purpose": "file_management",
@@ -668,7 +668,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-json-writer.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-json-writer.py",
             "old_name": "analyze-json-writer.py",
             "new_name": "FileManagementAnalyzeRunPythonCleanup.py",
             "purpose": "file_management",
@@ -684,7 +684,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-text-writer.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-text-writer.py",
             "old_name": "analyze-text-writer.py",
             "new_name": "FileManagementAnalyzeAnalyzeDriveStructureAudio.py",
             "purpose": "file_management",
@@ -714,7 +714,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-csv.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-csv.py",
             "old_name": "analyze-csv.py",
             "new_name": "FileManagementAnalyzeAnalyzeDfVideo.py",
             "purpose": "file_management",
@@ -762,7 +762,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-csv-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-csv-reader.py",
             "old_name": "analyze-csv-reader.py",
             "new_name": "FileManagementAnalyzeAnalyzeImageGpt4OData.py",
             "purpose": "file_management",
@@ -775,7 +775,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-folder.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-folder.py",
             "old_name": "analyze-folder.py",
             "new_name": "FileManagementAnalyzeOrganizeFilesAudio.py",
             "purpose": "file_management",
@@ -787,7 +787,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/compress-youtube-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/compress-youtube-reader.py",
             "old_name": "compress-youtube-reader.py",
             "new_name": "FileManagementProcessTestObjectCleanupOnReadErrorData.py",
             "purpose": "file_management",
@@ -889,7 +889,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/__token_type.py",
+            "old_path": str(Path.home()) + "/Documents/python/__token_type.py",
             "old_name": "__token_type.py",
             "new_name": "FileManagementProcess_1.py",
             "purpose": "file_management",
@@ -907,7 +907,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/comment_your_feed_from_social-media-automation.py",
+            "old_path": str(Path.home()) + "/Documents/python/comment_your_feed_from_social-media-automation.py",
             "old_name": "comment_your_feed_from_social-media-automation.py",
             "new_name": "FileManagementMerge_1.py",
             "purpose": "file_management",
@@ -915,7 +915,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/compress_text.py",
+            "old_path": str(Path.home()) + "/Documents/python/compress_text.py",
             "old_name": "compress_text.py",
             "new_name": "FileManagementGenerate_1.py",
             "purpose": "file_management",
@@ -931,7 +931,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-instagram-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-instagram-reader.py",
             "old_name": "analyze-instagram-reader.py",
             "new_name": "FileManagementAnalyzeAnalyzeComplexityData.py",
             "purpose": "file_management",
@@ -963,7 +963,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyzer_generator.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyzer_generator.py",
             "old_name": "analyzer_generator.py",
             "new_name": "FileManagementAnalyzeAnalyzeData.py",
             "purpose": "file_management",
@@ -985,7 +985,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/build_tracker.py",
+            "old_path": str(Path.home()) + "/Documents/python/build_tracker.py",
             "old_name": "build_tracker.py",
             "new_name": "FileManagementProcessCleanup.py",
             "purpose": "file_management",
@@ -1004,7 +1004,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/dupes_from_file-organizer_1_2.py",
+            "old_path": str(Path.home()) + "/Documents/python/dupes_from_file-organizer_1_2.py",
             "old_name": "dupes_from_file-organizer_1_2.py",
             "new_name": "FileManagementGenerateGenerateDetailedDuplicateReportData.py",
             "purpose": "file_management",
@@ -1018,7 +1018,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/merge_backup/analyze-prompt-1.py",
+            "old_path": str(Path.home()) + "/Documents/python/merge_backup/analyze-prompt-1.py",
             "old_name": "analyze-prompt-1.py",
             "new_name": "FileManagementAnalyzeAnalyzeTextForSectionAudio_1.py",
             "purpose": "file_management",
@@ -1031,7 +1031,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/merge_backup/analyze-prompt.py",
+            "old_path": str(Path.home()) + "/Documents/python/merge_backup/analyze-prompt.py",
             "old_name": "analyze-prompt.py",
             "new_name": "FileManagementAnalyzeAnalyzeTextForSectionAudio_1.py",
             "purpose": "file_management",
@@ -1044,7 +1044,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/nanobanana_prompt_analyzer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/nanobanana_prompt_analyzer.py",
             "old_name": "nanobanana_prompt_analyzer.py",
             "new_name": "FileManagementAnalyzeAnalyzeDocumentsAudio.py",
             "purpose": "file_management",
@@ -1075,7 +1075,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/deep_content_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/deep_content_renamer.py",
             "old_name": "deep_content_renamer.py",
             "new_name": "FileManagementAnalyzeAnalyzeFileDeeplyVideo.py",
             "purpose": "file_management",
@@ -1092,7 +1092,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/duplicate_cleaner.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/duplicate_cleaner.py",
             "old_name": "duplicate_cleaner.py",
             "new_name": "FileManagementAnalyzeGenerateTargetNameAudio.py",
             "purpose": "file_management",
@@ -1119,7 +1119,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/content_aware_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/content_aware_renamer.py",
             "old_name": "content_aware_renamer.py",
             "new_name": "FileManagementAnalyzeCleanFilename_1.py",
             "purpose": "file_management",
@@ -1138,7 +1138,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/thinketh_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/thinketh_renamer.py",
             "old_name": "thinketh_renamer.py",
             "new_name": "FileManagementAnalyzeCleanFilename_1.py",
             "purpose": "file_management",
@@ -1157,7 +1157,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/intelligent_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/intelligent_renamer.py",
             "old_name": "intelligent_renamer.py",
             "new_name": "FileManagementAnalyzeAnalyzeFileContentVideo_1.py",
             "purpose": "file_management",
@@ -1173,7 +1173,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/run_advanced_cleanup.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/run_advanced_cleanup.py",
             "old_name": "run_advanced_cleanup.py",
             "new_name": "FileManagementAnalyze_1.py",
             "purpose": "file_management",
@@ -1181,7 +1181,7 @@ def execute_renaming():
             "key_functions": ["main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/advanced_cleanup_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/advanced_cleanup_renamer.py",
             "old_name": "advanced_cleanup_renamer.py",
             "new_name": "FileManagementAnalyzeGenerateSimpleTargetName.py",
             "purpose": "file_management",
@@ -1205,7 +1205,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/intelligent_file_merger.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/intelligent_file_merger.py",
             "old_name": "intelligent_file_merger.py",
             "new_name": "FileManagementAnalyzeAnalyzeFileContent.py",
             "purpose": "file_management",
@@ -1227,7 +1227,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/simple_python_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/simple_python_renamer.py",
             "old_name": "simple_python_renamer.py",
             "new_name": "FileManagementAnalyzeAnalyzeFileContentAudio_1.py",
             "purpose": "file_management",
@@ -1250,7 +1250,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/master_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/master_renamer.py",
             "old_name": "master_renamer.py",
             "new_name": "FileManagementAnalyzeAnalyzeFileContentVideo_1.py",
             "purpose": "file_management",
@@ -1280,7 +1280,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/clientabc.py",
+            "old_path": str(Path.home()) + "/Documents/python/clientabc.py",
             "old_name": "clientabc.py",
             "new_name": "ApiIntegrationProcess_1.py",
             "purpose": "api_integration",
@@ -1303,7 +1303,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/validate-json-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/validate-json-reader.py",
             "old_name": "validate-json-reader.py",
             "new_name": "ApiIntegrationProcessGenerateReportAudio.py",
             "purpose": "api_integration",
@@ -1328,7 +1328,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/common_rules.py",
+            "old_path": str(Path.home()) + "/Documents/python/common_rules.py",
             "old_name": "common_rules.py",
             "new_name": "ApiIntegrationGenerate.py",
             "purpose": "api_integration",
@@ -1343,7 +1343,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/YouTube Livestream Botter.py",
+            "old_path": str(Path.home()) + "/Documents/python/YouTube Livestream Botter.py",
             "old_name": "YouTube Livestream Botter.py",
             "new_name": "ApiIntegrationGenerateVideo.py",
             "purpose": "api_integration",
@@ -1359,7 +1359,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/batch-youtube-writer.py",
+            "old_path": str(Path.home()) + "/Documents/python/batch-youtube-writer.py",
             "old_name": "batch-youtube-writer.py",
             "new_name": "ApiIntegrationProcess_1.py",
             "purpose": "api_integration",
@@ -1384,7 +1384,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/api_request.py",
+            "old_path": str(Path.home()) + "/Documents/python/api_request.py",
             "old_name": "api_request.py",
             "new_name": "ApiIntegration.py",
             "purpose": "api_integration",
@@ -1392,7 +1392,7 @@ def execute_renaming():
             "key_functions": ["main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/connection.py",
+            "old_path": str(Path.home()) + "/Documents/python/connection.py",
             "old_name": "connection.py",
             "new_name": "ApiIntegrationProcess_1.py",
             "purpose": "api_integration",
@@ -1410,7 +1410,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/file-2.py",
+            "old_path": str(Path.home()) + "/Documents/python/file-2.py",
             "old_name": "file-2.py",
             "new_name": "ApiIntegrationProcess_1.py",
             "purpose": "api_integration",
@@ -1418,7 +1418,7 @@ def execute_renaming():
             "key_functions": ["test_authentication"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/download-file.py",
+            "old_path": str(Path.home()) + "/Documents/python/download-file.py",
             "old_name": "download-file.py",
             "new_name": "ApiIntegrationProcess_1.py",
             "purpose": "api_integration",
@@ -1479,7 +1479,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/download-csv.py",
+            "old_path": str(Path.home()) + "/Documents/python/download-csv.py",
             "old_name": "download-csv.py",
             "new_name": "DataProcessingGenerateData_1.py",
             "purpose": "data_processing",
@@ -1577,7 +1577,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/check.py",
+            "old_path": str(Path.home()) + "/Documents/python/check.py",
             "old_name": "check.py",
             "new_name": "DataProcessingProcessData_1.py",
             "purpose": "data_processing",
@@ -1595,7 +1595,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/convert_instagram_from_utilities.py",
+            "old_path": str(Path.home()) + "/Documents/python/convert_instagram_from_utilities.py",
             "old_name": "convert_instagram_from_utilities.py",
             "new_name": "DataProcessingConvertData.py",
             "purpose": "data_processing",
@@ -1607,7 +1607,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/database_generator.py",
+            "old_path": str(Path.home()) + "/Documents/python/database_generator.py",
             "old_name": "database_generator.py",
             "new_name": "DataProcessingAnalyzeProcessParseDatesArgumentData.py",
             "purpose": "data_processing",
@@ -1711,7 +1711,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/data_test_skew.py",
+            "old_path": str(Path.home()) + "/Documents/python/data_test_skew.py",
             "old_name": "data_test_skew.py",
             "new_name": "DataProcessingGenerateData_1.py",
             "purpose": "data_processing",
@@ -1719,7 +1719,7 @@ def execute_renaming():
             "key_functions": ["test_groupby_skew_equivalence"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/csvp.py",
+            "old_path": str(Path.home()) + "/Documents/python/csvp.py",
             "old_name": "csvp.py",
             "new_name": "DataProcessingMergeData.py",
             "purpose": "data_processing",
@@ -1727,7 +1727,7 @@ def execute_renaming():
             "key_functions": ["compile_image_info"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/2.0_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/2.0_1.py",
             "old_name": "2.0_1.py",
             "new_name": "DataProcessingProcessGenerateContentBasedOnPromptData.py",
             "purpose": "data_processing",
@@ -1735,7 +1735,7 @@ def execute_renaming():
             "key_functions": ["generate_content_based_on_prompt"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/convert-instagram.py",
+            "old_path": str(Path.home()) + "/Documents/python/convert-instagram.py",
             "old_name": "convert-instagram.py",
             "new_name": "DataProcessingProcessData_1.py",
             "purpose": "data_processing",
@@ -1753,7 +1753,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/archive-text.py",
+            "old_path": str(Path.home()) + "/Documents/python/archive-text.py",
             "old_name": "archive-text.py",
             "new_name": "DataProcessingProcessData_1.py",
             "purpose": "data_processing",
@@ -1761,7 +1761,7 @@ def execute_renaming():
             "key_functions": ["try_all_methods", "main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/check_bounding_boxes.py",
+            "old_path": str(Path.home()) + "/Documents/python/check_bounding_boxes.py",
             "old_name": "check_bounding_boxes.py",
             "new_name": "DataProcessingGenerateData_1.py",
             "purpose": "data_processing",
@@ -1769,7 +1769,7 @@ def execute_renaming():
             "key_functions": ["get_bounding_box_messages", "rects_intersect"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/bubblespider_scraper.py",
+            "old_path": str(Path.home()) + "/Documents/python/bubblespider_scraper.py",
             "old_name": "bubblespider_scraper.py",
             "new_name": "DataProcessingGenerateData_1.py",
             "purpose": "data_processing",
@@ -1777,7 +1777,7 @@ def execute_renaming():
             "key_functions": ["extract_product_info_to_csv"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/check_bounding_boxes_test.py",
+            "old_path": str(Path.home()) + "/Documents/python/check_bounding_boxes_test.py",
             "old_name": "check_bounding_boxes_test.py",
             "new_name": "DataProcessingProcessData_1.py",
             "purpose": "data_processing",
@@ -1797,7 +1797,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/create_csv_from_json-leonardo.py",
+            "old_path": str(Path.home()) + "/Documents/python/create_csv_from_json-leonardo.py",
             "old_name": "create_csv_from_json-leonardo.py",
             "new_name": "DataProcessingProcessProcessJsonToCsvData.py",
             "purpose": "data_processing",
@@ -1805,7 +1805,7 @@ def execute_renaming():
             "key_functions": ["process_json_to_csv", "combine_json_to_csv"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/database_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/database_1.py",
             "old_name": "database_1.py",
             "new_name": "DataProcessingProcessData_1.py",
             "purpose": "data_processing",
@@ -1813,7 +1813,7 @@ def execute_renaming():
             "key_functions": ["create_database", "update_database"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/dalle-html.py",
+            "old_path": str(Path.home()) + "/Documents/python/dalle-html.py",
             "old_name": "dalle-html.py",
             "new_name": "DataProcessingGenerateData_1.py",
             "purpose": "data_processing",
@@ -1821,7 +1821,7 @@ def execute_renaming():
             "key_functions": ["csv_to_html"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/batch-folder-writer.py",
+            "old_path": str(Path.home()) + "/Documents/python/batch-folder-writer.py",
             "old_name": "batch-folder-writer.py",
             "new_name": "UtilitiesProcess_1.py",
             "purpose": "utilities",
@@ -1829,7 +1829,7 @@ def execute_renaming():
             "key_functions": ["list_venv_directories", "main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/bash.py",
+            "old_path": str(Path.home()) + "/Documents/python/bash.py",
             "old_name": "bash.py",
             "new_name": "UtilitiesProcess_1.py",
             "purpose": "utilities",
@@ -1837,7 +1837,7 @@ def execute_renaming():
             "key_functions": ["__init__", "stop", "__init__", "to_params"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/appdirs.py",
+            "old_path": str(Path.home()) + "/Documents/python/appdirs.py",
             "old_name": "appdirs.py",
             "new_name": "UtilitiesMerge.py",
             "purpose": "utilities",
@@ -1850,7 +1850,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/collection_from_utilities.py",
+            "old_path": str(Path.home()) + "/Documents/python/collection_from_utilities.py",
             "old_name": "collection_from_utilities.py",
             "new_name": "UtilitiesProcess_1.py",
             "purpose": "utilities",
@@ -1858,7 +1858,7 @@ def execute_renaming():
             "key_functions": ["__init__", "to_params"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/calculator-mcp.py",
+            "old_path": str(Path.home()) + "/Documents/python/calculator-mcp.py",
             "old_name": "calculator-mcp.py",
             "new_name": "UtilitiesProcess_1.py",
             "purpose": "utilities",
@@ -1866,7 +1866,7 @@ def execute_renaming():
             "key_functions": ["calculator"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/advanced_miniforge_loader.py",
+            "old_path": str(Path.home()) + "/Documents/python/advanced_miniforge_loader.py",
             "old_name": "advanced_miniforge_loader.py",
             "new_name": "UtilitiesAnalyzeAnalyzeCondaEnvironments.py",
             "purpose": "utilities",
@@ -1916,7 +1916,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/async.py",
+            "old_path": str(Path.home()) + "/Documents/python/async.py",
             "old_name": "async.py",
             "new_name": "UtilitiesAnalyzeAudio.py",
             "purpose": "utilities",
@@ -1937,7 +1937,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/config.py.py",
+            "old_path": str(Path.home()) + "/Documents/python/config.py.py",
             "old_name": "config.py.py",
             "new_name": "AiMlAnalyzeVideo.py",
             "purpose": "ai_ml",
@@ -1945,7 +1945,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze_text_from_api-development_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze_text_from_api-development_1.py",
             "old_name": "analyze_text_from_api-development_1.py",
             "new_name": "AiMlAnalyzeAnalyzeText_1.py",
             "purpose": "ai_ml",
@@ -1953,7 +1953,7 @@ def execute_renaming():
             "key_functions": ["analyze_text"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/cp949prober.py",
+            "old_path": str(Path.home()) + "/Documents/python/cp949prober.py",
             "old_name": "cp949prober.py",
             "new_name": "AiMlAnalyze_1.py",
             "purpose": "ai_ml",
@@ -1982,7 +1982,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/ai_agent_server.py",
+            "old_path": str(Path.home()) + "/Documents/python/ai_agent_server.py",
             "old_name": "ai_agent_server.py",
             "new_name": "AiMlAnalyzeAnalyzeRequest.py",
             "purpose": "ai_ml",
@@ -2014,7 +2014,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/GenerateTexts_1_2_3.py",
+            "old_path": str(Path.home()) + "/Documents/python/GenerateTexts_1_2_3.py",
             "old_name": "GenerateTexts_1_2_3.py",
             "new_name": "AiMlGenerate_1.py",
             "purpose": "ai_ml",
@@ -2030,7 +2030,7 @@ def execute_renaming():
             "key_functions": ["analyze_text"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-folder-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-folder-reader.py",
             "old_name": "analyze-folder-reader.py",
             "new_name": "AiMlAnalyzeAnalyzeAstData.py",
             "purpose": "ai_ml",
@@ -2052,7 +2052,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/run_simple_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/run_simple_renamer.py",
             "old_name": "run_simple_renamer.py",
             "new_name": "AiMlAnalyze_1.py",
             "purpose": "ai_ml",
@@ -2060,7 +2060,7 @@ def execute_renaming():
             "key_functions": ["main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/__init__.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/__init__.py",
             "old_name": "__init__.py",
             "new_name": "AiMlAnalyze_1.py",
             "purpose": "ai_ml",
@@ -2068,7 +2068,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/botStories.py",
+            "old_path": str(Path.home()) + "/Documents/python/botStories.py",
             "old_name": "botStories.py",
             "new_name": "AutomationProcess_1.py",
             "purpose": "automation",
@@ -2076,7 +2076,7 @@ def execute_renaming():
             "key_functions": ["functionStories", "botlogin", "stories"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/bot_follow_from_video-editor_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/bot_follow_from_video-editor_1.py",
             "old_name": "bot_follow_from_video-editor_1.py",
             "new_name": "AutomationProcess_1.py",
             "purpose": "automation",
@@ -2091,7 +2091,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/bot_block_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/bot_block_1.py",
             "old_name": "bot_block_1.py",
             "new_name": "AutomationConvert.py",
             "purpose": "automation",
@@ -2105,7 +2105,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/cli.py_02_from_ai-image-generator.py",
+            "old_path": str(Path.home()) + "/Documents/python/cli.py_02_from_ai-image-generator.py",
             "old_name": "cli.py_02_from_ai-image-generator.py",
             "new_name": "AutomationProcessProcessImage.py",
             "purpose": "automation",
@@ -2113,7 +2113,7 @@ def execute_renaming():
             "key_functions": ["cli", "process_image"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/bot_follow.py",
+            "old_path": str(Path.home()) + "/Documents/python/bot_follow.py",
             "old_name": "bot_follow.py",
             "new_name": "AutomationProcess_1.py",
             "purpose": "automation",
@@ -2128,7 +2128,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/bot.py",
+            "old_path": str(Path.home()) + "/Documents/python/bot.py",
             "old_name": "bot.py",
             "new_name": "Automation_1.py",
             "purpose": "automation",
@@ -2136,7 +2136,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/botInstagram_from_ai-text-generator.py",
+            "old_path": str(Path.home()) + "/Documents/python/botInstagram_from_ai-text-generator.py",
             "old_name": "botInstagram_from_ai-text-generator.py",
             "new_name": "AutomationProcess_1.py",
             "purpose": "automation",
@@ -2144,7 +2144,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/basic_follow-unfollow_activity_from_ai-image-generator.py",
+            "old_path": str(Path.home()) + "/Documents/python/basic_follow-unfollow_activity_from_ai-image-generator.py",
             "old_name": "basic_follow-unfollow_activity_from_ai-image-generator.py",
             "new_name": "AutomationProcessImage_1.py",
             "purpose": "automation",
@@ -2152,7 +2152,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/botDraw.py",
+            "old_path": str(Path.home()) + "/Documents/python/botDraw.py",
             "old_name": "botDraw.py",
             "new_name": "AutomationProcessImage_1.py",
             "purpose": "automation",
@@ -2166,7 +2166,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/bot_cache_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/bot_cache_1.py",
             "old_name": "bot_cache_1.py",
             "new_name": "Automation_1.py",
             "purpose": "automation",
@@ -2174,7 +2174,7 @@ def execute_renaming():
             "key_functions": ["__init__", "__repr__"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/comment_medias_by_location_from_bot-automation.py",
+            "old_path": str(Path.home()) + "/Documents/python/comment_medias_by_location_from_bot-automation.py",
             "old_name": "comment_medias_by_location_from_bot-automation.py",
             "new_name": "AutomationMerge.py",
             "purpose": "automation",
@@ -2182,7 +2182,7 @@ def execute_renaming():
             "key_functions": ["comment_location_feed"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/etree_lxml.py",
+            "old_path": str(Path.home()) + "/Documents/python/etree_lxml.py",
             "old_name": "etree_lxml.py",
             "new_name": "ImageProcessingAnalyzeImage.py",
             "purpose": "image_processing",
@@ -2214,7 +2214,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/analyze-image-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/analyze-image-reader.py",
             "old_name": "analyze-image-reader.py",
             "new_name": "ImageProcessingAnalyzeAnalyzeImageGpt4OImage.py",
             "purpose": "image_processing",
@@ -2229,7 +2229,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/download-image.py",
+            "old_path": str(Path.home()) + "/Documents/python/download-image.py",
             "old_name": "download-image.py",
             "new_name": "ImageProcessingProcessProcessImagesImage.py",
             "purpose": "image_processing",
@@ -2237,7 +2237,7 @@ def execute_renaming():
             "key_functions": ["resize_image_to_target_size", "process_images"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/convert-json-writer.py",
+            "old_path": str(Path.home()) + "/Documents/python/convert-json-writer.py",
             "old_name": "convert-json-writer.py",
             "new_name": "ImageProcessingProcessImage_1.py",
             "purpose": "image_processing",
@@ -2253,7 +2253,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/extract-instagram-config.py",
+            "old_path": str(Path.home()) + "/Documents/python/extract-instagram-config.py",
             "old_name": "extract-instagram-config.py",
             "new_name": "ImageProcessingAnalyzeDeepMergeImage.py",
             "purpose": "image_processing",
@@ -2299,7 +2299,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/2mentest.py",
+            "old_path": str(Path.home()) + "/Documents/python/2mentest.py",
             "old_name": "2mentest.py",
             "new_name": "ImageProcessingExtractImage.py",
             "purpose": "image_processing",
@@ -2307,7 +2307,7 @@ def execute_renaming():
             "key_functions": ["extract_sitemap_data", "main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/archive-image.py",
+            "old_path": str(Path.home()) + "/Documents/python/archive-image.py",
             "old_name": "archive-image.py",
             "new_name": "ImageProcessingProcessImage_1.py",
             "purpose": "image_processing",
@@ -2315,7 +2315,7 @@ def execute_renaming():
             "key_functions": ["upscale_and_compress_image", "compress_image_to_size"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/ocr_gpt_renamer.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/ocr_gpt_renamer.py",
             "old_name": "ocr_gpt_renamer.py",
             "new_name": "ImageProcessingProcessPreprocessForOcrVideo.py",
             "purpose": "image_processing",
@@ -2337,7 +2337,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/cli_video.py",
+            "old_path": str(Path.home()) + "/Documents/python/cli_video.py",
             "old_name": "cli_video.py",
             "new_name": "AudioVideoProcessAudio_1.py",
             "purpose": "audio_video",
@@ -2345,7 +2345,7 @@ def execute_renaming():
             "key_functions": ["main"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/audio_test.py",
+            "old_path": str(Path.home()) + "/Documents/python/audio_test.py",
             "old_name": "audio_test.py",
             "new_name": "AudioVideoAudio.py",
             "purpose": "audio_video",
@@ -2353,7 +2353,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/TextToSpeech.py",
+            "old_path": str(Path.home()) + "/Documents/python/TextToSpeech.py",
             "old_name": "TextToSpeech.py",
             "new_name": "AudioVideoProcessAudio_1.py",
             "purpose": "audio_video",
@@ -2369,7 +2369,7 @@ def execute_renaming():
             "key_functions": ["process_frame", "process_large_video"],
         },
         {
-            "old_path": "/Users/steven/Documents/python/batch-text-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/batch-text-reader.py",
             "old_name": "batch-text-reader.py",
             "new_name": "AudioVideoProcessProcessTextAudio.py",
             "purpose": "audio_video",
@@ -2385,7 +2385,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/SpeechReco_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/SpeechReco_1.py",
             "old_name": "SpeechReco_1.py",
             "new_name": "AudioVideoProcessAudio_1.py",
             "purpose": "audio_video",
@@ -2397,7 +2397,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/extract-video-reader.py",
+            "old_path": str(Path.home()) + "/Documents/python/extract-video-reader.py",
             "old_name": "extract-video-reader.py",
             "new_name": "AudioVideoMergeAudio.py",
             "purpose": "audio_video",
@@ -2405,7 +2405,7 @@ def execute_renaming():
             "key_functions": [],
         },
         {
-            "old_path": "/Users/steven/Documents/python/direct_send_photo_1.py",
+            "old_path": str(Path.home()) + "/Documents/python/direct_send_photo_1.py",
             "old_name": "direct_send_photo_1.py",
             "new_name": "WebScrapingMergeImage.py",
             "purpose": "web_scraping",
@@ -2526,7 +2526,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/1.py",
+            "old_path": str(Path.home()) + "/Documents/python/1.py",
             "old_name": "1.py",
             "new_name": "WebScrapingAnalyze_1.py",
             "purpose": "web_scraping",
@@ -2563,7 +2563,7 @@ def execute_renaming():
             ],
         },
         {
-            "old_path": "/Users/steven/Documents/python/rename/run_renamers.py",
+            "old_path": str(Path.home()) + "/Documents/python/rename/run_renamers.py",
             "old_name": "run_renamers.py",
             "new_name": "WebScrapingAnalyze_1.py",
             "purpose": "web_scraping",

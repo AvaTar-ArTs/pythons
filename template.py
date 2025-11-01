@@ -24,8 +24,8 @@ CONSTANT_777 = 777
 
 
 # Set the input/output paths; update these as necessary.
-input_csv = Path("/Users/steven/Documents/QuantumForgeLabs/data.csv")
-output_html = Path("/Users/steven/Documents/QuantumForgeLabs/data.html")
+input_csv = Path(str(Path.home()) + "/Documents/QuantumForgeLabs/data.csv")
+output_html = Path(str(Path.home()) + "/Documents/QuantumForgeLabs/data.html")
 
 # This is a template for an individual job listing; you can modify the styling or fields.
 job_template = """

@@ -149,7 +149,7 @@ class PurposeRenamer:
                 if not dry_run:
                     try:
                         shutil.move(str(f), str(new_path))
-                    except:
+                    except Exception:
                         pass
 
                 renamed += 1

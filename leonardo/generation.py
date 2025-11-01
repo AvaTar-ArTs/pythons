@@ -31,7 +31,7 @@ CONSTANT_93043291 = 93043291
 # Configuration
 BASE_URL = "https://cloud.leonardo.ai/api/rest/v1/generations/user/f7bb8476-e3f0-4f1f-9a06-4600866cc49c"
 AUTH_TOKEN = "Bearer CONSTANT_93043291-957d-4ec1-8c79-ee734abcb6e3"
-OUTPUT_DIR = Path("/Users/steven/Pictures/leodowns")
+OUTPUT_DIR = Path(str(Path.home()) + "/Pictures/leodowns")
 MAX_RECORDS_PER_FILE = CONSTANT_500  # Limit records per JSON file
 MAX_WORKERS = 5  # For parallel downloads
 INCLUDE_IMAGES = True  # Set False to skip image downloads

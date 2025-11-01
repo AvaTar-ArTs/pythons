@@ -424,7 +424,7 @@ class RobustDocumentsAnalyzer:
         logger.info(f"- documents_analysis_report_robust.md")
 
 def main():
-    analyzer = RobustDocumentsAnalyzer(Path("/Users/steven/Documents"))
+    analyzer = RobustDocumentsAnalyzer(Path(str(Path.home()) + "/Documents"))
     analysis = analyzer.run_complete_analysis()
     analyzer.save_analysis()
     

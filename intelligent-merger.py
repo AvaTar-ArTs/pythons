@@ -720,11 +720,11 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
 
-    parser.add_argument('--target', type=str, default=Path("/Users/steven/Documents/python"),
+    parser.add_argument('--target', type=str, default=Path(str(Path.home()) + "/Documents/python"),
                        help='Target directory (default: ~/Documents/python)')
     parser.add_argument('--sources', nargs='+',
-                       default=[Path("/Users/steven/Documents/python-repo"),
-                               Path("/Users/steven/Documents/python_backup")],
+                       default=[Path(str(Path.home()) + "/Documents/python-repo"),
+                               Path(str(Path.home()) + "/Documents/python_backup")],
                        help='Source directories to merge from')
     parser.add_argument('--dry-run', action='store_true', default=True,
                        help='Dry run mode (default, safe)')

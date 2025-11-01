@@ -188,7 +188,7 @@ def main():
     logger.info("🧹 Complete Documents Cleanup Orchestrator")
     logger.info("=" * 50)
 
-    orchestrator = CleanupOrchestrator(Path("/Users/steven/Documents"))
+    orchestrator = CleanupOrchestrator(Path(str(Path.home()) + "/Documents"))
 
     # First run: Dry run
     logger.info("\n🔍 STEP 1: DRY RUN - Simulating complete cleanup...")

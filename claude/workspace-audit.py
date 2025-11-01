@@ -29,7 +29,7 @@ from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
 
-CLAUDE_DIR = Path("/Users/steven/Documents/claude")
+CLAUDE_DIR = Path(str(Path.home()) + "/Documents/claude")
 
 
 def get_file_hash(filepath):

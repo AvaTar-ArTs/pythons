@@ -8,13 +8,13 @@ Date: 2025-11-01
 """
 
 import argparse
-import importlib.resources
+import importlib  # Replaced deprecated importlib.resources
 import os
 import sys
 import glob
 import shutil
 import json
-from distutils.dir_util import copy_tree
+from shutil import copytree as copy_tree
 import simplegallery.common as spg_common
 import simplegallery.logic.gallery_logic as gallery_logic
 

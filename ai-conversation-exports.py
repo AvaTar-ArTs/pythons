@@ -181,7 +181,7 @@ def create_summary_report(base_path, moved_count, archived_count):
 def main():
     """main function."""
 
-    base_dir = Path("/Users/steven/SUNO/10-14")
+    base_dir = Path(str(Path.home()) + "/SUNO/10-14")
 
     logger.info("AI Export Tools Organization Script")
     logger.info("=" * 40)

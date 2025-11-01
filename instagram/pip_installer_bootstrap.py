@@ -22,7 +22,7 @@
 
 from pathlib import Path
 import argparse
-import importlib
+import importlib  # Replaced deprecated importlib
 import os.path
 import pkgutil
 import shutil

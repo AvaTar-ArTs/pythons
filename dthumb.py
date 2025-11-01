@@ -43,8 +43,8 @@ api_key = os.getenv("ELEVENLABS_API_KEY")
 youtube = build("youtube", "v3", developerKey=api_key)
 
 # Define paths
-csv_path = "/Users/steven/Downloads/Misc/ytube - youtube_videos.csv"
-thumbnail_dir = Path("/Users/steven/Downloads/Misc/Thumbnails/d2")
+csv_path = str(Path.home()) + "/Downloads/Misc/ytube - youtube_videos.csv"
+thumbnail_dir = Path(str(Path.home()) + "/Downloads/Misc/Thumbnails/d2")
 os.makedirs(thumbnail_dir, exist_ok=True)
 
 # Load CSV
@@ -91,6 +91,6 @@ for index, row in df.iterrows():
 
 # Save updated DataFrame
 df.to_csv(
-    Path("/Users/steven/Downloads/Misc/Thumbnails/d2/updated_youtube_videos.csv"),
+    Path(str(Path.home()) + "/Downloads/Misc/Thumbnails/d2/updated_youtube_videos.csv"),
     index=False,
 )

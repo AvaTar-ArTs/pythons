@@ -31,8 +31,8 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 import os
 
-input_path = "/Users/steven/Music/NocTurnE-meLoDieS/Song-origins-html/Raccoon Alley Album Art(83% copy).html"
-output_dir = Path("/Users/steven/Music/NocTurnE-meLoDieS/Song-origins-html/chunks")
+input_path = str(Path.home()) + "/Music/NocTurnE-meLoDieS/Song-origins-html/Raccoon Alley Album Art(83% copy).html"
+output_dir = Path(str(Path.home()) + "/Music/NocTurnE-meLoDieS/Song-origins-html/chunks")
 
 # Create output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)

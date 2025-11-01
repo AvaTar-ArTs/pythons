@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 # Paths configuration
-csv_file_path = "/Users/steven/15days.csv"
+csv_file_path = str(Path.home()) + "/15days.csv"
 destination_root = "/Users/steven"
 backup_file_path = os.path.join(destination_root, "file_order_backup.json")
 

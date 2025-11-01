@@ -55,6 +55,6 @@ def main(csv_path, api_key):
 
 
 if __name__ == "__main__":
-    csv_path = "/Users/steven/Music/quiz-talk/Gtrivia - Sheet1.csv"  # Update this to the path of your CSV file
+    csv_path = str(Path.home()) + "/Music/quiz-talk/Gtrivia - Sheet1.csv"  # Update this to the path of your CSV file
     api_key = os.getenv("OPENAI_API_KEY")  # Get API key from environment
     main(csv_path, api_key)

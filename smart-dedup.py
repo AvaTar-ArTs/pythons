@@ -83,7 +83,7 @@ class SmartDeduplicator:
                  backup_dir: Optional[str] = None):
         self.dry_run = dry_run
         self.interactive = interactive
-        self.backup_dir = backup_dir or Path("/Users/steven/Documents/python/dedup_backup")
+        self.backup_dir = backup_dir or Path(str(Path.home()) + "/Documents/python/dedup_backup")
 
         self.stats = {
             'total_dupes': 0,
@@ -324,7 +324,7 @@ class SmartDeduplicator:
     def generate_report(self) -> str:
         """Generate deduplication report"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_file = f"/Users/steven/Documents/python/DEDUPLICATION_REPORT_{timestamp}.md"
+        report_file = fstr(Path.home()) + "/Documents/python/DEDUPLICATION_REPORT_{timestamp}.md"
 
         with open(report_file, 'w', encoding='utf-8') as f:
             f.write("# 🧹 DEDUPLICATION REPORT\n\n")
@@ -472,9 +472,9 @@ Examples:
 
     # Default directories
     directories = args.dirs or [
-        Path("/Users/steven/Documents/python-repo"),
-        Path("/Users/steven/Documents/python"),
-        Path("/Users/steven/Documents/python_backup")
+        Path(str(Path.home()) + "/Documents/python-repo"),
+        Path(str(Path.home()) + "/Documents/python"),
+        Path(str(Path.home()) + "/Documents/python_backup")
     ]
 
     # Create deduplicator

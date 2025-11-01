@@ -27,7 +27,7 @@ from pathlib import Path
 SAVE_KEYWORDS = ["exit", "bye", "save", "done", "quit", "goodbye"]
 
 # Path to conversation exporter
-EXPORTER_PATH = Path("/Users/steven/Documents/python/conversation_exporter.py")
+EXPORTER_PATH = Path(str(Path.home()) + "/Documents/python/conversation_exporter.py")
 
 
 def should_save(user_message):

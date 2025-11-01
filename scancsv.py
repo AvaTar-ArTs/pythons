@@ -18,12 +18,12 @@ logger = logging.getLogger(__name__)
 
 # List of drives to scan
 drives = [
-    Path("/Users/steven/CoH-Story"),
-    Path("/Users/steven/CoMic"),
-    Path("/Users/steven/Downloads"),
-    Path("/Users/steven/Documents"),
-    Path("/Users/steven/Music"),
-    Path("/Users/steven/Pictures"),
+    Path(str(Path.home()) + "/CoH-Story"),
+    Path(str(Path.home()) + "/CoMic"),
+    Path(str(Path.home()) + "/Downloads"),
+    Path(str(Path.home()) + "/Documents"),
+    Path(str(Path.home()) + "/Music"),
+    Path(str(Path.home()) + "/Pictures"),
 ]
 
 # File types to look for

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 """Upload videos to Youtube."""
-from distutils.core import setup
+# DEPRECATED: distutils removed in Python 3.12
+# from distutils.core import setup
 
 setup_kwargs = {
     "name": "youtube-upload",

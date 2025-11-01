@@ -27,7 +27,7 @@ from collections import defaultdict
 
 def analyze_current_structure():
     """Analyze the current directory structure."""
-    base_path = Path(Path("/Users/steven/Documents/python"))
+    base_path = Path(Path(str(Path.home()) + "/Documents/python"))
 
     # Categories for analysis
     categories = {

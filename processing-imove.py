@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 # Define the path to the CSV file
-csv_file_path = "/Users/steven/Downloads/ogPic6-21 - image_paths2.csv"
+csv_file_path = str(Path.home()) + "/Downloads/ogPic6-21 - image_paths2.csv"
 # Define the destination directory based on your specification
 destination_dir = Path("/Volumes/iMac/4-4-2024")
 

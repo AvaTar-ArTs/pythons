@@ -29,9 +29,9 @@ if not openai.api_key:
     raise EnvironmentError("OpenAI API key not found. Please check your .env file.")
 
 # Directory paths
-AUDIO_DIR = Path("/Users/steven/Movies/poject2025/mp4")  # Directory containing MP3 files
-TRANSCRIPT_DIR = Path("/Users/steven/Movies/poject2025/mp4/transcript")  # Directory to save transcripts
-ANALYSIS_DIR = Path("/Users/steven/Movies/poject2025/mp4/analysis")  # Directory to save the analysis files
+AUDIO_DIR = Path(str(Path.home()) + "/Movies/poject2025/mp4")  # Directory containing MP3 files
+TRANSCRIPT_DIR = Path(str(Path.home()) + "/Movies/poject2025/mp4/transcript")  # Directory to save transcripts
+ANALYSIS_DIR = Path(str(Path.home()) + "/Movies/poject2025/mp4/analysis")  # Directory to save the analysis files
 
 # Create output directories if they don't exist
 os.makedirs(TRANSCRIPT_DIR, exist_ok=True)

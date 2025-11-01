@@ -20,7 +20,7 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
-base_dir = Path(Path("/Users/steven/Documents/python"))
+base_dir = Path(Path(str(Path.home()) + "/Documents/python"))
 
 # USE-CASE based organization map
 USE_CASE_STRUCTURE = {

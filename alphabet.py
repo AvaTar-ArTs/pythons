@@ -145,9 +145,9 @@ def generate_grouped_gallery(folder_path, output_html, group_size=4):
 
 # Example usage
 folder_path = Path(
-    "/Users/steven/AvaTarArTs/FunnySkeletonLifeTarotCard/images/photos"
+    str(Path.home()) + "/AvaTarArTs/FunnySkeletonLifeTarotCard/images/photos"
 )  # Replace with your folder path
 output_html = Path(
-    "/Users/steven/AvaTarArTs/FunnySkeletonLifeTarotCard/grouped_gallery.html"
+    str(Path.home()) + "/AvaTarArTs/FunnySkeletonLifeTarotCard/grouped_gallery.html"
 )  # Output HTML path
 generate_grouped_gallery(folder_path, output_html)

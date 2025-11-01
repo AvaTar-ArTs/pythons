@@ -781,7 +781,7 @@ def main():
     logger.info("🧠 Deep Code Analysis - Advanced Content-Aware System")
     logger.info("=" * 60)
 
-    code_file = "/Users/steven/Documents/python/advanced_content_analyzer.py"
+    code_file = str(Path.home()) + "/Documents/python/advanced_content_analyzer.py"
 
     analyzer = DeepCodeAnalyzer(code_file)
     analysis = analyzer.run_deep_analysis()
@@ -792,7 +792,7 @@ def main():
         # Save detailed analysis
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_file = (
-            f"/Users/steven/Documents/python/deep_code_analysis_{timestamp}.json"
+            fstr(Path.home()) + "/Documents/python/deep_code_analysis_{timestamp}.json"
         )
 
         import json

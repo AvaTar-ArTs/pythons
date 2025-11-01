@@ -32,12 +32,12 @@ def prompt_for_files():
 
 def predefined_file_paths():
     return [
-        Path("/Users/steven/Music/suno/1.html"),
-        Path("/Users/steven/Music/suno/2.html"),
-        Path("/Users/steven/Music/suno/3.html"),
-        Path("/Users/steven/Music/suno/4.html"),
-        Path("/Users/steven/Music/suno/5.html"),
-        Path("/Users/steven/Music/suno/6.html"),
+        Path(str(Path.home()) + "/Music/suno/1.html"),
+        Path(str(Path.home()) + "/Music/suno/2.html"),
+        Path(str(Path.home()) + "/Music/suno/3.html"),
+        Path(str(Path.home()) + "/Music/suno/4.html"),
+        Path(str(Path.home()) + "/Music/suno/5.html"),
+        Path(str(Path.home()) + "/Music/suno/6.html"),
     ]
 
     """extract_song_details function."""

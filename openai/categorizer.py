@@ -35,8 +35,8 @@ if not api_key:
     )
 
 
-SOURCE_DIR = Path("/Users/steven/Documents/Python")
-DEST_DIR = Path("/Users/steven/Documents/Categorized")
+SOURCE_DIR = Path(str(Path.home()) + "/Documents/Python")
+DEST_DIR = Path(str(Path.home()) + "/Documents/Categorized")
 
 
 def get_openai_category(script_content):
@@ -110,7 +110,7 @@ def categorize_files(source_dir, dest_dir):
 
 if __name__ == "__main__":
     source_dir = Path(
-        "/Users/steven/Documents/Python"
+        str(Path.home()) + "/Documents/Python"
     )  # Update with your scripts directory
-    dest_dir = Path("/Users/steven/Documents/Categorized")
+    dest_dir = Path(str(Path.home()) + "/Documents/Categorized")
     categorize_files(source_dir, dest_dir)

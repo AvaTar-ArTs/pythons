@@ -340,9 +340,9 @@ def main():
     merger = DiscographyMerger()
 
     # Define paths
-    suno_path = Path("/Users/steven/Documents/CsV/songs.csv")  # Adjust path as needed
-    nocturne_path = "/Users/steven/Documents/CsV/Discography ALL - Shorts -  CONSTANT_2024 _9bc187fa-CONSTANT_6024-43dd-b80c-8503abd80dac.csv"
-    output_dir = Path("/Users/steven/tehSiTes/AlchemyAPI/merged_data")
+    suno_path = Path(str(Path.home()) + "/Documents/CsV/songs.csv")  # Adjust path as needed
+    nocturne_path = str(Path.home()) + "/Documents/CsV/Discography ALL - Shorts -  CONSTANT_2024 _9bc187fa-CONSTANT_6024-43dd-b80c-8503abd80dac.csv"
+    output_dir = Path(str(Path.home()) + "/tehSiTes/AlchemyAPI/merged_data")
 
     # Run merge
     success = merger.run_merge(suno_path, nocturne_path, output_dir)

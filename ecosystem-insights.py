@@ -277,7 +277,7 @@ def analyze_python_ecosystem(root_path, max_depth=6):
 
     # Save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    results_file = f"/Users/steven/python_ecosystem_insights_{timestamp}.json"
+    results_file = fstr(Path.home()) + "/python_ecosystem_insights_{timestamp}.json"
 
     results = {
         "timestamp": timestamp,

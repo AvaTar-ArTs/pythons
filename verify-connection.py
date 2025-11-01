@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 # Load environment variables from .env (ensure your OPENAI_API_KEY is stored here)
-env_path = Path("/Users/steven/.env")
+env_path = Path(str(Path.home()) + "/.env")
 load_dotenv(dotenv_path=env_path)
 
 hostname = os.getenv("HOSTNAME")

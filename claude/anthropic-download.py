@@ -781,8 +781,8 @@ class ContentAwareAnalyzer:
 
 def main():
     """Main execution function"""
-    source_dir = "/Users/steven/Documents/cursor-agent/chat_analysis "
-    target_dir = Path("/Users/steven/CONTENT_AWARE_CHAT_ANALYSIS")
+    source_dir = str(Path.home()) + "/Documents/cursor-agent/chat_analysis "
+    target_dir = Path(str(Path.home()) + "/CONTENT_AWARE_CHAT_ANALYSIS")
 
     analyzer = ContentAwareAnalyzer(source_dir, target_dir)
     analyzer.run_complete_analysis()

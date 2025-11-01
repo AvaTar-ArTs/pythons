@@ -56,7 +56,7 @@ class FinalConsolidator:
         self.dry_run = dry_run
 
         self.temp_dir = Path(
-            Path("/Users/steven/Documents/python_final_consolidation_temp")
+            Path(str(Path.home()) + "/Documents/python_final_consolidation_temp")
         )
 
         self.stats = {
@@ -115,7 +115,7 @@ class FinalConsolidator:
         logger.info(f"{'='*80}{Colors.END}\n")
 
         # Check python.zip
-        zip1 = Path(Path("/Users/steven/Documents/python.zip"))
+        zip1 = Path(Path(str(Path.home()) + "/Documents/python.zip"))
         if zip1.exists():
             result = subprocess.run(
                 ["unzip", "-l", str(zip1)], capture_output=True, text=True
@@ -129,7 +129,7 @@ class FinalConsolidator:
             )
 
         # Check python 2.zip
-        zip2 = Path("/Users/steven/Documents/python 2.zip")
+        zip2 = Path(str(Path.home()) + "/Documents/python 2.zip")
         if zip2.exists():
             result = subprocess.run(
                 ["unzip", "-l", str(zip2)], capture_output=True, text=True
@@ -152,8 +152,8 @@ class FinalConsolidator:
         docs_dir = self.master_dir / "docs" / "consolidation_reports"
 
         doc_files = [
-            Path("/Users/steven/Documents/PYTHON_CONSOLIDATION_COMPLETE.md"),
-            Path("/Users/steven/Documents/PYTHON_ECOSYSTEM_MASTER_PLAN.md"),
+            Path(str(Path.home()) + "/Documents/PYTHON_CONSOLIDATION_COMPLETE.md"),
+            Path(str(Path.home()) + "/Documents/PYTHON_ECOSYSTEM_MASTER_PLAN.md"),
         ]
 
         for doc_path in doc_files:
@@ -285,7 +285,7 @@ def main():
     parser.add_argument(
         "--master",
         type=str,
-        default=Path("/Users/steven/Documents/python"),
+        default=Path(str(Path.home()) + "/Documents/python"),
         help="Master directory",
     )
     parser.add_argument("--dry-run", action="store_true", default=True)

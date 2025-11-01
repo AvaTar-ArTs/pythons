@@ -13,7 +13,7 @@ import sys
 import glob
 import shutil
 import json
-from distutils.dir_util import copy_tree
+from shutil import copytree as copy_tree
 import pkg_resources
 import simplegallery.common as spg_common
 import simplegallery.logic.gallery_logic as gallery_logic

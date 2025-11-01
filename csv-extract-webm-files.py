@@ -16,11 +16,11 @@ logger = logging.getLogger(__name__)
 
 
 # Path to your input CSV file
-csv_path = "/Users/steven/vids-12-05-00:16.csv"
+csv_path = str(Path.home()) + "/vids-12-05-00:16.csv"
 
 # Output paths for the new CSV and TXT files
-output_csv = Path("/Users/steven/webm_files.csv")
-output_txt = Path("/Users/steven/webm_files.txt")
+output_csv = Path(str(Path.home()) + "/webm_files.csv")
+output_txt = Path(str(Path.home()) + "/webm_files.txt")
 
 # Load the CSV file
 data = pd.read_csv(csv_path)

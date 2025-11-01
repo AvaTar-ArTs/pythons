@@ -20,10 +20,10 @@ CONSTANT_300 = 300
 
 
 # Path to your PDF file
-pdf_path = "/Users/steven/Documents/tesla/1-ocr.pdf"
+pdf_path = str(Path.home()) + "/Documents/tesla/1-ocr.pdf"
 
 # Output directory for images
-output_dir = "/Users/steven/Documents/tesla/output_images"
+output_dir = str(Path.home()) + "/Documents/tesla/output_images"
 os.makedirs(output_dir, exist_ok=True)
 
 # Convert PDF to images

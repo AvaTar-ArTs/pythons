@@ -156,7 +156,7 @@ def process_directory_with_batching(directory_path, batch_size=10):
 # Example usage
 if __name__ == "__main__":
     directory_path = Path(
-        "/Users/steven/Documents/python"
+        str(Path.home()) + "/Documents/python"
     )  # Update this to your target directory
     batch_size = 10  # Number of scripts to process at a time
 

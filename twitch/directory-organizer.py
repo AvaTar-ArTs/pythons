@@ -324,7 +324,7 @@ class DirectoryOrganizer:
 
             f.write("## Final Structure\n\n")
             f.write("```\n")
-            f.write("/Users/steven/Documents/python/\n")
+            f.write(str(Path.home()) + "/Documents/python/\n")
             for category in sorted(self.categories.keys()):
                 folder_name = category.lower().replace("_", "-")
                 if category != "BACKUPS":

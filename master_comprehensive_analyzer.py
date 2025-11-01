@@ -208,5 +208,5 @@ class MasterAnalyzer:
 
 
 if __name__ == "__main__":
-    analyzer = MasterAnalyzer("/Users/steven/Documents/python")
+    analyzer = MasterAnalyzer(str(Path.home()) + "/Documents/python")
     analyzer.run()

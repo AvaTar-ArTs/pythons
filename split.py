@@ -58,5 +58,5 @@ def split_html_file(file_path, lines_per_chunk=CONSTANT_1000):
 
 # Example usage
 split_html_file(
-    "/Users/steven/Music/NocTurnE-meLoDieS/Song-origins-html/Raccoon Alley Album Art(83% copy).html"
+    str(Path.home()) + "/Music/NocTurnE-meLoDieS/Song-origins-html/Raccoon Alley Album Art(83% copy).html"
 )

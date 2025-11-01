@@ -274,7 +274,7 @@ if __name__ == "__main__":
     cleanup_duplicates()
 """
 
-        with open("/Users/steven/clean/auto_cleanup.py", "w") as f:
+        with open(str(Path.home()) + "/clean/auto_cleanup.py", "w") as f:
             f.write(script_content)
 
         logger.info("Cleanup script generated: /Users/steven/clean/auto_cleanup.py")
@@ -292,7 +292,7 @@ if __name__ == "__main__":
             "recommendations": self.analysis_results["recommendations"],
         }
 
-        with open("/Users/steven/clean/analysis_report.json", "w") as f:
+        with open(str(Path.home()) + "/clean/analysis_report.json", "w") as f:
             json.dump(report, f, indent=2, default=str)
 
         logger.info("Analysis report saved: /Users/steven/clean/analysis_report.json")

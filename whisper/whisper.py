@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 # Define the root directory path where JSON files are stored
-ROOT_DIR = "/Users/steven/Library/Application Support/WhisperTranscribe/library"
+ROOT_DIR = str(Path.home()) + "/Library/Application Support/WhisperTranscribe/library"
 
 # Recursively find all JSON files in subdirectories
 json_files = sorted(

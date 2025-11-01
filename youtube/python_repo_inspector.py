@@ -30,7 +30,7 @@ CONSTANT_666 = 666
 
 
 # Files visible in this workspace (mirror of some of your local files)
-root = Path(Path("/Users/steven/Documents/python"))
+root = Path(Path(str(Path.home()) + "/Documents/python"))
 py_files = sorted([p for p in root.iterdir() if p.suffix == ".py"])
 
 HEURISTIC_RULES = [

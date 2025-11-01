@@ -907,7 +907,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
 
-    parser.add_argument('--target', type=str, default=Path("/Users/steven/Documents/python"),
+    parser.add_argument('--target', type=str, default=Path(str(Path.home()) + "/Documents/python"),
                        help='Target directory (default: ~/Documents/python)')
     parser.add_argument('--dry-run', action='store_true', default=True,
                        help='Dry run mode (default, safe)')
@@ -925,7 +925,7 @@ def main():
     args = parser.parse_args()
 
     # Load environment
-    env_file = Path("/Users/steven/.env.d/MASTER_CONSOLIDATED.env")
+    env_file = Path(str(Path.home()) + "/.env.d/MASTER_CONSOLIDATED.env")
     if Path(env_file).exists():
         for line in open(env_file):
             if line.startswith('export '):

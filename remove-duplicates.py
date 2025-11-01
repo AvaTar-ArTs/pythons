@@ -29,7 +29,7 @@ from collections import defaultdict
 class AdvancedDuplicateRemover:
     """Advanced duplicate detection and removal using multiple methods."""
 
-    def __init__(self, target_dir: str = Path("/Users/steven/Documents/python")):
+    def __init__(self, target_dir: str = Path(str(Path.home()) + "/Documents/python")):
         """__init__ function."""
 
         self.target_dir = Path(target_dir)
@@ -356,7 +356,7 @@ class AdvancedDuplicateRemover:
         """Save changes to CSV for rollback."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         csv_file = (
-            f"/Users/steven/Documents/python/advanced_duplicate_cleanup_{timestamp}.csv"
+            fstr(Path.home()) + "/Documents/python/advanced_duplicate_cleanup_{timestamp}.csv"
         )
 
         with open(csv_file, "w", newline="", encoding="utf-8") as csvfile:

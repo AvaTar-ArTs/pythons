@@ -47,7 +47,7 @@ def find_out_of_place_files():
     extensions = [".py", ".md", ".csv", ".html", ".json", ".txt", ".zip"]
 
     out_of_place_files = []
-    documents_path = Path("/Users/steven/Documents")
+    documents_path = Path(str(Path.home()) + "/Documents")
 
     logger.info("🔍 Scanning Documents directory for out-of-place files...")
 
@@ -119,7 +119,7 @@ def create_csv_report(out_of_place_files):
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     csv_filename = (
-        f"/Users/steven/Documents/python/out_of_place_files_report_{timestamp}.csv"
+        fstr(Path.home()) + "/Documents/python/out_of_place_files_report_{timestamp}.csv"
     )
 
     logger.info(f"\n📊 Creating CSV report: {csv_filename}")

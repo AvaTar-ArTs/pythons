@@ -30,7 +30,7 @@ headers = {
 }
 
 # Output file
-output_file = Path("/Users/steven/Pictures/leonardo_library.json")
+output_file = Path(str(Path.home()) + "/Pictures/leonardo_library.json")
 
 # Pagination parameters
 offset = 0

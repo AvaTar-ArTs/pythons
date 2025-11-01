@@ -34,7 +34,8 @@ import os, sys, json, itertools, threading, shutil, configparser, optparse
 from time import sleep as sl
 from random import shuffle, randint
 from .colors import get_colors
-from distutils import util, spawn
+# DEPRECATED: distutils removed in Python 3.12
+# from distutils import util, spawn
 
 try:
     import validators as valid

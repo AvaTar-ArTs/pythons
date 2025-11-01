@@ -173,7 +173,7 @@ def get_unique_file_path(base_path):
 
 if __name__ == "__main__":
     # Set the documents directory
-    documents_dir = Path("/Users/steven/documents")
+    documents_dir = Path(str(Path.home()) + "/documents")
 
     # Generate output filename with timestamp
     current_date = datetime.now().strftime("%m-%d-%H:%M")

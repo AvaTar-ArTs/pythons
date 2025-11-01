@@ -555,8 +555,8 @@ class AIDeepIntelligentAnalyzer:
         self.print_header("GENERATING AI-POWERED REPORT", Colors.BLUE, Emojis.MAGIC)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_file = f"/Users/steven/Documents/python/AI_DEEP_ANALYSIS_{timestamp}.md"
-        diff_dir = f"/Users/steven/Documents/python/ai_diff_reports_{timestamp}"
+        report_file = fstr(Path.home()) + "/Documents/python/AI_DEEP_ANALYSIS_{timestamp}.md"
+        diff_dir = fstr(Path.home()) + "/Documents/python/ai_diff_reports_{timestamp}"
 
         Path(diff_dir).mkdir(exist_ok=True)
 
@@ -640,7 +640,7 @@ class AIDeepIntelligentAnalyzer:
     def create_json_export(self):
         """Export to JSON"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        json_file = f"/Users/steven/Documents/python/ai_analysis_{timestamp}.json"
+        json_file = fstr(Path.home()) + "/Documents/python/ai_analysis_{timestamp}.json"
 
         # Serialize (remove non-serializable embeddings)
         inventory_clean = {}
@@ -719,7 +719,7 @@ class AIDeepIntelligentAnalyzer:
 def main():
     """Main execution"""
     # Load environment
-    env_file = Path("/Users/steven/.env.d/MASTER_CONSOLIDATED.env")
+    env_file = Path(str(Path.home()) + "/.env.d/MASTER_CONSOLIDATED.env")
     if Path(env_file).exists():
         logger.info(f"{Colors.CYAN}{Emojis.GEAR} Loading API keys...{Colors.END}")
         # Source the file to load env vars
@@ -732,9 +732,9 @@ def main():
                     os.environ[key] = value
 
     directories = [
-        Path("/Users/steven/Documents/python-repo"),
-        Path("/Users/steven/Documents/python"),
-        Path("/Users/steven/Documents/python_backup")
+        Path(str(Path.home()) + "/Documents/python-repo"),
+        Path(str(Path.home()) + "/Documents/python"),
+        Path(str(Path.home()) + "/Documents/python_backup")
     ]
 
     logger.info(f"\n{Colors.BOLD}{Colors.CYAN}Analyzing directories:{Colors.END}")

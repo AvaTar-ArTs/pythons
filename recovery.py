@@ -37,7 +37,7 @@ class RecoveryAnalyzer:
             Path("/Volumes/2T-Xx/AvaTarArTs/python"),
         ]
 
-        self.target_dir = Path(Path("/Users/steven/Documents/python"))
+        self.target_dir = Path(Path(str(Path.home()) + "/Documents/python"))
         self.analysis_results = {
             "total_files": 0,
             "unique_files": 0,
@@ -162,7 +162,7 @@ class RecoveryAnalyzer:
         """Save detailed analysis report."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         report_file = (
-            f"/Users/steven/Documents/python/recovery_analysis_{timestamp}.csv"
+            fstr(Path.home()) + "/Documents/python/recovery_analysis_{timestamp}.csv"
         )
 
         with open(report_file, "w", newline="", encoding="utf-8") as csvfile:

@@ -25,18 +25,18 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables from .env (make sure your OPENAI_API_KEY is stored here)
-env_path = Path("/Users/steven/.env")
+env_path = Path(str(Path.home()) + "/.env")
 load_dotenv(dotenv_path=env_path)
 
 # Directory pathsp
 AUDIO_DIR = Path(
-    "/Users/steven/Music/NocTurnE-meLoDieS/mp3"
+    str(Path.home()) + "/Music/NocTurnE-meLoDieS/mp3"
 )  # Directory containing MP3 files
 TRANSCRIPT_DIR = Path(
-    "/Users/steven/Music/NocTurnE-meLoDieS/song-video/analysis-transcript"
+    str(Path.home()) + "/Music/NocTurnE-meLoDieS/song-video/analysis-transcript"
 )  # Directory to save transcripts
 ANALYSIS_DIR = Path(
-    "/Users/steven/Music/NocTurnE-meLoDieS/song-video/analysis-transcript"
+    str(Path.home()) + "/Music/NocTurnE-meLoDieS/song-video/analysis-transcript"
 )  # Directory to save the analysis files
 
 # Create output directories if they don't exist

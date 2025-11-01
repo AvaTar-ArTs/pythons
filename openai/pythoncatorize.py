@@ -83,7 +83,7 @@ def categorize_files(source_dir, dest_dir):
 
 if __name__ == "__main__":
     source_dir = Path(
-        "/Users/steven/Documents/Python"
+        str(Path.home()) + "/Documents/Python"
     )  # Update with your scripts directory
-    dest_dir = Path("/Users/steven/Documents/Categorized")
+    dest_dir = Path(str(Path.home()) + "/Documents/Categorized")
     categorize_files(source_dir, dest_dir)

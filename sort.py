@@ -404,7 +404,7 @@ def main():
 
     import sys
 
-    base_dir = Path(Path("/Users/steven/Documents/python"))
+    base_dir = Path(Path(str(Path.home()) + "/Documents/python"))
     dry_run = "--execute" not in sys.argv
 
     sorter = FinalIntelligentSorter(base_dir)

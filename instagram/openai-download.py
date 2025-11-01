@@ -104,10 +104,10 @@ def process_csv_and_generate_speech(csv_path, output_folder, api_key):
 if __name__ == "__main__":
     # Update to your actual file path
     csv_path = Path(
-        "/Users/steven/Documents/quiz-talk/quiz329/question/Quiz-3-29-Quiz54.csv"
+        str(Path.home()) + "/Documents/quiz-talk/quiz329/question/Quiz-3-29-Quiz54.csv"
     )
     # Specify your output folder path
-    output_folder = Path("/Users/steven/Documents/quiz-talk/quiz329/question/Q2")
+    output_folder = Path(str(Path.home()) + "/Documents/quiz-talk/quiz329/question/Q2")
     # Replace with your actual OpenAI API key
     api_key = os.getenv("OPENAI_API_KEY")
     process_csv_and_generate_speech(csv_path, output_folder, api_key)

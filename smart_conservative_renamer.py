@@ -432,7 +432,7 @@ class SmartConservativeRenamer:
 if __name__ == "__main__":
     import sys
 
-    target = sys.argv[1] if len(sys.argv) > 1 else Path("/Users/steven/Documents/python")
+    target = sys.argv[1] if len(sys.argv) > 1 else Path(str(Path.home()) + "/Documents/python")
     live = "--live" in sys.argv
 
     # CSV output location
@@ -444,7 +444,7 @@ if __name__ == "__main__":
     # Default CSV to home directory
     if not csv_output:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        csv_output = f"/Users/steven/rename_results_{timestamp}.csv"
+        csv_output = fstr(Path.home()) + "/rename_results_{timestamp}.csv"
 
     renamer = SmartConservativeRenamer(target, dry_run=not live, csv_output=csv_output)
     renamer.run()

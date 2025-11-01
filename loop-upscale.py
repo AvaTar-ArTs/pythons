@@ -33,7 +33,7 @@ headers = {
 }
 
 # Directory containing images
-directory_path = Path("/Users/steven/Pictures/CookiMonster/1")
+directory_path = Path(str(Path.home()) + "/Pictures/CookiMonster/1")
 
 # Loop through each file in the directory
 for filename in os.listdir(directory_path):

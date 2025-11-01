@@ -287,7 +287,7 @@ self.addEventListener('fetch', function(event) {
 def main():
     """main function."""
 
-    base_path = Path("/Users/steven/Music/nocTurneMeLoDieS")
+    base_path = Path(str(Path.home()) + "/Music/nocTurneMeLoDieS")
     optimizer = PerformanceOptimizer(base_path)
     optimizer.run_optimization()
 

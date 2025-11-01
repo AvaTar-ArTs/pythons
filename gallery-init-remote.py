@@ -13,7 +13,7 @@ import json
 import os
 import shutil
 import sys
-from distutils.dir_util import copy_tree
+from shutil import copytree as copy_tree
 
 import pkg_resources
 

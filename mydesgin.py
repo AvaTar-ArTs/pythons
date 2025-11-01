@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 # Parent directory containing all the subdirectories
-parent_directory = "/Users/steven/Pictures/V-Day CFab/tumnMuG/"
+parent_directory = str(Path.home()) + "/Pictures/V-Day CFab/tumnMuG/"
 
 # The CSV file you want to create
 csv_file = "print_on_demand_data.csv"

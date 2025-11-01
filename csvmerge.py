@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 # Directory containing the CSV files
-csv_directory = Path("/Users/steven/Pictures/mydesign")
+csv_directory = Path(str(Path.home()) + "/Pictures/mydesign")
 
 # List to hold dataframes
 dataframes = []

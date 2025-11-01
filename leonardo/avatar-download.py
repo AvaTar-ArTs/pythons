@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 hostname = "access981577610.webspace-data.io"
 username = "u114071855"
 password = "A^p1yT@AHn*akbhs"
-local_dir = Path("/Users/steven/AvaTarArTs")
+local_dir = Path(str(Path.home()) + "/AvaTarArTs")
 rremote_dirs = [
     Path("/2025"),
     Path("/Users"),

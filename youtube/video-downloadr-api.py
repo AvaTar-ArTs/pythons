@@ -26,7 +26,7 @@ CONSTANT_1024 = 1024
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 CLIENT_SECRETS_FILE = Path(
-    "/Users/steven/Documents/python/Youtube/client_secrets.json"
+    str(Path.home()) + "/Documents/python/Youtube/client_secrets.json"
 )  # Replace with your client secrets file
 API_SERVICE_NAME = "youtube"
 API_VERSION = "v3"
@@ -81,7 +81,7 @@ def upload_video(
 
 if __name__ == "__main__":
     # Set your video details here
-    VIDEO_FILE_PATH = "'/Users/steven/Movies/PROJECt2025-DoMinIon/TrumpsFreudianCollapse_TheConfessio2025-05-31.mp4'"  # Replace with your video file path
+    VIDEO_FILE_PATH = "str(Path.home()) + '/Movies/PROJECt2025-DoMinIon/TrumpsFreudianCollapse_TheConfessio2025-05-31.mp4'"  # Replace with your video file path
     VIDEO_TITLE = "TrumpsFreudianCollapse_TheConfession"
     VIDEO_DESCRIPTION = (
         "This video was automatically uploaded using the YouTube Data API."

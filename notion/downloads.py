@@ -40,7 +40,7 @@ from typing import Dict, List, Tuple, Set
 
 
 class DownloadsOrganizer:
-    def __init__(self, downloads_path: str = Path("/Users/steven/Downloads")):
+    def __init__(self, downloads_path: str = Path(str(Path.home()) + "/Downloads")):
         """__init__ function."""
 
         self.downloads_path = Path(downloads_path)
@@ -53,7 +53,7 @@ class DownloadsOrganizer:
     def create_backup(self) -> str:
         """Create a timestamped backup of the Downloads directory"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        backup_path = f"/Users/steven/Downloads_BACKUP_{timestamp}"
+        backup_path = fstr(Path.home()) + "/Downloads_BACKUP_{timestamp}"
 
         logger.info(f"Creating backup at: {backup_path}")
         shutil.copytree(self.downloads_path, backup_path)
@@ -526,7 +526,7 @@ class DownloadsOrganizer:
     def save_analysis(self, output_path: str = None):
         """Save analysis data to JSON file"""
         if output_path is None:
-            output_path = f"/Users/steven/Downloads_analysis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            output_path = fstr(Path.home()) + "/Downloads_analysis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
 
         analysis_data = {
             "timestamp": datetime.now().isoformat(),
@@ -581,7 +581,7 @@ class DownloadsOrganizer:
         analysis_file = self.save_analysis()
 
         # Save report
-        report_file = f"/Users/steven/Downloads_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+        report_file = fstr(Path.home()) + "/Downloads_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
         with open(report_file, "w") as f:
             f.write(report)
 

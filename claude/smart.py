@@ -371,7 +371,7 @@ class SmartOrganizationPlanner:
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         csv_filename = (
-            f"/Users/steven/Documents/python/smart_organization_plan_{timestamp}.csv"
+            fstr(Path.home()) + "/Documents/python/smart_organization_plan_{timestamp}.csv"
         )
 
         fieldnames = [
@@ -490,7 +490,7 @@ def main():
 
     # Find the most recent CSV file
     csv_files = list(
-        Path("/Users/steven/Documents/python").glob("out_of_place_files_report_*.csv")
+        Path(str(Path.home()) + "/Documents/python").glob("out_of_place_files_report_*.csv")
     )
     if not csv_files:
         logger.info(

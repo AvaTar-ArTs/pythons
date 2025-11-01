@@ -44,7 +44,7 @@ url = response.json()["uploadInitImage"]["url"]
 image_id = response.json()["uploadInitImage"]["id"]  # For getting the image later
 
 image_file_path = Path(
-    "/Users/steven/Pictures/zombot/default_a_detailed_photograph_of_a_serious_cyberpunk_zombot_cy_0_fb6f4194-86a6-4f09-be49-57de04fc667a_unzoom.jpg"
+    str(Path.home()) + "/Pictures/zombot/default_a_detailed_photograph_of_a_serious_cyberpunk_zombot_cy_0_fb6f4194-86a6-4f09-be49-57de04fc667a_unzoom.jpg"
 )
 files = {"file": open(image_file_path, "rb")}
 

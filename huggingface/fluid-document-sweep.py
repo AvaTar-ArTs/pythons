@@ -67,7 +67,7 @@ class ScriptInfo:
 class FluidDocumentSweeper:
     """Main class for analyzing documents and finding interesting scripts"""
 
-    def __init__(self, root_dir: str = Path("/Users/steven/Documents")):
+    def __init__(self, root_dir: str = Path(str(Path.home()) + "/Documents")):
         """__init__ function."""
 
         self.root_dir = Path(root_dir)

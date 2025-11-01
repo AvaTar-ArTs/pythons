@@ -32,7 +32,7 @@ def main():
     logger.info("=" * 50)
 
     # Initialize organizer
-    source_dir = Path("/Users/steven/Documents/CsV/xlsx")
+    source_dir = Path(str(Path.home()) + "/Documents/CsV/xlsx")
     organizer = ExcelIntelligentOrganizer(source_dir)
 
     # Analyze files

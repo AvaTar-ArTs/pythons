@@ -31,7 +31,7 @@ CONSTANT_5400 = 5400
 
 
 # Load environment variables
-env_path = Path("/Users/steven/.env")
+env_path = Path(str(Path.home()) + "/.env")
 load_dotenv(dotenv_path=env_path)
 
 # Initialize OpenAI API key

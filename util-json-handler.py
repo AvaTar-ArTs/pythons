@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 # Prompt for the JSON input file path with a default value
-default_json_path = Path("/Users/steven/Downloads/AI_Workflow_Automation_Summary.json")
+default_json_path = Path(str(Path.home()) + "/Downloads/AI_Workflow_Automation_Summary.json")
 json_file_path = (
     input(f"Enter JSON file path (default: {default_json_path}): ") or default_json_path
 )
@@ -29,7 +29,7 @@ if not os.path.exists(json_file_path):
     exit(1)
 
 # Prompt for the CSV output file path with a default value
-default_csv_path = Path("/Users/steven/Documents/output.csv")
+default_csv_path = Path(str(Path.home()) + "/Documents/output.csv")
 csv_file_path = (
     input(f"Enter CSV output file path (default: {default_csv_path}): ")
     or default_csv_path

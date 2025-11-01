@@ -17,9 +17,9 @@ logger = logging.getLogger(__name__)
 
 
 # Define the directories
-mp3_dir = Path("/Users/steven/Music/suno/mp3")
-txt_dir = Path("/Users/steven/Music/suno/txt")
-csv_output = Path("/Users/steven/Music/suno/music_project/songs_data.csv")
+mp3_dir = Path(str(Path.home()) + "/Music/suno/mp3")
+txt_dir = Path(str(Path.home()) + "/Music/suno/txt")
+csv_output = Path(str(Path.home()) + "/Music/suno/music_project/songs_data.csv")
 
 # Collect the list of MP3 and text files
 mp3_files = [f for f in os.listdir(mp3_dir) if f.endswith(".mp3")]

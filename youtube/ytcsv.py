@@ -21,7 +21,7 @@ playlist_url = (
 )
 
 # Define the directory where you want to save the downloads
-download_directory = Path("/Users/steven/Movies/ESO/qshorts")
+download_directory = Path(str(Path.home()) + "/Movies/ESO/qshorts")
 
 # Create a Playlist object
 playlist = Playlist(playlist_url)

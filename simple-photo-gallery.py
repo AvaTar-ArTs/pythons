@@ -123,7 +123,7 @@ def insert_metadata(filename, tag, creation_date):
 
 
 if __name__ == "__main__":
-    project_directory = Path("/Users/steven/Pictures/Bcovers")
+    project_directory = Path(str(Path.home()) + "/Pictures/Bcovers")
     create_database()
     organize_files(project_directory)
     tag_files(project_directory)

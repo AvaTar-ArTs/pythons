@@ -23,7 +23,7 @@ import csv
 from dotenv import load_dotenv
 
 # Load API key from .env file
-load_dotenv(Path("/Users/steven/.env"))
+load_dotenv(Path(str(Path.home()) + "/.env"))
 
 
 # Function to generate a filename using GPT based on the prompt

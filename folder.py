@@ -46,5 +46,5 @@ def convert_images_to_pdf(root_dir):
 
 
 if __name__ == "__main__":
-    source_directory = Path("/Users/steven/Pictures/Move")
+    source_directory = Path(str(Path.home()) + "/Pictures/Move")
     convert_images_to_pdf(source_directory)

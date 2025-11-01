@@ -56,6 +56,6 @@ def convert_webm_to_mp3(directory_path):
 
 if __name__ == "__main__":
     directory_path = Path(
-        "/Users/steven/Movies/CoH-Grab"
+        str(Path.home()) + "/Movies/CoH-Grab"
     )  # Path to the directory containing .webm files
     convert_webm_to_mp3(directory_path)

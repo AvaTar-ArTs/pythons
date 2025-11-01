@@ -41,7 +41,7 @@ from collections import defaultdict, Counter
 class UniversalConversationExporter:
     """Universal exporter for conversations from multiple platforms"""
 
-    def __init__(self, output_dir: str = Path("/Users/steven/conversation-exports")):
+    def __init__(self, output_dir: str = Path(str(Path.home()) + "/conversation-exports")):
         """__init__ function."""
 
         self.output_dir = Path(output_dir)
@@ -816,15 +816,15 @@ def main():
         "--search-paths",
         nargs="+",
         default=[
-            "/Users/steven/Downloads",
-            "/Users/steven/SUNO",
-            "/Users/steven/Documents",
+            str(Path.home()) + "/Downloads",
+            str(Path.home()) + "/SUNO",
+            str(Path.home()) + "/Documents",
         ],
         help="Paths to search for conversation files",
     )
     parser.add_argument(
         "--output-dir",
-        default="/Users/steven/conversation-exports",
+        default=str(Path.home()) + "/conversation-exports",
         help="Output directory for exported conversations",
     )
 

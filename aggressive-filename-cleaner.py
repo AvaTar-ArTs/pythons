@@ -27,7 +27,7 @@ from datetime import datetime
 class AggressiveFilenameCleaner:
     """Clean up terrible filename patterns aggressively."""
 
-    def __init__(self, target_dir: str = Path("/Users/steven/Documents/python")):
+    def __init__(self, target_dir: str = Path(str(Path.home()) + "/Documents/python")):
         """__init__ function."""
 
         self.target_dir = Path(target_dir)
@@ -285,7 +285,7 @@ class AggressiveFilenameCleaner:
     def save_changes_csv(self) -> str:
         """Save changes to CSV for rollback."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        csv_file = f"/Users/steven/Documents/python/filename_cleanup_{timestamp}.csv"
+        csv_file = fstr(Path.home()) + "/Documents/python/filename_cleanup_{timestamp}.csv"
 
         with open(csv_file, "w", newline="", encoding="utf-8") as csvfile:
             fieldnames = [

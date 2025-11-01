@@ -25,7 +25,7 @@ CONSTANT_2000 = 2000
 
 
 # Load environment variables from .env file
-load_dotenv(dotenv_path=Path("/Users/steven/.env"))
+load_dotenv(dotenv_path=Path(str(Path.home()) + "/.env"))
 
 # Get API key and validate it
 api_key = os.getenv("OPENAI_API_KEY")

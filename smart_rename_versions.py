@@ -55,7 +55,7 @@ def analyze_script_purpose(filepath):
 def create_rename_plan():
     """Create smart rename plan for versioned scripts"""
 
-    root = Path("/Users/steven/documents/python")
+    root = Path(str(Path.home()) + "/documents/python")
     report_file = root / "VERSION_ANALYSIS_REPORT.json"
 
     if not report_file.exists():
@@ -141,7 +141,7 @@ def display_rename_plan(rename_plan):
                 print(f"    {status:12} {v['old_name']:40} ? {v['new_name']}")
 
     # Save to file
-    output_file = Path("/Users/steven/documents/python/SMART_RENAME_PLAN.json")
+    output_file = Path(str(Path.home()) + "/documents/python/SMART_RENAME_PLAN.json")
     with open(output_file, "w") as f:
         json.dump(rename_plan, f, indent=2)
 

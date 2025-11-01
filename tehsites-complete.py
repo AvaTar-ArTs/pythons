@@ -200,33 +200,33 @@ def parse_complete_file_list():
     # This is the complete file list from the user's request
     file_list = [
         Path(
-            "/Users/steven/tehSiTes/03_Business_Platforms/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
+            str(Path.home()) + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/03_Content_Development/01_Original_Content/_downloads.html"
+            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/03_Content_Development/01_Original_Content/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/avatararts.org/dr/_downloads.html"
+            str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
+            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/04_Technical_Implementation/01_HTML_Files/_downloads.html"
+            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/04_Technical_Implementation/01_HTML_Files/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/04_Technical_Implementation/01_HTML_Files/_downloads.html"
+            str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/04_Technical_Implementation/01_HTML_Files/_downloads.html"
         ),
-        Path("/Users/steven/tehSiTes/03_Busintent/projects/multimedia-workflows/1.txt"),
+        Path(str(Path.home()) + "/tehSiTes/03_Busintent/projects/multimedia-workflows/1.txt"),
         Path(
-            "/Users/steven/tehSiTes/02_Creative_Portfolio/steven-chaplinski-website/content/projects/multimedia-workflows/1.txt"
+            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/steven-chaplinski-website/content/projects/multimedia-workflows/1.txt"
         ),
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/dr/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/06_Archives_Backups/dr/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/03_Business_Platforms/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/dr/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/06_Archives_Backups/dr/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
     ]
 
     # Add more files from the user's list (truncated for brevity, but this would include all files)
@@ -247,7 +247,7 @@ def main():
     report = processor.process_files(file_list)
 
     # Save detailed report
-    with open("/Users/steven/complete_file_report.json", "w") as f:
+    with open(str(Path.home()) + "/complete_file_report.json", "w") as f:
         json.dump(report, f, indent=2)
 
     logger.info("\n=== COMPLETE FILE MERGE AND DEDUPLICATION REPORT ===")

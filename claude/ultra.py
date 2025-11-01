@@ -1846,7 +1846,7 @@ class UltraAdvancedContentAnalyzer:
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         
         # Save detailed analysis as JSON
-        json_file = f'/Users/steven/Documents/python/ultra_advanced_analysis_{timestamp}.json'
+        json_file = fstr(Path.home()) + '/Documents/python/ultra_advanced_analysis_{timestamp}.json'
         with open(json_file, 'w', encoding='utf-8') as f:
             json.dump(self.content_analysis, f, indent=2, default=str)
         
@@ -1859,7 +1859,7 @@ def main():
     logger.info("="*70)
     
     # Find the most recent CSV file
-    csv_files = list(Path('/Users/steven/Documents/python').glob('out_of_place_files_report_*.csv'))
+    csv_files = list(Path(str(Path.home()) + '/Documents/python').glob('out_of_place_files_report_*.csv'))
     if not csv_files:
         logger.info("❌ No CSV file found. Please run the out_of_place_files_analysis.py first.")
         return

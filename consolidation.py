@@ -29,7 +29,7 @@ import re
 
 class FinalConsolidator:
     def __init__(
-        self, destination_dir=Path("/Users/steven/tehSiTes/DrAdu-SEO-OPTIMIZED")
+        self, destination_dir=Path(str(Path.home()) + "/tehSiTes/DrAdu-SEO-OPTIMIZED")
     ):
         """__init__ function."""
 
@@ -299,44 +299,44 @@ def parse_complete_file_list():
     # This is the complete file list from the user's request
     file_list = [
         Path(
-            "/Users/steven/tehSiTes/03_Business_Platforms/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
+            str(Path.home()) + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/03_Content_Development/01_Original_Content/_downloads.html"
+            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/03_Content_Development/01_Original_Content/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/avatararts.org/dr/_downloads.html"
+            str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
+            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/04_Technical_Implementation/01_HTML_Files/_downloads.html"
+            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/04_Technical_Implementation/01_HTML_Files/_downloads.html"
         ),
         Path(
-            "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/04_Technical_Implementation/01_HTML_Files/_downloads.html"
+            str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/04_Technical_Implementation/01_HTML_Files/_downloads.html"
         ),
-        Path("/Users/steven/tehSiTes/03_Busintent/projects/multimedia-workflows/1.txt"),
+        Path(str(Path.home()) + "/tehSiTes/03_Busintent/projects/multimedia-workflows/1.txt"),
         Path(
-            "/Users/steven/tehSiTes/02_Creative_Portfolio/steven-chaplinski-website/content/projects/multimedia-workflows/1.txt"
+            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/steven-chaplinski-website/content/projects/multimedia-workflows/1.txt"
         ),
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/dr/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/06_Archives_Backups/dr/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/03_Business_Platforms/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
-        "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/dr/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/06_Archives_Backups/dr/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
+        str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
         # Add more files from the user's complete list...
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/4.png",
-        "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/4.png",
-        "/Users/steven/tehSiTes/03_Business_Platforms/seo-professional-portfolio/Dr Adu-Upscale Image/5.png",
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/5.png",
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/dr/Dr Adu-Upscale Image/5.png",
-        "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/5.png",
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/Dr Adu-Upscale Image/5.png",
-        "/Users/steven/tehSiTes/06_Archives_Backups/dr/Dr Adu-Upscale Image/5.png",
-        "/Users/steven/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/6.png",
-        "/Users/steven/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/6.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/4.png",
+        str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/4.png",
+        str(Path.home()) + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/Dr Adu-Upscale Image/5.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/5.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/dr/Dr Adu-Upscale Image/5.png",
+        str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/5.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/Dr Adu-Upscale Image/5.png",
+        str(Path.home()) + "/tehSiTes/06_Archives_Backups/dr/Dr Adu-Upscale Image/5.png",
+        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/6.png",
+        str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/6.png",
     ]
 
     return file_list
@@ -359,7 +359,7 @@ def main():
     report = consolidator.consolidate_files(file_list, dry_run=True)
 
     # Save dry-run report
-    with open("/Users/steven/final_consolidation_dry_run_report.json", "w") as f:
+    with open(str(Path.home()) + "/final_consolidation_dry_run_report.json", "w") as f:
         json.dump(report, f, indent=2)
 
     logger.info(
@@ -407,7 +407,7 @@ def main():
     final_report = consolidator.consolidate_files(file_list, dry_run=False)
 
     # Save final report
-    with open("/Users/steven/final_consolidation_report.json", "w") as f:
+    with open(str(Path.home()) + "/final_consolidation_report.json", "w") as f:
         json.dump(final_report, f, indent=2)
 
     logger.info(f"\nFinal consolidation completed!")

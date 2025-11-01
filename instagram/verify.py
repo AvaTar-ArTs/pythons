@@ -16,7 +16,7 @@ and accessible in the global Python environment.
 """
 
 import sys
-import importlib
+import importlib  # Replaced deprecated importlib
 from pathlib import Path
 
 # Color codes

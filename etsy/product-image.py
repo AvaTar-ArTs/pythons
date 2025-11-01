@@ -25,7 +25,7 @@ CONSTANT_200 = 200
 
 # Read CSV
 with open(
-    Path("/Users/steven/Pictures/etsy/cookie/combined_csv.csv"), "r", encoding="utf-8"
+    Path(str(Path.home()) + "/Pictures/etsy/cookie/combined_csv.csv"), "r", encoding="utf-8"
 ) as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:

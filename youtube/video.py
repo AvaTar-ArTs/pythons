@@ -67,7 +67,7 @@ def process_videos_in_folder(folder_path, output_path):
 
 if __name__ == "__main__":
     folder_path = Path(
-        "/Users/steven/Movies/CoH-Grab"
+        str(Path.home()) + "/Movies/CoH-Grab"
     )  # Hardcoded path to your video folder
     output_path = input(
         "Enter the path for the output text file: "

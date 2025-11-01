@@ -47,5 +47,5 @@ def compile_image_info(root_directory, master_csv_file_path):
 
 
 compile_image_info(
-    Path("/Users/steven/csv2"), Path("/Users/steven/master_image_info.csv")
+    Path(str(Path.home()) + "/csv2"), Path(str(Path.home()) + "/master_image_info.csv")
 )

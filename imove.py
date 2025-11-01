@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 # Define the path to the CSV file
-csv_file_path = Path("/Users/steven/Sort/image_paths.csv")
+csv_file_path = Path(str(Path.home()) + "/Sort/image_paths.csv")
 # Define the destination directory based on your specification
 destination_dir = Path("/Volumes/Pics/ogPro")
 

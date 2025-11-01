@@ -49,7 +49,7 @@ def generate_trivia_quiz(csv_path):
 
 
 # Path to the CSV file
-csv_path = Path("/Users/steven/Documents/trivia/Gtrivia.csv")
+csv_path = Path(str(Path.home()) + "/Documents/trivia/Gtrivia.csv")
 
 # Generate the trivia quiz
 generate_trivia_quiz(csv_path)

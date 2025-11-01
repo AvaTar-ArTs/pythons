@@ -28,12 +28,12 @@ logging.basicConfig(
 )
 
 # Load environment variables
-load_dotenv(dotenv_path=Path("/Users/steven/.env"))
+load_dotenv(dotenv_path=Path(str(Path.home()) + "/.env"))
 
 # Directory paths
-VIDEO_DIR = Path("/Users/steven/Movies/project2025/Media/")
-TRANSCRIPT_DIR = Path("/Users/steven/Movies/project2025/Media/")
-ANALYSIS_DIR = Path("/Users/steven/Movies/project2025/Media/")
+VIDEO_DIR = Path(str(Path.home()) + "/Movies/project2025/Media/")
+TRANSCRIPT_DIR = Path(str(Path.home()) + "/Movies/project2025/Media/")
+ANALYSIS_DIR = Path(str(Path.home()) + "/Movies/project2025/Media/")
 
 # Create output directories if they don't exist.
 os.makedirs(TRANSCRIPT_DIR, exist_ok=True)

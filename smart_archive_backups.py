@@ -150,7 +150,7 @@ def create_deduplicated_archive(file_hashes, output_path, manifest_path):
 
 def main():
     """Main archival process"""
-    root = Path("/Users/steven/documents/python")
+    root = Path(str(Path.home()) + "/documents/python")
 
     # Directories to archive
     backup_dirs = [root / "_ARCHIVED_BACKUPS_20251101_044505", root / "_backups"]

@@ -64,7 +64,7 @@ class SimpleSmartRenamer:
                         return "openai"
                     if "anthropic" in mod:
                         return "claude"
-        except:
+        except Exception:
             pass
 
         return None

@@ -879,22 +879,22 @@ def main():
 
     # Save all reports and scripts
     with open(
-        "/Users/steven/Documents/python/dual_domain_strategy_report.json", "w"
+        str(Path.home()) + "/Documents/python/dual_domain_strategy_report.json", "w"
     ) as f:
         json.dump(handle_report, f, indent=2)
 
-    with open("/Users/steven/Documents/python/implementation_roadmap.json", "w") as f:
+    with open(str(Path.home()) + "/Documents/python/implementation_roadmap.json", "w") as f:
         json.dump(roadmap, f, indent=2)
 
     with open(
-        "/Users/steven/Documents/python/handle_availability_checker.py", "w"
+        str(Path.home()) + "/Documents/python/handle_availability_checker.py", "w"
     ) as f:
         f.write(handle_checker)
 
-    with open("/Users/steven/Documents/python/content_automation_system.py", "w") as f:
+    with open(str(Path.home()) + "/Documents/python/content_automation_system.py", "w") as f:
         f.write(content_system)
 
-    with open("/Users/steven/Documents/python/seo_optimization_tools.py", "w") as f:
+    with open(str(Path.home()) + "/Documents/python/seo_optimization_tools.py", "w") as f:
         f.write(seo_tools)
 
     logger.info("🚀 Dual-Domain Strategy Implementation Complete!")

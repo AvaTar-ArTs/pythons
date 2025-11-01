@@ -81,7 +81,7 @@ class FinalComprehensiveScan:
                 content = f.read_bytes()
                 file_hash = hashlib.md5(content).hexdigest()
                 by_hash[file_hash].append(f)
-            except:
+            except Exception:
                 pass
 
         duplicates = [files for files in by_hash.values() if len(files) > 1]
@@ -154,12 +154,12 @@ class FinalComprehensiveScan:
                                 # Missing docstring
                                 if not ast.get_docstring(node):
                                     issues["missing_docstrings"] += 1
-                    except:
+                    except Exception:
                         pass
 
                     sample_count += 1
 
-                except:
+                except Exception:
                     pass
 
         print(f"  Sampled {sample_count} files for quality issues:\n")
@@ -205,7 +205,7 @@ class FinalComprehensiveScan:
                             and "instagram" not in content.lower()
                         ):
                             miscat.append((py_file.name, folder_name, "?"))
-                    except:
+                    except Exception:
                         pass
 
         if miscat:
@@ -281,5 +281,5 @@ class FinalComprehensiveScan:
 
 
 if __name__ == "__main__":
-    scanner = FinalComprehensiveScan("/Users/steven/Documents/python")
+    scanner = FinalComprehensiveScan(str(Path.home()) + "/Documents/python")
     scanner.run()

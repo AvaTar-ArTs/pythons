@@ -13,7 +13,7 @@ import sys
 
 
 def execute_cleanup(dry_run=True):
-    root = Path("/Users/steven/documents/python")
+    root = Path(str(Path.home()) + "/documents/python")
     plan_file = root / "DEDUP_RENAME_PLAN.json"
 
     if not plan_file.exists():

@@ -33,7 +33,7 @@ class AggressiveCleanupSystem:
     def __init__(self):
         """__init__ function."""
 
-        self.root_path = Path(Path("/Users/steven/Documents/python")).expanduser()
+        self.root_path = Path(Path(str(Path.home()) + "/Documents/python")).expanduser()
         self.max_depth = 6
         self.backup_data = []
 
@@ -454,7 +454,7 @@ def execute_cleanup():
     print()
     
     # Create backup directory
-    backup_dir = Path(Path("/Users/steven/python_aggressive_cleanup_backup"))
+    backup_dir = Path(Path(str(Path.home()) + "/python_aggressive_cleanup_backup"))
     backup_dir.mkdir(exist_ok=True)
     logger.info(f"📁 Backup directory: {{backup_dir}}")
     
@@ -565,11 +565,11 @@ def main():
 
     # Create CSV backup
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    csv_backup_file = f"/Users/steven/python_aggressive_cleanup_backup_{timestamp}.csv"
+    csv_backup_file = fstr(Path.home()) + "/python_aggressive_cleanup_backup_{timestamp}.csv"
     cleanup_system.create_csv_backup(csv_backup_file)
 
     # Generate execution script
-    execution_script = f"/Users/steven/python_aggressive_cleanup_execute_{timestamp}.py"
+    execution_script = fstr(Path.home()) + "/python_aggressive_cleanup_execute_{timestamp}.py"
     cleanup_system.generate_execution_script(cleanup_plan, execution_script)
 
     # Generate report

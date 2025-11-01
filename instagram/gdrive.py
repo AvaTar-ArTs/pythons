@@ -85,7 +85,7 @@ file_path = input("Enter the path of the Python file to convert: ")
 
 # Default Google Drive path on Mac
 google_drive_path = (
-    "/Users/steven/Library/CloudStorage/GoogleDrive-sjchaplinski@gmail.com/My Drive"
+    str(Path.home()) + "/Library/CloudStorage/GoogleDrive-sjchaplinski@gmail.com/My Drive"
 )
 
 convert_to_colab(file_path, google_drive_path)

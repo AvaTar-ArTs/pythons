@@ -25,9 +25,9 @@ CONSTANT_300 = 300
 
 
 # Paths for input CSV and output directory
-input_csv_path = "/Users/steven/Downloads/Dalle-Aug2024 - Sheet1.csv"
+input_csv_path = str(Path.home()) + "/Downloads/Dalle-Aug2024 - Sheet1.csv"
 output_dir = Path(
-    "/Users/steven/Downloads/output_images/"
+    str(Path.home()) + "/Downloads/output_images/"
 )  # You can change the output directory if needed
 
 # Ensure the output directory exists

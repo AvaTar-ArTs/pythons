@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 class GitHubUploadManager:
     """Manages GitHub repository uploads and configuration."""
 
-    def __init__(self, github_dir: str = Path("/Users/steven/Documents/github")):
+    def __init__(self, github_dir: str = Path(str(Path.home()) + "/Documents/github")):
         """__init__ function."""
 
         self.github_dir = Path(github_dir)
@@ -281,7 +281,7 @@ repos=(
 # Function to upload a single repository
 upload_repo() {
     local repo_name=$1
-    local repo_path="/Users/steven/Documents/github/$repo_name"
+    local repo_path=str(Path.home()) + "/Documents/github/$repo_name"
     
     echo "📁 Processing: $repo_name"
     

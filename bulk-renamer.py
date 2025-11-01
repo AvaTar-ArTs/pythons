@@ -198,7 +198,7 @@ def main():
 
     args = parser.parse_args()
 
-    root = Path("/Users/steven/Documents/python")
+    root = Path(str(Path.home()) + "/Documents/python")
     files = sorted(root.glob(args.pattern))
 
     if args.limit:

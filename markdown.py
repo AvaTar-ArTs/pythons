@@ -186,36 +186,36 @@ def main():
 
     # List of files to convert (based on user's request)
     files_to_convert = [
-        Path("/Users/steven/Documents/markD/readme_advanced.md"),
-        Path("/Users/steven/Documents/markD/README_1.md"),
-        Path("/Users/steven/Documents/markD/README_2.md"),
-        Path("/Users/steven/Documents/markD/README_4.md"),
-        Path("/Users/steven/Documents/markD/README_5.md"),
-        Path("/Users/steven/Documents/markD/README_6.md"),
-        Path("/Users/steven/Documents/markD/README_7.md"),
-        Path("/Users/steven/Documents/markD/README_8.md"),
-        Path("/Users/steven/Documents/markD/README_9.md"),
-        Path("/Users/steven/Documents/markD/readme_10.md"),
-        Path("/Users/steven/Documents/markD/README_11.md"),
-        Path("/Users/steven/Documents/markD/README_12.md"),
-        Path("/Users/steven/Documents/markD/README_13.md"),
-        Path("/Users/steven/Documents/markD/README_14.md"),
-        Path("/Users/steven/Documents/markD/README_15.md"),
-        Path("/Users/steven/Documents/markD/README_16.md"),
-        Path("/Users/steven/Documents/markD/README_17.md"),
+        Path(str(Path.home()) + "/Documents/markD/readme_advanced.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_1.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_2.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_4.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_5.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_6.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_7.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_8.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_9.md"),
+        Path(str(Path.home()) + "/Documents/markD/readme_10.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_11.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_12.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_13.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_14.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_15.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_16.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_17.md"),
         Path(
-            "/Users/steven/Documents/markD/README_18DME_41.md"
+            str(Path.home()) + "/Documents/markD/README_18DME_41.md"
         ),  # Note: This seems to be a typo in the original list
-        Path("/Users/steven/Documents/markD/README_41.md"),
-        Path("/Users/steven/Documents/markD/README_42.md"),
-        Path("/Users/steven/Documents/markD/README_43.md"),
-        Path("/Users/steven/Documents/markD/README_44.md"),
-        Path("/Users/steven/Documents/markD/README_45.md"),
-        "/Users/steven/Documents/markD/README copy.md",
+        Path(str(Path.home()) + "/Documents/markD/README_41.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_42.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_43.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_44.md"),
+        Path(str(Path.home()) + "/Documents/markD/README_45.md"),
+        str(Path.home()) + "/Documents/markD/README copy.md",
     ]
 
     # Create output directory for PDFs
-    output_dir = Path("/Users/steven/Documents/markD/PDFs")
+    output_dir = Path(str(Path.home()) + "/Documents/markD/PDFs")
 
     logger.info("🚀 Starting Markdown to PDF conversion...")
     logger.info(f"📁 Output directory: {output_dir}")

@@ -23,7 +23,7 @@ CONSTANT_1024 = 1024
 
 
 # Input directory (no output directory needed since we're replacing the original images)
-input_dir = Path("/Users/steven/Pictures/etsy/Snowman_Action_Scenes")
+input_dir = Path(str(Path.home()) + "/Pictures/etsy/Snowman_Action_Scenes")
 
 # Max file size in bytes (9 MB = 9 * CONSTANT_1024 * CONSTANT_1024)
 max_size = 9 * CONSTANT_1024 * CONSTANT_1024

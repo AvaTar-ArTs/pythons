@@ -38,7 +38,7 @@ def check_missing_data(df):
 
 
 if __name__ == "__main__":
-    file_path = Path("/Users/steven/Downloads/Document/Ytube.xlsx")
+    file_path = Path(str(Path.home()) + "/Downloads/Document/Ytube.xlsx")
     df = load_excel(file_path)
     if df is not None:
         check_missing_data(df)

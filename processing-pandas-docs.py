@@ -26,15 +26,15 @@ def combine_csvs():
 
     # List of CSV file paths
     CSV_PATHS = [
-        Path("/Users/steven/clean/clean-csv/combined_csv.csv"),
-        Path("/Users/steven/clean/clean-csv/docs-03-28-18-52.csv"),
-        Path("/Users/steven/clean/clean-csv/docs-03-28-18-57.csv"),
-        Path("/Users/steven/clean/clean-csv/docs-03-29-06-11.csv"),
-        Path("/Users/steven/clean/clean-csv/docs-03-29-11-47.csv"),
-        Path("/Users/steven/clean/clean-csv/docs-03-29-17_49_1.csv"),
-        Path("/Users/steven/clean/clean-csv/docs-03-29-17_49.csv"),
-        Path("/Users/steven/clean/clean-csv/docs-03-29-17-49.csv"),
-        Path("/Users/steven/clean/clean-csv/python-newcho.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/combined_csv.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/docs-03-28-18-52.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/docs-03-28-18-57.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/docs-03-29-06-11.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/docs-03-29-11-47.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/docs-03-29-17_49_1.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/docs-03-29-17_49.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/docs-03-29-17-49.csv"),
+        Path(str(Path.home()) + "/clean/clean-csv/python-newcho.csv"),
     ]
 
     dfs = []
@@ -69,7 +69,7 @@ def combine_csvs():
     df_combined.drop_duplicates(inplace=True)
 
     # Save to a new CSV (or overwrite an existing one)
-    output_path = Path("/Users/steven/clean/clean-csv/all_combined.csv")
+    output_path = Path(str(Path.home()) + "/clean/clean-csv/all_combined.csv")
     df_combined.to_csv(output_path, index=False)
 
     logger.info(

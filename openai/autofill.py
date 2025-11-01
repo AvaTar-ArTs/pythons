@@ -30,12 +30,12 @@ load_dotenv(os.path.expanduser("~/.env"))
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_API_KEY)
 CSV_PATH = Path(
-    "/Users/steven/Documents/python/clean/CSV/prompts_expanded_image_data-05-30-22-21.csv"
+    str(Path.home()) + "/Documents/python/clean/CSV/prompts_expanded_image_data-05-30-22-21.csv"
 )
 OUT_CSV = Path(
-    "/Users/steven/Documents/python/clean/CSV/filled_prompts_expanded_image_data-05-30-22-21.csv"
+    str(Path.home()) + "/Documents/python/clean/CSV/filled_prompts_expanded_image_data-05-30-22-21.csv"
 )
-LOG_PATH = Path("/Users/steven/Documents/python/clean/CSV/fill_log.txt")
+LOG_PATH = Path(str(Path.home()) + "/Documents/python/clean/CSV/fill_log.txt")
 
 # List analytic fields and prompt fields to fill
 ANALYSIS_FIELDS = [

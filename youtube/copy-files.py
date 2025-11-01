@@ -38,7 +38,7 @@ def copy_files_with_logging(csv_file, destination_root):
                         continue
 
                     relative_path = os.path.relpath(
-                        src_file_path, Path("/Users/steven/Documents/Python/Sort/tagg")
+                        src_file_path, Path(str(Path.home()) + "/Documents/Python/Sort/tagg")
                     )
                     dest_file_path = os.path.join(destination_root, relative_path)
 
@@ -62,7 +62,7 @@ def copy_files_with_logging(csv_file, destination_root):
 
 
 if __name__ == "__main__":
-    csv_files = ["/Users/steven/Documents/Python/Sort/tagg/vids-07-11-12:31.csv"]
+    csv_files = [str(Path.home()) + "/Documents/Python/Sort/tagg/vids-07-11-12:31.csv"]
     destination_base_path = Path("/Volumes/oG-bAk/organized")
 
     # Process each CSV file

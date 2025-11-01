@@ -34,7 +34,7 @@ from datetime import datetime
 def create_backup_log():
     """Create a backup log file for tracking deletions."""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_file = f"/Users/steven/python_cleanup_log_{timestamp}.json"
+    log_file = fstr(Path.home()) + "/python_cleanup_log_{timestamp}.json"
     return log_file
 
 
@@ -55,7 +55,7 @@ def log_deletion(log_file, file_path, reason, file_size):
 
 def analyze_files_to_remove():
     """Analyze files that should be removed."""
-    python_path = Path(Path("/Users/steven/Documents/python"))
+    python_path = Path(Path(str(Path.home()) + "/Documents/python"))
 
     files_to_remove = {
         "cache_files": [],

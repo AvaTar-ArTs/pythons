@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 CONSTANT_2000 = 2000
 
 
-# BASE_DIR = Path("/Users/steven/Music/NocTurnE-meLoDieS/mp3")
+# BASE_DIR = Path(str(Path.home()) + "/Music/NocTurnE-meLoDieS/mp3")
 # CSV_OUTPUT = os.path.join(BASE_DIR, "final_song_data.csv")
 
 
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     song_data = get_all_song_data(BASE_DIR)
     write_to_csv(song_data, CSV_OUTPUT)
 
-load_dotenv(dotenv_path=Path("/Users/steven/.env"))
+load_dotenv(dotenv_path=Path(str(Path.home()) + "/.env"))
 
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
@@ -240,7 +240,7 @@ def process_audio_directory():
                 logger.info(f"🎵 Found audio file: {file_path}")
                 process_audio_file(file_path, csv_data)
 
-    csv_path = os.path.join(audio_dir, Path("/Users/steven/Music/nocTurneMeLoDieS/mp4/song_data.csv"))
+    csv_path = os.path.join(audio_dir, Path(str(Path.home()) + "/Music/nocTurneMeLoDieS/mp4/song_data.csv"))
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerows(csv_data)

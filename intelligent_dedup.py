@@ -643,7 +643,7 @@ def main():
     parser.add_argument(
         "--target",
         type=str,
-        default=Path("/Users/steven/GitHub/AvaTarArTs-Suite"),
+        default=Path(str(Path.home()) + "/GitHub/AvaTarArTs-Suite"),
         help="Target directory",
     )
     parser.add_argument(

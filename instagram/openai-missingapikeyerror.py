@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-import importlib
+import importlib  # Replaced deprecated importlib
 import os
 from pathlib import Path
 from typing import Optional

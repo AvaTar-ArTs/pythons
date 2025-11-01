@@ -32,8 +32,8 @@ class AvaTarArTsProjectManager:
         """__init__ function."""
 
         self.base_dir = Path(Path("/Users/steven"))
-        self.avatararts_dir = Path(Path("/Users/steven/AvatararTs"))
-        self.backup_base = Path(Path("/Users/steven/AvaTarArTs_Work_Backup"))
+        self.avatararts_dir = Path(Path(str(Path.home()) + "/AvatararTs"))
+        self.backup_base = Path(Path(str(Path.home()) + "/AvaTarArTs_Work_Backup"))
 
         # Find latest backup
         self.latest_backup = self._find_latest_backup()
@@ -282,7 +282,7 @@ def main():
     
     # Create backup
     logger.info("📦 Creating backup...")
-    subprocess.run([sys.executable, Path("/Users/steven/simple_backup.py")])
+    subprocess.run([sys.executable, Path(str(Path.home()) + "/simple_backup.py")])
     
     logger.info("🎉 All projects updated and backed up!")
 

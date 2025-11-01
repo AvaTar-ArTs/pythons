@@ -27,7 +27,7 @@ SCOPES = [
 
 ## Authenticate and build the YouTube API service
 flow = InstalledAppFlow.from_client_secrets_file(
-    Path("/Users/steven/Movies/youtube-upload/client_secret.json"), SCOPES
+    Path(str(Path.home()) + "/Movies/youtube-upload/client_secret.json"), SCOPES
 )
 
 # Use run_local_server instead of run_console

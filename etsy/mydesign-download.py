@@ -25,11 +25,11 @@ def sanitize_title(title):
 
 
 # Read the original CSV file
-csv_file = Path(Path("/Users/steven/Documents/python/x-python/mydesigns-export.CSV"))
+csv_file = Path(Path(str(Path.home()) + "/Documents/python/x-python/mydesigns-export.CSV"))
 df = pd.read_csv(csv_file)
 
 # Directory where images will be downloaded
-base_dir = Path(Path("/Users/steven/Pictures/etsy/mydesign"))
+base_dir = Path(Path(str(Path.home()) + "/Pictures/etsy/mydesign"))
 base_dir.mkdir(exist_ok=True)
 
 # Process each row in the DataFrame

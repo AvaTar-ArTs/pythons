@@ -144,8 +144,8 @@ def generate_grouped_gallery(folder_path, output_html, group_size=4):
 
 
 # Example usage
-folder_path = Path("/Users/steven/Pictures/leodowns/")  # Replace with your folder path
+folder_path = Path(str(Path.home()) + "/Pictures/leodowns/")  # Replace with your folder path
 output_html = Path(
-    "/Users/steven/Pictures/leodowns/grouped_gallery.html"
+    str(Path.home()) + "/Pictures/leodowns/grouped_gallery.html"
 )  # Output HTML path
 generate_grouped_gallery(folder_path, output_html)

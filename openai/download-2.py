@@ -556,7 +556,7 @@ def main():
     generator = AdvancedDemoGenerator()
 
     # Define output folder
-    output_folder = Path("/Users/steven/tehSiTes/AlchemyAPI/advanced_audio_sets")
+    output_folder = Path(str(Path.home()) + "/tehSiTes/AlchemyAPI/advanced_audio_sets")
 
     # Generate all sets
     logger.info("\n🚀 Generating advanced audio sets...")

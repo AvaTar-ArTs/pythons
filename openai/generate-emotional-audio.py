@@ -470,7 +470,7 @@ def main():
     logger.info("=" * 60)
 
     # Load environment variables
-    env_path = Path("/Users/steven/.env")
+    env_path = Path(str(Path.home()) + "/.env")
     load_dotenv(dotenv_path=env_path)
 
     # Get API key
@@ -489,7 +489,7 @@ def main():
     logger.info(f"📝 Loaded {len(texts)} sample texts")
 
     # Define output folder
-    output_folder = Path("/Users/steven/tehSiTes/AlchemyAPI/creative_tts_sets")
+    output_folder = Path(str(Path.home()) + "/tehSiTes/AlchemyAPI/creative_tts_sets")
 
     # Generate all sets
     if api_key:

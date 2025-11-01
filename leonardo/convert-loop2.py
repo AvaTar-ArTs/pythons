@@ -44,7 +44,7 @@ headers = {
 }
 
 # Directory containing images
-directory_path = Path("/Users/steven/Pictures/TrashCaT/trashy-heartbreak")
+directory_path = Path(str(Path.home()) + "/Pictures/TrashCaT/trashy-heartbreak")
 output_csv = "upscaled_images_log.csv"
 
 # Styles to apply

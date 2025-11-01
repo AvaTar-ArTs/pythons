@@ -24,10 +24,10 @@ CONSTANT_1024 = 1024
 
 # Define base directories to scan
 BASE_DIRS = [
-    Path("/Users/steven/Documents/Python_backup"),
-    Path("/Users/steven/Documents/Python"),
-    Path("/Users/steven/Music/nocTurneMeLoDieS/lyrics-keys-indo"),
-    Path("/Users/steven/Music/nocTurneMeLoDieS/mp3-analyze-transcribe")
+    Path(str(Path.home()) + "/Documents/Python_backup"),
+    Path(str(Path.home()) + "/Documents/Python"),
+    Path(str(Path.home()) + "/Music/nocTurneMeLoDieS/lyrics-keys-indo"),
+    Path(str(Path.home()) + "/Music/nocTurneMeLoDieS/mp3-analyze-transcribe")
 ]
 
 # Regex patterns for exclusions
@@ -106,7 +106,7 @@ def main():
         logger.info(f"📄 Saved CSV for {base_dir} → {output_path}")
 
     # Save total summary CSV
-    total_csv = f"/Users/steven/Documents/scan_total_summary_{timestamp}.csv"
+    total_csv = fstr(Path.home()) + "/Documents/scan_total_summary_{timestamp}.csv"
     save_csv(all_results, total_csv)
     logger.info(f"✅ All results saved to {total_csv}")
 

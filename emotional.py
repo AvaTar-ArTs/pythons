@@ -201,7 +201,7 @@ def main():
     logger.info("=" * 60)
 
     # Load environment variables
-    env_path = Path("/Users/steven/.env")
+    env_path = Path(str(Path.home()) + "/.env")
     load_dotenv(dotenv_path=env_path)
 
     # Get API key
@@ -214,8 +214,8 @@ def main():
     generator = EmotionalQuizGenerator(api_key)
 
     # Define paths
-    csv_path = Path("/Users/steven/tehSiTes/AlchemyAPI/quiz_sample.csv")
-    output_folder = Path("/Users/steven/tehSiTes/AlchemyAPI/emotional_quiz_mp3s")
+    csv_path = Path(str(Path.home()) + "/tehSiTes/AlchemyAPI/quiz_sample.csv")
+    output_folder = Path(str(Path.home()) + "/tehSiTes/AlchemyAPI/emotional_quiz_mp3s")
 
     # Check if CSV exists
     if not os.path.exists(csv_path):

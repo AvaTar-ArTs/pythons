@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 # Define the base directory
-base_dir = Path("/Users/steven/Music/NocTurnE-meLoDieS/albums/")
+base_dir = Path(str(Path.home()) + "/Music/NocTurnE-meLoDieS/albums/")
 
 
 # Helper function to create folders and move files

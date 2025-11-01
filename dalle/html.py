@@ -123,9 +123,9 @@ def csv_to_html(csv_file, output_html):
 
 
 # Example usage:
-csv_file = Path("/Users/steven/Pictures/leodowns/leonardo_urls.csv")  # Path to your CSV
+csv_file = Path(str(Path.home()) + "/Pictures/leodowns/leonardo_urls.csv")  # Path to your CSV
 output_html = Path(
-    "/Users/steven/Pictures/leodowns/image_gallery.html"
+    str(Path.home()) + "/Pictures/leodowns/image_gallery.html"
 )  # Output HTML path
 csv_to_html(csv_file, output_html)
 

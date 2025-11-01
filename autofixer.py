@@ -109,16 +109,16 @@ def process_directory(input_dir, backup_base_dir, output_file):
 if __name__ == "__main__":
     # Define the base input directory
     # Update to your actual input directory
-    input_dir = Path("/Users/steven/Documents/Python")
+    input_dir = Path(str(Path.home()) + "/Documents/Python")
 
     # Define the base backup directory with a timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     # Update to your preferred backup location
-    backup_base_dir = f"/Users/steven/Documents/Python_backup_{timestamp}"
+    backup_base_dir = fstr(Path.home()) + "/Documents/Python_backup_{timestamp}"
 
     # Define the output file path
     # Change to .txt if needed
-    output_file = Path("/Users/steven/Documents/formatting_report.csv")
+    output_file = Path(str(Path.home()) + "/Documents/formatting_report.csv")
 
     # Process the directory and fix Python files
     process_directory(input_dir, backup_base_dir, output_file)

@@ -26,7 +26,7 @@ CONSTANT_2000 = 2000
 
 
 # Load environment variables from .env file
-load_dotenv(dotenv_path=Path("/Users/steven/.env"))
+load_dotenv(dotenv_path=Path(str(Path.home()) + "/.env"))
 
 # Get API key and validate it
 api_key = os.getenv("OPENAI_API_KEY")
@@ -188,7 +188,7 @@ def process_audio_directory():
 
     # Save CSV
     csv_path = os.path.join(
-        audio_dir, Path("/Users/steven/Music/nocTurneMeLoDieS/mp4/song_data.csv")
+        audio_dir, Path(str(Path.home()) + "/Music/nocTurneMeLoDieS/mp4/song_data.csv")
     )
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)

@@ -22,7 +22,7 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
-base_dir = Path(Path("/Users/steven/Documents/python"))
+base_dir = Path(Path(str(Path.home()) + "/Documents/python"))
 
 
 def merge_directory(source: Path, target: Path):

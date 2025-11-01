@@ -22,13 +22,13 @@ CONSTANT_2025 = 2025
 
 
 # Input file locations (change if needed)
-VIDS_CSV = "/Users/steven/Movies/project2025/vids-05-31-18:16.csv"
-DOCS_CSV = "/Users/steven/Movies/project2025/docs-05-31-18:16.csv"
-PATHS_TXT = Path("/Users/steven/Movies/project2025/paths-CONSTANT_2025.txt")
+VIDS_CSV = str(Path.home()) + "/Movies/project2025/vids-05-31-18:16.csv"
+DOCS_CSV = str(Path.home()) + "/Movies/project2025/docs-05-31-18:16.csv"
+PATHS_TXT = Path(str(Path.home()) + "/Movies/project2025/paths-CONSTANT_2025.txt")
 
 # Album file types to sort (ignore .png, .jpg, etc.)
 SUFFIXES = [".mp4", ".mp3", "_analysis.txt", "_transcript.txt"]
-MP4_BASE = Path("/Users/steven/Movies/project2025/mp4")
+MP4_BASE = Path(str(Path.home()) + "/Movies/project2025/mp4")
 
 
 def extract_album(filename):

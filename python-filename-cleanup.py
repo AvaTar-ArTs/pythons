@@ -33,7 +33,7 @@ class FilenameCleanupSystem:
     def __init__(self):
         """__init__ function."""
 
-        self.root_path = Path(Path("/Users/steven/Documents/python")).expanduser()
+        self.root_path = Path(Path(str(Path.home()) + "/Documents/python")).expanduser()
         self.cleanup_operations = []
         self.backup_data = []
 
@@ -266,7 +266,7 @@ class FilenameCleanupSystem:
         logger.info("=" * 80)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        script_file = f"/Users/steven/python_filename_cleanup_execute_{timestamp}.py"
+        script_file = fstr(Path.home()) + "/python_filename_cleanup_execute_{timestamp}.py"
 
         script_content = f'''#!/usr/bin/env python3
 """
@@ -284,7 +284,7 @@ def execute_cleanup():
     logger.info("=" * 60)
     
     # Create backup directory
-    backup_dir = Path(Path("/Users/steven/python_filename_cleanup_backup"))
+    backup_dir = Path(Path(str(Path.home()) + "/python_filename_cleanup_backup"))
     backup_dir.mkdir(exist_ok=True)
     logger.info(f"📁 Backup directory: {{backup_dir}}")
     
@@ -354,7 +354,7 @@ if __name__ == "__main__":
         logger.info("=" * 80)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        csv_file = f"/Users/steven/python_filename_cleanup_backup_{timestamp}.csv"
+        csv_file = fstr(Path.home()) + "/python_filename_cleanup_backup_{timestamp}.csv"
 
         with open(csv_file, "w", newline="", encoding="utf-8") as csvfile:
             fieldnames = [

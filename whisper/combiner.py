@@ -19,7 +19,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-ROOT_DIR = "/Users/steven/Library/Application Support/WhisperTranscribe/library"
+ROOT_DIR = str(Path.home()) + "/Library/Application Support/WhisperTranscribe/library"
 
 json_files = glob(os.path.join(ROOT_DIR, "**/*.json"), recursive=True)
 json_files = natsorted(json_files)

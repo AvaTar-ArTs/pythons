@@ -115,7 +115,7 @@ class RootScriptOrganizer:
 
             if any(x in content_lower for x in ["pil", "pillow", "opencv", "ffmpeg"]):
                 return "06-media-processing"
-        except:
+        except Exception:
             pass
 
         # Default to utilities or archived

@@ -14,7 +14,7 @@ import re
 # Load the JSONL file.
 with open(
     Path(
-        "/Users/steven/Pictures/midjourneyDownload_2023-10-13_1697181545353/metadata.jsonl"
+        str(Path.home()) + "/Pictures/midjourneyDownload_2023-10-13_1697181545353/metadata.jsonl"
     ),
     "r",
 ) as f:

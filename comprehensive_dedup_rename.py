@@ -50,7 +50,7 @@ def analyze_purpose(filepath):
 
 
 def main():
-    root = Path("/Users/steven/documents/python")
+    root = Path(str(Path.home()) + "/documents/python")
     report_file = root / "VERSION_ANALYSIS_REPORT.json"
 
     if not report_file.exists():

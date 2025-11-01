@@ -196,7 +196,7 @@ def create_final_index(root_dir):
 
 
 if __name__ == "__main__":
-    root_directory = Path("/Users/steven/AvaTarArTs/python")
+    root_directory = Path(str(Path.home()) + "/AvaTarArTs/python")
 
     logger.info("Starting FINAL flattening process...")
     logger.info("This will move ALL files to root and remove ALL directories")

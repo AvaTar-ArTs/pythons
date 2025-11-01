@@ -426,7 +426,7 @@ def main():
     )
     parser.add_argument(
         "--pictures-path",
-        default=Path("/Users/steven/Pictures"),
+        default=Path(str(Path.home()) + "/Pictures"),
         help="Path to the Pictures directory to scan (default: /Users/steven/Pictures)",
     )
     parser.add_argument(

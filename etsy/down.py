@@ -27,7 +27,7 @@ output_directory = "downloaded_files"
 os.makedirs(output_directory, exist_ok=True)
 
 # Path to the CSV file containing URLs
-csv_file_path = Path("/Users/steven/Pictures/etsy/printify/mydesigns-export.CSV")
+csv_file_path = Path(str(Path.home()) + "/Pictures/etsy/printify/mydesigns-export.CSV")
 
 # Column name in the CSV that contains the URLs
 url_column_name = "url"  # Adjust to match your CSV file's structure

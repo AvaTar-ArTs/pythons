@@ -484,7 +484,7 @@ class ContentAwareOrganizer:
 def main():
     """main function."""
 
-    organizer = ContentAwareOrganizer(Path("/Users/steven/Pictures/etsy"))
+    organizer = ContentAwareOrganizer(Path(str(Path.home()) + "/Pictures/etsy"))
 
     logger.info("Creating intelligent organization system...")
 

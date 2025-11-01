@@ -52,4 +52,4 @@ def write_chunk(prefix, start_index, end_index, header, chunk):
 
 
 # Usage
-split_csv(Path("/Users/steven/master_image_info.csv"), Path("/Users/steven/image_info"))
+split_csv(Path(str(Path.home()) + "/master_image_info.csv"), Path(str(Path.home()) + "/image_info"))

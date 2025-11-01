@@ -93,7 +93,7 @@ def csv_to_html(csv_file, output_html):
 
 # Example usage:
 csv_file = Path(
-    "/Users/steven/Pictures/DaLLe/dalle.csv"
+    str(Path.home()) + "/Pictures/DaLLe/dalle.csv"
 )  # Replace with the path to your CSV file
 output_html = "image_gallery.html"
 csv_to_html(csv_file, output_html)

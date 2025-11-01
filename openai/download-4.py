@@ -547,7 +547,7 @@ class AdvancedSortAndDedupe:
 
 def main():
     """Main function."""
-    base_dir = Path("/Users/steven/Music/nocTurneMeLoDieS/python")
+    base_dir = Path(str(Path.home()) + "/Music/nocTurneMeLoDieS/python")
 
     if not os.path.exists(base_dir):
         logger.error(f"Base directory not found: {base_dir}")

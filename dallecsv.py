@@ -16,10 +16,10 @@ logger = logging.getLogger(__name__)
 
 
 # Path to the input text file
-input_file_path = Path("/Users/steven/Pictures/DaLL-E/dalle/dalle.txt")
+input_file_path = Path(str(Path.home()) + "/Pictures/DaLL-E/dalle/dalle.txt")
 
 # Path to the output CSV file
-output_csv_path = Path("/Users/steven/Pictures/DaLL-E/dalle/dalle_output.csv")
+output_csv_path = Path(str(Path.home()) + "/Pictures/DaLL-E/dalle/dalle_output.csv")
 
 # Read the content of the input file
 with open(input_file_path, "r") as file:

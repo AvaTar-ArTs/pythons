@@ -244,7 +244,7 @@ class SuperFlattener:
                     self.stats["folders_removed"] = (
                         self.stats.get("folders_removed", 0) + 1
                     )
-            except:
+            except Exception:
                 pass
 
 

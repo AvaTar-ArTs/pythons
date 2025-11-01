@@ -84,7 +84,7 @@ def analyze_versions(versions):
         # Prefer higher version numbers
         try:
             score += int(v["version"]) * 10
-        except:
+        except Exception:
             pass
 
         v["score"] = score
@@ -95,7 +95,7 @@ def analyze_versions(versions):
 
 
 def main():
-    root = Path("/Users/steven/documents/python")
+    root = Path(str(Path.home()) + "/documents/python")
 
     print("?? Analyzing versioned scripts...")
     print("=" * 70)

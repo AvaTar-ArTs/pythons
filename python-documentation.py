@@ -40,7 +40,7 @@ class APIDocumentationGenerator:
     def __init__(self):
         """__init__ function."""
 
-        self.root_path = Path(Path("/Users/steven/Documents/python")).expanduser()
+        self.root_path = Path(Path(str(Path.home()) + "/Documents/python")).expanduser()
         self.api_endpoints = []
         self.documentation = {}
 
@@ -296,7 +296,7 @@ logger.info(response.json())"""
         openapi_doc = self._generate_openapi_documentation()
 
         # Save OpenAPI documentation
-        openapi_file = f"/Users/steven/python_api_openapi_{timestamp}.json"
+        openapi_file = fstr(Path.home()) + "/python_api_openapi_{timestamp}.json"
         with open(openapi_file, "w") as f:
             json.dump(openapi_doc, f, indent=2)
 
@@ -304,7 +304,7 @@ logger.info(response.json())"""
         html_doc = self._generate_html_documentation()
 
         # Save HTML documentation
-        html_file = f"/Users/steven/python_api_documentation_{timestamp}.html"
+        html_file = fstr(Path.home()) + "/python_api_documentation_{timestamp}.html"
         with open(html_file, "w") as f:
             f.write(html_doc)
 
@@ -312,7 +312,7 @@ logger.info(response.json())"""
         markdown_doc = self._generate_markdown_documentation()
 
         # Save Markdown documentation
-        markdown_file = f"/Users/steven/python_api_documentation_{timestamp}.md"
+        markdown_file = fstr(Path.home()) + "/python_api_documentation_{timestamp}.md"
         with open(markdown_file, "w") as f:
             f.write(markdown_doc)
 

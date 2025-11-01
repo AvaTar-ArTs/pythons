@@ -213,7 +213,7 @@ class FinalRootOrganizer:
 
             f.write("\n## Final Structure\n\n")
             f.write("```\n")
-            f.write("/Users/steven/Documents/python/\n")
+            f.write(str(Path.home()) + "/Documents/python/\n")
             f.write("├── 01-core-tools/\n")
             f.write("├── 02-youtube-automation/\n")
             f.write("├── 03-ai-creative-tools/\n")

@@ -246,7 +246,7 @@ def main():
         "-d",
         "--audio-dir",
         type=str,
-        default=Path("/Users/steven/Music/nocTurneMeLoDieS/MP3/"),
+        default=Path(str(Path.home()) + "/Music/nocTurneMeLoDieS/MP3/"),
         help="Directory containing MP3s (recursive).")
     parser.add_argument(
         "-w", "--max-workers", type=int, default=4, help="Number of concurrent transcription workers."

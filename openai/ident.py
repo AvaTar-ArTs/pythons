@@ -28,7 +28,7 @@ import csv
 from dotenv import load_dotenv
 
 # Load environment variables from the specified .env file
-load_dotenv(Path("/Users/steven/Documents/python/.env"))
+load_dotenv(Path(str(Path.home()) + "/Documents/python/.env"))
 
 # Set OpenAI API key from the environment variable
 
@@ -191,10 +191,10 @@ def process_directory_with_batching(
 
 # Example usage
 if __name__ == "__main__":
-    directory_path = Path("/Users/steven/Documents/python")  # Your target directory
+    directory_path = Path(str(Path.home()) + "/Documents/python")  # Your target directory
     batch_size = 10  # Number of scripts to process at a time
     output_csv = Path(
-        "/Users/steven/Documents/python/output.csv"
+        str(Path.home()) + "/Documents/python/output.csv"
     )  # Output CSV file path
 
     # Process the directory and output the results to a CSV file

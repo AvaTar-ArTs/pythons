@@ -37,7 +37,7 @@ headers = {
 }
 
 # Directory containing images
-directory_path = Path("/Users/steven/Pictures/Bcovers/")
+directory_path = Path(str(Path.home()) + "/Pictures/Bcovers/")
 
 # Styles to apply
 # Update the styles list according to your needs

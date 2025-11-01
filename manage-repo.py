@@ -43,8 +43,8 @@ class GitHubRepoManager:
 
     def __init__(
         self,
-        github_dir: str = Path("/Users/steven/Documents/github"),
-        python_dir: str = Path("/Users/steven/Documents/python"),
+        github_dir: str = Path(str(Path.home()) + "/Documents/github"),
+        python_dir: str = Path(str(Path.home()) + "/Documents/python"),
     ):
         """__init__ function."""
 

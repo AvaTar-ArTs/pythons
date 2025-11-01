@@ -30,7 +30,7 @@ from collections import defaultdict
 
 
 class AutoOrganizeDryRun:
-    def __init__(self, base_dir=Path("/Users/steven/AI_Outputs_Hub")):
+    def __init__(self, base_dir=Path(str(Path.home()) + "/AI_Outputs_Hub")):
         """__init__ function."""
 
         self.base_dir = Path(base_dir)

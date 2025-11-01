@@ -28,7 +28,7 @@ from collections import defaultdict
 
 def analyze_remaining_files():
     """Analyze all remaining Python files and directories."""
-    base_path = Path(Path("/Users/steven/Documents/python"))
+    base_path = Path(Path(str(Path.home()) + "/Documents/python"))
 
     # Categories for remaining files
     categories = {
@@ -288,7 +288,7 @@ from pathlib import Path
 
 def create_additional_directories():
     """Create additional directories for remaining files."""
-    base_path = Path(Path("/Users/steven/Documents/python"))
+    base_path = Path(Path(str(Path.home()) + "/Documents/python"))
     
     additional_dirs = [
         "01_core_tools/text_processors",
@@ -308,7 +308,7 @@ def create_additional_directories():
 
 def migrate_remaining_files():
     """Migrate remaining Python files."""
-    base_path = Path(Path("/Users/steven/Documents/python"))
+    base_path = Path(Path(str(Path.home()) + "/Documents/python"))
     
     # File mappings
     file_mappings = {
@@ -361,7 +361,7 @@ def migrate_remaining_files():
 
 def migrate_remaining_directories():
     """Migrate remaining directories."""
-    base_path = Path(Path("/Users/steven/Documents/python"))
+    base_path = Path(Path(str(Path.home()) + "/Documents/python"))
     
     # Directory mappings
     dir_mappings = {
@@ -546,7 +546,7 @@ if __name__ == "__main__":
     main()
 '''
 
-    with open(Path("/Users/steven/Documents/python/migrate_remaining.py"), "w") as f:
+    with open(Path(str(Path.home()) + "/Documents/python/migrate_remaining.py"), "w") as f:
         f.write(script_content)
 
     logger.info(f"\n📝 Second migration script created: migrate_remaining.py")

@@ -59,7 +59,7 @@ headers = {
 }
 
 # Directory containing images
-directory_path = Path("/Users/steven/Music/trashCaTs/in-this-alley-where-i-hide")
+directory_path = Path(str(Path.home()) + "/Music/trashCaTs/in-this-alley-where-i-hide")
 
 # Styles to apply
 # Update the styles list according to your needs

@@ -108,7 +108,7 @@ def analyze_scripts(directory):
 
 if __name__ == "__main__":
     # Update with your scripts directory
-    scripts_directory = Path("/Users/steven/Documents/Python/")
+    scripts_directory = Path(str(Path.home()) + "/Documents/Python/")
     descriptions = analyze_scripts(scripts_directory)
 
     # Print out the descriptions

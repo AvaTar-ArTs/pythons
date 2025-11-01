@@ -43,8 +43,8 @@ api_key = os.getenv("ELEVENLABS_API_KEY")
 youtube = build("youtube", "v3", developerKey=api_key)
 
 # Define paths
-csv_path = "/Users/steven/etsy-automation/ytube - youtube_videos.csv"
-thumbnail_dir = "/Users/steven/Downloads/Misc/Thumbnails"
+csv_path = str(Path.home()) + "/etsy-automation/ytube - youtube_videos.csv"
+thumbnail_dir = str(Path.home()) + "/Downloads/Misc/Thumbnails"
 os.makedirs(thumbnail_dir, exist_ok=True)
 
 # Load CSV
@@ -89,4 +89,4 @@ for index, row in df.iterrows():
         df.at[index, "Published At"] = published_at
 
 # Save updated DataFrame
-df.to_csv("/Users/steven/Downloads/Misc/Thumbnails", index=False)
+df.to_csv(str(Path.home()) + "/Downloads/Misc/Thumbnails", index=False)

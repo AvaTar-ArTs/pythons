@@ -1318,8 +1318,8 @@ This content ecosystem represents a **significant business asset** with substant
 
 def main():
     """Main execution function"""
-    source_dir = "/Users/steven/Documents/cursor-agent/chat_analysis /markdown_reports"
-    target_dir = Path("/Users/steven/tehSiTes/Dr_Adu_GainesvillePFS_SEO_Project")
+    source_dir = str(Path.home()) + "/Documents/cursor-agent/chat_analysis /markdown_reports"
+    target_dir = Path(str(Path.home()) + "/tehSiTes/Dr_Adu_GainesvillePFS_SEO_Project")
 
     # Process with enhanced analysis
     analyzer = EnhancedContentAnalyzerV2(source_dir, target_dir, batch_size=5)

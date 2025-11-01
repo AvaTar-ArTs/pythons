@@ -172,7 +172,7 @@ def main():
         pattern = Path(pattern).name
     else:
         # Search current directory
-        base_dir = Path("/Users/steven/documents/python")
+        base_dir = Path(str(Path.home()) + "/documents/python")
         # Find in all subdirectories
         all_matches = list(base_dir.rglob(f"{pattern}*.py"))
 

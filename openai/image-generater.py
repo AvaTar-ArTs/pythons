@@ -23,7 +23,7 @@ import csv
 from dotenv import load_dotenv
 
 # Load API key from .env file
-load_dotenv(Path("/Users/steven/.env"))
+load_dotenv(Path(str(Path.home()) + "/.env"))
 
 
 # Function to generate a filename using GPT based on the prompt
@@ -97,8 +97,8 @@ def pair_and_rename_images(directory, output_csv):
 
 
 # Example usage
-directory = "/Users/steven/Music/TraShCaTs/witches Road/Witches_Road_Covers"
+directory = str(Path.home()) + "/Music/TraShCaTs/witches Road/Witches_Road_Covers"
 output_csv = (
-    "/Users/steven/Music/TraShCaTs/witches Road/Witches_Road_Covers/paired_output.csv"
+    str(Path.home()) + "/Music/TraShCaTs/witches Road/Witches_Road_Covers/paired_output.csv"
 )
 pair_and_rename_images(directory, output_csv)

@@ -68,7 +68,7 @@ directories_to_backup = [
     os.path.expanduser("~/Library/Mail"),
 ]
 
-csv_output_path = Path("/Users/steven/backup_dry_run.csv")
+csv_output_path = Path(str(Path.home()) + "/backup_dry_run.csv")
 
 generate_dry_run_csv(directories_to_backup, csv_output_path)
 

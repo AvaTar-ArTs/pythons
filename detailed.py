@@ -37,7 +37,7 @@ def generate_detailed_report():
     # Load the comparison data
     comparison_file = Path(
         Path(
-            "/Users/steven/Documents/python/comparison_analysis/comparison_analysis_20251026_010632.json"
+            str(Path.home()) + "/Documents/python/comparison_analysis/comparison_analysis_20251026_010632.json"
         )
     )
 
@@ -54,7 +54,7 @@ def generate_detailed_report():
     # Save report
     output_file = Path(
         Path(
-            "/Users/steven/Documents/python/comparison_analysis/detailed_comparison_report.html"
+            str(Path.home()) + "/Documents/python/comparison_analysis/detailed_comparison_report.html"
         )
     )
     with open(output_file, "w", encoding="utf-8") as f:

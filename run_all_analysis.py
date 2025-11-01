@@ -271,13 +271,13 @@ def main():
     parser.add_argument(
         "--target",
         type=str,
-        default=Path("/Users/steven/Documents/python"),
+        default=Path(str(Path.home()) + "/Documents/python"),
         help="Target directory to analyze",
     )
     parser.add_argument(
         "--scripts",
         type=str,
-        default=Path("/Users/steven/GitHub/AvaTarArTs-Suite/scripts"),
+        default=Path(str(Path.home()) + "/GitHub/AvaTarArTs-Suite/scripts"),
         help="Scripts directory",
     )
 

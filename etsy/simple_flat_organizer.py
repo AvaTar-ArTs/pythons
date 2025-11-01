@@ -118,7 +118,7 @@ class SimpleFlatOrganizer:
 
                 if any(keyword in content for keyword in keywords):
                     return category
-        except:
+        except Exception:
             pass
 
         return "utils"
@@ -263,7 +263,7 @@ class SimpleFlatOrganizer:
                         self.stats["folders_removed"] = (
                             self.stats.get("folders_removed", 0) + 1
                         )
-                except:
+                except Exception:
                     pass
 
 

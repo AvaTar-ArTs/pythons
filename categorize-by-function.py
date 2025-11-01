@@ -469,7 +469,7 @@ class SpecificFunctionalCategorizer:
 def main():
     """main function."""
 
-    project_root = Path("/Users/steven/Documents/python")
+    project_root = Path(str(Path.home()) + "/Documents/python")
 
     categorizer = SpecificFunctionalCategorizer()
     results = categorizer.categorize_project(project_root)

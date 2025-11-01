@@ -154,7 +154,7 @@ def categorize_file(filename, filepath):
 def main():
     """main function."""
 
-    directory = Path("/Users/steven/Documents/python")
+    directory = Path(str(Path.home()) + "/Documents/python")
     metadata_list = []
     file_hashes = defaultdict(list)
     duplicate_groups = []
@@ -230,7 +230,7 @@ def main():
             )
 
     # Write comprehensive CSV
-    csv_path = Path("/Users/steven/Documents/python/python_directory_metadata.csv")
+    csv_path = Path(str(Path.home()) + "/Documents/python/python_directory_metadata.csv")
     fieldnames = [
         "relative_path",
         "absolute_path",

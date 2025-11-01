@@ -553,7 +553,7 @@ class AIDeepIntelligentAnalyzer:
 def main():
     """Main execution"""
     # Load environment
-    env_file = Path("/Users/steven/.env.d/MASTER_CONSOLIDATED.env")
+    env_file = Path(str(Path.home()) + "/.env.d/MASTER_CONSOLIDATED.env")
     if Path(env_file).exists():
         logger.info(f"{Colors.CYAN}Loading API keys...{Colors.END}")
         for line in open(env_file):
@@ -564,7 +564,7 @@ def main():
                     value = value.strip('"').strip("'").split("#")[0].strip()
                     os.environ[key] = value
 
-    target_dir = Path("/Users/steven/GitHub/AvaTarArTs-Suite")
+    target_dir = Path(str(Path.home()) + "/GitHub/AvaTarArTs-Suite")
 
     analyzer = AIDeepIntelligentAnalyzer(target_dir)
     analyzer.run()

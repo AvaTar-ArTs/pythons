@@ -59,9 +59,9 @@ def parse_markdown_to_table(md_file):
 
 # Usage Example
 md_file_path = Path(
-    "/Users/steven/Downloads/4.md"
+    str(Path.home()) + "/Downloads/4.md"
 )  # Replace with your Markdown file path
-output_csv = Path("/Users/steven/Downloads/4.csv")
+output_csv = Path(str(Path.home()) + "/Downloads/4.csv")
 
 # Parse and save to CSV
 df = parse_markdown_to_table(md_file_path)

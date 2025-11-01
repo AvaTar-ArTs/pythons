@@ -28,7 +28,7 @@ import openai
 openai.api_key = "YOUR_API_KEY"
 
 # Request is saved in a variable
-response = openai.Completion.create(engine="davinci", prompt="Hello, world!")
+response = client.completions.create  # Updated to v1.0+(engine="davinci", prompt="Hello, world!")
 
 # Prints out the Response
 logger.info(response.choices[0].text)

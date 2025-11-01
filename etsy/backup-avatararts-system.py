@@ -70,7 +70,7 @@ class AvaTarArTsBackupSystem:
                 ],
             },
             "avatararts_original": {
-                "source": "/Users/steven/AvatararTs",
+                "source": str(Path.home()) + "/AvatararTs",
                 "files": [
                     "index2.html",
                     "index.html",
@@ -207,7 +207,7 @@ class AvaTarArTsBackupSystem:
                 ],
             },
             "grid_systems": {
-                "source": "/Users/steven/AvatararTs",
+                "source": str(Path.home()) + "/AvatararTs",
                 "files": [
                     "multi_grid_generator.py",
                     "professional_grid_generator.py",
@@ -557,7 +557,7 @@ if __name__ == "__main__":
 
 def main():
     """Main function"""
-    backup_dir = Path("/Users/steven/AvaTarArTs_Backup_20251014_143236")
+    backup_dir = Path(str(Path.home()) + "/AvaTarArTs_Backup_20251014_143236")
     backup_system = AvaTarArTsBackupSystem(backup_dir)
     backup_system.run_backup()
 

@@ -66,7 +66,7 @@ class CrossDirectoryMerger:
         self.dry_run = dry_run
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.backup_dir = Path(f"/Users/steven/Documents/merge_backup_{timestamp}")
+        self.backup_dir = Path(fstr(Path.home()) + "/Documents/merge_backup_{timestamp}")
 
         self.file_inventory = {}  # hash -> list of file info
         self.merge_plan = []

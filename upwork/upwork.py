@@ -230,7 +230,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--output-dir",
-        default=Path("/Users/steven/upwork"),
+        default=Path(str(Path.home()) + "/upwork"),
         help="Output directory for CSVs",
     )
     parser.add_argument(

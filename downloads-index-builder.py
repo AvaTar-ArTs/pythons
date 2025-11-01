@@ -314,7 +314,7 @@ def generate_category_pages(directory, stats):
 
 def main():
     """Main function to generate all indexes and pages"""
-    downloads_dir = Path("/Users/steven/Downloads")
+    downloads_dir = Path(str(Path.home()) + "/Downloads")
 
     logger.info("🔍 Analyzing Downloads directory...")
     stats = get_file_stats(downloads_dir)

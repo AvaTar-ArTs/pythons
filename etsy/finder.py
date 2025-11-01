@@ -177,5 +177,5 @@ def find_duplicates(directory):
 
 
 if __name__ == "__main__":
-    directory = Path("/Users/steven/Pictures/etsy/ideo-1012")
+    directory = Path(str(Path.home()) + "/Pictures/etsy/ideo-1012")
     results = find_duplicates(directory)

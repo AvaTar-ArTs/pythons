@@ -28,18 +28,18 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env (make sure your OPENAI_API_KEY is stored here)
 # Load environment variables from .env (make sure your OPENAI_API_KEY is stored here)
-env_path = Path("/Users/steven/.env")
+env_path = Path(str(Path.home()) + "/.env")
 load_dotenv(dotenv_path=env_path)
 
 # Directory paths
 VIDEO_DIR = Path(
-    "/Users/steven/AvaTarArTs/canva/Video"
+    str(Path.home()) + "/AvaTarArTs/canva/Video"
 )  # Directory containing MP4 files
 TRANSCRIPT_DIR = Path(
-    "/Users/steven/AvaTarArTs/canva/Video/transcribe"
+    str(Path.home()) + "/AvaTarArTs/canva/Video/transcribe"
 )  # Directory to save transcripts
 ANALYSIS_DIR = Path(
-    "/Users/steven/AvaTarArTs/canva/Video/analysis"
+    str(Path.home()) + "/AvaTarArTs/canva/Video/analysis"
 )  # Directory to save the analysis files
 
 # Create output directories if they don't exist

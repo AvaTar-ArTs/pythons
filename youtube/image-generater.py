@@ -28,9 +28,9 @@ def copy_zombot_images():
     """
     Copy zombot-avatararts images to the gallery photos directory
     """
-    source_dir = Path("/Users/steven/Pictures/zombot-avatararts")
+    source_dir = Path(str(Path.home()) + "/Pictures/zombot-avatararts")
     target_dir = Path(
-        "/Users/steven/tehSiTes/Gallery_Code_Project_Root/city-16-9/public/images/photos"
+        str(Path.home()) + "/tehSiTes/Gallery_Code_Project_Root/city-16-9/public/images/photos"
     )
 
     # Ensure target directory exists
@@ -64,7 +64,7 @@ def update_gallery_config():
     Update the gallery configuration to include the new images
     """
     config_path = Path(
-        "/Users/steven/tehSiTes/Gallery_Code_Project_Root/city-16-9/gallery.json"
+        str(Path.home()) + "/tehSiTes/Gallery_Code_Project_Root/city-16-9/gallery.json"
     )
 
     # Read current config

@@ -31,7 +31,7 @@ def prompt_for_files():
 
 
 def predefined_file_paths():
-    return [Path("/Users/steven/Music/NocTurnE-meLoDieS/suno/01.html")]
+    return [Path(str(Path.home()) + "/Music/NocTurnE-meLoDieS/suno/01.html")]
 
     """extract_song_details function."""
 

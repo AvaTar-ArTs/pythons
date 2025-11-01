@@ -26,7 +26,7 @@ import re
 import shutil
 from datetime import datetime
 
-root = Path("/Users/steven/Documents/python")
+root = Path(str(Path.home()) + "/Documents/python")
 
 # Template for proper API key loading
 ENV_LOADER_TEMPLATE = '''import os

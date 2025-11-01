@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 # Set your root directory containing the JSON files
-ROOT_DIR = Path("/Users/steven/Documents/Conversation_JSONs/")  # Adjust as needed
+ROOT_DIR = Path(str(Path.home()) + "/Documents/Conversation_JSONs/")  # Adjust as needed
 
 # Find all JSON files recursively and sort them naturally
 json_files = glob(os.path.join(ROOT_DIR, "**/*.json"), recursive=True)

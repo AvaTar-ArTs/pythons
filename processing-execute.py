@@ -195,7 +195,7 @@ class OrganizationExecutor:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
         # Save moved files log
-        moved_csv = f"/Users/steven/Documents/python/moved_files_{timestamp}.csv"
+        moved_csv = fstr(Path.home()) + "/Documents/python/moved_files_{timestamp}.csv"
         if self.moved_files:
             with open(moved_csv, "w", newline="", encoding="utf-8") as csvfile:
                 fieldnames = [
@@ -212,7 +212,7 @@ class OrganizationExecutor:
 
         # Save errors log
         errors_csv = (
-            f"/Users/steven/Documents/python/organization_errors_{timestamp}.csv"
+            fstr(Path.home()) + "/Documents/python/organization_errors_{timestamp}.csv"
         )
         if self.errors:
             with open(errors_csv, "w", newline="", encoding="utf-8") as csvfile:
@@ -229,7 +229,7 @@ class OrganizationExecutor:
 
         # Save summary report
         summary_file = (
-            f"/Users/steven/Documents/python/organization_summary_{timestamp}.txt"
+            fstr(Path.home()) + "/Documents/python/organization_summary_{timestamp}.txt"
         )
         with open(summary_file, "w", encoding="utf-8") as f:
             f.write("ORGANIZATION EXECUTION SUMMARY\n")
@@ -313,7 +313,7 @@ def main():
 
     # Find the most recent organization plan CSV
     csv_files = list(
-        Path("/Users/steven/Documents/python").glob("smart_organization_plan_*.csv")
+        Path(str(Path.home()) + "/Documents/python").glob("smart_organization_plan_*.csv")
     )
     if not csv_files:
         logger.info(

@@ -24,7 +24,7 @@ from collections import defaultdict
 
 
 class ScriptMapper:
-    def __init__(self, base_path=Path("/Users/steven/Documents/python")):
+    def __init__(self, base_path=Path(str(Path.home()) + "/Documents/python")):
         """__init__ function."""
 
         self.base_path = Path(base_path)

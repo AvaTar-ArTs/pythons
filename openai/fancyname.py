@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 # Load environment variables from the specified .env file
-env_path = Path("/Users/steven/.env")
+env_path = Path(str(Path.home()) + "/.env")
 load_dotenv(dotenv_path=env_path)
 
 # Initialize OpenAI API key

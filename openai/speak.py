@@ -45,7 +45,7 @@ def main():
         for i, row in enumerate(reader):
             question_text = row["Question"]  # Assuming 'Question' is the column name
             output_path = (
-                f"/Users/steven/Documents/quiz-talk/quiz329/question/question_{i+1}.mp3"
+                fstr(Path.home()) + "/Documents/quiz-talk/quiz329/question/question_{i+1}.mp3"
             )
             logger.info(f"Generating speech for question {i+1}")  # Feedback to user
             generate_speech(

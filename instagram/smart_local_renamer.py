@@ -82,7 +82,7 @@ class SmartLocalRenamer:
                         if any(pattern in imp for imp in imports):
                             return service
 
-            except:
+            except Exception:
                 pass
 
             # 3. Check content for service mentions

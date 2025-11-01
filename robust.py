@@ -936,7 +936,7 @@ class RobustFileProcessor:
         }
 
 if __name__ == "__main__":
-    processor = RobustFileProcessor(Path("/Users/steven/Documents/fix.txt"))
+    processor = RobustFileProcessor(Path(str(Path.home()) + "/Documents/fix.txt"))
     results = processor.run_comprehensive_analysis()
     
     if results:

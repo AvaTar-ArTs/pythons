@@ -135,7 +135,7 @@ def main():
     logger.info("=" * 50)
 
     # Load environment variables
-    env_path = Path("/Users/steven/.env")
+    env_path = Path(str(Path.home()) + "/.env")
     load_dotenv(dotenv_path=env_path)
 
     # Get API key
@@ -145,8 +145,8 @@ def main():
         return False
 
     # Define paths
-    csv_path = Path("/Users/steven/tehSiTes/AlchemyAPI/quiz_sample.csv")
-    output_folder = Path("/Users/steven/tehSiTes/AlchemyAPI/generated_mp3s")
+    csv_path = Path(str(Path.home()) + "/tehSiTes/AlchemyAPI/quiz_sample.csv")
+    output_folder = Path(str(Path.home()) + "/tehSiTes/AlchemyAPI/generated_mp3s")
 
     # Check if CSV exists
     if not os.path.exists(csv_path):

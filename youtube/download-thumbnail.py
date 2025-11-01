@@ -19,13 +19,13 @@ CONSTANT_200 = 200
 
 # YTUBE API: AIzaSyCyfGm1oF2syfzfsPeCRHb10tMKmC0dbCo
 # Path to the CSV file
-csv_path = "/Users/steven/Downloads/Misc/ytube - youtube_videos.csv"
+csv_path = str(Path.home()) + "/Downloads/Misc/ytube - youtube_videos.csv"
 
 # Load the CSV file containing your YouTube video data
 df = pd.read_csv(csv_path)
 
 # Directory where you want to save the thumbnails
-thumbnail_dir = Path("/Users/steven/Downloads/Misc/Thumbnails")
+thumbnail_dir = Path(str(Path.home()) + "/Downloads/Misc/Thumbnails")
 os.makedirs(thumbnail_dir, exist_ok=True)
 
 
@@ -58,5 +58,5 @@ for index, row in df.iterrows():
         df.at[index, "Thumbnail Path"] = thumbnail_path
 
 # Save the updated DataFrame to a new CSV file
-updated_csv_path = Path("/Users/steven/Downloads/Misc/ytube_with_thumbnails.csv")
+updated_csv_path = Path(str(Path.home()) + "/Downloads/Misc/ytube_with_thumbnails.csv")
 df.to_csv(updated_csv_path, index=False)

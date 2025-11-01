@@ -351,7 +351,7 @@ class SmartOrganizationImplementer:
 def main():
     """main function."""
 
-    implementer = SmartOrganizationImplementer(Path("/Users/steven/Pictures/etsy"))
+    implementer = SmartOrganizationImplementer(Path(str(Path.home()) + "/Pictures/etsy"))
     implementer.implement_complete_organization()
 
 

@@ -88,7 +88,7 @@ def process_images_in_directory(input_directory, output_directory):
 
 
 # Example usage
-input_directory = Path("/Users/steven/Pictures/orn/Dream/all_images")
-output_directory = Path("/Users/steven/Pictures/orn/Dream/all_images/masked_output")
+input_directory = Path(str(Path.home()) + "/Pictures/orn/Dream/all_images")
+output_directory = Path(str(Path.home()) + "/Pictures/orn/Dream/all_images/masked_output")
 
 process_images_in_directory(input_directory, output_directory)

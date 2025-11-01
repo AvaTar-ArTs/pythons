@@ -166,7 +166,7 @@ def create_merge_recommendations(analysis_results):
 def save_analysis_report(analysis_results, recommendations):
     """Save analysis report to CSV"""
     # Save detailed analysis
-    with open("/Users/steven/drive_analysis_comparison.csv", "w", newline="") as f:
+    with open(str(Path.home()) + "/drive_analysis_comparison.csv", "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(
             [
@@ -217,7 +217,7 @@ def save_analysis_report(analysis_results, recommendations):
             )
 
     if all_duplicates:
-        with open("/Users/steven/duplicate_files_found.csv", "w", newline="") as f:
+        with open(str(Path.home()) + "/duplicate_files_found.csv", "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(
                 [
@@ -253,7 +253,7 @@ def main():
     logger.info("=== DRIVE CSV COMPARISON ANALYSIS ===")
 
     # Check if analysis directory exists
-    analysis_dir = Path("/Users/steven/drive_analysis_output")
+    analysis_dir = Path(str(Path.home()) + "/drive_analysis_output")
     if not os.path.exists(analysis_dir):
         logger.info(f"Analysis directory not found: {analysis_dir}")
         logger.info("Please run the batch analysis script first.")

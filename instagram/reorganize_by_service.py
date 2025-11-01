@@ -75,7 +75,7 @@ class ServiceReorganizer:
                             return "reddit"
                         if "telegram" in mod or "telethon" in mod:
                             return "telegram"
-            except:
+            except Exception:
                 pass
 
             # Check content

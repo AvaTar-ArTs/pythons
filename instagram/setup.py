@@ -69,9 +69,12 @@ from pathlib import Path
 import glob
 import os
 import sys
-from distutils import cmd, log
-from distutils.command.build import build
-from distutils.core import setup
+# DEPRECATED: distutils removed in Python 3.12
+# from distutils import cmd, log
+# DEPRECATED: distutils removed in Python 3.12
+# from distutils.command.build import build
+# DEPRECATED: distutils removed in Python 3.12
+# from distutils.core import setup
 from shutil import copyfile
 from subprocess import call
 

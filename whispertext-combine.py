@@ -20,7 +20,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-ROOT_DIR = Path("/Users/steven/Documents/Whisper-Text/ALL")
+ROOT_DIR = Path(str(Path.home()) + "/Documents/Whisper-Text/ALL")
 
 json_files = glob(os.path.join(ROOT_DIR, "**/*.json"), recursive=True)
 json_files = natsorted(json_files)

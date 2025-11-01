@@ -685,7 +685,7 @@ def execute_reorganization():
     logger.info("=" * 60)
     
     # Create backup directory
-    backup_dir = Path(Path("/Users/steven/python_ecosystem_backup"))
+    backup_dir = Path(Path(str(Path.home()) + "/python_ecosystem_backup"))
     backup_dir.mkdir(exist_ok=True)
     logger.info(f"📁 Backup directory: {{backup_dir}}")
     
@@ -696,7 +696,7 @@ def execute_reorganization():
     
     for i, move in enumerate(file_moves, 1):
         old_path = Path(move['old_path'])
-        new_path = Path(Path("/Users/steven/Documents/python")) / move['new_path']
+        new_path = Path(Path(str(Path.home()) + "/Documents/python")) / move['new_path']
         
         logger.info(f"   {{i}}/{{len(file_moves)}}: {{old_path.name}} → {{move['new_path']}}")
         
@@ -750,15 +750,15 @@ def main():
 
     # Create CSV backup
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    csv_backup_file = f"/Users/steven/python_ecosystem_backup_{timestamp}.csv"
+    csv_backup_file = fstr(Path.home()) + "/python_ecosystem_backup_{timestamp}.csv"
     mapper.create_csv_backup(csv_backup_file)
 
     # Generate master index
-    index_file = f"/Users/steven/python_ecosystem_master_index_{timestamp}.json"
+    index_file = fstr(Path.home()) + "/python_ecosystem_master_index_{timestamp}.json"
     mapper.generate_master_index(all_files, project_directories, index_file)
 
     # Generate execution script
-    execution_script = f"/Users/steven/python_ecosystem_reorganize_{timestamp}.py"
+    execution_script = fstr(Path.home()) + "/python_ecosystem_reorganize_{timestamp}.py"
     mapper.generate_execution_script(reorganization_plan, execution_script)
 
     # Generate comprehensive report

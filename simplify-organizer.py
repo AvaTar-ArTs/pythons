@@ -31,32 +31,32 @@ class SimplifyOrganizer:
     def __init__(self):
         """__init__ function."""
 
-        self.root_path = Path(Path("/Users/steven/Documents/python")).expanduser()
+        self.root_path = Path(Path(str(Path.home()) + "/Documents/python")).expanduser()
         self.max_depth = 6
 
         # File type organization
         self.file_type_dirs = {
-            ".html": Path(Path("/Users/steven/Documents/html")),
-            ".md": Path(Path("/Users/steven/Documents/markdown")),
-            ".csv": Path(Path("/Users/steven/Documents/csv")),
-            ".pdf": Path(Path("/Users/steven/Documents/pdf")),
-            ".json": Path(Path("/Users/steven/Documents/json")),
-            ".txt": Path(Path("/Users/steven/Documents/text")),
-            ".log": Path(Path("/Users/steven/Documents/logs")),
-            ".png": Path(Path("/Users/steven/Documents/images")),
-            ".jpg": Path(Path("/Users/steven/Documents/images")),
-            ".jpeg": Path(Path("/Users/steven/Documents/images")),
-            ".gif": Path(Path("/Users/steven/Documents/images")),
-            ".svg": Path(Path("/Users/steven/Documents/images")),
-            ".mp4": Path(Path("/Users/steven/Documents/videos")),
-            ".mov": Path(Path("/Users/steven/Documents/videos")),
-            ".avi": Path(Path("/Users/steven/Documents/videos")),
-            ".zip": Path(Path("/Users/steven/Documents/archives")),
-            ".tar": Path(Path("/Users/steven/Documents/archives")),
-            ".gz": Path(Path("/Users/steven/Documents/archives")),
-            ".exe": Path(Path("/Users/steven/Documents/executables")),
-            ".dmg": Path(Path("/Users/steven/Documents/executables")),
-            ".pkg": Path(Path("/Users/steven/Documents/executables")),
+            ".html": Path(Path(str(Path.home()) + "/Documents/html")),
+            ".md": Path(Path(str(Path.home()) + "/Documents/markdown")),
+            ".csv": Path(Path(str(Path.home()) + "/Documents/csv")),
+            ".pdf": Path(Path(str(Path.home()) + "/Documents/pdf")),
+            ".json": Path(Path(str(Path.home()) + "/Documents/json")),
+            ".txt": Path(Path(str(Path.home()) + "/Documents/text")),
+            ".log": Path(Path(str(Path.home()) + "/Documents/logs")),
+            ".png": Path(Path(str(Path.home()) + "/Documents/images")),
+            ".jpg": Path(Path(str(Path.home()) + "/Documents/images")),
+            ".jpeg": Path(Path(str(Path.home()) + "/Documents/images")),
+            ".gif": Path(Path(str(Path.home()) + "/Documents/images")),
+            ".svg": Path(Path(str(Path.home()) + "/Documents/images")),
+            ".mp4": Path(Path(str(Path.home()) + "/Documents/videos")),
+            ".mov": Path(Path(str(Path.home()) + "/Documents/videos")),
+            ".avi": Path(Path(str(Path.home()) + "/Documents/videos")),
+            ".zip": Path(Path(str(Path.home()) + "/Documents/archives")),
+            ".tar": Path(Path(str(Path.home()) + "/Documents/archives")),
+            ".gz": Path(Path(str(Path.home()) + "/Documents/archives")),
+            ".exe": Path(Path(str(Path.home()) + "/Documents/executables")),
+            ".dmg": Path(Path(str(Path.home()) + "/Documents/executables")),
+            ".pkg": Path(Path(str(Path.home()) + "/Documents/executables")),
         }
 
         # Names to preserve (don't change these)
@@ -377,7 +377,7 @@ def execute_organization():
     print()
     
     # Create backup directory
-    backup_dir = Path(Path("/Users/steven/simplify_organizer_backup"))
+    backup_dir = Path(Path(str(Path.home()) + "/simplify_organizer_backup"))
     backup_dir.mkdir(exist_ok=True)
     logger.info(f"📁 Backup directory: {{backup_dir}}")
     
@@ -503,7 +503,7 @@ def main():
 
     # Create execution script
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    execution_script = f"/Users/steven/simplify_organizer_{timestamp}.py"
+    execution_script = fstr(Path.home()) + "/simplify_organizer_{timestamp}.py"
     organizer.create_execution_script(plan, execution_script)
 
     # Generate report
