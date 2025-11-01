@@ -35,12 +35,7 @@ class InvalidResponse(PromptError):
     """
 
     def __init__(self, message: TextType) -> None:
-        """__init__ function."""
-
         self.message = message
-
-        """__rich__ function."""
-
     def __rich__(self) -> TextType:
         return self.message
 
@@ -68,8 +63,6 @@ class PromptBase(Generic[PromptType]):
     prompt_suffix = ": "
 
     choices: Optional[List[str]] = None
-        """__init__ function."""
-
 
     def __init__(
         self,
@@ -94,9 +87,6 @@ class PromptBase(Generic[PromptType]):
         self.case_sensitive = case_sensitive
         self.show_default = show_default
         self.show_choices = show_choices
-
-        """ask function."""
-
     @classmethod
     @overload
     def ask(
@@ -113,8 +103,6 @@ class PromptBase(Generic[PromptType]):
         stream: Optional[TextIO] = None,
     ) -> Union[DefaultType, PromptType]:
         ...
-        """ask function."""
-
 
     @classmethod
     @overload
@@ -287,14 +275,8 @@ class PromptBase(Generic[PromptType]):
             error (InvalidResponse): Exception instance the initiated the error.
         """
         self.console.logger.info(error)
-
-        """__call__ function."""
-
     def pre_prompt(self) -> None:
         """Hook to display something before the prompt."""
-
-        """__call__ function."""
-
     @overload
     def __call__(self, *, stream: Optional[TextIO] = None) -> PromptType:
         ...

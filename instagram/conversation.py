@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 # Constants
 CONSTANT_100 = 100
 CONSTANT_666 = 666
-CONSTANT_059669 = 059669
+CONSTANT_59669 = 59669
 
 #!/usr/bin/env python3
 """
@@ -197,7 +197,7 @@ class ConversationExporter:
             color: #7c3aed;
         }
         .tool .message-header {
-            color: #CONSTANT_059669;
+            color: #CONSTANT_59669;
         }
         .content {
             white-space: pre-wrap;

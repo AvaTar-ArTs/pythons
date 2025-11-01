@@ -16,8 +16,6 @@ class Scheme:
     __slots__ = SCHEME_KEYS
 
     def __init__(
-        """__init__ function."""
-
         self,
         platlib: str,
         purelib: str,

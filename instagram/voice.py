@@ -7,47 +7,113 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
+import re
+import sys
+import time as pytime
+from datetime import datetime
+from time import sleep
+
+from cleantext import clean
+from requests import Response
+from utils import settings
+
 import logging
 
 logger = logging.getLogger(__name__)
 
-"""Synthesizes speech from the input string of text or ssml.
-Make sure to be working in a virtual environment.
 
-Note: ssml must be well-formed according to:
-    https://www.w3.org/TR/speech-synthesis/
-"""
-
-import os
-
-from google.cloud import texttospeech
-
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./credentials/key-gg-tts.json"
+# Constants
+CONSTANT_429 = 429
+CONSTANT_1970 = 1970
 
 
-def generateVoice(text, output):
-    """generateVoice function."""
+if sys.version_info[0] >= 3:
+    from datetime import timezone
 
-    # Instantiates a client
-    client = texttospeech.TextToSpeechClient()
 
-    # Set the text input to be synthesized
-    synthesis_input = texttospeech.SynthesisInput(text=text)
+def check_ratelimit(response: Response) -> bool:
+    """
+    Checks if the response is a ratelimit response.
+    If it is, it sleeps for the time specified in the response.
+    """
+    if response.status_code == CONSTANT_429:
+        try:
+            time = int(response.headers["X-RateLimit-Reset"])
+            logger.info(
+                f"Ratelimit hit. Sleeping for {time - int(pytime.time())} seconds."
+            )
+            sleep_until(time)
+            return False
+        except KeyError:  # if the header is not present, we don't know how long to wait
+            return False
 
-    # Build the voice request, select the language code ("en-US") and the ssml
-    # voice gender ("neutral")
-    voice = texttospeech.VoiceSelectionParams(language_code="en-US", ssml_gender=texttospeech.SsmlVoiceGender.FEMALE)
+    return True
 
-    # Select the type of audio file you want returned
-    audio_config = texttospeech.AudioConfig(audio_encoding=texttospeech.AudioEncoding.MP3)
 
-    # Perform the text-to-speech request on the text input with the selected
-    # voice parameters and audio file type
-    response = client.synthesize_speech(input=synthesis_input, voice=voice, audio_config=audio_config)
+def sleep_until(time) -> None:
+    """
+    Pause your program until a specific end time.
+    'time' is either a valid datetime object or unix timestamp in seconds (i.e. seconds since Unix epoch)
+    """
+    end = time
 
-    # The response's audio_content is binary.
-    with open(output, "wb") as out:
-        # Write the response to the output file.
-        out.write(response.audio_content)
-        # time.sleep(30)
-        logger.info(f"Audio content written to file {output}")
+    # Convert datetime to unix timestamp and adjust for locality
+    if isinstance(time, datetime):
+        # If we're on Python 3 and the user specified a timezone, convert to UTC and get the timestamp.
+        if sys.version_info[0] >= 3 and time.tzinfo:
+            end = time.astimezone(timezone.utc).timestamp()
+        else:
+            zoneDiff = (
+                pytime.time()
+                - (datetime.now() - datetime(CONSTANT_1970, 1, 1)).total_seconds()
+            )
+            end = (time - datetime(CONSTANT_1970, 1, 1)).total_seconds() + zoneDiff
+
+    # Type check
+    if not isinstance(end, (int, float)):
+        raise Exception("The time parameter is not a number or datetime object")
+
+    # Now we wait
+    while True:
+        now = pytime.time()
+        diff = end - now
+
+        #
+        # Time is up!
+        #
+        if diff <= 0:
+            break
+        else:
+            # 'logarithmic' sleeping to minimize loop iterations
+            sleep(diff / 2)
+
+
+def sanitize_text(text: str) -> str:
+    r"""Sanitizes the text for tts.
+        What gets removed:
+     - following characters`^_~@!&;#:-%“”‘"%*/{}[]()\|<>?=+`
+     - any http or https links
+
+    Args:
+        text (str): Text to be sanitized
+
+    Returns:
+        str: Sanitized text
+    """
+
+    # remove any urls from the text
+    regex_urls = r"((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*"
+
+    result = re.sub(regex_urls, " ", text)
+
+    # note: not removing apostrophes
+    regex_expr = r"\s['|’]|['|’]\s|[\^_~@!&;#:\-%—“”‘\"%\*/{}\[\]\(\)\\|<>=+]"
+    result = re.sub(regex_expr, " ", result)
+    result = result.replace("+", "plus").replace("&", "and")
+
+    # emoji removal if the setting is enabled
+    if settings.config["settings"]["tts"]["no_emojis"]:
+        result = clean(result, no_emoji=True)
+
+    # remove extra whitespace
+    return " ".join(result.split())

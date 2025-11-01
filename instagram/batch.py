@@ -60,7 +60,10 @@ from datetime import datetime
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("enhanced_gallery_generation.log"), logging.StreamHandler(sys.stdout)],
+    handlers=[
+        logging.FileHandler("enhanced_gallery_generation.log"),
+        logging.StreamHandler(sys.stdout),
+    ],
 )
 logger = logging.getLogger(__name__)
 
@@ -140,11 +143,17 @@ def find_directories_with_images(root_path: str) -> List[str]:
 
     for root, dirs, files in os.walk(root_path):
         # Skip hidden directories and common non-gallery directories
-        dirs[:] = [d for d in dirs if not d.startswith(".") and d not in ["node_modules", "__pycache__"]]
+        dirs[:] = [
+            d
+            for d in dirs
+            if not d.startswith(".") and d not in ["node_modules", "__pycache__"]
+        ]
 
         if has_images(root):
             directories_with_images.append(root)
-            logger.info(f"Found directory with images: {root} ({count_images(root)} images)")
+            logger.info(
+                f"Found directory with images: {root} ({count_images(root)} images)"
+            )
 
     return directories_with_images
 
@@ -183,7 +192,9 @@ def initialize_gallery(directory: str, init_script: str, force: bool = False) ->
             logger.info(f"Successfully initialized gallery in: {directory}")
             return True
         else:
-            logger.error(f"Failed to initialize gallery in {directory}: {result.stderr}")
+            logger.error(
+                f"Failed to initialize gallery in {directory}: {result.stderr}"
+            )
             return False
 
     except Exception as e:
@@ -191,7 +202,9 @@ def initialize_gallery(directory: str, init_script: str, force: bool = False) ->
         return False
 
 
-def build_gallery(directory: str, build_script: str, force_thumbnails: bool = False) -> bool:
+def build_gallery(
+    directory: str, build_script: str, force_thumbnails: bool = False
+) -> bool:
     """
     Build the gallery HTML and generate thumbnails.
     """
@@ -254,7 +267,9 @@ def create_enhanced_gallery_config(directory: str, title: str = None, **kwargs) 
         "video_thumbnail_frame": kwargs.get("video_thumbnail_frame", 1),
         "enable_retina_thumbnails": kwargs.get("enable_retina_thumbnails", True),
         # Gallery appearance
-        "gallery_theme": kwargs.get("gallery_theme", "default"),  # default, dark, light, custom
+        "gallery_theme": kwargs.get(
+            "gallery_theme", "default"
+        ),  # default, dark, light, custom
         "custom_css": kwargs.get("custom_css", ""),
         "custom_js": kwargs.get("custom_js", ""),
         # User interface features
@@ -264,14 +279,18 @@ def create_enhanced_gallery_config(directory: str, title: str = None, **kwargs) 
         "enable_download": kwargs.get("enable_download", False),
         "enable_sharing": kwargs.get("enable_sharing", False),
         "enable_slideshow": kwargs.get("enable_slideshow", True),
-        "slideshow_interval": kwargs.get("slideshow_interval", CONSTANT_3000),  # milliseconds
+        "slideshow_interval": kwargs.get(
+            "slideshow_interval", CONSTANT_3000
+        ),  # milliseconds
         "enable_keyboard_navigation": kwargs.get("enable_keyboard_navigation", True),
         "enable_touch_gestures": kwargs.get("enable_touch_gestures", True),
         "enable_lightbox": kwargs.get("enable_lightbox", True),
         "lightbox_theme": kwargs.get("lightbox_theme", "default"),
         # Metadata and search
         "enable_metadata_display": kwargs.get("enable_metadata_display", True),
-        "metadata_fields": kwargs.get("metadata_fields", ["date", "size", "description"]),
+        "metadata_fields": kwargs.get(
+            "metadata_fields", ["date", "size", "description"]
+        ),
         "enable_search": kwargs.get("enable_search", False),
         "enable_filtering": kwargs.get("enable_filtering", False),
         "filter_categories": kwargs.get("filter_categories", []),
@@ -286,7 +305,9 @@ def create_enhanced_gallery_config(directory: str, title: str = None, **kwargs) 
         "auto_watermark_opacity": kwargs.get("auto_watermark_opacity", 0.7),
         # Social features
         "enable_social_sharing": kwargs.get("enable_social_sharing", False),
-        "social_platforms": kwargs.get("social_platforms", ["facebook", "twitter", "pinterest"]),
+        "social_platforms": kwargs.get(
+            "social_platforms", ["facebook", "twitter", "pinterest"]
+        ),
         # Analytics and monitoring
         "enable_analytics": kwargs.get("enable_analytics", False),
         "analytics_id": kwargs.get("analytics_id", ""),
@@ -364,7 +385,9 @@ def get_gallery_config_for_directory(directory: str) -> Dict[str, Any]:
         "enable_retina_thumbnails": True,
         "enable_lazy_loading": image_count > 20,
         "enable_slideshow": image_count > 5,
-        "slideshow_interval": CONSTANT_3000 if image_count < CONSTANT_100 else CONSTANT_2000,
+        "slideshow_interval": (
+            CONSTANT_3000 if image_count < CONSTANT_100 else CONSTANT_2000
+        ),
         "enable_metadata_display": True,
         "metadata_fields": ["date", "size"] if image_count < CONSTANT_200 else ["date"],
         "enable_search": image_count > 50,
@@ -372,7 +395,9 @@ def get_gallery_config_for_directory(directory: str) -> Dict[str, Any]:
         "enable_compression": True,
         "compression_level": 6 if image_count < CONSTANT_500 else 8,
         "enable_caching": True,
-        "cache_duration": CONSTANT_3600 if image_count < CONSTANT_1000 else CONSTANT_7200,
+        "cache_duration": (
+            CONSTANT_3600 if image_count < CONSTANT_1000 else CONSTANT_7200
+        ),
     }
 
     # Detect gallery type
@@ -404,10 +429,27 @@ def main():
         default=Path("/Users/steven/Pictures"),
         help="Path to the Pictures directory to scan (default: /Users/steven/Pictures)",
     )
-    parser.add_argument("--force", action="store_true", help="Force reinitialization of existing galleries")
-    parser.add_argument("--dry-run", action="store_true", help="Show what would be done without actually doing it")
-    parser.add_argument("--force-thumbnails", action="store_true", help="Force regeneration of thumbnails")
-    parser.add_argument("--max-depth", type=int, default=10, help="Maximum directory depth to scan (default: 10)")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force reinitialization of existing galleries",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Show what would be done without actually doing it",
+    )
+    parser.add_argument(
+        "--force-thumbnails",
+        action="store_true",
+        help="Force regeneration of thumbnails",
+    )
+    parser.add_argument(
+        "--max-depth",
+        type=int,
+        default=10,
+        help="Maximum directory depth to scan (default: 10)",
+    )
     parser.add_argument(
         "--config-preset",
         choices=["basic", "standard", "advanced", "professional"],
@@ -415,20 +457,38 @@ def main():
         help="Configuration preset to use (default: standard)",
     )
     parser.add_argument(
-        "--enable-remote", action="store_true", help="Enable remote gallery detection and configuration"
+        "--enable-remote",
+        action="store_true",
+        help="Enable remote gallery detection and configuration",
     )
     parser.add_argument(
-        "--enable-upload", action="store_true", help="Enable upload functionality for hosting providers"
-    )
-    parser.add_argument("--enable-analytics", action="store_true", help="Enable analytics tracking")
-    parser.add_argument("--enable-social", action="store_true", help="Enable social sharing features")
-    parser.add_argument("--enable-watermark", action="store_true", help="Enable watermarking")
-    parser.add_argument("--watermark-text", default="", help="Watermark text to apply to images")
-    parser.add_argument(
-        "--thumbnail-size", type=int, default=CONSTANT_160, help="Thumbnail size in pixels (default: CONSTANT_160)"
+        "--enable-upload",
+        action="store_true",
+        help="Enable upload functionality for hosting providers",
     )
     parser.add_argument(
-        "--thumbnail-quality", type=int, default=85, help="Thumbnail quality 1-CONSTANT_100 (default: 85)"
+        "--enable-analytics", action="store_true", help="Enable analytics tracking"
+    )
+    parser.add_argument(
+        "--enable-social", action="store_true", help="Enable social sharing features"
+    )
+    parser.add_argument(
+        "--enable-watermark", action="store_true", help="Enable watermarking"
+    )
+    parser.add_argument(
+        "--watermark-text", default="", help="Watermark text to apply to images"
+    )
+    parser.add_argument(
+        "--thumbnail-size",
+        type=int,
+        default=CONSTANT_160,
+        help="Thumbnail size in pixels (default: CONSTANT_160)",
+    )
+    parser.add_argument(
+        "--thumbnail-quality",
+        type=int,
+        default=85,
+        help="Thumbnail quality 1-CONSTANT_100 (default: 85)",
     )
     parser.add_argument(
         "--date-format",
@@ -436,32 +496,75 @@ def main():
         help="Date format for image timestamps (default: %%Y-%%m-%%d %%H:%%M)",
     )
     parser.add_argument(
-        "--sort-by", choices=["name", "date", "size"], default="name", help="Sort images by (default: name)"
+        "--sort-by",
+        choices=["name", "date", "size"],
+        default="name",
+        help="Sort images by (default: name)",
     )
-    parser.add_argument("--reverse-sort", action="store_true", help="Reverse sort order")
-    parser.add_argument("--max-images", type=int, default=0, help="Maximum number of images per gallery (0 = no limit)")
-    parser.add_argument("--enable-search", action="store_true", help="Enable search functionality")
-    parser.add_argument("--enable-filtering", action="store_true", help="Enable filtering functionality")
-    parser.add_argument("--enable-download", action="store_true", help="Enable download functionality")
-    parser.add_argument("--enable-fullscreen", action="store_true", help="Enable fullscreen mode")
-    parser.add_argument("--enable-zoom", action="store_true", help="Enable zoom functionality")
-    parser.add_argument("--enable-slideshow", action="store_true", help="Enable slideshow functionality")
+    parser.add_argument(
+        "--reverse-sort", action="store_true", help="Reverse sort order"
+    )
+    parser.add_argument(
+        "--max-images",
+        type=int,
+        default=0,
+        help="Maximum number of images per gallery (0 = no limit)",
+    )
+    parser.add_argument(
+        "--enable-search", action="store_true", help="Enable search functionality"
+    )
+    parser.add_argument(
+        "--enable-filtering", action="store_true", help="Enable filtering functionality"
+    )
+    parser.add_argument(
+        "--enable-download", action="store_true", help="Enable download functionality"
+    )
+    parser.add_argument(
+        "--enable-fullscreen", action="store_true", help="Enable fullscreen mode"
+    )
+    parser.add_argument(
+        "--enable-zoom", action="store_true", help="Enable zoom functionality"
+    )
+    parser.add_argument(
+        "--enable-slideshow", action="store_true", help="Enable slideshow functionality"
+    )
     parser.add_argument(
         "--slideshow-interval",
         type=int,
         default=CONSTANT_3000,
         help="Slideshow interval in milliseconds (default: CONSTANT_3000)",
     )
-    parser.add_argument("--enable-lazy-loading", action="store_true", help="Enable lazy loading for better performance")
-    parser.add_argument("--enable-compression", action="store_true", help="Enable image compression")
-    parser.add_argument("--compression-level", type=int, default=6, help="Compression level 1-9 (default: 6)")
-    parser.add_argument("--enable-caching", action="store_true", help="Enable caching for better performance")
     parser.add_argument(
-        "--cache-duration", type=int, default=CONSTANT_3600, help="Cache duration in seconds (default: CONSTANT_3600)"
+        "--enable-lazy-loading",
+        action="store_true",
+        help="Enable lazy loading for better performance",
+    )
+    parser.add_argument(
+        "--enable-compression", action="store_true", help="Enable image compression"
+    )
+    parser.add_argument(
+        "--compression-level",
+        type=int,
+        default=6,
+        help="Compression level 1-9 (default: 6)",
+    )
+    parser.add_argument(
+        "--enable-caching",
+        action="store_true",
+        help="Enable caching for better performance",
+    )
+    parser.add_argument(
+        "--cache-duration",
+        type=int,
+        default=CONSTANT_3600,
+        help="Cache duration in seconds (default: CONSTANT_3600)",
     )
     parser.add_argument("--enable-debug", action="store_true", help="Enable debug mode")
     parser.add_argument(
-        "--log-level", choices=["DEBUG", "INFO", "WARNING", "ERROR"], default="INFO", help="Log level (default: INFO)"
+        "--log-level",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR"],
+        default="INFO",
+        help="Log level (default: INFO)",
     )
 
     args = parser.parse_args()
@@ -543,15 +646,30 @@ def main():
 
         # Add watermark if enabled
         if args.enable_watermark and args.watermark_text:
-            config.update({"enable_auto_watermark": True, "auto_watermark_text": args.watermark_text})
+            config.update(
+                {
+                    "enable_auto_watermark": True,
+                    "auto_watermark_text": args.watermark_text,
+                }
+            )
 
         # Add social features if enabled
         if args.enable_social:
-            config.update({"enable_social_sharing": True, "social_platforms": ["facebook", "twitter", "pinterest"]})
+            config.update(
+                {
+                    "enable_social_sharing": True,
+                    "social_platforms": ["facebook", "twitter", "pinterest"],
+                }
+            )
 
         # Add analytics if enabled
         if args.enable_analytics:
-            config.update({"enable_analytics": True, "analytics_id": f"GA-{os.path.basename(directory)}"})
+            config.update(
+                {
+                    "enable_analytics": True,
+                    "analytics_id": f"GA-{os.path.basename(directory)}",
+                }
+            )
 
         # Add upload if enabled
         if args.enable_upload:
@@ -559,7 +677,10 @@ def main():
                 {
                     "enable_upload": True,
                     "upload_provider": "aws",
-                    "upload_config": {"bucket": f"gallery-{os.path.basename(directory)}", "region": "us-east-1"},
+                    "upload_config": {
+                        "bucket": f"gallery-{os.path.basename(directory)}",
+                        "region": "us-east-1",
+                    },
                 }
             )
 

@@ -22,7 +22,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-
 class TestBotSupport(TestBot):
     @pytest.mark.parametrize(
         "url,result",
@@ -59,14 +58,12 @@ class TestBotSupport(TestBot):
         os.remove("test")
         """test_check_if_file_exist_fail function."""
 
-
     def test_check_if_file_exist_fail(self):
         assert not self.bot.check_if_file_exists("test")
 
     @pytest.mark.parametrize(
-        """test_console_print function."""
-
-        "verbosity,text,result", [(True, "test", "test"), (False, "test", "")]
+        """test_console_print function.""" "verbosity,text,result",
+        [(True, "test", "test"), (False, "test", "")],
     )
     def test_console_print(self, verbosity, text, result):
         self.bot.verbosity = verbosity

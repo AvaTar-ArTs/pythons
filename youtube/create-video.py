@@ -42,8 +42,8 @@ def select_images_based_on_analysis(image_dir, keywords):
         raise Exception(f"No images found in {image_dir}. Please check the directory.")
     return random.sample(images, min(len(images), 5))
 
-
     """create_video function."""
+
 
 def create_video(audio_file, analysis_file, image_dir, output_file):
     # Read analysis and select images

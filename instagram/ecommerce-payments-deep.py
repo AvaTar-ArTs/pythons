@@ -44,7 +44,11 @@ class DeepContentRenamer:
                 tree = ast.parse(content)
 
                 # Get module docstring
-                if tree.body and isinstance(tree.body[0], ast.Expr) and isinstance(tree.body[0].value, ast.Constant):
+                if (
+                    tree.body
+                    and isinstance(tree.body[0], ast.Expr)
+                    and isinstance(tree.body[0].value, ast.Constant)
+                ):
                     analysis["docstring"] = tree.body[0].value.value
 
                 # Collect all imports
@@ -82,7 +86,11 @@ class DeepContentRenamer:
                 analysis["main_imports"] = list(set(significant_imports))[:5]
 
                 # Identify main functions (not test_, not __)
-                main_funcs = [f for f in analysis["functions"] if not f.startswith("test_") and not f.startswith("_")]
+                main_funcs = [
+                    f
+                    for f in analysis["functions"]
+                    if not f.startswith("test_") and not f.startswith("_")
+                ]
                 analysis["main_functions"] = main_funcs[:5]
 
             except Exception as e:
@@ -97,7 +105,9 @@ class DeepContentRenamer:
             analysis["main_nouns"] = nouns[:3]
 
             # Detect API services
-            analysis["api_services"] = self._detect_api_services(content, analysis["imports"])
+            analysis["api_services"] = self._detect_api_services(
+                content, analysis["imports"]
+            )
 
             # Detect file operations
             analysis["file_operations"] = self._detect_file_operations(content)
@@ -281,7 +291,10 @@ class DeepContentRenamer:
         if (
             len(current_name) > 15
             and "_" in current_name
-            and not any(bad in current_name.lower() for bad in ["copy", "old", "new", "temp", "1", "2", "3"])
+            and not any(
+                bad in current_name.lower()
+                for bad in ["copy", "old", "new", "temp", "1", "2", "3"]
+            )
         ):
             return None
 
@@ -337,7 +350,12 @@ class DeepContentRenamer:
         # For transcription: {format}_transcribe
         elif main_action == "transcribe":
             if "audio" in analysis["main_nouns"] or "video" in analysis["main_nouns"]:
-                fmt = "mp4" if "video" in analysis["main_nouns"] or "mp4" in str(filepath).lower() else "mp3"
+                fmt = (
+                    "mp4"
+                    if "video" in analysis["main_nouns"]
+                    or "mp4" in str(filepath).lower()
+                    else "mp3"
+                )
                 return f"{fmt}_transcribe.py"
             else:
                 return "transcribe.py"
@@ -353,19 +371,28 @@ class DeepContentRenamer:
         # For upscaling: upscale_{what}
         elif main_action in ["upscale", "enhance", "resize"]:
             if main_subject:
-                name_parts = [main_action, abbreviations.get(main_subject, main_subject)]
+                name_parts = [
+                    main_action,
+                    abbreviations.get(main_subject, main_subject),
+                ]
             else:
                 name_parts = [main_action]
 
         # For analysis: analyze_{what}
         elif main_action in ["analyze", "parse", "process"]:
             if main_subject:
-                name_parts = [main_action, abbreviations.get(main_subject, main_subject)]
+                name_parts = [
+                    main_action,
+                    abbreviations.get(main_subject, main_subject),
+                ]
 
         # Default: action_subject
         else:
             if main_action and main_subject:
-                name_parts = [main_action, abbreviations.get(main_subject, main_subject)]
+                name_parts = [
+                    main_action,
+                    abbreviations.get(main_subject, main_subject),
+                ]
             elif main_action:
                 name_parts = [main_action]
             elif main_subject:
@@ -410,7 +437,21 @@ class DeepContentRenamer:
             # Skip well-named files
             if not any(
                 bad in filepath.name.lower()
-                for bad in ["copy", "old", "new", "temp", "_1", "_2", "_3", "_4", " 1", " 2", " 3", " 4", "untitled"]
+                for bad in [
+                    "copy",
+                    "old",
+                    "new",
+                    "temp",
+                    "_1",
+                    "_2",
+                    "_3",
+                    "_4",
+                    " 1",
+                    " 2",
+                    " 3",
+                    " 4",
+                    "untitled",
+                ]
             ):
                 continue
 
@@ -454,11 +495,16 @@ class DeepContentRenamer:
                     new_path = current.parent / sug["new_name"]
 
                     # Check if git tracked
-                    result = subprocess.run(["git", "ls-files", "--error-unmatch", str(current)], capture_output=True)
+                    result = subprocess.run(
+                        ["git", "ls-files", "--error-unmatch", str(current)],
+                        capture_output=True,
+                    )
                     is_tracked = result.returncode == 0
 
                     if is_tracked:
-                        subprocess.run(["git", "mv", str(current), str(new_path)], check=True)
+                        subprocess.run(
+                            ["git", "mv", str(current), str(new_path)], check=True
+                        )
                         logger.info(f"✅ {sug['current_name']} → {sug['new_name']}")
                     else:
                         current.rename(new_path)

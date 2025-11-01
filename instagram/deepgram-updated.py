@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -27,12 +26,13 @@ from deepgram import (
 )
 
 # Load API key from environment
-DEEPGRAM_API_KEY = os.getenv('DEEPGRAM_API_KEY')
+DEEPGRAM_API_KEY = os.getenv("DEEPGRAM_API_KEY")
 
 if not DEEPGRAM_API_KEY:
     logger.info("❌ Error: DEEPGRAM_API_KEY not found in environment")
     logger.info("   Run: source ~/.env.d/loader.sh")
     exit(1)
+
 
 def test_connection():
     """Simple test to verify API key works"""
@@ -58,6 +58,7 @@ def test_connection():
         logger.info(f"❌ Error: {e}")
         return False
 
+
 def test_file_transcription():
     """Test with a simple file transcription (more reliable than streaming)"""
     try:
@@ -66,7 +67,9 @@ def test_file_transcription():
         deepgram = DeepgramClient(DEEPGRAM_API_KEY)
 
         # Example: transcribe from a URL
-        AUDIO_URL = "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav"
+        AUDIO_URL = (
+            "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav"
+        )
 
         logger.info("\n🎙️  Testing file transcription...")
         logger.info(f"   Audio: {AUDIO_URL}")
@@ -82,7 +85,7 @@ def test_file_transcription():
 
         transcript = response.results.channels[0].alternatives[0].transcript
         logger.info(f"\n✅ Transcription successful!")
-        logger.info(f"   Text: \"{transcript}\"")
+        logger.info(f'   Text: "{transcript}"')
 
         return True
 
@@ -93,7 +96,8 @@ def test_file_transcription():
         logger.info(f"❌ Transcription error: {e}")
         return False
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     logger.info("╔════════════════════════════════════════════════════════════╗")
     logger.info("║        Deepgram API Test                                  ║")
     logger.info("╚════════════════════════════════════════════════════════════╝")
@@ -101,9 +105,9 @@ if __name__ == '__main__':
 
     # Test 1: Basic connection
     if test_connection():
-        logger.info(Path("\n") + "="*60)
+        logger.info(Path("\n") + "=" * 60)
         # Test 2: Try file transcription
         test_file_transcription()
 
-    logger.info(Path("\n") + "="*60)
+    logger.info(Path("\n") + "=" * 60)
     logger.info("Test complete!")

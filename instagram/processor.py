@@ -34,7 +34,9 @@ def convert_to_colab(python_code):
     )
 
     # Adjust file paths to be compatible with Colab
-    python_code = re.sub(r'(\bopen\()([\'"])(.*?)([\'"])(\))', r'\1"/content/\3"\5', python_code)
+    python_code = re.sub(
+        r'(\bopen\()([\'"])(.*?)([\'"])(\))', r'\1"/content/\3"\5', python_code
+    )
     python_code = re.sub(
         r'(\bpandas.read_csv\()([\'"])(.*?)([\'"])(\))',
         r'\1"/content/\3"\5',

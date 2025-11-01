@@ -70,7 +70,9 @@ def get_images(video, query):
         murl = m["murl"]
 
         original_image_name = urllib.parse.urlsplit(murl).path.split("/")[-1]
-        image_name = str(video.meta.id) + "_" + query + str(x) + "_" + original_image_name
+        image_name = (
+            str(video.meta.id) + "_" + query + str(x) + "_" + original_image_name
+        )
         logging.info(image_name)
         ActualImages.append((image_name, turl, murl))
         x += 1

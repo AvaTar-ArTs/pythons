@@ -41,11 +41,7 @@ directory_path = Path("/Users/steven/Pictures/Bcovers/")
 
 # Styles to apply
 # Update the styles list according to your needs
-styles = [
-    "GENERAL",
-    "CINEMATIC",
-    "2D ART & ILLUSTRATION",
-    "CG ART & GAME ASSETS"]
+styles = ["GENERAL", "CINEMATIC", "2D ART & ILLUSTRATION", "CG ART & GAME ASSETS"]
 
 # Loop through each file in the directory
 for filename in os.listdir(directory_path):
@@ -66,11 +62,10 @@ for filename in os.listdir(directory_path):
         url = response.json()["uploadInitImage"]["url"]
         image_id = response.json()["uploadInitImage"]["id"]
         files = {"file": open(full_path, "rb")}
-        response = requests.post(
-            url, data=fields, files=files)  # Header is not needed
+        response = requests.post(url, data=fields, files=files)  # Header is not needed
         print(
-            "Upload image '%s' via presigned URL: %s" %
-            (filename, response.status_code))
+            "Upload image '%s' via presigned URL: %s" % (filename, response.status_code)
+        )
 
         # Loop through styles and apply each one to the image
         for style in styles:
@@ -93,19 +88,21 @@ for filename in os.listdir(directory_path):
                 # Get upscaled image via variation Id
                 variation_id = response.json()["universalUpscaler"]["id"]
                 url = (
-                    "https://cloud.leonardo.ai/api/rest/v1/variations/%s" %
-                    variation_id)
+                    "https://cloud.leonardo.ai/api/rest/v1/variations/%s" % variation_id
+                )
                 # Wait for processing, you might need to adjust this based on
                 # actual processing time
                 time.sleep(60)
                 response = requests.get(url, headers=headers)
                 print(
-                    "Get upscaled image '%s' in style '%s' via variation Id: %s" %
-                    (filename, style, response.text))
+                    "Get upscaled image '%s' in style '%s' via variation Id: %s"
+                    % (filename, style, response.text)
+                )
             else:
                 print(
-                    "Failed to create upscaled image for style '%s' and image '%s'" %
-                    (style, filename))
+                    "Failed to create upscaled image for style '%s' and image '%s'"
+                    % (style, filename)
+                )
 
     else:
         continue

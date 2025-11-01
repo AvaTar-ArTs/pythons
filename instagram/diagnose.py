@@ -54,14 +54,18 @@ def diagnose(data):
                 break
         else:
             basic_parsers.remove(name)
-            print(("I noticed that %s is not installed. Installing it may help." % name))
+            print(
+                ("I noticed that %s is not installed. Installing it may help." % name)
+            )
 
     if "lxml" in basic_parsers:
         basic_parsers.append("lxml-xml")
         try:
             from lxml import etree
 
-            logger.info(("Found lxml version %s" % ".".join(map(str, etree.LXML_VERSION))))
+            logger.info(
+                ("Found lxml version %s" % ".".join(map(str, etree.LXML_VERSION)))
+            )
         except ImportError as e:
             logger.info("lxml is not installed or couldn't be imported.")
 

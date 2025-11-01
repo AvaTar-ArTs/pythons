@@ -70,8 +70,8 @@ def get_presigned_url():
         logger.info(f"Failed to get presigned URL: {response.status_code}")
         return None
 
-
     """upload_image function."""
+
 
 def upload_image(fields, presigned_url, image_path):
     files = {"file": open(image_path, "rb")}
@@ -101,7 +101,6 @@ def upscale_image(
         logger.info(f"Failed to upscale image: {response.status_code} {response.text}")
         return None
     """get_upscaled_image function."""
-
 
 
 def get_upscaled_image(variation_id):

@@ -24,7 +24,6 @@ import config
 def main() -> int:
     """main function."""
 
-
     # Creating a reddit api instance
     reddit = praw.Reddit(
         client_id=config.PRAW_CONFIG["client_id"],

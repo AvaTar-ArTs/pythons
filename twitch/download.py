@@ -15,7 +15,9 @@ local = locals()
 def request(endpoint: str, headers: dict, params: dict) -> requests.Response:
     """request function."""
 
-    return requests.get("https://api.twitch.tv/" + endpoint, headers=headers, params=params)
+    return requests.get(
+        "https://api.twitch.tv/" + endpoint, headers=headers, params=params
+    )
 
     """data function."""
 
@@ -30,7 +32,9 @@ def data(slug: str, oauth_token: str, client_id: str) -> requests.Response:
     """helix function."""
 
 
-def helix(category: str, data: list, oauth_token: str, client_id: str) -> requests.Response:
+def helix(
+    category: str, data: list, oauth_token: str, client_id: str
+) -> requests.Response:
     return request(
         "helix/" + category,
         {"Authorization": "Bearer " + oauth_token, "Client-Id": client_id},

@@ -44,13 +44,11 @@ HEURISTIC_RULES = [
             "whisper",
             "llama",
             "langchain",
-        },
-    ),
+        }),
     ("CLI/Automation", {"argparse", "subprocess", "pathlib", "shutil", "click"}),
     (
         "Networking/API",
-        {"requests", "httpx", "fastapi", "flask", "boto3", "googleapiclient"},
-    ),
+        {"requests", "httpx", "fastapi", "flask", "boto3", "googleapiclient"}),
     ("Images/Media", {"PIL", "Pillow", "cv2", "moviepy", "pydub", "ffmpeg"}),
     ("Data/CSV", {"pandas", "csv", "json", "sqlite3"}),
     ("System/OS", {"os", "sys", "platform"}),
@@ -64,14 +62,11 @@ HEURISTIC_RULES = [
             "tiktok",
             "youtube_dl",
             "googleapiclient.discovery",
-        },
-    ),
+        }),
 ]
 
 
 def analyze_ast(src: str) -> Tuple[List[str], List[str], List[str], str]:
-    """analyze_ast function."""
-
     try:
         tree = ast.parse(src)
     except SyntaxError:
@@ -89,10 +84,6 @@ def analyze_ast(src: str) -> Tuple[List[str], List[str], List[str], str]:
     mod_doc = ast.get_docstring(tree) or ""
     uniq_imports = list(dict.fromkeys([i.strip() for i in imports if i]))
     return funcs, classes, uniq_imports, mod_doc
-
-
-    """categorize_heuristic function."""
-
 def categorize_heuristic(imports: List[str]) -> str:
     s = {i.lower() for i in imports}
     for label, keys in HEURISTIC_RULES:
@@ -132,10 +123,6 @@ csv_path = out_dir / "mini_index.csv"
 html_path = out_dir / "mini_index.html"
 
 df.to_csv(csv_path, index=False)
-
-
-    """esc function."""
-
 # simple HTML rendering
 def esc(s):
     return html.escape(str(s) if s is not None else "")

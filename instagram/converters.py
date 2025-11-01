@@ -33,8 +33,6 @@ def optional(converter):
     """
 
     def optional_converter(val):
-        """optional_converter function."""
-
         if val is None:
             return None
         return converter(val)
@@ -85,9 +83,6 @@ def default_if_none(default=NOTHING, factory=None):
         if default.takes_self:
             msg = "`takes_self` is not supported by default_if_none."
             raise ValueError(msg)
-
-            """default_if_none_converter function."""
-
         def default_if_none_converter(val):
             if val is not None:
                 return val
@@ -95,8 +90,6 @@ def default_if_none(default=NOTHING, factory=None):
             return default.factory()
 
     else:
-            """default_if_none_converter function."""
-
 
         def default_if_none_converter(val):
             if val is not None:

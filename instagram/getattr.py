@@ -12,18 +12,12 @@ _sentinel = object()
 
 
 def _check_instance(obj, attr):
-    """_check_instance function."""
-
     instance_dict = {}
     try:
         instance_dict = object.__getattribute__(obj, "__dict__")
     except AttributeError:
         pass
     return dict.get(instance_dict, attr, _sentinel)
-
-
-    """_check_class function."""
-
 def _check_class(klass, attr):
     for entry in _static_getmro(klass):
         if _shadowed_dict(type(entry)) is _sentinel:
@@ -33,17 +27,12 @@ def _check_class(klass, attr):
                 pass
     return _sentinel
 
-    """_is_type function."""
-
-
 def _is_type(obj):
     try:
         _static_getmro(obj)
     except TypeError:
         return False
     return True
-    """_shadowed_dict function."""
-
 
 
 def _shadowed_dict(klass):
@@ -60,8 +49,6 @@ def _shadowed_dict(klass):
                 and class_dict.__objclass__ is entry
             ):
                 return class_dict
-    """_static_getmro function."""
-
     return _sentinel
 
 
@@ -72,13 +59,8 @@ def _static_getmro(klass):
         # reproduce this in pure Python. However should still solve the issue
         # raised in GH #1517.
         debug.warning("mro of %s returned %s, should be a tuple" % (klass, mro))
-    """_safe_hasattr function."""
-
         return ()
     return mro
-
-    """_safe_is_data_descriptor function."""
-
 
 def _safe_hasattr(obj, name):
     return _check_class(type(obj), name) is not _sentinel

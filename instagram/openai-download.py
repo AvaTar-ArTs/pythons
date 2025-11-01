@@ -80,7 +80,9 @@ def process_csv_and_generate_speech(csv_path, output_folder, api_key):
         reader = csv.DictReader(csvfile)
         for i, row in enumerate(reader):
             question_text = row["Question"]
-            options_text = ", ".join([f"{opt}: {row[f'Option {opt}']}" for opt in ["A", "B", "C"]])
+            options_text = ", ".join(
+                [f"{opt}: {row[f'Option {opt}']}" for opt in ["A", "B", "C"]]
+            )
             answer_text = row["Answer"]  # Define answer_text here
 
             # Using SSML to add pauses
@@ -101,7 +103,9 @@ def process_csv_and_generate_speech(csv_path, output_folder, api_key):
 
 if __name__ == "__main__":
     # Update to your actual file path
-    csv_path = Path("/Users/steven/Documents/quiz-talk/quiz329/question/Quiz-3-29-Quiz54.csv")
+    csv_path = Path(
+        "/Users/steven/Documents/quiz-talk/quiz329/question/Quiz-3-29-Quiz54.csv"
+    )
     # Specify your output folder path
     output_folder = Path("/Users/steven/Documents/quiz-talk/quiz329/question/Q2")
     # Replace with your actual OpenAI API key

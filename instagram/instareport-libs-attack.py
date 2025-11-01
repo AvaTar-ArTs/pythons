@@ -113,8 +113,13 @@ report_headers = {
 def random_str(O0O0000000000OOOO):  # line:14
     """random_str function."""
 
-    O00O0OO0O0O0OOOOO = string.ascii_lowercase + string.ascii_uppercase + string.digits  # line:15
-    return "".join(random.choice(O00O0OO0O0O0OOOOO) for O0OOO00OO0O0OO00O in range(O0O0000000000OOOO))  # line:16
+    O00O0OO0O0O0OOOOO = (
+        string.ascii_lowercase + string.ascii_uppercase + string.digits
+    )  # line:15
+    return "".join(
+        random.choice(O00O0OO0O0O0OOOOO)
+        for O0OOO00OO0O0OO00O in range(O0O0000000000OOOO)
+    )  # line:16
 
     """report_profile_attack function."""
 
@@ -130,18 +135,26 @@ def report_profile_attack(OOOO00O0O0O0OOOOO, O00O000OOO000O0OO):  # line:17
     page_headers["User-Agent"] = O00O0000OO0OOOO00  # line:22
     report_headers["User-Agent"] = O00O0000OO0OOOO00  # line:23
     try:  # line:24
-        O00O0000OOO0O00OO = OOOOOOO0OO00000OO.get("https://www.facebook.com/", timeout=10)  # line:25
+        O00O0000OOO0O00OO = OOOOOOO0OO00000OO.get(
+            "https://www.facebook.com/", timeout=10
+        )  # line:25
     except (requests.RequestException, urllib.error.URLError, ConnectionError):
         print_error("Connection error! (FacebookRequestsError)")  # line:27
         return  # line:28
     if O00O0000OOO0O00OO.status_code != CONSTANT_200:  # line:29
-        print_error("Connection error! (STATUS CODE:", O00O0000OOO0O00OO.status_code, ")")  # line:30
+        print_error(
+            "Connection error! (STATUS CODE:", O00O0000OOO0O00OO.status_code, ")"
+        )  # line:30
         return  # line:31
     if '["_js_datr","' not in O00O0000OOO0O00OO.text:  # line:32
         print_error("Connection error! (CookieErrorJSDatr)")  # line:33
         return  # line:34
     try:  # line:35
-        OO000O0O00O000O00 = O00O0000OOO0O00OO.text.split('["_js_datr","')[1].split('",')[0]  # line:36
+        OO000O0O00O000O00 = O00O0000OOO0O00OO.text.split('["_js_datr","')[1].split(
+            '",'
+        )[
+            0
+        ]  # line:36
     except (IndexError, KeyError):
         print_error("Connection error! (CookieParsingError)")  # line:38
         return  # line:39
@@ -157,7 +170,9 @@ def report_profile_attack(OOOO00O0O0O0OOOOO, O00O000OOO000O0OO):  # line:17
         print_error("Connection error! (InstagramRequestsError)")  # line:44
         return  # line:45
     if O00O0000OOO0O00OO.status_code != CONSTANT_200:  # line:46
-        print_error("Connection error! (STATUS CODE:", O00O0000OOO0O00OO.status_code, ")")  # line:47
+        print_error(
+            "Connection error! (STATUS CODE:", O00O0000OOO0O00OO.status_code, ")"
+        )  # line:47
         return  # line:48
     if "datr" not in O00O0000OOO0O00OO.cookies.get_dict():  # line:49
         print_error("Connection error! (CookieErrorDatr)")  # line:50
@@ -181,13 +196,29 @@ def report_profile_attack(OOOO00O0O0O0OOOOO, O00O000OOO000O0OO):  # line:17
         print_error("Connection error! (CookieErrorHsi)")  # line:68
         return  # line:69
     try:  # line:70
-        OOOOOO000OOOO0O00 = O00O0000OOO0O00OO.text.split('["LSD",[],{"token":"')[1].split('"},')[0]  # line:71
-        OO00O0O0O00OOOOO0 = O00O0000OOO0O00OO.text.split('"__spin_r":')[1].split(",")[0]  # line:72
-        OO00OO000OO000OO0 = O00O0000OOO0O00OO.text.split('"__spin_b":')[1].split(",")[0].replace('"', "")  # line:73
-        O00O0O0O0O00O0O00 = O00O0000OOO0O00OO.text.split('"__spin_t":')[1].split(",")[0]  # line:74
-        OO0O0OO00OOOOOO0O = O00O0000OOO0O00OO.text.split('"hsi":')[1].split(",")[0].replace('"', "")  # line:75
+        OOOOOO000OOOO0O00 = O00O0000OOO0O00OO.text.split('["LSD",[],{"token":"')[
+            1
+        ].split('"},')[
+            0
+        ]  # line:71
+        OO00O0O0O00OOOOO0 = O00O0000OOO0O00OO.text.split('"__spin_r":')[1].split(",")[
+            0
+        ]  # line:72
+        OO00OO000OO000OO0 = (
+            O00O0000OOO0O00OO.text.split('"__spin_b":')[1]
+            .split(",")[0]
+            .replace('"', "")
+        )  # line:73
+        O00O0O0O0O00O0O00 = O00O0000OOO0O00OO.text.split('"__spin_t":')[1].split(",")[
+            0
+        ]  # line:74
+        OO0O0OO00OOOOOO0O = (
+            O00O0000OOO0O00OO.text.split('"hsi":')[1].split(",")[0].replace('"', "")
+        )  # line:75
         O000OO0OOO00000OO = (
-            O00O0000OOO0O00OO.text.split('"server_revision":')[1].split(",")[0].replace('"', "")
+            O00O0000OOO0O00OO.text.split('"server_revision":')[1]
+            .split(",")[0]
+            .replace('"', "")
         )  # line:76
         O0O0OOOOOO00O00OO = O00O0000OOO0O00OO.cookies.get_dict()["datr"]  # line:77
     except (IndexError, KeyError):
@@ -253,18 +284,28 @@ def report_video_attack(O0O0OO00OOOO00O00, O00O0OOOOOO0O0O0O):  # line:92
     page_headers["User-Agent"] = O000OO00OOOO0OO0O  # line:97
     report_headers["User-Agent"] = O000OO00OOOO0OO0O  # line:98
     try:  # line:99
-        OOO0OO0O0OOOO00O0 = O000OOOO0O000O0OO.get("https://www.facebook.com/", timeout=10)  # line:CONSTANT_100
+        OOO0OO0O0OOOO00O0 = O000OOOO0O000O0OO.get(
+            "https://www.facebook.com/", timeout=10
+        )  # line:CONSTANT_100
     except Exception as O00OO0OO000OOO0O0:  # line:CONSTANT_101
-        print_error("Connection error! (FacebookRequestsError)", O00OO0OO000OOO0O0)  # line:CONSTANT_102
+        print_error(
+            "Connection error! (FacebookRequestsError)", O00OO0OO000OOO0O0
+        )  # line:CONSTANT_102
         return  # line:CONSTANT_103
     if OOO0OO0O0OOOO00O0.status_code != CONSTANT_200:  # line:CONSTANT_104
-        print_error("Connection error! (STATUS CODE:", OOO0OO0O0OOOO00O0.status_code, ")")  # line:CONSTANT_105
+        print_error(
+            "Connection error! (STATUS CODE:", OOO0OO0O0OOOO00O0.status_code, ")"
+        )  # line:CONSTANT_105
         return  # line:CONSTANT_106
     if '["_js_datr","' not in OOO0OO0O0OOOO00O0.text:  # line:CONSTANT_107
         print_error("Connection error! (CookieErrorJSDatr)")  # line:CONSTANT_108
         return  # line:CONSTANT_109
     try:  # line:CONSTANT_110
-        OOOO0000OO0O0O0O0 = OOO0OO0O0OOOO00O0.text.split('["_js_datr","')[1].split('",')[0]  # line:CONSTANT_111
+        OOOO0000OO0O0O0O0 = OOO0OO0O0OOOO00O0.text.split('["_js_datr","')[1].split(
+            '",'
+        )[
+            0
+        ]  # line:CONSTANT_111
     except (IndexError, KeyError):
         print_error("Connection error! (CookieParsingError)")  # line:CONSTANT_113
         return  # line:CONSTANT_114
@@ -280,7 +321,9 @@ def report_video_attack(O0O0OO00OOOO00O00, O00O0OOOOOO0O0O0O):  # line:92
         print_error("Connection error! (InstagramRequestsError)")  # line:CONSTANT_119
         return  # line:CONSTANT_120
     if OOO0OO0O0OOOO00O0.status_code != CONSTANT_200:  # line:CONSTANT_121
-        print_error("Connection error! (STATUS CODE:", OOO0OO0O0OOOO00O0.status_code, ")")  # line:CONSTANT_122
+        print_error(
+            "Connection error! (STATUS CODE:", OOO0OO0O0OOOO00O0.status_code, ")"
+        )  # line:CONSTANT_122
         return  # line:CONSTANT_123
     if "datr" not in OOO0OO0O0OOOO00O0.cookies.get_dict():  # line:CONSTANT_124
         print_error("Connection error! (CookieErrorDatr)")  # line:CONSTANT_125
@@ -304,19 +347,33 @@ def report_video_attack(O0O0OO00OOOO00O00, O00O0OOOOOO0O0O0O):  # line:92
         print_error("Connection error! (CookieErrorHsi)")  # line:CONSTANT_143
         return  # line:CONSTANT_144
     try:  # line:CONSTANT_145
-        O0O0000OO0OO0OO0O = OOO0OO0O0OOOO00O0.text.split('["LSD",[],{"token":"')[1].split('"},')[0]  # line:CONSTANT_146
-        OO0000O000OOO00OO = OOO0OO0O0OOOO00O0.text.split('"__spin_r":')[1].split(",")[0]  # line:CONSTANT_147
+        O0O0000OO0OO0OO0O = OOO0OO0O0OOOO00O0.text.split('["LSD",[],{"token":"')[
+            1
+        ].split('"},')[
+            0
+        ]  # line:CONSTANT_146
+        OO0000O000OOO00OO = OOO0OO0O0OOOO00O0.text.split('"__spin_r":')[1].split(",")[
+            0
+        ]  # line:CONSTANT_147
         OO0O0OOOOO00OOOO0 = (
-            OOO0OO0O0OOOO00O0.text.split('"__spin_b":')[1].split(",")[0].replace('"', "")
+            OOO0OO0O0OOOO00O0.text.split('"__spin_b":')[1]
+            .split(",")[0]
+            .replace('"', "")
         )  # line:CONSTANT_148
-        OOO0O0OO0OO0OO00O = OOO0OO0O0OOOO00O0.text.split('"__spin_t":')[1].split(",")[0]  # line:CONSTANT_149
+        OOO0O0OO0OO0OO00O = OOO0OO0O0OOOO00O0.text.split('"__spin_t":')[1].split(",")[
+            0
+        ]  # line:CONSTANT_149
         OOO0OO00OO0OO0000 = (
             OOO0OO0O0OOOO00O0.text.split('"hsi":')[1].split(",")[0].replace('"', "")
         )  # line:CONSTANT_150
         OO0O0O0OOO0000O0O = (
-            OOO0OO0O0OOOO00O0.text.split('"server_revision":')[1].split(",")[0].replace('"', "")
+            OOO0OO0O0OOOO00O0.text.split('"server_revision":')[1]
+            .split(",")[0]
+            .replace('"', "")
         )  # line:CONSTANT_151
-        OOOO0000O000O00OO = OOO0OO0O0OOOO00O0.cookies.get_dict()["datr"]  # line:CONSTANT_152
+        OOOO0000O000O00OO = OOO0OO0O0OOOO00O0.cookies.get_dict()[
+            "datr"
+        ]  # line:CONSTANT_152
     except (IndexError, KeyError):
         print_error("Connection error! (CookieParsingError)")  # line:CONSTANT_154
         return  # line:CONSTANT_155
@@ -359,6 +416,8 @@ def report_video_attack(O0O0OO00OOOO00O00, O00O0OOOOOO0O0O0O):  # line:92
         print_error("Connection error! (FormRequestsError)")  # line:CONSTANT_161
         return  # line:CONSTANT_162
     if OOO0OO0O0OOOO00O0.status_code != CONSTANT_200:  # line:CONSTANT_163
-        print_error("Connection error! (STATUS CODE:", OOO0OO0O0OOOO00O0.status_code, ")")  # line:CONSTANT_164
+        print_error(
+            "Connection error! (STATUS CODE:", OOO0OO0O0OOOO00O0.status_code, ")"
+        )  # line:CONSTANT_164
         return  # line:CONSTANT_165
     print_success("Successfully reported!")

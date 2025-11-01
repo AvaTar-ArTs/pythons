@@ -11,30 +11,31 @@ Date: 2025-11-01
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../'))
 
-project = 'Python Projects Collection'
-copyright = '2025, Steven'
-author = 'Steven'
-release = '1.0.0'
+sys.path.insert(0, os.path.abspath("../../"))
+
+project = "Python Projects Collection"
+copyright = "2025, Steven"
+author = "Steven"
+release = "1.0.0"
 
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.githubpages',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.todo",
+    "sphinx.ext.coverage",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.ifconfig",
+    "sphinx.ext.githubpages",
 ]
 
-templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+templates_path = ["_templates"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+html_theme = "sphinx_rtd_theme"
+html_static_path = ["_static"]
 
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True

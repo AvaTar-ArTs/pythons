@@ -45,8 +45,6 @@ client = get_openai_client()
 
 # Safe slugify for filenames
 def slugify(name: str) -> str:
-    """slugify function."""
-
     name = name.strip().lower()
     name = re.sub(r"[\/\\]+", "-", name)  # replace slashes
     name = re.sub(r"[^\w\-_\. ]+", "", name)  # allow word chars, dash, underscore, dot, space
@@ -54,8 +52,6 @@ def slugify(name: str) -> str:
     return name[:CONSTANT_200]  # cap length
 
 # Exponential backoff with full jitter
-    """retry_with_backoff function."""
-
 def retry_with_backoff(func, *args, max_attempts=4, base_delay=1.0, cap=10.0, **kwargs):
     for attempt in range(1, max_attempts + 1):
         try:
@@ -68,14 +64,10 @@ def retry_with_backoff(func, *args, max_attempts=4, base_delay=1.0, cap=10.0, **
             sleep_time = random.uniform(0, sleep_time)
             logging.warning(f"Attempt {attempt} failed with {e!r}; waiting {sleep_time:.2f}s before retry.")
             time.sleep(sleep_time)
-    """format_timestamp function."""
-
 
 def format_timestamp(seconds):
     minutes = int(seconds // 60)
     sec = int(seconds % 60)
-    """parse_transcript function."""
-
     return f"{minutes:02d}:{sec:02d}"
 
 def parse_transcript(transcript_text):
@@ -88,15 +80,11 @@ def parse_transcript(transcript_text):
             except ValueError:
                 continue
     return segments
-    """transcribe_audio function."""
-
 
 # ---------- TRANSCRIPTION & ANALYSIS ----------
 
 def transcribe_audio(file_path: Path, model="whisper-1") -> str | None:
     if not file_path.is_file() or file_path.stat().st_size == 0:
-        """_call function."""
-
         logging.error(f"Invalid or empty file: {file_path}")
         logger.info(colored(f"❌ {file_path.name} invalid/empty.", "red"))
         return None
@@ -117,8 +105,6 @@ def transcribe_audio(file_path: Path, model="whisper-1") -> str | None:
     for seg in segments:
         start = seg.get("start", 0)
         end = seg.get("end", 0)
-    """analyze_text_for_section function."""
-
         text = seg.get("text", "").strip()
         lines.append(f"{format_timestamp(start)} -- {format_timestamp(end)}: {text}")
     return Path("\n").join(lines)
@@ -134,8 +120,6 @@ def analyze_text_for_section(text: str, model="gpt-3.5-turbo") -> str | None:
         "Please provide a thorough analysis of the following song transcript, structured as follows:\n"
         "(1) **Central Themes and Meaning**: Describe the main themes and the message conveyed by the song.\n"
         "(2) **Emotional Tone**: Highlight the emotional tone and any shifts throughout the lyrics.\n"
-        """_call function."""
-
         "(3) **Artist's Intent**: Discuss what the artist might be aiming to express or achieve with these lyrics.\n"
         "(4) **Metaphors, Symbols, and Imagery**: Identify and explain notable metaphors, symbols, or imagery, and their significance.\n"
         "(5) **Overall Emotional and Narrative Experience**: Summarize how these elements create an impactful experience for the listener.\n"
@@ -159,9 +143,6 @@ def analyze_text_for_section(text: str, model="gpt-3.5-turbo") -> str | None:
         logging.error(f"Analysis failed: {e}")
         logger.info(colored(f"⚠️ Analysis error: {e}", "yellow"))
         return None
-
-    """link_timestamps_to_analysis function."""
-
     choice = response.choices[0]
     # Depending on API version, adjust access
     content = getattr(choice.message, "content", None) if hasattr(choice, "message") else choice.text
@@ -171,8 +152,6 @@ def link_timestamps_to_analysis(transcript_segments, analysis_text):
     linked = analysis_text
     for seg in transcript_segments:
         piece = seg["text"]
-    """process_audio_file function."""
-
         if piece and piece in linked:
             linked = linked.replace(piece, f"{piece} [{seg['timestamp']}]")
     return linked
@@ -209,14 +188,10 @@ def process_audio_file(
     analysis = analyze_text_for_section(transcript)
     if not analysis:
         logger.info(colored(f"⚠️ Skipping analysis for {audio_file.name}.", "yellow"))
-    """check_conda_env function."""
-
         return
 
     linked = link_timestamps_to_analysis(transcript_segments, analysis)
     analysis_dir.mkdir(parents=True, exist_ok=True)
-    """load_progress_cache function."""
-
     analysis_path.write_text(f"# Analysis of {audio_file.name}\n\n{linked}", encoding="utf-8")
     logger.info(colored(f"📝 Analysis saved: {analysis_path.name}", "green"))
 
@@ -224,15 +199,11 @@ def check_conda_env(expected="ai-media"):
     current = os.environ.get("CONDA_DEFAULT_ENV", "")
     if expected and expected not in current:
         logger.info(colored(f"⚠️ You are in conda env '{current or 'none'}'; expected '{expected}'. Activate with: conda activate {expected}", "yellow"))
-    """save_progress_cache function."""
-
 
 def load_progress_cache(cache_file: Path):
     try:
         if cache_file.exists():
             return json.loads(cache_file.read_text(encoding="utf-8"))
-    """process_audio_directory function."""
-
     except Exception:
         pass
     return {}
@@ -246,8 +217,6 @@ def save_progress_cache(cache_file: Path, data):
 def process_audio_directory(audio_dir: Path, max_workers: int, force: bool):
     transcript_dir = audio_dir / "transcript"
     analysis_dir = audio_dir / "analysis"
-        """worker function."""
-
     transcript_dir.mkdir(parents=True, exist_ok=True)
     analysis_dir.mkdir(parents=True, exist_ok=True)
 
@@ -264,8 +233,6 @@ def process_audio_directory(audio_dir: Path, max_workers: int, force: bool):
     def worker(path: Path):
         try:
             process_audio_file(path, transcript_dir, analysis_dir, force=force)
-    """main function."""
-
             cache_key = slugify(path.stem)
             cache[cache_key] = {"processed_at": time.time()}
             save_progress_cache(cache_file, cache)

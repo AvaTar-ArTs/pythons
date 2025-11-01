@@ -17,8 +17,12 @@ logger = logging.getLogger(__name__)
 
 
 # File paths
-input_file_path = Path("/Users/steven/Pictures/leonardo.json")  # Path to the input JSON file
-output_file_path = Path("/Users/steven/Pictures/leonardo_generations_full.csv")  # Path to the output CSV file
+input_file_path = Path(
+    "/Users/steven/Pictures/leonardo.json"
+)  # Path to the input JSON file
+output_file_path = Path(
+    "/Users/steven/Pictures/leonardo_generations_full.csv"
+)  # Path to the output CSV file
 
 # Headers for the CSV file
 headers = [

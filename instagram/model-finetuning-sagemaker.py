@@ -24,8 +24,6 @@ finetuning_requirements_path = finetuning_dir / "requirements.txt"
 
 
 def run_finetuning_on_sagemaker(
-    """run_finetuning_on_sagemaker function."""
-
     finetuning_type: str = "sft",
     num_train_epochs: int = 3,
     per_device_train_batch_size: int = 2,

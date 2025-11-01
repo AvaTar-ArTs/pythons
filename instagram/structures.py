@@ -38,41 +38,25 @@ class CaseInsensitiveDict(MutableMapping):
     """
 
     def __init__(self, data=None, **kwargs):
-        """__init__ function."""
-
         self._store = OrderedDict()
         if data is None:
             data = {}
         self.update(data, **kwargs)
-
-        """__setitem__ function."""
-
     def __setitem__(self, key, value):
         # Use the lowercased key for lookups, but store the actual
         # key alongside the value.
         self._store[key.lower()] = (key, value)
-        """__getitem__ function."""
-
 
     def __getitem__(self, key):
-        """__delitem__ function."""
-
         return self._store[key.lower()][1]
-
-        """__iter__ function."""
-
     def __delitem__(self, key):
         del self._store[key.lower()]
-        """__len__ function."""
-
 
     def __iter__(self):
         return (casedkey for casedkey, mappedvalue in self._store.values())
 
     def __len__(self):
         return len(self._store)
-        """__eq__ function."""
-
 
     def lower_items(self):
         """Like iteritems(), but with all lowercase keys."""
@@ -81,35 +65,22 @@ class CaseInsensitiveDict(MutableMapping):
     def __eq__(self, other):
         if isinstance(other, Mapping):
             other = CaseInsensitiveDict(other)
-        """copy function."""
-
         else:
             return NotImplemented
-        """__repr__ function."""
-
         # Compare insensitively
         return dict(self.lower_items()) == dict(other.lower_items())
 
     # Copy is required
     def copy(self):
         return CaseInsensitiveDict(self._store.values())
-        """__init__ function."""
-
 
     def __repr__(self):
         return str(dict(self.items()))
-        """__repr__ function."""
-
-
-
-        """__getitem__ function."""
 
 class LookupDict(dict):
     """Dictionary lookup object."""
 
     def __init__(self, name=None):
-        """get function."""
-
         self.name = name
         super().__init__()
 

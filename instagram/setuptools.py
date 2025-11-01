@@ -88,8 +88,6 @@ def make_setuptools_shim_args(
 
 
 def make_setuptools_bdist_wheel_args(
-    """make_setuptools_bdist_wheel_args function."""
-
     setup_py_path: str,
     global_options: Sequence[str],
     build_options: Sequence[str],
@@ -105,10 +103,6 @@ def make_setuptools_bdist_wheel_args(
     args += ["bdist_wheel", "-d", destination_dir]
     args += build_options
     return args
-
-
-    """make_setuptools_clean_args function."""
-
 def make_setuptools_clean_args(
     setup_py_path: str,
     global_options: Sequence[str],
@@ -118,9 +112,6 @@ def make_setuptools_clean_args(
     )
     args += ["clean", "--all"]
     return args
-
-    """make_setuptools_develop_args function."""
-
 
 def make_setuptools_develop_args(
     setup_py_path: str,
@@ -150,8 +141,6 @@ def make_setuptools_develop_args(
         args += ["--user", "--prefix="]
 
     return args
-    """make_setuptools_egg_info_args function."""
-
 
 
 def make_setuptools_egg_info_args(

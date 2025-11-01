@@ -1,14 +1,18 @@
 """
-Content Creation Leonardo
+Content Creation Leonardo Leo Download 2
 
-This module provides functionality for content creation leonardo.
+This module provides functionality for content creation leonardo leo download 2.
 
 Author: Auto-generated
 Date: 2025-11-01
 """
 
+from pathlib import Path
+import csv
+import os
+
 import requests
-import time
+from tqdm import tqdm
 
 import logging
 
@@ -16,93 +20,83 @@ logger = logging.getLogger(__name__)
 
 
 # Constants
-CONSTANT_544 = 544
-CONSTANT_960 = 960
-CONSTANT_1082 = 1082
+CONSTANT_200 = 200
+CONSTANT_93043291 = 93043291
 
 
-api_key = "b5b99021-8e7a-42ef-8df9-4eca2c6efd3c"
-authorization = "Bearer %s" % api_key
+# Configuration
+BASE_URL = "https://cloud.leonardo.ai/api/rest/v1/generations/user/f7bb8476-e3f0-4f1f-9a06-4600866cc49c"
+AUTH_TOKEN = "Bearer CONSTANT_93043291-957d-4ec1-8c79-ee734abcb6e3"
+OUTPUT_DIR = Path("/Users/steven/Pictures/leodowns")
+CSV_FILE = os.path.join(OUTPUT_DIR, "leonardo_urls.csv")
+MAX_RECORDS_PER_BATCH = 50  # Adjust based on API constraints
 
-headers = {
+HEADERS = {
     "accept": "application/json",
-    "content-type": "application/json",
-    "authorization": authorization,
+    "authorization": AUTH_TOKEN,
 }
 
-# Generate an image
-url = "https://cloud.leonardo.ai/api/rest/v1/generations"
+# Ensure output directory exists
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-payload = {
-    "height": CONSTANT_960,
-    "modelId": "ac614f96-CONSTANT_1082-45bf-be9d-757f2d31c174",
-    "prompt": "A detailed photograph of a serious cyberpunk Hacker Cyborg transhumanist the past looking directly at the camera, standing straight, hands relaxed, square jaws, masculine face, dark scruff and no wrinkles, slightly buff looking, wearing a dark graphic t-shirt, detailed clothing texture realistic skin texture, black background, sharp focus, front view, waist up shot, high contrast, strong backlighting, action film dark color lut, cinematic luts",
-    "negative_prompt": "black and white, grainy, extra limbs, bad anatomy, airbrush, portrait, zoomed, soft light,smooth skin, closeup, vignette, out of shot, out of focus, portrait, statue, white statue, hands, bad anatomy, badhands, extra fingers, extra limbs, colored background, side profile, 3/4 view, 3/4 face, side view, 3/4 angle,detailed background, scenery, brownish background",
-    "width": CONSTANT_544,
-    "num_images": 1,
-    "alchemy": True,
-    "public": True,
-}
 
-response = requests.post(url, json=payload, headers=headers)
+def save_urls_to_csv(generations, csv_writer):
+    """Save image and motion MP4 URLs to CSV."""
+    for generation in generations:
+        gen_id = generation.get("id")
+        prompt = generation.get("prompt", "")
+        created_at = generation.get("createdAt", "")
+        gen_images = generation.get("generated_images", [])
 
-logger.info("Generate an image: %s" % response.status_code)
+        for image in gen_images:
+            csv_writer.writerow(
+                [
+                    gen_id,
+                    prompt,
+                    created_at,
+                    image.get("url"),
+                    image.get("motionMP4URL"),
+                ]
+            )
 
-# Get the generation of images
-generation_id = response.json()["sdGenerationJob"]["generationId"]
 
-url = "https://cloud.leonardo.ai/api/rest/v1/generations/%s" % generation_id
+def fetch_and_save_all_urls():
+    """Fetch generations and save URLs to CSV with pagination."""
+    offset = 0
 
-time.sleep(60)
+    with open(CSV_FILE, "w", newline="", encoding="utf-8") as csv_file:
+        csv_writer = csv.writer(csv_file)
+        # Write CSV headers
+        csv_writer.writerow(["id", "prompt", "createdAt", "image_url", "motion_url"])
 
-response = requests.get(url, headers=headers)
+        while True:
+            url = f"{BASE_URL}?offset={offset}&limit={MAX_RECORDS_PER_BATCH}"
+            response = requests.get(url, headers=HEADERS)
 
-logger.info("Get the generation of images: %s" % response.status_code)
+            # Check for errors in the response
+            if response.status_code != CONSTANT_200:
+                logger.info(
+                    f"Error fetching data: {response.status_code}, {response.text}"
+                )
+                break
 
-image_id = response.json()["generations_by_pk"]["generated_images"][0]["id"]
+            data = response.json()
+            generations = data.get("generations", [])
 
-# Create a variation of image (upscale variation)
-url = "https://cloud.leonardo.ai/api/rest/v1/variations/upscale"
+            # Exit the loop if no more data is returned
+            if not generations:
+                logger.info("No more data to fetch.")
+                break
 
-payload = {"id": image_id}
+            # Save data to CSV
+            save_urls_to_csv(generations, csv_writer)
 
-response = requests.post(url, json=payload, headers=headers)
+            # Increment the offset
+            offset += MAX_RECORDS_PER_BATCH
+            logger.info(f"Processed {offset} records")
 
-variation_id = response.json()["sdUpscaleJob"]["id"]
+    logger.info(f"URLs saved to {CSV_FILE}")
 
-logger.info("Create a variation of image: %s" % response.status_code)
 
-# Get the image variation
-url = "https://cloud.leonardo.ai/api/rest/v1/variations/%s" % variation_id
-
-time.sleep(60)
-
-response = requests.get(url, headers=headers)
-
-logger.info("Get the image variation: %s" % response.status_code)
-
-image_variation_id = response.json()["generated_image_variation_generic"][0]["id"]
-
-# Generate video with a generated image
-url = "https://cloud.leonardo.ai/api/rest/v1/generations-motion-svd"
-
-payload = {
-    "imageId": image_variation_id,
-    "motionStrength": 5,
-    "isVariation": True,
-}
-
-response = requests.post(url, json=payload, headers=headers)
-
-logger.info("Generate video with a generated image: %s" % response.status_code)
-
-# Get the generation of images
-generation_id = response.json()["motionSvdGenerationJob"]["generationId"]
-
-url = "https://cloud.leonardo.ai/api/rest/v1/generations/%s" % generation_id
-
-time.sleep(60)
-
-response = requests.get(url, headers=headers)
-
-logger.info(response.text)
+if __name__ == "__main__":
+    fetch_and_save_all_urls()

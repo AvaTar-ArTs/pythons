@@ -65,7 +65,11 @@ with open("sb.txt") as f:
 
         logger.info(Path("/r/") + str(subreddit.display_name))
         try:
-            print("Ratio: " + str(math.floor(sub_sentiment / num_comments * CONSTANT_100)) + Path("\n"))
+            print(
+                "Ratio: "
+                + str(math.floor(sub_sentiment / num_comments * CONSTANT_100))
+                + Path("\n")
+            )
         except (ValueError, TypeError):
             logger.info("No comment sentiment." + Path("\n"))
             ZeroDivisionError

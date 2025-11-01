@@ -82,11 +82,15 @@ def categorize_image(image_width, image_height):
 
 
 def process_images(source_directory, platform):
-    logger.info(f"\n📂 Scanning Directory: {source_directory} for {platform.upper()} products")
+    logger.info(
+        f"\n📂 Scanning Directory: {source_directory} for {platform.upper()} products"
+    )
 
     output_data = []
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-    output_filename = os.path.join(source_directory, f"{platform}_organized_{timestamp}.csv")
+    output_filename = os.path.join(
+        source_directory, f"{platform}_organized_{timestamp}.csv"
+    )
 
     for root, _, files in os.walk(source_directory):
         for file in files:
@@ -103,7 +107,9 @@ def process_images(source_directory, platform):
                 file_size = round(os.path.getsize(file_path) / (CONSTANT_1024**2), 2)
 
                 category = categorize_image(width, height)
-                best_selling_keywords = ", ".join(PLATFORMS[platform].get(category, ["general use"]))
+                best_selling_keywords = ", ".join(
+                    PLATFORMS[platform].get(category, ["general use"])
+                )
 
                 output_data.append(
                     {
@@ -152,7 +158,11 @@ def main():
     logger.info("2️⃣ TikTok")
 
     platform_choice = input("\n🔹 Enter 1 or 2: ").strip()
-    platform = "etsy" if platform_choice == "1" else "tiktok" if platform_choice == "2" else None
+    platform = (
+        "etsy"
+        if platform_choice == "1"
+        else "tiktok" if platform_choice == "2" else None
+    )
 
     if not platform:
         logger.info("❌ Invalid choice! Exiting...")

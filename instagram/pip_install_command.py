@@ -167,8 +167,6 @@ def create_excerpt(text, length=CONSTANT_150):
 
 
 def generate_job_cards(csv_file):
-    """generate_job_cards function."""
-
     cards = []
     with open(csv_file, mode="r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
@@ -195,10 +193,6 @@ def generate_job_cards(csv_file):
             )
             cards.append(card)
     return cards
-
-
-    """write_html_job_cards function."""
-
 def write_html_job_cards(output_path, job_cards):
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(job_html_header)
@@ -262,9 +256,6 @@ table_html_header = """<!DOCTYPE html>
             <tr>
 """
 
-    """generate_table_header function."""
-
-
 def generate_table_header(csv_file):
     with open(csv_file, mode="r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
@@ -272,8 +263,6 @@ def generate_table_header(csv_file):
         th_cells = [f"<th><pre>{html.escape(h)}</pre></th>" for h in headers]
         header_html = "            <tr>\n" + Path("\n").join(th_cells) + "\n            </tr>\n"
         return header_html, headers
-    """generate_table_body function."""
-
 
 
 def generate_table_body(csv_file, headers):
@@ -294,8 +283,6 @@ table_html_footer = """        </tbody>
     </table>
 </body>
 </html>
-    """write_html_table function."""
-
 """
 
 
@@ -305,8 +292,6 @@ def write_html_table(output_path, header_html, body_html):
         f.write(header_html)
         f.write("        </thead>\n        <tbody>\n")
         f.write(body_html)
-    """main function."""
-
         f.write("\n        </tbody>\n    </table>\n</body>\n</html>")
     logger.info(f"Table HTML file generated at: {output_path}")
 

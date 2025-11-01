@@ -100,9 +100,19 @@ def launch_kernel(
         env["IPY_INTERRUPT_EVENT"] = env["JPY_INTERRUPT_EVENT"]
 
         try:
-            from _winapi import CREATE_NEW_PROCESS_GROUP, DUPLICATE_SAME_ACCESS, DuplicateHandle, GetCurrentProcess
+            from _winapi import (
+                CREATE_NEW_PROCESS_GROUP,
+                DUPLICATE_SAME_ACCESS,
+                DuplicateHandle,
+                GetCurrentProcess,
+            )
         except (ImportError, ModuleNotFoundError):
-            from _subprocess import CREATE_NEW_PROCESS_GROUP, DUPLICATE_SAME_ACCESS, DuplicateHandle, GetCurrentProcess
+            from _subprocess import (
+                CREATE_NEW_PROCESS_GROUP,
+                DUPLICATE_SAME_ACCESS,
+                DuplicateHandle,
+                GetCurrentProcess,
+            )
 
         # create a handle on the parent to be inherited
         if independent:
@@ -121,7 +131,9 @@ def launch_kernel(
 
         # Prevent creating new console window on pythonw
         if redirect_out:
-            kwargs["creationflags"] = kwargs.setdefault("creationflags", 0) | 0x08000000  # CREATE_NO_WINDOW
+            kwargs["creationflags"] = (
+                kwargs.setdefault("creationflags", 0) | 0x08000000
+            )  # CREATE_NO_WINDOW
 
         # Avoid closing the above parent and interrupt handles.
         # close_fds is True by default on Python >=3.7
@@ -150,8 +162,12 @@ def launch_kernel(
             without_env = {key: value for key, value in kwargs.items() if key != "env"}
             msg = msg.format(cmd, env.get("PATH", os.defpath), without_env)
             get_logger().error(msg)
-        except Exception as ex2:  # Don't let a formatting/logger issue lead to the wrong exception
-            warnings.warn(f"Failed to run command: '{cmd}' due to exception: {ex}", stacklevel=2)
+        except (
+            Exception
+        ) as ex2:  # Don't let a formatting/logger issue lead to the wrong exception
+            warnings.warn(
+                f"Failed to run command: '{cmd}' due to exception: {ex}", stacklevel=2
+            )
             warnings.warn(
                 f"The following exception occurred handling the previous failure: {ex2}",
                 stacklevel=2,

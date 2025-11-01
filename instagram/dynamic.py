@@ -33,9 +33,7 @@ MAX_PARAM_SEARCHES = 20
 
 
 def _avoid_recursions(func):
-    """_avoid_recursions function."""
-
-        """wrapper function."""
+    """Function."""
 
     def wrapper(function_value, param_index):
         inf = function_value.inference_state
@@ -123,8 +121,7 @@ def _search_function_arguments(module_context, funcdef, string_name):
             [module_context],
             string_name,
             # Limit the amounts of files to be opened massively.
-            limit_reduction=5,
-        )
+            limit_reduction=5)
     else:
         module_contexts = [module_context]
 
@@ -149,10 +146,6 @@ def _search_function_arguments(module_context, funcdef, string_name):
         # good to process. This is a speed optimization.
         if found_arguments:
             return
-
-
-    """_get_lambda_name function."""
-
 def _get_lambda_name(node):
     stmt = node.parent
     if stmt.type == "expr_stmt":
@@ -163,9 +156,6 @@ def _get_lambda_name(node):
                 return first.value
 
     return None
-
-    """_get_potential_nodes function."""
-
 
 def _get_potential_nodes(module_value, func_string_name):
     try:
@@ -178,10 +168,6 @@ def _get_potential_nodes(module_value, func_string_name):
         trailer = bracket.parent
         if trailer.type == "trailer" and bracket == "(":
             yield name, trailer
-    """_check_name_for_execution function."""
-
-
-        """create_args function."""
 
 
 def _check_name_for_execution(inference_state, context, compare_node, name, trailer):

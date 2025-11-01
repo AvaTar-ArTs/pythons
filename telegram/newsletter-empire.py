@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -46,27 +45,28 @@ from pathlib import Path
 from typing import Dict, List
 from anthropic import Anthropic
 
+
 class NewsletterEmpire:
     def __init__(self):
         """__init__ function."""
 
-        self.openai_key = os.getenv('OPENAI_API_KEY')
-        self.anthropic_key = os.getenv('ANTHROPIC_API_KEY')
-        self.perplexity_key = os.getenv('PERPLEXITY_API_KEY')
-        self.mem0_key = os.getenv('MEM0_API_KEY')
-        self.elevenlabs_key = os.getenv('ELEVENLABS_API_KEY')
-        self.groq_key = os.getenv('GROQ_API_KEY')
+        self.openai_key = os.getenv("OPENAI_API_KEY")
+        self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+        self.perplexity_key = os.getenv("PERPLEXITY_API_KEY")
+        self.mem0_key = os.getenv("MEM0_API_KEY")
+        self.elevenlabs_key = os.getenv("ELEVENLABS_API_KEY")
+        self.groq_key = os.getenv("GROQ_API_KEY")
 
         self.output_dir = Path.home() / "newsletters"
         self.output_dir.mkdir(exist_ok=True)
 
     async def generate_newsletter(self, niche: str, edition: str = "daily"):
         """Generate complete newsletter"""
-        logger.info("="*60)
+        logger.info("=" * 60)
         logger.info(f"📰 NEWSLETTER GENERATOR")
         logger.info(f"Niche: {niche}")
         logger.info(f"Edition: {edition}")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
         # 04:00 - News Aggregation
         news = await self.aggregate_news(niche)
@@ -81,7 +81,7 @@ class NewsletterEmpire:
         personalized = await self.personalize_content(newsletter)
 
         # 08:00 - Visual Assets
-        header_image = await self.generate_header_image(niche, newsletter['headline'])
+        header_image = await self.generate_header_image(niche, newsletter["headline"])
 
         # 09:00 - Audio Version
         audio = await self.create_podcast_version(newsletter)
@@ -94,10 +94,12 @@ class NewsletterEmpire:
             "subject_lines": subject_lines,
             "header_image": str(header_image) if header_image else None,
             "audio": str(audio) if audio else None,
-            "created": datetime.now().isoformat()
+            "created": datetime.now().isoformat(),
         }
 
-        newsletter_file = self.output_dir / f"newsletter_{niche}_{datetime.now():%Y%m%d}.json"
+        newsletter_file = (
+            self.output_dir / f"newsletter_{niche}_{datetime.now():%Y%m%d}.json"
+        )
         newsletter_file.write_text(json.dumps(newsletter_data, indent=2))
 
         logger.info(f"\n✅ Newsletter generated: {newsletter_file}")
@@ -111,13 +113,14 @@ class NewsletterEmpire:
             "https://api.perplexity.ai/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.perplexity_key}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": "sonar-pro",
-                "messages": [{
-                    "role": "user",
-                    "content": f"""Top 10 news stories in {niche} from last 24 hours.
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": f"""Top 10 news stories in {niche} from last 24 hours.
 
 For each story provide:
 - Headline
@@ -125,19 +128,22 @@ For each story provide:
 - Why it matters
 - Key takeaway
 
-Focus on significant, actionable information."""
-                }],
-                "search_recency_filter": "day"
+Focus on significant, actionable information.""",
+                    }
+                ],
+                "search_recency_filter": "day",
             },
-            timeout=30
+            timeout=30,
         )
 
         if response.status_code == CONSTANT_200:
             result = response.json()
-            logger.info(f"   ✅ Aggregated from {len(result.get('citations', []))} sources")
+            logger.info(
+                f"   ✅ Aggregated from {len(result.get('citations', []))} sources"
+            )
             return {
                 "content": result["choices"][0]["message"]["content"],
-                "sources": result.get("citations", [])
+                "sources": result.get("citations", []),
             }
 
         return {"content": None, "sources": []}
@@ -150,12 +156,14 @@ Focus on significant, actionable information."""
 
         response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "system",
-                "content": f"You are the editor of a popular {niche} newsletter known for clear, engaging writing."
-            }, {
-                "role": "user",
-                "content": f"""Write newsletter based on: {news['content']}
+            messages=[
+                {
+                    "role": "system",
+                    "content": f"You are the editor of a popular {niche} newsletter known for clear, engaging writing.",
+                },
+                {
+                    "role": "user",
+                    "content": f"""Write newsletter based on: {news['content']}
 
 Structure:
 1. Hook opening paragraph
@@ -180,10 +188,11 @@ Return JSON:
     "quick_hits": ["item1", "item2"],
     "closing": "Final thought",
     "cta": "Call to action"
-}}"""
-            }],
+}}""",
+                },
+            ],
             temperature=0.8,
-            response_format={"type": "json_object"}
+            response_format={"type": "json_object"},
         )
 
         newsletter = json.loads(response.choices[0].message.content)
@@ -194,14 +203,16 @@ Return JSON:
         edit_message = client.messages.create(
             model="claude-opus-4-20250514",
             max_tokens=CONSTANT_4096,
-            messages=[{
-                "role": "user",
-                "content": f"""Edit this newsletter for clarity and impact:
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Edit this newsletter for clarity and impact:
 
 {json.dumps(newsletter, indent=2)}
 
-Return improved version (same JSON structure)."""
-            }]
+Return improved version (same JSON structure).""",
+                }
+            ],
         )
 
         edited_text = edit_message.content[0].text
@@ -213,7 +224,9 @@ Return improved version (same JSON structure)."""
         logger.info("   ✅ Newsletter written and edited")
         return final_newsletter
 
-    async def generate_subject_lines(self, newsletter: Dict, count: int = 50) -> List[Dict]:
+    async def generate_subject_lines(
+        self, newsletter: Dict, count: int = 50
+    ) -> List[Dict]:
         """Generate and test subject line variants"""
         logger.info(f"\n📧 Generating {count} subject line variants...")
 
@@ -221,9 +234,10 @@ Return improved version (same JSON structure)."""
 
         response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"""Generate {count} subject line variants for newsletter:
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Generate {count} subject line variants for newsletter:
 
 Headline: {newsletter['headline']}
 Hook: {newsletter['hook'][:CONSTANT_100]}
@@ -241,9 +255,10 @@ Return JSON array:
         "style": "curious|urgent|benefit|news",
         "expected_or": 0.25
     }}
-]"""
-            }],
-            response_format={"type": "json_object"}
+]""",
+                }
+            ],
+            response_format={"type": "json_object"},
         )
 
         subject_data = json.loads(response.choices[0].message.content)
@@ -267,16 +282,18 @@ Return JSON array:
         for segment in segments:
             response = openai.chat.completions.create(
                 model="gpt-5",
-                messages=[{
-                    "role": "user",
-                    "content": f"""Adapt newsletter for {segment} audience:
+                messages=[
+                    {
+                        "role": "user",
+                        "content": f"""Adapt newsletter for {segment} audience:
 
 {json.dumps(newsletter, indent=2)}
 
 Adjust tone, depth, examples for {segment} readers.
-Keep same structure, modify content emphasis."""
-                }],
-                temperature=0.7
+Keep same structure, modify content emphasis.""",
+                    }
+                ],
+                temperature=0.7,
             )
 
             personalized[segment] = response.choices[0].message.content
@@ -314,7 +331,7 @@ Keep same structure, modify content emphasis."""
             "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM",
             headers={"xi-api-key": self.elevenlabs_key},
             json={"text": script[:CONSTANT_3000], "model_id": "eleven_multilingual_v2"},
-            timeout=60
+            timeout=60,
         )
 
         if response.status_code == CONSTANT_200:
@@ -325,8 +342,10 @@ Keep same structure, modify content emphasis."""
 
         return None
 
+
 async def main():
     import argparse
+
     parser = argparse.ArgumentParser()
     parser.add_argument("command", choices=["generate", "send", "analyze"])
     parser.add_argument("--niche", help="Newsletter niche")
@@ -340,6 +359,7 @@ async def main():
             logger.info("❌ --niche required")
             sys.exit(1)
         await empire.generate_newsletter(args.niche, args.edition)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

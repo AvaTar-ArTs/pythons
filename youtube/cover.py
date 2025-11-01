@@ -1,70 +1,82 @@
 """
-Cover
+Youtube Get Cover Images
 
-This module provides functionality for cover.
+This module provides functionality for youtube get cover images.
 
 Author: Auto-generated
 Date: 2025-11-01
 """
 
-from openai import OpenAI
+from PIL import Image
+from moviepy.editor import AudioFileClip, ImageSequenceClip
+import glob
+import os
 
 import logging
 
 logger = logging.getLogger(__name__)
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-import glob
-import os
-from io import BytesIO
+def get_cover_images(file_name, cover_image_directory):
+    """get_cover_images function."""
 
-import requests
-from moviepy.editor import AudioFileClip, ImageClip
-from PIL import Image
+    # Check for both JPG and PNG extensions
+    images = []
+    jpg_paths = glob.glob(os.path.join(cover_image_directory, f"{file_name}*.jpg"))
+    png_paths = glob.glob(os.path.join(cover_image_directory, f"{file_name}*.png"))
+
+    images.extend(jpg_paths)
+    images.extend(png_paths)
+
+    if images:
+        return images
+    else:
+        print(
+            f"Cover images not found for {file_name}. Please ensure the cover images exist."
+        )
+        return None
+
+    """convert_mp3_to_mp4_with_images function."""
 
 
-def generate_cover_image_with_dalle(file_name, output_path):
-    """generate_cover_image_with_dalle function."""
-
-    prompt = f"lets create a series of typography cover image for '{file_name}' in the Font and style and contexts to tell the story'"
-    response = client.images.generate(prompt=prompt, n=1, size="1024x1024")
-    image_url = response.data[0].url
-    response = requests.get(image_url)
-    img = Image.open(BytesIO(response.content))
-    img.save(output_path)
-
-
-    """convert_mp3_to_mp4 function."""
-
-def convert_mp3_to_mp4(mp3_file, cover_image, output_file):
+def convert_mp3_to_mp4_with_images(mp3_file, cover_images, output_file):
     audio = AudioFileClip(mp3_file)
-    clip = ImageClip(cover_image)
-    clip = clip.set_duration(audio.duration)
-    clip = clip.set_audio(audio)
-    clip.write_videofile(output_file, fps=24)
+    clips = [
+        ImageClip(image).set_duration(audio.duration / len(cover_images))
+        for image in cover_images
+    ]
+    video = ImageSequenceClip(clips, fps=1)  # 1 fps as each image is a frame
+    video = video.set_duration(audio.duration)
+    video = video.set_audio(audio)
+    video.write_videofile(output_file, fps=24)
 
     """process_directory function."""
 
 
-def process_directory(directory):
-    mp3_files = glob.glob(os.path.join(directory, "*.mp3"))
+def process_directory(mp3_directory, cover_image_directory):
+    mp3_files = glob.glob(os.path.join(mp3_directory, "*.mp3"))
 
     for mp3_file in mp3_files:
         filename = os.path.basename(mp3_file)
         name, ext = os.path.splitext(filename)
 
-        cover_image = os.path.join(directory, f"{name}.jpg")
-        output_file = os.path.join(directory, f"{name}.mp4")
-
-        generate_cover_image_with_dalle(name, cover_image)
-        convert_mp3_to_mp4(mp3_file, cover_image, output_file)
+        cover_images = get_cover_images(name, cover_image_directory)
+        if cover_images:
+            output_file = os.path.join(mp3_directory, f"{name}.mp4")
+            convert_mp3_to_mp4_with_images(mp3_file, cover_images, output_file)
 
 
 if __name__ == "__main__":
     import sys
 
-    if len(sys.argv) > 1:
-        process_directory(sys.argv[1])
+    if len(sys.argv) > 2:
+        mp3_directory = sys.argv[1]
+        cover_image_directory = sys.argv[2]
+        process_directory(mp3_directory, cover_image_directory)
     else:
-        logger.info("Please provide the directory containing MP3 files as an argument.")
+        logger.info(
+            "Please provide the directories containing MP3 files and cover images as arguments."
+        )
+        print(
+            "Usage: python imgmp4.py /path/to/mp3_directory /path/to/cover_image_directory"
+        )

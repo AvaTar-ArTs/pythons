@@ -35,20 +35,34 @@ API_VERSION = "v3"
 
 def get_authenticated_service():
     """Authenticates and returns the YouTube Data API service."""
-    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
+    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
+        CLIENT_SECRETS_FILE, SCOPES
+    )
     credentials = flow.run_local_server(port=0)
-    return googleapiclient.discovery.build(API_SERVICE_NAME, API_VERSION, credentials=credentials)
+    return googleapiclient.discovery.build(
+        API_SERVICE_NAME, API_VERSION, credentials=credentials
+    )
 
 
-def upload_video(youtube, file_path, title, description, category_id, keywords, privacy_status):
+def upload_video(
+    youtube, file_path, title, description, category_id, keywords, privacy_status
+):
     """Uploads a video to YouTube."""
     body = {
-        "snippet": {"title": title, "description": description, "categoryId": category_id, "tags": keywords},
+        "snippet": {
+            "title": title,
+            "description": description,
+            "categoryId": category_id,
+            "tags": keywords,
+        },
         "status": {"privacyStatus": privacy_status},
     }
 
     media = googleapiclient.http.MediaFileUpload(
-        file_path, mimetype="video/*", chunksize=CONSTANT_1024 * CONSTANT_1024, resumable=True
+        file_path,
+        mimetype="video/*",
+        chunksize=CONSTANT_1024 * CONSTANT_1024,
+        resumable=True,
     )
 
     request = youtube.videos().insert(part="snippet,status", body=body, media=media)
@@ -70,8 +84,12 @@ if __name__ == "__main__":
     # Set your video details here
     VIDEO_FILE_PATH = "'/Users/steven/Movies/PROJECt2025-DoMinIon/Trump’s Freudian Collapse_ The Confessio CONSTANT_2025-05-31.mp4'"  # Replace with your video file path
     VIDEO_TITLE = "My Automated Upload"
-    VIDEO_DESCRIPTION = "This video was automatically uploaded using the YouTube Data API."
-    VIDEO_CATEGORY_ID = "22"  # See https://developers.google.com/youtube/v3/docs/videoCategories/list
+    VIDEO_DESCRIPTION = (
+        "This video was automatically uploaded using the YouTube Data API."
+    )
+    VIDEO_CATEGORY_ID = (
+        "22"  # See https://developers.google.com/youtube/v3/docs/videoCategories/list
+    )
     VIDEO_KEYWORDS = ["automation", "youtube", "api"]
     VIDEO_PRIVACY_STATUS = "private"  # "public", "private", or "unlisted"
 

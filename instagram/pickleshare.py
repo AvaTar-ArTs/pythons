@@ -85,8 +85,6 @@ else:
 
 
 def gethashfile(key):
-    """gethashfile function."""
-
     return ("%02x" % abs(hash(key) % CONSTANT_256))[-2:]
 
 
@@ -245,13 +243,8 @@ class PickleShareDB(collections_abc.MutableMapping):
         else:
             files = self.root.glob(globpat)
         return [self._normalized(p) for p in files if p.is_file()]
-
-        """__iter__ function."""
-
     def __iter__(self):
         return iter(self.keys())
-        """__len__ function."""
-
 
     def __len__(self):
         return len(self.keys())
@@ -303,8 +296,6 @@ class PickleShareDB(collections_abc.MutableMapping):
 
     def getlink(self, folder):
         """Get a convenient link for accessing items"""
-        """__repr__ function."""
-
         return PickleShareLink(self, folder)
 
     def __repr__(self):
@@ -319,20 +310,11 @@ class PickleShareLink:
         lnk = db.getlink('myobjects/test')
         lnk.foo = 2
         lnk.bar = lnk.foo + 5
-        """__init__ function."""
-
 
     """
-        """__getattr__ function."""
-
 
     def __init__(self, db, keydir):
-        """__setattr__ function."""
-
         self.__dict__.update(locals())
-
-        """__repr__ function."""
-
     def __getattr__(self, key):
         return self.__dict__["db"][self.__dict__["keydir"] + "/" + key]
 
@@ -346,10 +328,6 @@ class PickleShareLink:
             self.__dict__["keydir"],
             ";".join([Path(k).basename() for k in keys]),
         )
-
-
-    """main function."""
-
 def main():
     import textwrap
 

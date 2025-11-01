@@ -28,7 +28,9 @@ env_path = "~/.env"
 load_dotenv(dotenv_path=env_path)
 
 # Directory paths
-AUDIO_DIR = Path("/Users/steven/Music/NocTurnE-meLoDieS/song-video/mp3")  # Directory containing MP3 files
+AUDIO_DIR = Path(
+    "/Users/steven/Music/NocTurnE-meLoDieS/song-video/mp3"
+)  # Directory containing MP3 files
 TRANSCRIPT_DIR = Path(
     "/Users/steven/Music/NocTurnE-meLoDieS/Discography/Audio/transcript"
 )  # Directory to save transcripts
@@ -46,7 +48,9 @@ def transcribe_audio(file_path):
     """transcribe_audio function."""
 
     with open(file_path, "rb") as audio_file:
-        transcript_data = client.audio.transcribe("whisper-1", audio_file, response_format="verbose_json")
+        transcript_data = client.audio.transcribe(
+            "whisper-1", audio_file, response_format="verbose_json"
+        )
 
         # Build the transcript with timestamps
         transcript_with_timestamps = []
@@ -54,7 +58,9 @@ def transcribe_audio(file_path):
             start_time = segment["start"]
             end_time = segment["end"]
             text = segment["text"]
-            transcript_with_timestamps.append(f"{format_timestamp(start_time)} -- {format_timestamp(end_time)}: {text}")
+            transcript_with_timestamps.append(
+                f"{format_timestamp(start_time)} -- {format_timestamp(end_time)}: {text}"
+            )
 
         return Path("\n").join(transcript_with_timestamps)
 
@@ -102,17 +108,25 @@ def process_audio_directory(audio_dir):
 
                 # Step 1: Transcribe the audio file
                 transcript = transcribe_audio(audio_file)
-                transcript_file_path = os.path.join(TRANSCRIPT_DIR, f"{filename_no_ext}_transcript.txt")
+                transcript_file_path = os.path.join(
+                    TRANSCRIPT_DIR, f"{filename_no_ext}_transcript.txt"
+                )
                 with open(transcript_file_path, "w") as f:
                     f.write(transcript)
-                print(f"Transcription saved for {filename_no_ext} at {transcript_file_path}")
+                print(
+                    f"Transcription saved for {filename_no_ext} at {transcript_file_path}"
+                )
 
                 # Step 2: Analyze the segment's transcript
                 analysis = analyze_text_for_section(transcript, filename_no_ext)
-                analysis_file_path = os.path.join(ANALYSIS_DIR, f"{filename_no_ext}_analysis.txt")
+                analysis_file_path = os.path.join(
+                    ANALYSIS_DIR, f"{filename_no_ext}_analysis.txt"
+                )
                 with open(analysis_file_path, "w") as f:
                     f.write(analysis)
-                logger.info(f"Analysis saved for {filename_no_ext} at {analysis_file_path}")
+                logger.info(
+                    f"Analysis saved for {filename_no_ext} at {analysis_file_path}"
+                )
 
 
 if __name__ == "__main__":

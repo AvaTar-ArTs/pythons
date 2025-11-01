@@ -18,8 +18,8 @@ logger = logging.getLogger(__name__)
 
 
 # Constants
-CONSTANT_000 = 000
-CONSTANT_033 = 033
+CONSTANT_0 = 0
+CONSTANT_33 = 33
 CONSTANT_100 = 100
 CONSTANT_200 = 200
 CONSTANT_429 = 429
@@ -69,7 +69,7 @@ def scrapeVideos(pexelsApiKey: str):
         if statusCode != CONSTANT_200:
             if statusCode == CONSTANT_429:
                 logger.info(f"""You sent too many requests(you have exceeded your rate limit)!\n 
-                The Pexels API is rate-limited to CONSTANT_200 requests per hour and 20,CONSTANT_000 requests per month (https://www.pexels.com/api/documentation/#introduction).\n
+                The Pexels API is rate-limited to CONSTANT_200 requests per hour and 20,CONSTANT_0 requests per month (https://www.pexels.com/api/documentation/#introduction).\n
                 Returned status code: {statusCode}""")
             else:
                 logger.info(f"Error requesting Pexels, is your api key correct? Returned status code: {statusCode}")
@@ -139,7 +139,7 @@ def videoIntro(introText, videoNumber) -> CompositeVideoClip:
         size=(intro_width+CONSTANT_100, intro_height+50),
         color=(0,0,0)
         ).set_opacity(.6)
-    intro_clip = VideoFileClip("intro_clip/glitch.mp4").resize((CONSTANT_1080,CONSTANT_1920))
+    intro_clip = VideoFileClip("intro_clip/2_hands_up.mp4").resize((CONSTANT_1080,CONSTANT_1920))
     intro_clip_duration = 6
     text_with_bg= CompositeVideoClip([intro_color_clip, intro_text_clip]).set_position(lambda t: ('center', CONSTANT_200+t)).set_duration(intro_clip_duration)
     intro_final = CompositeVideoClip([intro_clip, text_with_bg]).set_duration(intro_clip_duration)
@@ -276,15 +276,15 @@ def changeJsonValue(question, data, dataString):
         json.dump(data, f, ensure_ascii=False, indent = 4, sort_keys=True)
 
 class bcolors:
-    HEADER = '\CONSTANT_033[95m'
-    OKBLUE = '\CONSTANT_033[94m'
-    OKCYAN = '\CONSTANT_033[96m'
-    OKGREEN = '\CONSTANT_033[92m'
-    WARNING = '\CONSTANT_033[93m'
-    FAIL = '\CONSTANT_033[91m'
-    ENDC = '\CONSTANT_033[0m'
-    BOLD = '\CONSTANT_033[1m'
-    UNDERLINE = '\CONSTANT_033[4m'
+    HEADER = '\CONSTANT_33[95m'
+    OKBLUE = '\CONSTANT_33[94m'
+    OKCYAN = '\CONSTANT_33[96m'
+    OKGREEN = '\CONSTANT_33[92m'
+    WARNING = '\CONSTANT_33[93m'
+    FAIL = '\CONSTANT_33[91m'
+    ENDC = '\CONSTANT_33[0m'
+    BOLD = '\CONSTANT_33[1m'
+    UNDERLINE = '\CONSTANT_33[4m'
 
 
 

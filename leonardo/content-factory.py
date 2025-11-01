@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -44,6 +43,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any
 
+
 class ContentFactory:
     """Professional product photography pipeline"""
 
@@ -51,12 +51,12 @@ class ContentFactory:
         """__init__ function."""
 
         # API Keys
-        self.leonardo_key = os.getenv('LEONARDO_API_KEY')
-        self.removebg_key = os.getenv('REMOVEBG_API_KEY')
-        self.imagga_key = os.getenv('IMAGGA_API_KEY')
-        self.imagga_secret = os.getenv('IMAGGA_API_SECRET')
-        self.stability_key = os.getenv('STABILITY_API_KEY')
-        self.vance_key = os.getenv('VANCEAI_API_KEY')
+        self.leonardo_key = os.getenv("LEONARDO_API_KEY")
+        self.removebg_key = os.getenv("REMOVEBG_API_KEY")
+        self.imagga_key = os.getenv("IMAGGA_API_KEY")
+        self.imagga_secret = os.getenv("IMAGGA_API_SECRET")
+        self.stability_key = os.getenv("STABILITY_API_KEY")
+        self.vance_key = os.getenv("VANCEAI_API_KEY")
 
         # Output directory
         self.output_dir = Path.home() / "AI_Content"
@@ -67,8 +67,8 @@ class ContentFactory:
     def _validate_keys(self):
         """Check required API keys"""
         required = {
-            'Leonardo.AI': self.leonardo_key,
-            'Remove.bg': self.removebg_key,
+            "Leonardo.AI": self.leonardo_key,
+            "Remove.bg": self.removebg_key,
         }
 
         missing = [name for name, key in required.items() if not key]
@@ -90,7 +90,7 @@ class ContentFactory:
                 "https://cloud.leonardo.ai/api/rest/v1/generations",
                 headers={
                     "Authorization": f"Bearer {self.leonardo_key}",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 json={
                     "prompt": prompt,
@@ -99,9 +99,9 @@ class ContentFactory:
                     "height": CONSTANT_1024,
                     "num_images": 1,
                     "alchemy": True,  # Higher quality
-                    "photoReal": True
+                    "photoReal": True,
                 },
-                timeout=30
+                timeout=30,
             )
 
             if response.status_code != CONSTANT_200:
@@ -131,7 +131,7 @@ class ContentFactory:
                 response = requests.get(
                     f"https://cloud.leonardo.ai/api/rest/v1/generations/{generation_id}",
                     headers={"Authorization": f"Bearer {self.leonardo_key}"},
-                    timeout=10
+                    timeout=10,
                 )
 
                 if response.status_code == CONSTANT_200:
@@ -172,7 +172,7 @@ class ContentFactory:
                     headers={"X-Api-Key": self.removebg_key},
                     files={"image_file": image_file},
                     data={"size": "auto"},
-                    timeout=30
+                    timeout=30,
                 )
 
             if response.status_code != CONSTANT_200:
@@ -205,7 +205,7 @@ class ContentFactory:
                     "https://api.imagga.com/v2/tags",
                     auth=(self.imagga_key, self.imagga_secret),
                     files={"image": image_file},
-                    timeout=30
+                    timeout=30,
                 )
 
             if response.status_code != CONSTANT_200:
@@ -235,7 +235,7 @@ class ContentFactory:
         styles = [
             ("minimalist", "minimalist, clean, simple background, modern"),
             ("luxury", "luxury, premium, gold accents, elegant"),
-            ("natural", "natural lighting, organic, wooden background")
+            ("natural", "natural lighting, organic, wooden background"),
         ]
 
         variations = []
@@ -247,7 +247,7 @@ class ContentFactory:
                         "https://api.stability.ai/v1/generation/stable-diffusion-xl-CONSTANT_1024-v1-0/image-to-image",
                         headers={
                             "Authorization": f"Bearer {self.stability_key}",
-                            "Accept": "application/json"
+                            "Accept": "application/json",
                         },
                         files={"init_image": image_file},
                         data={
@@ -256,17 +256,20 @@ class ContentFactory:
                             "cfg_scale": 7,
                             "samples": 1,
                             "steps": 30,
-                            "image_strength": 0.35  # Keep original structure
+                            "image_strength": 0.35,  # Keep original structure
                         },
-                        timeout=60
+                        timeout=60,
                     )
 
                 if response.status_code == CONSTANT_200:
                     result = response.json()
                     for i, image_data in enumerate(result.get("artifacts", [])):
-                        variation_path = image_path.with_stem(f"{image_path.stem}_{style_name}")
+                        variation_path = image_path.with_stem(
+                            f"{image_path.stem}_{style_name}"
+                        )
 
                         import base64
+
                         image_bytes = base64.b64decode(image_data["base64"])
                         variation_path.write_bytes(image_bytes)
 
@@ -274,7 +277,9 @@ class ContentFactory:
                         logger.info(f"   ✅ Created {style_name} variation")
 
                 else:
-                    logger.info(f"   ⚠️ Variation '{style_name}' failed: {response.status_code}")
+                    logger.info(
+                        f"   ⚠️ Variation '{style_name}' failed: {response.status_code}"
+                    )
 
             except Exception as e:
                 logger.info(f"   ⚠️ Variation error ({style_name}): {e}")
@@ -282,9 +287,7 @@ class ContentFactory:
         return variations
 
     def create_product_images(
-        self,
-        description: str,
-        create_variations: bool = True
+        self, description: str, create_variations: bool = True
     ) -> Dict[str, Any]:
         """
         Complete product photography pipeline
@@ -306,8 +309,7 @@ class ContentFactory:
         # Step 1: Generate base image
         image_url = self.generate_image(description)
         original_path = self.download_image(
-            image_url,
-            f"product_{timestamp}_original.png"
+            image_url, f"product_{timestamp}_original.png"
         )
 
         # Step 2: Remove background
@@ -328,10 +330,10 @@ class ContentFactory:
             "original": str(original_path),
             "no_background": str(no_bg_path),
             "tags": tags,
-            "variations": [str(v) for v in variations]
+            "variations": [str(v) for v in variations],
         }
 
-        metadata_path = original_path.with_suffix('.json')
+        metadata_path = original_path.with_suffix(".json")
         metadata_path.write_text(json.dumps(metadata, indent=2))
 
         # Summary
@@ -362,8 +364,7 @@ def main():
 
     factory = ContentFactory()
     result = factory.create_product_images(
-        description=description,
-        create_variations=True
+        description=description, create_variations=True
     )
 
     logger.info(f"🎉 View your images: {factory.output_dir}")

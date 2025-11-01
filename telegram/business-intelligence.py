@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -46,26 +45,27 @@ from pathlib import Path
 from typing import Dict, List, Any
 from anthropic import Anthropic
 
+
 class BusinessIntelligence:
     def __init__(self):
         """__init__ function."""
 
-        self.openai_key = os.getenv('OPENAI_API_KEY')
-        self.anthropic_key = os.getenv('ANTHROPIC_API_KEY')
-        self.perplexity_key = os.getenv('PERPLEXITY_API_KEY')
-        self.mem0_key = os.getenv('MEM0_API_KEY')
-        self.elevenlabs_key = os.getenv('ELEVENLABS_API_KEY')
-        self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN')
-        self.telegram_chat = os.getenv('TELEGRAM_CHAT_ID')
+        self.openai_key = os.getenv("OPENAI_API_KEY")
+        self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+        self.perplexity_key = os.getenv("PERPLEXITY_API_KEY")
+        self.mem0_key = os.getenv("MEM0_API_KEY")
+        self.elevenlabs_key = os.getenv("ELEVENLABS_API_KEY")
+        self.telegram_token = os.getenv("TELEGRAM_BOT_TOKEN")
+        self.telegram_chat = os.getenv("TELEGRAM_CHAT_ID")
 
         self.output_dir = Path.home() / "business_intelligence"
         self.output_dir.mkdir(exist_ok=True)
 
     async def daily_cycle(self, industry: str = "technology"):
         """Run complete daily intelligence cycle"""
-        logger.info("="*60)
+        logger.info("=" * 60)
         logger.info("📊 DAILY BUSINESS INTELLIGENCE CYCLE")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
         # 06:00 - Market Research
         market_data = await self.scan_market(industry)
@@ -95,13 +95,14 @@ class BusinessIntelligence:
             "https://api.perplexity.ai/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.perplexity_key}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": "sonar-pro",
-                "messages": [{
-                    "role": "user",
-                    "content": f"""Comprehensive market analysis for {industry}:
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": f"""Comprehensive market analysis for {industry}:
 
 1. Market trends (last 24h)
 2. Competitor moves
@@ -109,11 +110,12 @@ class BusinessIntelligence:
 4. Regulatory changes
 5. Customer sentiment shifts
 
-Include key metrics, sources, and confidence levels."""
-                }],
-                "search_recency_filter": "day"
+Include key metrics, sources, and confidence levels.""",
+                    }
+                ],
+                "search_recency_filter": "day",
             },
-            timeout=30
+            timeout=30,
         )
 
         if response.status_code == CONSTANT_200:
@@ -122,7 +124,7 @@ Include key metrics, sources, and confidence levels."""
             return {
                 "content": result["choices"][0]["message"]["content"],
                 "sources": result.get("citations", []),
-                "timestamp": datetime.now().isoformat()
+                "timestamp": datetime.now().isoformat(),
             }
 
         return {"content": None, "sources": []}
@@ -136,11 +138,13 @@ Include key metrics, sources, and confidence levels."""
         # GPT-5 Analysis
         gpt5_response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"Analyze: {market_data['content']}\n\nProvide: Key insights, risk assessment, opportunities."
-            }],
-            temperature=0.7
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"Analyze: {market_data['content']}\n\nProvide: Key insights, risk assessment, opportunities.",
+                }
+            ],
+            temperature=0.7,
         )
         gpt5_analysis = gpt5_response.choices[0].message.content
 
@@ -149,10 +153,12 @@ Include key metrics, sources, and confidence levels."""
         claude_response = client.messages.create(
             model="claude-opus-4-20250514",
             max_tokens=CONSTANT_2048,
-            messages=[{
-                "role": "user",
-                "content": f"Strategic analysis: {market_data['content']}\n\nFocus: Long-term implications, strategic moves."
-            }]
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"Strategic analysis: {market_data['content']}\n\nFocus: Long-term implications, strategic moves.",
+                }
+            ],
         )
         claude_analysis = claude_response.content[0].text
 
@@ -161,7 +167,7 @@ Include key metrics, sources, and confidence levels."""
         return {
             "gpt5": gpt5_analysis,
             "claude": claude_analysis,
-            "consensus": self._synthesize_consensus(gpt5_analysis, claude_analysis)
+            "consensus": self._synthesize_consensus(gpt5_analysis, claude_analysis),
         }
 
     def _synthesize_consensus(self, gpt5: str, claude: str) -> str:
@@ -170,17 +176,19 @@ Include key metrics, sources, and confidence levels."""
 
         response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"""Synthesize consensus from these analyses:
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Synthesize consensus from these analyses:
 
 GPT-5: {gpt5}
 
 Claude: {claude}
 
-Provide unified strategic assessment."""
-            }],
-            temperature=0.5
+Provide unified strategic assessment.""",
+                }
+            ],
+            temperature=0.5,
         )
 
         return response.choices[0].message.content
@@ -193,9 +201,10 @@ Provide unified strategic assessment."""
 
         response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"""Based on: {consensus['consensus']}
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Based on: {consensus['consensus']}
 
 Generate:
 1. Top 3 strategic priorities
@@ -203,16 +212,19 @@ Generate:
 3. Risk mitigation strategies
 4. Success metrics
 
-Format as JSON."""
-            }],
-            response_format={"type": "json_object"}
+Format as JSON.""",
+                }
+            ],
+            response_format={"type": "json_object"},
         )
 
         strategy = json.loads(response.choices[0].message.content)
         logger.info("   ✅ Strategy generated")
         return strategy
 
-    def create_executive_report(self, market: Dict, consensus: Dict, strategy: Dict) -> str:
+    def create_executive_report(
+        self, market: Dict, consensus: Dict, strategy: Dict
+    ) -> str:
         """Compile executive report"""
         report = f"""EXECUTIVE INTELLIGENCE BRIEFING
 {datetime.now().strftime('%Y-%m-%d %H:%M')}
@@ -242,7 +254,7 @@ Confidence: High
             "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM",
             headers={"xi-api-key": self.elevenlabs_key},
             json={"text": report[:CONSTANT_2000], "model_id": "eleven_multilingual_v2"},
-            timeout=60
+            timeout=60,
         )
 
         if response.status_code == CONSTANT_200:
@@ -263,13 +275,15 @@ Confidence: High
                 json={
                     "chat_id": self.telegram_chat,
                     "text": f"📊 *Daily Intelligence Briefing*\n\n{report[:CONSTANT_4000]}",
-                    "parse_mode": "Markdown"
-                }
+                    "parse_mode": "Markdown",
+                },
             )
             logger.info("   ✅ Sent to Telegram")
 
+
 async def main():
     import argparse
+
     parser = argparse.ArgumentParser()
     parser.add_argument("command", choices=["daily-cycle", "research", "competitor"])
     parser.add_argument("--industry", default="technology")
@@ -281,6 +295,7 @@ async def main():
 
     if args.command == "daily-cycle":
         await bi.daily_cycle(args.industry)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

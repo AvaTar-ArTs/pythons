@@ -41,9 +41,13 @@ def download_screenshots_of_reddit_posts(reddit_object, screenshot_num):
             print_substep("Post is NSFW. You are spicy... :fire:")
             page.locator('[data-testid="content-gate"] button').click()
 
-        page.locator('[data-test-id="post-content"]').screenshot(path="assets/png/title.png")
+        page.locator('[data-test-id="post-content"]').screenshot(
+            path="assets/png/title.png"
+        )
 
-        for idx, comment in track(enumerate(reddit_object["comments"]), "Downloading screenshots..."):
+        for idx, comment in track(
+            enumerate(reddit_object["comments"]), "Downloading screenshots..."
+        ):
 
             # Stop if we have reached the screenshot_num
             if idx >= screenshot_num:
@@ -53,5 +57,7 @@ def download_screenshots_of_reddit_posts(reddit_object, screenshot_num):
                 page.locator('[data-testid="content-gate"] button').click()
 
             page.goto(f'https://reddit.com{comment["comment_url"]}')
-            page.locator(f"#t1_{comment['comment_id']}").screenshot(path=f"assets/png/comment_{idx}.png")
+            page.locator(f"#t1_{comment['comment_id']}").screenshot(
+                path=f"assets/png/comment_{idx}.png"
+            )
         print_substep("Screenshots downloaded Successfully.", style="bold green")

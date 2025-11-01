@@ -97,7 +97,9 @@ def list_remote_files(sftp, remote_path):
 def list_local_files(local_path):
     if not os.path.exists(local_path):
         os.makedirs(local_path)
-    return {f: os.path.getmtime(os.path.join(local_path, f)) for f in os.listdir(local_path)}
+    return {
+        f: os.path.getmtime(os.path.join(local_path, f)) for f in os.listdir(local_path)
+    }
 
     """download_files function."""
 
@@ -106,7 +108,10 @@ def download_files(sftp, remote_path, local_path):
     os.makedirs(local_path, exist_ok=True)
     for file, mtime in list_remote_files(sftp, remote_path).items():
         local_file_path = os.path.join(local_path, file)
-        if not os.path.exists(local_file_path) or os.path.getmtime(local_file_path) < mtime:
+        if (
+            not os.path.exists(local_file_path)
+            or os.path.getmtime(local_file_path) < mtime
+        ):
             logger.info(f"Downloading {file}...")
             sftp.get(os.path.join(remote_path, file), local_file_path)
         else:

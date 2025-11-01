@@ -41,7 +41,9 @@ class Downloadupload(object):
 
             if download_result.success:
                 message.delete()
-                self.logger.info("Message deleted from queue (%s)", download_result.message)
+                self.logger.info(
+                    "Message deleted from queue (%s)", download_result.message
+                )
             else:
                 self.logger.info(download_result.message)
                 Iftttnotify(self.ytdl_config).send(download_result.message)
@@ -76,8 +78,12 @@ class Downloadupload(object):
                 self.logger.error(dir_not_found)
             else:
                 if upload_result.success:
-                    self.__successful_upload_tasks__(upload_result.track_file, upload_result.track_dir)
-                    Iftttnotify(self.ytdl_config).send("Uploaded: {}".format(upload_result.track_name))
+                    self.__successful_upload_tasks__(
+                        upload_result.track_file, upload_result.track_dir
+                    )
+                    Iftttnotify(self.ytdl_config).send(
+                        "Uploaded: {}".format(upload_result.track_name)
+                    )
                 else:
                     message = "[{}] - {} - {}".format(
                         upload_result.track_name,
@@ -87,7 +93,9 @@ class Downloadupload(object):
                     self.logger.warning(message)
                     if "ALREADY_EXISTS" in upload_result.message:
                         self.__failed_upload_tasks__(upload_result.track_dir)
-                        Iftttnotify(self.ytdl_config).send("Track already exists: {}".format(upload_result.track_name))
+                        Iftttnotify(self.ytdl_config).send(
+                            "Track already exists: {}".format(upload_result.track_name)
+                        )
 
         gmu.logout()
 
@@ -96,7 +104,9 @@ class Downloadupload(object):
     def __successful_upload_tasks__(self, track_file, track_dir):
         if isdir(self.ytdl_config.uploads_folder_path):
             copy(track_file, self.ytdl_config.uploads_folder_path)
-            self.logger.info("Track file copied to %s", self.ytdl_config.uploads_folder_path)
+            self.logger.info(
+                "Track file copied to %s", self.ytdl_config.uploads_folder_path
+            )
 
         remove(track_dir)
         self.logger.info("Track directory as %s removed", track_dir)

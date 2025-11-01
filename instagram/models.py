@@ -35,7 +35,9 @@ class Entity(BaseModel):
     resolved_id: uuid.UUID | None = None
 
     @classmethod
-    def from_raw(cls, raw_entity: "RawEntity", event_id: uuid.UUID | None = None) -> "Entity":
+    def from_raw(
+        cls, raw_entity: "RawEntity", event_id: uuid.UUID | None = None
+    ) -> "Entity":
         """Create an Entity instance from a RawEntity, optionally associating it with an event_id."""
         return cls(
             id=uuid.uuid4(),
@@ -95,6 +97,9 @@ class TemporalEvent(BaseModel):
     def set_expired_at(self) -> "TemporalEvent":
         """Set expired_at if invalid_at is set and temporal_type is DYNAMIC."""
         self.expired_at = (
-            self.created_at if (self.invalid_at is not None) and (self.temporal_type == TemporalType.DYNAMIC) else None
+            self.created_at
+            if (self.invalid_at is not None)
+            and (self.temporal_type == TemporalType.DYNAMIC)
+            else None
         )
         return self

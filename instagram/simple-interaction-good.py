@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 # Constants
 CONSTANT_100 = 100
 CONSTANT_340 = 340
@@ -48,7 +47,9 @@ photo_comments = [
 # let's go! :>
 with smart_run(session):
     # settings
-    session.set_user_interact(amount=3, randomize=True, percentage=CONSTANT_100, media="Photo")
+    session.set_user_interact(
+        amount=3, randomize=True, percentage=CONSTANT_100, media="Photo"
+    )
     session.set_relationship_bounds(
         enabled=True,
         potency_ratio=None,

@@ -26,8 +26,6 @@ dtypes = [
 
 @pytest.mark.parametrize("dtype", dtypes)
 def test_unary_unary(dtype):
-    """test_unary_unary function."""
-
     # unary input, unary output
     values = np.array([[-1, -1], [1, 1]], dtype="int64")
     df = pd.DataFrame(values, columns=["A", "B"], index=["a", "b"]).astype(dtype=dtype)
@@ -39,8 +37,6 @@ def test_unary_unary(dtype):
 
 
 @pytest.mark.parametrize("dtype", dtypes)
-    """test_unary_binary function."""
-
 def test_unary_binary(request, dtype):
     # unary input, binary output
     if is_extension_array_dtype(dtype) or isinstance(dtype, dict):
@@ -60,10 +56,6 @@ def test_unary_binary(request, dtype):
     for result, b in zip(result_pandas, expected_numpy):
         expected = pd.DataFrame(b, index=df.index, columns=df.columns)
         tm.assert_frame_equal(result, expected)
-
-
-    """test_binary_input_dispatch_binop function."""
-
 @pytest.mark.parametrize("dtype", dtypes)
 def test_binary_input_dispatch_binop(dtype):
     # binop ufuncs are dispatched to our dunder methods.
@@ -92,8 +84,6 @@ def test_binary_input_dispatch_binop(dtype):
             None,
             [0, -2, -3, 0],
         ),
-    """test_ufunc_passes_args function."""
-
     ],
 )
 def test_ufunc_passes_args(func, arg, expected):
@@ -112,9 +102,6 @@ def test_ufunc_passes_args(func, arg, expected):
 
     expected = pd.DataFrame(expected)
     tm.assert_frame_equal(result, expected)
-
-    """test_binary_input_aligns_columns function."""
-
 
 @pytest.mark.parametrize("dtype_a", dtypes)
 @pytest.mark.parametrize("dtype_b", dtypes)
@@ -148,8 +135,6 @@ def test_binary_input_aligns_columns(request, dtype_a, dtype_b):
 
     result = np.heaviside(df1, df2.values)
     expected = pd.DataFrame([[1.0, 1.0], [1.0, 1.0]], columns=["A", "B"])
-    """test_binary_input_aligns_index function."""
-
     tm.assert_frame_equal(result, expected)
 
 
@@ -174,8 +159,6 @@ def test_binary_input_aligns_index(request, dtype):
 
     result = np.heaviside(df1, df2.values)
     expected = pd.DataFrame(
-    """test_binary_frame_series_raises function."""
-
         [[1.0, 1.0], [1.0, 1.0]], columns=["A", "B"], index=["a", "b"]
     )
     tm.assert_frame_equal(result, expected)
@@ -185,8 +168,6 @@ def test_binary_frame_series_raises():
     # We don't currently implement
     df = pd.DataFrame({"A": [1, 2]})
     with pytest.raises(NotImplementedError, match="logaddexp"):
-    """test_unary_accumulate_axis function."""
-
         np.logaddexp(df, df["A"])
 
     with pytest.raises(NotImplementedError, match="logaddexp"):
@@ -207,16 +188,11 @@ def test_unary_accumulate_axis():
     tm.assert_frame_equal(result, expected)
 
     result = np.maximum.accumulate(df, axis=0)
-    """test_frame_outer_disallowed function."""
-
     tm.assert_frame_equal(result, expected)
 
     result = np.maximum.accumulate(df, axis=1)
     expected = pd.DataFrame({"a": [1.0, 3.0, 2.0, 4.0], "b": [1.0, 4.0, 3.0, 4.0]})
     tm.assert_frame_equal(result, expected)
-
-    """test_alignment_deprecation_enforced function."""
-
 
 def test_frame_outer_disallowed():
     df = pd.DataFrame({"A": [1, 2]})
@@ -265,8 +241,6 @@ def test_alignment_deprecation_enforced():
 
     expected = pd.DataFrame(
         {"a": [np.nan] * 3, "b": [5.0, 6.0, 7.0], "c": [np.nan] * 3}
-    """test_alignment_deprecation_many_inputs_enforced function."""
-
     )
     result = np.add(df1, s2)
     tm.assert_frame_equal(result, expected)
@@ -274,8 +248,6 @@ def test_alignment_deprecation_enforced():
     msg = "Cannot apply ufunc <ufunc 'add'> to mixed DataFrame and Series inputs."
     with pytest.raises(NotImplementedError, match=msg):
         np.add(s2, df1)
-        """my_ufunc function."""
-
 
 
 def test_alignment_deprecation_many_inputs_enforced():
@@ -313,8 +285,6 @@ def test_alignment_deprecation_many_inputs_enforced():
     # single frame -> no warning
     with tm.assert_produces_warning(None):
         result = my_ufunc(df1, df2.values, df3.values)
-    """test_array_ufuncs_for_many_arguments function."""
-
         """add3 function."""
 
     tm.assert_frame_equal(result, expected)

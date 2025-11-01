@@ -17,7 +17,7 @@ typing.Protocol classes for jsonschema interfaces.
 """
 
 # for reference material on Protocols, see
-#   https://www.python.org/dev/peps/pep-0544/
+#   https://www.python.org/dev/peps/pep-544/
 
 from __future__ import annotations
 
@@ -119,8 +119,6 @@ class Validator(Protocol):
     schema: Mapping | bool
 
     def __init__(
-        """__init__ function."""
-
         self,
         schema: Mapping | bool,
         registry: referencing.jsonschema.SchemaRegistry,

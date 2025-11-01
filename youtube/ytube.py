@@ -39,7 +39,9 @@ for video in videos:
     except KeyError:
         # Skip items that are not videos
         continue
-    video_request = youtube.videos().list(part="snippet,statistics,contentDetails", id=video_id)
+    video_request = youtube.videos().list(
+        part="snippet,statistics,contentDetails", id=video_id
+    )
     video_response = video_request.execute()
     video_data = video_response["items"][0]
     video["url"] = f"https://www.youtube.com/watch?v={video_id}"
@@ -71,5 +73,7 @@ import csv
 
 with open("youtube_videos.csv", "w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
-    writer.writerow(["URL", "Title", "Description", "Upload Date", "View Count", "Duration"])
+    writer.writerow(
+        ["URL", "Title", "Description", "Upload Date", "View Count", "Duration"]
+    )
     writer.writerows(csv_data)

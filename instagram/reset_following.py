@@ -33,8 +33,6 @@ class Task(object):
     # getting the user to pick what to do
     @staticmethod
     def start(bot):
-        """start function."""
-
         answer = input(
             """
         Please select
@@ -68,8 +66,6 @@ class Task(object):
             # list of followers script
 
     @staticmethod
-        """one function."""
-
     def one(bot):
         logger.info("Creating List")
         friends = bot.following
@@ -82,9 +78,6 @@ class Task(object):
         Task.start(bot)  # go back to the start menu
 
         # reset following script
-
-        """two function."""
-
     @staticmethod
     def two(bot):
         friends = bot.read_list_from_file(

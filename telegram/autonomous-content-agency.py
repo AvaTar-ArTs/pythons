@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -53,6 +52,7 @@ from typing import Dict, List, Any, Optional
 from anthropic import Anthropic
 from concurrent.futures import ThreadPoolExecutor
 
+
 class ContentAgency:
     """Autonomous content studio with learning capabilities"""
 
@@ -60,14 +60,14 @@ class ContentAgency:
         """__init__ function."""
 
         # API Keys
-        self.openai_key = os.getenv('OPENAI_API_KEY')
-        self.anthropic_key = os.getenv('ANTHROPIC_API_KEY')
-        self.perplexity_key = os.getenv('PERPLEXITY_API_KEY')
-        self.mem0_key = os.getenv('MEM0_API_KEY')
-        self.elevenlabs_key = os.getenv('ELEVENLABS_API_KEY')
-        self.leonardo_key = os.getenv('LEONARDO_API_KEY')
-        self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN')
-        self.telegram_chat = os.getenv('TELEGRAM_CHAT_ID')
+        self.openai_key = os.getenv("OPENAI_API_KEY")
+        self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+        self.perplexity_key = os.getenv("PERPLEXITY_API_KEY")
+        self.mem0_key = os.getenv("MEM0_API_KEY")
+        self.elevenlabs_key = os.getenv("ELEVENLABS_API_KEY")
+        self.leonardo_key = os.getenv("LEONARDO_API_KEY")
+        self.telegram_token = os.getenv("TELEGRAM_BOT_TOKEN")
+        self.telegram_chat = os.getenv("TELEGRAM_CHAT_ID")
 
         self.niche = niche
         self.output_dir = Path.home() / "content_agency"
@@ -83,22 +83,23 @@ class ContentAgency:
 
     def analyze_trends(self) -> Dict[str, Any]:
         """Step 1: Research trending topics with Perplexity"""
-        logger.info(Path("\n") + "="*60)
+        logger.info(Path("\n") + "=" * 60)
         logger.info("🔍 PHASE 1: TREND ANALYSIS")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
         try:
             response = requests.post(
                 "https://api.perplexity.ai/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.perplexity_key}",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 json={
                     "model": "sonar-pro",
-                    "messages": [{
-                        "role": "user",
-                        "content": f"""Analyze trending topics in {self.niche} for content creation.
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": f"""Analyze trending topics in {self.niche} for content creation.
 
 Return top 5 topics with:
 - Topic name
@@ -107,23 +108,26 @@ Return top 5 topics with:
 - Key angles
 - Estimated interest duration
 
-Format as JSON."""
-                    }],
-                    "search_recency_filter": "day"
+Format as JSON.""",
+                        }
+                    ],
+                    "search_recency_filter": "day",
                 },
-                timeout=30
+                timeout=30,
             )
 
             if response.status_code == CONSTANT_200:
                 result = response.json()
                 trends_text = result["choices"][0]["message"]["content"]
                 logger.info(f"   ✅ Analyzed trending topics")
-                logger.info(f"   📊 Sources: {len(result.get('citations', []))} citations")
+                logger.info(
+                    f"   📊 Sources: {len(result.get('citations', []))} citations"
+                )
 
                 return {
                     "trends": trends_text,
                     "citations": result.get("citations", []),
-                    "timestamp": datetime.now().isoformat()
+                    "timestamp": datetime.now().isoformat(),
                 }
             else:
                 logger.info(f"   ⚠️ Perplexity error: {response.status_code}")
@@ -145,14 +149,14 @@ Format as JSON."""
                 "https://api.mem0.ai/v1/memories/search",
                 headers={
                     "Authorization": f"Bearer {self.mem0_key}",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 json={
                     "user_id": f"content_agency_{self.niche}",
                     "query": f"successful content strategies for {self.niche}",
-                    "limit": 10
+                    "limit": 10,
                 },
-                timeout=10
+                timeout=10,
             )
 
             if response.status_code == CONSTANT_200:
@@ -207,16 +211,16 @@ Return array of 10 ideas."""
         try:
             response = openai.chat.completions.create(
                 model="gpt-5",
-                messages=[{
-                    "role": "system",
-                    "content": "You are a viral content strategist with deep understanding of audience psychology and platform algorithms."
-                }, {
-                    "role": "user",
-                    "content": prompt
-                }],
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are a viral content strategist with deep understanding of audience psychology and platform algorithms.",
+                    },
+                    {"role": "user", "content": prompt},
+                ],
                 temperature=0.9,
                 max_tokens=CONSTANT_4000,
-                response_format={"type": "json_object"}
+                response_format={"type": "json_object"},
             )
 
             ideas_json = response.choices[0].message.content
@@ -239,9 +243,10 @@ Return array of 10 ideas."""
             message = client.messages.create(
                 model="claude-opus-4-20250514",
                 max_tokens=CONSTANT_4096,
-                messages=[{
-                    "role": "user",
-                    "content": f"""Critique these content ideas: {json.dumps(ideas, indent=2)}
+                messages=[
+                    {
+                        "role": "user",
+                        "content": f"""Critique these content ideas: {json.dumps(ideas, indent=2)}
 
 Evaluate each on:
 1. **Originality** (1-10): Avoid clickbait clichés, genuinely fresh angle?
@@ -263,8 +268,9 @@ Return JSON:
     "overall_analysis": "Strategic summary"
 }}
 
-Be brutally honest. Only recommend producing ideas that are truly exceptional."""
-                }]
+Be brutally honest. Only recommend producing ideas that are truly exceptional.""",
+                    }
+                ],
             )
 
             critique_json = message.content[0].text
@@ -281,18 +287,26 @@ Be brutally honest. Only recommend producing ideas that are truly exceptional.""
 
             logger.info(f"   ✅ Claude critique complete")
             logger.info(f"   📊 Recommendations:")
-            produce_count = sum(1 for r in ranked if r.get("recommendation") == "produce")
+            produce_count = sum(
+                1 for r in ranked if r.get("recommendation") == "produce"
+            )
             logger.info(f"      Produce: {produce_count}")
-            logger.info(f"      Revise: {sum(1 for r in ranked if r.get('recommendation') == 'revise')}")
-            logger.info(f"      Skip: {sum(1 for r in ranked if r.get('recommendation') == 'skip')}")
+            logger.info(
+                f"      Revise: {sum(1 for r in ranked if r.get('recommendation') == 'revise')}"
+            )
+            logger.info(
+                f"      Skip: {sum(1 for r in ranked if r.get('recommendation') == 'skip')}"
+            )
 
             return ranked
 
         except Exception as e:
             logger.info(f"   ❌ Error: {e}")
             # Fallback: return original ideas with basic scoring
-            return [{"id": i, "total_score": idea.get("viral_score", 5) * 10}
-                    for i, idea in enumerate(ideas)]
+            return [
+                {"id": i, "total_score": idea.get("viral_score", 5) * 10}
+                for i, idea in enumerate(ideas)
+            ]
 
     # ===================================================================
     # PHASE 2: CONTENT PRODUCTION
@@ -301,7 +315,9 @@ Be brutally honest. Only recommend producing ideas that are truly exceptional.""
     async def produce_content_variants(self, idea: Dict, top_ideas: List[Dict]) -> Dict:
         """Step 5: Generate content variants in parallel"""
         logger.info(f"\n🎬 PHASE 2: PRODUCING CONTENT")
-        logger.info(f"   Topic: {idea['title'] if 'title' in idea else top_ideas[idea['id']]['title']}")
+        logger.info(
+            f"   Topic: {idea['title'] if 'title' in idea else top_ideas[idea['id']]['title']}"
+        )
 
         # Get original idea details
         original_idea = top_ideas[idea["id"]]
@@ -310,7 +326,7 @@ Be brutally honest. Only recommend producing ideas that are truly exceptional.""
         tasks = [
             self._generate_script_variants(original_idea, count=3),
             self._generate_thumbnail_variants(original_idea, count=5),
-            self._generate_voice_variants(original_idea, count=2)
+            self._generate_voice_variants(original_idea, count=2),
         ]
 
         try:
@@ -323,26 +339,30 @@ Be brutally honest. Only recommend producing ideas that are truly exceptional.""
             for script in scripts:
                 for thumbnail in thumbnails:
                     for voice in voices:
-                        variants.append({
-                            "id": f"v{variant_id}",
-                            "idea_id": idea["id"],
-                            "script": script,
-                            "thumbnail": thumbnail,
-                            "voice": voice,
-                            "created": datetime.now().isoformat()
-                        })
+                        variants.append(
+                            {
+                                "id": f"v{variant_id}",
+                                "idea_id": idea["id"],
+                                "script": script,
+                                "thumbnail": thumbnail,
+                                "voice": voice,
+                                "created": datetime.now().isoformat(),
+                            }
+                        )
                         variant_id += 1
 
             logger.info(f"   ✅ Created {len(variants)} variants")
-            logger.info(f"      Scripts: {len(scripts)} × Thumbnails: {len(thumbnails)} × Voices: {len(voices)}")
+            logger.info(
+                f"      Scripts: {len(scripts)} × Thumbnails: {len(thumbnails)} × Voices: {len(voices)}"
+            )
 
             return {
                 "idea": original_idea,
                 "variants": variants,
                 "metadata": {
                     "production_time": datetime.now().isoformat(),
-                    "variant_count": len(variants)
-                }
+                    "variant_count": len(variants),
+                },
             }
 
         except Exception as e:
@@ -362,9 +382,10 @@ Be brutally honest. Only recommend producing ideas that are truly exceptional.""
             try:
                 response = openai.chat.completions.create(
                     model="gpt-5",
-                    messages=[{
-                        "role": "user",
-                        "content": f"""Write a {tone} script for: {idea['title']}
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": f"""Write a {tone} script for: {idea['title']}
 
 Hook: {idea.get('hook', 'Start strong')}
 Key points: {idea.get('key_points', [])}
@@ -372,27 +393,32 @@ Key points: {idea.get('key_points', [])}
 Duration: ~60 seconds
 Tone: {tone}
 
-Return just the script text."""
-                    }],
+Return just the script text.""",
+                        }
+                    ],
                     temperature=0.8,
-                    max_tokens=CONSTANT_1000
+                    max_tokens=CONSTANT_1000,
                 )
 
                 script = response.choices[0].message.content
 
-                scripts.append({
-                    "variant": f"script_{i}",
-                    "tone": tone,
-                    "content": script,
-                    "word_count": len(script.split())
-                })
+                scripts.append(
+                    {
+                        "variant": f"script_{i}",
+                        "tone": tone,
+                        "content": script,
+                        "word_count": len(script.split()),
+                    }
+                )
 
             except Exception as e:
                 logger.info(f"         Error generating script {i}: {e}")
 
         return scripts
 
-    async def _generate_thumbnail_variants(self, idea: Dict, count: int = 5) -> List[Dict]:
+    async def _generate_thumbnail_variants(
+        self, idea: Dict, count: int = 5
+    ) -> List[Dict]:
         """Generate thumbnail concepts"""
         logger.info(f"      🎨 Generating {count} thumbnail concepts...")
 
@@ -401,12 +427,14 @@ Return just the script text."""
 
         thumbnails = []
         for i in range(count):
-            thumbnails.append({
-                "variant": f"thumb_{i}",
-                "style": styles[i % len(styles)],
-                "prompt": f"{idea['title']} - {styles[i % len(styles)]} style",
-                "url": f"mock_thumbnail_{i}.jpg"
-            })
+            thumbnails.append(
+                {
+                    "variant": f"thumb_{i}",
+                    "style": styles[i % len(styles)],
+                    "prompt": f"{idea['title']} - {styles[i % len(styles)]} style",
+                    "url": f"mock_thumbnail_{i}.jpg",
+                }
+            )
 
         return thumbnails
 
@@ -416,7 +444,7 @@ Return just the script text."""
 
         voices = [
             {"id": "21m00Tcm4TlvDq8ikWAM", "name": "Rachel", "style": "professional"},
-            {"id": "EXAVITQu4vr4xnSDxMaL", "name": "Bella", "style": "warm"}
+            {"id": "EXAVITQu4vr4xnSDxMaL", "name": "Bella", "style": "warm"},
         ]
 
         return [voices[i] for i in range(min(count, len(voices)))]
@@ -462,11 +490,8 @@ Please react to provide feedback!"""
 
             requests.post(
                 f"https://api.telegram.org/bot{self.telegram_token}/sendMessage",
-                json={
-                    "chat_id": self.telegram_chat,
-                    "text": caption
-                },
-                timeout=10
+                json={"chat_id": self.telegram_chat, "text": caption},
+                timeout=10,
             )
 
         except Exception as e:
@@ -487,16 +512,16 @@ Please react to provide feedback!"""
                 "engagement_rate": 0.05 + (hash(variant["id"]) % 10) / CONSTANT_100,
                 "completion_rate": 0.60 + (hash(variant["id"]) % 20) / CONSTANT_100,
                 "shares": int(10 * (1 + variant["id"].count("1"))),  # Mock
-                "ctr": 0.03 + (hash(variant["id"]) % 5) / CONSTANT_100
+                "ctr": 0.03 + (hash(variant["id"]) % 5) / CONSTANT_100,
             }
 
             # Calculate engagement score
             perf = variant["performance"]
             variant["engagement_score"] = (
-                perf["engagement_rate"] * 0.3 +
-                perf["completion_rate"] * 0.3 +
-                (perf["shares"] / CONSTANT_100) * 0.2 +
-                perf["ctr"] * 0.2
+                perf["engagement_rate"] * 0.3
+                + perf["completion_rate"] * 0.3
+                + (perf["shares"] / CONSTANT_100) * 0.2
+                + perf["ctr"] * 0.2
             )
 
         # Sort by performance
@@ -518,7 +543,7 @@ Please react to provide feedback!"""
             "winner": winner,
             "top_3": top_3,
             "insights": insights,
-            "analysis_time": datetime.now().isoformat()
+            "analysis_time": datetime.now().isoformat(),
         }
 
     def _extract_insights(self, variants: List[Dict]) -> List[str]:
@@ -534,11 +559,14 @@ Please react to provide feedback!"""
             tone_performance[tone].append(v["engagement_score"])
 
         # Find best tone
-        avg_scores = {tone: sum(scores)/len(scores)
-                      for tone, scores in tone_performance.items()}
+        avg_scores = {
+            tone: sum(scores) / len(scores) for tone, scores in tone_performance.items()
+        }
         best_tone = max(avg_scores, key=avg_scores.get)
 
-        insights.append(f"'{best_tone}' tone performed {avg_scores[best_tone]:.0%} better")
+        insights.append(
+            f"'{best_tone}' tone performed {avg_scores[best_tone]:.0%} better"
+        )
 
         # Thumbnail insights
         style_performance = {}
@@ -548,8 +576,10 @@ Please react to provide feedback!"""
                 style_performance[style] = []
             style_performance[style].append(v["engagement_score"])
 
-        avg_style_scores = {style: sum(scores)/len(scores)
-                            for style, scores in style_performance.items()}
+        avg_style_scores = {
+            style: sum(scores) / len(scores)
+            for style, scores in style_performance.items()
+        }
         best_style = max(avg_style_scores, key=avg_style_scores.get)
 
         insights.append(f"'{best_style}' thumbnails drove higher engagement")
@@ -563,8 +593,10 @@ Please react to provide feedback!"""
             voice_performance[voice].append(v["engagement_score"])
 
         if len(voice_performance) > 1:
-            avg_voice_scores = {voice: sum(scores)/len(scores)
-                                for voice, scores in voice_performance.items()}
+            avg_voice_scores = {
+                voice: sum(scores) / len(scores)
+                for voice, scores in voice_performance.items()
+            }
             best_voice = max(avg_voice_scores, key=avg_voice_scores.get)
             insights.append(f"'{best_voice}' voice resonated better with audience")
 
@@ -596,16 +628,13 @@ Timestamp: {performance_data['analysis_time']}"""
                 "https://api.mem0.ai/v1/memories",
                 headers={
                     "Authorization": f"Bearer {self.mem0_key}",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 json={
                     "user_id": f"content_agency_{self.niche}",
-                    "messages": [{
-                        "role": "assistant",
-                        "content": insights_text
-                    }]
+                    "messages": [{"role": "assistant", "content": insights_text}],
                 },
-                timeout=10
+                timeout=10,
             )
 
             if response.status_code == CONSTANT_200:
@@ -622,19 +651,19 @@ Timestamp: {performance_data['analysis_time']}"""
 
     def run_autonomous_cycle(self, iterations: int = 3):
         """Run complete autonomous content production cycle"""
-        logger.info("="*60)
+        logger.info("=" * 60)
         logger.info("🚀 AUTONOMOUS CONTENT AGENCY")
-        logger.info("="*60)
+        logger.info("=" * 60)
         logger.info(f"Niche: {self.niche}")
         logger.info(f"Iterations: {iterations}")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
         for i in range(iterations):
             self.iteration_count = i + 1
 
             logger.info(f"\n{'#'*60}")
             logger.info(f"# ITERATION {self.iteration_count}/{iterations}")
-            logger.info('#'*60)
+            logger.info("#" * 60)
 
             # Phase 1: Research & Ideation
             trends = self.analyze_trends()
@@ -648,7 +677,9 @@ Timestamp: {performance_data['analysis_time']}"""
             ranked_ideas = self.critique_with_claude(ideas)
 
             # Phase 2: Production (top 2 ideas)
-            top_ideas = [r for r in ranked_ideas if r.get("recommendation") == "produce"][:2]
+            top_ideas = [
+                r for r in ranked_ideas if r.get("recommendation") == "produce"
+            ][:2]
 
             if not top_ideas:
                 logger.info("⚠️ No ideas recommended for production")
@@ -681,9 +712,9 @@ Timestamp: {performance_data['analysis_time']}"""
                 logger.info(f"\n⏳ Waiting 10 seconds before next iteration...")
                 time.sleep(10)
 
-        logger.info(Path("\n") + "="*60)
+        logger.info(Path("\n") + "=" * 60)
         logger.info("🎉 AUTONOMOUS CYCLE COMPLETE!")
-        logger.info("="*60)
+        logger.info("=" * 60)
         logger.info(f"Total iterations: {self.iteration_count}")
         logger.info(f"Results saved to: {self.output_dir}")
 
@@ -696,7 +727,7 @@ Timestamp: {performance_data['analysis_time']}"""
             "niche": self.niche,
             "timestamp": datetime.now().isoformat(),
             "winner": performance["winner"],
-            "insights": performance["insights"]
+            "insights": performance["insights"],
         }
 
         results_file.write_text(json.dumps(results, indent=2))
@@ -707,10 +738,14 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="Autonomous Content Agency")
-    parser.add_argument("--niche", default="AI Technology",
-                        help="Content niche (default: AI Technology)")
-    parser.add_argument("--iterations", type=int, default=3,
-                        help="Number of iterations (default: 3)")
+    parser.add_argument(
+        "--niche",
+        default="AI Technology",
+        help="Content niche (default: AI Technology)",
+    )
+    parser.add_argument(
+        "--iterations", type=int, default=3, help="Number of iterations (default: 3)"
+    )
 
     args = parser.parse_args()
 

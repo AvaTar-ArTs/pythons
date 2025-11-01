@@ -68,7 +68,9 @@ class NativeCodeGenerator(CodeGenerator):
         return repr("".join([str(v) for v in group]))
         """_output_child_to_const function."""
 
-    def _output_child_to_const(self, node: nodes.Expr, frame: Frame, finalize: CodeGenerator._FinalizeInfo) -> t.Any:
+    def _output_child_to_const(
+        self, node: nodes.Expr, frame: Frame, finalize: CodeGenerator._FinalizeInfo
+    ) -> t.Any:
         const = node.as_const(frame.eval_ctx)
 
         if not has_safe_repr(const):
@@ -81,13 +83,17 @@ class NativeCodeGenerator(CodeGenerator):
 
         return finalize.const(const)  # type: ignore
 
-    def _output_child_pre(self, node: nodes.Expr, frame: Frame, finalize: CodeGenerator._FinalizeInfo) -> None:
+    def _output_child_pre(
+        self, node: nodes.Expr, frame: Frame, finalize: CodeGenerator._FinalizeInfo
+    ) -> None:
         """_output_child_post function."""
 
         if finalize.src is not None:
             self.write(finalize.src)
 
-    def _output_child_post(self, node: nodes.Expr, frame: Frame, finalize: CodeGenerator._FinalizeInfo) -> None:
+    def _output_child_post(
+        self, node: nodes.Expr, frame: Frame, finalize: CodeGenerator._FinalizeInfo
+    ) -> None:
         if finalize.src is not None:
             self.write(")")
 
@@ -118,7 +124,9 @@ class NativeTemplate(Template):
 
     async def render_async(self, *args: t.Any, **kwargs: t.Any) -> t.Any:
         if not self.environment.is_async:
-            raise RuntimeError("The environment was not created with async mode enabled.")
+            raise RuntimeError(
+                "The environment was not created with async mode enabled."
+            )
 
         ctx = self.new_context(dict(*args, **kwargs))
 

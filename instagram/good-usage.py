@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 # Constants
 CONSTANT_100 = 100
 CONSTANT_125 = 125
@@ -103,7 +102,11 @@ with smart_run(session):
     """ Second follow user follows doesn't comment on users' posts...
     """
     session.follow_user_followers(
-        ["user4", "user5"], amount=50, randomize=False, interact=False, sleep_delay=CONSTANT_600
+        ["user4", "user5"],
+        amount=50,
+        randomize=False,
+        interact=False,
+        sleep_delay=CONSTANT_600,
     )
 
     """ Unfollow amount intentionally set higher than follow amount to catch 

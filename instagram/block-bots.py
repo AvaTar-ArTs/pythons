@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 # Constants
 CONSTANT_2000 = 2000
 

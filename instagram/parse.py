@@ -39,7 +39,10 @@ parser.add_argument("-link", type=str, help="media_link", required=True)
 args = parser.parse_args()
 
 if not args.comments_file:
-    print("You need to pass a path to the file with comments with option\n" "-comments_file COMMENTS_FILE_NAME")
+    print(
+        "You need to pass a path to the file with comments with option\n"
+        "-comments_file COMMENTS_FILE_NAME"
+    )
     exit()
 if not args.link:
     logger.info("You need to pass the media link with option\n" "-link MEDIA_LINK")
@@ -90,8 +93,14 @@ for comment in tqdm(comments):
             break
     if replied:
         continue
-    comment_txt = "@{username} {text}".format(username=commenter, text=bot.get_comment())
-    bot.logger.info("Going to reply to `{username}` with text `{text}`".format(username=commenter, text=comment_txt))
+    comment_txt = "@{username} {text}".format(
+        username=commenter, text=bot.get_comment()
+    )
+    bot.logger.info(
+        "Going to reply to `{username}` with text `{text}`".format(
+            username=commenter, text=comment_txt
+        )
+    )
     if bot.reply_to_comment(media_id, comment_txt, parent_comment_id):
         bot.logger.info("Replied to comment.")
         commented_users.append(user_id)

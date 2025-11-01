@@ -29,7 +29,9 @@ CONSTANT_200 = 200
 
 
 # Configure Tesseract for OCR
-pytesseract.pytesseract.tesseract_cmd = Path("/usr/local/bin/tesseract")  # Adjust path as needed
+pytesseract.pytesseract.tesseract_cmd = Path(
+    "/usr/local/bin/tesseract"
+)  # Adjust path as needed
 
 # Constants
 BATCH_SIZE = 50
@@ -115,7 +117,11 @@ def suggest_product(platform, dominant_color, text):
     category = "unknown"
 
     if text:
-        category = "sticker" if len(text) < 50 else "t-shirt" if platform == "tiktok" else "ceramic mug"
+        category = (
+            "sticker"
+            if len(text) < 50
+            else "t-shirt" if platform == "tiktok" else "ceramic mug"
+        )
 
     elif r > g and r > b:
         category = "hoodie" if platform == "tiktok" else "tote bag"
@@ -156,7 +162,9 @@ def process_batch(batch, root, platform):
                     "File": file,
                     "Product": product_category,
                     "Category": product_category,
-                    "Features": ", ".join(PLATFORMS[platform].get(product_category, [])),
+                    "Features": ", ".join(
+                        PLATFORMS[platform].get(product_category, [])
+                    ),
                     "Mockup Recommendation": MOCKUP_GUIDE.get(product_category, "N/A"),
                 }
             )
@@ -193,7 +201,9 @@ def process_images(source_directory, platform):
 def write_csv(source_directory, csv_rows):
     folder_name = os.path.basename(os.path.normpath(source_directory))
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-    output_file = os.path.join(source_directory, f"{folder_name}_organized_{timestamp}.csv")
+    output_file = os.path.join(
+        source_directory, f"{folder_name}_organized_{timestamp}.csv"
+    )
 
     with open(output_file, mode="w", newline="", encoding="utf-8") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=CSV_FIELDS)
@@ -213,7 +223,11 @@ def main():
     logger.info("1️⃣ Etsy")
     logger.info("2️⃣ TikTok")
     platform_choice = input("\n🔹 Enter 1 or 2: ").strip()
-    platform = "etsy" if platform_choice == "1" else "tiktok" if platform_choice == "2" else None
+    platform = (
+        "etsy"
+        if platform_choice == "1"
+        else "tiktok" if platform_choice == "2" else None
+    )
 
     if not platform:
         logger.info("❌ Invalid platform choice! Exiting.")

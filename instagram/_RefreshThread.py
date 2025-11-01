@@ -43,19 +43,12 @@ class _RefreshThread(Thread):
     """A thread that calls refresh() at regular intervals."""
 
     def __init__(self, live: "Live", refresh_per_second: float) -> None:
-        """__init__ function."""
-
         self.live = live
         self.refresh_per_second = refresh_per_second
         self.done = Event()
         super().__init__(daemon=True)
-
-        """stop function."""
-
     def stop(self) -> None:
         self.done.set()
-        """run function."""
-
 
     def run(self) -> None:
         while not self.done.wait(1 / self.refresh_per_second):
@@ -78,8 +71,6 @@ class Live(JupyterMixin, RenderHook):
         redirect_stderr (bool, optional): Enable redirection of stderr. Defaults to True.
         vertical_overflow (VerticalOverflowMethod, optional): How to handle renderable when it is too tall for the console. Defaults to "ellipsis".
         get_renderable (Callable[[], RenderableType], optional): Optional callable to get renderable. Defaults to None.
-        """__init__ function."""
-
     """
 
     def __init__(
@@ -125,8 +116,6 @@ class Live(JupyterMixin, RenderHook):
 
     @property
     def is_started(self) -> bool:
-        """get_renderable function."""
-
         """Check if live display has been started."""
         return self._started
 
@@ -202,13 +191,9 @@ class Live(JupyterMixin, RenderHook):
                     if self._alt_screen:
                         self.console.set_alt_screen(False)
                     if self.transient and not self._alt_screen:
-        """__enter__ function."""
-
                         self.console.control(self._live_render.restore_cursor())
                     if self.ipy_widget is not None and self.transient:
                         self.ipy_widget.close()  # pragma: no cover
-        """__exit__ function."""
-
 
     def __enter__(self) -> Self:
         self.start(refresh=self._renderable is not None)

@@ -21,7 +21,9 @@ CONSTANT_1800 = 1800
 
 
 # Setup logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
+)
 
 # Load environment variables
 env_path = Path("~/.env")
@@ -64,7 +66,11 @@ def transcribe_audio(file_path: Path, start_time: float, end_time: float) -> str
     """Transcribe a section of MP4 using Whisper."""
     with open(file_path, "rb") as audio_file:
         transcript_data = openai.Audio.transcribe(
-            "whisper-1", audio_file, response_format="verbose_json", start_time=start_time, end_time=end_time
+            "whisper-1",
+            audio_file,
+            response_format="verbose_json",
+            start_time=start_time,
+            end_time=end_time,
         )
     return Path("\n").join(
         f"{format_timestamp(seg['start'])} -- {format_timestamp(seg['end'])}: {seg['text']}"
@@ -123,13 +129,20 @@ def process_media_directory(media_dir: Path):
                 f"Transcribing {file_path.name} from {format_timestamp(start_time)} to {format_timestamp(end_time)}..."
             )
             transcript = transcribe_audio(file_path, start_time, end_time)
-            (TRANSCRIPT_DIR / f"{filename_no_ext}_transcript_{start_time}_{end_time}.txt").write_text(transcript)
+            (
+                TRANSCRIPT_DIR
+                / f"{filename_no_ext}_transcript_{start_time}_{end_time}.txt"
+            ).write_text(transcript)
 
             logging.info(
                 f"Analyzing {file_path.name} from {format_timestamp(start_time)} to {format_timestamp(end_time)}..."
             )
-            analysis = analyze_text(transcript, f"{filename_no_ext}_{start_time}_{end_time}")
-            (ANALYSIS_DIR / f"{filename_no_ext}_analysis_{start_time}_{end_time}.txt").write_text(analysis)
+            analysis = analyze_text(
+                transcript, f"{filename_no_ext}_{start_time}_{end_time}"
+            )
+            (
+                ANALYSIS_DIR / f"{filename_no_ext}_analysis_{start_time}_{end_time}.txt"
+            ).write_text(analysis)
 
             logging.info(
                 f"Completed section {format_timestamp(start_time)} to {format_timestamp(end_time)} of {file_path.name}"

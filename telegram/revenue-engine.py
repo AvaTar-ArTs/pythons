@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -61,15 +60,16 @@ from pathlib import Path
 from typing import Dict, List, Any
 from anthropic import Anthropic
 
+
 class RevenueEngine:
     def __init__(self):
         """__init__ function."""
 
-        self.openai_key = os.getenv('OPENAI_API_KEY')
-        self.anthropic_key = os.getenv('ANTHROPIC_API_KEY')
-        self.perplexity_key = os.getenv('PERPLEXITY_API_KEY')
-        self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN')
-        self.telegram_chat = os.getenv('TELEGRAM_CHAT_ID')
+        self.openai_key = os.getenv("OPENAI_API_KEY")
+        self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+        self.perplexity_key = os.getenv("PERPLEXITY_API_KEY")
+        self.telegram_token = os.getenv("TELEGRAM_BOT_TOKEN")
+        self.telegram_chat = os.getenv("TELEGRAM_CHAT_ID")
 
         self.data_dir = Path.home() / "revenue_engine"
         self.data_dir.mkdir(exist_ok=True)
@@ -84,16 +84,20 @@ class RevenueEngine:
 
     async def generate_revenue_strategy(self):
         """Generate comprehensive $10K revenue strategy"""
-        logger.info("="*60)
+        logger.info("=" * 60)
         logger.info("💰 REVENUE STRATEGY GENERATOR")
         logger.info(f"Target: ${self.target_revenue} by {self.target_date}")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
         # Calculate timeline
-        days_remaining = (datetime.strptime(self.target_date, "%Y-%m-%d") - datetime.now()).days
+        days_remaining = (
+            datetime.strptime(self.target_date, "%Y-%m-%d") - datetime.now()
+        ).days
         weeks_remaining = days_remaining // 7
 
-        logger.info(f"\n⏰ Timeline: {days_remaining} days ({weeks_remaining} weeks) remaining")
+        logger.info(
+            f"\n⏰ Timeline: {days_remaining} days ({weeks_remaining} weeks) remaining"
+        )
 
         # 1. Analyze AI workflows for monetization
         monetization_analysis = await self._analyze_workflow_monetization()
@@ -119,7 +123,7 @@ class RevenueEngine:
             "timeline": {
                 "days_remaining": days_remaining,
                 "weeks_remaining": weeks_remaining,
-                "target_date": self.target_date
+                "target_date": self.target_date,
             },
             "monetization_analysis": monetization_analysis,
             "revenue_plan": revenue_plan,
@@ -127,7 +131,7 @@ class RevenueEngine:
             "acquisition": acquisition,
             "retention": retention,
             "action_plan": action_plan,
-            "created": datetime.now().isoformat()
+            "created": datetime.now().isoformat(),
         }
 
         self._save_strategy(strategy)
@@ -143,33 +147,33 @@ class RevenueEngine:
             "newsletter_empire": {
                 "file": "newsletter_empire.py",
                 "capabilities": "Multi-niche newsletters with personalization, 50 A/B tested subject lines",
-                "apis": 13
+                "apis": 13,
             },
             "code_review": {
                 "file": "code_review_system.py",
                 "capabilities": "Multi-model code review with automated fixes",
-                "apis": 9
+                "apis": 9,
             },
             "brand_builder": {
                 "file": "brand_builder.py",
                 "capabilities": "Complete brand identity creation",
-                "apis": 12
+                "apis": 12,
             },
             "learning_system": {
                 "file": "learning_system.py",
                 "capabilities": "Personalized learning paths with audio lessons",
-                "apis": 10
+                "apis": 10,
             },
             "business_intelligence": {
                 "file": "business_intelligence.py",
                 "capabilities": "Daily market intelligence with voice briefings",
-                "apis": 11
+                "apis": 11,
             },
             "market_research": {
                 "file": "market_research_platform.py",
                 "capabilities": "Competitor tracking and pricing analysis",
-                "apis": 10
-            }
+                "apis": 10,
+            },
         }
 
         client = Anthropic(api_key=self.anthropic_key)
@@ -177,9 +181,10 @@ class RevenueEngine:
         message = client.messages.create(
             model="claude-opus-4-20250514",
             max_tokens=CONSTANT_4096,
-            messages=[{
-                "role": "user",
-                "content": f"""Analyze these AI workflows for monetization potential:
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Analyze these AI workflows for monetization potential:
 
 {json.dumps(workflows, indent=2)}
 
@@ -197,8 +202,9 @@ Also suggest:
 - Upsell opportunities
 - Market positioning
 
-Return detailed JSON."""
-            }]
+Return detailed JSON.""",
+                }
+            ],
         )
 
         analysis_text = message.content[0].text
@@ -221,9 +227,10 @@ Return detailed JSON."""
 
         response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"""Create revenue plan to reach $10,CONSTANT_000 in {days_remaining} days.
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Create revenue plan to reach $10,CONSTANT_000 in {days_remaining} days.
 
 Available AI services:
 1. Newsletter automation (13 APIs)
@@ -278,9 +285,10 @@ Return JSON with:
     }}],
     "quick_wins": ["win1"],
     "total_projected": CONSTANT_10000
-}}"""
-            }],
-            response_format={"type": "json_object"}
+}}""",
+                }
+            ],
+            response_format={"type": "json_object"},
         )
 
         plan = json.loads(response.choices[0].message.content)
@@ -296,13 +304,14 @@ Return JSON with:
             "https://api.perplexity.ai/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.perplexity_key}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": "sonar-pro",
-                "messages": [{
-                    "role": "user",
-                    "content": """Current market rates for AI services:
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": """Current market rates for AI services:
 
 1. AI newsletter creation services - per newsletter
 2. Code review automation - per project
@@ -311,10 +320,11 @@ Return JSON with:
 5. Business intelligence reports - monthly subscription
 6. Market research services - per report
 
-Provide realistic pricing ranges for freelance/agency rates."""
-                }]
+Provide realistic pricing ranges for freelance/agency rates.""",
+                    }
+                ],
             },
-            timeout=30
+            timeout=30,
         )
 
         market_rates = {}
@@ -326,9 +336,10 @@ Provide realistic pricing ranges for freelance/agency rates."""
 
         pricing_response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"""Create pricing strategy based on market research:
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Create pricing strategy based on market research:
 
 {market_rates}
 
@@ -361,16 +372,19 @@ Create tiered pricing for:
 
 Price competitively but premium (AI-powered = 2-3x human rates).
 
-Return JSON with exact pricing."""
-            }],
-            response_format={"type": "json_object"}
+Return JSON with exact pricing.""",
+                }
+            ],
+            response_format={"type": "json_object"},
         )
 
         pricing = json.loads(pricing_response.choices[0].message.content)
         logger.info("   ✅ Pricing strategy created")
         return pricing
 
-    async def _create_acquisition_plan(self, revenue_plan: Dict, days_remaining: int) -> Dict:
+    async def _create_acquisition_plan(
+        self, revenue_plan: Dict, days_remaining: int
+    ) -> Dict:
         """Create customer acquisition plan"""
         logger.info("\n🎯 Creating acquisition plan...")
 
@@ -378,9 +392,10 @@ Return JSON with exact pricing."""
 
         response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"""Create customer acquisition plan for {days_remaining} days.
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Create customer acquisition plan for {days_remaining} days.
 
 Revenue streams: {json.dumps(revenue_plan.get('streams', []), indent=2)}
 
@@ -425,9 +440,10 @@ For each week provide:
 - Success metrics
 - Conversion targets
 
-Return detailed JSON."""
-            }],
-            response_format={"type": "json_object"}
+Return detailed JSON.""",
+                }
+            ],
+            response_format={"type": "json_object"},
         )
 
         acquisition = json.loads(response.choices[0].message.content)
@@ -443,9 +459,10 @@ Return detailed JSON."""
         message = client.messages.create(
             model="claude-opus-4-20250514",
             max_tokens=CONSTANT_3072,
-            messages=[{
-                "role": "user",
-                "content": """Create comprehensive customer retention strategy for AI services.
+            messages=[
+                {
+                    "role": "user",
+                    "content": """Create comprehensive customer retention strategy for AI services.
 
 RETENTION TACTICS:
 
@@ -508,8 +525,9 @@ For each tactic provide:
 - Success metrics
 - Tools needed
 
-Return comprehensive JSON."""
-            }]
+Return comprehensive JSON.""",
+                }
+            ],
         )
 
         retention_text = message.content[0].text
@@ -537,7 +555,7 @@ Return comprehensive JSON."""
                 "Reach out to 10 potential clients (warm network)",
                 "Join 5 relevant communities (Discord, Slack, Reddit)",
                 "Create service packages and pricing doc",
-                "Set up Stripe for payments"
+                "Set up Stripe for payments",
             ],
             "week_1": {
                 "revenue_target": CONSTANT_500,
@@ -547,9 +565,9 @@ Return comprehensive JSON."""
                     "LinkedIn: Post daily (showcase AI capabilities)",
                     "Direct outreach: 50 companies (small businesses)",
                     "Create 3 case study demos",
-                    "Offer 50% discount to first 3 clients (testimonials)"
+                    "Offer 50% discount to first 3 clients (testimonials)",
                 ],
-                "success_metric": "1-2 paying clients"
+                "success_metric": "1-2 paying clients",
             },
             "week_2": {
                 "revenue_target": CONSTANT_1000,
@@ -559,9 +577,9 @@ Return comprehensive JSON."""
                     "Create video demo of services",
                     "Join niche Facebook groups, provide value",
                     "Guest post on Medium about AI automation",
-                    "Reach out to 50 more prospects"
+                    "Reach out to 50 more prospects",
                 ],
-                "success_metric": "3-4 total clients"
+                "success_metric": "3-4 total clients",
             },
             "week_3_4": {
                 "revenue_target": CONSTANT_2500,
@@ -571,9 +589,9 @@ Return comprehensive JSON."""
                     "Create 'done-in-a-day' service offerings",
                     "Start building email list",
                     "Launch newsletter about AI trends",
-                    "Create referral program (20% commission)"
+                    "Create referral program (20% commission)",
                 ],
-                "success_metric": "6-8 total clients, 1-2 repeats"
+                "success_metric": "6-8 total clients, 1-2 repeats",
             },
             "ongoing": {
                 "daily_habits": [
@@ -581,28 +599,30 @@ Return comprehensive JSON."""
                     "LinkedIn post (value, not sales)",
                     "Check and respond to inquiries within 1 hour",
                     "Follow up with prospects",
-                    "Improve one service based on feedback"
+                    "Improve one service based on feedback",
                 ],
                 "weekly_habits": [
                     "Review revenue vs target",
                     "Analyze what's working/not working",
                     "Customer satisfaction check-ins",
                     "Content creation (case study/tutorial)",
-                    "Network expansion"
+                    "Network expansion",
                 ],
                 "monthly_habits": [
                     "Financial review and projections",
                     "Service portfolio optimization",
                     "Pricing strategy review",
                     "Customer retention analysis",
-                    "Strategic planning session"
-                ]
-            }
+                    "Strategic planning session",
+                ],
+            },
         }
 
         return action_plan
 
-    def track_revenue(self, amount: float, source: str, customer: str, description: str):
+    def track_revenue(
+        self, amount: float, source: str, customer: str, description: str
+    ):
         """Track revenue transaction"""
         revenue_data = self._load_revenue_data()
 
@@ -612,17 +632,23 @@ Return comprehensive JSON."""
             "amount": amount,
             "source": source,
             "customer": customer,
-            "description": description
+            "description": description,
         }
 
         revenue_data.setdefault("transactions", []).append(transaction)
-        revenue_data["total_revenue"] = sum(t["amount"] for t in revenue_data["transactions"])
-        revenue_data["remaining_to_target"] = self.target_revenue - revenue_data["total_revenue"]
+        revenue_data["total_revenue"] = sum(
+            t["amount"] for t in revenue_data["transactions"]
+        )
+        revenue_data["remaining_to_target"] = (
+            self.target_revenue - revenue_data["total_revenue"]
+        )
 
         self._save_revenue_data(revenue_data)
 
         logger.info(f"\n✅ Revenue tracked: ${amount}")
-        logger.info(f"   Total: ${revenue_data['total_revenue']:.2f} / ${self.target_revenue}")
+        logger.info(
+            f"   Total: ${revenue_data['total_revenue']:.2f} / ${self.target_revenue}"
+        )
         logger.info(f"   Remaining: ${revenue_data['remaining_to_target']:.2f}")
 
         # Send notification
@@ -630,7 +656,9 @@ Return comprehensive JSON."""
 
         return revenue_data
 
-    def track_customer_engagement(self, customer_id: str, event: str, metadata: Dict = None):
+    def track_customer_engagement(
+        self, customer_id: str, event: str, metadata: Dict = None
+    ):
         """Track customer engagement for retention analysis"""
         engagement_data = self._load_engagement_data()
 
@@ -638,18 +666,21 @@ Return comprehensive JSON."""
             "customer_id": customer_id,
             "event": event,
             "timestamp": datetime.now().isoformat(),
-            "metadata": metadata or {}
+            "metadata": metadata or {},
         }
 
         engagement_data.setdefault("events", []).append(event_record)
 
         # Update customer profile
-        customer_data = engagement_data.setdefault("customers", {}).setdefault(customer_id, {
-            "first_seen": datetime.now().isoformat(),
-            "last_seen": datetime.now().isoformat(),
-            "event_count": 0,
-            "revenue": 0
-        })
+        customer_data = engagement_data.setdefault("customers", {}).setdefault(
+            customer_id,
+            {
+                "first_seen": datetime.now().isoformat(),
+                "last_seen": datetime.now().isoformat(),
+                "event_count": 0,
+                "revenue": 0,
+            },
+        )
 
         customer_data["last_seen"] = datetime.now().isoformat()
         customer_data["event_count"] += 1
@@ -691,7 +722,9 @@ Return comprehensive JSON."""
 
         # Generate re-engagement plan for at-risk customers
         if at_risk_customers:
-            logger.info(f"\n🚨 {len(at_risk_customers)} at-risk customers need attention!")
+            logger.info(
+                f"\n🚨 {len(at_risk_customers)} at-risk customers need attention!"
+            )
             logger.info("\nRecommended actions:")
             logger.info("1. Send personalized check-in email")
             logger.info("2. Offer value-add service (free)")
@@ -702,17 +735,21 @@ Return comprehensive JSON."""
             "active": len(active_customers),
             "at_risk": len(at_risk_customers),
             "churned": len(churned_customers),
-            "retention_rate": len(active_customers) / len(customers) if customers else 0
+            "retention_rate": (
+                len(active_customers) / len(customers) if customers else 0
+            ),
         }
 
     def _print_strategy(self, strategy: Dict):
         """Print formatted strategy"""
-        logger.info(Path("\n") + "="*60)
+        logger.info(Path("\n") + "=" * 60)
         logger.info("💰 REVENUE STRATEGY TO $10K")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
         timeline = strategy["timeline"]
-        logger.info(f"\n⏰ Timeline: {timeline['weeks_remaining']} weeks ({timeline['days_remaining']} days)")
+        logger.info(
+            f"\n⏰ Timeline: {timeline['weeks_remaining']} weeks ({timeline['days_remaining']} days)"
+        )
 
         logger.info("\n📊 REVENUE STREAMS:")
         for i, stream in enumerate(strategy["revenue_plan"].get("streams", []), 1):
@@ -735,7 +772,9 @@ Return comprehensive JSON."""
 
         logger.info("\n📈 WEEKLY MILESTONES:")
         for milestone in strategy["revenue_plan"].get("weekly_milestones", [])[:4]:
-            logger.info(f"   Week {milestone.get('week')}: ${milestone.get('revenue_target')} target")
+            logger.info(
+                f"   Week {milestone.get('week')}: ${milestone.get('revenue_target')} target"
+            )
 
         logger.info("\n🔄 RETENTION PRIORITIES:")
         retention = strategy.get("retention", {})
@@ -746,16 +785,15 @@ Return comprehensive JSON."""
                     if isinstance(strat, dict):
                         logger.info(f"   • {strat.get('name', 'Strategy')}")
 
-        logger.info(Path("\n") + "="*60)
+        logger.info(Path("\n") + "=" * 60)
         logger.info(f"Strategy saved to: {self.data_dir}/strategy.json")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
         """_save_strategy function."""
 
     def _save_strategy(self, strategy: Dict):
         (self.data_dir / "strategy.json").write_text(json.dumps(strategy, indent=2))
         """_load_revenue_data function."""
-
 
     def _load_revenue_data(self) -> Dict:
         if self.revenue_file.exists():
@@ -801,17 +839,25 @@ Remaining: ${revenue_data['remaining_to_target']:.2f}"""
             json={
                 "chat_id": self.telegram_chat,
                 "text": text,
-                "parse_mode": "Markdown"
-            }
+                "parse_mode": "Markdown",
+            },
         )
+
 
 async def main():
     import argparse
+
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=[
-        "generate-strategy", "track-revenue", "track-engagement",
-        "retention-report", "dashboard"
-    ])
+    parser.add_argument(
+        "command",
+        choices=[
+            "generate-strategy",
+            "track-revenue",
+            "track-engagement",
+            "retention-report",
+            "dashboard",
+        ],
+    )
     parser.add_argument("--amount", type=float, help="Revenue amount")
     parser.add_argument("--source", help="Revenue source")
     parser.add_argument("--customer", help="Customer name")
@@ -828,7 +874,9 @@ async def main():
         if not all([args.amount, args.source, args.customer]):
             logger.info("❌ --amount, --source, and --customer required")
             sys.exit(1)
-        engine.track_revenue(args.amount, args.source, args.customer, args.description or "")
+        engine.track_revenue(
+            args.amount, args.source, args.customer, args.description or ""
+        )
 
     elif args.command == "track-engagement":
         if not all([args.customer, args.event]):
@@ -838,6 +886,7 @@ async def main():
 
     elif args.command == "retention-report":
         await engine.generate_retention_report()
+
 
 if __name__ == "__main__":
     asyncio.run(main())

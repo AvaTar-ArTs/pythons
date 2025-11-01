@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -56,8 +55,8 @@ def get_recent_followers(bot, from_time):
                 )
     return followers
 
-
     """main function."""
+
 
 def main():
     parser = argparse.ArgumentParser(add_help=True)

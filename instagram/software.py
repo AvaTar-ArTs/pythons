@@ -82,8 +82,12 @@ class SoftwareArchitectAgent:
                 total_lines += len([l for l in lines if l.strip()])
 
                 tree = ast.parse(content)
-                total_functions += len([n for n in ast.walk(tree) if isinstance(n, ast.FunctionDef)])
-                total_classes += len([n for n in ast.walk(tree) if isinstance(n, ast.ClassDef)])
+                total_functions += len(
+                    [n for n in ast.walk(tree) if isinstance(n, ast.FunctionDef)]
+                )
+                total_classes += len(
+                    [n for n in ast.walk(tree) if isinstance(n, ast.ClassDef)]
+                )
             except (IndexError, KeyError):
                 pass
 
@@ -130,7 +134,12 @@ class SoftwareArchitectAgent:
 
     def _analyze_dependencies(self, files: List[Path]) -> Dict:
         """Analyze import dependencies."""
-        dependencies = {"internal": defaultdict(set), "external": set(), "circular": [], "coupling_score": 0}
+        dependencies = {
+            "internal": defaultdict(set),
+            "external": set(),
+            "circular": [],
+            "coupling_score": 0,
+        }
 
         file_imports = {}
 
@@ -151,7 +160,16 @@ class SoftwareArchitectAgent:
                 file_imports[file_path.stem] = imports
 
                 # Categorize imports
-                stdlib_modules = {"os", "sys", "json", "re", "pathlib", "typing", "collections", "datetime"}
+                stdlib_modules = {
+                    "os",
+                    "sys",
+                    "json",
+                    "re",
+                    "pathlib",
+                    "typing",
+                    "collections",
+                    "datetime",
+                }
                 for imp in imports:
                     if imp not in stdlib_modules:
                         dependencies["external"].add(imp)
@@ -174,7 +192,9 @@ class SoftwareArchitectAgent:
         dependencies["coupling_score"] = min(CONSTANT_100, int(avg_imports * 10))
 
         dependencies["external"] = sorted(dependencies["external"])
-        dependencies["internal"] = {k: list(v) for k, v in dependencies["internal"].items()}
+        dependencies["internal"] = {
+            k: list(v) for k, v in dependencies["internal"].items()
+        }
 
         return dependencies
 
@@ -190,12 +210,20 @@ class SoftwareArchitectAgent:
                 for node in ast.walk(tree):
                     if isinstance(node, ast.ClassDef):
                         # Check for pattern indicators
-                        methods = [n.name for n in node.body if isinstance(n, ast.FunctionDef)]
+                        methods = [
+                            n.name for n in node.body if isinstance(n, ast.FunctionDef)
+                        ]
 
                         for pattern, indicators in self.design_patterns.items():
-                            if any(ind in " ".join(methods).lower() for ind in indicators):
+                            if any(
+                                ind in " ".join(methods).lower() for ind in indicators
+                            ):
                                 detected[pattern].append(
-                                    {"file": file_path.name, "class": node.name, "line": node.lineno}
+                                    {
+                                        "file": file_path.name,
+                                        "class": node.name,
+                                        "line": node.lineno,
+                                    }
                                 )
 
             except (OSError, IOError, FileNotFoundError):
@@ -319,7 +347,9 @@ class SoftwareArchitectAgent:
             f"  • Coupling Score: {dependencies['coupling_score']}/CONSTANT_100 {'⚠️' if dependencies['coupling_score'] > 50 else '✅'}"
         )
         if dependencies["circular"]:
-            output.append(f"  • Circular Dependencies: {len(dependencies['circular'])} ⚠️")
+            output.append(
+                f"  • Circular Dependencies: {len(dependencies['circular'])} ⚠️"
+            )
         output.append("")
 
         # Patterns
@@ -335,11 +365,17 @@ class SoftwareArchitectAgent:
         if recommendations:
             output.append("💡 RECOMMENDATIONS\n")
             priority_order = {"high": 0, "medium": 1, "low": 2}
-            sorted_recs = sorted(recommendations, key=lambda x: priority_order.get(x["priority"], 3))
+            sorted_recs = sorted(
+                recommendations, key=lambda x: priority_order.get(x["priority"], 3)
+            )
 
             for i, rec in enumerate(sorted_recs, 1):
-                emoji = {"high": "🔴", "medium": "🟡", "low": "🔵"}.get(rec["priority"], "⚪")
-                output.append(f"{i}. {emoji} {rec['title']} [{rec['priority'].upper()}]")
+                emoji = {"high": "🔴", "medium": "🟡", "low": "🔵"}.get(
+                    rec["priority"], "⚪"
+                )
+                output.append(
+                    f"{i}. {emoji} {rec['title']} [{rec['priority'].upper()}]"
+                )
                 output.append(f"   Category: {rec['category']}")
                 output.append(f"   {rec['description']}")
                 output.append(f"   → {rec['suggestion']}")

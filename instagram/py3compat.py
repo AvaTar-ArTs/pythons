@@ -10,20 +10,11 @@ from .encoding import DEFAULT_ENCODING
 
 
 def decode(s, encoding=None):
-    """decode function."""
-
     encoding = encoding or DEFAULT_ENCODING
     return s.decode(encoding, "replace")
-
-
-    """encode function."""
-
 def encode(u, encoding=None):
     encoding = encoding or DEFAULT_ENCODING
     return u.encode(encoding, "replace")
-
-    """cast_unicode function."""
-
 
 def cast_unicode(s, encoding=None):
     if isinstance(s, bytes):
@@ -46,15 +37,9 @@ def safe_unicode(e):
         pass
 
     return "Unrecoverably corrupt evalue"
-
-
-    """input function."""
-
 # keep reference to builtin_mod because the kernel overrides that value
 # to forward requests to a frontend.
 def input(prompt=""):
-    """execfile function."""
-
     return builtin_mod.input(prompt)
 
 
@@ -66,9 +51,6 @@ def execfile(fname, glob, loc=None, compiler=None):
 
 
 PYPY = platform.python_implementation() == "PyPy"
-
-    """no_code function."""
-
 
 # Cython still rely on that as a Dec 28 2019
 # See https://github.com/cython/cython/pull/3291 and

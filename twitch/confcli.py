@@ -76,7 +76,9 @@ def main(
     try:
         threads = []
         for clip in data:
-            threads.append(threading.Thread(target=download_clip, args=(clip, f"clip{i}")))
+            threads.append(
+                threading.Thread(target=download_clip, args=(clip, f"clip{i}"))
+            )
             i += 1
         for tr in threads:
             tr.start()

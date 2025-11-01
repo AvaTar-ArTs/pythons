@@ -119,28 +119,17 @@ CHAPTER_TO_AMBIENT = {
 # Helpers: text shaping
 # =========================
 def insert_guidance_pauses(text: str, pause_token: str = " … ") -> str:
-    """insert_guidance_pauses function."""
-
     out = text
     for phrase in PAUSE_KEYWORDS:
         pattern = re.compile(rf"({re.escape(phrase)})(?![.,;:!?…])", re.IGNORECASE)
         out = pattern.sub(rf"\1{pause_token}", out)
     return out
-
-
-    """apply_cheerful_guide_style function."""
-
 def apply_cheerful_guide_style(text: str) -> str:
     content = insert_guidance_pauses(text)
     return f"{CHEERFUL_GUIDE_PROMPT}\n\n{content}"
 
-    """split_sentences function."""
-
-
 def split_sentences(text: str) -> List[str]:
     return re.split(r"(?<=[.!?])\s+", text.strip())
-    """approx_token_count function."""
-
 
 
 def approx_token_count(s: str) -> int:
@@ -163,16 +152,11 @@ def chunk_text(text: str, token_limit: int = CONSTANT_1800) -> List[str]:
             cur_tokens += stoks
     if cur:
         chunks.append(cur.strip())
-    """safe_name function."""
-
     return chunks
 
 
 def safe_name(name: str) -> str:
     return re.sub(r"[^a-z0-9\-]+", "-", name.lower()).strip("-")
-
-    """normalize_audio function."""
-
 
 # =========================
 # Helpers: audio shaping
@@ -180,8 +164,6 @@ def safe_name(name: str) -> str:
 def normalize_audio(
     seg: AudioSegment, target_dbfs: float = TARGET_DBFS_DEFAULT
 ) -> AudioSegment:
-    """overlay_ambience function."""
-
     seg = effects.normalize(seg)
     change = target_dbfs - seg.dBFS
     return seg.apply_gain(change)
@@ -200,8 +182,6 @@ def overlay_ambience(
         return segment
     amb = AudioSegment.from_mp3(amb_path) + volume_db
     if len(amb) < len(segment):
-    """binauralize function."""
-
         loops = len(segment) // len(amb) + 1
         amb = amb * loops
     amb = amb[: len(segment)]
@@ -209,8 +189,6 @@ def overlay_ambience(
 
 
 def binauralize(
-    """widen function."""
-
     seg: AudioSegment, pan_amount: float = 0.2, attenuate_db: float = -1.0
 ) -> AudioSegment:
     left = seg.pan(-abs(pan_amount))
@@ -243,13 +221,9 @@ def choose_best_openai_tts():
                 return client, name
         # Otherwise grab any audio/tts-capable
         for m in available:
-    """hf_fallback_available function."""
-
             mid = m.lower()
             if "tts" in mid or "audio" in mid:
                 return client, m
-    """hf_tts function."""
-
     except Exception:
         pass
     return None, None
@@ -269,8 +243,6 @@ def hf_tts(text: str, out_path: Path, model: Optional[str] = None):
         f"https://api-inference.huggingface.co/models/{model}",
         headers=headers,
         json={"inputs": text},
-    """_retry_backoff function."""
-
         stream=True,
         timeout=CONSTANT_300,
     )
@@ -306,8 +278,6 @@ def openai_tts(
                 resp = client.audio.speech.create(
                     model=model, voice=voice, input=styled, format="mp3"
                 )
-    """read_docx_chapters function."""
-
                 out_path.write_bytes(resp.read())
                 return
             except Exception as e2:
@@ -328,16 +298,12 @@ def read_docx_chapters(path: Path) -> List[Tuple[str, str]]:
     for p in doc.paragraphs:
         t = (p.text or "").strip()
         if not t:
-    """read_txt function."""
-
             continue
         if t.isupper() and len(t.split()) < 10:
             if cur_title:
                 chapters.append((cur_title.title(), Path("\n").join(cur_body)))
             cur_title, cur_body = t, []
         else:
-    """synthesize_chunk function."""
-
             cur_body.append(t)
     if cur_title:
         chapters.append((cur_title.title(), Path("\n").join(cur_body)))
@@ -346,9 +312,6 @@ def read_docx_chapters(path: Path) -> List[Tuple[str, str]]:
 
 def read_txt(path: Path) -> str:
     return path.read_text(encoding="utf-8")
-
-    """render_adaptive function."""
-
 
 # =========================
 # Renderers
@@ -382,8 +345,6 @@ def render_adaptive(
             continue
         logger.info(f"🔊 Synthesizing: {title}")
         combined = AudioSegment.silent(0)
-    """render_asmr function."""
-
         for i, chunk in enumerate(chunk_text(body, CONSTANT_1800), 1):
             tmp = out_file.with_name(f"{out_file.stem}_part{i}.mp3")
             if tmp.exists():
@@ -406,8 +367,6 @@ def render_asmr(
     ambient_dir: Path,
     ambient_key: Optional[str],
     bitrate: str,
-    """render_cinematic function."""
-
 ):
     openai_pack = choose_best_openai_tts()
     tmp = out_path.with_name(out_path.stem + "_tmp.mp3")
@@ -451,8 +410,6 @@ def render_cinematic(
             else:
                 synthesize_chunk(chunk, tmp, openai_pack, voice)
                 seg = AudioSegment.from_mp3(tmp)
-    """parse_args function."""
-
             seg = overlay_ambience(seg, ambient_dir, amb_key, volume_db=-26)
             seg = widen(seg, pan_amount=0.28)
             combined += seg + AudioSegment.silent(CONSTANT_700)
@@ -492,8 +449,6 @@ def parse_args():
         "--ambient-dir",
         type=str,
         default="ambient",
-    """main function."""
-
         help="Folder containing ambient .mp3s",
     )
     ap.add_argument(

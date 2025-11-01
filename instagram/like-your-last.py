@@ -21,8 +21,8 @@ def like_media_likers(bot, media, nlikes=3):
         bot.like_user(user, nlikes)
     return True
 
-
     """like_your_feed_likers function."""
+
 
 def like_your_feed_likers(bot, nlikes=3):
     last_media = bot.get_your_medias()[0]

@@ -9,7 +9,9 @@ Date: 2025-11-01
 
 import logging
 
-logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
 
 import os
@@ -87,7 +89,9 @@ async def convert_to_video(bot, update):
             metadata = extractMetadata(createParser(the_real_download_location))
             if metadata.has("duration"):
                 duration = metadata.get("duration").seconds
-            thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+            thumb_image_path = (
+                Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+            )
             if not os.path.exists(thumb_image_path):
                 thumb_image_path = None
             else:

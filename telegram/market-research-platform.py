@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -52,18 +51,19 @@ from pathlib import Path
 from typing import Dict, List, Any
 from anthropic import Anthropic
 
+
 class MarketResearchPlatform:
     def __init__(self):
         """__init__ function."""
 
-        self.openai_key = os.getenv('OPENAI_API_KEY')
-        self.anthropic_key = os.getenv('ANTHROPIC_API_KEY')
-        self.perplexity_key = os.getenv('PERPLEXITY_API_KEY')
-        self.groq_key = os.getenv('GROQ_API_KEY')
-        self.mem0_key = os.getenv('MEM0_API_KEY')
-        self.elevenlabs_key = os.getenv('ELEVENLABS_API_KEY')
-        self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN')
-        self.telegram_chat = os.getenv('TELEGRAM_CHAT_ID')
+        self.openai_key = os.getenv("OPENAI_API_KEY")
+        self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+        self.perplexity_key = os.getenv("PERPLEXITY_API_KEY")
+        self.groq_key = os.getenv("GROQ_API_KEY")
+        self.mem0_key = os.getenv("MEM0_API_KEY")
+        self.elevenlabs_key = os.getenv("ELEVENLABS_API_KEY")
+        self.telegram_token = os.getenv("TELEGRAM_BOT_TOKEN")
+        self.telegram_chat = os.getenv("TELEGRAM_CHAT_ID")
 
         self.output_dir = Path.home() / "market_research"
         self.output_dir.mkdir(exist_ok=True)
@@ -73,10 +73,10 @@ class MarketResearchPlatform:
 
     async def daily_scan(self, industry: str):
         """Complete daily market research scan"""
-        logger.info("="*60)
+        logger.info("=" * 60)
         logger.info(f"🔍 DAILY MARKET RESEARCH SCAN")
         logger.info(f"Industry: {industry}")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
         # 05:00 - Competitor Activity Scan
         competitor_activity = await self.scan_competitor_activity(industry)
@@ -97,23 +97,29 @@ class MarketResearchPlatform:
 
         # 10:00 - Compile Report
         report = self._create_daily_report(
-            industry, competitor_activity, pricing_changes,
-            new_features, sentiment, strategic_insights
+            industry,
+            competitor_activity,
+            pricing_changes,
+            new_features,
+            sentiment,
+            strategic_insights,
         )
 
         # 11:00 - Voice Briefing
         audio = await self.create_audio_briefing(report)
 
         # Save and distribute
-        self._save_research_data({
-            "date": datetime.now().isoformat(),
-            "industry": industry,
-            "competitor_activity": competitor_activity,
-            "pricing_changes": pricing_changes,
-            "new_features": new_features,
-            "sentiment": sentiment,
-            "strategic_insights": strategic_insights
-        })
+        self._save_research_data(
+            {
+                "date": datetime.now().isoformat(),
+                "industry": industry,
+                "competitor_activity": competitor_activity,
+                "pricing_changes": pricing_changes,
+                "new_features": new_features,
+                "sentiment": sentiment,
+                "strategic_insights": strategic_insights,
+            }
+        )
 
         self._send_report(report, audio)
 
@@ -128,13 +134,14 @@ class MarketResearchPlatform:
             "https://api.perplexity.ai/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.perplexity_key}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": "sonar-pro",
-                "messages": [{
-                    "role": "user",
-                    "content": f"""Track {industry} competitor activity (last 24h):
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": f"""Track {industry} competitor activity (last 24h):
 
 1. Product launches/updates
 2. Funding announcements
@@ -147,11 +154,12 @@ For each competitor, provide:
 - Activity type
 - Details
 - Strategic significance
-- Sources"""
-                }],
-                "search_recency_filter": "day"
+- Sources""",
+                    }
+                ],
+                "search_recency_filter": "day",
             },
-            timeout=30
+            timeout=30,
         )
 
         if response.status_code == CONSTANT_200:
@@ -160,7 +168,9 @@ For each competitor, provide:
             return {
                 "content": result["choices"][0]["message"]["content"],
                 "sources": result.get("citations", []),
-                "tracked_companies": self._extract_companies(result["choices"][0]["message"]["content"])
+                "tracked_companies": self._extract_companies(
+                    result["choices"][0]["message"]["content"]
+                ),
             }
 
         return {"content": None, "sources": [], "tracked_companies": []}
@@ -179,24 +189,26 @@ For each competitor, provide:
             "https://api.perplexity.ai/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.perplexity_key}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": "sonar-pro",
-                "messages": [{
-                    "role": "user",
-                    "content": f"""Current pricing for top {industry} companies:
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": f"""Current pricing for top {industry} companies:
 
 List each company's:
 - Pricing tiers
 - Monthly/annual costs
 - Key features per tier
 - Recent changes (if any)
-- Value proposition"""
-                }],
-                "search_recency_filter": "week"
+- Value proposition""",
+                    }
+                ],
+                "search_recency_filter": "week",
             },
-            timeout=30
+            timeout=30,
         )
 
         current_pricing = {}
@@ -204,13 +216,15 @@ List each company's:
             result = response.json()
             current_pricing = {
                 "content": result["choices"][0]["message"]["content"],
-                "sources": result.get("citations", [])
+                "sources": result.get("citations", []),
             }
 
         # Analyze changes
         analysis = await self._analyze_pricing_changes(historical, current_pricing)
 
-        logger.info(f"   ✅ Analyzed pricing for {len(analysis.get('companies', []))} companies")
+        logger.info(
+            f"   ✅ Analyzed pricing for {len(analysis.get('companies', []))} companies"
+        )
         return analysis
 
     async def track_feature_launches(self, industry: str) -> Dict:
@@ -221,13 +235,14 @@ List each company's:
             "https://api.perplexity.ai/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.perplexity_key}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": "sonar-pro",
-                "messages": [{
-                    "role": "user",
-                    "content": f"""Recent feature launches in {industry} (last 7 days):
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": f"""Recent feature launches in {industry} (last 7 days):
 
 For each launch:
 - Company
@@ -235,11 +250,12 @@ For each launch:
 - Capabilities
 - Target users
 - Competitive impact
-- Innovation level (1-10)"""
-                }],
-                "search_recency_filter": "week"
+- Innovation level (1-10)""",
+                    }
+                ],
+                "search_recency_filter": "week",
             },
-            timeout=30
+            timeout=30,
         )
 
         if response.status_code == CONSTANT_200:
@@ -251,9 +267,10 @@ For each launch:
             analysis_message = client.messages.create(
                 model="claude-opus-4-20250514",
                 max_tokens=CONSTANT_2048,
-                messages=[{
-                    "role": "user",
-                    "content": f"""Analyze competitive impact of these launches:
+                messages=[
+                    {
+                        "role": "user",
+                        "content": f"""Analyze competitive impact of these launches:
 
 {result["choices"][0]["message"]["content"]}
 
@@ -263,8 +280,9 @@ For each, assess:
 3. Threat level to competitors
 4. Response recommendations
 
-Return as JSON."""
-                }]
+Return as JSON.""",
+                    }
+                ],
             )
 
             analysis_text = analysis_message.content[0].text
@@ -272,15 +290,21 @@ Return as JSON."""
                 analysis_text = analysis_text.split("```json")[1].split("```")[0]
 
             try:
-                analysis = json.loads(analysis_text) if analysis_text.strip().startswith("{") else {"analysis": analysis_text}
+                analysis = (
+                    json.loads(analysis_text)
+                    if analysis_text.strip().startswith("{")
+                    else {"analysis": analysis_text}
+                )
             except (json.JSONDecodeError, ValueError):
                 analysis = {"analysis": analysis_text}
 
-            logger.info(f"   ✅ Tracked feature launches from {len(result.get('citations', []))} sources")
+            logger.info(
+                f"   ✅ Tracked feature launches from {len(result.get('citations', []))} sources"
+            )
             return {
                 "raw_data": result["choices"][0]["message"]["content"],
                 "analysis": analysis,
-                "sources": result.get("citations", [])
+                "sources": result.get("citations", []),
             }
 
         return {"raw_data": None, "analysis": {}, "sources": []}
@@ -293,13 +317,14 @@ Return as JSON."""
             "https://api.perplexity.ai/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.perplexity_key}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": "sonar-pro",
-                "messages": [{
-                    "role": "user",
-                    "content": f"""Analyze {industry} market sentiment:
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": f"""Analyze {industry} market sentiment:
 
 1. Overall market mood (bullish/bearish/neutral)
 2. Customer pain points (trending discussions)
@@ -308,11 +333,12 @@ Return as JSON."""
 5. Regulatory concerns
 6. Technology trends
 
-Include sentiment indicators and supporting evidence."""
-                }],
-                "search_recency_filter": "week"
+Include sentiment indicators and supporting evidence.""",
+                    }
+                ],
+                "search_recency_filter": "week",
             },
-            timeout=30
+            timeout=30,
         )
 
         if response.status_code == CONSTANT_200:
@@ -323,9 +349,10 @@ Include sentiment indicators and supporting evidence."""
 
             scoring_response = openai.chat.completions.create(
                 model="gpt-5",
-                messages=[{
-                    "role": "user",
-                    "content": f"""Score market sentiment from this data:
+                messages=[
+                    {
+                        "role": "user",
+                        "content": f"""Score market sentiment from this data:
 
 {result["choices"][0]["message"]["content"]}
 
@@ -339,26 +366,32 @@ Return JSON:
     "key_trends": ["trend1"],
     "opportunity_score": 8.0,
     "risk_score": 4.0
-}}"""
-                }],
-                response_format={"type": "json_object"}
+}}""",
+                    }
+                ],
+                response_format={"type": "json_object"},
             )
 
             sentiment_scores = json.loads(scoring_response.choices[0].message.content)
 
-            logger.info(f"   ✅ Sentiment analyzed (score: {sentiment_scores.get('overall_score', 'N/A')}/10)")
+            logger.info(
+                f"   ✅ Sentiment analyzed (score: {sentiment_scores.get('overall_score', 'N/A')}/10)"
+            )
             return {
                 "raw_analysis": result["choices"][0]["message"]["content"],
                 "scores": sentiment_scores,
-                "sources": result.get("citations", [])
+                "sources": result.get("citations", []),
             }
 
         return {"raw_analysis": None, "scores": {}, "sources": []}
 
-    async def generate_strategic_insights(self, competitor_activity: Dict,
-                                          pricing_changes: Dict,
-                                          new_features: Dict,
-                                          sentiment: Dict) -> Dict:
+    async def generate_strategic_insights(
+        self,
+        competitor_activity: Dict,
+        pricing_changes: Dict,
+        new_features: Dict,
+        sentiment: Dict,
+    ) -> Dict:
         """Generate strategic recommendations"""
         logger.info("\n🎯 Generating strategic insights...")
 
@@ -367,9 +400,10 @@ Return JSON:
         message = client.messages.create(
             model="claude-opus-4-20250514",
             max_tokens=CONSTANT_4096,
-            messages=[{
-                "role": "user",
-                "content": f"""Synthesize strategic insights from this market research:
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Synthesize strategic insights from this market research:
 
 COMPETITOR ACTIVITY:
 {competitor_activity.get('content', 'N/A')[:CONSTANT_1000]}
@@ -391,8 +425,9 @@ Provide:
 4. Areas requiring deeper research
 5. Quick wins (low-effort, high-impact moves)
 
-Return as JSON with detailed reasoning."""
-            }]
+Return as JSON with detailed reasoning.""",
+                }
+            ],
         )
 
         insights_text = message.content[0].text
@@ -400,7 +435,11 @@ Return as JSON with detailed reasoning."""
             insights_text = insights_text.split("```json")[1].split("```")[0]
 
         try:
-            insights = json.loads(insights_text) if insights_text.strip().startswith("{") else {"insights": insights_text}
+            insights = (
+                json.loads(insights_text)
+                if insights_text.strip().startswith("{")
+                else {"insights": insights_text}
+            )
         except (json.JSONDecodeError, ValueError):
             insights = {"insights": insights_text}
 
@@ -415,13 +454,14 @@ Return as JSON with detailed reasoning."""
             "https://api.perplexity.ai/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.perplexity_key}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": "sonar-pro",
-                "messages": [{
-                    "role": "user",
-                    "content": f"""Comprehensive analysis of {company}:
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": f"""Comprehensive analysis of {company}:
 
 1. Business model and revenue streams
 2. Product portfolio
@@ -432,10 +472,11 @@ Return as JSON with detailed reasoning."""
 7. Strategic direction
 8. Key metrics (users, revenue, growth)
 9. Technology stack (if known)
-10. Competitive advantages"""
-                }]
+10. Competitive advantages""",
+                    }
+                ],
             },
-            timeout=30
+            timeout=30,
         )
 
         if response.status_code == CONSTANT_200:
@@ -447,9 +488,10 @@ Return as JSON with detailed reasoning."""
             strategic_message = client.messages.create(
                 model="claude-opus-4-20250514",
                 max_tokens=CONSTANT_3072,
-                messages=[{
-                    "role": "user",
-                    "content": f"""Strategic analysis of competitor:
+                messages=[
+                    {
+                        "role": "user",
+                        "content": f"""Strategic analysis of competitor:
 
 {result["choices"][0]["message"]["content"]}
 
@@ -460,8 +502,9 @@ Provide:
 4. Recommended response strategies
 5. Areas to monitor closely
 
-Return detailed JSON."""
-                }]
+Return detailed JSON.""",
+                    }
+                ],
             )
 
             strategic_text = strategic_message.content[0].text
@@ -479,7 +522,7 @@ Return detailed JSON."""
                 "overview": result["choices"][0]["message"]["content"],
                 "strategic_analysis": strategic_analysis,
                 "sources": result.get("citations", []),
-                "timestamp": datetime.now().isoformat()
+                "timestamp": datetime.now().isoformat(),
             }
 
         return {"company": company, "error": "Analysis failed"}
@@ -490,9 +533,10 @@ Return detailed JSON."""
 
         response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"""Compare pricing data:
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Compare pricing data:
 
 HISTORICAL:
 {json.dumps(historical, indent=2)[:CONSTANT_1500]}
@@ -518,16 +562,23 @@ Return JSON:
         }}
     ],
     "trends": ["trend1"]
-}}"""
-            }],
-            response_format={"type": "json_object"}
+}}""",
+                }
+            ],
+            response_format={"type": "json_object"},
         )
 
         return json.loads(response.choices[0].message.content)
 
-    def _create_daily_report(self, industry: str, competitor_activity: Dict,
-                            pricing_changes: Dict, new_features: Dict,
-                            sentiment: Dict, strategic_insights: Dict) -> str:
+    def _create_daily_report(
+        self,
+        industry: str,
+        competitor_activity: Dict,
+        pricing_changes: Dict,
+        new_features: Dict,
+        sentiment: Dict,
+        strategic_insights: Dict,
+    ) -> str:
         """Compile daily research report"""
 
         report = f"""DAILY MARKET RESEARCH REPORT
@@ -593,9 +644,10 @@ Generated by AI Market Research Platform
 
         summary_response = openai.chat.completions.create(
             model="gpt-5",
-            messages=[{
-                "role": "user",
-                "content": f"""Convert this report to 3-minute audio script:
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"""Convert this report to 3-minute audio script:
 
 {report}
 
@@ -604,9 +656,10 @@ Focus on:
 - Most important action items
 - Critical changes
 
-Write conversationally for audio delivery. ~CONSTANT_500 words."""
-            }],
-            temperature=0.7
+Write conversationally for audio delivery. ~CONSTANT_500 words.""",
+                }
+            ],
+            temperature=0.7,
         )
 
         audio_script = summary_response.choices[0].message.content
@@ -614,8 +667,11 @@ Write conversationally for audio delivery. ~CONSTANT_500 words."""
         response = requests.post(
             "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM",
             headers={"xi-api-key": self.elevenlabs_key},
-            json={"text": audio_script[:CONSTANT_3000], "model_id": "eleven_multilingual_v2"},
-            timeout=60
+            json={
+                "text": audio_script[:CONSTANT_3000],
+                "model_id": "eleven_multilingual_v2",
+            },
+            timeout=60,
         )
 
         if response.status_code == CONSTANT_200:
@@ -636,16 +692,16 @@ Write conversationally for audio delivery. ~CONSTANT_500 words."""
             json={
                 "chat_id": self.telegram_chat,
                 "text": f"🔍 *Daily Market Research*\n\n{report[:CONSTANT_4000]}",
-                "parse_mode": "Markdown"
-            }
+                "parse_mode": "Markdown",
+            },
         )
 
         if audio and audio.exists():
-            with open(audio, 'rb') as f:
+            with open(audio, "rb") as f:
                 requests.post(
                     f"https://api.telegram.org/bot{self.telegram_token}/sendAudio",
                     data={"chat_id": self.telegram_chat},
-                    files={"audio": f}
+                    files={"audio": f},
                 )
 
         logger.info("   ✅ Report sent to Telegram")
@@ -654,8 +710,11 @@ Write conversationally for audio delivery. ~CONSTANT_500 words."""
         """Extract company names from content"""
         # Simple extraction - in production use NER
         companies = []
-        for line in content.split('\n'):
-            if any(indicator in line.lower() for indicator in ['company:', 'competitor:', 'firm:']):
+        for line in content.split("\n"):
+            if any(
+                indicator in line.lower()
+                for indicator in ["company:", "competitor:", "firm:"]
+            ):
                 companies.append(line.strip())
         return companies[:10]
 
@@ -670,8 +729,10 @@ Write conversationally for audio delivery. ~CONSTANT_500 words."""
             return json.loads(self.pricing_file.read_text())
         return {}
 
+
 async def main():
     import argparse
+
     parser = argparse.ArgumentParser()
     parser.add_argument("command", choices=["daily-scan", "competitor", "pricing"])
     parser.add_argument("--industry", default="technology", help="Industry to research")
@@ -696,6 +757,7 @@ async def main():
             logger.info("❌ --category required")
             sys.exit(1)
         await platform.detect_pricing_changes(args.category)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -27,8 +27,6 @@ class FormData:
     """
 
     def __init__(
-        """__init__ function."""
-
         self,
         fields: Iterable[Any] = (),
         quote_fields: bool = True,
@@ -48,12 +46,8 @@ class FormData:
         self.add_fields(*fields)
 
     @property
-        """is_multipart function."""
-
     def is_multipart(self) -> bool:
         return self._is_multipart
-        """add_field function."""
-
 
     def add_field(
         self,
@@ -98,9 +92,6 @@ class FormData:
                 )
             headers[hdrs.CONTENT_TRANSFER_ENCODING] = content_transfer_encoding
             self._is_multipart = True
-
-        """add_fields function."""
-
         self._fields.append((type_options, headers, value))
 
     def add_fields(self, *fields: Any) -> None:
@@ -124,8 +115,6 @@ class FormData:
                 raise TypeError(
                     "Only io.IOBase, multidict and (name, file) "
                     "pairs allowed, use .add_field() for passing "
-        """_gen_form_urlencoded function."""
-
                     "more complex parameters, got {!r}".format(rec)
                 )
 
@@ -180,8 +169,6 @@ class FormData:
                 part.headers.popall(hdrs.CONTENT_LENGTH, None)
 
             self._writer.append_payload(part)
-        """__call__ function."""
-
 
         self._is_processed = True
         return self._writer

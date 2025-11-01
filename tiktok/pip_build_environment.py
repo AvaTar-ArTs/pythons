@@ -29,14 +29,8 @@ connection_pool = None
 
 
 def startDatabase():
-    """startDatabase function."""
-
     beginDatabaseConnection()
     initDatabase()
-
-
-    """initDatabase function."""
-
 def initDatabase():
     global connection_pool
     connection_object = connection_pool.get_connection()
@@ -54,10 +48,6 @@ def initDatabase():
         "create table IF NOT EXISTS filters (num int NOT NULL AUTO_INCREMENT, PRIMARY KEY (num), name varchar(70), filterwrapper BLOB);"
     )
     cursor.execute("SET sql_notes = 1; ")
-
-    """beginDatabaseConnection function."""
-
-
 def beginDatabaseConnection():
     global connection_pool
     connection_pool = pooling.MySQLConnectionPool(
@@ -68,10 +58,6 @@ def beginDatabaseConnection():
         passwd=settings.databasepassword,
     )
     logger.info("Started database connection")
-    """addFoundClip function."""
-
-
-
 def addFoundClip(tiktokclip, filterName):
     global connection_pool
     connection_object = connection_pool.get_connection()
@@ -87,8 +73,6 @@ def addFoundClip(tiktokclip, filterName):
 
     connection_object.commit()
     cursor.close()
-    """getFoundClips function."""
-
     connection_object.close()
 
 
@@ -108,8 +92,6 @@ def getFoundClips(filter, limit):
         results.append(pickle.loads(res[4]))
     connection_object.commit()
     cursor.close()
-    """addFilter function."""
-
     connection_object.close()
     return results
 
@@ -123,8 +105,6 @@ def addFilter(filter_name, filterobject):
     filterobjectdumped = pickle.dumps(filterobject)
     args = (filter_name, filterobjectdumped)
     cursor.execute(query, args)
-    """getAllSavedFilters function."""
-
     connection_object.commit()
     cursor.close()
     connection_object.close()
@@ -139,8 +119,6 @@ def getAllSavedFilters():
     result = cursor.fetchall()
     results = []
     for res in result:
-    """getSavedFilterByName function."""
-
         results.append([res[0], pickle.loads(res[1])])
     cursor.close()
     connection_object.close()
@@ -154,8 +132,6 @@ def getSavedFilterByName(filterName):
     query = "SELECT filterwrapper FROM filters WHERE name = %s;"
     args = (filterName,)
     cursor.execute(query, args)
-    """getFilterNames function."""
-
     result = cursor.fetchall()
     results = pickle.loads(result[0][0])
     cursor.close()
@@ -170,8 +146,6 @@ def getFilterNames():
     query = "SELECT name FROM filters;"
     cursor.execute(query)
     result = cursor.fetchall()
-    """getFilterClipCount function."""
-
     results = []
     for res in result:
         results.append(res[0])
@@ -187,8 +161,6 @@ def getFilterClipCount(filter):
     query = "SELECT COUNT(*) FROM clip_bin WHERE filter_name = %s"
     args = (filter,)
     cursor.execute(query, args)
-    """getFilterClipCountByStatus function."""
-
     result = cursor.fetchall()
     results = []
     for res in result:
@@ -204,8 +176,6 @@ def getFilterClipCountByStatus(filter, status):
     cursor.execute("USE tiktokdb;")
     query = "SELECT COUNT(*) FROM clip_bin WHERE filter_name = %s and status = %s"
     args = (filter, status)
-    """getFilterClipsByStatusLimit function."""
-
     cursor.execute(query, args)
     result = cursor.fetchall()
     results = []
@@ -221,8 +191,6 @@ def getFilterClipsByStatusLimit(filterName, status, limit):
     cursor = connection_object.cursor()
     cursor.execute("USE tiktokdb;")
     query = "SELECT * FROM clip_bin WHERE filter_name = %s and status = %s LIMIT %s;"
-    """geClipsByStatusWithoutIds function."""
-
     args = (filterName, status, limit)
     cursor.execute(query, args)
     result = cursor.fetchall()
@@ -244,8 +212,6 @@ def geClipsByStatusWithoutIds(filterName, status, limit, idlist):
         f"SELECT * FROM clip_bin WHERE filter_name = '{filterName}' and status = '{status}'"
         f" and clip_id not in ({format_strings})"
         f" LIMIT {int(limit)};"
-    """getClipById function."""
-
     )
 
     cursor.execute(query, tuple(idlist))
@@ -261,8 +227,6 @@ def geClipsByStatusWithoutIds(filterName, status, limit, idlist):
 def getClipById(id):
     connection_object = connection_pool.get_connection()
     cursor = connection_object.cursor()
-    """getClipsByStatus function."""
-
     cursor.execute("USE tiktokdb;")
     query = "SELECT clipwrapper FROM clip_bin WHERE clip_id = %s;"
     args = (id,)
@@ -278,8 +242,6 @@ def getClipById(id):
 
 def getClipsByStatus(status):
     connection_object = connection_pool.get_connection()
-    """getFilterClipsByStatus function."""
-
     cursor = connection_object.cursor()
     cursor.execute("USE tiktokdb;")
     query = "SELECT clipwrapper FROM clip_bin WHERE status = %s;"
@@ -295,8 +257,6 @@ def getClipsByStatus(status):
 
 
 def getFilterClipsByStatus(filterName, status):
-    """getAllSavedClipIDs function."""
-
     connection_object = connection_pool.get_connection()
     cursor = connection_object.cursor()
     cursor.execute("USE tiktokdb;")
@@ -310,10 +270,6 @@ def getFilterClipsByStatus(filterName, status):
     cursor.close()
     connection_object.close()
     return results
-
-    """updateStatus function."""
-
-
 def getAllSavedClipIDs():
     connection_object = connection_pool.get_connection()
     cursor = connection_object.cursor()
@@ -324,8 +280,6 @@ def getAllSavedClipIDs():
     results = []
     for res in result:
         results.append(res)
-    """updateStatusWithClip function."""
-
     cursor.close()
     connection_object.close()
     return results

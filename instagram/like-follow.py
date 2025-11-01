@@ -24,8 +24,8 @@ def like_and_follow(bot, user_id, nlikes=3):
     bot.follow(user_id)
     return True
 
-
     """like_and_follow_media_likers function."""
+
 
 def like_and_follow_media_likers(bot, media, nlikes=3):
     for user in tqdm(bot.get_media_likers(media), desc="Media likers"):

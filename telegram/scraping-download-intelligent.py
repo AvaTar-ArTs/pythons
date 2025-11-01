@@ -102,7 +102,9 @@ class IntelligentFileRenamer:
                 tree = ast.parse(content)
 
                 # Get docstring
-                if isinstance(tree.body[0], ast.Expr) and isinstance(tree.body[0].value, ast.Constant):
+                if isinstance(tree.body[0], ast.Expr) and isinstance(
+                    tree.body[0].value, ast.Constant
+                ):
                     analysis["docstring"] = tree.body[0].value.value
 
                 # Get imports
@@ -263,7 +265,9 @@ class IntelligentFileRenamer:
             current = Path(suggestion["current_path"])
             suggested = current.parent / suggestion["suggested_name"]
 
-            logger.info(f"{i}. {suggestion['current_name']} → {suggestion['suggested_name']}")
+            logger.info(
+                f"{i}. {suggestion['current_name']} → {suggestion['suggested_name']}"
+            )
             logger.info(f"   Reason: {suggestion['reason']}")
 
             if not auto_approve:
@@ -271,11 +275,16 @@ class IntelligentFileRenamer:
 
             try:
                 # Check if git tracked
-                result = subprocess.run(["git", "ls-files", "--error-unmatch", str(current)], capture_output=True)
+                result = subprocess.run(
+                    ["git", "ls-files", "--error-unmatch", str(current)],
+                    capture_output=True,
+                )
                 is_tracked = result.returncode == 0
 
                 if is_tracked:
-                    subprocess.run(["git", "mv", str(current), str(suggested)], check=True)
+                    subprocess.run(
+                        ["git", "mv", str(current), str(suggested)], check=True
+                    )
                     logger.info(f"   ✅ Renamed (git tracked)")
                 else:
                     current.rename(suggested)
@@ -297,9 +306,21 @@ def main():
 
     import argparse
 
-    parser = argparse.ArgumentParser(description="Intelligent content-aware file renamer")
-    parser.add_argument("path", type=Path, nargs="?", default=Path.cwd(), help="Project directory to analyze")
-    parser.add_argument("--apply", action="store_true", help="Actually apply the renames (default: dry-run only)")
+    parser = argparse.ArgumentParser(
+        description="Intelligent content-aware file renamer"
+    )
+    parser.add_argument(
+        "path",
+        type=Path,
+        nargs="?",
+        default=Path.cwd(),
+        help="Project directory to analyze",
+    )
+    parser.add_argument(
+        "--apply",
+        action="store_true",
+        help="Actually apply the renames (default: dry-run only)",
+    )
     parser.add_argument("--output", type=Path, help="Save suggestions to JSON file")
 
     args = parser.parse_args()

@@ -37,11 +37,15 @@ def download_background():
             "We need to download the Minecraft background video. This is fairly large but it's only done once. 😎"
         )
         print_substep("Downloading the background video... please be patient 🙏")
-        YouTube("https://www.youtube.com/watch?v=n_Dv4JMiwK8").streams.filter(res="720p").first().download(
+        YouTube("https://www.youtube.com/watch?v=n_Dv4JMiwK8").streams.filter(
+            res="720p"
+        ).first().download(
             "assets/mp4",
             filename="background.mp4",
         )
-        print_substep("Background video downloaded successfully! 🎉", style="bold green")
+        print_substep(
+            "Background video downloaded successfully! 🎉", style="bold green"
+        )
 
     """chop_background_video function."""
 

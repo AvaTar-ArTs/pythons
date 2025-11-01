@@ -29,7 +29,30 @@ CONSTANT_204 = 204
 CONSTANT_400 = 400
 
 
-api_key = "de7c9cb8-022f-42f8-8bf7-a8f9caadfaee"
+# Load environment variables from ~/.env.d
+def load_env_d():
+    """Load all .env files from ~/.env.d directory"""
+    from pathlib import Path
+
+    env_d_path = Path.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            with open(env_file) as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        key, value = line.split("=", 1)
+                        key = key.strip()
+                        value = value.strip().strip('"').strip("'")
+                        if not key.startswith("source") and not key.startswith(
+                            "export"
+                        ):
+                            os.environ[key] = value
+
+
+load_env_d()
+
+api_key = os.getenv("LEONARDO_API_KEY")
 authorization = f"Bearer {api_key}"
 
 headers = {
@@ -77,7 +100,9 @@ def upload_image(fields, presigned_url, image_path):
     """upscale_image function."""
 
 
-def upscale_image(init_image_id, style, creativity_strength, upscale_multiplier, prompt):
+def upscale_image(
+    init_image_id, style, creativity_strength, upscale_multiplier, prompt
+):
     url = "https://cloud.leonardo.ai/api/rest/v1/variations/universal-upscaler"
     payload = {
         "initImageId": init_image_id,
@@ -143,7 +168,9 @@ initialize_csv(output_csv)
 
 # Loop through each file in the directory
 for filename in os.listdir(directory_path):
-    if filename.lower().endswith((".jpg", ".jpeg", ".png", ".tiff", ".webp")):  # Check for supported image formats
+    if filename.lower().endswith(
+        (".jpg", ".jpeg", ".png", ".tiff", ".webp")
+    ):  # Check for supported image formats
         full_path = os.path.join(directory_path, filename)
 
         # Convert image to JPEG format if necessary
@@ -195,7 +222,9 @@ for filename in os.listdir(directory_path):
                             "UPSCALE",
                         ]
                         log_to_csv(output_csv, generation_data)
-                        logger.info(f"Logged upscaled image data for '{filename}' with style '{style}'")
+                        logger.info(
+                            f"Logged upscaled image data for '{filename}' with style '{style}'"
+                        )
 
             # Pause before processing the next image
             time.sleep(CONSTANT_120)  # Wait to avoid spamming the server

@@ -1,147 +1,78 @@
 """
-Convert 32
+Youtube Convert And Upscale Images
 
-This module provides functionality for convert 32.
+This module provides functionality for youtube convert and upscale images.
 
 Author: Auto-generated
 Date: 2025-11-01
 """
 
-import logging
-
-logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-logger = logging.getLogger(__name__)
-
 import os
-import time
-
-# the secret configuration specific things
-if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
-
-# the Strings used for this "thing"
-import pyrogram
-from translation import Translation
-
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
-from helper_funcs.chat_base import TRChatBase
-from helper_funcs.display_progress import progress_for_pyrogram
-
-# https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 
+import logging
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["c2v"]))
-async def convert_to_video(bot, update):
-    TRChatBase(update.from_user.id, update.text, "c2v")
-    if str(update.from_user.id) not in Config.SUPER3X_DLBOT_USERS:
-        await bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.NOT_AUTH_USER_TEXT,
-            reply_to_message_id=update.message_id,
-        )
+logger = logging.getLogger(__name__)
+
+
+# Constants
+CONSTANT_300 = 300
+
+
+# Function to convert WebP images to PNG and upscale by 200% with CONSTANT_300 DPI
+
+
+def convert_and_upscale_images(source_directory, destination_directory):
+    """convert_and_upscale_images function."""
+
+    # Create the destination directory if it doesn't exist
+    os.makedirs(destination_directory, exist_ok=True)
+
+    for filename in os.listdir(source_directory):
+        if filename.endswith(".png"):
+            source_file = os.path.join(source_directory, filename)
+            filename_no_ext = os.path.splitext(filename)[0]
+            destination_file = os.path.join(
+                destination_directory, f"{filename_no_ext}.png"
+            )
+
+            # Convert WebP to PNG and upscale by 200% with CONSTANT_300 DPI
+            im = Image.open(source_file)
+            width, height = im.size
+            upscale_width = width * 2
+            upscale_height = height * 2
+            im_resized = im.resize((upscale_width, upscale_height))
+            im_resized.save(destination_file, dpi=(CONSTANT_300, CONSTANT_300))
+
+            # Remove the original WebP file
+            os.remove(source_file)
+
+            print(
+                f"Converted, upscaled, and removed: {filename} -> {filename_no_ext}.png"
+            )
+
+    # Main function
+
+    """main function."""
+
+
+def main():
+    # Prompt for the source directory containing images
+    source_directory = input(
+        "Enter the path to the source directory containing  images: "
+    )
+
+    # Check if the source directory exists
+    if not os.path.isdir(source_directory):
+        logger.info("Source directory does not exist.")
         return
-    if update.reply_to_message is not None:
-        description = Translation.CUSTOM_CAPTION_UL_FILE
-        download_location = Config.DOWNLOAD_LOCATION + "/"
-        a = await bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.DOWNLOAD_START,
-            reply_to_message_id=update.message_id,
-        )
-        c_time = time.time()
-        the_real_download_location = await bot.download_media(
-            message=update.reply_to_message,
-            file_name=download_location,
-            progress=progress_for_pyrogram,
-            progress_args=(
-                Translation.DOWNLOAD_START,
-                a.message_id,
-                update.chat.id,
-                c_time,
-            ),
-        )
-        if the_real_download_location is not None:
-            await bot.edit_message_text(
-                text=Translation.SAVED_RECVD_DOC_FILE,
-                chat_id=update.chat.id,
-                message_id=a.message_id,
-            )
-            # don't care about the extension
-            await bot.edit_message_text(
-                text=Translation.UPLOAD_START,
-                chat_id=update.chat.id,
-                message_id=a.message_id,
-            )
-            logger.info(the_real_download_location)
-            # get the correct width, height, and duration for videos greater than 10MB
-            # ref: message from @BotSupport
-            width = 0
-            height = 0
-            duration = 0
-            metadata = extractMetadata(createParser(the_real_download_location))
-            if metadata.has("duration"):
-                duration = metadata.get("duration").seconds
-            thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
-            if not os.path.exists(thumb_image_path):
-                thumb_image_path = None
-            else:
-                metadata = extractMetadata(createParser(thumb_image_path))
-                if metadata.has("width"):
-                    width = metadata.get("width")
-                if metadata.has("height"):
-                    height = metadata.get("height")
-                # get the correct width, height, and duration for videos greater than 10MB
-                # resize image
-                # ref: https://t.me/PyrogramChat/44663
-                # https://stackoverflow.com/a/21669827/4723940
-                Image.open(thumb_image_path).convert("RGB").save(thumb_image_path)
-                img = Image.open(thumb_image_path)
-                # https://stackoverflow.com/a/37631799/4723940
-                # img.thumbnail((90, 90))
-                img.resize((90, height))
-                img.save(thumb_image_path, "JPEG")
-                # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
-            # try to upload file
-            c_time = time.time()
-            await bot.send_video(
-                chat_id=update.chat.id,
-                video=the_real_download_location,
-                caption=description,
-                duration=duration,
-                width=width,
-                height=height,
-                supports_streaming=True,
-                # reply_markup=reply_markup,
-                thumb=thumb_image_path,
-                reply_to_message_id=update.reply_to_message.message_id,
-                progress=progress_for_pyrogram,
-                progress_args=(
-                    Translation.UPLOAD_START,
-                    a.message_id,
-                    update.chat.id,
-                    c_time,
-                ),
-            )
-            try:
-                os.remove(the_real_download_location)
-                os.remove(thumb_image_path)
-            except Exception:
-                pass
-            await bot.edit_message_text(
-                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
-                chat_id=update.chat.id,
-                message_id=a.message_id,
-                disable_web_page_preview=True,
-            )
-    else:
-        await bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.REPLY_TO_DOC_FOR_C2V,
-            reply_to_message_id=update.message_id,
-        )
+
+    # Prompt for the destination directory
+    destination_directory = input("Enter the path for the destination directory: ")
+
+    convert_and_upscale_images(source_directory, destination_directory)
+
+
+# Run the main function
+if __name__ == "__main__":
+    main()

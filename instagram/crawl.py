@@ -25,8 +25,6 @@ config = dict  # autocomplete
 
 
 def crawl(obj: dict, func=lambda x, y: logger.info(x, y, end=Path("\n")), path=None):
-    """crawl function."""
-
     if path is None:  # path Default argument value is mutable
         path = []
     for key in obj.keys():
@@ -34,10 +32,6 @@ def crawl(obj: dict, func=lambda x, y: logger.info(x, y, end=Path("\n")), path=N
             crawl(obj[key], func, path + [key])
             continue
         func(path + [key], obj[key])
-
-
-    """check function."""
-
         """get_check_value function."""
 
 def check(value, checks, name):
@@ -129,9 +123,6 @@ def check(value, checks, name):
         )
     return value
 
-    """crawl_and_check function."""
-
-
 def crawl_and_check(obj: dict, path: list, checks: dict = {}, name=""):
     if len(path) == 0:
         return check(obj, checks, name)
@@ -139,14 +130,10 @@ def crawl_and_check(obj: dict, path: list, checks: dict = {}, name=""):
         obj[path[0]] = {}
     obj[path[0]] = crawl_and_check(obj[path[0]], path[1:], checks, path[0])
     return obj
-    """check_vars function."""
-
 
 
 def check_vars(path, checks):
     global config
-    """check_toml function."""
-
     crawl_and_check(config, path, checks)
 
 

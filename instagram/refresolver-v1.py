@@ -69,7 +69,9 @@ def resolve_remote(uri, handlers):
                 req.read().decode(encoding),
             )
         except ValueError as exc:
-            raise JsonSchemaDefinitionException("{} failed to decode: {}".format(uri, exc))
+            raise JsonSchemaDefinitionException(
+                "{} failed to decode: {}".format(uri, exc)
+            )
     return result
 
 
@@ -102,7 +104,12 @@ class RefResolver:
         """
         Construct a resolver from a JSON schema object.
         """
-        return cls(get_id(schema) if isinstance(schema, dict) else "", schema, handlers=handlers, **kwargs)
+        return cls(
+            get_id(schema) if isinstance(schema, dict) else "",
+            schema,
+            handlers=handlers,
+            **kwargs
+        )
 
     @contextlib.contextmanager
     def in_scope(self, scope: str):
@@ -151,7 +158,9 @@ class RefResolver:
         """
         Get current scope and return it as a valid function name.
         """
-        name = "validate_" + unquote(self.resolution_scope).replace("~1", "_").replace("~0", "_").replace('"', "")
+        name = "validate_" + unquote(self.resolution_scope).replace("~1", "_").replace(
+            "~0", "_"
+        ).replace('"', "")
         name = re.sub(r"($[^a-zA-Z]|[^a-zA-Z0-9])", "_", name)
         name = name.lower().rstrip("_")
         return name

@@ -15,7 +15,9 @@ from loguru import logger
 try:
     from sagemaker.huggingface import HuggingFaceProcessor
 except ModuleNotFoundError:
-    logger.warning("Couldn't load SageMaker imports. Run 'poetry install --with aws' to support AWS.")
+    logger.warning(
+        "Couldn't load SageMaker imports. Run 'poetry install --with aws' to support AWS."
+    )
 
 from llm_engineering import settings
 
@@ -33,7 +35,9 @@ def run_evaluation_on_sagemaker(is_dummy: bool = True) -> None:
     if not evaluation_dir.exists():
         raise FileNotFoundError(f"The directory {evaluation_dir} does not exist.")
     if not evaluation_requirements_path.exists():
-        raise FileNotFoundError(f"The file {evaluation_requirements_path} does not exist.")
+        raise FileNotFoundError(
+            f"The file {evaluation_requirements_path} does not exist."
+        )
 
     api = HfApi()
     user_info = api.whoami(token=settings.HUGGINGFACE_ACCESS_TOKEN)

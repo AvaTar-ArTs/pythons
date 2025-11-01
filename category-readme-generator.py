@@ -1,0 +1,244 @@
+"""
+Category Readme Generator
+
+This module provides functionality for category readme generator.
+
+Author: Auto-generated
+Date: 2025-11-01
+"""
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+#!/usr/bin/env python3
+"""
+Intelligent Category README Generator
+Creates comprehensive README files for each category based on analysis.
+"""
+
+import json
+from pathlib import Path
+from collections import defaultdict
+from typing import Dict, List
+
+
+def load_functional_analysis() -> Dict:
+    """Load the latest functional analysis results."""
+    analysis_dir = Path("functional_analysis")
+    json_files = list(analysis_dir.glob("functional_analysis_*.json"))
+
+    if not json_files:
+        raise FileNotFoundError(
+            "No functional analysis found. Run functional_category_analyzer.py first."
+        )
+
+    latest = max(json_files, key=lambda p: p.stat().st_mtime)
+    with open(latest, "r") as f:
+        return json.load(f)
+
+
+def group_files_by_category(analysis_data: Dict) -> Dict[str, List[str]]:
+    """Group files by their primary category."""
+    categories = defaultdict(list)
+
+    for file_path, file_data in analysis_data.get("file_categories", {}).items():
+        category = file_data.get("primary_category", "uncategorized")
+        categories[category].append(file_path)
+
+    return dict(categories)
+
+
+def generate_category_readme(category: str, files: List[str], category_dir: Path):
+    """Generate README for a category directory."""
+
+    # Count Python files in the directory
+    py_files = list(category_dir.rglob("*.py"))
+    file_count = len(py_files)
+
+    # Check for requirements.txt
+    has_requirements = (category_dir / "requirements.txt").exists()
+
+    # Get category description from analysis
+    category_descriptions = {
+        "test-runner": (
+            "Test Execution Framework",
+            "Automated testing tools and test runners",
+        ),
+        "youtube-downloader": (
+            "YouTube Downloader",
+            "Tools for downloading YouTube videos and audio",
+        ),
+        "transcribe-analysis": (
+            "Transcription & Analysis",
+            "Audio/video transcription and speech-to-text analysis",
+        ),
+        "encryption-tool": (
+            "Encryption Tools",
+            "File encryption and decryption utilities",
+        ),
+        "file-organizer": (
+            "File Organization",
+            "File management and organization tools",
+        ),
+        "instagram-bot": (
+            "Instagram Automation",
+            "Instagram bot and automation scripts",
+        ),
+        "ai-image-generator": (
+            "AI Image Generation",
+            "AI-powered image generation using ML models",
+        ),
+        "config-manager": (
+            "Configuration Manager",
+            "Configuration management and processing",
+        ),
+        "upscaler": ("Image/Video Upscaler", "Image and video resolution enhancement"),
+        "api-client": ("API Clients", "API integration and client libraries"),
+        "web-scraper": ("Web Scraping", "Web scraping and data extraction tools"),
+        "gallery-generator": ("Gallery Generator", "HTML gallery and album generation"),
+        "video-converter": ("Video Converter", "Video format conversion tools"),
+        "image-converter": ("Image Converter", "Image format conversion utilities"),
+        "csv-processor": ("CSV Processor", "CSV file processing and manipulation"),
+        "batch-processor": ("Batch Processor", "Batch processing and automation"),
+        "text-processor": ("Text Processor", "Text processing and manipulation"),
+        "audio-converter": ("Audio Converter", "Audio format conversion tools"),
+    }
+
+    title, description = category_descriptions.get(
+        category,
+        (category.replace("-", " ").title(), f"Tools and scripts for {category}"),
+    )
+
+    # Sample some file names
+    sample_files = [Path(f).name for f in files[:10]]
+
+    readme_content = f"""# {title}
+
+> {description}
+
+## 📊 Overview
+
+This category contains **{file_count} Python files** focused on {category.replace('-', ' ')} functionality.
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+```bash
+python 3.8+
+```
+
+### Installation
+
+```bash
+# Install dependencies
+pip install -r requirements.txt{'  # Available!' if has_requirements else '  # TODO: Create requirements.txt'}
+```
+
+### Usage
+
+```bash
+# Example usage (adjust based on actual scripts)
+python script_name.py --help
+```
+
+## 📁 Files in This Category
+
+<details>
+<summary>View sample files ({len(sample_files)} of {len(files)})</summary>
+
+"""
+
+    for fname in sample_files:
+        readme_content += f"- `{fname}`\n"
+
+    if len(files) > 10:
+        readme_content += f"\n... and {len(files) - 10} more files\n"
+
+    readme_content += """
+</details>
+
+## 🎯 Features
+
+<!-- TODO: Add specific features for this category -->
+- Feature 1
+- Feature 2
+- Feature 3
+
+## 💡 Examples
+
+```python
+# TODO: Add usage examples
+```
+
+## 📚 Documentation
+
+For more information, see the [main repository README](../README.md).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](../CONTRIBUTING.md) before getting started.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+
+---
+
+**Last Updated**: Auto-generated by generate_category_readmes.py
+**Category**: {category}
+**File Count**: {file_count}
+"""
+
+    # Write README
+    readme_path = category_dir / "README.md"
+    readme_path.write_text(readme_content)
+    logger.info(f"✅ Created: {readme_path}")
+
+
+def main():
+    """Main execution function."""
+    logger.info("📚 Intelligent Category README Generator")
+    logger.info("=" * 60)
+
+    try:
+        # Load analysis
+        analysis_data = load_functional_analysis()
+        logger.info(f"✅ Loaded functional analysis")
+
+        # Group files by category
+        categories = group_files_by_category(analysis_data)
+        logger.info(f"📊 Found {len(categories)} categories\n")
+
+        # Find existing category directories
+        base_dir = Path(".")
+        created_count = 0
+
+        for category_name, files in categories.items():
+            # Look for directory matching this category
+            category_dir = base_dir / category_name.replace(" ", "-")
+
+            if not category_dir.exists():
+                continue
+
+            # Generate README
+            generate_category_readme(category_name, files, category_dir)
+            created_count += 1
+
+        logger.info(f"\n{'='*60}")
+        logger.info(f"✅ Created {created_count} category README files")
+        logger.info(f"{'='*60}")
+
+    except Exception as e:
+        logger.info(f"❌ Error: {e}")
+        import traceback
+
+        traceback.print_exc()
+        return 1
+
+    return 0
+
+
+if __name__ == "__main__":
+    exit(main())

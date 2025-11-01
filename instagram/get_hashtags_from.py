@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 # Constants
-CONSTANT_033 = 033
+CONSTANT_33 = 33
 CONSTANT_1000 = 1000
 CONSTANT_10000 = 10000
 CONSTANT_100000 = 100000
@@ -76,7 +76,7 @@ for tag in sorted_by_value:
     else:
         color = "30;46"
     print(
-        "\CONSTANT_033[{color}mmedias: {count:,} -> TAG: {tag}\CONSTANT_033[0m".format(
+        "\CONSTANT_33[{color}mmedias: {count:,} -> TAG: {tag}\CONSTANT_33[0m".format(
             color=color, tag=tag[0], count=tag[1]
         )
     )

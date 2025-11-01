@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 
 
 # Constants
-CONSTANT_033 = 033
+CONSTANT_33 = 33
 
 #!/usr/bin/env python3
 """
@@ -21,12 +21,12 @@ from pathlib import Path
 
 # Color codes
 class Colors:
-    GREEN = '\CONSTANT_033[0;32m'
-    RED = '\CONSTANT_033[0;31m'
-    YELLOW = '\CONSTANT_033[1;33m'
-    BLUE = '\CONSTANT_033[0;34m'
-    CYAN = '\CONSTANT_033[0;36m'
-    NC = '\CONSTANT_033[0m'  # No Color
+    GREEN = '\CONSTANT_33[0;32m'
+    RED = '\CONSTANT_33[0;31m'
+    YELLOW = '\CONSTANT_33[1;33m'
+    BLUE = '\CONSTANT_33[0;34m'
+    CYAN = '\CONSTANT_33[0;36m'
+    NC = '\CONSTANT_33[0m'  # No Color
 
 def test_import(module_name, display_name=None):
     """Test if a module can be imported"""

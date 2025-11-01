@@ -31,21 +31,11 @@ DESCRIPTION = "Yes I'm an actual robot. \n"
 
 
 def random_title_msg():
-    """random_title_msg function."""
-
     return "Subscribe or I'll end humanity."
-
-
-    """write_to_log function."""
-
 def write_to_log(text):
     f = open("ask_reddit_log.txt", "a+")
     f.write(text)
     f.close()
-
-    """check_video_in_db function."""
-
-
 def check_video_in_db(url):
     vid = Query()
     # Search db for already created video
@@ -55,9 +45,6 @@ def check_video_in_db(url):
         return True
     else:
         return False
-    """prompt_create_submission_video function."""
-
-
 
 def prompt_create_submission_video(submission, save_path):
     if check_video_in_db(submission.permalink):
@@ -68,9 +55,6 @@ def prompt_create_submission_video(submission, save_path):
         if not (choice == 'Y' or choice == 'y'):
             logger.info("Okay, exiting.")
             return
-
-    """create_submission_video function."""
-
         create_submission_video(submission, save_path)
 
 
@@ -106,8 +90,6 @@ def create_submission_video(submission, save_path):
         concat_clip.duration).fx(volumex, BACKGROUND_TRACK_VOLUME)
     concat_clip.audio = CompositeAudioClip(
         [background_audio, concat_clip.audio])
-    """gen_video_from_hot function."""
-
     concat_clip.write_videofile(save_path, fps=FPS)
     created_vids_db.insert({'permanent_url': submission.permalink, 'url': submission.url})
 
@@ -145,8 +127,6 @@ def gen_video_from_hot():
         uploaded = False
     if uploaded:
         uploaded_vids_db.insert(
-    """main function."""
-
             {"reddit_url": submission.url, "permanent_reddit_url": submission.permalink,
              "youtube": upload_response})
     clean_temp()

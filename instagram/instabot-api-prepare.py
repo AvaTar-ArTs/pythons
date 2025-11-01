@@ -23,13 +23,7 @@ DEFAULT_SECRET_DIR = os.path.abspath(os.getcwd())
 
 
 def get_credential_file(base_path=DEFAULT_SECRET_DIR):
-    """get_credential_file function."""
-
     return base_path + Path("/config/secret.txt")
-
-
-    """add_credentials function."""
-
 def add_credentials(base_path):
     SECRET_FILE = get_credential_file(base_path)
     with open(SECRET_FILE, "a") as f:
@@ -40,9 +34,6 @@ def add_credentials(base_path):
             + "reasons - just start typing and press Enter)"
         )
         f.write(getpass.getpass() + Path("\n"))
-
-    """get_credentials function."""
-
 
 def get_credentials(base_path, username=None):
     SECRET_FILE = get_credential_file(base_path)
@@ -78,8 +69,6 @@ def get_credentials(base_path, username=None):
                 return lines[ind - 1]
         except Exception:
             logger.info("Wrong input, enter the number of the account to use.")
-    """check_secret function."""
-
 
 
 def check_secret(base_path):
@@ -112,8 +101,6 @@ def check_secret(base_path):
                 add_credentials(base_path)
                 logger.info("Do you want to add another account? (y/n)")
                 if "y" not in sys.stdin.readline():
-    """delete_credentials function."""
-
                     break
 
 

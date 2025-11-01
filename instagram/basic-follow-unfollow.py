@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 # Constants
 CONSTANT_500 = 500
 CONSTANT_601 = 601
@@ -68,7 +67,10 @@ with smart_run(session):
     CONSTANT_3500/CONSTANT_4000 users for better results)...
     """
     session.follow_user_followers(
-        ["user1", "user2", "user3"], amount=CONSTANT_800, randomize=False, interact=False
+        ["user1", "user2", "user3"],
+        amount=CONSTANT_800,
+        randomize=False,
+        interact=False,
     )
 
     """ First step of Unfollow action - Unfollow not follower users...
@@ -84,7 +86,10 @@ with smart_run(session):
     """ Second step of Massive Follow...
     """
     session.follow_user_followers(
-        ["user1", "user2", "user3"], amount=CONSTANT_800, randomize=False, interact=False
+        ["user1", "user2", "user3"],
+        amount=CONSTANT_800,
+        randomize=False,
+        interact=False,
     )
 
     """ Second step of Unfollow action - Unfollow not follower users...

@@ -132,7 +132,10 @@ def generate(index, index2):
                 vrc = os.getcwd() + Path("\\images\\") + name + ".png"
                 frames = [vrc, vrc, vrc, vrc, vrc, vrc, vrc, vrc, vrc]
                 video = cv2.VideoWriter(
-                    os.getcwd() + Path("\\videos\\") + name + ".avi", 0, 1, frameSize=(CONSTANT_736, CONSTANT_1308)
+                    os.getcwd() + Path("\\videos\\") + name + ".avi",
+                    0,
+                    1,
+                    frameSize=(CONSTANT_736, CONSTANT_1308),
                 )
                 for frame in frames:
                     video.write(cv2.imread(frame))

@@ -16,7 +16,9 @@ logger = logging.getLogger(__name__)
 
 
 # Replace the playlist URL below with your desired playlist URL
-playlist_url = "https://www.youtube.com/playlist?list=PLfudK7D_bQIjRgAqVU_jkbnb1N5V_pNiG"
+playlist_url = (
+    "https://www.youtube.com/playlist?list=PLfudK7D_bQIjRgAqVU_jkbnb1N5V_pNiG"
+)
 
 # Define the directory where you want to save the downloads
 download_directory = Path("/Volumes/baKs/shorts-need-mp3")

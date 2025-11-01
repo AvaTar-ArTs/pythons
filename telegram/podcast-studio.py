@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -49,6 +48,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any
 
+
 class PodcastStudio:
     """Professional podcast generation pipeline"""
 
@@ -56,11 +56,11 @@ class PodcastStudio:
         """__init__ function."""
 
         # Load API keys from environment
-        self.openai_key = os.getenv('OPENAI_API_KEY')
-        self.perplexity_key = os.getenv('PERPLEXITY_API_KEY')
-        self.elevenlabs_key = os.getenv('ELEVENLABS_API_KEY')
-        self.deepgram_key = os.getenv('DEEPGRAM_API_KEY')
-        self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN')
+        self.openai_key = os.getenv("OPENAI_API_KEY")
+        self.perplexity_key = os.getenv("PERPLEXITY_API_KEY")
+        self.elevenlabs_key = os.getenv("ELEVENLABS_API_KEY")
+        self.deepgram_key = os.getenv("DEEPGRAM_API_KEY")
+        self.telegram_token = os.getenv("TELEGRAM_BOT_TOKEN")
 
         # Configuration
         self.output_dir = Path.home() / "AI_Podcasts"
@@ -71,7 +71,7 @@ class PodcastStudio:
             "professional": "21m00Tcm4TlvDq8ikWAM",  # Rachel - Professional
             "conversational": "EXAVITQu4vr4xnSDxMaL",  # Bella - Warm
             "news": "pNInz6obpgDQGcFmaJgB",  # Adam - News anchor
-            "storyteller": "TX3LPaxmHKxFdv7VOQHJ"  # Elli - Storyteller
+            "storyteller": "TX3LPaxmHKxFdv7VOQHJ",  # Elli - Storyteller
         }
 
         # Validate keys
@@ -80,9 +80,9 @@ class PodcastStudio:
     def _validate_keys(self):
         """Check required API keys are present"""
         required = {
-            'OpenAI': self.openai_key,
-            'Perplexity': self.perplexity_key,
-            'ElevenLabs': self.elevenlabs_key
+            "OpenAI": self.openai_key,
+            "Perplexity": self.perplexity_key,
+            "ElevenLabs": self.elevenlabs_key,
         }
 
         missing = [name for name, key in required.items() if not key]
@@ -103,17 +103,19 @@ class PodcastStudio:
                 "https://api.perplexity.ai/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.perplexity_key}",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 json={
                     "model": "sonar-pro",
-                    "messages": [{
-                        "role": "user",
-                        "content": f"Research the latest information about: {topic}\n\nProvide:\n1. Key facts and developments\n2. Important context\n3. Notable quotes or statistics\n4. Current implications"
-                    }],
-                    "search_recency_filter": "day"  # Latest info only
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": f"Research the latest information about: {topic}\n\nProvide:\n1. Key facts and developments\n2. Important context\n3. Notable quotes or statistics\n4. Current implications",
+                        }
+                    ],
+                    "search_recency_filter": "day",  # Latest info only
                 },
-                timeout=30
+                timeout=30,
             )
 
             if response.status_code != CONSTANT_200:
@@ -129,7 +131,7 @@ class PodcastStudio:
             return {
                 "content": research,
                 "sources": result.get("citations", []),
-                "timestamp": datetime.now().isoformat()
+                "timestamp": datetime.now().isoformat(),
             }
 
         except Exception as e:
@@ -137,7 +139,9 @@ class PodcastStudio:
             logger.info("Continuing without web research...")
             return {"content": None, "sources": []}
 
-    def generate_script(self, topic: str, research: Dict[str, Any], duration: int = 5) -> str:
+    def generate_script(
+        self, topic: str, research: Dict[str, Any], duration: int = 5
+    ) -> str:
         """
         Step 2: Generate engaging podcast script with GPT-5
         """
@@ -180,10 +184,10 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                 model="gpt-5",
                 messages=[
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
+                    {"role": "user", "content": user_prompt},
                 ],
                 temperature=0.8,  # More creative
-                max_tokens=CONSTANT_4000
+                max_tokens=CONSTANT_4000,
             )
 
             script = response.choices[0].message.content
@@ -210,7 +214,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                 f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
                 headers={
                     "xi-api-key": self.elevenlabs_key,
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 json={
                     "text": script,
@@ -219,10 +223,10 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                         "stability": 0.5,
                         "similarity_boost": 0.75,
                         "style": 0.5,
-                        "use_speaker_boost": True
-                    }
+                        "use_speaker_boost": True,
+                    },
                 },
-                timeout=60
+                timeout=60,
             )
 
             if response.status_code != CONSTANT_200:
@@ -269,13 +273,13 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                     model="nova-2",
                     smart_format=True,
                     punctuate=True,
-                    paragraphs=True
+                    paragraphs=True,
                 )
 
             transcript = response.results.channels[0].alternatives[0].transcript
 
             # Save transcript
-            transcript_file = audio_file.with_suffix('.txt')
+            transcript_file = audio_file.with_suffix(".txt")
             transcript_file.write_text(transcript)
 
             logger.info(f"✅ Transcript saved: {transcript_file.name}")
@@ -297,7 +301,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
             logger.info("⚠️ Telegram not configured")
             return
 
-        chat_id = os.getenv('TELEGRAM_CHAT_ID', '@your_channel')
+        chat_id = os.getenv("TELEGRAM_CHAT_ID", "@your_channel")
 
         logger.info(f"📤 Uploading to Telegram...")
 
@@ -310,9 +314,9 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                         "chat_id": chat_id,
                         "caption": caption[:CONSTANT_1000],  # Telegram limit
                         "title": audio_file.stem,
-                        "performer": "AI Podcast Studio"
+                        "performer": "AI Podcast Studio",
                     },
-                    timeout=60
+                    timeout=60,
                 )
 
             if response.status_code == CONSTANT_200:
@@ -325,17 +329,17 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
 
     def create_metadata(self, data: Dict[str, Any]) -> Path:
         """Save podcast metadata as JSON"""
-        metadata_file = data['audio_file'].with_suffix('.json')
+        metadata_file = data["audio_file"].with_suffix(".json")
 
         metadata = {
-            "topic": data['topic'],
+            "topic": data["topic"],
             "created": datetime.now().isoformat(),
-            "duration_target": data.get('duration', 5),
-            "script_length": len(data['script'].split()),
-            "audio_file": str(data['audio_file']),
-            "transcript_file": str(data.get('transcript_file', '')),
-            "research_sources": data.get('research', {}).get('sources', []),
-            "voice_style": data.get('voice_style', 'professional')
+            "duration_target": data.get("duration", 5),
+            "script_length": len(data["script"].split()),
+            "audio_file": str(data["audio_file"]),
+            "transcript_file": str(data.get("transcript_file", "")),
+            "research_sources": data.get("research", {}).get("sources", []),
+            "voice_style": data.get("voice_style", "professional"),
         }
 
         metadata_file.write_text(json.dumps(metadata, indent=2))
@@ -347,7 +351,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
         topic: str,
         duration: int = 5,
         voice_style: str = "professional",
-        skip_research: bool = False
+        skip_research: bool = False,
     ) -> Dict[str, Any]:
         """
         Complete podcast creation pipeline
@@ -384,7 +388,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
 
         # Step 4: Generate transcript (optional)
         transcript = self.generate_transcript(audio_file)
-        transcript_file = audio_file.with_suffix('.txt') if transcript else None
+        transcript_file = audio_file.with_suffix(".txt") if transcript else None
 
         # Step 5: Create metadata
         data = {
@@ -395,7 +399,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
             "audio_file": audio_file,
             "transcript": transcript,
             "transcript_file": transcript_file,
-            "research": research
+            "research": research,
         }
 
         metadata_file = self.create_metadata(data)
@@ -432,11 +436,7 @@ def main():
     studio = PodcastStudio()
 
     # Generate podcast
-    podcast = studio.create_podcast(
-        topic=topic,
-        duration=5,
-        voice_style="professional"
-    )
+    podcast = studio.create_podcast(topic=topic, duration=5, voice_style="professional")
 
     # Print final output path
     logger.info(f"🎉 Listen to your podcast: {podcast['audio_file']}")

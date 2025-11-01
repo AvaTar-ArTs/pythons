@@ -111,16 +111,9 @@ class BuildBin(cmd.Command):
     user_options = []
 
     def initialize_options(self):
-        """initialize_options function."""
-
         self.scripts_dir = None
-
-        """finalize_options function."""
-
     def finalize_options(self):
         self.scripts_dir = os.path.join("build", "_scripts")
-        """run function."""
-
 
     def run(self):
         if not os.path.exists(self.scripts_dir):
@@ -134,9 +127,6 @@ class BuildBin(cmd.Command):
 
 class Build(build):
     """Overwrite the default 'build' behaviour."""
-
-        """run function."""
-
     sub_commands = [("build_bin", None)] + build.sub_commands
 
     def run(self):
@@ -148,8 +138,6 @@ cmdclass = {"build": Build, "build_bin": BuildBin}
 
 
 def linux_setup():
-    """linux_setup function."""
-
     scripts = []
     package_data = {}
     # Add pixmaps icons (*.png) & i18n files
@@ -158,21 +146,12 @@ def linux_setup():
     scripts.append("build/_scripts/PrNdOwN")
 
     setup_params = {"scripts": scripts, "package_data": package_data}
-
-        """normal_setup function."""
-
     return setup_params
-
-
-    """windows_setup function."""
-
 def windows_setup():
     def normal_setup():
         package_data = {}
 
         # Add pixmaps icons (*.png) & i18n files
-        """py2exe_setup function."""
-
         package_data[__packagename__] = ["ascii/*"]
 
         setup_params = {"package_data": package_data}

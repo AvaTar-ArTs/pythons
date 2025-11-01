@@ -7,7 +7,6 @@ Author: Auto-generated
 Date: 2025-11-01
 """
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -54,6 +53,7 @@ from pathlib import Path
 from typing import Dict, List, Any, Optional
 from datetime import datetime
 
+
 class VideoStudio:
     """Automated short-form video creator"""
 
@@ -61,12 +61,12 @@ class VideoStudio:
         """__init__ function."""
 
         # API Keys
-        self.openai_key = os.getenv('OPENAI_API_KEY')
-        self.elevenlabs_key = os.getenv('ELEVENLABS_API_KEY')
-        self.runwayml_key = os.getenv('RUNWAYML_API_KEY')
-        self.assemblyai_key = os.getenv('ASSEMBLYAI_API_KEY')
-        self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN')
-        self.telegram_chat = os.getenv('TELEGRAM_CHAT_ID')
+        self.openai_key = os.getenv("OPENAI_API_KEY")
+        self.elevenlabs_key = os.getenv("ELEVENLABS_API_KEY")
+        self.runwayml_key = os.getenv("RUNWAYML_API_KEY")
+        self.assemblyai_key = os.getenv("ASSEMBLYAI_API_KEY")
+        self.telegram_token = os.getenv("TELEGRAM_BOT_TOKEN")
+        self.telegram_chat = os.getenv("TELEGRAM_CHAT_ID")
 
         # Output directory
         self.output_dir = Path.home() / "ai_videos"
@@ -94,10 +94,7 @@ class VideoStudio:
             logger.info("⚠️ TELEGRAM_BOT_TOKEN not set (upload disabled)")
 
     def generate_script(
-        self,
-        topic: str,
-        duration: int = 60,
-        style: str = "engaging"
+        self, topic: str, duration: int = 60, style: str = "engaging"
     ) -> Dict[str, Any]:
         """
         Step 1: Generate video script with GPT-5
@@ -141,11 +138,14 @@ Format as JSON:
             response = openai.chat.completions.create(
                 model="gpt-5",
                 messages=[
-                    {"role": "system", "content": "You are a viral YouTube Shorts scriptwriter."},
-                    {"role": "user", "content": prompt}
+                    {
+                        "role": "system",
+                        "content": "You are a viral YouTube Shorts scriptwriter.",
+                    },
+                    {"role": "user", "content": prompt},
                 ],
                 temperature=0.8,
-                response_format={"type": "json_object"}
+                response_format={"type": "json_object"},
             )
 
             script = json.loads(response.choices[0].message.content)
@@ -158,14 +158,16 @@ Format as JSON:
             full_narration = " ".join(narration_parts)
             word_count = len(full_narration.split())
 
-            logger.info(f"   ✅ Script generated ({word_count} words, ~{word_count/2.5:.0f}s)")
+            logger.info(
+                f"   ✅ Script generated ({word_count} words, ~{word_count/2.5:.0f}s)"
+            )
 
             return {
                 "topic": topic,
                 "script": script,
                 "full_narration": full_narration,
                 "duration": duration,
-                "word_count": word_count
+                "word_count": word_count,
             }
 
         except Exception as e:
@@ -175,7 +177,7 @@ Format as JSON:
     def synthesize_voice(
         self,
         script_data: Dict[str, Any],
-        voice_id: str = "21m00Tcm4TlvDq8ikWAM"  # Rachel - professional female
+        voice_id: str = "21m00Tcm4TlvDq8ikWAM",  # Rachel - professional female
     ) -> Path:
         """
         Step 2: Create voiceover with ElevenLabs
@@ -196,7 +198,7 @@ Format as JSON:
                 f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
                 headers={
                     "xi-api-key": self.elevenlabs_key,
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 json={
                     "text": narration,
@@ -205,10 +207,10 @@ Format as JSON:
                         "stability": 0.5,
                         "similarity_boost": 0.75,
                         "style": 0.5,
-                        "use_speaker_boost": True
-                    }
+                        "use_speaker_boost": True,
+                    },
                 },
-                timeout=60
+                timeout=60,
             )
 
             if response.status_code == CONSTANT_200:
@@ -235,10 +237,7 @@ Format as JSON:
             sys.exit(1)
 
     def generate_video(
-        self,
-        script_data: Dict[str, Any],
-        audio_file: Path,
-        style: str = "cinematic"
+        self, script_data: Dict[str, Any], audio_file: Path, style: str = "cinematic"
     ) -> Path:
         """
         Step 3: Generate video with Runway ML
@@ -272,16 +271,16 @@ Format as JSON:
                 "https://api.runwayml.com/v1/imagine",
                 headers={
                     "Authorization": f"Bearer {self.runwayml_key}",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 json={
                     "prompt": f"{visual_prompt}, {style}, high quality, vertical 9:16 format",
                     "width": CONSTANT_1080,
                     "height": CONSTANT_1920,
                     "duration": min(script_data["duration"], 10),  # Runway limit
-                    "seed": int(time.time())
+                    "seed": int(time.time()),
                 },
-                timeout=30
+                timeout=30,
             )
 
             if response.status_code in [CONSTANT_200, CONSTANT_201]:
@@ -298,7 +297,7 @@ Format as JSON:
                     status_response = requests.get(
                         f"https://api.runwayml.com/v1/tasks/{task_id}",
                         headers={"Authorization": f"Bearer {self.runwayml_key}"},
-                        timeout=10
+                        timeout=10,
                     )
 
                     if status_response.status_code == CONSTANT_200:
@@ -320,7 +319,9 @@ Format as JSON:
                                 return video_file
 
                         elif status.get("status") == "failed":
-                            logger.info(f"❌ Video generation failed: {status.get('error')}")
+                            logger.info(
+                                f"❌ Video generation failed: {status.get('error')}"
+                            )
                             sys.exit(1)
 
                     time.sleep(10)  # Check every 10 seconds
@@ -329,7 +330,9 @@ Format as JSON:
                 sys.exit(1)
 
             else:
-                logger.info(f"❌ Video generation request failed: {response.status_code}")
+                logger.info(
+                    f"❌ Video generation request failed: {response.status_code}"
+                )
                 logger.info(f"   {response.text}")
 
                 # Fallback: Return a placeholder or skip video
@@ -342,9 +345,7 @@ Format as JSON:
             return None
 
     def generate_captions(
-        self,
-        audio_file: Path,
-        video_file: Optional[Path] = None
+        self, audio_file: Path, video_file: Optional[Path] = None
     ) -> Dict[str, Any]:
         """
         Step 4: Generate captions with AssemblyAI
@@ -364,7 +365,7 @@ Format as JSON:
                 "https://api.assemblyai.com/v2/upload",
                 headers={"authorization": self.assemblyai_key},
                 data=audio_file.read_bytes(),
-                timeout=60
+                timeout=60,
             )
 
             if upload_response.status_code != CONSTANT_200:
@@ -378,19 +379,21 @@ Format as JSON:
                 "https://api.assemblyai.com/v2/transcript",
                 headers={
                     "authorization": self.assemblyai_key,
-                    "content-type": "application/json"
+                    "content-type": "application/json",
                 },
                 json={
                     "audio_url": audio_url,
                     "language_code": "en",
                     "punctuate": True,
-                    "format_text": True
+                    "format_text": True,
                 },
-                timeout=30
+                timeout=30,
             )
 
             if transcript_response.status_code != CONSTANT_200:
-                logger.info(f"❌ Transcription request failed: {transcript_response.status_code}")
+                logger.info(
+                    f"❌ Transcription request failed: {transcript_response.status_code}"
+                )
                 return {"transcript": "", "srt": ""}
 
             transcript_id = transcript_response.json()["id"]
@@ -405,7 +408,7 @@ Format as JSON:
                 status_response = requests.get(
                     f"https://api.assemblyai.com/v2/transcript/{transcript_id}",
                     headers={"authorization": self.assemblyai_key},
-                    timeout=10
+                    timeout=10,
                 )
 
                 if status_response.status_code == CONSTANT_200:
@@ -418,10 +421,14 @@ Format as JSON:
                         srt_response = requests.get(
                             f"https://api.assemblyai.com/v2/transcript/{transcript_id}/srt",
                             headers={"authorization": self.assemblyai_key},
-                            timeout=10
+                            timeout=10,
                         )
 
-                        srt = srt_response.text if srt_response.status_code == CONSTANT_200 else ""
+                        srt = (
+                            srt_response.text
+                            if srt_response.status_code == CONSTANT_200
+                            else ""
+                        )
 
                         # Save SRT file
                         if srt:
@@ -435,7 +442,7 @@ Format as JSON:
                         return {
                             "transcript": transcript,
                             "srt": srt,
-                            "srt_file": srt_file if srt else None
+                            "srt_file": srt_file if srt else None,
                         }
 
                     elif status["status"] == "error":
@@ -452,10 +459,7 @@ Format as JSON:
             return {"transcript": "", "srt": ""}
 
     def send_to_telegram(
-        self,
-        video_file: Optional[Path],
-        audio_file: Path,
-        script_data: Dict[str, Any]
+        self, video_file: Optional[Path], audio_file: Path, script_data: Dict[str, Any]
     ):
         """
         Step 5: Send to Telegram
@@ -476,27 +480,24 @@ Format as JSON:
         try:
             # Send video if available, otherwise send audio
             if video_file and video_file.exists():
-                with open(video_file, 'rb') as f:
+                with open(video_file, "rb") as f:
                     response = requests.post(
                         f"https://api.telegram.org/bot{self.telegram_token}/sendVideo",
-                        data={
-                            "chat_id": self.telegram_chat,
-                            "caption": caption
-                        },
+                        data={"chat_id": self.telegram_chat, "caption": caption},
                         files={"video": f},
-                        timeout=CONSTANT_120
+                        timeout=CONSTANT_120,
                     )
             else:
-                with open(audio_file, 'rb') as f:
+                with open(audio_file, "rb") as f:
                     response = requests.post(
                         f"https://api.telegram.org/bot{self.telegram_token}/sendAudio",
                         data={
                             "chat_id": self.telegram_chat,
                             "caption": caption,
-                            "title": script_data['topic']
+                            "title": script_data["topic"],
                         },
                         files={"audio": f},
-                        timeout=CONSTANT_120
+                        timeout=CONSTANT_120,
                     )
 
             if response.status_code == CONSTANT_200:
@@ -513,7 +514,7 @@ Format as JSON:
         duration: int = 60,
         style: str = "engaging",
         voice_id: str = "21m00Tcm4TlvDq8ikWAM",
-        skip_video: bool = False
+        skip_video: bool = False,
     ) -> Dict[str, Any]:
         """
         Complete video creation pipeline
@@ -570,18 +571,24 @@ Format as JSON:
             "audio_file": audio_file,
             "video_file": video_file,
             "captions": captions,
-            "output_dir": self.output_dir
+            "output_dir": self.output_dir,
         }
 
 
 def main():
     """CLI entry point"""
     if len(sys.argv) < 2:
-        logger.info("Usage: python3 video_studio.py <topic> [--duration SECONDS] [--style STYLE] [--audio-only]")
+        logger.info(
+            "Usage: python3 video_studio.py <topic> [--duration SECONDS] [--style STYLE] [--audio-only]"
+        )
         logger.info("\nExamples:")
         logger.info("  python3 video_studio.py '10 AI facts that will blow your mind'")
-        logger.info("  python3 video_studio.py 'How AI is changing education' --duration 45")
-        logger.info("  python3 video_studio.py 'Quick Python tip' --style educational --audio-only")
+        logger.info(
+            "  python3 video_studio.py 'How AI is changing education' --duration 45"
+        )
+        logger.info(
+            "  python3 video_studio.py 'Quick Python tip' --style educational --audio-only"
+        )
         logger.info("\nStyles: engaging, educational, entertaining")
         sys.exit(1)
 
@@ -615,10 +622,7 @@ def main():
     # Create video
     studio = VideoStudio()
     result = studio.create_video(
-        topic=topic,
-        duration=duration,
-        style=style,
-        skip_video=skip_video
+        topic=topic, duration=duration, style=style, skip_video=skip_video
     )
 
 

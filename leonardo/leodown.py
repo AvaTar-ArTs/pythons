@@ -1,7 +1,7 @@
 """
-Leodown
+Leodown V2
 
-This module provides functionality for leodown.
+This module provides functionality for leodown v2.
 
 Author: Auto-generated
 Date: 2025-11-01
@@ -19,13 +19,14 @@ logger = logging.getLogger(__name__)
 
 # Constants
 CONSTANT_200 = 200
+CONSTANT_93043291 = 93043291
 
 
 # Base URL for API
 base_url = "https://cloud.leonardo.ai/api/rest/v1/generations/user/f7bb8476-e3f0-4f1f-9a06-4600866cc49c"
 headers = {
     "accept": "application/json",
-    "authorization": "Bearer f7bb8476-e3f0-4f1f-9a06-4600866cc49c",  # Replace with your actual token
+    "authorization": "Bearer CONSTANT_93043291-957d-4ec1-8c79-ee734abcb6e3",  # Replace with your actual token
 }
 
 # Output file

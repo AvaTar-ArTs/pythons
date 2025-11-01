@@ -1,0 +1,275 @@
+"""
+Resize
+
+This module provides functionality for resize.
+
+Author: Auto-generated
+Date: 2025-11-01
+"""
+
+from pathlib import Path
+import csv
+import os
+import time
+from datetime import datetime
+
+from dotenv import load_dotenv
+from openai import OpenAI
+from PIL import Image, UnidentifiedImageError
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+# Constants
+CONSTANT_300 = 300
+CONSTANT_720 = 720
+CONSTANT_1024 = 1024
+CONSTANT_4500 = 4500
+CONSTANT_5400 = 5400
+
+
+# Load environment variables
+env_path = Path("/Users/steven/.env")
+load_dotenv(dotenv_path=env_path)
+
+# Initialize OpenAI API key
+api_key = os.getenv("OPENAI_API_KEY")
+
+# Error checking for OpenAI API key
+if not api_key:
+    raise EnvironmentError("OpenAI API key not found. Please check your .env file.")
+
+# Initialize OpenAI client
+client = OpenAI(api_key=api_key)
+
+# Constants
+MAX_WIDTH, MAX_HEIGHT = CONSTANT_4500, CONSTANT_5400
+MIN_WIDTH, MIN_HEIGHT = 6, CONSTANT_720
+TARGET_DPI = CONSTANT_300
+BATCH_SIZE = 50
+PAUSE_DURATION = 5
+
+
+# Function to sanitize filenames
+def sanitize_filename(filename, file_ext):
+    """
+    Sanitize the filename to ensure:
+    - Quotes are removed.
+    - Extra periods in the name are replaced with underscores.
+    - A single extension is maintained.
+    """
+    filename = filename.strip('"').replace(" ", "_").replace("/", "_").replace(":", "_")
+    # Remove existing extensions and ensure a single valid extension
+    filename = os.path.splitext(filename)[0]  # Remove any existing extension
+    return f"{filename}.{file_ext}"
+
+
+def resize_image(im, output_path, file_ext):
+    """
+    Resize image to meet dynamic target dimensions based on aspect ratio.
+    """
+    width, height = im.size
+    aspect_ratio = width / height
+
+    # Calculate new dimensions to fit within MAX_WIDTH x MAX_HEIGHT
+    if width > MAX_WIDTH or height > MAX_HEIGHT:
+        if width / MAX_WIDTH > height / MAX_HEIGHT:
+            new_width = MAX_WIDTH
+            new_height = int(new_width / aspect_ratio)
+        else:
+            new_height = MAX_HEIGHT
+            new_width = int(new_height * aspect_ratio)
+    elif width < MIN_WIDTH or height < MIN_HEIGHT:
+        # Calculate dimensions to meet MIN_WIDTH x MIN_HEIGHT
+        if width / MIN_WIDTH < height / MIN_HEIGHT:
+            new_width = MIN_WIDTH
+            new_height = int(new_width / aspect_ratio)
+        else:
+            new_height = MIN_HEIGHT
+            new_width = int(new_height * aspect_ratio)
+    else:
+        # Image is within bounds, no resizing needed
+        new_width, new_height = width, height
+
+    logger.info(
+        f"🔄 Resizing to: {new_width}x{new_height} (Aspect Ratio: {aspect_ratio:.2f})"
+    )
+    im = im.resize((new_width, new_height), Image.LANCZOS)
+    im.save(
+        output_path, dpi=(TARGET_DPI, TARGET_DPI), quality=85, format=file_ext.upper()
+    )
+    return im
+
+    # Maintain aspect ratio while resizing
+    aspect_ratio = width / height
+    if width > MAX_WIDTH or height > MAX_HEIGHT:
+        # Downscale to fit max dimensions
+        if width / MAX_WIDTH > height / MAX_HEIGHT:
+            new_width = MAX_WIDTH
+            new_height = int(new_width / aspect_ratio)
+        else:
+            new_height = MAX_HEIGHT
+            new_width = int(new_height * aspect_ratio)
+    elif width < MIN_WIDTH or height < MIN_HEIGHT:
+        # Upscale to meet min dimensions
+        if width / MIN_WIDTH < height / MIN_HEIGHT:
+            new_width = MIN_WIDTH
+            new_height = int(new_width / aspect_ratio)
+        else:
+            new_height = MIN_HEIGHT
+            new_width = int(new_height * aspect_ratio)
+    else:
+        # No resizing needed
+        new_width, new_height = width, height
+
+    logger.info(f"🔄 Resizing to: {new_width}x{new_height}")
+    im = im.resize((new_width, new_height), Image.LANCZOS)
+    im.save(
+        temp_file, dpi=(TARGET_DPI, TARGET_DPI), quality=85, format=file_ext.upper()
+    )
+    return im
+
+
+# Function to process a batch of images
+def process_batch(batch, root, csv_rows):
+    """
+    Process a batch of images to resize them without format conversion.
+    """
+    for file in batch:
+        file_path = os.path.join(root, file)
+        file_ext = file.lower().split(".")[-1]
+
+        # Process only supported formats
+        if file_ext not in ("jpg", "jpeg", "png"):
+            logger.info(f"⚠️ Skipping {file}: Unsupported file format.")
+            continue
+
+        try:
+            # Open and analyze image
+            im = Image.open(file_path)
+            width, height = im.size
+            logger.info(f"\n🖼️ Processing {file}: Original size: {width}x{height}")
+
+            # Convert to RGB for resizing if needed (PNG supports RGBA)
+            if file_ext in ("jpg", "jpeg") and im.mode != "RGB":
+                im = im.convert("RGB")
+                logger.info(f"Converted {file} to RGB format.")
+
+            # Sanitize filename
+            sanitized_filename = sanitize_filename(os.path.splitext(file)[0], file_ext)
+
+            # Temporary file for resizing
+            temp_file = os.path.join(root, f"{sanitized_filename}_temp.{file_ext}")
+            resize_image(im, temp_file, file_ext)
+
+            # Rename and replace original file
+            new_file_path = os.path.join(root, sanitized_filename)
+            os.remove(file_path)
+            os.rename(temp_file, new_file_path)
+            resized_size = os.path.getsize(new_file_path)
+
+            # Add metadata to CSV
+            creation_date = datetime.fromtimestamp(
+                os.path.getctime(new_file_path)
+            ).strftime("%m-%d-%y")
+            csv_rows.append(
+                [
+                    sanitized_filename,
+                    f"{resized_size / (CONSTANT_1024 ** 2):.2f} MB",
+                    creation_date,
+                    width,
+                    height,
+                    TARGET_DPI,
+                    TARGET_DPI,
+                    new_file_path,
+                ]
+            )
+            logger.info(f"✅ Successfully resized {file} and saved to {new_file_path}")
+
+        except UnidentifiedImageError:
+            logger.info(f"⚠️ Skipping {file}: Cannot identify image.")
+        except Exception as e:
+            logger.info(f"⚠️ Error processing {file}: {e}")
+
+
+# Function to process images and generate metadata
+def process_images_and_generate_csv(source_directory, csv_path):
+    """process_images_and_generate_csv function."""
+
+    rows = []
+    batch = []
+
+    for root, _, files in os.walk(source_directory):
+        for file in files:
+            batch.append(file)
+            # Process in batches
+            if len(batch) >= BATCH_SIZE:
+                logger.info(f"🔄 Processing batch of {BATCH_SIZE} images in {root}...")
+                process_batch(batch, root, rows)
+                batch = []  # Clear batch
+                logger.info(f"⏸️ Pausing for {PAUSE_DURATION} seconds...")
+                time.sleep(PAUSE_DURATION)
+
+        # Process remaining files in the directory
+        if batch:
+            logger.info(f"🔄 Processing remaining {len(batch)} images in {root}...")
+            process_batch(batch, root, rows)
+            batch = []
+
+    # Write CSV
+    write_csv(csv_path, rows)
+    logger.info(f"📄 CSV metadata saved to: {csv_path}")
+
+    # Function to write rows to CSV
+    """write_csv function."""
+
+
+def write_csv(csv_path, rows):
+    with open(csv_path, "w", newline="") as csvfile:
+        fieldnames = [
+            "Filename",
+            "File Size",
+            "Creation Date",
+            "Width",
+            "Height",
+            "DPI_X",
+            "DPI_Y",
+            "Original Path",
+        ]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(
+                {
+                    "Filename": row[0],
+                    "File Size": row[1],
+                    "Creation Date": row[2],
+                    "Width": row[3],
+                    "Height": row[4],
+                    "DPI_X": row[5],
+                    "DPI_Y": row[6],
+                    "Original Path": row[7],
+                }
+            )
+
+    """main function."""
+
+
+# Main function
+def main():
+    source_directory = input(
+        "Enter the path to the source directory containing images: "
+    ).strip()
+    if not os.path.isdir(source_directory):
+        logger.info("Source directory does not exist.")
+        return
+
+    current_date = datetime.now().strftime("%m-%d-%y")
+    csv_output_path = os.path.join(source_directory, f"image_data-{current_date}.csv")
+    process_images_and_generate_csv(source_directory, csv_output_path)
+
+
+if __name__ == "__main__":
+    main()

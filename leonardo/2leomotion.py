@@ -1,15 +1,17 @@
 """
-2Leomotion
+2Leomotion 5
 
-This module provides functionality for 2leomotion.
+This module provides functionality for 2leomotion 5.
 
 Author: Auto-generated
 Date: 2025-11-01
 """
 
+import requests
 import time
 
-import requests
+import os
+from dotenv import load_dotenv
 
 import logging
 
@@ -22,7 +24,9 @@ CONSTANT_960 = 960
 CONSTANT_1082 = 1082
 
 
-api_key = "b5b99021-8e7a-42ef-8df9-4eca2c6efd3c"
+load_dotenv()
+
+api_key = os.getenv("LEONARDO_API_KEY")
 authorization = "Bearer %s" % api_key
 
 headers = {

@@ -53,7 +53,9 @@ class VideoEditor:
 
         # Create audio file and image file, then combine and add to list of clips
         title_audio = AudioFileClip(self.audio_path + "title.mp3")
-        title_clip = ImageClip(self.image_path + "title.jpeg").set_duration(title_audio.duration + 0.5)
+        title_clip = ImageClip(self.image_path + "title.jpeg").set_duration(
+            title_audio.duration + 0.5
+        )
         title_mp4 = concatenate([title_clip], method="compose")
         new_audioclip = CompositeAudioClip([title_audio])
 
@@ -64,7 +66,9 @@ class VideoEditor:
         for i in range(0, self.num_replies):
             tmp_audio = AudioFileClip(f"{self.audio_path}reply{i}.mp3")
             tmp_dur = tmp_audio.duration
-            tmp_clip = ImageClip(f"{self.image_path}reply{i}.jpeg").set_duration(tmp_dur + 0.5)
+            tmp_clip = ImageClip(f"{self.image_path}reply{i}.jpeg").set_duration(
+                tmp_dur + 0.5
+            )
             tmp_mp4 = concatenate([tmp_clip], method="compose")
             tmp_mp3 = CompositeAudioClip([tmp_audio])
             tmp_mp4.audio = tmp_mp3

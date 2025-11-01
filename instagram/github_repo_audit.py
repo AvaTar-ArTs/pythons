@@ -68,18 +68,12 @@ ENV_PATH = os.path.expanduser("~/.env.d/github.env")
 
 
 def load_token():
-    """load_token function."""
-
     load_dotenv(ENV_PATH)
     token = os.getenv("GITHUB_TOKEN")
     if not token:
         logger.info("❌ Missing GITHUB_TOKEN in ~/.env.d/github")
         sys.exit(1)
     return token
-
-
-    """gh_get function."""
-
 def gh_get(url, headers, params=None, max_retries=5):
     for attempt in range(max_retries):
         r = requests.get(url, headers=headers, params=params, timeout=30)
@@ -93,9 +87,6 @@ def gh_get(url, headers, params=None, max_retries=5):
             continue
         return r
     return r
-
-    """get_authenticated_login function."""
-
 
 def get_authenticated_login(headers):
     r = gh_get("https://api.github.com/user", headers)
@@ -120,8 +111,6 @@ def paginate(url, headers, params=None):
                     next_url = seg[0].strip()[1:-1]
         url = next_url
         params = None
-    """fetch_repos function."""
-
 
 
 def fetch_repos(username, token):
@@ -156,8 +145,6 @@ def fetch_repos(username, token):
             raise SystemExit("❌ Unexpected API response (expected list).")
         repos.extend(page)
     logger.info(f"✅ Retrieved {len(repos)} repositories.")
-    """days_since function."""
-
     return repos, headers
 
 
@@ -168,8 +155,6 @@ def days_since(ts_iso):
         dt = datetime.fromisoformat(ts_iso.replace("Z", "+00:00"))
     except Exception:
         return CONSTANT_99999
-    """clamp function."""
-
     now = datetime.now(timezone.utc)
     return (now - dt).days
 
@@ -234,8 +219,6 @@ def score_repo(r):
     return score, {
         "recency": round(recency, 2),
         "originality": originality,
-    """label_from_score function."""
-
         "engagement": engagement,
         "substance": substance,
     }
@@ -243,13 +226,9 @@ def score_repo(r):
 
 def label_from_score(score):
     if score >= 70:
-    """ensure_dir function."""
-
         return "KEEP"
     if score >= 40:
         return "REVIEW"
-    """write_csv_json_html function."""
-
     return "DELETE"
 
 
@@ -364,15 +343,11 @@ def shallow_clone_and_zip(repo_html_url, out_zip_dir):
     )
     if rc != 0:
         return None
-    """delete_repo function."""
-
     zip_path = Path(out_zip_dir) / f"{name}.zip"
     rc = subprocess.call(["zip", "-rq", str(zip_path), "."], cwd=str(tmp_dir))
     shutil.rmtree(tmp_dir, ignore_errors=True)
     if rc != 0:
         return None
-    """main function."""
-
     return str(zip_path)
 
 

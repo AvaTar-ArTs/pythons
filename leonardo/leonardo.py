@@ -57,11 +57,20 @@ BASE = "https://cloud.leonardo.ai/api/rest/v1"
 def bearer(api_key: str) -> dict:
     """bearer function."""
 
-    return {"accept": "application/json", "content-type": "application/json", "authorization": f"Bearer {api_key}"}
+    return {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "authorization": f"Bearer {api_key}",
+    }
 
 
 def poll_json(
-    url: str, headers: dict, key_path: list[str], ok_values: set[str], timeout: int = CONSTANT_300, interval: int = 5
+    url: str,
+    headers: dict,
+    key_path: list[str],
+    ok_values: set[str],
+    timeout: int = CONSTANT_300,
+    interval: int = 5,
 ) -> dict:
     """Polls a GET endpoint until the nested status at key_path is in ok_values or a terminal error occurs."""
     start = time.time()
@@ -79,9 +88,13 @@ def poll_json(
             if status_lower in ok_values:
                 return data
             if status_lower in {"failed", "error", "cancelled"}:
-                raise RuntimeError(f"Job failed with status={status}: {json.dumps(data)[:CONSTANT_400]}")
+                raise RuntimeError(
+                    f"Job failed with status={status}: {json.dumps(data)[:CONSTANT_400]}"
+                )
         if time.time() - start > timeout:
-            raise TimeoutError(f"Timeout waiting for job. Last response: {json.dumps(data)[:CONSTANT_400]}")
+            raise TimeoutError(
+                f"Timeout waiting for job. Last response: {json.dumps(data)[:CONSTANT_400]}"
+            )
         time.sleep(interval)
 
     """download_file function."""
@@ -103,7 +116,11 @@ def main():
     ap = argparse.ArgumentParser(description="Leonardo image->upscale->motion CLI")
     ap.add_argument("--prompt", required=True, help="Text prompt for image generation")
     ap.add_argument("--negative-prompt", default="", help="Negative prompt")
-    ap.add_argument("--model-id", default="ac614f96-CONSTANT_1082-45bf-be9d-757f2d31c174", help="Leonardo modelId")
+    ap.add_argument(
+        "--model-id",
+        default="ac614f96-CONSTANT_1082-45bf-be9d-757f2d31c174",
+        help="Leonardo modelId",
+    )
     ap.add_argument("--width", type=int, default=CONSTANT_544)
     ap.add_argument("--height", type=int, default=CONSTANT_960)
     ap.add_argument("--num-images", type=int, default=1)
@@ -111,13 +128,18 @@ def main():
     ap.add_argument("--poll-interval", type=int, default=6)
     ap.add_argument("--timeout", type=int, default=CONSTANT_600)
     ap.add_argument(
-        "--api-key", default=os.getenv("LEONARDO_API_KEY"), help="Leonardo API key (or env LEONARDO_API_KEY)"
+        "--api-key",
+        default=os.getenv("LEONARDO_API_KEY"),
+        help="Leonardo API key (or env LEONARDO_API_KEY)",
     )
     ap.add_argument("--outdir", type=Path, default=Path("./leonardo_output"))
     args = ap.parse_args()
 
     if not args.api_key:
-        logger.info("❌ Missing API key. Set LEONARDO_API_KEY or pass --api-key.", file=sys.stderr)
+        logger.info(
+            "❌ Missing API key. Set LEONARDO_API_KEY or pass --api-key.",
+            file=sys.stderr,
+        )
         sys.exit(2)
 
     args.outdir = args.outdir.expanduser().resolve()
@@ -134,12 +156,21 @@ def main():
         "alchemy": True,
         "public": bool(args.public),
     }
-    r = requests.post(f"{BASE}/generations", headers=bearer(args.api_key), json=gen_payload, timeout=60)
+    r = requests.post(
+        f"{BASE}/generations",
+        headers=bearer(args.api_key),
+        json=gen_payload,
+        timeout=60,
+    )
     if r.status_code >= CONSTANT_400:
-        logger.info(f"❌ Generation request failed: {r.status_code} {r.text}", file=sys.stderr)
+        logger.info(
+            f"❌ Generation request failed: {r.status_code} {r.text}", file=sys.stderr
+        )
         sys.exit(1)
     gen_resp = r.json()
-    (args.outdir / "01_generation_request.json").write_text(json.dumps(gen_resp, indent=2))
+    (args.outdir / "01_generation_request.json").write_text(
+        json.dumps(gen_resp, indent=2)
+    )
 
     generation_id = gen_resp.get("sdGenerationJob", {}).get("generationId")
     if not generation_id:
@@ -167,9 +198,16 @@ def main():
         download_file(image_url, args.outdir / "image_0.png")
 
     # 3) Upscale
-    r = requests.post(f"{BASE}/variations/upscale", headers=bearer(args.api_key), json={"id": image_id}, timeout=60)
+    r = requests.post(
+        f"{BASE}/variations/upscale",
+        headers=bearer(args.api_key),
+        json={"id": image_id},
+        timeout=60,
+    )
     if r.status_code >= CONSTANT_400:
-        logger.info(f"❌ Upscale request failed: {r.status_code} {r.text}", file=sys.stderr)
+        logger.info(
+            f"❌ Upscale request failed: {r.status_code} {r.text}", file=sys.stderr
+        )
         sys.exit(1)
     up_resp = r.json()
     (args.outdir / "03_upscale_request.json").write_text(json.dumps(up_resp, indent=2))
@@ -202,7 +240,9 @@ def main():
         timeout=60,
     )
     if r.status_code >= CONSTANT_400:
-        logger.info(f"❌ Motion request failed: {r.status_code} {r.text}", file=sys.stderr)
+        logger.info(
+            f"❌ Motion request failed: {r.status_code} {r.text}", file=sys.stderr
+        )
         sys.exit(1)
     mv_req = r.json()
     (args.outdir / "05_motion_request.json").write_text(json.dumps(mv_req, indent=2))
@@ -236,7 +276,10 @@ def main():
         download_file(best_url, args.outdir / f"motion{ext}")
         logger.info(f"✅ Saved: {args.outdir / f'motion{ext}'}")
     else:
-        logger.info("⚠️ Motion job completed but no downloadable URL found. See JSON files.", file=sys.stderr)
+        logger.info(
+            "⚠️ Motion job completed but no downloadable URL found. See JSON files.",
+            file=sys.stderr,
+        )
 
 
 if __name__ == "__main__":

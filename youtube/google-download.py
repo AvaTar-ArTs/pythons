@@ -26,7 +26,9 @@ SCOPES = [
 ]
 
 ## Authenticate and build the YouTube API service
-flow = InstalledAppFlow.from_client_secrets_file(Path("/Users/steven/Movies/youtube-upload/client_secret.json"), SCOPES)
+flow = InstalledAppFlow.from_client_secrets_file(
+    Path("/Users/steven/Movies/youtube-upload/client_secret.json"), SCOPES
+)
 
 # Use run_local_server instead of run_console
 credentials = flow.run_local_server(port=0)
@@ -44,7 +46,9 @@ def add_video_to_playlist(youtube, video_id, playlist_id):
     }
     request = youtube.playlistItems().insert(part="snippet", body=body)
     response = request.execute()
-    logger.info(f"Added video ID {video_id} to playlist: {response['snippet']['playlistId']}")
+    logger.info(
+        f"Added video ID {video_id} to playlist: {response['snippet']['playlistId']}"
+    )
 
 
 # Read the CSV file
@@ -65,7 +69,9 @@ with open("videos.csv", "r") as file:
         # Specify the file path and upload the video
         video_file_path = row["file_path"]
         media = MediaFileUpload(video_file_path, chunksize=-1, resumable=True)
-        upload_request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
+        upload_request = youtube.videos().insert(
+            part="snippet,status", body=body, media_body=media
+        )
 
         # Execute the upload request and get the video ID
         response = upload_request.execute()

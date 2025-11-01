@@ -20,7 +20,9 @@ logger = logging.getLogger(__name__)
 
 api_key = os.getenv("API_KEY")
 if not api_key:
-    raise ValueError("API key is not set. Please ensure the API_KEY environment variable is configured correctly.")
+    raise ValueError(
+        "API key is not set. Please ensure the API_KEY environment variable is configured correctly."
+    )
 
 authorization = f"Bearer {api_key}"
 

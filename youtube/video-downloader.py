@@ -29,7 +29,9 @@ api = API(PEXEL_API_KEY)
 def getVideo(num):
     """getVideo function."""
 
-    api.search_videos("drone shot of the sea", orientation="portrait", page=1, results_per_page=num)
+    api.search_videos(
+        "drone shot of the sea", orientation="portrait", page=1, results_per_page=num
+    )
     videos = api.get_videos()
 
     for video in videos:

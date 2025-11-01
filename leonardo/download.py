@@ -75,7 +75,9 @@ def fetch_and_save_all_urls():
 
             # Check for errors in the response
             if response.status_code != CONSTANT_200:
-                logger.info(f"Error fetching data: {response.status_code}, {response.text}")
+                logger.info(
+                    f"Error fetching data: {response.status_code}, {response.text}"
+                )
                 break
 
             data = response.json()

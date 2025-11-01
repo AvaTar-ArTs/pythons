@@ -1,168 +1,237 @@
+"""
+Pexels Video Downloader
 
-from pathlib import Path
-from abc import ABC, abstractmethod
+This module provides functionality for pexels video downloader.
 
-# Constants
-CONSTANT_100 = 100
-CONSTANT_128 = 128
-CONSTANT_300 = 300
-CONSTANT_429 = 429
-CONSTANT_500 = 500
-CONSTANT_502 = 502
-CONSTANT_503 = 503
-CONSTANT_504 = 504
-CONSTANT_1024 = 1024
-CONSTANT_1080 = 1080
-CONSTANT_1920 = 1920
+Author: Auto-generated
+Date: 2025-11-01
+"""
 
+import csv
+import os
+import re
+from datetime import datetime
 
-@dataclass
-class BaseProcessor(ABC):
-    """Abstract base @dataclass
-class for processors."""
+import config  # Import the configuration
 
-    @abstractmethod
-    def process(self, data: Any) -> Any:
-        """Process data."""
-        pass
-
-    @abstractmethod
-    def validate(self, data: Any) -> bool:
-        """Validate data."""
-        pass
-
-
-# Connection pooling for HTTP requests
-import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
-
-def get_session() -> requests.Session:
-    """Get a configured session with connection pooling."""
-    session = requests.Session()
-
-    # Configure retry strategy
-    retry_strategy = Retry(
-        total = 3, 
-        backoff_factor = 1, 
-        status_forcelist=[CONSTANT_429, CONSTANT_500, CONSTANT_502, CONSTANT_503, CONSTANT_504], 
-    )
-
-    # Mount adapter with retry strategy
-    adapter = HTTPAdapter(max_retries = retry_strategy)
-    session.mount("http://", adapter)
-    session.mount("https://", adapter)
-
-    return session
-
-
-@dataclass
-class SingletonMeta(type):
-    """Thread-safe singleton metaclass."""
-    _instances = {}
-    _lock = threading.Lock()
-
-    def __call__(cls, *args, **kwargs):
-        if cls not in cls._instances:
-            with cls._lock:
-                if cls not in cls._instances:
-                    cls._instances[cls] = super().__call__(*args, **kwargs)
-        return cls._instances[cls]
-
-from functools import lru_cache
-from pexelsPy import API
-import asyncio
-import config
 import logging
-import requests
-from typing import Any, Dict, List, Optional, Union, Tuple, Callable
 
-@dataclass
-class Config:
-    """Configuration @dataclass
-class for global variables."""
-    DPI_300 = CONSTANT_300
-    DPI_72 = 72
-    KB_SIZE = CONSTANT_1024
-    MB_SIZE = CONSTANT_1024 * CONSTANT_1024
-    GB_SIZE = CONSTANT_1024 * CONSTANT_1024 * CONSTANT_1024
-    DEFAULT_TIMEOUT = 30
-    MAX_RETRIES = 3
-    DEFAULT_BATCH_SIZE = CONSTANT_100
-    MAX_FILE_SIZE = 9 * CONSTANT_1024 * CONSTANT_1024  # 9MB
-    DEFAULT_QUALITY = 85
-    DEFAULT_WIDTH = CONSTANT_1920
-    DEFAULT_HEIGHT = CONSTANT_1080
-    cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
-    logger = logging.getLogger(__name__)
-    PEXEL_API_KEY = config.pexelKey
-    api = API(PEXEL_API_KEY)
-    videos = api.get_videos()
-    download_url = "https://pexels.com/video/" + str(video.id) + Path("/download")
-    r = requests.get(download_url)
-    @lru_cache(maxsize = CONSTANT_128)
-    api.search_videos("drone shot of the sea", orientation = "portrait", page
+logger = logging.getLogger(__name__)
 
 
 # Constants
+CONSTANT_1024 = 1024
 
 
-
-async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
-    """Validate input data."""
-    for field, validator in validators.items():
-        if field in data:
-            if not validator(data[field]):
-                raise ValueError(f"Invalid {field}: {data[field]}")
-    return True
+# Constants
+LAST_DIRECTORY_FILE = "other.txt"
 
 
-async def memoize(func):
-def memoize(func): -> Any
-    """Memoization decorator."""
-
-    async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
-        if key not in cache:
-        return cache[key]
-
-    return wrapper
+# Function to get the creation date of a file
+def get_creation_date(filepath):
+    try:
+        return datetime.fromtimestamp(os.path.getctime(filepath)).strftime("%m-%d-%y")
+    except Exception as e:
+        logger.info(f"Error getting creation date for {filepath}: {e}")
+        return "Unknown"
 
 
-@dataclass
-class Config:
-    # TODO: Replace global variable with proper structure
+# Function to format file size
+def format_file_size(size_in_bytes):
+    try:
+        if size_in_bytes < CONSTANT_1024:
+            return f"{size_in_bytes:.2f} B"
+        size_in_bytes /= CONSTANT_1024
+        if size_in_bytes < CONSTANT_1024:
+            return f"{size_in_bytes:.2f} KB"
+        size_in_bytes /= CONSTANT_1024
+        if size_in_bytes < CONSTANT_1024:
+            return f"{size_in_bytes:.2f} MB"
+        size_in_bytes /= CONSTANT_1024
+        if size_in_bytes < CONSTANT_1024:
+            return f"{size_in_bytes:.2f} GB"
+        size_in_bytes /= CONSTANT_1024
+        return f"{size_in_bytes:.2f} TB"
+    except Exception as e:
+        logger.info(f"Error formatting file size: {e}")
+        return "Unknown"
+# Function to generate a dry run CSV for organizing other common file types
+def generate_dry_run_csv(directories, csv_path):
+    rows = []
+
+    # Regex patterns for exclusions
+    excluded_patterns = [
+        r"^\..*",  # Hidden files and directories
+        r".*\/venv\/.*",  # venv directories
+        r".*\/\.venv\/.*",  # .venv directories
+        r".*\/my_global_venv\/.*",  # venv directories
+        r".*\/simplegallery\/.*",
+        r".*\/avatararts\/.*",
+        r".*\/github\/.*",
+        r".*\/Documents\/gitHub\/.*",  # Specific gitHub directory
+        r".*\/\.my_global_venv\/.*",  # .venv directories
+        r".*\/node\/.*",  # Any directory named node
+        r".*\/Movies\/capcut\/.*",
+        r".*\/miniconda3\/.*",
+        r".*\/Movies\/movavi\/.*",
+        r".*\/env\/.*",  # env directories
+        r".*\/\.env\/.*",  # .env directories
+        r".*\/Library\/.*",  # Library directories
+        r".*\/\.config\/.*",  # .config directories
+        r".*\/\.spicetify\/.*",  # .spicetify directories
+        r".*\/\.gem\/.*",  # .gem directories
+        r".*\/\.zprofile\/.*",  # .zprofile directories
+        r"^.*\/\..*",  # Any file or directory starting with a dot
+    ]
+
+    file_types = {
+        ".ttf": "Fonts",
+        ".otf": "Fonts",
+        ".woff": "Fonts",
+        ".woff2": "Fonts",
+        ".eot": "Fonts",
+        ".srt": "Subtitles",
+        ".ass": "Subtitles",
+        ".vtt": "Subtitles",
+        ".ini": "Configuration",
+        ".cfg": "Configuration",
+        ".conf": "Configuration",
+        ".log": "Logs",
+        ".bak": "Backups",
+        ".tmp": "Temporary",
+        ".torrent": "Torrents",
+        ".zip": "Archives",
+        ".rar": "Archives",
+        ".7z": "Archives",
+        ".tar": "Archives",
+        ".gz": "Archives",
+        ".asl": "Design",
+        ".psd": "Design",
+        ".ai": "Design",
+        ".sketch": "Design",
+        ".fig": "Design",
+        ".blend": "3D Models",
+        ".fbx": "3D Models",
+        ".obj": "3D Models",
+        ".stl": "3D Models",
+        ".py": "Scripts",
+        ".sh": "Scripts",
+        ".rb": "Scripts",
+        ".pl": "Scripts",
+        ".js": "Scripts",
+        ".css": "Scripts",
+        ".html": "Scripts",
+    }
+
+    for directory in directories:
+        for root, _, files in os.walk(directory):
+            # Skip hidden directories and venv directories using regex
+            dirs = [d for d in os.listdir(root) if os.path.isdir(os.path.join(root, d))]
+            dirs[:] = [
+                d
+                for d in dirs
+                if not any(
+                    re.match(pattern, os.path.join(root, d))
+                    for pattern in excluded_patterns
+                )
+            ]
+
+            for file in files:
+                file_path = os.path.join(root, file)
+
+                # Skip files that match the excluded patterns
+                if any(re.match(pattern, file_path) for pattern in excluded_patterns):
+                    continue
+
+                file_ext = os.path.splitext(file)[1].lower()
+
+                # Add file to rows if it matches the logical file types
+                if file_ext in file_types:
+                    file_size = format_file_size(os.path.getsize(file_path))
+                    creation_date = get_creation_date(file_path)
+                    rows.append([file, file_size, creation_date, root])
+
+    write_csv(csv_path, rows)
+# Function to write rows to CSV
+def write_csv(csv_path, rows):
+    with open(csv_path, "w", newline="") as csvfile:
+        fieldnames = ["Filename", "File Size", "Creation Date", "Original Path"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(
+                {
+                    "Filename": row[0],
+                    "File Size": row[1],
+                    "Creation Date": row[2],
+                    "Original Path": row[3],
+                }
+            )
 
 
+def get_unique_file_path(base_path):
+    if not os.path.exists(base_path):
+        return base_path
 
-"""
-This script downloads videos from pexels.com. Uses this to get videos background
-in case you need more.
-"""
+    base, ext = os.path.splitext(base_path)
+    counter = 1
+    while True:
+        new_path = f"{base}_{counter}{ext}"
+        if not os.path.exists(new_path):
+            return new_path
+        counter += 1
+def save_last_directory(directory):
+    with open(LAST_DIRECTORY_FILE, "w") as file:
+        file.write(directory)
 
 
-
-
-
-
-async def getVideo(num):
-def getVideo(num): -> Any
- try:
-  pass  # TODO: Add actual implementation
-    except (ValueError, TypeError, RuntimeError) as e:
-        logger.error(f"Specific error occurred: {e}")
-        raise
-  logger.error(f"Error in function: {e}")
-  raise
-
-    for video in videos:
-        with open(f"./videos/" + video.url.split("/")[-2] + ".mp4", "wb") as out:
-            out.write(r.content)
-            logger.info(f"{video.url.split('/')[-2]}.mp4 is downloaded successfully!")
+def load_last_directory():
+    if os.path.exists(LAST_DIRECTORY_FILE):
+        with open(LAST_DIRECTORY_FILE, "r") as file:
+            return file.read().strip()
+    return None
 
 
 if __name__ == "__main__":
-    main()
+    directories = []
+    last_directory = load_last_directory()
+
+    while True:
+        if last_directory:
+            use_last = (
+                input(
+                    f"Do you want to use the last directory '{last_directory}'? (Y/N): "
+                )
+                .strip()
+                .lower()
+            )
+            if use_last == "y":
+                directories.append(last_directory)
+                break
+            else:
+                source_directory = input(
+                    "Please enter a new source directory to scan for other common file types: "
+                ).strip()
+        else:
+            source_directory = input(
+                "Please enter a source directory to scan for other common file types: "
+            ).strip()
+
+        if source_directory == "":
+            break
+        if os.path.isdir(source_directory):
+            directories.append(source_directory)
+            save_last_directory(source_directory)
+        else:
+            logger.info(f"'{source_directory}' is not a valid directory. Please try again.")
+
+    if directories:
+        current_date = datetime.now().strftime("%m-%d-%H:%M")
+        csv_output_path = os.path.join(os.getcwd(), f"other-{current_date}.csv")
+        csv_output_path = get_unique_file_path(csv_output_path)
+
+        generate_dry_run_csv(directories, csv_output_path)
+        logger.info(f"Dry run completed. Output saved to {csv_output_path}")
+        logger.info(f"other_files-{current_date}.csv")
+    else:
+        logger.info("No directories were provided to scan.")

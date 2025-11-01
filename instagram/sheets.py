@@ -42,7 +42,9 @@ def _load_client() -> gspread.Client:
       3) client_secret.json (start OAuth flow if token missing)
     """
     if os.path.exists("service_account.json"):
-        creds = ServiceAccountCredentials.from_service_account_file("service_account.json", scopes=SCOPES)
+        creds = ServiceAccountCredentials.from_service_account_file(
+            "service_account.json", scopes=SCOPES
+        )
         return gspread.authorize(creds)
 
     token_path = "token.json"
@@ -54,7 +56,9 @@ def _load_client() -> gspread.Client:
             creds.refresh(Request())
     if not creds:
         if not os.path.exists(client_secret):
-            raise FileNotFoundError("No credentials found. Provide service_account.json or client_secret.json (OAuth).")
+            raise FileNotFoundError(
+                "No credentials found. Provide service_account.json or client_secret.json (OAuth)."
+            )
         # Run local OAuth flow
         import google.auth.transport.requests
         from google_auth_oauthlib.flow import InstalledAppFlow
@@ -99,7 +103,9 @@ def replace_rows(ws, fieldnames: List[str], rows: List[Dict[str, str]]):
     ws.append_rows(values, value_input_option="USER_ENTERED")
 
 
-def append_unique_by_key(ws, fieldnames: List[str], rows: List[Dict[str, str]], unique_key: str = "songLink"):
+def append_unique_by_key(
+    ws, fieldnames: List[str], rows: List[Dict[str, str]], unique_key: str = "songLink"
+):
     """Append only new rows by unique_key (default: songLink)."""
     existing = ws.get_all_records()  # list of dicts
     seen = set()

@@ -27,8 +27,6 @@ today = datetime.now() + timedelta(minutes=15)
 
 
 def upload_file(
-    """upload_file function."""
-
     driver: WebDriver,
     video_path: str,
     title: str,
@@ -83,8 +81,8 @@ def upload_file(
     driver.close()
     logging.info("Upload is complete")
 
-
     """_wait_for_processing function."""
+
 
 def _wait_for_processing(driver):
     logging.info("Waiting for processing to complete")
@@ -139,7 +137,6 @@ def _set_basic_settings(
     """_set_advanced_settings function."""
 
 
-
 def _set_advanced_settings(driver: WebDriver, game_title: str, made_for_kids: bool):
     logging.info("Setting Advanced Settings")
     # Open advanced options
@@ -173,12 +170,11 @@ def _set_advanced_settings(driver: WebDriver, game_title: str, made_for_kids: bo
                 ),
             )
         )
-    """_set_endcard function."""
-
     ).click()
 
 
 def _set_endcard(driver: WebDriver):
+    """_set_endcard function."""
     logging.info("Endscreen")
     # Add endscreen
     driver.find_element_by_css_selector("#endscreens-button").click()
@@ -194,13 +190,12 @@ def _set_endcard(driver: WebDriver):
             sleep(5)
 
     WebDriverWait(driver, 20).until(
-    """_set_time function."""
-
         EC.element_to_be_clickable((By.ID, "save-button"))
     ).click()
 
 
 def _set_time(driver: WebDriver, upload_time: datetime):
+    """_set_time function."""
     # Start time scheduling
     WebDriverWait(driver, 20).until(
         EC.element_to_be_clickable((By.NAME, "SCHEDULE"))

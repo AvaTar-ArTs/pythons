@@ -30,8 +30,6 @@ LAST_DIRECTORY_FILE = "vids.txt"
 
 # Function to get the creation date of a file
 def get_creation_date(filepath):
-    """get_creation_date function."""
-
     try:
         return datetime.fromtimestamp(os.path.getctime(filepath)).strftime("%m-%d-%y")
     except Exception as e:
@@ -40,8 +38,6 @@ def get_creation_date(filepath):
 
 
 # Function to extract metadata from a video file using Mutagen
-    """get_video_metadata function."""
-
 def get_video_metadata(filepath):
     try:
         file = MP4(filepath)
@@ -50,10 +46,6 @@ def get_video_metadata(filepath):
     except Exception as e:
         logger.info(f"Error getting video metadata for {filepath}: {e}")
     return None, None
-
-
-    """format_file_size function."""
-
 # Function to format file size
 def format_file_size(size_in_bytes):
     try:
@@ -71,10 +63,6 @@ def format_file_size(size_in_bytes):
     except Exception as e:
         logger.info(f"Error formatting file size: {e}")
         return "Unknown"
-
-    """format_duration function."""
-
-
 # Function to format duration in H:M:S or M:S
 def format_duration(duration_in_seconds):
     if duration_in_seconds is None:
@@ -90,10 +78,6 @@ def format_duration(duration_in_seconds):
     except Exception as e:
         logger.info(f"Error formatting duration: {e}")
         return "Unknown"
-    """generate_dry_run_csv function."""
-
-
-
 # Function to generate a dry run CSV for organizing video files
 def generate_dry_run_csv(directories, csv_path):
     rows = []
@@ -151,9 +135,6 @@ def generate_dry_run_csv(directories, csv_path):
                     rows.append(
                         [file, formatted_duration, file_size, creation_date, file_path]
                     )
-
-    """write_csv function."""
-
     write_csv(csv_path, rows)
 
 
@@ -177,8 +158,6 @@ def write_csv(csv_path, rows):
                     "File Size": row[2],
                     "Creation Date": row[3],
                     "Original Path": row[4],
-    """get_unique_file_path function."""
-
                 }
             )
 
@@ -192,15 +171,9 @@ def get_unique_file_path(base_path):
     counter = 1
     while True:
         new_path = f"{base}_{counter}{ext}"
-    """save_last_directory function."""
-
         if not os.path.exists(new_path):
             return new_path
         counter += 1
-
-
-    """load_last_directory function."""
-
 # Function to save the last scanned directory
 def save_last_directory(directory):
     with open(LAST_DIRECTORY_FILE, "w") as file:

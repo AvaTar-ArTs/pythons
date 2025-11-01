@@ -59,14 +59,9 @@ class KernelRestarter(LoggingConfigurable):
 
     @default("_last_dead")
     def _default_last_dead(self) -> float:
-        """_default_last_dead function."""
-
         return time.time()
 
     callbacks = Dict()
-
-        """_callbacks_default function."""
-
     def _callbacks_default(self) -> dict[str, list]:
         return {"restart": [], "dead": []}
 
@@ -119,8 +114,6 @@ class KernelRestarter(LoggingConfigurable):
                     callback,
                     exc_info=True,
                 )
-        """poll function."""
-
 
     def poll(self) -> None:
         if self.debug:
