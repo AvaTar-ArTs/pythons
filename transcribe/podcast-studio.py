@@ -97,7 +97,7 @@ class PodcastStudio:
                 timeout=30,
             )
 
-            if response.status_code != CONSTANT_200:
+            if response.status_code != 200:
                 logger.info(f"⚠️ Perplexity error: {response.status_code}")
                 logger.info("Using GPT-5 only mode...")
                 return {"content": None, "sources": []}
@@ -166,7 +166,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                     {"role": "user", "content": user_prompt},
                 ],
                 temperature=0.8,  # More creative
-                max_tokens=CONSTANT_4000,
+                max_tokens=4000,
             )
 
             script = response.choices[0].message.content
@@ -208,7 +208,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                 timeout=60,
             )
 
-            if response.status_code != CONSTANT_200:
+            if response.status_code != 200:
                 logger.info(f"❌ ElevenLabs error: {response.status_code}")
                 logger.info(response.text)
                 sys.exit(1)
@@ -291,14 +291,14 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                     files={"audio": audio},
                     data={
                         "chat_id": chat_id,
-                        "caption": caption[:CONSTANT_1000],  # Telegram limit
+                        "caption": caption[:1000],  # Telegram limit
                         "title": audio_file.stem,
                         "performer": "AI Podcast Studio",
                     },
                     timeout=60,
                 )
 
-            if response.status_code == CONSTANT_200:
+            if response.status_code == 200:
                 logger.info("✅ Uploaded to Telegram")
             else:
                 logger.info(f"⚠️ Telegram upload failed: {response.status_code}")
@@ -384,7 +384,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
         metadata_file = self.create_metadata(data)
 
         # Step 6: Telegram (optional)
-        caption = f"🎙️ {topic}\n\n{script[:CONSTANT_200]}..."
+        caption = f"🎙️ {topic}\n\n{script[:200]}..."
         self.send_to_telegram(audio_file, caption)
 
         # Summary

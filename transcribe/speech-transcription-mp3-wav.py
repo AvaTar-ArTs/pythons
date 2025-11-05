@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 # Constants
-CONSTANT_10000 = 10000
+10000 = 10000
 
 
 def mp3_to_wav_Conversion(mp3_src, wav_dst):
@@ -28,7 +28,7 @@ def mp3_to_wav_Conversion(mp3_src, wav_dst):
 
 
 def split_files_with_timestamp(test_audio):
-    chunk_length_ms = CONSTANT_10000
+    chunk_length_ms = 10000
     chunks = make_chunks(test_audio, chunk_length_ms)
     return chunks
 

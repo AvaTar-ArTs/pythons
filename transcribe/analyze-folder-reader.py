@@ -198,7 +198,8 @@ def write_markdown(mi: ModuleInfo, out_dir: Path) -> Path:
         body.append("\n## Classes\n")
         for n in mi.classes:
             body.append(f"- `{n}`")
-    md_path.write_text(Path("\n").join(body), encoding="utf-8")
+    md_path.write_text("
+".join(body), encoding="utf-8")
     return md_path
 
 
@@ -399,7 +400,7 @@ def analyze_repo(
                 "imports": ", ".join(mi.imports),
                 "functions": ", ".join(mi.functions),
                 "classes": ", ".join(mi.classes),
-                "docstring": (mi.docstring or "").replace(Path("\n"), Path("\\n"))[:CONSTANT_2000],
+                "docstring": (mi.docstring or "").replace(Path("\n"), Path("\\n"))[:2000],
             }
         )
 

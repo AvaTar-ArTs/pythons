@@ -104,11 +104,12 @@ def transcribe_video_segment(file_path):
             )
 
         transcript_with_timestamps = [
-            f"{format_timestamp(seg['start'])} -- {format_timestamp(seg['end'])}: {seg['text']}"
+            f"{format_timestamp(seg['start'])}-{format_timestamp(seg['end'])}: {seg['text']}"
             for seg in transcript_data["segments"]
         ]
 
-        return Path("\n").join(transcript_with_timestamps)
+        return "
+".join(transcript_with_timestamps)
     except Exception as e:
         logging.error(f"Error transcribing video segment {file_path}: {e}")
         return ""

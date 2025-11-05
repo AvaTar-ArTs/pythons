@@ -97,8 +97,9 @@ def transcribe_audio(file_path: Path, model="whisper-1") -> str | None:
         start = seg.get("start", 0)
         end = seg.get("end", 0)
         text = seg.get("text", "").strip()
-        lines.append(f"{format_timestamp(start)} -- {format_timestamp(end)}: {text}")
-    return Path("\n").join(lines)
+        lines.append(f"{format_timestamp(start)}-{format_timestamp(end)}: {text}")
+    return "
+".join(lines)
 
 def analyze_text_for_section(text: str, model="gpt-3.5-turbo") -> str | None:
     system_prompt = (

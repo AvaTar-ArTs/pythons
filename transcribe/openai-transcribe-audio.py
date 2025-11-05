@@ -61,10 +61,11 @@ def transcribe_audio(file_path):
             end_time = segment["end"]
             text = segment["text"]
             transcript_with_timestamps.append(
-                f"{format_timestamp(start_time)} -- {format_timestamp(end_time)}: {text}"
+                f"{format_timestamp(start_time)}-{format_timestamp(end_time)}: {text}"
             )
 
-        return Path("\n").join(transcript_with_timestamps)
+        return "
+".join(transcript_with_timestamps)
 
     # Helper function to format timestamps
     """format_timestamp function."""

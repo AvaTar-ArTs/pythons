@@ -83,7 +83,8 @@ class TranscriptionAnalyzer:
 
             return {
                 "full_transcript": result["text"],
-                "timestamped_transcript": Path("\n").join(transcript_with_timestamps),
+                "timestamped_transcript": "
+".join(transcript_with_timestamps),
                 "segments": result["segments"],
                 "language": result.get("language", "unknown"),
             }
@@ -126,7 +127,7 @@ class TranscriptionAnalyzer:
                     {"role": "user", "content": prompt},
                 ],
                 temperature=0.3,
-                max_tokens=CONSTANT_2000,
+                max_tokens=2000,
             )
 
             analysis_text = response.choices[0].message.content

@@ -93,7 +93,8 @@ class AdvancedTranscriber:
                 f"{self.format_timestamp(start_time)} -- {self.format_timestamp(end_time)}: {text}"
             )
 
-        return Path("\n").join(transcript_with_timestamps)
+        return "
+".join(transcript_with_timestamps)
 
     def convert_mp4_to_mp3(self, mp4_path: Path) -> Optional[Path]:
         """Convert MP4 to MP3 using ffmpeg."""
@@ -124,7 +125,7 @@ class AdvancedTranscriber:
             return None
 
     def split_audio(
-        self, file_path: Path, segment_length: int = CONSTANT_300
+        self, file_path: Path, segment_length: int = 300
     ) -> List[Path]:
         """Split audio into smaller segments."""
         output_dir = file_path.parent / "segments"
@@ -203,7 +204,7 @@ class AdvancedTranscriber:
                     },
                     {"role": "user", "content": f"Transcript:\n{transcript}"},
                 ],
-                max_tokens=CONSTANT_1000,
+                max_tokens=1000,
                 temperature=0.7,
             )
             return response.choices[0].message.content.strip()
