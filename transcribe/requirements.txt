@@ -1,0 +1,22 @@
+# Transcription Scripts - Minimal Dependencies
+# Install: pip install -r requirements.txt
+
+# Core transcription engines
+faster-whisper>=1.0.0
+openai>=1.0.0
+
+# Cloud transcription APIs  
+assemblyai>=0.20.0
+deepgram-sdk>=3.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+rich>=13.0.0
+tqdm>=4.65.0
+requests>=2.31.0
+termcolor>=2.3.0
+
+# Optional - only install if needed
+# anthropic>=0.20.0
+# pydub>=0.25.0
+# librosa>=0.10.0
