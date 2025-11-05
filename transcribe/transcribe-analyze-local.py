@@ -67,12 +67,12 @@ DEFAULT_SYSTEM_PROMPT = (
 
 def expanduser_if_needed(p: str) -> str:
     return os.path.expanduser(p) if p else p
-def hhmmss(seconds: float) -> str:
+def mmss(seconds: float) -> str:
+    """Format as MM:SS"""
     if seconds is None or math.isnan(seconds):
-        return "00:00:00"
+        return "00:00"
     m, s = divmod(int(seconds), 60)
-    h, m = divmod(m, 60)
-    return f"{h:02d}:{m:02d}:{s:02d}"
+    return f"{m:02d}:{s:02d}"
 def load_env():
     # Respect user's ~/.env by default
     env_path = expanduser_if_needed(os.getenv("ENV_PATH", "~/.env"))
@@ -122,7 +122,7 @@ def save_transcript_txt_srt(segments: List[Tuple[float, float, str]], out_txt: P
     # Plain TXT
     with out_txt.open("w", encoding="utf-8") as f:
         for (s, e, t) in segments:
-            f.write(f"{hhmmss(s)} -- {hhmmss(e)}: {t}\n")
+            f.write(f"{mmss(s)}-{mmss(e)}: {t}\n")
 
     # SRT
     def srt_timestamp(t: float) -> str:
@@ -149,7 +149,7 @@ def analyze_with_ollama(text: str, filename: str, model: str, system_prompt: str
         "Return a structured analysis with section headers."
     )
     try:
-        resp = requests.post(url, json={"model": model, "prompt": prompt, "stream": False}, timeout=CONSTANT_600)
+        resp = requests.post(url, json={"model": model, "prompt": prompt, "stream": False}, timeout=600)
         resp.raise_for_status()
         data = resp.json()
         return data.get("response") or json.dumps(data, indent=2)
