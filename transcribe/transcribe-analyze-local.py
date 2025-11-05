@@ -222,7 +222,7 @@ def main():
         rprint(f"[green]✓ Transcript saved[/green] {out_txt.name}  ([dim]{lang}[/dim])")
 
         # Build text for LLM (concat segments)
-        transcript_text = "\n".join(f"{hhmmss(s)}--{hhmmss(e)} {t}" for (s, e, t) in segments)
+        transcript_text = "\n".join(f"{mmss(s)}-{mmss(e)} {t}" for (s, e, t) in segments)
 
         # Optional lightweight features
         feats = extract_features(path)
