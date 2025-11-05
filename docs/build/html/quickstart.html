@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Start Guide &mdash; Python Automation Arsenal 2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=60dbed4a"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Complete Documentation" href="main-docs.html" />
+    <link rel="prev" title="Python Automation Arsenal" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Python Automation Arsenal
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-script">First Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-workflows">Common Workflows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#morning-instagram-routine">Morning Instagram Routine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ai-art-production">AI Art Production</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#music-generation">Music Generation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="main-docs.html">Complete Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main-docs.html#python-automation-arsenal">?? Python Automation Arsenal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#comprehensive-documentation-script-reference">Comprehensive Documentation &amp; Script Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#table-of-contents">?? Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#overview">?? Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#what-makes-this-collection-special">?? What Makes This Collection Special</a></li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#quick-stats">?? Quick Stats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#ai-machine-learning">?? AI &amp; Machine Learning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#intermediate-level">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#ai-conversation-file-organization-script">?? AI Conversation File Organization Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#ai-deep-analyzer-py">?? ai-deep-analyzer.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#ai-docs-generator-py">?? ai-docs-generator.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#intelligent-code-analyzer-for-adaptive-insights">?? Intelligent Code Analyzer for Adaptive Insights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#content-aware-chat-analysis-organizer">?? Content-Aware Chat Analysis Organizer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#assemblyai-audio-transcriber">?? AssemblyAI Audio Transcriber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#chatgpt-conversation-exporter-py">?? chatgpt-conversation-exporter.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#chatgpt-py">?? chatgpt.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#claude-anthropic-download-py">?? claude-anthropic-download.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#claude-chief-py">?? claude-chief.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#claude-code-review-system-py">?? claude-code-review-system.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#claude-deep-py">?? claude-deep.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#claude-script-py">?? claude-script.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#instagram-automation">?? Instagram Automation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id1">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#bot-instagram-py">?? bot-instagram.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#image-generation-processing">?? Image Generation &amp; Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id2">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#aws-sqs-image-queue-py">?? aws-sqs-image-queue.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#audio-music">?? Audio &amp; Music</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#beginner-level">?? Beginner Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#audio-normalization-and-voice-selection-script">?? Audio Normalization and Voice Selection Script</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id3">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#analyze-and-transcribe-missing-audio-content">?? Analyze and Transcribe Missing Audio Content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#audio-analyzer-with-transcription-and-analysis">?? Audio Analyzer with Transcription and Analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#cinematic-audio-synthesis-tool">?? Cinematic Audio Synthesis Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#audio-transcription-and-analysis-pipeline">?? Audio Transcription and Analysis Pipeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#audio-transcription-script-using-whisper">?? Audio Transcription Script Using Whisper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#openai-tts-audiobook-producer">?? OpenAI TTS Audiobook Producer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#aws-polly-tts-py">?? aws-polly-tts.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#advanced-level">?? Advanced Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#alchemyapi-advanced-audio-demo-generator">?? AlchemyAPI Advanced Audio Demo Generator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#video-processing">?? Video Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id4">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#youtube-shorts-audio-analysis-tool">?? YouTube Shorts Audio Analysis Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#clip-editor-py">?? clip-editor.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#clips-1-py">?? clips-1.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#data-analysis-processing">?? Data Analysis &amp; Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id5">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#directory-structure-migration-analyzer">?? Directory Structure Migration Analyzer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#script-version-analyzer">?? Script Version Analyzer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#comprehensive-file-analyzer-tool">?? Comprehensive File Analyzer Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#python-repository-document-organizer">?? Python Repository Document Organizer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#document-cleanup-orchestrator">?? Document Cleanup Orchestrator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#image-metadata-enrichment-with-gpt">?? Image Metadata Enrichment with GPT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#mp3-transcript-analysis-and-prompt-generation">?? MP3 Transcript Analysis and Prompt Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#image-prompt-generator-from-transcript">?? Image Prompt Generator from Transcript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#image-analysis-with-gpt-4o-api">?? Image Analysis with GPT-4o API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#transcription-analyzer-script">?? Transcription Analyzer Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#simple-quality-monitor-for-code-analysis">?? Simple Quality Monitor for Code Analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#backupcsv-py">?? backupcsv.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#catalog-to-csv-py">?? catalog-to-csv.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id6">?? Advanced Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#advanced-python-code-complexity-analyzer">?? Advanced Python Code Complexity Analyzer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#file-management-organization">??? File Management &amp; Organization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id7">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#batch-rename-processor">?? Batch Rename Processor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#aggressive-filename-cleaner">?? Aggressive Filename Cleaner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#album-sorting-script-for-media-files">?? Album Sorting Script for Media Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#avatararts-flatten-py">?? avatararts-flatten.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#clean-flatten-names-py">?? clean-flatten-names.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#clean-folder-names-no-vols-py">?? clean-folder-names-no-vols.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#content-creation-pipelines">?? Content Creation Pipelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id8">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#deep-content-aware-analysis-tool">?? Deep Content-Aware Analysis Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#adaptive-content-aware-analysis-system">?? Adaptive Content-Aware Analysis System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#category-readme-generator-py">?? category-readme-generator.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id9">?? Advanced Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#advanced-content-generation-pipeline">?? Advanced Content Generation Pipeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#automation-workflows">?? Automation &amp; Workflows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id10">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#reddit-post-screenshot-downloader">?? Reddit Post Screenshot Downloader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#automation-selenium-content-py">?? automation-selenium-content.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#batch-folder-writer-py">?? batch-folder-writer.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#batch-image-py">?? batch-image.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#batch-info-py">?? batch-info.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#batch-processor-py">?? batch-processor.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#batch-transcript-finder-py">?? batch-transcript-finder.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#bot-like-py">?? bot-like.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#bot-photo-py">?? bot-photo.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#social-media-tools">?? Social Media Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id11">?? Beginner Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#askreddit-video-generator-bot">?? AskReddit Video Generator Bot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id12">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#ask-reddit-video-creator">?? Ask Reddit Video Creator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#automated-askreddit-video-creator">?? Automated AskReddit Video Creator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#utilities-helpers">?? Utilities &amp; Helpers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id13">?? Beginner Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#standard-environment-loader-for-python-scripts">?? Standard Environment Loader for Python Scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#github-repository-improvement-script">?? GitHub Repository Improvement Script</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#id14">?? Intermediate Level</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#ultimate-media-analysis-pipeline-multi-api-edition">?? Ultimate Media Analysis Pipeline - Multi-API Edition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#psd-image-module-for-python">?? PSD Image Module for Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#refreshthread-live-display-updater">?? _RefreshThread: Live Display Updater</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#alchemy-quiz-mp3-generator">?? Alchemy Quiz MP3 Generator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#api-key-inventory-v2">?? API Key Inventory V2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#api-key-inventory-scanner">?? API Key Inventory Scanner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#query-expansion-for-enhanced-search-applications">?? Query Expansion for Enhanced Search Applications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#self-query-generation-for-user-identification">?? Self Query Generation for User Identification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#comprehensive-merge-and-consolidation-tool">?? Comprehensive Merge and Consolidation Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#python-code-analysis-and-ascii-art-generator">?? Python Code Analysis and ASCII Art Generator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#automated-code-fixer-for-python-scripts">?? Automated Code Fixer for Python Scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#backlinker-py">?? backlinker.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#backup-avatararts-system-py">?? backup-avatararts-system.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#backup-installations-py">?? backup-installations.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#basic-follow-unfollow-py">?? basic-follow-unfollow.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#bookmarks-py">?? bookmarks.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#brand-py">?? brand.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#breakdown-py">?? breakdown.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#bubblespider-amazon-scraper-py">?? bubblespider-amazon-scraper.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#build-py">?? build.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#business-intelligence-py">?? business-intelligence.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#calculator-py">?? calculator.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#capture-py">?? capture.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#categorizer-py">?? categorizer.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#chat-base-py">?? chat-base.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#chatprompt-py">?? chatprompt.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#check-1-py">?? check-1.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#check-file-py">?? check-file.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#check-modules-py">?? check-modules.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#check-quality-py">?? check-quality.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#check-py">?? check.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#classify-py">?? classify.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#cli-config-manager-py">?? cli-config-manager.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#cli-py">?? cli.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main-docs.html#client-v1-py">?? client-v1.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#appendices">?? Appendices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#a-quick-start-guide">A. Quick Start Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#b-api-services-available">B. API Services Available</a></li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#c-best-practices">C. Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="main-docs.html#d-common-workflows">D. Common Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#support">?? Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main-docs.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python Automation Arsenal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quick Start Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quick-start-guide">
+<h1>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Link to this heading"></a></h1>
+<p>Get started with the Python Automation Arsenal in minutes!</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>Required:</dt><dd><ul class="simple">
+<li><p>Python 3.8 or higher</p></li>
+<li><p>Mamba/Conda environment manager</p></li>
+<li><p>Git</p></li>
+</ul>
+</dd>
+<dt>Optional but recommended:</dt><dd><ul class="simple">
+<li><p>API keys for AI services (already configured in <code class="docutils literal notranslate"><span class="pre">~/.env.d/</span></code>)</p></li>
+<li><p>26+ AI/ML service accounts</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Activate Environment</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Activate your environment</span>
+mamba<span class="w"> </span>activate<span class="w"> </span>sales-empire
+
+<span class="c1"># Verify Python version</span>
+python<span class="w"> </span>--version<span class="w">  </span><span class="c1"># Should be 3.8+</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Navigate to Repository</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Documents/pythons
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Verify API Keys</strong> (Optional)</p></li>
+</ol>
+<p>Your environment already has 100+ API keys configured! Check:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># View loaded environment</span>
+env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>API_KEY<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-5
+</pre></div>
+</div>
+</section>
+<section id="first-script">
+<h2>First Script<a class="headerlink" href="#first-script" title="Link to this heading"></a></h2>
+<p>Let’s run a simple script to verify everything works:</p>
+<p><strong>Instagram Analytics</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>instagram-analyze-stats.py
+</pre></div>
+</div>
+<p><strong>Leonardo AI Image Generation</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>leonardo-api.py<span class="w"> </span>--help
+</pre></div>
+</div>
+<p><strong>OpenAI Content Analysis</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>openai-content-analyzer.py
+</pre></div>
+</div>
+</section>
+<section id="common-workflows">
+<h2>Common Workflows<a class="headerlink" href="#common-workflows" title="Link to this heading"></a></h2>
+<section id="morning-instagram-routine">
+<h3>Morning Instagram Routine<a class="headerlink" href="#morning-instagram-routine" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check growth metrics</span>
+python<span class="w"> </span>instagram-analyze-stats.py
+
+<span class="c1"># Strategic following</span>
+python<span class="w"> </span>instagram-follow-user-followers.py<span class="w"> </span>--target<span class="w"> </span>competitor
+
+<span class="c1"># Engage with community</span>
+python<span class="w"> </span>instagram-like-hashtags.py<span class="w"> </span>--hashtags<span class="w"> </span>art,design
+</pre></div>
+</div>
+</section>
+<section id="ai-art-production">
+<h3>AI Art Production<a class="headerlink" href="#ai-art-production" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate batch artwork</span>
+python<span class="w"> </span>leonardo-api.py<span class="w"> </span>--batch<span class="w"> </span><span class="m">10</span>
+
+<span class="c1"># Upscale images</span>
+python<span class="w"> </span>leonardo-upscale-loop.py
+
+<span class="c1"># Add watermarks</span>
+python<span class="w"> </span>image-add-text-overlay.py<span class="w"> </span>--watermark
+</pre></div>
+</div>
+</section>
+<section id="music-generation">
+<h3>Music Generation<a class="headerlink" href="#music-generation" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate music</span>
+python<span class="w"> </span>suno-generator.py<span class="w"> </span>--prompts<span class="w"> </span>ideas.txt
+
+<span class="c1"># Organize library</span>
+python<span class="w"> </span>suno-music-catalog.py
+
+<span class="c1"># Normalize audio levels</span>
+python<span class="w"> </span>audio-normalize.py
+</pre></div>
+</div>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<p><strong>Module Not Found</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install missing dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-py.txt
+</pre></div>
+</div>
+<p><strong>API Key Missing</strong></p>
+<p>All keys are in <code class="docutils literal notranslate"><span class="pre">~/.env.d/MASTER_CONSOLIDATED.env</span></code>. Check:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>~/.env.d/MASTER_CONSOLIDATED.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>YOUR_SERVICE
+</pre></div>
+</div>
+<p><strong>Permission Errors</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make script executable</span>
+chmod<span class="w"> </span>+x<span class="w"> </span>script-name.py
+</pre></div>
+</div>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Explore <span class="xref std std-doc">categories/index</span> to find scripts by category</p></li>
+<li><p>Read <span class="xref std std-doc">best-practices</span> for optimization tips</p></li>
+<li><p>Check <span class="xref std std-doc">api-services</span> for available integrations</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>?? <strong>Pro Tip</strong>: Use the search function to quickly find scripts by functionality!</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Python Automation Arsenal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="main-docs.html" class="btn btn-neutral float-right" title="Complete Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Steven.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
