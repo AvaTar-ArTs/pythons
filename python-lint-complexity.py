@@ -1,12 +1,3 @@
-"""
-Python Lint Complexity Report
-
-This module provides functionality for python lint complexity report.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import ast
 import csv
 import os

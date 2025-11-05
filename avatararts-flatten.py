@@ -1,16 +1,3 @@
-"""
-Projects Avatararts Flatten 1
-
-This module provides functionality for projects avatararts flatten 1.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Final Flattening Script - Move ALL files to root and remove ALL directories

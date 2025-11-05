@@ -1,12 +1,3 @@
-"""
-Resize Skip 8Below Og
-
-This module provides functionality for resize skip 8below og.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 import time
 from datetime import datetime

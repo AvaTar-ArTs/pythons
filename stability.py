@@ -1,12 +1,3 @@
-"""
-Stability Ai
-
-This module provides functionality for stability ai.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import io
 import os
 import warnings

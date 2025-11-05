@@ -1,20 +1,3 @@
-"""
-Emotional
-
-This module provides functionality for emotional.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_200 = 200
-
 #!/usr/bin/env python3
 """
 AlchemyAPI Emotional Quiz Generator
@@ -30,6 +13,17 @@ from dotenv import load_dotenv
 from pydub import AudioSegment
 import requests
 import json
+
+
+
+# Load API keys from ~/.env.d/
+from pathlib import Path as PathLib
+from dotenv import load_dotenv
+
+env_dir = PathLib.home() / ".env.d"
+if env_dir.exists():
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
 
 
 class EmotionalQuizGenerator:

@@ -1,12 +1,3 @@
-"""
-Quantum
-
-This module provides functionality for quantum.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import numpy as np
 from PIL import Image, ImageOps
 from scipy.fftpack import dct, idct

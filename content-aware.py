@@ -1,21 +1,3 @@
-"""
-Content Aware Csv Deduper
-
-This module provides functionality for content aware csv deduper.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_1024 = 1024
-
 #!/usr/bin/env python3
 """
 Content-Aware File Deduplication and Organization System

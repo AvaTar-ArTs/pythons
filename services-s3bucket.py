@@ -1,12 +1,3 @@
-"""
-Cloud Services Aws S3Bucket 1
-
-This module provides functionality for cloud services aws s3bucket 1.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import boto3
 from botocore.config import Config
 from utilities.const import AWS_ACCESS_KEY, AWS_SEC_KEY, get_current_date

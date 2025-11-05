@@ -1,24 +1,3 @@
-"""
-Wiggle
-
-This module provides functionality for wiggle.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_128 = 128
-CONSTANT_240 = 240
-CONSTANT_255 = 255
-CONSTANT_480 = 480
-
 #!/usr/bin/env python3
 """
 Wiggle Animation - Smooth, organic wobbling and jiggling motions.

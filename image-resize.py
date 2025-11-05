@@ -1,12 +1,3 @@
-"""
-Media Processing Image Resize 9
-
-This module provides functionality for media processing image resize 9.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import csv
 import os
 from datetime import datetime

@@ -1,12 +1,3 @@
-"""
-Re Size
-
-This module provides functionality for re size.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 import time
 from datetime import datetime

@@ -1,12 +1,3 @@
-"""
-Job Template
-
-This module provides functionality for job template.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import csv
 import html

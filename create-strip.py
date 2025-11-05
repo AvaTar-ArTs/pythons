@@ -1,12 +1,3 @@
-"""
-Create Strip
-
-This module provides functionality for create strip.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from PIL import Image
 
 # Constants

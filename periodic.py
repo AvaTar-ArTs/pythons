@@ -1,18 +1,3 @@
-"""
-Periodic
-
-This module provides functionality for periodic.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_300 = 300
-CONSTANT_587 = 587
-CONSTANT_600 = 600
-
 #!/usr/bin/env python3
 """
 Periodic Quality Monitor

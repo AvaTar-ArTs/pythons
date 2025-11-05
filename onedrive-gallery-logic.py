@@ -1,12 +1,3 @@
-"""
-Onedrive Gallery Logic
-
-This module provides functionality for onedrive gallery logic.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import time
 import pkg_resources
 import simplegallery.common as spg_common

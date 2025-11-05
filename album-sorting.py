@@ -1,12 +1,3 @@
-"""
-Album Sorting
-
-This module provides functionality for album sorting.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 #!/usr/bin/env python3
 from pathlib import Path
 import os

@@ -1,12 +1,3 @@
-"""
-Analyze Csv Reader
-
-This module provides functionality for analyze csv reader.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 #!/usr/bin/env python3
 import os
 import csv
@@ -21,6 +12,17 @@ from env_d_loader import load_dotenv
 from tqdm import tqdm
 
 import logging
+
+
+# Load API keys from ~/.env.d/
+from pathlib import Path as PathLib
+from dotenv import load_dotenv
+
+env_dir = PathLib.home() / ".env.d"
+if env_dir.exists():
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
+
 
 logger = logging.getLogger(__name__)
 

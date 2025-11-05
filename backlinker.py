@@ -1,12 +1,3 @@
-"""
-Backlinker
-
-This module provides functionality for backlinker.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import json
 import re
 import sys

@@ -1,15 +1,3 @@
-"""
-Github Upload Manager
-
-This module provides functionality for github upload manager.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_100 = 100
-
 #!/usr/bin/env python3
 """
 GitHub Upload Manager

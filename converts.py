@@ -1,12 +1,3 @@
-"""
-Converts
-
-This module provides functionality for converts.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 from PIL import Image
 

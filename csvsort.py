@@ -1,12 +1,3 @@
-"""
-Csvsort
-
-This module provides functionality for csvsort.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 from pathlib import Path
 from urllib.parse import urlparse

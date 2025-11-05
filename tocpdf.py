@@ -1,12 +1,3 @@
-"""
-Utilities Misc Tocpdf 1
-
-This module provides functionality for utilities misc tocpdf 1.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 

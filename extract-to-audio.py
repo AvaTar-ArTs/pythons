@@ -1,14 +1,3 @@
-"""
-Utilities Misc Extract 13
-
-This module provides functionality for utilities misc extract 13.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
 from topic.news import NEWS
 from tts.polly import AudioProcessor
 from utilities.const import LOG_PATH, TECH_NEWS

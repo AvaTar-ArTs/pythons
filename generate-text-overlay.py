@@ -1,12 +1,3 @@
-"""
-Imagenarator 2
-
-This module provides functionality for imagenarator 2.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 import re
 import textwrap

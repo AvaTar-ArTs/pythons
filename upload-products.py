@@ -1,12 +1,3 @@
-"""
-Ecommerce Printify Try 3
-
-This module provides functionality for ecommerce printify try 3.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import base64
 
 import pandas as pd

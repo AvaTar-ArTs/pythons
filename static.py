@@ -1,12 +1,3 @@
-"""
-Static Test
-
-This module provides functionality for static test.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from clips import *
 
 clips = []

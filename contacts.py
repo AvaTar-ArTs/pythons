@@ -1,12 +1,3 @@
-"""
-Contacts
-
-This module provides functionality for contacts.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from PIL import Image
 import os
 

@@ -1,20 +1,3 @@
-"""
-Github Repo Manager
-
-This module provides functionality for github repo manager.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_000000 = 000000
-CONSTANT_100 = 100
-CONSTANT_127 = 127
-CONSTANT_1000 = 1000
-CONSTANT_2004 = 2004
-CONSTANT_2025 = 2025
-
 #!/usr/bin/env python3
 """
 Enhanced GitHub Repository Manager

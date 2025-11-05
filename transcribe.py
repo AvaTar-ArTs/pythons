@@ -1,12 +1,3 @@
-"""
-Transcribe Mp
-
-This module provides functionality for transcribe mp.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 
 import whisper

@@ -1,16 +1,3 @@
-"""
-Duplicate Cleaner
-
-This module provides functionality for duplicate cleaner.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Duplicate Cleaner - Remove duplicate files and consolidate naming

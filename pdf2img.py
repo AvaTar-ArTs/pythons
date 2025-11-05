@@ -1,12 +1,3 @@
-"""
-Pdf2Img
-
-This module provides functionality for pdf2img.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pdf2image import convert_from_path
 import os
 

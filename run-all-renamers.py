@@ -1,16 +1,3 @@
-"""
-Utilities Cli Tools Run 8
-
-This module provides functionality for utilities cli tools run 8.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Master Runner for All Rename Utilities
@@ -21,6 +8,17 @@ import argparse
 import sys
 from pathlib import Path
 from typing import List, Dict, Any
+
+
+# Load API keys from ~/.env.d/
+from pathlib import Path as PathLib
+from dotenv import load_dotenv
+
+env_dir = PathLib.home() / ".env.d"
+if env_dir.exists():
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
+
 
 # Import all renamers
 from master_renamer import MasterRenamer

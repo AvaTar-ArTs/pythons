@@ -1,12 +1,3 @@
-"""
-Image Organizer
-
-This module provides functionality for image organizer.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 import shutil
 from datetime import datetime

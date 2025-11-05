@@ -1,20 +1,4 @@
 """
-Psdimage
-
-This module provides functionality for psdimage.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-
-# Constants
-CONSTANT_0 = 0
-CONSTANT_300 = 300
-CONSTANT_30000 = 30000
-CONSTANT_300000 = 300000
-
-"""
 PSD Image module.
 """
 

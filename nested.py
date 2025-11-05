@@ -1,17 +1,4 @@
 """
-Nested
-
-This module provides functionality for nested.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_1097 = 1097
-CONSTANT_2020 = 2020
-
-"""
 Validating highly nested schemas shouldn't cause exponential time blowups.
 
 See https://github.com/python-jsonschema/jsonschema/issues/CONSTANT_1097.

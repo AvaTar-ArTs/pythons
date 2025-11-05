@@ -1,12 +1,3 @@
-"""
-Discography Grid Html
-
-This module provides functionality for discography grid html.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 from pathlib import Path
 

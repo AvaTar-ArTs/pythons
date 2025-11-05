@@ -1,12 +1,3 @@
-"""
-Img Resizer
-
-This module provides functionality for img resizer.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 #!/usr/bin/env python3
 import os
 import csv

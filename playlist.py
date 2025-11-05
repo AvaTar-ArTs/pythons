@@ -1,12 +1,3 @@
-"""
-Content Creation Nocturne Playlist 7
-
-This module provides functionality for content creation nocturne playlist 7.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import argparse
 import json

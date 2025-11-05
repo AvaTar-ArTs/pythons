@@ -1,12 +1,3 @@
-"""
-Simple Photo Gallery Logic
-
-This module provides functionality for simple photo gallery logic.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import os
 import shutil

@@ -1,12 +1,3 @@
-"""
-Clip
-
-This module provides functionality for clip.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from dataclasses import dataclass
 
 

@@ -1,22 +1,3 @@
-"""
-Quantumforgelabs
-
-This module provides functionality for quantumforgelabs.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Create a ready-to-deploy static site scaffold for QuantumForgeLabs
-# Files:
-# - index.html
-# - assets/style.css
-# - assets/qfl-logo.svg (simple torus + QFL monogram)
-# - assets/og-image.png (copy from previously generated image if available)
-# - README.md
-# - LICENSE (MIT)
-# Then zip everything for download.
-
 from pathlib import Path
 import os, zipfile, shutil, textwrap, json, pathlib
 

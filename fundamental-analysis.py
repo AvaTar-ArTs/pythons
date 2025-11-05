@@ -1,12 +1,3 @@
-"""
-Fundamental
-
-This module provides functionality for fundamental.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from agents import Agent, WebSearchTool, ModelSettings
 from utils import load_prompt, DISCLAIMER, repo_path
 from pathlib import Path

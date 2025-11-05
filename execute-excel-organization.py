@@ -1,16 +1,3 @@
-"""
-Execute Excel Organization
-
-This module provides functionality for execute excel organization.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Execute Excel Organization - Non-interactive version

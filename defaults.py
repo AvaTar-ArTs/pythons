@@ -1,12 +1,3 @@
-"""
-Defaults
-
-This module provides functionality for defaults.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import typing as t
 

@@ -1,12 +1,3 @@
-"""
-Sorts
-
-This module provides functionality for sorts.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import csv
 import hashlib
 import os

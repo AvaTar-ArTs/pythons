@@ -1,22 +1,3 @@
-"""
-Monitor
-
-This module provides functionality for monitor.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_300 = 300
-CONSTANT_587 = 587
-
 #!/usr/bin/env python3
 """
 Setup Periodic Quality Monitoring

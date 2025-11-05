@@ -1,12 +1,3 @@
-"""
-Data Processing Pandas User 8
-
-This module provides functionality for data processing pandas user 8.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import pandas as pd
 

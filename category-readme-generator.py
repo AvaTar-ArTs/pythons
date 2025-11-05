@@ -1,16 +1,3 @@
-"""
-Category Readme Generator
-
-This module provides functionality for category readme generator.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Intelligent Category README Generator

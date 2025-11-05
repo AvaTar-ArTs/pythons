@@ -1,12 +1,3 @@
-"""
-Pdf2Html
-
-This module provides functionality for pdf2html.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import fitz  # Import PyMuPDF
 import os
 

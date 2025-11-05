@@ -1,21 +1,3 @@
-"""
-Multi Modal
-
-This module provides functionality for multi modal.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_500 = 500
-CONSTANT_1024 = 1024
-CONSTANT_1800 = 1800
-CONSTANT_2000 = 2000
-CONSTANT_3600 = 3600
-
 #!/usr/bin/env python3
 """
 ULTIMATE Media Analysis Pipeline - Multi-API Edition
@@ -33,8 +15,19 @@ from pathlib import Path
 from typing import Optional, Dict, Any, List
 from dotenv import load_dotenv
 
+
+# Load API keys from ~/.env.d/
+from pathlib import Path as PathLib
+from dotenv import load_dotenv
+
+env_dir = PathLib.home() / ".env.d"
+if env_dir.exists():
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
+
+
 # Load environment variables first
-load_dotenv()
+# load_dotenv()  # Now using ~/.env.d/
 
 # Now import other packages
 try:

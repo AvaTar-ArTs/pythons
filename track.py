@@ -1,12 +1,3 @@
-"""
-Track
-
-This module provides functionality for track.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from typing import Callable
 from uuid import uuid1
 

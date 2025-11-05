@@ -1,12 +1,3 @@
-"""
-Scancsv 4
-
-This module provides functionality for scancsv 4.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import csv
 import os

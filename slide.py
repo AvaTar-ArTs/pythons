@@ -1,26 +1,3 @@
-"""
-Slide
-
-This module provides functionality for slide.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_120 = 120
-CONSTANT_128 = 128
-CONSTANT_240 = 240
-CONSTANT_255 = 255
-CONSTANT_360 = 360
-CONSTANT_480 = 480
-
 #!/usr/bin/env python3
 """
 Slide Animation - Slide elements in from edges with overshoot/bounce.

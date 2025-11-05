@@ -1,12 +1,3 @@
-"""
-Image Upscaler Sips Macos
-
-This module provides functionality for image upscaler sips macos.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import csv
 import os
 import re

@@ -1,12 +1,3 @@
-"""
-Upscaler
-
-This module provides functionality for upscaler.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 import time
 from datetime import datetime

@@ -1,12 +1,3 @@
-"""
-Media Processing Image Taggy 1
-
-This module provides functionality for media processing image taggy 1.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 import zipfile
 import tempfile
@@ -20,6 +11,17 @@ from dotenv import load_dotenv
 from PIL import Image
 
 import logging
+
+
+# Load API keys from ~/.env.d/
+from pathlib import Path as PathLib
+from dotenv import load_dotenv
+
+env_dir = PathLib.home() / ".env.d"
+if env_dir.exists():
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
+
 
 logger = logging.getLogger(__name__)
 

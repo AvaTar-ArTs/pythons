@@ -1,29 +1,3 @@
-"""
-Media Processing Image Ultimate 3
-
-This module provides functionality for media processing image ultimate 3.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_250 = 250
-CONSTANT_300 = 300
-CONSTANT_360 = 360
-CONSTANT_720 = 720
-CONSTANT_768 = 768
-CONSTANT_1024 = 1024
-CONSTANT_1080 = 1080
-CONSTANT_1200 = 1200
-CONSTANT_1280 = 1280
-CONSTANT_1440 = 1440
-CONSTANT_1600 = 1600
-CONSTANT_1920 = 1920
-CONSTANT_4500 = 4500
-
 #!/usr/bin/env python3
 """
 Ultimate Image Processor V2

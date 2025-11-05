@@ -1,15 +1,3 @@
-"""
-Improvement
-
-This module provides functionality for improvement.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_100 = 100
-
 #!/usr/bin/env python3
 """
 Codebase Improvement Implementer
@@ -29,7 +17,7 @@ import ast
 import re
 import logging
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional, Any
+from typing import Dict, List, Optional
 from dataclasses import dataclass
 import argparse
 import json
@@ -115,7 +103,7 @@ except {exception_type} as e:
 
 # Set up logging
 logger = logging.getLogger(__name__)""",
-            "type_hints": """from typing import Any, Dict, List, Optional, Union, Tuple, Callable""",
+            "type_hints": """from typing import Dict, List, Optional
         }
 
     def implement_improvements(
@@ -322,7 +310,7 @@ logger = logging.getLogger(__name__)""",
             content = self._add_logging_import(content)
             content = content.replace(
                 "import logging",
-                "import logging\nfrom typing import Any, Dict, List, Optional, Union, Tuple",
+                "import logging\nfrom typing import Dict, List, Optional
             )
 
         return content

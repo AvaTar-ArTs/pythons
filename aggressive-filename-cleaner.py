@@ -1,16 +1,3 @@
-"""
-Aggressive Filename Cleaner
-
-This module provides functionality for aggressive filename cleaner.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Aggressive Filename Cleaner - Fix the filename insanity

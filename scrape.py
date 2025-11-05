@@ -1,12 +1,3 @@
-"""
-Scrape
-
-This module provides functionality for scrape.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import re
 from time import sleep, time

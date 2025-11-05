@@ -1,22 +1,3 @@
-"""
-Html Keep Or Remove Audit
-
-This module provides functionality for html keep or remove audit.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_1000 = 1000
-CONSTANT_1024 = 1024
-
 #!/usr/bin/env python3
 """
 HTML Content Analyzer

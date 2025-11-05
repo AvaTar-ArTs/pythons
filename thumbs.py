@@ -1,12 +1,3 @@
-"""
-Thumbs
-
-This module provides functionality for thumbs.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from __future__ import annotations
 
 import subprocess

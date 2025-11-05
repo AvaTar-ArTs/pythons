@@ -1,12 +1,3 @@
-"""
-Resize Img
-
-This module provides functionality for resize img.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import csv
 import os
 import re

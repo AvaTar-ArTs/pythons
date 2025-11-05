@@ -1,21 +1,3 @@
-"""
-Image Catalog Csv Builder
-
-This module provides functionality for image catalog csv builder.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_500 = 500
-
 #!/usr/bin/env python3
 """
 analyze_images_to_csv.py

@@ -1,12 +1,3 @@
-"""
-Sufflecsv
-
-This module provides functionality for sufflecsv.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import csv
 import random
 from io import StringIO

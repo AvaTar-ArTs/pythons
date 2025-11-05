@@ -1,17 +1,3 @@
-"""
-Typography
-
-This module provides functionality for typography.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_200 = 200
-CONSTANT_255 = 255
-CONSTANT_480 = 480
-
 #!/usr/bin/env python3
 """
 Typography System - Professional text rendering with outlines, shadows, and effects.

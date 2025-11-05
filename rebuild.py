@@ -1,12 +1,3 @@
-"""
-Rebuild
-
-This module provides functionality for rebuild.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import json
 import logging
 import os

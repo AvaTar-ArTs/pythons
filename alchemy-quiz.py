@@ -1,22 +1,3 @@
-"""
-Alchemy Quiz Mp3 Generator
-
-This module provides functionality for alchemy quiz mp3 generator.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_150 = 150
-CONSTANT_200 = 200
-CONSTANT_1000 = 1000
-
 #!/usr/bin/env python3
 """
 AlchemyAPI MP3 Generator
@@ -30,6 +11,17 @@ from dotenv import load_dotenv
 from pydub import AudioSegment
 import requests
 import csv
+
+
+
+# Load API keys from ~/.env.d/
+from pathlib import Path as PathLib
+from dotenv import load_dotenv
+
+env_dir = PathLib.home() / ".env.d"
+if env_dir.exists():
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
 
 
 def generate_speech(input_text, output_path, api_key):

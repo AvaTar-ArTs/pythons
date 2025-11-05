@@ -1,12 +1,3 @@
-"""
-Bookmarks
-
-This module provides functionality for bookmarks.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pypdf import PdfReader, PdfWriter
 
 

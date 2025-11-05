@@ -1,16 +1,3 @@
-"""
-Convert Mp
-
-This module provides functionality for convert mp.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Convert AIFF files to MP3 format

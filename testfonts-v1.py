@@ -1,12 +1,3 @@
-"""
-Testfonts
-
-This module provides functionality for testfonts.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import sys
 
 from modules.clipEditor import Slide

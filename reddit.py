@@ -1,12 +1,3 @@
-"""
-Reddit
-
-This module provides functionality for reddit.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from moviepy.editor import *
 import datetime as dt
 import pandas as pd

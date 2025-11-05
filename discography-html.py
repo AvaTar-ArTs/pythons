@@ -1,12 +1,3 @@
-"""
-Nocturne Discography Html V1
-
-This module provides functionality for nocturne discography html v1.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 from pathlib import Path
 

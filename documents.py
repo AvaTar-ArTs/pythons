@@ -1,20 +1,3 @@
-"""
-Documents
-
-This module provides functionality for documents.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_1024 = 1024
-
 #!/usr/bin/env python3
 """
 Script to create a CSV backup of ~/documents directory in the same format as ~/clean

@@ -1,12 +1,3 @@
-"""
-Subtitle
-
-This module provides functionality for subtitle.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 # flake8: noqa
 
 CAPTIONS = {

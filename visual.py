@@ -1,30 +1,3 @@
-"""
-Visual
-
-This module provides functionality for visual.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_107 = 107
-CONSTANT_121 = 121
-CONSTANT_150 = 150
-CONSTANT_155 = 155
-CONSTANT_159 = 159
-CONSTANT_162 = 162
-CONSTANT_180 = 180
-CONSTANT_182 = 182
-CONSTANT_185 = 185
-CONSTANT_193 = 193
-CONSTANT_200 = 200
-CONSTANT_218 = 218
-CONSTANT_240 = 240
-CONSTANT_254 = 254
-CONSTANT_255 = 255
-
 #!/usr/bin/env python3
 """
 Visual Effects - Particles, motion blur, impacts, and other effects for GIFs.

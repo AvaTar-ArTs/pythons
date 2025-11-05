@@ -1,12 +1,3 @@
-"""
-Convertupscale 1
-
-This module provides functionality for convertupscale 1.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 
 from PIL import Image

@@ -1,17 +1,4 @@
 """
-Subject
-
-This module provides functionality for subject.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-
-# Constants
-CONSTANT_100 = 100
-
-"""
 Subject-aware reframing using face/pose detection for intelligent cropping
 """
 

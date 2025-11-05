@@ -1,12 +1,3 @@
-"""
-Cloud Services Aws Get 104
-
-This module provides functionality for cloud services aws get 104.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import boto3
 from botocore.config import Config
 from utilities.const import AWS_ACCESS_KEY, AWS_SEC_KEY, get_current_date

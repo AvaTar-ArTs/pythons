@@ -1,17 +1,3 @@
-"""
-Capture
-
-This module provides functionality for capture.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-# encoding: utf-8
 """Tests for IPython.utils.capture"""
 
 # -----------------------------------------------------------------------------

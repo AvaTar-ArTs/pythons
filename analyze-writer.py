@@ -1,17 +1,3 @@
-"""
-Analyze File Writer
-
-This module provides functionality for analyze file writer.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_100 = 100
-CONSTANT_300 = 300
-CONSTANT_3600 = 3600
-
 #!/usr/bin/env python3
 """
 Simple Quality Monitor

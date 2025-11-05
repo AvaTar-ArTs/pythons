@@ -1,12 +1,3 @@
-"""
-Media Processing Audio Mp 12
-
-This module provides functionality for media processing audio mp 12.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 
 import whisper

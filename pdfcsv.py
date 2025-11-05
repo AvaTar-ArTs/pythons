@@ -1,12 +1,3 @@
-"""
-Utilities Misc Pdfcsv 1
-
-This module provides functionality for utilities misc pdfcsv 1.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import tabula
 
 filename = input("Enter File Path: ")

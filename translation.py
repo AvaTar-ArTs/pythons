@@ -1,17 +1,3 @@
-"""
-Translation
-
-This module provides functionality for translation.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-# Constants
-CONSTANT_1500 = 1500
-CONSTANT_1800 = 1800
-
-
 class Translation(object):
     START_TEXT = """Hi Bro, This Is Telegrams Yet Another Sassiest Downloader com Renamer Bot Hit /help to know how to use me
 © @RedbullFed"""

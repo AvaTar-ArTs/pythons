@@ -1,12 +1,3 @@
-"""
-Convert 6
-
-This module provides functionality for convert 6.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 import os
 import subprocess
 import whisper

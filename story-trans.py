@@ -1,12 +1,3 @@
-"""
-Story Key Trans
-
-This module provides functionality for story key trans.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import os
 import subprocess
@@ -16,6 +7,17 @@ from dotenv import load_dotenv
 
 import logging
 
+
+# Load API keys from ~/.env.d/
+from pathlib import Path as PathLib
+from dotenv import load_dotenv
+
+env_dir = PathLib.home() / ".env.d"
+if env_dir.exists():
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -24,7 +26,7 @@ CONSTANT_1500 = 1500
 
 
 # Load OpenAI API Key
-load_dotenv()
+# load_dotenv()  # Now using ~/.env.d/
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Error checking for OpenAI API key

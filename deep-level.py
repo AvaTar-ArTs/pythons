@@ -1,16 +1,3 @@
-"""
-Deep 6 Level Simplifier
-
-This module provides functionality for deep 6 level simplifier.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Deep 6-Level Simplifier

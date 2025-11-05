@@ -1,16 +1,3 @@
-"""
-Devops
-
-This module provides functionality for devops.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
 #!/usr/bin/env python3
 """
 Context-Efficient DevOps Engineer Agent

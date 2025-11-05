@@ -1,12 +1,3 @@
-"""
-Web Scraping Download Scrape 6
-
-This module provides functionality for web scraping download scrape 6.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import requests
 from bs4 import BeautifulSoup

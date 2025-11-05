@@ -1,16 +1,18 @@
-"""
-Analyze Mp3 Transcript Prompts Code
-
-This module provides functionality for analyze mp3 transcript prompts code.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 from openai import OpenAI
 
 import logging
+
+
+# Load API keys from ~/.env.d/
+from pathlib import Path as PathLib
+from dotenv import load_dotenv
+
+env_dir = PathLib.home() / ".env.d"
+if env_dir.exists():
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
+
 
 logger = logging.getLogger(__name__)
 

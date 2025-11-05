@@ -1,21 +1,3 @@
-"""
-Recalc
-
-This module provides functionality for recalc.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_124 = 124
-CONSTANT_2000 = 2000
-
 #!/usr/bin/env python3
 """
 Excel Formula Recalculation Script

@@ -1,12 +1,3 @@
-"""
-Webm To Mp
-
-This module provides functionality for webm to mp.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
 from pathlib import Path
 import os
 import subprocess

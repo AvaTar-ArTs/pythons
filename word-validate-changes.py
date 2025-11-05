@@ -1,21 +1,4 @@
 """
-Redlining
-
-This module provides functionality for redlining.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_2006 = 2006
-
-"""
 Validator for tracked changes in Word documents.
 """
 

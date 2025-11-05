@@ -1,22 +1,4 @@
 """
-Groq Cli
-
-This module provides functionality for groq cli.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-import logging
-
-logger = logging.getLogger(__name__)
-
-
-# Constants
-CONSTANT_4000 = 4000
-
-#!/Users/steven/miniforge3/bin/python
-"""
 Simple Groq CLI for terminal usage
 Usage: python groq-cli.py "Your question here"
 """

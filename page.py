@@ -1,19 +1,3 @@
-"""
-Data Processing Json Page 1
-
-This module provides functionality for data processing json page 1.
-
-Author: Auto-generated
-Date: 2025-11-01
-"""
-
-
-# Constants
-CONSTANT_160 = 160
-CONSTANT_220 = 220
-CONSTANT_404 = 404
-CONSTANT_2822 = 2822
-
 #!/usr/bin/env python3
 """
 Page Maker v3 — a lean static generator with good defaults.
