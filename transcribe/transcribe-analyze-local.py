@@ -126,16 +126,16 @@ def save_transcript_txt_srt(segments: List[Tuple[float, float, str]], out_txt: P
 
     # SRT
     def srt_timestamp(t: float) -> str:
-        h, rem = divmod(int(t), CONSTANT_3600)
+        h, rem = divmod(int(t), 3600)
         m, s = divmod(rem, 60)
-        ms = int((t - int(t)) * CONSTANT_1000)
+        ms = int((t - int(t)) * 1000)
         return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
     with out_srt.open("w", encoding="utf-8") as f:
         for idx, (s, e, t) in enumerate(segments, 1):
             f.write(f"{idx}\n{srt_timestamp(s)} --> {srt_timestamp(e)}\n{t}\n\n")
 
 def ollama_host() -> str:
-    return os.getenv("OLLAMA_HOST", "http://CONSTANT_127.0.0.1:11434")
+    return os.getenv("OLLAMA_HOST", "http://127.0.0.1:11434")
 
 def analyze_with_ollama(text: str, filename: str, model: str, system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> str:
     """
