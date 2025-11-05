@@ -4,3 +4,9 @@ _archives/*.zip
 *.zip
 .DS_Store
 **/.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
