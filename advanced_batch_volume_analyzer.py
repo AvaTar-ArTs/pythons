@@ -399,21 +399,23 @@ class AdvancedBatchVolumeAnalyzer:
         return sorted(python_scripts)
     
     def _find_key_directories(self, volume: Path, max_depth: int) -> List[Path]:
-        """Find important directories"""
+        """Find important directories in home directory"""
         key_dirs = []
         
         priority_patterns = [
-            ('**/ai-sites/**', 15),
-            ('**/steven/**', 15),
-            ('**/pythons/**', 10),
-            ('**/advanced_toolkit/**', 10),
+            ('**/pythons/**', 20),
+            ('**/advanced_toolkit/**', 15),
+            ('**/organize/**', 10),
+            ('**/clean/**', 10),
             ('**/projects/**', 10),
             ('**/code/**', 8),
             ('**/scripts/**', 8),
             ('**/content/**', 8),
-            ('**/gallery/**', 5),
-            ('**/music/**', 5),
-            ('**/AvaTarArTs/**', 5),
+            ('**/docs*/**', 5),
+            ('**/Documents/**', 5),
+            ('**/Downloads/**', 3),
+            ('**/Pictures/**', 3),
+            ('**/Music/**', 3),
         ]
         
         for pattern, limit in priority_patterns:
@@ -491,87 +493,67 @@ class AdvancedBatchVolumeAnalyzer:
 
 
 def main():
-    """Main execution - analyze volumes one at a time in batches"""
+    """Main execution - analyze home directory in batches"""
     import argparse
     
-    parser = argparse.ArgumentParser(description='Advanced Batch Volume Analyzer')
-    parser.add_argument('--volume', help='Specific volume to analyze (e.g., /Volumes/2T-Xx)')
-    parser.add_argument('--max-scripts', type=int, default=200, help='Max Python scripts to analyze per volume')
-    parser.add_argument('--max-depth', type=int, default=5, help='Max directory depth')
-    parser.add_argument('--files-per-dir', type=int, default=100, help='Max files per directory')
+    parser = argparse.ArgumentParser(description='Advanced Batch Home Directory Analyzer')
+    parser.add_argument('--target', default='~', help='Target directory to analyze (default: ~)')
+    parser.add_argument('--max-scripts', type=int, default=200, help='Max Python scripts to analyze')
+    parser.add_argument('--max-depth', type=int, default=4, help='Max directory depth')
+    parser.add_argument('--files-per-dir', type=int, default=50, help='Max files per directory')
+    parser.add_argument('--batch-size', type=int, default=10, help='Number of directories per batch')
     
     args = parser.parse_args()
     
-    # Determine volumes to analyze
-    if args.volume:
-        volumes = [args.volume]
-    else:
-        volumes = [
-            '/Volumes/2T-Xx',
-            '/Volumes/DeVonDaTa',
-        ]
+    # Expand target path
+    target_path = Path(args.target).expanduser()
+    
+    if not target_path.exists():
+        print(f"❌ Target directory not found: {target_path}")
+        return
+    
+    print(f"🎯 Analyzing: {target_path}")
+    print(f"   Max depth: {args.max_depth}")
+    print(f"   Max scripts: {args.max_scripts}")
+    print(f"   Files per dir: {args.files_per_dir}")
+    print()
     
     analyzer = AdvancedBatchVolumeAnalyzer(max_files_per_dir=args.files_per_dir)
-    all_results = {}
     
-    for i, volume_path in enumerate(volumes, 1):
-        print(f"\n{'#'*70}")
-        print(f"# BATCH {i}/{len(volumes)}: {volume_path}")
-        print(f"{'#'*70}\n")
+    try:
+        # Limit Python scripts
+        original_find = analyzer._find_python_scripts
+        def limited_find(volume, max_depth):
+            scripts = original_find(volume, max_depth)
+            return scripts[:args.max_scripts]
+        analyzer._find_python_scripts = limited_find
         
-        try:
-            # Update max scripts limit
-            if args.max_scripts:
-                # Limit Python scripts in the analyzer
-                original_find = analyzer._find_python_scripts
-                def limited_find(volume, max_depth):
-                    scripts = original_find(volume, max_depth)
-                    return scripts[:args.max_scripts]
-                analyzer._find_python_scripts = limited_find
-            
-            volume_data = analyzer.analyze_volume(volume_path, max_depth=args.max_depth)
-            all_results[volume_path] = volume_data
-            
-            # Save intermediate results immediately
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            batch_file = Path.home() / f'ADVANCED_VOLUME_{Path(volume_path).name}_{timestamp}.json'
-            
-            with open(batch_file, 'w', encoding='utf-8') as f:
-                json.dump(volume_data, f, indent=2, default=str)
-            
-            print(f"\n💾 Batch saved: {batch_file}")
-            print(f"   ✅ Volume {i}/{len(volumes)} complete!\n")
-            
-        except KeyboardInterrupt:
-            print(f"\n⚠️  Interrupted by user. Saving partial results...")
-            break
-        except Exception as e:
-            print(f"\n❌ Error analyzing {volume_path}: {e}")
-            import traceback
-            traceback.print_exc()
-            all_results[volume_path] = {'error': str(e)}
+        # Analyze home directory
+        home_data = analyzer.analyze_volume(str(target_path), max_depth=args.max_depth)
+        
+        # Save results
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        output_file = Path.home() / f'ADVANCED_HOME_ANALYSIS_{timestamp}.json'
+        
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(home_data, f, indent=2, default=str)
+        
+        print(f"\n💾 Analysis saved: {output_file}")
+        
+        # Generate markdown report
+        report_file = Path.home() / f'ADVANCED_HOME_REPORT_{timestamp}.md'
+        generate_report({'home': home_data}, report_file, analyzer.stats)
+        
+        print(f"📝 Report saved: {report_file}")
+        print(f"\n✅ Analysis complete!")
+        
+    except KeyboardInterrupt:
+        print(f"\n⚠️  Interrupted by user.")
+    except Exception as e:
+        print(f"\n❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
     
-    # Generate final report
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    final_file = Path.home() / f'ADVANCED_VOLUMES_ANALYSIS_{timestamp}.json'
-    
-    with open(final_file, 'w', encoding='utf-8') as f:
-        json.dump(all_results, f, indent=2, default=str)
-    
-    # Generate markdown report
-    report_file = Path.home() / f'ADVANCED_VOLUMES_REPORT_{timestamp}.md'
-    generate_report(all_results, report_file, analyzer.stats)
-    
-    print(f"\n{'='*70}")
-    print(f"✅ ADVANCED ANALYSIS COMPLETE")
-    print(f"{'='*70}")
-    print(f"📄 Final JSON: {final_file}")
-    print(f"📝 Markdown Report: {report_file}")
-    print(f"\n📊 Summary:")
-    print(f"   Python Scripts Analyzed: {analyzer.stats['python_scripts_analyzed']}")
-    print(f"   Unique APIs Found: {len(analyzer.stats['apis_found'])}")
-    print(f"   Unique Technologies: {len(analyzer.stats['technologies_found'])}")
-    print(f"   Projects Identified: {len(analyzer.stats['projects_found'])}")
 
 
 def generate_report(results: Dict, output_file: Path, stats: Dict):
