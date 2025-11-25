@@ -129,10 +129,10 @@ python intelligent_dedup.py ~/Documents/python --method semantic
 python aggressive-renamer.py ~/Documents/python --strategy intelligent
 
 # Organize into folders
-python organize.py ~/Documents/python --category-style functional
+python organize-ai-outputs.py ~/Documents/python --category-style functional
 
 # Backup original structure
-python backupcsv.py ~/Documents/python
+python backup-to-csv.py ~/Documents/python
 
 # Verify changes
 python verify-organization.py ~/Documents/python
@@ -177,7 +177,7 @@ python validate-json-reader.py data.json
 python processing-pandas.py data.json --analyze
 
 # Enrich with GPT
-python analyze-metadata.py data.json --model gpt-4-vision
+python extract-image-metadata.py data.json --model gpt-4-vision
 
 # Export results
 python export_to_csv.py enriched_data.json > results.csv

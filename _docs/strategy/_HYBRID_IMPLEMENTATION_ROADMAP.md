@@ -92,8 +92,8 @@ components/image/
 components/file/
 ├── scanner.py          # Directory scanning
 ├── deduplicator.py     # Find duplicates
-├── renamer.py          # Intelligent renaming
-├── organizer.py        # Move/organize files
+├── python-script-renamer.py          # Intelligent renaming
+├── sort-images-by-type.py        # Move/organize files
 └── backup.py           # Create backups
 ```
 

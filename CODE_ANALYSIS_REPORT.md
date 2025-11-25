@@ -58,7 +58,7 @@
 
 ### 7. pythoncat.py (2 copies)
 - `/Users/steven/Documents/pythons/pythoncat.py`
-- `/Users/steven/Documents/pythons/categorizer.py`
+- `/Users/steven/Documents/pythons/gpt-script-categorizer.py`
 
 ### 8. video-generator-pyqt-app.py (2 copies)
 - `/Users/steven/Documents/pythons/video-generator-pyqt-app.py`
@@ -80,8 +80,8 @@
 - `/Users/steven/Documents/pythons/image-search.py`
 - `/Users/steven/Documents/pythons/youtube/youtube-scraping-download.py`
 
-### 13. compile.py (2 copies)
-- `/Users/steven/Documents/pythons/compile.py`
+### 13. compile-image-catalog.py (2 copies)
+- `/Users/steven/Documents/pythons/compile-image-catalog.py`
 - `/Users/steven/Documents/pythons/youtube/youtube-compile-image.py`
 
 ### 14. thinketh-content-renamer-from-seo-optimizer.py (2 copies)

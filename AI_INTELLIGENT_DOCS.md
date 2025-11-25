@@ -79,7 +79,7 @@
 
 ### Advanced Python Code Complexity Analyzer
 
-**File**: `analyze-code-complexity.py` ?? Advanced
+**File**: `python-complexity-analyzer.py` ?? Advanced
 
 **Purpose**: Analyzes Python code complexity and metrics for better maintainability.
 
@@ -97,7 +97,7 @@
 
 ### Directory Structure Migration Analyzer
 
-**File**: `analyze-file-migration.py` ?? Intermediate
+**File**: `plan-file-migration.py` ?? Intermediate
 
 **Purpose**: Analyzes and categorizes directory structures for migration planning.
 
@@ -115,7 +115,7 @@
 
 ### Script Version Analyzer
 
-**File**: `analyze-file-versions.py` ?? Intermediate
+**File**: `find-duplicate-versions.py` ?? Intermediate
 
 **Purpose**: This script identifies and analyzes versioned Python scripts to determine the best version to keep.
 
@@ -133,7 +133,7 @@
 
 ### Comprehensive File Analyzer Tool
 
-**File**: `analyze-files-comprehensive.py` ?? Intermediate
+**File**: `comprehensive-file-analyzer.py` ?? Intermediate
 
 **Purpose**: Analyzes codebases using multiple production tools and AI models for quality assessment.
 
@@ -169,7 +169,7 @@
 
 ### Document Cleanup Orchestrator
 
-**File**: `analyze-json-writer.py` ?? Intermediate
+**File**: `image-metadata-helpers.py` ?? Intermediate
 
 **Purpose**: Automates and coordinates cleanup operations in the Documents folder.
 
@@ -187,7 +187,7 @@
 
 ### Image Metadata Enrichment with GPT
 
-**File**: `analyze-metadata.py` ?? Intermediate
+**File**: `extract-image-metadata.py` ?? Intermediate
 
 **Purpose**: This script enriches image metadata using GPT-based analysis.
 
@@ -223,7 +223,7 @@
 
 ### Image Prompt Generator from Transcript
 
-**File**: `analyze-prompt.py` ?? Intermediate
+**File**: `transcript-to-prompts.py` ?? Intermediate
 
 **Purpose**: Transforms timestamped transcripts into detailed image prompts.
 
@@ -241,7 +241,7 @@
 
 ### Image Analysis with GPT-4o API
 
-**File**: `analyze-reader.py` ?? Intermediate
+**File**: `gpt-vision-image-analyzer.py` ?? Intermediate
 
 **Purpose**: This script analyzes images using the GPT-4o Vision API to generate metadata for print-on-demand applications.
 
@@ -295,7 +295,7 @@
 
 ### Simple Quality Monitor for Code Analysis
 
-**File**: `analyze-writer.py` ?? Intermediate
+**File**: `code-quality-monitor.py` ?? Intermediate
 
 **Purpose**: A lightweight tool for periodic code quality analysis without external dependencies.
 
@@ -916,7 +916,7 @@
 
 ### Batch Rename Processor
 
-**File**: `PROCESS_BATCH_RENAMES.py` ?? Intermediate
+**File**: `batch-rename-executor.py` ?? Intermediate
 
 **Purpose**: Efficiently processes batch CSVs to rename, move, or delete files based on specified actions.
 
@@ -1254,7 +1254,7 @@
 
 ### AskReddit Video Generator Bot
 
-**File**: `askredditbot.py` ?? Beginner
+**File**: `reddit-auto-poster.py` ?? Beginner
 
 **Purpose**: This script generates videos from trending AskReddit posts every 12 hours.
 
@@ -1362,7 +1362,7 @@
 
 ### backupcsv.py
 
-**File**: `backupcsv.py` ?? Intermediate
+**File**: `backup-to-csv.py` ?? Intermediate
 
 **Size**: 2.1 KB | **Lines**: 66
 
@@ -1398,7 +1398,7 @@
 
 ### brand.py
 
-**File**: `brand.py` ?? Intermediate
+**File**: `load-brand-json.py` ?? Intermediate
 
 **Size**: 0.7 KB | **Lines**: 28
 
@@ -1494,7 +1494,7 @@
 
 ### categorizer.py
 
-**File**: `categorizer.py` ?? Intermediate
+**File**: `gpt-script-categorizer.py` ?? Intermediate
 
 **Size**: 3.3 KB | **Lines**: 108
 

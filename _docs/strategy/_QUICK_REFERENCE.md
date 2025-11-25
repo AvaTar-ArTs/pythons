@@ -27,23 +27,23 @@
 | **Rename files intelligently** | `aggressive-renamer.py`, `intelligent-bulk-renamer.py`, `smart_renamer.py` |
 | **Clean messy filenames** | `aggressive-filename-cleaner.py`, `cleanup-messy-names.py` |
 | **Remove duplicates** | `intelligent_dedup.py`, `smart-dedup.py`, `remove-duplicates.py`, `duplicate-cleaner.py` |
-| **Organize by content** | `content_aware_organizer.py`, `organize.py`, `organize-directory.py` |
-| **Backup files** | `15day.py`, `15days.py`, `backupcsv.py` |
+| **Organize by content** | `content_aware_organizer.py`, `organize-ai-outputs.py`, `organize-directory.py` |
+| **Backup files** | `15day.py`, `15days.py`, `backup-to-csv.py` |
 | **Create folder structure** | `batch-folder-writer.py` |
 
 ### 📊 I want to process data
 | Task | Scripts |
 |------|---------|
-| **Work with CSV** | `csvmerge.py`, `csvsort.py`, `scancsv.py`, `pdfcsv.py` |
+| **Work with CSV** | `csvmerge.py`, `download-images-from-csv.py`, `scancsv.py`, `pdfcsv.py` |
 | **Work with JSON** | `validate-json-reader.py`, `convert-json-writer.py`, `processing-json.py` |
-| **Analyze code** | `analyze-code-complexity.py`, `python-lint-complexity.py` |
+| **Analyze code** | `python-complexity-analyzer.py`, `python-lint-complexity.py` |
 | **Find versioned files** | `analyze_versions.py`, `smart_rename_versions.py` |
 | **Create data analysis** | `processor.py`, `batch-processor.py`, `processing.py` |
 
 ### 🌐 I want to scrape or download
 | Task | Scripts |
 |------|---------|
-| **Scrape Reddit** | `scrape.py` |
+| **Scrape Reddit** | `reddit-content-scraper.py` |
 | **Download files** | `download-files.py`, `download-simple.py`, `fetch.py` |
 | **Download YouTube** | `ytdl-audiodownload.py`, `ytdl-listen.py` |
 | **Download images** | `telegraph-download-images.py`, `image-downloadr_batch.py` |
@@ -56,7 +56,7 @@
 | **OpenAI/ChatGPT** | Various image/analysis scripts using OpenAI SDK |
 | **Groq LLM** | `groq-cli.py` |
 | **Image generation** | `image-generater.py`, `img2img.py` |
-| **Transcription + AI** | `analyze-metadata.py` with GPT vision, `catalog-to-csv.py` |
+| **Transcription + AI** | `extract-image-metadata.py` with GPT vision, `catalog-to-csv.py` |
 
 ### 🤖 I want to automate tasks
 | Task | Scripts |
@@ -322,7 +322,7 @@ head -20 ~/Documents/python/script-name.py | grep "^import\|^from"
 
 ### Before Uploading Content
 - [ ] Verify file format (appropriate for platform)
-- [ ] Check metadata (analyze-metadata.py)
+- [ ] Check metadata (extract-image-metadata.py)
 - [ ] Add text/captions if needed (add_text.py)
 - [ ] Create thumbnail if needed (custom-thumbnail.py)
 
@@ -330,7 +330,7 @@ head -20 ~/Documents/python/script-name.py | grep "^import\|^from"
 - [ ] Deduplicate (intelligent_dedup.py)
 - [ ] Consolidate versions (consolidate_versions.py)
 - [ ] Create index (downloads-index-builder.py)
-- [ ] Backup metadata (backupcsv.py)
+- [ ] Backup metadata (backup-to-csv.py)
 
 ---
 

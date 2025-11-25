@@ -37,8 +37,8 @@ Scripts for renaming, cleaning, organizing, and managing file systems.
 - `rename-by-purpose.py` - Renames based on file analysis
 
 **Organizational Tools:**
-- `organize.py` - Generic file organization system
-- `organizer.py` - Multi-purpose file organizer
+- `organize-ai-outputs.py` - Generic file organization system
+- `sort-images-by-type.py` - Multi-purpose file organizer
 - `organize-directory.py` - Directory-wide organization
 - `content-aware.py` - Organizes files by content type
 - `content_aware_organizer.py` - Advanced content-aware organization
@@ -65,7 +65,7 @@ Scripts for renaming, cleaning, organizing, and managing file systems.
 **Backup & Archive:**
 - `15day.py` - 15-day backup system
 - `15days.py` - CSV-based file backup with metadata
-- `backupcsv.py` - CSV backup utility
+- `backup-to-csv.py` - CSV backup utility
 - `smart_archive_backups.py` - Intelligent backup archiving
 
 ---
@@ -107,8 +107,8 @@ Scripts for transcribing, converting, processing, and managing media files.
 - `temp-file-manager.py` - Temporary file cleanup
 
 **Format Conversion:**
-- `converts.py` - Generic format converter
-- `convertupscale.py` - Converts and upscales files
+- `batch-convert-upscale.py` - Generic format converter
+- `convert-upscale-single.py` - Converts and upscales files
 - `imgconvert.py` - Image conversion
 - `imgmp.py` - Image-to-MP4 conversion
 - `tocpdf.py` - Converts files to PDF
@@ -166,7 +166,7 @@ Scripts for image manipulation, upscaling, analysis, and gallery generation.
 - `base-gallery-logic.py` - Base gallery functionality
 
 **Image Analysis & Metadata:**
-- `analyze-metadata.py` - Image metadata extraction
+- `extract-image-metadata.py` - Image metadata extraction
 - `image-taggy.py` - Image tagging system
 - `catalog-to-csv.py` - Image catalog to CSV with OpenAI analysis
 - `image-pics.py` - Image collection handler
@@ -191,15 +191,15 @@ Scripts for analyzing, processing, and managing data files and structures.
 - `files-csv.py` - CSV file management
 - `csv-extract-webm-files.py` - Extracts WebM files to CSV
 - `csvmerge.py` - Merges CSV files
-- `csvsort.py` - Sorts CSV content
+- `download-images-from-csv.py` - Sorts CSV content
 - `scancsv.py` - CSV scanner/analyzer
-- `sufflecsv.py` - Shuffles CSV rows
+- `shuffle-quiz-questions.py` - Shuffles CSV rows
 - `dallecsv.py` - DALL-E image CSV integration
 - `pdfcsv.py` - PDF to CSV conversion
 - `usecols.py` - CSV column selection
 
 **JSON Processing:**
-- `analyze-json-writer.py` - CleanupOrchestrator for JSON analysis
+- `image-metadata-helpers.py` - CleanupOrchestrator for JSON analysis
 - `convert-json-writer.py` - JSON file converter
 - `validate-json-reader.py` - JSON validation tool
 - `processing-json.py` - Generic JSON processor
@@ -222,10 +222,10 @@ Scripts for analyzing, processing, and managing data files and structures.
 
 **Analysis Tools:**
 - `analyze_versions.py` - Finds and analyzes versioned scripts
-- `analyze-code-complexity.py` - Analyzes code complexity metrics
-- `analyze-prompt.py` - Prompt analysis tool
-- `analyze-reader.py` - File reader for analysis
-- `analyze-writer.py` - Quality monitoring system
+- `python-complexity-analyzer.py` - Analyzes code complexity metrics
+- `transcript-to-prompts.py` - Prompt analysis tool
+- `gpt-vision-image-analyzer.py` - File reader for analysis
+- `code-quality-monitor.py` - Quality monitoring system
 - `apply-improvements.py` - GitHub repo improvement applier
 - `performance.py` - Performance analysis
 - `detailed.py` - Detailed analysis tool
@@ -257,7 +257,7 @@ Scripts specifically for creating, managing, and displaying galleries.
 ### **6. CODE ANALYSIS & OPTIMIZATION (20+ scripts)**
 Scripts for analyzing, refactoring, and improving code.
 
-- `analyze-code-complexity.py` - Code complexity metrics (Radon, Pylint)
+- `python-complexity-analyzer.py` - Code complexity metrics (Radon, Pylint)
 - `analyze_versions.py` - Version detection and consolidation
 - `deep-code.py` - Deep code analysis
 - `python-lint-complexity.py` - Python linting and complexity
@@ -282,7 +282,7 @@ Scripts for analyzing, refactoring, and improving code.
 ### **7. WEB SCRAPING & DATA COLLECTION (15+ scripts)**
 Scripts for scraping, downloading, and collecting web content.
 
-- `scrape.py` - Reddit scraper with readability parsing
+- `reddit-content-scraper.py` - Reddit scraper with readability parsing
 - `scraping-download-scrape.py` - Web scraping utility
 - `scraping-download-news_api_fetcher.py` - News API integration
 - `download-files.py` - Generic file downloader
@@ -418,8 +418,8 @@ Generic utilities, configuration, and helper functions.
 - `user.py` - User management
 - `list.py` - List utilities
 - `sort.py` - Sorting utilities
-- `sorts.py` - Sort variations
-- `parse.py` - Parsing utilities
+- `image-sorter-with-exclusions.py` - Sort variations
+- `parse-onedrive-photo-urls.py` - Parsing utilities
 - `replace.py` - String replacement
 - `verbose.py` - Verbose output
 - `macos.py` - macOS specific

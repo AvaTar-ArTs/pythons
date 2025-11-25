@@ -1,0 +1,889 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COMPLETE_MEDIA_PROMPT_ANALYZER &mdash; AI Automation Ecosystem 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AI Automation Ecosystem
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#verify-setup">Verify Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#your-first-automation">Your First Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Systems Overview:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../systems/overview.html">Systems Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../systems/overview.html#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systems/overview.html#system-components">System Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#ai-orchestrator-ultimate">1. AI Orchestrator Ultimate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#intelligent-workflow-builder">2. Intelligent Workflow Builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#smart-automation-discovery">3. Smart Automation Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#unified-content-orchestrator">4. Unified Content Orchestrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#deep-content-analyzer">5. Deep Content Analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#typescript-python-bridge">6. TypeScript-Python Bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#complete-media-prompt-analyzer">7. Complete Media Prompt Analyzer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guides/youtube_automation.html">YouTube Automation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#setup">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#load-environment">1. Load Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#initialize-orchestrator">2. Initialize Orchestrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#generate-video-content">3. Generate Video Content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/ts_python_bridge.html">TypeScript-Python Bridge API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/ts_python_bridge.html#key-features">Key Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/ts_python_bridge.html#module-reference">Module Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/ts_python_bridge.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/ts_python_bridge.html#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/ts_python_bridge.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/ts_python_bridge.html#advanced-usage">Advanced Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/ts_python_bridge.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AI Automation Ecosystem</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">COMPLETE_MEDIA_PROMPT_ANALYZER</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for COMPLETE_MEDIA_PROMPT_ANALYZER</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">🎬 COMPLETE MEDIA &amp; PROMPT ANALYZER</span>
+<span class="sd">====================================</span>
+
+<span class="sd">Comprehensive analysis of ALL your content:</span>
+<span class="sd">✅ ~/Music/nocTurneMeLoDieS - All Suno CSVs, songs, prompts</span>
+<span class="sd">✅ ~/Pictures - Images with EXIF data, AI generation prompts</span>
+<span class="sd">✅ ~/Movies - Videos, subtitles, descriptions</span>
+<span class="sd">✅ ~/pythons - Code, prompts, documentation</span>
+<span class="sd">✅ All websites - HTML, MD, configs</span>
+<span class="sd">✅ Notion exports - All data</span>
+
+<span class="sd">Outputs:</span>
+<span class="sd">1. MASTER_SONGS_COMBINED.csv - All songs + URLs + prompts + lyrics</span>
+<span class="sd">2. PROMPTS_DISCOVERED.csv - All prompts (Sora, music, image, text)</span>
+<span class="sd">3. IMAGES_CATALOG.csv - All images + metadata + generation prompts</span>
+<span class="sd">4. VIDEOS_CATALOG.csv - All videos + subtitles + metadata</span>
+<span class="sd">5. NOCTURNE_COMPLETE.csv - Complete Nocturnemelodies data</span>
+<span class="sd">6. URLS_MASTER.csv - All URLs extracted</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL.ExifTags</span><span class="w"> </span><span class="kn">import</span> <span class="n">TAGS</span>
+
+
+<div class="viewcode-block" id="MediaFile">
+<a class="viewcode-back" href="../api/complete_media_prompt_analyzer.html#COMPLETE_MEDIA_PROMPT_ANALYZER.MediaFile">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MediaFile</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Media file with metadata&quot;&quot;&quot;</span>
+    <span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">file_type</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># image, video, audio</span>
+    <span class="n">size_mb</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">created_date</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">modified_date</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">width</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">height</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">duration</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">exif_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
+    <span class="n">related_files</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Song">
+<a class="viewcode-back" href="../api/complete_media_prompt_analyzer.html#COMPLETE_MEDIA_PROMPT_ANALYZER.Song">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Song</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Complete song data&quot;&quot;&quot;</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">artist</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">audio_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">image_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">video_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">lyrics</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">genre</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">duration</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">created_date</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">play_count</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">additional_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Prompt">
+<a class="viewcode-back" href="../api/complete_media_prompt_analyzer.html#COMPLETE_MEDIA_PROMPT_ANALYZER.Prompt">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Prompt</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Discovered prompt&quot;&quot;&quot;</span>
+    <span class="n">prompt_text</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">prompt_type</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># sora, music, image, text, workflow</span>
+    <span class="n">source_file</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">related_media</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">related_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">context</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">quality_score</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">timestamp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="CompleteMediaPromptAnalyzer">
+<a class="viewcode-back" href="../api/complete_media_prompt_analyzer.html#COMPLETE_MEDIA_PROMPT_ANALYZER.CompleteMediaPromptAnalyzer">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CompleteMediaPromptAnalyzer</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Ultimate analyzer for ALL content</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="CompleteMediaPromptAnalyzer.__init__">
+<a class="viewcode-back" href="../api/complete_media_prompt_analyzer.html#COMPLETE_MEDIA_PROMPT_ANALYZER.CompleteMediaPromptAnalyzer.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Data stores</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Song</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">images</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MediaFile</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">videos</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MediaFile</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Prompt</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        
+        <span class="c1"># Stats</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;csvs_read&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;songs_found&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;images_found&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;videos_found&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;prompts_found&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;urls_found&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;files_scanned&#39;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span></div>
+
+    
+<div class="viewcode-block" id="CompleteMediaPromptAnalyzer.run_complete_analysis">
+<a class="viewcode-back" href="../api/complete_media_prompt_analyzer.html#COMPLETE_MEDIA_PROMPT_ANALYZER.CompleteMediaPromptAnalyzer.run_complete_analysis">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run_complete_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Run complete analysis&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🎬 COMPLETE MEDIA &amp; PROMPT ANALYZER&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        
+        <span class="c1"># Phase 1: Music &amp; Suno CSVs</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🎵 Phase 1: Music &amp; Suno CSVs (Nocturnemelodies)&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_analyze_music_csvs</span><span class="p">()</span>
+        
+        <span class="c1"># Phase 2: Pictures</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🖼️  Phase 2: Pictures Directory&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_analyze_pictures</span><span class="p">()</span>
+        
+        <span class="c1"># Phase 3: Movies</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🎬 Phase 3: Movies Directory&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_analyze_movies</span><span class="p">()</span>
+        
+        <span class="c1"># Phase 4: Additional Prompts</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 Phase 4: Scanning for Additional Prompts&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scan_all_prompts</span><span class="p">()</span>
+        
+        <span class="c1"># Phase 5: Export Everything</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💾 Phase 5: Exporting Comprehensive CSVs&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_export_all_data</span><span class="p">()</span>
+        
+        <span class="c1"># Phase 6: Generate Report</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 Phase 6: Final Report&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_generate_final_report</span><span class="p">()</span></div>
+
+    
+    <span class="c1"># ==================== MUSIC &amp; SUNO ====================</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_analyze_music_csvs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analyze all Suno/music CSVs&quot;&quot;&quot;</span>
+        <span class="n">music_paths</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;/Users/steven/Music/nocTurneMeLoDieS/suno_backups/data/data/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;/Users/steven/Music/nocTurneMeLoDieS/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;/Users/steven/Music/&quot;</span>
+        <span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">music_paths</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                <span class="k">continue</span>
+            
+            <span class="k">for</span> <span class="n">csv_file</span> <span class="ow">in</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.csv&quot;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">csv_file</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="o">&lt;</span> <span class="mi">50</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">:</span>  <span class="c1"># Skip files &gt; 50MB</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_read_music_csv</span><span class="p">(</span><span class="n">csv_file</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_read_music_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read a music CSV file&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   📄 Reading: </span><span class="si">{</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">on_bad_lines</span><span class="o">=</span><span class="s1">&#39;skip&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;csvs_read&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+            <span class="c1"># Process each row as potential song</span>
+            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+                <span class="n">song</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extract_song_from_row</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">filepath</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">song</span> <span class="ow">and</span> <span class="n">song</span><span class="o">.</span><span class="n">title</span><span class="p">:</span>
+                    <span class="n">song_id</span> <span class="o">=</span> <span class="n">song</span><span class="o">.</span><span class="n">id</span> <span class="ow">or</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">song</span><span class="o">.</span><span class="n">artist</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">song</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)[:</span><span class="mi">100</span><span class="p">]</span>
+                    
+                    <span class="k">if</span> <span class="n">song_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="p">[</span><span class="n">song_id</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_merge_songs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="p">[</span><span class="n">song_id</span><span class="p">],</span> <span class="n">song</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="p">[</span><span class="n">song_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">song</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;songs_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                    
+                    <span class="c1"># Extract prompt</span>
+                    <span class="k">if</span> <span class="n">song</span><span class="o">.</span><span class="n">prompt</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Prompt</span><span class="p">(</span>
+                            <span class="n">prompt_text</span><span class="o">=</span><span class="n">song</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span>
+                            <span class="n">prompt_type</span><span class="o">=</span><span class="s1">&#39;music&#39;</span><span class="p">,</span>
+                            <span class="n">source_file</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">filepath</span><span class="p">),</span>
+                            <span class="n">related_media</span><span class="o">=</span><span class="n">song</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
+                            <span class="n">related_url</span><span class="o">=</span><span class="n">song</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+                            <span class="n">quality_score</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_score_prompt</span><span class="p">(</span><span class="n">song</span><span class="o">.</span><span class="n">prompt</span><span class="p">),</span>
+                            <span class="n">timestamp</span><span class="o">=</span><span class="n">song</span><span class="o">.</span><span class="n">created_date</span>
+                        <span class="p">))</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;prompts_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                
+                <span class="c1"># Extract URLs</span>
+                <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="s1">&#39;url&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">col</span><span class="p">]):</span>
+                        <span class="n">url</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+                        <span class="k">if</span> <span class="n">url</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">):</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;urls_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      ⚠️  Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_song_from_row</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Song</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Extract song data from CSV row&quot;&quot;&quot;</span>
+        <span class="n">song</span> <span class="o">=</span> <span class="n">Song</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+        
+        <span class="c1"># Map common column names</span>
+        <span class="n">column_mappings</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;song_title&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;track_name&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;artist&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="s1">&#39;creator&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;display_name&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;link&#39;</span><span class="p">,</span> <span class="s1">&#39;song_url&#39;</span><span class="p">,</span> <span class="s1">&#39;page_url&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;audio_url&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;audio_url&#39;</span><span class="p">,</span> <span class="s1">&#39;audio&#39;</span><span class="p">,</span> <span class="s1">&#39;mp3_url&#39;</span><span class="p">,</span> <span class="s1">&#39;audio_path&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;image_url&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;image_url&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_url&#39;</span><span class="p">,</span> <span class="s1">&#39;thumbnail&#39;</span><span class="p">,</span> <span class="s1">&#39;image_path&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;video_url&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;video_url&#39;</span><span class="p">,</span> <span class="s1">&#39;video&#39;</span><span class="p">,</span> <span class="s1">&#39;video_path&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;prompt&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;prompt&#39;</span><span class="p">,</span> <span class="s1">&#39;gpt_description_prompt&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;metadata_prompt&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;lyrics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;lyrics&#39;</span><span class="p">,</span> <span class="s1">&#39;lyric&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;metadata_text&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;metadata_tags&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;genre&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;genre&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;duration&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;length&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;created_date&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;created_at&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;created&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;play_count&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;play_count&#39;</span><span class="p">,</span> <span class="s1">&#39;plays&#39;</span><span class="p">]</span>
+        <span class="p">}</span>
+        
+        <span class="k">for</span> <span class="n">field</span><span class="p">,</span> <span class="n">possible_cols</span> <span class="ow">in</span> <span class="n">column_mappings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_safe_get_from_row</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">possible_cols</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">song</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        
+        <span class="c1"># Generate ID</span>
+        <span class="k">if</span> <span class="s1">&#39;id&#39;</span> <span class="ow">in</span> <span class="n">row</span><span class="o">.</span><span class="n">index</span> <span class="ow">and</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]):</span>
+            <span class="n">song</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+        
+        <span class="k">return</span> <span class="n">song</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_safe_get_from_row</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">columns</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Safely get value from row&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="o">.</span><span class="n">index</span> <span class="ow">and</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">col</span><span class="p">]):</span>
+                <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_merge_songs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">existing</span><span class="p">:</span> <span class="n">Song</span><span class="p">,</span> <span class="n">new</span><span class="p">:</span> <span class="n">Song</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Song</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Merge song data, keeping most complete&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;audio_url&#39;</span><span class="p">,</span> <span class="s1">&#39;image_url&#39;</span><span class="p">,</span> <span class="s1">&#39;video_url&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;prompt&#39;</span><span class="p">,</span> <span class="s1">&#39;lyrics&#39;</span><span class="p">,</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;genre&#39;</span><span class="p">,</span> <span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;created_date&#39;</span><span class="p">]:</span>
+            <span class="n">new_val</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">new</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">new_val</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_val</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">existing</span><span class="p">,</span> <span class="n">field</span><span class="p">)):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">existing</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">new_val</span><span class="p">)</span>
+        
+        <span class="n">existing</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">existing</span><span class="o">.</span><span class="n">source</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">new</span><span class="o">.</span><span class="n">source</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">existing</span>
+    
+    <span class="c1"># ==================== PICTURES ====================</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_analyze_pictures</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analyze Pictures directory&quot;&quot;&quot;</span>
+        <span class="n">pictures_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/Users/steven/Pictures&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pictures_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ⚠️  Pictures directory not found&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        
+        <span class="c1"># Scan for images</span>
+        <span class="n">image_extensions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="s1">&#39;.gif&#39;</span><span class="p">,</span> <span class="s1">&#39;.webp&#39;</span><span class="p">,</span> <span class="s1">&#39;.bmp&#39;</span><span class="p">,</span> <span class="s1">&#39;.tiff&#39;</span><span class="p">}</span>
+        
+        <span class="k">for</span> <span class="n">img_file</span> <span class="ow">in</span> <span class="n">pictures_path</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">img_file</span><span class="o">.</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">image_extensions</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;files_scanned&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">media</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_analyze_image</span><span class="p">(</span><span class="n">img_file</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">media</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">media</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;images_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                    
+                    <span class="k">if</span> <span class="n">media</span><span class="o">.</span><span class="n">prompt</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Prompt</span><span class="p">(</span>
+                            <span class="n">prompt_text</span><span class="o">=</span><span class="n">media</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span>
+                            <span class="n">prompt_type</span><span class="o">=</span><span class="s1">&#39;image&#39;</span><span class="p">,</span>
+                            <span class="n">source_file</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">img_file</span><span class="p">),</span>
+                            <span class="n">related_media</span><span class="o">=</span><span class="n">media</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span>
+                            <span class="n">quality_score</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_score_prompt</span><span class="p">(</span><span class="n">media</span><span class="o">.</span><span class="n">prompt</span><span class="p">)</span>
+                        <span class="p">))</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;prompts_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                
+                <span class="c1"># Check for accompanying metadata files</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_check_metadata_files</span><span class="p">(</span><span class="n">img_file</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ✅ Found </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;images_found&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> images&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_analyze_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MediaFile</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analyze a single image file&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">stat</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span>
+            
+            <span class="n">media</span> <span class="o">=</span> <span class="n">MediaFile</span><span class="p">(</span>
+                <span class="n">filepath</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">filepath</span><span class="p">),</span>
+                <span class="n">filename</span><span class="o">=</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="n">file_type</span><span class="o">=</span><span class="s1">&#39;image&#39;</span><span class="p">,</span>
+                <span class="n">size_mb</span><span class="o">=</span><span class="n">stat</span><span class="o">.</span><span class="n">st_size</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">),</span>
+                <span class="n">created_date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">st_ctime</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
+                <span class="n">modified_date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+            <span class="p">)</span>
+            
+            <span class="c1"># Try to get image dimensions and EXIF</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">with</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">img</span><span class="p">:</span>
+                    <span class="n">media</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">media</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+                    
+                    <span class="c1"># Extract EXIF data</span>
+                    <span class="n">exif</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getexif</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">exif</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">tag_id</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">exif</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                            <span class="n">tag</span> <span class="o">=</span> <span class="n">TAGS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">tag_id</span><span class="p">,</span> <span class="n">tag_id</span><span class="p">)</span>
+                            <span class="n">media</span><span class="o">.</span><span class="n">exif_data</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">tag</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                            
+                            <span class="c1"># Look for prompts in EXIF (some AI tools save prompts here)</span>
+                            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                                <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">keyword</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;prompt&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;dalle&#39;</span><span class="p">,</span> <span class="s1">&#39;midjourney&#39;</span><span class="p">,</span> <span class="s1">&#39;stable diffusion&#39;</span><span class="p">]):</span>
+                                    <span class="n">media</span><span class="o">.</span><span class="n">prompt</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                        
+                        <span class="c1"># Check UserComment (common for AI images)</span>
+                        <span class="k">if</span> <span class="s1">&#39;UserComment&#39;</span> <span class="ow">in</span> <span class="n">media</span><span class="o">.</span><span class="n">exif_data</span><span class="p">:</span>
+                            <span class="n">media</span><span class="o">.</span><span class="n">prompt</span> <span class="o">=</span> <span class="n">media</span><span class="o">.</span><span class="n">exif_data</span><span class="p">[</span><span class="s1">&#39;UserComment&#39;</span><span class="p">]</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+            
+            <span class="c1"># Extract prompt from filename if it contains indicators</span>
+            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">keyword</span> <span class="ow">in</span> <span class="n">filepath</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;dalle&#39;</span><span class="p">,</span> <span class="s1">&#39;midjourney&#39;</span><span class="p">,</span> <span class="s1">&#39;leonardo&#39;</span><span class="p">,</span> <span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="s1">&#39;stablediffusion&#39;</span><span class="p">]):</span>
+                <span class="n">media</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;AI-generated image: </span><span class="si">{</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+            
+            <span class="k">return</span> <span class="n">media</span>
+            
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check_metadata_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check for metadata files accompanying an image&quot;&quot;&quot;</span>
+        <span class="c1"># Look for .txt, .json files with same name</span>
+        <span class="n">base_name</span> <span class="o">=</span> <span class="n">image_path</span><span class="o">.</span><span class="n">stem</span>
+        
+        <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;.json&#39;</span><span class="p">,</span> <span class="s1">&#39;.meta&#39;</span><span class="p">]:</span>
+            <span class="n">meta_file</span> <span class="o">=</span> <span class="n">image_path</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_name</span><span class="si">}{</span><span class="n">ext</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="n">meta_file</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">content</span> <span class="o">=</span> <span class="n">meta_file</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+                    
+                    <span class="c1"># Extract prompts from metadata</span>
+                    <span class="k">if</span> <span class="s1">&#39;prompt&#39;</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                        <span class="c1"># This is likely a prompt file</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Prompt</span><span class="p">(</span>
+                            <span class="n">prompt_text</span><span class="o">=</span><span class="n">content</span><span class="p">[:</span><span class="mi">1000</span><span class="p">],</span>  <span class="c1"># Limit length</span>
+                            <span class="n">prompt_type</span><span class="o">=</span><span class="s1">&#39;image&#39;</span><span class="p">,</span>
+                            <span class="n">source_file</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">meta_file</span><span class="p">),</span>
+                            <span class="n">related_media</span><span class="o">=</span><span class="n">image_path</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                            <span class="n">quality_score</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_score_prompt</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+                        <span class="p">))</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;prompts_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   📝 Found metadata for: </span><span class="si">{</span><span class="n">image_path</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="k">pass</span>
+    
+    <span class="c1"># ==================== MOVIES ====================</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_analyze_movies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analyze Movies directory&quot;&quot;&quot;</span>
+        <span class="n">movies_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/Users/steven/Movies&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">movies_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ⚠️  Movies directory not found&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        
+        <span class="n">video_extensions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.mp4&#39;</span><span class="p">,</span> <span class="s1">&#39;.mov&#39;</span><span class="p">,</span> <span class="s1">&#39;.avi&#39;</span><span class="p">,</span> <span class="s1">&#39;.mkv&#39;</span><span class="p">,</span> <span class="s1">&#39;.m4v&#39;</span><span class="p">,</span> <span class="s1">&#39;.webm&#39;</span><span class="p">}</span>
+        
+        <span class="k">for</span> <span class="n">video_file</span> <span class="ow">in</span> <span class="n">movies_path</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">video_file</span><span class="o">.</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">video_extensions</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;files_scanned&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">media</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_analyze_video</span><span class="p">(</span><span class="n">video_file</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">media</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">videos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">media</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;videos_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                
+                <span class="c1"># Check for subtitles and descriptions</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_check_video_metadata</span><span class="p">(</span><span class="n">video_file</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ✅ Found </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;videos_found&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> videos&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_analyze_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MediaFile</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analyze a video file&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">stat</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span>
+            
+            <span class="n">media</span> <span class="o">=</span> <span class="n">MediaFile</span><span class="p">(</span>
+                <span class="n">filepath</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">filepath</span><span class="p">),</span>
+                <span class="n">filename</span><span class="o">=</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="n">file_type</span><span class="o">=</span><span class="s1">&#39;video&#39;</span><span class="p">,</span>
+                <span class="n">size_mb</span><span class="o">=</span><span class="n">stat</span><span class="o">.</span><span class="n">st_size</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">),</span>
+                <span class="n">created_date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">st_ctime</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
+                <span class="n">modified_date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+            <span class="p">)</span>
+            
+            <span class="c1"># Check if filename contains Sora or AI indicators</span>
+            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">keyword</span> <span class="ow">in</span> <span class="n">filepath</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sora&#39;</span><span class="p">,</span> <span class="s1">&#39;openai&#39;</span><span class="p">,</span> <span class="s1">&#39;ai-generated&#39;</span><span class="p">,</span> <span class="s1">&#39;runway&#39;</span><span class="p">]):</span>
+                <span class="n">media</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;AI-generated video: </span><span class="si">{</span><span class="n">filepath</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="n">media</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;AI-generated&#39;</span><span class="p">)</span>
+            
+            <span class="k">return</span> <span class="n">media</span>
+            
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check_video_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check for video metadata files&quot;&quot;&quot;</span>
+        <span class="n">base_name</span> <span class="o">=</span> <span class="n">video_path</span><span class="o">.</span><span class="n">stem</span>
+        
+        <span class="c1"># Check for subtitle files (.srt, .vtt)</span>
+        <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.srt&#39;</span><span class="p">,</span> <span class="s1">&#39;.vtt&#39;</span><span class="p">,</span> <span class="s1">&#39;.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;.json&#39;</span><span class="p">]:</span>
+            <span class="n">meta_file</span> <span class="o">=</span> <span class="n">video_path</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_name</span><span class="si">}{</span><span class="n">ext</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="n">meta_file</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">content</span> <span class="o">=</span> <span class="n">meta_file</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+                    
+                    <span class="c1"># Check if contains Sora prompt</span>
+                    <span class="k">if</span> <span class="s1">&#39;sora&#39;</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s1">&#39;prompt&#39;</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Prompt</span><span class="p">(</span>
+                            <span class="n">prompt_text</span><span class="o">=</span><span class="n">content</span><span class="p">[:</span><span class="mi">1000</span><span class="p">],</span>
+                            <span class="n">prompt_type</span><span class="o">=</span><span class="s1">&#39;sora&#39;</span><span class="p">,</span>
+                            <span class="n">source_file</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">meta_file</span><span class="p">),</span>
+                            <span class="n">related_media</span><span class="o">=</span><span class="n">video_path</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                            <span class="n">quality_score</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_score_prompt</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+                        <span class="p">))</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;prompts_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   🎬 Found Sora prompt for: </span><span class="si">{</span><span class="n">video_path</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="k">pass</span>
+    
+    <span class="c1"># ==================== PROMPT SCANNING ====================</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_scan_all_prompts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Scan all directories for prompts&quot;&quot;&quot;</span>
+        <span class="n">scan_paths</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;/Users/steven/pythons&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;/Users/steven/workspace&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;/Users/steven/Documents&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;/Users/steven/Downloads&quot;</span>
+        <span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">scan_paths</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_scan_directory_for_prompts</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_scan_directory_for_prompts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Scan directory for prompt files&quot;&quot;&quot;</span>
+        <span class="n">prompt_extensions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;.md&#39;</span><span class="p">,</span> <span class="s1">&#39;.json&#39;</span><span class="p">,</span> <span class="s1">&#39;.html&#39;</span><span class="p">}</span>
+        
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">directory</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">prompt_extensions</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="o">&lt;</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">:</span>  <span class="c1"># &lt; 1MB</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_extract_prompts_from_file</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_prompts_from_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Extract prompts from a file&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+            
+            <span class="c1"># Prompt patterns</span>
+            <span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="sa">r</span><span class="s1">&#39;&quot;prompt&quot;:\s*&quot;(.+?)&quot;&#39;</span><span class="p">,</span>
+                <span class="sa">r</span><span class="s1">&#39;prompt:\s*(.+?)(?:\n|$)&#39;</span><span class="p">,</span>
+                <span class="sa">r</span><span class="s1">&#39;Sora prompt:\s*(.+?)(?:\n|$)&#39;</span><span class="p">,</span>
+                <span class="sa">r</span><span class="s1">&#39;Image prompt:\s*(.+?)(?:\n|$)&#39;</span><span class="p">,</span>
+            <span class="p">]</span>
+            
+            <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
+                <span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">matches</span><span class="p">:</span>
+                    <span class="n">prompt_text</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="mi">50</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">prompt_text</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2000</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Prompt</span><span class="p">(</span>
+                            <span class="n">prompt_text</span><span class="o">=</span><span class="n">prompt_text</span><span class="p">,</span>
+                            <span class="n">prompt_type</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_detect_prompt_type</span><span class="p">(</span><span class="n">prompt_text</span><span class="p">),</span>
+                            <span class="n">source_file</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">filepath</span><span class="p">),</span>
+                            <span class="n">quality_score</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_score_prompt</span><span class="p">(</span><span class="n">prompt_text</span><span class="p">)</span>
+                        <span class="p">))</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;prompts_found&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_detect_prompt_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Detect prompt type&quot;&quot;&quot;</span>
+        <span class="n">text_lower</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">word</span> <span class="ow">in</span> <span class="n">text_lower</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sora&#39;</span><span class="p">,</span> <span class="s1">&#39;video&#39;</span><span class="p">,</span> <span class="s1">&#39;footage&#39;</span><span class="p">,</span> <span class="s1">&#39;openai video&#39;</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="s1">&#39;sora&#39;</span>
+        <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">word</span> <span class="ow">in</span> <span class="n">text_lower</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;song&#39;</span><span class="p">,</span> <span class="s1">&#39;music&#39;</span><span class="p">,</span> <span class="s1">&#39;melody&#39;</span><span class="p">,</span> <span class="s1">&#39;suno&#39;</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="s1">&#39;music&#39;</span>
+        <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">word</span> <span class="ow">in</span> <span class="n">text_lower</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="s1">&#39;picture&#39;</span><span class="p">,</span> <span class="s1">&#39;photo&#39;</span><span class="p">,</span> <span class="s1">&#39;dall-e&#39;</span><span class="p">,</span> <span class="s1">&#39;midjourney&#39;</span><span class="p">,</span> <span class="s1">&#39;leonardo&#39;</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="s1">&#39;image&#39;</span>
+        <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">word</span> <span class="ow">in</span> <span class="n">text_lower</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;workflow&#39;</span><span class="p">,</span> <span class="s1">&#39;automation&#39;</span><span class="p">,</span> <span class="s1">&#39;make.com&#39;</span><span class="p">,</span> <span class="s1">&#39;n8n&#39;</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="s1">&#39;workflow&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;text&#39;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_score_prompt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Score prompt quality 1-10&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">text</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        
+        <span class="n">score</span> <span class="o">=</span> <span class="mi">5</span>
+        
+        <span class="k">if</span> <span class="mi">100</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+            <span class="n">score</span> <span class="o">+=</span> <span class="mi">2</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1000</span><span class="p">:</span>
+            <span class="n">score</span> <span class="o">+=</span> <span class="mi">3</span>
+        
+        <span class="n">quality_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;detailed&#39;</span><span class="p">,</span> <span class="s1">&#39;cinematic&#39;</span><span class="p">,</span> <span class="s1">&#39;professional&#39;</span><span class="p">,</span> <span class="s1">&#39;high quality&#39;</span><span class="p">,</span> <span class="s1">&#39;specific&#39;</span><span class="p">]</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">quality_words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+        
+        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+    
+    <span class="c1"># ==================== EXPORT ====================</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_export_all_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export all data to CSVs&quot;&quot;&quot;</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">_%H%M%S&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># 1. Master Songs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_export_songs_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MASTER_SONGS_COMBINED_</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># 2. All Prompts</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_export_prompts_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PROMPTS_DISCOVERED_</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># 3. Images Catalog</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_export_images_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IMAGES_CATALOG_</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># 4. Videos Catalog</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_export_videos_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;VIDEOS_CATALOG_</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># 5. Nocturne Complete</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_export_nocturne_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NOCTURNE_COMPLETE_</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># 6. All URLs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_export_urls_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;URLS_MASTER_</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_export_songs_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export songs CSV&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                <span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="s1">&#39;Artist&#39;</span><span class="p">,</span> <span class="s1">&#39;URL&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio_URL&#39;</span><span class="p">,</span> <span class="s1">&#39;Image_URL&#39;</span><span class="p">,</span> <span class="s1">&#39;Video_URL&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Prompt&#39;</span><span class="p">,</span> <span class="s1">&#39;Lyrics&#39;</span><span class="p">,</span> <span class="s1">&#39;Tags&#39;</span><span class="p">,</span> <span class="s1">&#39;Genre&#39;</span><span class="p">,</span> <span class="s1">&#39;Duration&#39;</span><span class="p">,</span> <span class="s1">&#39;Created_Date&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Play_Count&#39;</span><span class="p">,</span> <span class="s1">&#39;Source&#39;</span>
+            <span class="p">])</span>
+            
+            <span class="k">for</span> <span class="n">song</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                    <span class="n">song</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">artist</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">audio_url</span><span class="p">,</span>
+                    <span class="n">song</span><span class="o">.</span><span class="n">image_url</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">video_url</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">lyrics</span><span class="p">,</span>
+                    <span class="n">song</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">genre</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">created_date</span><span class="p">,</span>
+                    <span class="n">song</span><span class="o">.</span><span class="n">play_count</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">source</span>
+                <span class="p">])</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ✅ </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="p">)</span><span class="si">}</span><span class="s2"> songs&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_export_prompts_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export prompts CSV&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                <span class="s1">&#39;Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Prompt_Text&#39;</span><span class="p">,</span> <span class="s1">&#39;Source_File&#39;</span><span class="p">,</span> <span class="s1">&#39;Related_Media&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Related_URL&#39;</span><span class="p">,</span> <span class="s1">&#39;Quality_Score&#39;</span><span class="p">,</span> <span class="s1">&#39;Timestamp&#39;</span>
+            <span class="p">])</span>
+            
+            <span class="k">for</span> <span class="n">prompt</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span><span class="o">.</span><span class="n">quality_score</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                    <span class="n">prompt</span><span class="o">.</span><span class="n">prompt_type</span><span class="p">,</span> <span class="n">prompt</span><span class="o">.</span><span class="n">prompt_text</span><span class="p">,</span> <span class="n">prompt</span><span class="o">.</span><span class="n">source_file</span><span class="p">,</span>
+                    <span class="n">prompt</span><span class="o">.</span><span class="n">related_media</span><span class="p">,</span> <span class="n">prompt</span><span class="o">.</span><span class="n">related_url</span><span class="p">,</span> <span class="n">prompt</span><span class="o">.</span><span class="n">quality_score</span><span class="p">,</span>
+                    <span class="n">prompt</span><span class="o">.</span><span class="n">timestamp</span>
+                <span class="p">])</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ✅ </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="p">)</span><span class="si">}</span><span class="s2"> prompts&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_export_images_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export images CSV&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                <span class="s1">&#39;Filename&#39;</span><span class="p">,</span> <span class="s1">&#39;Path&#39;</span><span class="p">,</span> <span class="s1">&#39;Size_MB&#39;</span><span class="p">,</span> <span class="s1">&#39;Width&#39;</span><span class="p">,</span> <span class="s1">&#39;Height&#39;</span><span class="p">,</span> <span class="s1">&#39;Created_Date&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Prompt&#39;</span><span class="p">,</span> <span class="s1">&#39;Description&#39;</span><span class="p">,</span> <span class="s1">&#39;Tags&#39;</span><span class="p">,</span> <span class="s1">&#39;EXIF_Data&#39;</span>
+            <span class="p">])</span>
+            
+            <span class="k">for</span> <span class="n">img</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">images</span><span class="p">:</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                    <span class="n">img</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">filepath</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">img</span><span class="o">.</span><span class="n">size_mb</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">img</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">created_date</span><span class="p">,</span>
+                    <span class="n">img</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">tags</span><span class="p">),</span>
+                    <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">exif_data</span><span class="p">)</span> <span class="k">if</span> <span class="n">img</span><span class="o">.</span><span class="n">exif_data</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">])</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ✅ </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">images</span><span class="p">)</span><span class="si">}</span><span class="s2"> images&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_export_videos_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export videos CSV&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                <span class="s1">&#39;Filename&#39;</span><span class="p">,</span> <span class="s1">&#39;Path&#39;</span><span class="p">,</span> <span class="s1">&#39;Size_MB&#39;</span><span class="p">,</span> <span class="s1">&#39;Created_Date&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Description&#39;</span><span class="p">,</span> <span class="s1">&#39;Tags&#39;</span><span class="p">,</span> <span class="s1">&#39;Related_Files&#39;</span>
+            <span class="p">])</span>
+            
+            <span class="k">for</span> <span class="n">video</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">videos</span><span class="p">:</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                    <span class="n">video</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">video</span><span class="o">.</span><span class="n">filepath</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">video</span><span class="o">.</span><span class="n">size_mb</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">video</span><span class="o">.</span><span class="n">created_date</span><span class="p">,</span> <span class="n">video</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">video</span><span class="o">.</span><span class="n">tags</span><span class="p">),</span>
+                    <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">video</span><span class="o">.</span><span class="n">related_files</span><span class="p">)</span>
+                <span class="p">])</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ✅ </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">videos</span><span class="p">)</span><span class="si">}</span><span class="s2"> videos&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_export_nocturne_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export Nocturnemelodies CSV&quot;&quot;&quot;</span>
+        <span class="n">nocturne_songs</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                          <span class="k">if</span> <span class="s1">&#39;nocturne&#39;</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> 
+                          <span class="s1">&#39;nocturne&#39;</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">artist</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span>
+                          <span class="s1">&#39;nocturne&#39;</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">lower</span><span class="p">()}</span>
+        
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                <span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="s1">&#39;Prompt&#39;</span><span class="p">,</span> <span class="s1">&#39;Lyrics&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio_URL&#39;</span><span class="p">,</span> <span class="s1">&#39;Image_URL&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Tags&#39;</span><span class="p">,</span> <span class="s1">&#39;Genre&#39;</span><span class="p">,</span> <span class="s1">&#39;Duration&#39;</span><span class="p">,</span> <span class="s1">&#39;Created_Date&#39;</span>
+            <span class="p">])</span>
+            
+            <span class="k">for</span> <span class="n">song</span> <span class="ow">in</span> <span class="n">nocturne_songs</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+                    <span class="n">song</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">lyrics</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">audio_url</span><span class="p">,</span>
+                    <span class="n">song</span><span class="o">.</span><span class="n">image_url</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">genre</span><span class="p">,</span> <span class="n">song</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span>
+                    <span class="n">song</span><span class="o">.</span><span class="n">created_date</span>
+                <span class="p">])</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ✅ </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">nocturne_songs</span><span class="p">)</span><span class="si">}</span><span class="s2"> Nocturne songs&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_export_urls_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export URLs CSV&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;URL&#39;</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">])</span>
+            
+            <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="p">):</span>
+                <span class="n">url_type</span> <span class="o">=</span> <span class="s1">&#39;other&#39;</span>
+                <span class="k">if</span> <span class="s1">&#39;audio&#39;</span> <span class="ow">in</span> <span class="n">url</span> <span class="ow">or</span> <span class="s1">&#39;.mp3&#39;</span> <span class="ow">in</span> <span class="n">url</span><span class="p">:</span>
+                    <span class="n">url_type</span> <span class="o">=</span> <span class="s1">&#39;audio&#39;</span>
+                <span class="k">elif</span> <span class="s1">&#39;image&#39;</span> <span class="ow">in</span> <span class="n">url</span> <span class="ow">or</span> <span class="nb">any</span><span class="p">(</span><span class="n">ext</span> <span class="ow">in</span> <span class="n">url</span> <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="s1">&#39;.webp&#39;</span><span class="p">]):</span>
+                    <span class="n">url_type</span> <span class="o">=</span> <span class="s1">&#39;image&#39;</span>
+                <span class="k">elif</span> <span class="s1">&#39;video&#39;</span> <span class="ow">in</span> <span class="n">url</span> <span class="ow">or</span> <span class="s1">&#39;.mp4&#39;</span> <span class="ow">in</span> <span class="n">url</span><span class="p">:</span>
+                    <span class="n">url_type</span> <span class="o">=</span> <span class="s1">&#39;video&#39;</span>
+                <span class="k">elif</span> <span class="s1">&#39;suno&#39;</span> <span class="ow">in</span> <span class="n">url</span><span class="p">:</span>
+                    <span class="n">url_type</span> <span class="o">=</span> <span class="s1">&#39;suno&#39;</span>
+                
+                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">url</span><span class="p">,</span> <span class="n">url_type</span><span class="p">])</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ✅ </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="p">)</span><span class="si">}</span><span class="s2"> URLs&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># ==================== REPORT ====================</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_generate_final_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate final report&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 COMPLETE ANALYSIS REPORT&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🎵 Songs: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">songs</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🖼️  Images: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">images</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🎬 Videos: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">videos</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✨ Prompts: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🔗 URLs: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📄 CSVs Read: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;csvs_read&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📁 Files Scanned: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;files_scanned&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        
+        <span class="c1"># Prompt breakdown</span>
+        <span class="n">prompt_types</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">prompts</span><span class="p">:</span>
+            <span class="n">prompt_types</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">prompt_type</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prompts by Type:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ptype</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">prompt_types</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  • </span><span class="si">{</span><span class="n">ptype</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="n">high_quality</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">prompts</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">quality_score</span> <span class="o">&gt;=</span> <span class="mi">7</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">High-Quality Prompts (7+/10): </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">high_quality</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ COMPLETE ANALYSIS FINISHED!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../api/complete_media_prompt_analyzer.html#COMPLETE_MEDIA_PROMPT_ANALYZER.main">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run the complete analyzer&quot;&quot;&quot;</span>
+    <span class="n">analyzer</span> <span class="o">=</span> <span class="n">CompleteMediaPromptAnalyzer</span><span class="p">()</span>
+    <span class="n">analyzer</span><span class="o">.</span><span class="n">run_complete_analysis</span><span class="p">()</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Advanced AI Systems.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
