@@ -35,14 +35,14 @@ Run the processor for a specific batch:
 
 ```bash
 cd ~/Documents/pythons
-python PROCESS_BATCH_RENAMES.py 1    # Process batch 1
-python PROCESS_BATCH_RENAMES.py 2    # Process batch 2
+python batch-rename-executor.py 1    # Process batch 1
+python batch-rename-executor.py 2    # Process batch 2
 ```
 
 Or process all batches at once:
 
 ```bash
-python PROCESS_BATCH_RENAMES.py all
+python batch-rename-executor.py all
 ```
 
 ### Step 3: Review Results
@@ -64,7 +64,7 @@ After processing, check:
 - **Batch 9**: leoup.py → openai-batch-image-seo-pipeline.py (50 files)
 - **Batch 10**: openai-content-analyzer.py → photo-gallery-batch-generator.py (50 files)
 - **Batch 11**: pickleshare.py → reddit-tts-video-maker.py (50 files)
-- **Batch 12**: reddit.py → scrape.py (50 files)
+- **Batch 12**: reddit-to-html-formatter.py → reddit-content-scraper.py (50 files)
 - **Batch 13**: scraper.py → smart_rename_versions.py (50 files)
 - **Batch 14**: snoopbanner.py → suno-music-catalog.py (50 files)
 - **Batch 15**: suno-prompt-analyzer.py → ultra.py (50 files)

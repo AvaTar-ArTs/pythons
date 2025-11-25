@@ -226,7 +226,7 @@ python openai-content-analyzer.py
 - `database-*.py` - SQLite operations
 
 #### Code Quality
-- `analyze-code-complexity.py` - Complexity metrics
+- `python-complexity-analyzer.py` - Complexity metrics
 - `python-lint-complexity.py` - Linting automation
 - `automated-fixer.py` - Code repair
 

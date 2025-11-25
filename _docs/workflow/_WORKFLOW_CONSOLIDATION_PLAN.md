@@ -103,7 +103,7 @@ workflow:
 ```
 
 #### **GROUP 3: File Organization Pipeline**
-Currently: `aggressive-renamer.py`, `organize.py`, `intelligent_dedup.py`, etc. (35 scripts)
+Currently: `aggressive-renamer.py`, `organize-ai-outputs.py`, `intelligent_dedup.py`, etc. (35 scripts)
 **Consolidated into:** `WorkflowFileOrganizer`
 
 ```yaml
@@ -131,7 +131,7 @@ workflow:
 ```
 
 #### **GROUP 4: Data Processing Pipeline**
-Currently: `csvmerge.py`, `csvsort.py`, `catalog-to-csv.py`, etc. (20 scripts)
+Currently: `csvmerge.py`, `download-images-from-csv.py`, `catalog-to-csv.py`, etc. (20 scripts)
 **Consolidated into:** `WorkflowDataProcessor`
 
 ```yaml
@@ -157,7 +157,7 @@ workflow:
 ```
 
 #### **GROUP 5: Web Scraping & Download Pipeline**
-Currently: `scrape.py`, `download-files.py`, `ytdl-audiodownload.py`, etc. (15 scripts)
+Currently: `reddit-content-scraper.py`, `download-files.py`, `ytdl-audiodownload.py`, etc. (15 scripts)
 **Consolidated into:** `WorkflowDownloader`
 
 ```yaml

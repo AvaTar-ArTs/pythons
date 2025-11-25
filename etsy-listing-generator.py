@@ -24,6 +24,11 @@ from PIL import Image, UnidentifiedImageError, ExifTags
 from tqdm import tqdm
 from openai import OpenAI
 
+import logging
+logger = logging.getLogger(__name__)
+
+CONSTANT_500 = 500
+
 VALID_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".webp"}
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))

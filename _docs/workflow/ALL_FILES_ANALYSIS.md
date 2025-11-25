@@ -109,7 +109,7 @@
 
 ---
 
-### `analyze-code-complexity.py`
+### `python-complexity-analyzer.py`
 > __init__ function.
 
 **Classes:** AdvancedPythonAnalyzer
@@ -335,7 +335,7 @@
 
 ---
 
-### `analyze-code-complexity.py`
+### `python-complexity-analyzer.py`
 > __init__ function.
 
 **Classes:** AdvancedPythonAnalyzer
@@ -352,7 +352,7 @@
 
 ---
 
-### `analyze-metadata.py`
+### `extract-image-metadata.py`
 > Shared helpers for GPT-based image metadata enrichment.
 
 **Tech:** openai, PIL
@@ -360,7 +360,7 @@
 
 ---
 
-### `analyze-reader.py`
+### `gpt-vision-image-analyzer.py`
 > Calls GPT-4o Vision API to analyze the image at image_path.
 
 **Tech:** openai, PIL
@@ -458,7 +458,7 @@
 
 ---
 
-### `backupcsv.py`
+### `backup-to-csv.py`
 > No docstring
 
 **Tech:** pandas
@@ -737,7 +737,7 @@
 
 ---
 
-### `csvsort.py`
+### `download-images-from-csv.py`
 > Create a safe filename from a title.
 
 **Tech:** pandas
@@ -1036,7 +1036,7 @@
 
 ---
 
-### `backupcsv.py`
+### `backup-to-csv.py`
 > No docstring
 
 **Tech:** pandas
@@ -1099,7 +1099,7 @@
 
 ---
 
-### `documents.py`
+### `backup-documents-to-csv.py`
 > Script to create a CSV backup of ~/documents directory in the same format as ~/clean
 
 **Size:** 5.8 KB | 176 lines | ❌ no main()
@@ -1194,7 +1194,7 @@
 
 ---
 
-### `implement.py`
+### `execute-smart-organization.py`
 > Implement Smart Organization System
 
 **Classes:** SmartOrganizationImplementer
@@ -1316,7 +1316,7 @@
 
 ---
 
-### `analyze-json-writer.py`
+### `image-metadata-helpers.py`
 > Complete Cleanup Orchestrator
 
 **Classes:** CleanupOrchestrator
@@ -1324,14 +1324,14 @@
 
 ---
 
-### `analyze-prompt.py`
+### `transcript-to-prompts.py`
 > Generate detailed, descriptive image prompts from a timestamped transcript.
 
 **Size:** 6.3 KB | 153 lines | ✅ has main()
 
 ---
 
-### `analyze-writer.py`
+### `code-quality-monitor.py`
 > Simple Quality Monitor
 
 **Tech:** anthropic
@@ -1395,7 +1395,7 @@
 
 ---
 
-### `askredditbot.py`
+### `reddit-auto-poster.py`
 > No docstring
 
 **Tech:** reddit
@@ -1471,7 +1471,7 @@
 
 ---
 
-### `categorizer.py`
+### `gpt-script-categorizer.py`
 > get_openai_category function.
 
 **Tech:** openai
@@ -1623,7 +1623,7 @@
 
 ---
 
-### `converts.py`
+### `batch-convert-upscale.py`
 > convert_and_upscale_images function.
 
 **Tech:** PIL
@@ -1631,7 +1631,7 @@
 
 ---
 
-### `convertupscale.py`
+### `convert-upscale-single.py`
 > convert_and_upscale_images function.
 
 **Tech:** PIL
@@ -1672,7 +1672,7 @@
 
 ---
 
-### `denoiser.py`
+### `ffdnet-denoiser.py`
 > Denoise an image with the FFDNet denoising method
 
 **Classes:** FFDNetDenoiser

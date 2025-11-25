@@ -377,7 +377,7 @@ _Powerful data manipulation and analysis tools. Parse, transform, analyze, and v
 
 #### ?? Directory Structure Migration Analyzer
 
-**`analyze-file-migration.py`**
+**`plan-file-migration.py`**
 
 Analyzes and categorizes directory structures for migration planning.
 
@@ -388,7 +388,7 @@ _7.9 KB | 224 lines | Uses: File Management, Data Migration_
 
 #### ?? Script Version Analyzer
 
-**`analyze-file-versions.py`**
+**`find-duplicate-versions.py`**
 
 This script identifies and analyzes versioned Python scripts to determine the best version to keep.
 
@@ -399,7 +399,7 @@ _7.6 KB | 237 lines | Uses: File Management, Version Control_
 
 #### ?? Comprehensive File Analyzer Tool
 
-**`analyze-files-comprehensive.py`**
+**`comprehensive-file-analyzer.py`**
 
 Analyzes codebases using multiple production tools and AI models for quality assessment.
 
@@ -421,7 +421,7 @@ _14.6 KB | 474 lines | Uses: OpenAI, Markdown_
 
 #### ?? Document Cleanup Orchestrator
 
-**`analyze-json-writer.py`**
+**`image-metadata-helpers.py`**
 
 Automates and coordinates cleanup operations in the Documents folder.
 
@@ -432,7 +432,7 @@ _6.6 KB | 203 lines | Uses: File Management, Data Organization_
 
 #### ?? Image Metadata Enrichment with GPT
 
-**`analyze-metadata.py`**
+**`extract-image-metadata.py`**
 
 This script enriches image metadata using GPT-based analysis.
 
@@ -454,7 +454,7 @@ _10.7 KB | 288 lines | Uses: OpenAI API, dotenv for environment management_
 
 #### ?? Image Prompt Generator from Transcript
 
-**`analyze-prompt.py`**
+**`transcript-to-prompts.py`**
 
 Transforms timestamped transcripts into detailed image prompts.
 
@@ -465,7 +465,7 @@ _6.3 KB | 153 lines | Uses: Text Analysis, Image Generation_
 
 #### ?? Image Analysis with GPT-4o API
 
-**`analyze-reader.py`**
+**`gpt-vision-image-analyzer.py`**
 
 This script analyzes images using the GPT-4o Vision API to generate metadata for print-on-demand applications.
 
@@ -487,7 +487,7 @@ _7.7 KB | 245 lines | Uses: OpenAI API, File processing utilities_
 
 #### ?? Simple Quality Monitor for Code Analysis
 
-**`analyze-writer.py`**
+**`code-quality-monitor.py`**
 
 A lightweight tool for periodic code quality analysis without external dependencies.
 
@@ -498,7 +498,7 @@ _23.9 KB | 646 lines | Uses: Code Quality Tools, Static Analysis Tools_
 
 #### ?? backupcsv.py
 
-**`backupcsv.py`**
+**`backup-to-csv.py`**
 
 _2.1 KB | 66 lines_
 
@@ -515,7 +515,7 @@ _5.3 KB | 140 lines_
 
 #### ?? Advanced Python Code Complexity Analyzer
 
-**`analyze-code-complexity.py`**
+**`python-complexity-analyzer.py`**
 
 Analyzes Python code complexity and metrics for better maintainability.
 
@@ -538,7 +538,7 @@ _Intelligent file organization, renaming, deduplication, and cleanup utilities. 
 
 #### ?? Batch Rename Processor
 
-**`PROCESS_BATCH_RENAMES.py`**
+**`batch-rename-executor.py`**
 
 Efficiently processes batch CSVs to rename, move, or delete files based on specified actions.
 
@@ -738,7 +738,7 @@ _Multi-platform social media automation beyond Instagram. Reddit scraping, Teleg
 
 #### ?? AskReddit Video Generator Bot
 
-**`askredditbot.py`**
+**`reddit-auto-poster.py`**
 
 This script generates videos from trending AskReddit posts every 12 hours.
 
@@ -967,7 +967,7 @@ _0.7 KB | 30 lines_
 
 #### ?? brand.py
 
-**`brand.py`**
+**`load-brand-json.py`**
 
 _0.7 KB | 28 lines_
 
@@ -1016,7 +1016,7 @@ _5.2 KB | 169 lines_
 
 #### ?? categorizer.py
 
-**`categorizer.py`**
+**`gpt-script-categorizer.py`**
 
 _3.3 KB | 108 lines_
 

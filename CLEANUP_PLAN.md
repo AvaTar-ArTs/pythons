@@ -266,12 +266,12 @@ These files exist in ~/Documents/pythons and can be removed from external volume
 
 38. **google_gallery_logic.py**
    - External: `/Volumes/2T-Xx/steven/Pictures/DALLe/dalle-html-fin/simplegallery/logic/variants/google_gallery_logic.py`
-   - Master: `/Users/steven/Documents/pythons/parse.py`
+   - Master: `/Users/steven/Documents/pythons/parse-onedrive-photo-urls.py`
    - Size: 3.7 KB
 
 39. **google_gallery_logic.py**
    - External: `/Volumes/2T-Xx/AvaTarArTs/python/simplegallery-bin/simplegallery2/logic/variants/google_gallery_logic.py`
-   - Master: `/Users/steven/Documents/pythons/parse.py`
+   - Master: `/Users/steven/Documents/pythons/parse-onedrive-photo-urls.py`
    - Size: 3.7 KB
 
 40. **google_gallery_logic.py**

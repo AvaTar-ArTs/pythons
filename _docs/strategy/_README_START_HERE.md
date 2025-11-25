@@ -115,7 +115,7 @@ python transcribe.py audio.mp3
 python audio.py audio.mp3
 python upscale.py image.jpg --scale 2
 python aggressive-renamer.py ~/files
-python organize.py ~/files --strategy intelligent
+python organize-ai-outputs.py ~/files --strategy intelligent
 # ... repeat 411 times
 ```
 
