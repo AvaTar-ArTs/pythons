@@ -6,15 +6,13 @@ Leverages your 758+ Python scripts, MD files, HTML, CSV, and existing documentat
 """
 
 import os
-import sys
 import ast
 import json
 import re
 from pathlib import Path
-from typing import Dict, List, Any, Set
+from typing import Dict, List, Set
 from collections import defaultdict, Counter
 from datetime import datetime
-import hashlib
 
 # Load environment from ~/.env.d/
 env_dir = Path.home() / '.env.d'
@@ -85,7 +83,7 @@ class Context7CodebaseIndexer:
             
             try:
                 self.analyze_python_file(py_file)
-            except Exception as e:
+            except Exception:
                 pass  # Skip files that can't be parsed
         
         print(f"\n  ✅ Analyzed {total} Python files")

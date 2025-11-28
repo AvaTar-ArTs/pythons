@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-import os, sys, csv
+import sys
+import csv
 from pathlib import Path
 
 CATEGORIES = [

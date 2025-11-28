@@ -13,9 +13,8 @@ import logging
 import subprocess
 from pathlib import Path
 from typing import Dict, List, Optional
-from collections import Counter, defaultdict
+from collections import Counter
 from datetime import datetime
-import hashlib
 
 
 # Load API keys from ~/.env.d/
@@ -769,8 +768,8 @@ class MasterRenamer:
         # Export summary
         summary_path = output_path / "rename_summary.txt"
         with open(summary_path, "w") as f:
-            f.write(f"Rename Analysis Summary\n")
-            f.write(f"======================\n\n")
+            f.write("Rename Analysis Summary\n")
+            f.write("======================\n\n")
             f.write(f"Project: {self.project_root}\n")
             f.write(f"Files processed: {self.files_processed}\n")
             f.write(f"Suggestions generated: {len(suggestions)}\n")

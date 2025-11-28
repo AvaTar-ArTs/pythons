@@ -17,14 +17,13 @@ It creates a single, unified, organized structure with all the best features.
 """
 
 import os
-import sys
 import logging
 import shutil
 import hashlib
 import json
 import zipfile
 from pathlib import Path
-from typing import Dict, List, Set, Tuple, Optional
+from typing import Dict, List
 from collections import defaultdict
 import re
 from datetime import datetime
@@ -487,7 +486,7 @@ class ComprehensiveMerger:
             f.write("FINAL_ORGANIZED/\n")
             for category in self.categories.keys():
                 f.write(f"├── {category}/\n")
-                f.write(f"│   ├── README.md\n")
+                f.write("│   ├── README.md\n")
                 category_files = list((self.final_dir / category).glob("*"))
                 category_files = [f for f in category_files if f.name != "README.md"]
                 for i, file_path in enumerate(category_files[:5]):  # Show first 5 files
@@ -495,7 +494,7 @@ class ComprehensiveMerger:
                 if len(category_files) > 5:
                     f.write(f"│   └── ... ({len(category_files) - 5} more files)\n")
                 else:
-                    f.write(f"│   └── (empty)\n")
+                    f.write("│   └── (empty)\n")
             f.write("```\n")
 
         # Generate JSON report
@@ -559,7 +558,7 @@ class ComprehensiveMerger:
             logger.info("Comprehensive merge and consolidation process completed!")
 
             # Print summary
-            logger.info(f"\n✅ Comprehensive Merge Complete!")
+            logger.info("\n✅ Comprehensive Merge Complete!")
             logger.info(
                 f"📊 Total files found: {self.merge_stats['total_files_found']}"
             )

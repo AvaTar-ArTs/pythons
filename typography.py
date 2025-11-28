@@ -8,7 +8,6 @@ in GIFs, with outlines for readability and effects for visual impact.
 
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
-from typing import Optional
 
 
 # Typography scale - proportional sizing system

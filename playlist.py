@@ -2,7 +2,6 @@ from pathlib import Path
 import argparse
 import json
 import os
-import re
 import subprocess
 import urllib.parse
 import urllib.request
@@ -135,7 +134,7 @@ def write_tracks(text_file, tracks, location):
 def write_playlist(username, playlist_id):
     results = spotify.user_playlist(username, playlist_id, fields="tracks,next,name")
     playlist_name = results["name"]
-    text_file = "{0}.txt".format(results["name"], ok="-_()[]{}")
+    text_file = "{0}.txt".format(results["name"], )
     logger.info("Writing {0} tracks to {1}".format(results["tracks"]["total"], text_file))
     tracks = results["tracks"]
     return playlist_name, text_file, tracks

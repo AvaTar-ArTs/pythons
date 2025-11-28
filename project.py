@@ -9,7 +9,6 @@ import shutil
 import json
 from pathlib import Path
 from datetime import datetime
-import subprocess
 
 
 class AvaTarArTsProjectManager:
@@ -345,15 +344,15 @@ if __name__ == "__main__":
     main()
 """
             else:
-                update_script = f"""#!/usr/bin/env python3
+                update_script = """#!/usr/bin/env python3
 '''
-{{project_info['name']}} Project Update
+{project_info['name']} Project Update
 '''
 
 def main():
-    logger.info("🔄 Updating {{project_info['name']}}...")
+    logger.info("🔄 Updating {project_info['name']}...")
     logger.info("  No specific update actions defined")
-    logger.info("✅ {{project_info['name']}} updated")
+    logger.info("✅ {project_info['name']} updated")
 
 if __name__ == "__main__":
     main()
@@ -476,7 +475,7 @@ Content-aware visual analysis and enhancement systems
         # Create main README
         self.create_main_readme(project_dir)
 
-        logger.info(f"\n🎉 Project Manager Setup Complete!")
+        logger.info("\n🎉 Project Manager Setup Complete!")
         logger.info(f"📁 Project Directory: {project_dir}")
         logger.info(f"🔄 Update All: python3 {project_dir}/update_all.py")
         logger.info(f"📚 Documentation: {project_dir}/README.md")

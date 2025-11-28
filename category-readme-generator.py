@@ -192,7 +192,7 @@ def main():
     try:
         # Load analysis
         analysis_data = load_functional_analysis()
-        logger.info(f"✅ Loaded functional analysis")
+        logger.info("✅ Loaded functional analysis")
 
         # Group files by category
         categories = group_files_by_category(analysis_data)

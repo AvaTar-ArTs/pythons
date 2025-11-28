@@ -6,12 +6,10 @@ Combines structural analysis with AI-powered insights
 
 import os
 import sys
-import json
 import re
 import subprocess
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any
 from dataclasses import dataclass
-from pathlib import Path
 
 
 @dataclass
@@ -309,7 +307,7 @@ class AIDeepAnalyzer:
         except subprocess.TimeoutExpired:
             return {
                 "success": False,
-                "error": f"AI analysis timed out after CONSTANT_120 seconds",
+                "error": "AI analysis timed out after CONSTANT_120 seconds",
                 "service": ai_service,
             }
         except Exception as e:
@@ -394,10 +392,10 @@ class AIDeepAnalyzer:
         )
         logger.info("=" * 80)
 
-        logger.info(f"\n📋 SUMMARY:")
+        logger.info("\n📋 SUMMARY:")
         logger.info(f"   {result.summary}")
 
-        logger.info(f"\n🏗️  STRUCTURE ANALYSIS:")
+        logger.info("\n🏗️  STRUCTURE ANALYSIS:")
         logger.info(f"   Content Type: {result.content_type.replace('_', ' ').title()}")
         logger.info(f"   Word Count: {result.structure['word_count']:,}")
         logger.info(f"   Lines: {result.structure['lines']:,}")
@@ -412,16 +410,16 @@ class AIDeepAnalyzer:
         )
 
         if result.key_insights:
-            logger.info(f"\n💡 KEY INSIGHTS:")
+            logger.info("\n💡 KEY INSIGHTS:")
             for i, insight in enumerate(result.key_insights, 1):
                 logger.info(f"   {i}. {insight}")
 
         if result.recommendations:
-            logger.info(f"\n🎯 RECOMMENDATIONS:")
+            logger.info("\n🎯 RECOMMENDATIONS:")
             for i, rec in enumerate(result.recommendations, 1):
                 logger.info(f"   {i}. {rec}")
 
-        logger.info(f"\n⚙️  TECHNICAL DETAILS:")
+        logger.info("\n⚙️  TECHNICAL DETAILS:")
         logger.info(
             f"   Formatting Consistent: {'✅' if result.technical_details['formatting_consistency'] else '❌'}"
         )
@@ -430,17 +428,17 @@ class AIDeepAnalyzer:
         )
 
         if result.technical_details["encoding_issues"]:
-            logger.info(f"   Encoding Issues:")
+            logger.info("   Encoding Issues:")
             for issue in result.technical_details["encoding_issues"]:
                 logger.info(f"     • {issue}")
 
         if result.technical_details["accessibility_concerns"]:
-            logger.info(f"   Accessibility Concerns:")
+            logger.info("   Accessibility Concerns:")
             for concern in result.technical_details["accessibility_concerns"]:
                 logger.info(f"     • {concern}")
 
         if result.technical_details["performance_considerations"]:
-            logger.info(f"   Performance Considerations:")
+            logger.info("   Performance Considerations:")
             for consideration in result.technical_details["performance_considerations"]:
                 logger.info(f"     • {consideration}")
 

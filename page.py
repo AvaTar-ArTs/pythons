@@ -12,7 +12,12 @@ Fixes, improvements, and creative formatting include:
 - Config via CLI flags or a config.yml next to page_maker.py.
 """
 
-import argparse, datetime, json, os, re, sys, math, itertools, yaml
+import argparse
+import datetime
+import json
+import re
+import math
+import yaml
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 from dataclasses import dataclass, field

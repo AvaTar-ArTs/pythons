@@ -29,13 +29,12 @@ DATE: 2025-11-27
 import argparse
 import csv
 import json
-import os
 import re
 import sys
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Set
 import hashlib
 
 # Optional dependencies (graceful degradation)
@@ -275,7 +274,7 @@ class SunoDataCleaner:
                 report['valid'] += 1
 
         # Print report
-        print(f"\n📊 Validation Report:")
+        print("\n📊 Validation Report:")
         print(f"  Total songs: {report['total']}")
         print(f"  Valid songs: {report['valid']} ({report['valid']/report['total']*100:.1f}%)")
 
@@ -414,25 +413,25 @@ class SunoAnalytics:
 
         # Top authors
         if stats['authors']:
-            print(f"\n👤 Top Authors:")
+            print("\n👤 Top Authors:")
             for author, count in stats['authors'].most_common(10):
                 print(f"  {author}: {count} songs")
 
         # Top tags
         if stats['tags']:
-            print(f"\n🏷️  Top Tags:")
+            print("\n🏷️  Top Tags:")
             for tag, count in stats['tags'].most_common(10):
                 print(f"  {tag}: {count} songs")
 
         # Extraction sources
         if stats['extraction_sources']:
-            print(f"\n🔍 Extraction Sources:")
+            print("\n🔍 Extraction Sources:")
             for source, count in stats['extraction_sources'].items():
                 print(f"  {source}: {count} songs")
 
         # Errors
         if stats['errors']:
-            print_warning(f"\n❌ Errors:")
+            print_warning("\n❌ Errors:")
             for error_type, count in stats['errors'].items():
                 print(f"  {error_type}: {count}")
 

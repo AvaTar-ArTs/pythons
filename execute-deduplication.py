@@ -5,7 +5,6 @@ Actually performs the cleanup with safety checks
 """
 
 import json
-import shutil
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -72,7 +71,7 @@ def execute_cleanup(dry_run=True):
                 stats["errors"] += 1
 
     # Step 2: Rename files
-    print(f"\n??  RENAMING TO DESCRIPTIVE NAMES:")
+    print("\n??  RENAMING TO DESCRIPTIVE NAMES:")
     print("-" * 70)
 
     by_category = defaultdict(list)
@@ -123,7 +122,7 @@ def execute_cleanup(dry_run=True):
         print(f"? Renamed: {stats['renamed']} files")
         print(f"? Deleted: {stats['deleted']} duplicates")
         print(f"? Errors: {stats['errors']}")
-        print(f"\n?? Backup saved before changes")
+        print("\n?? Backup saved before changes")
         print("\n?? Cleanup complete!")
 
         # Save cleanup report

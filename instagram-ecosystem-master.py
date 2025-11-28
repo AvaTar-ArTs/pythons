@@ -180,7 +180,7 @@ class EcosystemMasterMapper:
         """Map the entire ecosystem with deep analysis."""
         root_path = Path(root_path).expanduser()
 
-        logger.info(f"🗺️  ECOSYSTEM MASTER MAPPING")
+        logger.info("🗺️  ECOSYSTEM MASTER MAPPING")
         logger.info("=" * 80)
         logger.info(f"Root: {root_path}")
         logger.info(f"Max depth: {max_depth}")
@@ -596,7 +596,7 @@ class EcosystemMasterMapper:
                 writer.writerow(row)
 
         logger.info(f"   CSV backup created with {len(self.backup_data)} entries")
-        logger.info(f"   This is your safety net for rollback!")
+        logger.info("   This is your safety net for rollback!")
 
     def generate_master_index(self, all_files, project_directories, output_file):
         """Generate master index of the entire ecosystem."""
@@ -645,7 +645,7 @@ class EcosystemMasterMapper:
         with open(output_file, "w") as f:
             json.dump(index, f, indent=2)
 
-        logger.info(f"   Master index created with comprehensive ecosystem mapping")
+        logger.info("   Master index created with comprehensive ecosystem mapping")
 
     def generate_execution_script(self, reorganization_plan, output_file):
         """Generate execution script for the reorganization."""
@@ -712,7 +712,7 @@ if __name__ == "__main__":
         # Make executable
         os.chmod(output_file, 0o755)
 
-        logger.info(f"   Execution script created and made executable")
+        logger.info("   Execution script created and made executable")
 
 
 def main():
@@ -744,10 +744,10 @@ def main():
     mapper.generate_execution_script(reorganization_plan, execution_script)
 
     # Generate comprehensive report
-    logger.info(f"\n📊 COMPREHENSIVE ECOSYSTEM REPORT")
+    logger.info("\n📊 COMPREHENSIVE ECOSYSTEM REPORT")
     logger.info("=" * 80)
 
-    logger.info(f"🗺️  ECOSYSTEM MAPPING COMPLETE")
+    logger.info("🗺️  ECOSYSTEM MAPPING COMPLETE")
     logger.info(f"   Total Python files: {len(all_files):,}")
     logger.info(f"   Project categories: {len(project_directories)}")
     logger.info(f"   File relationships: {len(mapper.project_relationships)}")
@@ -756,28 +756,28 @@ def main():
         f"   Consolidation opportunities: {len(mapper.consolidation_opportunities)}"
     )
 
-    logger.info(f"\n📁 PROJECT CATEGORIES")
+    logger.info("\n📁 PROJECT CATEGORIES")
     for category, files in sorted(
         project_directories.items(), key=lambda x: len(x[1]), reverse=True
     ):
         logger.info(f"   {category.replace('_', ' ').title()}: {len(files)} files")
 
-    logger.info(f"\n💾 BACKUP & SAFETY")
+    logger.info("\n💾 BACKUP & SAFETY")
     logger.info(f"   CSV backup: {csv_backup_file}")
     logger.info(f"   Master index: {index_file}")
     logger.info(f"   Execution script: {execution_script}")
-    logger.info(f"   🛡️  All changes can be rolled back using the CSV file!")
+    logger.info("   🛡️  All changes can be rolled back using the CSV file!")
 
-    logger.info(f"\n🚀 NEXT STEPS")
-    logger.info(f"   1. Review the CSV backup file")
-    logger.info(f"   2. Check the master index for insights")
+    logger.info("\n🚀 NEXT STEPS")
+    logger.info("   1. Review the CSV backup file")
+    logger.info("   2. Check the master index for insights")
     logger.info(
         f"   3. Run the execution script when ready: python3 {execution_script}"
     )
-    logger.info(f"   4. Use CSV file to rollback if needed")
+    logger.info("   4. Use CSV file to rollback if needed")
 
-    logger.info(f"\n✅ MASTER ECOSYSTEM MAPPING COMPLETE!")
-    logger.info(f"   Your Python ecosystem has been fully analyzed and mapped!")
+    logger.info("\n✅ MASTER ECOSYSTEM MAPPING COMPLETE!")
+    logger.info("   Your Python ecosystem has been fully analyzed and mapped!")
 
 
 if __name__ == "__main__":

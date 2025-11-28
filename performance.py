@@ -4,7 +4,6 @@ Performance Optimization Script
 Implements final optimizations for web performance and file management
 """
 
-import os
 import json
 from pathlib import Path
 

@@ -19,9 +19,8 @@ import shutil
 import re
 from pathlib import Path
 from datetime import datetime
-from difflib import SequenceMatcher
 from collections import defaultdict
-from typing import Dict, List, Tuple
+from typing import Dict
 
 class Colors:
     CYAN = "\033[96m"

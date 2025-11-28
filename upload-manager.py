@@ -6,11 +6,9 @@ Prepares and uploads repositories to GitHub with proper configuration
 
 import os
 import subprocess
-import json
-import shutil
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Any, Optional
+from typing import Dict, Any
 import logging
 
 # Configure logging
@@ -491,7 +489,7 @@ def main():
     logger.info("📁 Preparing repositories for GitHub upload...")
     results = manager.prepare_all_repositories()
 
-    logger.info(f"\n📊 Preparation Results:")
+    logger.info("\n📊 Preparation Results:")
     logger.info(f"Total repositories: {results['total_repos']}")
     logger.info(f"Successfully prepared: {results['prepared']}")
     logger.info(f"Failed: {results['failed']}")

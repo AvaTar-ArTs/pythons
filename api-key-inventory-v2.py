@@ -11,7 +11,6 @@ Features:
 ✨ Never expose actual values
 """
 
-import os
 import csv
 from pathlib import Path
 from datetime import datetime

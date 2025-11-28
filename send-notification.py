@@ -17,7 +17,7 @@ def send_tweet(video_title, video_desc):
         try:
             auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
             auth.set_access_token(access_token, access_token_secret)
-        except Exception as e:
+        except Exception:
             return None
 
     oauth = OAuth()

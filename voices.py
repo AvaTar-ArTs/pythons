@@ -19,8 +19,8 @@ def save_text_to_mp3(reddit_obj):
     Path("assets/mp3").mkdir(parents=True, exist_ok=True)
 
     tts = gTTS(text=reddit_obj["thread_title"], lang="en", slow=False, tld="co.uk")
-    tts.save(f"assets/mp3/title.mp3")
-    length += MP3(f"assets/mp3/title.mp3").info.length
+    tts.save("assets/mp3/title.mp3")
+    length += MP3("assets/mp3/title.mp3").info.length
 
     for idx, comment in track(enumerate(reddit_obj["comments"]), "Saving..."):
         # ! Stop creating mp3 files if the length is greater than 50 seconds. This can be longer, but this is just a good starting point

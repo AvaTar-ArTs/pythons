@@ -4,13 +4,11 @@ HTML Content Analyzer
 Uses deep analysis and fluid awareness to determine what's worth keeping vs removable
 """
 
-import os
 import re
-import json
 import csv
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict, Counter
+from collections import defaultdict
 import hashlib
 
 
@@ -307,7 +305,7 @@ class HTMLContentAnalyzer:
 
     def _generate_summary(self):
         """Generate analysis summary."""
-        logger.info(f"\n📊 ANALYSIS SUMMARY")
+        logger.info("\n📊 ANALYSIS SUMMARY")
         logger.info("=" * 50)
 
         total_files = sum(len(files) for files in self.analysis_results.values())
@@ -340,7 +338,7 @@ class HTMLContentAnalyzer:
             for f in [f for files in self.analysis_results.values() for f in files]
         )
 
-        logger.info(f"💾 SPACE ANALYSIS")
+        logger.info("💾 SPACE ANALYSIS")
         logger.info(f"   Total files: {total_files}")
         logger.info(f"   Removable files: {len(removable_files)}")
         logger.info(
@@ -500,7 +498,7 @@ class HTMLContentAnalyzer:
             f.write("3. Create a backup before removing files\n")
             f.write("4. Use the removal script to safely delete recommended files\n")
 
-        logger.info(f"   ✅ Removal recommendations created")
+        logger.info("   ✅ Removal recommendations created")
 
 
 def main():
@@ -508,9 +506,9 @@ def main():
     analyzer = HTMLContentAnalyzer()
     results = analyzer.generate_removal_plan()
 
-    logger.info(f"\n🎯 ANALYSIS COMPLETE!")
+    logger.info("\n🎯 ANALYSIS COMPLETE!")
     logger.info(
-        f"Use the generated reports to make informed decisions about what to keep vs remove."
+        "Use the generated reports to make informed decisions about what to keep vs remove."
     )
 
 

@@ -4,7 +4,6 @@ Python Ecosystem Insights
 Deep analysis of your massive 6-level Python directory structure
 """
 
-import os
 import json
 from pathlib import Path
 from collections import defaultdict, Counter
@@ -15,7 +14,7 @@ def analyze_python_ecosystem(root_path, max_depth=6):
     """Analyze the massive Python ecosystem structure."""
     root_path = Path(root_path).expanduser()
 
-    logger.info(f"🌍 PYTHON ECOSYSTEM DEEP ANALYSIS")
+    logger.info("🌍 PYTHON ECOSYSTEM DEEP ANALYSIS")
     logger.info("=" * 80)
     logger.info(f"Root: {root_path}")
     logger.info(f"Max depth: {max_depth}")
@@ -199,7 +198,7 @@ def analyze_python_ecosystem(root_path, max_depth=6):
         except (OSError, ValueError):
             continue
 
-    logger.info(f"   Size distribution:")
+    logger.info("   Size distribution:")
     logger.info(
         f"     Small (<1KB): {python_analysis['size_distribution']['small']} files"
     )
@@ -211,14 +210,14 @@ def analyze_python_ecosystem(root_path, max_depth=6):
     )
     print()
 
-    logger.info(f"   Depth distribution:")
+    logger.info("   Depth distribution:")
     for depth in sorted(python_analysis["depth_distribution"].keys()):
         logger.info(
             f"     Depth {depth}: {python_analysis['depth_distribution'][depth]} files"
         )
     print()
 
-    logger.info(f"   Naming patterns:")
+    logger.info("   Naming patterns:")
     for pattern, count in sorted(
         python_analysis["naming_patterns"].items(), key=lambda x: x[1], reverse=True
     ):
@@ -232,7 +231,7 @@ def analyze_python_ecosystem(root_path, max_depth=6):
     total_size = sum(f.stat().st_size for f in all_files if f.is_file())
     size_gb = total_size / (CONSTANT_1024**3)
 
-    logger.info(f"   🎯 This is a MASSIVE Python ecosystem!")
+    logger.info("   🎯 This is a MASSIVE Python ecosystem!")
     logger.info(f"   📊 {len(all_dirs):,} directories across {max_depth} levels")
     logger.info(f"   📁 {len(all_files):,} total files ({size_gb:.1f} GB)")
     logger.info(f"   🐍 {len(python_files)} Python files")
@@ -243,7 +242,7 @@ def analyze_python_ecosystem(root_path, max_depth=6):
     complex_projects = sorted(
         project_categories.items(), key=lambda x: len(x[1]), reverse=True
     )[:5]
-    logger.info(f"   🏆 Most complex projects:")
+    logger.info("   🏆 Most complex projects:")
     for category, files in complex_projects:
         logger.info(f"     {category}: {len(files)} files")
     print()
@@ -251,11 +250,11 @@ def analyze_python_ecosystem(root_path, max_depth=6):
     # Recommendations
     logger.info("🚀 RECOMMENDATIONS")
     logger.info("-" * 50)
-    logger.info(f"   1. Your ecosystem is incredibly well-organized!")
-    logger.info(f"   2. Consider consolidating similar projects in the same category")
-    logger.info(f"   3. Many files could benefit from intelligent renaming")
-    logger.info(f"   4. Some projects might have overlapping functionality")
-    logger.info(f"   5. Consider creating a master index of all projects")
+    logger.info("   1. Your ecosystem is incredibly well-organized!")
+    logger.info("   2. Consider consolidating similar projects in the same category")
+    logger.info("   3. Many files could benefit from intelligent renaming")
+    logger.info("   4. Some projects might have overlapping functionality")
+    logger.info("   5. Consider creating a master index of all projects")
     print()
 
     # Save results
@@ -278,9 +277,9 @@ def analyze_python_ecosystem(root_path, max_depth=6):
         json.dump(results, f, indent=2)
 
     logger.info(f"💾 Detailed results saved: {results_file}")
-    logger.info(f"\n✅ Deep ecosystem analysis complete!")
+    logger.info("\n✅ Deep ecosystem analysis complete!")
     logger.info(
-        f"   This is an incredibly sophisticated Python development environment!"
+        "   This is an incredibly sophisticated Python development environment!"
     )
 
 

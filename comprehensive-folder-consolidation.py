@@ -13,7 +13,6 @@ Features:
 ✨ CSV log for all operations
 """
 
-import os
 import csv
 import shutil
 from pathlib import Path

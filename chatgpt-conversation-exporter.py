@@ -8,10 +8,8 @@ Date: October CONSTANT_2025
 Purpose: Export ChatGPT conversations in the same format as your existing exports
 """
 
-import os
 import re
 import html
-import json
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional, Any
@@ -467,7 +465,7 @@ messages: {len(messages)}
                 except Exception as e:
                     logger.info(f"  ❌ Error exporting: {e}")
             else:
-                logger.info(f"  ⚠️  Could not parse conversation")
+                logger.info("  ⚠️  Could not parse conversation")
 
         logger.info(f"\n🎉 Export complete! {exported_count} conversations exported")
         logger.info(f"📁 HTML files: {self.html_dir}")

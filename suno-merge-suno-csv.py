@@ -14,7 +14,7 @@ import csv
 import re
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict, Set
+from typing import List, Dict
 from collections import defaultdict
 
 def extract_song_id(url: str) -> str:
@@ -244,7 +244,7 @@ def main():
         for source in sources_list:
             source_counts[source] += 1
     
-    print(f"\n?? Top 10 source files by song count:")
+    print("\n?? Top 10 source files by song count:")
     for i, (source, count) in enumerate(sorted(source_counts.items(), 
                                                key=lambda x: x[1], 
                                                reverse=True)[:10], 1):
@@ -258,7 +258,7 @@ def main():
         print(f"   Found in: {len(list(multi_source.values())[0])} files")
     
     # Show sample songs
-    print(f"\n?? Sample of unique songs:")
+    print("\n?? Sample of unique songs:")
     for i, song in enumerate(unique_list[:5], 1):
         print(f"\n   {i}. {song['title']}")
         if song['author']:
@@ -288,13 +288,13 @@ def main():
                 f.write(f"  Songs: {stats['songs']}\n")
                 f.write(f"  Size: {stats['size']:.1f} KB\n")
             
-            f.write(f"\n\nSUMMARY:\n")
+            f.write("\n\nSUMMARY:\n")
             f.write("-"*70 + "\n")
             f.write(f"Total songs (all files): {len(all_songs)}\n")
             f.write(f"Unique songs: {len(unique_list)}\n")
             f.write(f"Duplicates: {len(all_songs) - len(unique_list)}\n")
             
-            f.write(f"\n\nDUPLICATE ANALYSIS:\n")
+            f.write("\n\nDUPLICATE ANALYSIS:\n")
             f.write("-"*70 + "\n")
             for song_id, sources in sorted(multi_source.items(), 
                                           key=lambda x: len(x[1]), 

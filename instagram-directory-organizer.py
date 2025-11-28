@@ -5,11 +5,9 @@ Directory Organizer - Intelligently organize all folders
 Consolidates backups, categorizes projects, and creates clean structure.
 """
 
-import os
 import shutil
 from pathlib import Path
 from datetime import datetime
-import json
 
 
 class DirectoryOrganizer:

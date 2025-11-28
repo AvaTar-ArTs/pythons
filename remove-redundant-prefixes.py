@@ -8,8 +8,6 @@ Fixes files like:
   instagram/instagram_bot.py → instagram/bot.py
 """
 
-import os
-import re
 import shutil
 from datetime import datetime
 from pathlib import Path

@@ -93,7 +93,7 @@ class ServiceReorganizer:
 
             return "utils"  # Default fallback
 
-        except Exception as e:
+        except Exception:
             return "utils"
 
     def reorganize(self, dry_run=True):
@@ -153,7 +153,7 @@ class ServiceReorganizer:
 
         # Execute moves
         if not dry_run:
-            print(f"\n🔥 EXECUTING MOVES...\n")
+            print("\n🔥 EXECUTING MOVES...\n")
 
             for move in self.moves:
                 target_folder = move["target"].parent

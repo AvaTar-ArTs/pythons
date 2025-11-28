@@ -3,16 +3,11 @@ import os
 import ast
 import sys
 import json
-import csv
 import platform
 import datetime
 import subprocess
-import radon
 import networkx as nx
-import matplotlib.pyplot as plt
 from collections import defaultdict
-from radon.complexity import cc_visit
-from radon.metrics import mi_visit
 
 import logging
 
@@ -261,6 +256,6 @@ if __name__ == "__main__":
     html_path = analyzer.generate_html_report(html_output)
     csv_path = analyzer.generate_csv_report(csv_output)
 
-    logger.info(f"\n✅ Analysis complete!")
+    logger.info("\n✅ Analysis complete!")
     logger.info(f"📊 HTML Report: {html_path}")
     logger.info(f"📝 CSV Report: {csv_path}")

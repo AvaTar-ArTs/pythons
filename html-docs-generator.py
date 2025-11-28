@@ -4,10 +4,8 @@ Simple HTML Documentation Generator
 Creates a comprehensive HTML documentation website without Sphinx dependencies
 """
 
-import os
 import json
 from pathlib import Path
-from datetime import datetime
 
 
 class SimpleDocsGenerator:

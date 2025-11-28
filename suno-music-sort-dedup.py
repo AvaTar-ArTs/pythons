@@ -7,13 +7,12 @@ It removes duplicates, consolidates similar files, and creates a clean, organize
 """
 
 import os
-import sys
 import logging
 import shutil
 import hashlib
 import json
 from pathlib import Path
-from typing import Dict, List, Set, Tuple, Optional
+from typing import Dict, List
 from collections import defaultdict
 import re
 from datetime import datetime
@@ -470,14 +469,14 @@ class AdvancedSortAndDedupe:
             f.write("CLEAN_ORGANIZED/\n")
             for category in self.categories.keys():
                 f.write(f"├── {category}/\n")
-                f.write(f"│   ├── README.md\n")
+                f.write("│   ├── README.md\n")
                 category_files = list((self.clean_dir / category).glob("*.py"))
                 for i, file_path in enumerate(category_files[:5]):  # Show first 5 files
                     f.write(f"│   ├── {file_path.name}\n")
                 if len(category_files) > 5:
                     f.write(f"│   └── ... ({len(category_files) - 5} more files)\n")
                 else:
-                    f.write(f"│   └── (empty)\n")
+                    f.write("│   └── (empty)\n")
             f.write("└── DUPLICATES_ARCHIVE/\n")
             f.write("    └── (archived files)\n")
             f.write("```\n")
@@ -537,7 +536,7 @@ class AdvancedSortAndDedupe:
         total_archived = len(list(self.duplicates_dir.rglob("*.py")))
         total_organized = len(list(self.clean_dir.rglob("*.py")))
 
-        logger.info(f"\n✅ Sorting and Deduplication Complete!")
+        logger.info("\n✅ Sorting and Deduplication Complete!")
         logger.info(f"📊 Original files: {total_original}")
         logger.info(f"🗂️  Files organized: {total_organized}")
         logger.info(f"📦 Files archived: {total_archived}")

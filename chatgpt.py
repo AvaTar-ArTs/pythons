@@ -4,8 +4,6 @@ ChatGPT Agent - A simple conversational AI agent using OpenAI's API
 """
 
 import os
-import sys
-from typing import List, Dict, Any
 from openai import OpenAI
 from dotenv import load_dotenv
 import json

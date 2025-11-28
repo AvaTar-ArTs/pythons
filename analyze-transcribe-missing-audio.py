@@ -8,11 +8,9 @@
 4. Transcribe only missing content
 """
 
-import os
 import csv
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
 
 class Colors:
     CYAN = "\033[96m"

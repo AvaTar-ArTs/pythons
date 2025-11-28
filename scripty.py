@@ -17,7 +17,12 @@ Requires:
   pip install openai python-docx python-dotenv pydub requests
 """
 
-import os, re, time, json, random, argparse, math
+import os
+import re
+import time
+import random
+import argparse
+import math
 from pathlib import Path
 from typing import List, Tuple, Optional
 
@@ -27,7 +32,6 @@ from pydub import AudioSegment, effects
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

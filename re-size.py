@@ -1,6 +1,5 @@
 import os
 import time
-from datetime import datetime
 from PIL import Image, UnidentifiedImageError
 from tqdm import tqdm
 

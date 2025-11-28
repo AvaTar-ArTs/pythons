@@ -1,5 +1,4 @@
 from langchain.agents import create_openai_functions_agent, AgentExecutor
-from langchain import hub
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder

@@ -236,7 +236,7 @@ class FinalComprehensiveScan:
 
         if "quality_issues" in self.results:
             q = self.results["quality_issues"]
-            print(f"\n  Code Quality Issues:")
+            print("\n  Code Quality Issues:")
             print(f"    • Bare excepts:     {q['bare_except']}")
             print(f"    • Magic numbers:    {q['magic_numbers']}")
             print(f"    • Long functions:   {q['long_functions']}")

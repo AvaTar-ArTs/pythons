@@ -1,20 +1,16 @@
 from pathlib import Path
 from selenium import webdriver
 import time
-import requests
 import urllib.request
 import cv2
 import imutils
 
 from bs4 import BeautifulSoup
 
-from io import BytesIO
-from io import StringIO
 import sys
 import os
 
 from wand.image import Image
-from wand.display import display
 
 # Optional
 import chromedriver_autoinstaller

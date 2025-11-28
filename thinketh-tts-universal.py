@@ -1,15 +1,13 @@
-import os, tempfile, json
+import os
 from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 from pydub import AudioSegment
 import requests
-import subprocess
 
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

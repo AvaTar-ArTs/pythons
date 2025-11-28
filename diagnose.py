@@ -5,7 +5,6 @@ __license__ = "MIT"
 
 from pathlib import Path
 import cProfile
-import os
 import pstats
 import random
 import sys
@@ -48,7 +47,7 @@ def diagnose(data):
             logger.info(
                 ("Found lxml version %s" % ".".join(map(str, etree.LXML_VERSION)))
             )
-        except ImportError as e:
+        except ImportError:
             logger.info("lxml is not installed or couldn't be imported.")
 
     if "html5lib" in basic_parsers:
@@ -56,7 +55,7 @@ def diagnose(data):
             import html5lib
 
             logger.info(("Found html5lib version %s" % html5lib.__version__))
-        except ImportError as e:
+        except ImportError:
             logger.info("html5lib is not installed or couldn't be imported.")
 
     if hasattr(data, "read"):
@@ -68,7 +67,7 @@ def diagnose(data):
         try:
             soup = BeautifulSoup(data, features=parser)
             success = True
-        except Exception as e:
+        except Exception:
             logger.info(("%s could not parse the markup." % parser))
             traceback.print_exc()
         if success:
@@ -221,7 +220,7 @@ def benchmark_parsers(num_elements=CONSTANT_100000):
             soup = BeautifulSoup(data, parser)
             b = time.time()
             success = True
-        except Exception as e:
+        except Exception:
             logger.info(("%s could not parse the markup." % parser))
             traceback.print_exc()
         if success:

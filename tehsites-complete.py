@@ -6,12 +6,10 @@ Processes the complete file list to merge differences and remove duplicates
 
 import os
 import hashlib
-import shutil
 from pathlib import Path
 from collections import defaultdict
 import json
 from datetime import datetime
-import re
 
 
 class CompleteFileProcessor:
@@ -264,7 +262,7 @@ def main():
         if len(report["errors"]) > 10:
             logger.info(f"  ... and {len(report['errors']) - 10} more errors")
 
-    logger.info(f"\nDetailed report saved to: /Users/steven/complete_file_report.json")
+    logger.info("\nDetailed report saved to: /Users/steven/complete_file_report.json")
 
     # Ask user if they want to proceed with deletion
     logger.info(Path("\n") + "=" * 60)

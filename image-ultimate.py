@@ -14,15 +14,13 @@ Version: 2.0
 """
 
 import os
-import sys
 import argparse
 import logging
 import csv
 import math
 import time
-from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional, Union
+from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
 

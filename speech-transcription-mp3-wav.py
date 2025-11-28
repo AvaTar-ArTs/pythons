@@ -106,7 +106,7 @@ for recording in mp3_folder:
                 logger.info("WaitTimeOutError", str(uErr))
                 time.sleep(5)
                 continue
-            except sr.RequestError as rErr:
+            except sr.RequestError:
                 time.sleep(5)
                 continue
 

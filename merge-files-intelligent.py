@@ -26,15 +26,13 @@ Features:
 
 import difflib
 import hashlib
-import json
 import os
 import shutil
 import subprocess
-import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Tuple
 
 
 # Color codes
@@ -446,12 +444,12 @@ class IntelligentMergeTool:
 
                 with open(diff_file, 'w', encoding='utf-8') as f:
                     f.write(f"DIFF ANALYSIS: {rel_path}\n")
-                    f.write(f"="*80 + Path("\n\n"))
+                    f.write("="*80 + Path("\n\n"))
                     f.write(f"Source: {best_source}\n")
                     f.write(f"Target: {target_file}\n\n")
                     f.write(f"Recommendation: {comparison['recommendation']}\n")
                     f.write(f"Reason: {comparison['reason']}\n\n")
-                    f.write(f"Diff Stats:\n")
+                    f.write("Diff Stats:\n")
                     for key, val in comparison['diff_stats'].items():
                         f.write(f"  {key}: {val}\n")
                     f.write(f"\n{'='*80}\n\n")
@@ -593,8 +591,8 @@ class IntelligentMergeTool:
 
             # Statistics
             f.write("## 📊 MERGE STATISTICS\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| **Files Analyzed** | {self.stats['files_analyzed']:,} |\n")
             f.write(f"| **Files Merged** | {self.stats['files_merged']:,} |\n")
             f.write(f"| **New Files Added** | {self.stats['new_files']:,} |\n")
@@ -646,7 +644,7 @@ class IntelligentMergeTool:
             f.write("## 🔄 ROLLBACK INSTRUCTIONS\n\n")
             f.write("If you need to undo the merge:\n\n")
             f.write("```bash\n")
-            f.write(f"# Restore from backup:\n")
+            f.write("# Restore from backup:\n")
             f.write(f"cp -R {self.backup_dir}/* {self.target_dir}/\n")
             f.write("```\n\n")
 

@@ -8,7 +8,6 @@ import json
 import csv
 from datetime import datetime
 from collections import defaultdict
-import os
 
 home_dir = Path.home()
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -25,7 +24,7 @@ print(f"📍 Location: {home_dir}")
 if MAX_DEPTH:
     print(f"📏 Max Depth: {MAX_DEPTH} levels")
 else:
-    print(f"📏 Max Depth: Unlimited")
+    print("📏 Max Depth: Unlimited")
 print("=" * 100)
 print()
 
@@ -80,7 +79,7 @@ def search_files(base_path, file_type, patterns):
                         'depth': depth,
                         'directory': str(item.parent)
                     })
-            except Exception as e:
+            except Exception:
                 pass
     return found_files
 
@@ -101,7 +100,7 @@ def search_directories(base_path, patterns):
                         'type': 'folder',
                         'depth': depth
                     })
-            except Exception as e:
+            except Exception:
                 pass
     return found_items
 
@@ -238,7 +237,7 @@ if SHOW_DEPTH_INFO:
     depth_stats = defaultdict(int)
     for mp3 in results['mp3']:
         depth_stats[mp3['depth']] += 1
-    print(f"   Depth distribution:")
+    print("   Depth distribution:")
     for depth in sorted(depth_stats.keys()):
         print(f"      Level {depth}: {depth_stats[depth]:,} files")
 print()
@@ -252,7 +251,7 @@ if SHOW_DEPTH_INFO:
     depth_stats = defaultdict(int)
     for item in results['discography']:
         depth_stats[item['depth']] += 1
-    print(f"   Depth distribution:")
+    print("   Depth distribution:")
     for depth in sorted(depth_stats.keys()):
         print(f"      Level {depth}: {depth_stats[depth]:,} items")
 print()
@@ -268,7 +267,7 @@ if SHOW_DEPTH_INFO:
     depth_stats = defaultdict(int)
     for prompt in results['prompts']:
         depth_stats[prompt['depth']] += 1
-    print(f"   Depth distribution:")
+    print("   Depth distribution:")
     for depth in sorted(depth_stats.keys()):
         print(f"      Level {depth}: {depth_stats[depth]:,} files")
 print()
@@ -284,7 +283,7 @@ if SHOW_DEPTH_INFO:
     depth_stats = defaultdict(int)
     for lyric in results['lyrics']:
         depth_stats[lyric['depth']] += 1
-    print(f"   Depth distribution:")
+    print("   Depth distribution:")
     for depth in sorted(depth_stats.keys()):
         print(f"      Level {depth}: {depth_stats[depth]:,} files")
 print()

@@ -25,7 +25,6 @@ def load_env_d():
 
 load_env_d()
 
-import os
 
 from openai import OpenAI
 

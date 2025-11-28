@@ -16,15 +16,9 @@ CONSTANT_1500 = 1500
 import openai
 
 from pathlib import Path
-import logging
 import os
-import sys
-import time
-from concurrent.futures import ThreadPoolExecutor
 
 from dotenv import load_dotenv
-from termcolor import colored
-from tqdm import tqdm
 
 # Error checking for OpenAI API key
 if not openai.api_key:

@@ -16,8 +16,8 @@ import json
 import logging
 import sys
 from pathlib import Path
-from typing import Dict, Any, List, Optional
-from dataclasses import dataclass, asdict
+from typing import Dict, Any, List
+from dataclasses import dataclass
 from datetime import datetime
 import re
 
@@ -124,7 +124,7 @@ class WorkflowEngine:
             except Exception as e:
                 logger.error(f"     ❌ Error: {e}")
                 if step.get('on_error') == 'continue':
-                    logger.info(f"     ⏭️  Continuing on error")
+                    logger.info("     ⏭️  Continuing on error")
                     continue
                 else:
                     raise
@@ -526,10 +526,10 @@ def main():
         print(f"\n📋 Workflow: {config['name']}")
         print(f"Version: {config['version']}")
         print(f"Description: {config['description']}")
-        print(f"\nInputs:")
+        print("\nInputs:")
         for inp in config['inputs']:
             print(f"  - {inp}")
-        print(f"\nSteps:")
+        print("\nSteps:")
         for i, step in enumerate(config['steps'], 1):
             print(f"  {i}. {step['name']} ({step['component']})")
 

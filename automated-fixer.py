@@ -44,7 +44,7 @@ class AutomatedFixer:
 
             return content, 0
 
-        except Exception as e:
+        except Exception:
             return None, 0
 
     def process_file(self, file_path: Path, dry_run=True):
@@ -82,7 +82,7 @@ class AutomatedFixer:
     def run(self, dry_run=True, limit=None):
         """Run automated fixes on all files."""
         logger.info(f"\n{'='*80}")
-        logger.info(f"🔧 AUTOMATED CODE QUALITY FIXER")
+        logger.info("🔧 AUTOMATED CODE QUALITY FIXER")
         logger.info(f"{'='*80}\n")
         logger.info(f"Target: {self.target_dir}")
         logger.info(f"Mode: {'DRY RUN' if dry_run else 'LIVE'}\n")
@@ -147,7 +147,7 @@ class AutomatedFixer:
             )
 
             if not dry_run:
-                f.write(f"## Backup\n\n")
+                f.write("## Backup\n\n")
                 f.write(f"Original files backed up to: `{self.backup_dir}`\n\n")
 
         logger.info(f"\n{'='*80}")

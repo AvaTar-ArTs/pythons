@@ -19,10 +19,8 @@ from __future__ import annotations
 import os
 import sys
 import json
-import time
 import math
 import argparse
-import logging
 from pathlib import Path
 from typing import Iterable, Tuple, Optional, List
 
@@ -35,7 +33,6 @@ from rich.console import Console
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

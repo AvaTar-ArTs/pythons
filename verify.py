@@ -28,7 +28,6 @@ and accessible in the global Python environment.
 
 import sys
 import importlib  # Replaced deprecated importlib
-from pathlib import Path
 
 # Color codes
 class Colors:

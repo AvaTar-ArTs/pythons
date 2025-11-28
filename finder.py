@@ -94,7 +94,7 @@ def find_duplicates(directory):
     logger.info("\n🔍 DUPLICATE ANALYSIS RESULTS")
     logger.info("=" * 60)
 
-    logger.info(f"\n📊 SUMMARY:")
+    logger.info("\n📊 SUMMARY:")
     logger.info(f"  • Total files analyzed: {len(jpg_files)}")
     logger.info(f"  • Exact duplicates (same content): {len(exact_duplicates)} groups")
     logger.info(
@@ -115,7 +115,7 @@ def find_duplicates(directory):
 
     # Report exact duplicates
     if exact_duplicates:
-        logger.info(f"\n🎯 EXACT DUPLICATES (Same Content):")
+        logger.info("\n🎯 EXACT DUPLICATES (Same Content):")
         logger.info("-" * 40)
         for i, (file_hash, files) in enumerate(exact_duplicates.items(), 1):
             logger.info(
@@ -126,7 +126,7 @@ def find_duplicates(directory):
 
     # Report name-based duplicates
     if name_duplicates:
-        logger.info(f"\n📝 POTENTIAL DUPLICATES (Similar Names):")
+        logger.info("\n📝 POTENTIAL DUPLICATES (Similar Names):")
         logger.info("-" * 40)
         for i, (base_name, files) in enumerate(name_duplicates.items(), 1):
             if i <= 10:  # Show first 10 groups
@@ -152,7 +152,7 @@ def find_duplicates(directory):
     with open(os.path.join(directory, "duplicate_analysis.json"), "w") as f:
         json.dump(results, f, indent=2)
 
-    logger.info(f"\n💾 Detailed results saved to: duplicate_analysis.json")
+    logger.info("\n💾 Detailed results saved to: duplicate_analysis.json")
 
     return results
 

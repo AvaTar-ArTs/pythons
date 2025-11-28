@@ -4,13 +4,11 @@ Intelligent Excel File Organizer
 Advanced content-awareness system for organizing Excel files based on semantic analysis
 """
 
-import os
 import shutil
 import pandas as pd
-import json
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Any, Tuple
+from typing import Dict, List, Any
 import re
 
 
@@ -585,7 +583,7 @@ def main():
     logger.info("Step 1: Analyzing Excel files...")
     analysis = organizer.analyze_excel_files()
 
-    logger.info(f"\n📊 Analysis Complete:")
+    logger.info("\n📊 Analysis Complete:")
     logger.info(
         f"   Files analyzed: {analysis['files_analyzed']}/{analysis['total_files']}"
     )
@@ -596,20 +594,20 @@ def main():
     logger.info("\nStep 2: Generating organization plan...")
     plan = organizer.generate_organization_plan()
 
-    logger.info(f"\n📋 Organization Plan:")
+    logger.info("\n📋 Organization Plan:")
     for category, files in plan["categories"].items():
         logger.info(f"   {category}: {len(files)} files")
 
     # Show recommendations
-    logger.info(f"\n💡 Recommendations:")
+    logger.info("\n💡 Recommendations:")
     for i, rec in enumerate(plan["recommendations"], 1):
         logger.info(f"   {i}. {rec}")
 
     # Execute organization (dry run first)
-    logger.info(f"\nStep 3: Executing organization (dry run)...")
+    logger.info("\nStep 3: Executing organization (dry run)...")
     results = organizer.execute_organization(dry_run=True)
 
-    logger.info(f"\n📈 Dry Run Results:")
+    logger.info("\n📈 Dry Run Results:")
     logger.info(f"   Files to move: {results['files_moved']}")
     logger.info(f"   Duplicates to handle: {results['duplicates_handled']}")
     logger.info(f"   Errors: {len(results['errors'])}")
@@ -622,21 +620,21 @@ def main():
         logger.info("\n🚀 Executing organization...")
         results = organizer.execute_organization(dry_run=False)
 
-        logger.info(f"\n✅ Organization Complete:")
+        logger.info("\n✅ Organization Complete:")
         logger.info(f"   Files moved: {results['files_moved']}")
         logger.info(f"   Duplicates handled: {results['duplicates_handled']}")
         logger.info(f"   Backups created: {results['backups_created']}")
         logger.info(f"   Errors: {len(results['errors'])}")
 
         if results["errors"]:
-            logger.info(f"\n❌ Errors encountered:")
+            logger.info("\n❌ Errors encountered:")
             for error in results["errors"]:
                 logger.info(f"   - {error}")
     else:
         logger.info("\n⏭️  Organization cancelled.")
 
     # Generate report
-    logger.info(f"\nStep 4: Generating report...")
+    logger.info("\nStep 4: Generating report...")
     report_path = organizer.generate_report()
     logger.info(f"📄 Report saved to: {report_path}")
 

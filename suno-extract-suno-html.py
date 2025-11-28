@@ -161,7 +161,7 @@ def extract_from_html(html_path: Path) -> List[Dict]:
     if songs:
         print(f"   ? Found {len(songs)} songs via HTML parsing")
     else:
-        print(f"   ??  No songs found in this file")
+        print("   ??  No songs found in this file")
     
     return songs
 
@@ -271,7 +271,7 @@ def main():
     
     # Print summary
     print(f"\n{'='*70}")
-    print(f"?? EXTRACTION COMPLETE!")
+    print("?? EXTRACTION COMPLETE!")
     print(f"{'='*70}")
     print(f"   ?? Files processed: {len(html_files)}")
     print(f"   ?? Total songs: {len(all_songs)}")

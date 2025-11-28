@@ -20,7 +20,6 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-from typing import Dict, List
 
 class Colors:
     CYAN = "\033[96m"
@@ -295,7 +294,7 @@ class ComprehensivePreservationSystem:
                             if preserved_count % 20 == 0:
                                 print(f"  Preserved {preserved_count} files from {archive_dir.name}...", end='\r')
                             
-                        except Exception as e:
+                        except Exception:
                             pass
             
             print(f"\n{Colors.GREEN}✅ Preserved {preserved_count} files from {archive_dir.name}{Colors.END}\n")
@@ -504,10 +503,10 @@ class ComprehensivePreservationSystem:
         print(f"  {self.preservation_root}\n")
         
         print(f"{Colors.BOLD}📝 Key Files:{Colors.END}")
-        print(f"  README.md - Overview and usage guide")
-        print(f"  MASTER_INVENTORY.csv - Complete file listing")
-        print(f"  PRESERVATION_SUMMARY.json - Statistics")
-        print(f"  CONTENT_INDEX.csv - Searchable index\n")
+        print("  README.md - Overview and usage guide")
+        print("  MASTER_INVENTORY.csv - Complete file listing")
+        print("  PRESERVATION_SUMMARY.json - Statistics")
+        print("  CONTENT_INDEX.csv - Searchable index\n")
         
         print(f"{Colors.BOLD}📂 Organized Folders:{Colors.END}")
         for type_name, directory in self.dirs.items():

@@ -10,7 +10,7 @@ import json
 import logging
 from pathlib import Path
 from datetime import datetime
-from typing import Optional, Dict, Any
+from typing import Dict, Any
 
 import whisper
 from moviepy.editor import VideoFileClip
@@ -22,7 +22,6 @@ import config
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():
@@ -369,8 +368,8 @@ class TranscriptionAnalyzer:
         try:
             summary_file = dirs["base_dir"] / f"{input_file.stem}_summary.txt"
             with open(summary_file, "w", encoding="utf-8") as f:
-                f.write(f"Transcription and Analysis Summary\n")
-                f.write(f"================================\n\n")
+                f.write("Transcription and Analysis Summary\n")
+                f.write("================================\n\n")
                 f.write(f"Original File: {input_file.name}\n")
                 f.write(f"Processed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
                 f.write(
@@ -396,7 +395,7 @@ class TranscriptionAnalyzer:
                         f"Duration: {self._format_timestamp(transcription_result['segments'][-1]['end'])}\n"
                     )
 
-                f.write(f"\nFiles Created:\n")
+                f.write("\nFiles Created:\n")
                 f.write(f"- Transcript: {input_file.stem}_transcript.txt\n")
                 f.write(f"- Timestamped: {input_file.stem}_timestamped.txt\n")
                 f.write(f"- Analysis: {input_file.stem}_analysis.json\n")
@@ -410,7 +409,7 @@ class TranscriptionAnalyzer:
                     and isinstance(analysis, dict)
                     and "chunking_info" in analysis
                 ):
-                    f.write(f"\nChunking Details:\n")
+                    f.write("\nChunking Details:\n")
                     f.write(f"- Original file was split into {chunk_count} chunks\n")
                     f.write(
                         f"- Each chunk max {config.MAX_CHUNK_DURATION_MINUTES} minutes\n"
@@ -418,7 +417,7 @@ class TranscriptionAnalyzer:
                     f.write(
                         f"- {config.CHUNK_OVERLAP_SECONDS}s overlap between chunks\n"
                     )
-                    f.write(f"- Chunks processed individually and merged\n")
+                    f.write("- Chunks processed individually and merged\n")
 
         except Exception as e:
             logger.warning(f"Could not create summary file: {e}")

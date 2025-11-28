@@ -6,9 +6,7 @@ Applies the upload script approach to ALL versioned files
 
 import difflib
 import json
-import shutil
 from pathlib import Path
-from datetime import datetime
 from collections import defaultdict
 
 
@@ -120,7 +118,7 @@ def main():
                 seen.append((filepath, purpose))
 
     # Display results by category
-    print(f"\n?? Analysis Complete:")
+    print("\n?? Analysis Complete:")
     print(f"  Files to keep & rename: {actions['stats']['files_kept']}")
     print(f"  Duplicates to delete: {actions['stats']['duplicates_deleted']}")
 

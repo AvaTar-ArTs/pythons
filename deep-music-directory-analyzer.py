@@ -26,8 +26,7 @@ import hashlib
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-from typing import Dict, List, Tuple
-import shutil
+from typing import Dict, List
 
 class Colors:
     CYAN = "\033[96m"
@@ -200,7 +199,7 @@ class DeepMusicDirectoryAnalyzer:
                         if content_type == 'AUDIOBOOK':
                             self.audiobook_files.append(file_info)
                         
-                    except Exception as e:
+                    except Exception:
                         pass
         
         except Exception as e:
@@ -392,10 +391,10 @@ class DeepMusicDirectoryAnalyzer:
         
         # 3. Empty/system directory cleanup
         print(f"\n{Colors.CYAN}🧹 CLEANUP SUGGESTIONS:{Colors.END}")
-        print(f"  • Remove _ARCHIVED_DIRECTORIES if only contains system files")
-        print(f"  • Consolidate audiobooks to single ~/Music/Audiobooks/ location")
-        print(f"  • Move useful content from Other_Content/Albums/AUDIOBOOKS to ~/Music/Audiobooks")
-        print(f"  • Archive _OLD_DIRECTORIES_ARCHIVED after extracting unique content")
+        print("  • Remove _ARCHIVED_DIRECTORIES if only contains system files")
+        print("  • Consolidate audiobooks to single ~/Music/Audiobooks/ location")
+        print("  • Move useful content from Other_Content/Albums/AUDIOBOOKS to ~/Music/Audiobooks")
+        print("  • Archive _OLD_DIRECTORIES_ARCHIVED after extracting unique content")
         
         return recommendations
     
@@ -508,8 +507,8 @@ class DeepMusicDirectoryAnalyzer:
             f.write("---\n\n")
             
             f.write("## 📊 Summary Statistics\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Total Files | {self.stats['total_files']:,} |\n")
             f.write(f"| Total Size | {self.stats['total_size'] / (1024**3):.2f} GB |\n")
             f.write(f"| Audio Files | {self.stats['total_audio']:,} |\n")

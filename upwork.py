@@ -2,12 +2,11 @@
 import asyncio
 import pandas as pd
 import argparse
-import os
 import json
 import re
 from datetime import datetime
 from pathlib import Path
-from playwright.async_api import async_playwright, TimeoutError as PWTimeout
+from playwright.async_api import async_playwright
 
 import logging
 

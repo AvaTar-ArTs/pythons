@@ -5,11 +5,8 @@ Generates emotional audiobook using OpenAI's text-to-speech with emotional deliv
 """
 
 import os
-import json
-import time
 from pathlib import Path
 from openai import OpenAI
-from datetime import datetime
 
 
 class OpenAITTSProducer:

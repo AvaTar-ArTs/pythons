@@ -1,6 +1,6 @@
 import numpy as np
 from PIL import Image, ImageOps
-from scipy.fftpack import dct, idct
+from scipy.fftpack import dct
 
 
 class QuantumMediaProcessor:

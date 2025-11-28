@@ -13,7 +13,6 @@ Structure:
   After:  Bite_in_the_Night/transcript.txt
 """
 
-import os
 import shutil
 from pathlib import Path
 from datetime import datetime

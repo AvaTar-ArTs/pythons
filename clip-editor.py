@@ -141,7 +141,7 @@ def create_intro(
         Slide(
             text=f"Top {numberOfClips} best {channel}'s clips of {time_period}",
             size=size,
-            fileName=f"intro",
+            fileName="intro",
             fontName=get_intro_font_name(),
             textRatio=get_intro_text_ratio(),
             customBg=get_intro_custom_bg(),

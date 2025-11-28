@@ -7,7 +7,6 @@ import os
 import random
 import re
 import sys
-import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -20,7 +19,6 @@ from tqdm import tqdm
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

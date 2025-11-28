@@ -7,24 +7,19 @@ into a comprehensive, feature-rich transcription tool.
 """
 
 import os
-import sys
 import logging
 import argparse
 import subprocess
 from pathlib import Path
-from typing import Dict, List, Optional, Union
-from concurrent.futures import ThreadPoolExecutor
-import time
+from typing import Dict, List, Optional
 
 from dotenv import load_dotenv
 from openai import OpenAI
-from termcolor import colored
 from tqdm import tqdm
 
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

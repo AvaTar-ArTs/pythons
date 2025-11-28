@@ -6,7 +6,6 @@ Compare CSV analysis results from both drives
 from pathlib import Path
 import csv
 import os
-import pandas as pd
 from collections import defaultdict
 
 
@@ -225,9 +224,9 @@ def save_analysis_report(analysis_results, recommendations):
                     ]
                 )
 
-    logger.info(f"\nAnalysis saved to:")
-    logger.info(f"  /Users/steven/drive_analysis_comparison.csv")
-    logger.info(f"  /Users/steven/duplicate_files_found.csv")
+    logger.info("\nAnalysis saved to:")
+    logger.info("  /Users/steven/drive_analysis_comparison.csv")
+    logger.info("  /Users/steven/duplicate_files_found.csv")
 
 
 def main():

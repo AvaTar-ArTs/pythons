@@ -1,6 +1,5 @@
 import glob
 import os
-from datetime import datetime
 
 import simplegallery.common as spg_common
 import simplegallery.media as spg_media

@@ -21,14 +21,11 @@ Features:
 ✨ Dry-run mode for review
 """
 
-import os
-import sys
 import ast
-import re
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List
 
 
 # Colors
@@ -213,7 +210,7 @@ class BareExceptFixer:
         """Scan directory and fix bare excepts"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🔧 SCANNING FOR BARE EXCEPT CLAUSES")
+        logger.info("🔧 SCANNING FOR BARE EXCEPT CLAUSES")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         python_files = list(self.target_dir.rglob("*.py"))
@@ -273,8 +270,8 @@ class BareExceptFixer:
 
             # Summary
             f.write("## 📊 FIX SUMMARY\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Files Scanned | {self.stats['files_scanned']:,} |\n")
             f.write(f"| Bare Excepts Found | {self.stats['bare_excepts_found']:,} |\n")
             f.write(f"| Files Fixed | {self.stats['files_fixed']:,} |\n")
@@ -369,14 +366,14 @@ class BareExceptFixer:
 
         # Generate report
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"✨ GENERATING REPORT")
+        logger.info("✨ GENERATING REPORT")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         self.generate_report()
 
         # Summary
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🚀 FIX COMPLETE!")
+        logger.info("🚀 FIX COMPLETE!")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.BOLD}📊 STATS:{Colors.END}\n")

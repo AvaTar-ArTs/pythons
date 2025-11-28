@@ -8,13 +8,10 @@ with CSV backup for safe rollback capability.
 import os
 import re
 import ast
-import json
 import csv
-import hashlib
 from pathlib import Path
 from collections import defaultdict, Counter
 from datetime import datetime
-import difflib
 
 
 class FlatIntelligentRenamer:
@@ -178,7 +175,7 @@ class FlatIntelligentRenamer:
         """Analyze all Python files and create intelligent renaming plan."""
         root_path = Path(root_path).expanduser()
 
-        logger.info(f"🐍 PYTHON INTELLIGENT RENAMER - FLAT STRUCTURE")
+        logger.info("🐍 PYTHON INTELLIGENT RENAMER - FLAT STRUCTURE")
         logger.info("=" * 80)
         logger.info(f"Root: {root_path}")
         logger.info(f"Max depth: {max_depth}")
@@ -502,7 +499,7 @@ class FlatIntelligentRenamer:
                 writer.writerow(row)
 
         logger.info(f"   CSV backup created with {len(self.backup_data)} entries")
-        logger.info(f"   This is your safety net for rollback!")
+        logger.info("   This is your safety net for rollback!")
 
     def generate_execution_script(self, output_file):
         """Generate execution script for the renaming."""
@@ -569,11 +566,11 @@ if __name__ == "__main__":
         # Make executable
         os.chmod(output_file, 0o755)
 
-        logger.info(f"   Execution script created and made executable")
+        logger.info("   Execution script created and made executable")
 
     def generate_report(self, python_files):
         """Generate comprehensive renaming report."""
-        logger.info(f"\n📊 INTELLIGENT RENAMING REPORT")
+        logger.info("\n📊 INTELLIGENT RENAMING REPORT")
         logger.info("=" * 80)
 
         # Statistics
@@ -581,7 +578,7 @@ if __name__ == "__main__":
         files_to_rename = len(self.renaming_plan)
         files_keeping_name = total_files - files_to_rename
 
-        logger.info(f"📈 RENAMING STATISTICS")
+        logger.info("📈 RENAMING STATISTICS")
         logger.info(f"   Total Python files: {total_files}")
         logger.info(f"   Files to rename: {files_to_rename}")
         logger.info(f"   Files keeping original name: {files_keeping_name}")
@@ -589,13 +586,13 @@ if __name__ == "__main__":
 
         # Project category breakdown
         category_counts = Counter(op["project_category"] for op in self.renaming_plan)
-        logger.info(f"\n📁 RENAMING BY PROJECT CATEGORY")
+        logger.info("\n📁 RENAMING BY PROJECT CATEGORY")
         for category, count in category_counts.most_common():
             logger.info(f"   {category.replace('_', ' ').title()}: {count} files")
 
         # Functionality breakdown
         functionality_counts = Counter(op["functionality"] for op in self.renaming_plan)
-        logger.info(f"\n⚙️  RENAMING BY FUNCTIONALITY")
+        logger.info("\n⚙️  RENAMING BY FUNCTIONALITY")
         for functionality, count in functionality_counts.most_common():
             logger.info(f"   {functionality.replace('_', ' ').title()}: {count} files")
 
@@ -606,13 +603,13 @@ if __name__ == "__main__":
         ]
         low_confidence = [op for op in self.renaming_plan if op["confidence"] < 0.3]
 
-        logger.info(f"\n🎯 CONFIDENCE ANALYSIS")
+        logger.info("\n🎯 CONFIDENCE ANALYSIS")
         logger.info(f"   High confidence (>0.7): {len(high_confidence)} files")
         logger.info(f"   Medium confidence (0.3-0.7): {len(medium_confidence)} files")
         logger.info(f"   Low confidence (<0.3): {len(low_confidence)} files")
 
         # Show some examples
-        logger.info(f"\n📝 RENAMING EXAMPLES")
+        logger.info("\n📝 RENAMING EXAMPLES")
         for i, op in enumerate(self.renaming_plan[:10], 1):
             logger.info(f"   {i}. {op['original_name']}")
             logger.info(f"      → {op['new_name']}")
@@ -647,21 +644,21 @@ def main():
     # Generate report
     renamer.generate_report(python_files)
 
-    logger.info(f"\n💾 BACKUP & SAFETY")
+    logger.info("\n💾 BACKUP & SAFETY")
     logger.info(f"   CSV backup: {csv_backup_file}")
     logger.info(f"   Execution script: {execution_script}")
-    logger.info(f"   🛡️  All changes can be rolled back using the CSV file!")
+    logger.info("   🛡️  All changes can be rolled back using the CSV file!")
 
-    logger.info(f"\n🚀 NEXT STEPS")
-    logger.info(f"   1. Review the CSV backup file")
-    logger.info(f"   2. Check the renaming examples above")
+    logger.info("\n🚀 NEXT STEPS")
+    logger.info("   1. Review the CSV backup file")
+    logger.info("   2. Check the renaming examples above")
     logger.info(
         f"   3. Run the execution script when ready: python3 {execution_script}"
     )
-    logger.info(f"   4. Use CSV file to rollback if needed")
+    logger.info("   4. Use CSV file to rollback if needed")
 
-    logger.info(f"\n✅ INTELLIGENT RENAMING PLAN COMPLETE!")
-    logger.info(f"   All files will stay in ~/Documents/python with intelligent names!")
+    logger.info("\n✅ INTELLIGENT RENAMING PLAN COMPLETE!")
+    logger.info("   All files will stay in ~/Documents/python with intelligent names!")
 
 
 if __name__ == "__main__":

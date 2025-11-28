@@ -10,8 +10,7 @@ import time
 import re
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
-import random
+from typing import Dict, List, Optional
 
 # Try to import different TTS libraries
 try:

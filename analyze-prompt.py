@@ -17,7 +17,9 @@ Design:
 The script uses lightweight heuristics and word-shape detection to avoid
 heavy dependencies while still yielding rich, cinematic prompts.
 """
-import argparse, sys, json, re
+import argparse
+import json
+import re
 from pathlib import Path
 
 MOOD_WORDS = {

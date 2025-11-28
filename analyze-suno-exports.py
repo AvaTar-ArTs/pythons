@@ -42,7 +42,7 @@ def analyze_directory(directory):
     print_header("🎵 SUNO EXPORT ANALYSIS")
 
     print(f"📁 Directory: {directory}")
-    print(f"📊 Files found:")
+    print("📊 Files found:")
     print(f"   CSV: {len(csv_files)}")
     print(f"   JSON: {len(json_files)}")
     print(f"   TXT: {len(txt_files)}")
@@ -121,14 +121,14 @@ def analyze_csv_files(csv_files):
         total = len(all_songs)
         unique = len(all_ids)
 
-        print(f"\n📊 STATISTICS:")
+        print("\n📊 STATISTICS:")
         print(f"   Total rows: {total}")
         print(f"   Unique IDs: {unique}")
         if total != unique:
             print(f"   {Colors.WARNING}⚠️  Duplicates: {total - unique}{Colors.ENDC}")
 
         # Field completeness
-        print(f"\n📋 FIELD COMPLETENESS:")
+        print("\n📋 FIELD COMPLETENESS:")
         critical_fields = ['id', 'title', 'audio', 'href']
         nice_to_have = ['author', 'tags', 'duration', 'lyrics', 'imageUrl']
 
@@ -151,7 +151,7 @@ def analyze_csv_files(csv_files):
 
         # Extraction methods
         if extraction_sources:
-            print(f"\n🔍 EXTRACTION METHODS:")
+            print("\n🔍 EXTRACTION METHODS:")
             for source, count in extraction_sources.most_common():
                 pct = (count / total * 100) if total > 0 else 0
                 print(f"   {source:20} {count:4} songs ({pct:5.1f}%)")
@@ -203,7 +203,7 @@ def analyze_csv_files(csv_files):
         print(f"\n   {Colors.BOLD}Overall Grade: {color}{grade} - {assessment}{Colors.ENDC}")
 
         # Recommendations
-        print(f"\n💡 RECOMMENDATIONS:")
+        print("\n💡 RECOMMENDATIONS:")
 
         if lyrics_pct < 50:
             print(f"   {Colors.WARNING}⚠️{Colors.ENDC}  Low lyrics coverage - try v3.0 extractor for better results")

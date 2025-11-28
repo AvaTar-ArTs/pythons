@@ -1,6 +1,5 @@
 import csv
 import os
-import re
 from datetime import datetime
 
 from PIL import Image, UnidentifiedImageError

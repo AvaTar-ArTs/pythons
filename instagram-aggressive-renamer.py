@@ -7,8 +7,6 @@ for the 6-level deep Python ecosystem
 
 import os
 import re
-import ast
-import json
 import csv
 from pathlib import Path
 from collections import defaultdict, Counter
@@ -354,29 +352,29 @@ if __name__ == "__main__":
             f.write(script_content)
 
         os.chmod(output_file, 0o755)
-        logger.info(f"   Execution script created and made executable")
+        logger.info("   Execution script created and made executable")
 
     def generate_report(self, renaming_plan):
         """Generate comprehensive report."""
-        logger.info(f"\n📊 GENERATING AGGRESSIVE RENAMING REPORT")
+        logger.info("\n📊 GENERATING AGGRESSIVE RENAMING REPORT")
         logger.info("=" * 80)
 
-        logger.info(f"📈 RENAMING STATISTICS")
+        logger.info("📈 RENAMING STATISTICS")
         logger.info(f"   Total files to rename: {len(renaming_plan)}")
 
         # Group by reason
         reason_counts = Counter(op["reason"] for op in renaming_plan)
-        logger.info(f"\n🔧 RENAMING REASONS")
+        logger.info("\n🔧 RENAMING REASONS")
         for reason, count in reason_counts.most_common():
             logger.info(f"   {reason}: {count} files")
 
         # Group by depth
         depth_counts = Counter(op["depth"] for op in renaming_plan)
-        logger.info(f"\n📁 RENAMING BY DEPTH")
+        logger.info("\n📁 RENAMING BY DEPTH")
         for depth in sorted(depth_counts.keys()):
             logger.info(f"   Depth {depth}: {depth_counts[depth]} files")
 
-        logger.info(f"\n📝 RENAMING EXAMPLES")
+        logger.info("\n📝 RENAMING EXAMPLES")
         for i, op in enumerate(renaming_plan[:15], 1):
             logger.info(f"   {i}. {op['original_name']}")
             logger.info(f"      → {op['suggested_name']}")
@@ -409,21 +407,21 @@ def main():
     # Generate report
     renamer.generate_report(renaming_plan)
 
-    logger.info(f"\n💾 BACKUP & SAFETY")
+    logger.info("\n💾 BACKUP & SAFETY")
     logger.info(f"   CSV backup: {csv_backup_file}")
     logger.info(f"   Execution script: {execution_script}")
-    logger.info(f"   🛡️  All changes can be rolled back using the CSV file!")
+    logger.info("   🛡️  All changes can be rolled back using the CSV file!")
 
-    logger.info(f"\n🚀 NEXT STEPS")
-    logger.info(f"   1. Review the renaming examples above")
-    logger.info(f"   2. Check the CSV backup file")
+    logger.info("\n🚀 NEXT STEPS")
+    logger.info("   1. Review the renaming examples above")
+    logger.info("   2. Check the CSV backup file")
     logger.info(
         f"   3. Run the execution script when ready: python3 {execution_script}"
     )
-    logger.info(f"   4. Use CSV file to rollback if needed")
+    logger.info("   4. Use CSV file to rollback if needed")
 
-    logger.info(f"\n✅ AGGRESSIVE RENAMING SYSTEM READY!")
-    logger.info(f"   This will actually suggest changes for your files!")
+    logger.info("\n✅ AGGRESSIVE RENAMING SYSTEM READY!")
+    logger.info("   This will actually suggest changes for your files!")
 
 
 if __name__ == "__main__":

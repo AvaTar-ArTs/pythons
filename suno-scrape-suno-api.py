@@ -279,7 +279,7 @@ Examples:
     
     # Print summary
     print(f"\n{'='*70}")
-    print(f"?? SCRAPING COMPLETE!")
+    print("?? SCRAPING COMPLETE!")
     print(f"{'='*70}")
     print(f"   ?? Total songs: {len(all_songs)}")
     print(f"   ?? CSV file: {args.output}")

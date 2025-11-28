@@ -39,10 +39,18 @@ Notes:
 """
 
 from __future__ import annotations
-import argparse, asyncio, csv, hashlib, json, os, re, sys, time, urllib.parse
-from dataclasses import dataclass, asdict
+import argparse
+import asyncio
+import csv
+import hashlib
+import json
+import re
+import sys
+import time
+import urllib.parse
+from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Optional
 from playwright.async_api import async_playwright
 
 # ---------- Utilities ----------

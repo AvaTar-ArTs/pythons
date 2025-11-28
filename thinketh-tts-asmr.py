@@ -4,11 +4,12 @@ ASMR whisper edition with cheerful-guide affect,
 ambient option, binaural widening, 320 kbps mastering.
 """
 
-import os, random
+import os
+import random
 from pathlib import Path
 from dotenv import load_dotenv
 from docx import Document
-from pydub import AudioSegment, effects
+from pydub import AudioSegment
 from utils.splitter import split_text
 from utils.mixer import overlay_ambience, binauralize, normalize_audio
 from utils.styles import apply_cheerful_guide_style
@@ -18,7 +19,6 @@ import requests
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

@@ -18,9 +18,9 @@ import json
 import asyncio
 import requests
 import openai
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List
 from anthropic import Anthropic
 
 
@@ -46,7 +46,7 @@ class MarketResearchPlatform:
     async def daily_scan(self, industry: str):
         """Complete daily market research scan"""
         logger.info("=" * 60)
-        logger.info(f"🔍 DAILY MARKET RESEARCH SCAN")
+        logger.info("🔍 DAILY MARKET RESEARCH SCAN")
         logger.info(f"Industry: {industry}")
         logger.info("=" * 60)
 
@@ -95,7 +95,7 @@ class MarketResearchPlatform:
 
         self._send_report(report, audio)
 
-        logger.info(f"\n✅ Daily scan complete!")
+        logger.info("\n✅ Daily scan complete!")
         return report
 
     async def scan_competitor_activity(self, industry: str) -> Dict:

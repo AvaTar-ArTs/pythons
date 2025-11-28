@@ -38,10 +38,9 @@ import html
 import json
 import os
 import re
-import sys
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 
 # ----------------------------- Config ---------------------------------------
 SKIP_DIRS = {

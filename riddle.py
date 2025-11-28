@@ -12,7 +12,6 @@ CONSTANT_150 = 150
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 import csv
-import os
 
 # Set up OpenAI API key
 

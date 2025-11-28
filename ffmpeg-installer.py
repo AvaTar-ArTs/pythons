@@ -119,7 +119,7 @@ def ffmpeg_install():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
-    except FileNotFoundError as e:
+    except FileNotFoundError:
         # Check if there's ffmpeg.exe in the current directory
         if os.path.exists("./ffmpeg.exe"):
             print(

@@ -9,7 +9,6 @@ import shutil
 import json
 from pathlib import Path
 from datetime import datetime
-import hashlib
 
 
 class AvaTarArTsBackupSystem:
@@ -532,7 +531,7 @@ if __name__ == "__main__":
         with open(log_file, "w") as f:
             json.dump(backup_log, f, indent=2)
 
-        logger.info(f"\n🎉 Backup Complete!")
+        logger.info("\n🎉 Backup Complete!")
         logger.info(f"📁 Backup Location: {self.backup_dir}")
         logger.info(f"📊 Total Projects: {len(manifests)}")
         logger.info(f"📄 Total Files: {sum(m['total_files'] for m in manifests)}")

@@ -4,8 +4,6 @@ AI Outputs Hub - Integration Script
 Automatically saves AI assistant outputs with smart categorization
 """
 
-import sys
-import os
 from auto_save_system import AIOutputsHub
 
 

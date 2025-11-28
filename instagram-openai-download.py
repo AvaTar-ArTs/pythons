@@ -30,7 +30,6 @@ def load_env_d():
 load_env_d()
 
 import csv
-import os
 
 import requests  # Make sure to install this package
 

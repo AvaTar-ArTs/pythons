@@ -26,7 +26,6 @@ Generates: MASTER_ANALYSIS_COMPLETE.md with all findings
 """
 
 import subprocess
-import sys
 from pathlib import Path
 from datetime import datetime
 
@@ -180,7 +179,7 @@ class MasterRunner:
         """Generate comprehensive master report"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"📊 GENERATING MASTER REPORT")
+        logger.info("📊 GENERATING MASTER REPORT")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -248,7 +247,7 @@ class MasterRunner:
 
         # Final summary
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🎊 MASTER ANALYSIS COMPLETE!")
+        logger.info("🎊 MASTER ANALYSIS COMPLETE!")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.BOLD}📊 RESULTS:{Colors.END}\n")

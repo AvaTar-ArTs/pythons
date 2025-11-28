@@ -15,9 +15,7 @@ import os
 import sys
 import json
 from pathlib import Path
-from collections import defaultdict
 from datetime import datetime
-import subprocess
 
 # Ensure we don't conflict with local openai.py
 sys.path.insert(0, str(Path.home() / ".local/share/mamba/envs/sales-empire/lib/python3.11/site-packages"))
@@ -220,7 +218,7 @@ Provide:
                 self.results['categorized'][category] = []
             self.results['categorized'][category].append(script_data)
         
-        print(f"\n? Analysis complete!")
+        print("\n? Analysis complete!")
         return self.results
     
     def generate_markdown_docs(self) -> str:
@@ -334,12 +332,12 @@ Provide:
         print("?? ANALYSIS COMPLETE")
         print("=" * 80)
         
-        print(f"\n?? Statistics:")
+        print("\n?? Statistics:")
         print(f"   Total Scripts: {self.results['analyzed']}")
         print(f"   Categories: {len(self.results['categorized'])}")
         print(f"   AI-Enhanced: {sum(1 for s in self.results['scripts'] if s.get('ai_analyzed', False))}")
         
-        print(f"\n?? Top Categories:")
+        print("\n?? Top Categories:")
         for category, scripts in sorted(self.results['categorized'].items(), key=lambda x: -len(x[1]))[:10]:
             emoji = self.get_category_emoji(category)
             print(f"   {emoji} {category}: {len(scripts)} scripts")
@@ -352,8 +350,8 @@ def main():
     print("?? AI-POWERED INTELLIGENT DOCUMENTATION BUILDER")
     print("=" * 80)
     print(f"?? Target: {base_dir}")
-    print(f"?? API Ecosystem: 26+ AI/ML services available")
-    print(f"?? Analysis: GPT-4 + Claude + Vector DBs")
+    print("?? API Ecosystem: 26+ AI/ML services available")
+    print("?? Analysis: GPT-4 + Claude + Vector DBs")
     print("=" * 80)
     
     builder = IntelligentDocsBuilder(base_dir)
@@ -365,7 +363,7 @@ def main():
     builder.save_documentation()
     
     print("\n? Documentation generation complete!")
-    print(f"?? Check: AI_INTELLIGENT_DOCS.md")
+    print("?? Check: AI_INTELLIGENT_DOCS.md")
 
 
 if __name__ == "__main__":

@@ -23,7 +23,6 @@ CONSTANT_1000 = 1000
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 import os
-import subprocess
 
 from dotenv import load_dotenv
 

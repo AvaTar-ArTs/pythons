@@ -53,10 +53,9 @@ import time
 import asyncio
 import requests
 import openai
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
-from anthropic import Anthropic
 from dataclasses import dataclass, asdict
 
 
@@ -274,7 +273,7 @@ Keep each summary to 2-3 sentences.""",
             if response.status_code == CONSTANT_200:
                 result = response.json()
                 digest = result["choices"][0]["message"]["content"]
-                logger.info(f"   ✅ Generated news digest")
+                logger.info("   ✅ Generated news digest")
 
                 return {"digest": digest, "sources": result.get("citations", [])}
 
@@ -349,7 +348,7 @@ Keep each summary to 2-3 sentences.""",
             for task in tasks["overdue"][:3]:
                 briefing += f"   • {task.title}\n"
 
-        briefing += f"""
+        briefing += """
 🎯 RECOMMENDED PRIORITIES
 """
         for i, suggestion in enumerate(tasks.get("suggestions", [])[:3], 1):
@@ -526,7 +525,7 @@ Keep it under CONSTANT_100 words.""",
                     # Extract action items with GPT-5
                     action_items = await self._extract_action_items(transcript)
 
-                    logger.info(f"   ✅ Transcription complete")
+                    logger.info("   ✅ Transcription complete")
                     logger.info(f"   📝 {len(action_items)} action items found")
 
                     return {

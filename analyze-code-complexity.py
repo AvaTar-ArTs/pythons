@@ -1,7 +1,6 @@
 import os
 import sys
 import ast
-import csv
 import json
 import subprocess
 import platform
@@ -509,7 +508,7 @@ if __name__ == "__main__":
     # Generate reports
     report_paths = analyzer.generate_reports(output_dir)
 
-    logger.info(f"\n✅ Analysis complete!")
+    logger.info("\n✅ Analysis complete!")
     logger.info(f"📊 HTML Report: {report_paths['html']}")
     logger.info(f"📈 Path Visualization: {report_paths['visualization']}")
     logger.info(f"📝 CSV Report: {report_paths['csv']}")

@@ -2,7 +2,6 @@ from pathlib import Path
 import gzip
 import json
 import os
-from concurrent.futures import ThreadPoolExecutor
 
 import requests
 from tqdm import tqdm

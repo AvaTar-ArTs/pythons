@@ -4,7 +4,6 @@ Script Version Analyzer
 Finds all versioned scripts and identifies which version to keep
 """
 
-import os
 import re
 from pathlib import Path
 from datetime import datetime
@@ -178,7 +177,7 @@ def main():
     with open(md_file, "w") as f:
         f.write("# Script Version Consolidation Plan\n\n")
         f.write(f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n")
-        f.write(f"## Summary\n\n")
+        f.write("## Summary\n\n")
         f.write(f"- **Script families with versions:** {len(multi_version_groups)}\n")
         f.write(
             f"- **Total versioned files:** {sum(len(v) for v in multi_version_groups.values())}\n"

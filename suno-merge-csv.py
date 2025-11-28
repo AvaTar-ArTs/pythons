@@ -13,13 +13,11 @@ Features:
 ✨ CSV log only (no heavy backups needed)
 """
 
-import os
 import csv
 import shutil
 import re
 from pathlib import Path
 from datetime import datetime
-from difflib import SequenceMatcher
 from collections import defaultdict
 
 class Colors:

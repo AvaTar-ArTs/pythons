@@ -30,11 +30,10 @@ import ast
 import json
 import os
 import re
-import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 
 # Color codes
@@ -443,7 +442,7 @@ Use clear, descriptive names following these patterns:
 
             result = json.loads(response.choices[0].message.content)
             return result
-        except Exception as e:
+        except Exception:
             return None
 
     def _query_gemini(self, prompt: str) -> Optional[Dict]:
@@ -461,7 +460,7 @@ Use clear, descriptive names following these patterns:
             json_match = re.search(r"\{.*\}", text, re.DOTALL)
             if json_match:
                 return json.loads(json_match.group())
-        except Exception as e:
+        except Exception:
             return None
 
         return None
@@ -478,7 +477,7 @@ Use clear, descriptive names following these patterns:
             )
 
             return json.loads(response.content[0].text)
-        except Exception as e:
+        except Exception:
             return None
 
     def generate_pattern_name(self, analysis: Dict) -> str:
@@ -787,7 +786,7 @@ Use clear, descriptive names following these patterns:
                     self.stats["files_skipped"] += 1
                     continue
                 elif choice == "e":
-                    new_name = input(f"Enter new name: ").strip()
+                    new_name = input("Enter new name: ").strip()
                     if new_name:
                         item["new_name"] = self.clean_filename(new_name)
                         item["new_path"] = item["old_path"].parent / item["new_name"]
@@ -833,8 +832,8 @@ Use clear, descriptive names following these patterns:
 
             # Statistics
             f.write("## 📊 STATISTICS\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| **Files Analyzed** | {self.stats['files_analyzed']:,} |\n")
             f.write(f"| **Files Renamed** | {self.stats['files_renamed']:,} |\n")
             f.write(f"| **Files Skipped** | {self.stats['files_skipped']:,} |\n")

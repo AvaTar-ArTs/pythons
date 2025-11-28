@@ -20,13 +20,11 @@ Improvements:
 ✨ Parent folder context awareness
 """
 
-import os
-import ast
 import re
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-from typing import Dict, List, Tuple, Optional
+from typing import List, Optional
 import csv
 
 
@@ -215,7 +213,7 @@ class SmartRenamer:
         """Scan and create rename plan"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🔍 SCANNING FILES")
+        logger.info("🔍 SCANNING FILES")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         # Find Python and text files
@@ -274,7 +272,7 @@ class SmartRenamer:
         """Execute rename plan"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🏷️ EXECUTING RENAMES")
+        logger.info("🏷️ EXECUTING RENAMES")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.YELLOW}Total: {len(self.rename_plan)}{Colors.END}")
@@ -341,8 +339,8 @@ class SmartRenamer:
                 f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
             )
             f.write("## 📊 SUMMARY\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Analyzed | {self.stats['analyzed']:,} |\n")
             f.write(f"| Renamed | {self.stats['renamed']:,} |\n")
             f.write(f"| Skipped | {self.stats['skipped']:,} |\n\n")
@@ -433,7 +431,7 @@ class SmartRenamer:
         self.generate_report()
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"✅ COMPLETE!")
+        logger.info("✅ COMPLETE!")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.BOLD}📊 STATS:{Colors.END}\n")

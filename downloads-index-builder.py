@@ -322,7 +322,7 @@ def main():
     with open(stats_file, "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
 
-    logger.info(f"\n🎉 Downloads Archive generation complete!")
+    logger.info("\n🎉 Downloads Archive generation complete!")
     logger.info(f"📁 Main page: {os.path.join(downloads_dir, 'index.html')}")
     logger.info(f"🔍 Search page: {os.path.join(downloads_dir, 'search.html')}")
     logger.info(f"📊 Stats file: {stats_file}")

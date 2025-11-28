@@ -4,10 +4,8 @@ Python Script Map Generator
 Creates a comprehensive map of all Python scripts and their locations
 """
 
-import os
 import json
 from pathlib import Path
-from collections import defaultdict
 
 
 class ScriptMapper:
@@ -197,7 +195,7 @@ class ScriptMapper:
                         f.write(f"     ... and {subinfo['count'] - 10} more scripts\n")
 
             # Functionality map
-            f.write(f"\n\n🔍 SCRIPTS BY FUNCTIONALITY:\n")
+            f.write("\n\n🔍 SCRIPTS BY FUNCTIONALITY:\n")
             f.write("-" * 35 + Path("\n"))
             for functionality, scripts in self.functionality_map.items():
                 f.write(f"\n{functionality.upper()}: {len(scripts)} scripts\n")
@@ -207,7 +205,7 @@ class ScriptMapper:
                     f.write(f"  ... and {len(scripts) - 10} more\n")
 
             # Quick reference
-            f.write(f"\n\n🚀 QUICK REFERENCE:\n")
+            f.write("\n\n🚀 QUICK REFERENCE:\n")
             f.write("-" * 20 + Path("\n"))
             f.write("To find a script:\n")
             f.write("1. Use find_script.py for interactive search\n")
@@ -234,11 +232,11 @@ class ScriptMapper:
                 f"  {category}: {info['total_scripts']} scripts - {info['description']}"
             )
 
-        logger.info(f"\n🔍 COMMON FUNCTIONALITIES:")
+        logger.info("\n🔍 COMMON FUNCTIONALITIES:")
         for functionality, scripts in self.functionality_map.items():
             logger.info(f"  {functionality}: {len(scripts)} scripts")
 
-        logger.info(f"\n💡 HOW TO FIND SCRIPTS:")
+        logger.info("\n💡 HOW TO FIND SCRIPTS:")
         logger.info("  1. Run: python find_script.py")
         logger.info("  2. Use: search <script_name>")
         logger.info("  3. Use: func <functionality>")

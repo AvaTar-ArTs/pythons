@@ -8,7 +8,6 @@ Date: October CONSTANT_2025
 Purpose: Export conversations from ChatGPT, Claude, Perplexity, and other platforms
 """
 
-import os
 import re
 import html
 import json
@@ -16,7 +15,7 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional, Any
 import argparse
-from collections import defaultdict, Counter
+from collections import defaultdict
 
 
 class UniversalConversationExporter:
@@ -733,7 +732,7 @@ format: {conversation.get('format', 'Unknown')}
                     except Exception as e:
                         logger.info(f"    ❌ Error exporting: {e}")
                 else:
-                    logger.info(f"    ⚠️  Could not parse conversation")
+                    logger.info("    ⚠️  Could not parse conversation")
 
         # Generate summary
         self._generate_summary_report()

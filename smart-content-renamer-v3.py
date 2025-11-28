@@ -21,7 +21,6 @@ Style Conventions:
 - Class files: ProperCase preserved (YouTubeBot.py)
 """
 
-import os
 import ast
 import re
 import json
@@ -29,9 +28,8 @@ import csv
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict, Counter
-from typing import Dict, List, Tuple, Optional, Set
+from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass, asdict
-import hashlib
 
 
 class Colors:
@@ -165,7 +163,7 @@ class CodeAnalyzer:
                 'quality_score': quality_score,
             }
             
-        except Exception as e:
+        except Exception:
             return CodeAnalyzer._fallback_analysis(filepath, '')
 
     @staticmethod
@@ -618,7 +616,7 @@ class SmartRenamerV3:
         """Scan directory and analyze all files"""
         
         print(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        print(f"?? ANALYZING FILES")
+        print("?? ANALYZING FILES")
         print(f"{'='*80}{Colors.END}\n")
         
         # Find files
@@ -714,8 +712,8 @@ class SmartRenamerV3:
             
             # Summary
             f.write("## ?? SUMMARY\n\n")
-            f.write(f"| Metric | Count |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Count |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Files Analyzed | {self.stats['analyzed']:,} |\n")
             f.write(f"| Files Needing Rename | {sum(1 for a in self.analyses if a.needs_rename):,} |\n")
             f.write(f"| Potential Duplicates | {self.stats['duplicates_found']:,} |\n")
@@ -764,7 +762,7 @@ class SmartRenamerV3:
                 if a.duplicates:
                     f.write(f"{a.old_name}\n")
                     f.write(f"  Purpose: {a.purpose}\n")
-                    f.write(f"  Similar to:\n")
+                    f.write("  Similar to:\n")
                     for dup in a.duplicates:
                         f.write(f"    - {dup}\n")
                     f.write("\n")
@@ -777,7 +775,7 @@ class SmartRenamerV3:
             return
         
         print(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        print(f"??? EXECUTING RENAMES")
+        print("??? EXECUTING RENAMES")
         print(f"{'='*80}{Colors.END}\n")
         
         renames_to_do = [a for a in self.analyses if a.needs_rename]
@@ -837,7 +835,7 @@ class SmartRenamerV3:
         
         # Final summary
         print(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        print(f"? COMPLETE!")
+        print("? COMPLETE!")
         print(f"{'='*80}{Colors.END}\n")
         
         print(f"{Colors.BOLD}?? FINAL STATS:{Colors.END}\n")

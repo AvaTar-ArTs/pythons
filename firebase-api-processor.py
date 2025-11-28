@@ -5,20 +5,17 @@ import time  # line:22
 import webbrowser  # line:27
 from multiprocessing import Process  # line:4
 from os import _exit  # line:25
-from os import path  # line:20
 from sys import exit  # line:24
 
 import firebase_admin  # line:29
 import requests  # line:21
 from about import about_msg  # line:5
-from colorama import Back, Fore, Style  # line:3
+from colorama import Fore, Style  # line:3
 from dotenv import load_dotenv  # line:33
 from firebase_admin import credentials  # line:30
 from firebase_admin import db  # line:31
 from firebase_admin import firestore  # line:32
 from help import help_msg  # line:6
-from libs.animation import animation_bar  # line:10
-from libs.animation import colorText  # line:7
 from libs.animation import load_animation  # line:9
 from libs.animation import starting_bot  # line:8
 from libs.attack import report_profile_attack  # line:12
@@ -37,7 +34,6 @@ import logging
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

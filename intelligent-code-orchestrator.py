@@ -19,7 +19,7 @@ import ast
 import json
 import logging
 import asyncio
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Any
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv

@@ -5,7 +5,6 @@ Uses OpenAI GPT-4 to intelligently analyze and document Python scripts
 """
 
 import os
-import sys
 from pathlib import Path
 from dotenv import load_dotenv
 import anthropic

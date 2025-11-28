@@ -5,10 +5,8 @@ Analyzes CSV file inventory and provides intelligent deduplication recommendatio
 """
 
 import pandas as pd
-import hashlib
-import os
 import re
-from collections import defaultdict, Counter
+from collections import defaultdict
 from pathlib import Path
 import json
 from datetime import datetime

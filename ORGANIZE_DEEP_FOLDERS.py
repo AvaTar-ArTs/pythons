@@ -5,7 +5,6 @@ Identifies user-created folders (not git repos/archives) and suggests flattening
 """
 
 from pathlib import Path
-from collections import defaultdict
 import json
 import shutil
 from datetime import datetime

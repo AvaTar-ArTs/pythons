@@ -29,9 +29,8 @@ import glob
 import subprocess
 import json
 from pathlib import Path
-from typing import List, Tuple, Optional, Dict, Any
+from typing import List, Tuple, Dict, Any
 import logging
-from datetime import datetime
 
 # Configure logging
 logging.basicConfig(
@@ -688,7 +687,7 @@ def main():
     logger.info(f"Total directories found: {len(directories_with_images)}")
 
     if error_count > 0:
-        logger.warning(f"Some galleries failed to process. Check the log for details.")
+        logger.warning("Some galleries failed to process. Check the log for details.")
         sys.exit(1)
     else:
         logger.info("All galleries processed successfully!")

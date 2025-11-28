@@ -4,7 +4,6 @@ Focused analysis of MP3 collection, discography, prompts, lyrics, and duplicates
 """
 
 from pathlib import Path
-import json
 import csv
 from datetime import datetime
 from collections import defaultdict

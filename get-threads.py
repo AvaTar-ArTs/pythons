@@ -3,13 +3,12 @@ import random
 
 import praw
 from dotenv import load_dotenv
-from utils.console import print_markdown, print_step, print_substep
+from utils.console import print_step, print_substep
 
 
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():
@@ -52,7 +51,7 @@ def get_askreddit_threads():
                 }
             )
 
-    except AttributeError as e:
+    except AttributeError:
         pass
     print_substep("Received AskReddit threads Successfully.", style="bold green")
     return content

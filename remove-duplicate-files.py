@@ -1,6 +1,5 @@
 import csv
 import hashlib
-import os
 from collections import defaultdict
 
 import pandas as pd

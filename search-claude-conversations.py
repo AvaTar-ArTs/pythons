@@ -150,7 +150,7 @@ def search_by_date(query, filter_type):
                 }
             )
 
-        except Exception as e:
+        except Exception:
             continue
 
     if not results:

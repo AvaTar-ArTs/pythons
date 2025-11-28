@@ -88,7 +88,7 @@ def DB(db_base):
 ## Пожертвование.
 def donate():
     logger.info("")
-    console.print(Panel(f"""[cyan]
+    console.print(Panel("""[cyan]
 ╭Donate/Buy:
 ├──ЮMoney:: [white]CONSTANT_4100111364257544[/white]
 ├──Сбер_карта:: [white]CONSTANT_2202208013277075[/white]

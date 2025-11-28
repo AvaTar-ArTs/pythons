@@ -6,7 +6,7 @@ Specialized expert for system design and architecture analysis.
 
 import sys
 from pathlib import Path
-from typing import Dict, List, Set
+from typing import Dict, List
 import ast
 import json
 from collections import defaultdict

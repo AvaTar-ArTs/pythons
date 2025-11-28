@@ -6,16 +6,12 @@ Automated system to analyze Python projects and generate SEO-optimized
 Medium articles with trending content and professional formatting.
 """
 
-import os
-import sys
 import json
 import csv
 import re
-import hashlib
-import math
 from pathlib import Path
 from datetime import datetime
-from collections import Counter, defaultdict
+from collections import defaultdict
 import subprocess
 
 
@@ -1060,7 +1056,7 @@ def main():
     logger.info("🤖 Medium Article Automation Maker")
     logger.info("=" * 50)
     logger.info(f"📁 Analyzing folder: {python_folder}")
-    logger.info(f"📊 Looking for Python projects and files...")
+    logger.info("📊 Looking for Python projects and files...")
 
     # Create automation instance
     automation = MediumArticleAutomation(python_folder)
@@ -1068,7 +1064,7 @@ def main():
     # Run the complete automation
     results = automation.run_automation()
 
-    logger.info(f"\n✅ Automation complete!")
+    logger.info("\n✅ Automation complete!")
     logger.info(f"📄 Article: {results['html_file']}")
     logger.info(f"📊 Data: {results['json_file']}")
     logger.info(f"📈 Metrics: {results['csv_file']}")

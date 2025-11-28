@@ -110,7 +110,7 @@ print()
 if loose_mp3s:
     print("🎵 MUSIC:")
     print(f"  - Create 'Loose_MP3s/' folder for {len(loose_mp3s)} loose MP3 files")
-    print(f"  - Move analysis scripts to '_scripts/' folder")
+    print("  - Move analysis scripts to '_scripts/' folder")
     print()
 
 # Movies organization

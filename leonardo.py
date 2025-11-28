@@ -23,7 +23,11 @@ NOTE: Set your API key in your shell: export LEONARDO_API_KEY=sk-...
 Docs: https://docs.leonardo.ai/reference
 """
 from __future__ import annotations
-import argparse, base64, json, os, sys, time
+import argparse
+import json
+import os
+import sys
+import time
 from pathlib import Path
 from typing import Optional
 import requests

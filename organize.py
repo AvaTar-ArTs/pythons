@@ -4,9 +4,6 @@ AI Outputs Hub - Auto-Organize Dry Run
 Shows what auto-organize would do without making changes
 """
 
-import os
-import json
-import re
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -271,7 +268,7 @@ class AutoOrganizeDryRun:
         duplicates = self.find_duplicates()
         if duplicates:
             for dup in duplicates:
-                logger.info(f"⚠️  Duplicate found:")
+                logger.info("⚠️  Duplicate found:")
                 logger.info(f"   Original: {dup['original']}")
                 logger.info(f"   Duplicate: {dup['duplicate']}")
                 logger.info(f"   Size: {dup['size']:,} bytes")

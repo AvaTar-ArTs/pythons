@@ -13,7 +13,6 @@ import re
 import ast
 from pathlib import Path
 import csv
-import json
 from collections import defaultdict
 
 class DeepContentAnalyzer:
@@ -252,10 +251,10 @@ if __name__ == "__main__":
 
     results = analyzer.analyze_all()
 
-    print(f"\n📝 Saving reports...")
+    print("\n📝 Saving reports...")
     csv_path, summary_path = analyzer.save_reports(results)
 
-    print(f"\n✅ Analysis complete!")
+    print("\n✅ Analysis complete!")
     print(f"📄 CSV: {csv_path}")
     print(f"📄 Summary: {summary_path}")
 
@@ -265,6 +264,6 @@ if __name__ == "__main__":
         if not r.get('error'):
             by_cat[r.get('category', 'Unknown')] += 1
 
-    print(f"\n📊 TOP CATEGORIES:")
+    print("\n📊 TOP CATEGORIES:")
     for cat, count in sorted(by_cat.items(), key=lambda x: x[1], reverse=True)[:15]:
         print(f"  {count:3d} files | {cat}")

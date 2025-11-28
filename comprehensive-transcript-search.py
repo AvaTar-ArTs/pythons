@@ -8,7 +8,6 @@ Search for transcript/lyric files by:
 3. Home directory + Volumes
 """
 
-import os
 import subprocess
 from pathlib import Path
 from datetime import datetime
@@ -126,7 +125,7 @@ class ComprehensiveTranscriptSearch:
         
         all_content_files = transcript_files + lyric_files
         
-        print(f"Found in nocTurneMeLoDieS:")
+        print("Found in nocTurneMeLoDieS:")
         print(f"  Transcript files: {len(transcript_files)}")
         print(f"  Lyric files: {len(lyric_files)}")
         print(f"  Total: {len(all_content_files)}\n")

@@ -1,4 +1,3 @@
-import sys
 
 from modules.clipEditor import Slide
 from modules.configHandler import *
@@ -66,7 +65,7 @@ def create_intro(size, numberOfClips=10, channel="channel", time="all"):
         Slide(
             text=f"Top {numberOfClips} best {channel}'s clips of {time_period}",
             size=size,
-            file_name=f"intro",
+            file_name="intro",
             font_name=get_intro_font_name(),
             textRatio=get_intro_text_ratio(),
             customBg=get_intro_custom_bg(),

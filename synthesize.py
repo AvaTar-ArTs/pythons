@@ -6,18 +6,13 @@ A comprehensive TTS system for James Allen's classic book with actual content fr
 
 import os
 import sys
-import json
-import time
-import re
 from pathlib import Path
-from typing import Dict, List, Optional
 import requests
 from dotenv import load_dotenv
 
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

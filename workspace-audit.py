@@ -4,8 +4,6 @@ Comprehensive Analysis of Claude Directory
 Analyzes structure, duplicates, usage patterns, and organization
 """
 
-import os
-import json
 import hashlib
 from pathlib import Path
 from collections import defaultdict

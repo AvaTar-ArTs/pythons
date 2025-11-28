@@ -34,7 +34,6 @@ Simplify File Organizer - Execution Script
 Generated: CONSTANT_2025-10-28 02:24:14
 """
 
-import os
 import shutil
 from pathlib import Path
 
@@ -74,7 +73,7 @@ def execute_organization():
             
             # Rename file
             old_path.rename(new_path)
-            logger.info(f"     ✅ Success")
+            logger.info("     ✅ Success")
         except Exception as e:
             logger.info(f"     ❌ Error: {e}")
     
@@ -97,15 +96,15 @@ def execute_organization():
             
             # Move file
             shutil.move(str(old_path), str(new_path))
-            logger.info(f"     ✅ Success")
+            logger.info("     ✅ Success")
         except Exception as e:
             logger.info(f"     ❌ Error: {e}")
     
-    logger.info(f"\n✅ Simplification & organization complete!")
+    logger.info("\n✅ Simplification & organization complete!")
     logger.info(f"📁 All files backed up to: {backup_dir}")
-    logger.info(f"🐍 Python files simplified and kept in place")
-    logger.info(f"📁 Other files organized by type")
-    logger.info(f"🔄 To rollback, use the backup directory")
+    logger.info("🐍 Python files simplified and kept in place")
+    logger.info("📁 Other files organized by type")
+    logger.info("🔄 To rollback, use the backup directory")
 
 if __name__ == "__main__":
     execute_organization()

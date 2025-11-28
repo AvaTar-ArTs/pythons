@@ -24,14 +24,11 @@ Features:
 """
 
 import ast
-import hashlib
 import json
-import os
-import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Set
 
 
 # Colors
@@ -379,8 +376,8 @@ class ParentFolderStructureAnalyzer:
 
             # Executive Summary
             f.write("## 📊 EXECUTIVE SUMMARY\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Total Folders | {self.stats['total_folders']:,} |\n")
             f.write(f"| Total Python Files | {self.stats['total_files']:,} |\n")
             f.write(f"| Maximum Depth | {self.stats['max_depth']} levels |\n")

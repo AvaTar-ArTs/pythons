@@ -15,9 +15,7 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict, Counter
-import csv
-import re
-from typing import Dict, List, Tuple, Set
+from typing import Dict, List
 
 
 class DownloadsOrganizer:
@@ -566,7 +564,7 @@ class DownloadsOrganizer:
         with open(report_file, "w") as f:
             f.write(report)
 
-        logger.info(f"\nAnalysis complete!")
+        logger.info("\nAnalysis complete!")
         logger.info(f"Report saved to: {report_file}")
         logger.info(f"Analysis data saved to: {analysis_file}")
         logger.info(f"Backup created at: {backup_path}")

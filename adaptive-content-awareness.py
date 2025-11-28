@@ -4,14 +4,12 @@ Adaptive Content-Aware Analysis System
 Dynamically adjusts analysis approach based on file content, context, and patterns
 """
 
-import os
 import json
 import re
 from pathlib import Path
-from collections import defaultdict, Counter
+from collections import Counter
 from datetime import datetime
-from typing import Dict, List, Any, Optional, Tuple
-import mimetypes
+from typing import Dict, List, Any, Optional
 
 
 class ContextDetector:
@@ -652,28 +650,28 @@ class AdaptiveAnalyzer:
 
         summary = self.results.get("summary", {})
 
-        logger.info(f"\n📊 Overview:")
+        logger.info("\n📊 Overview:")
         logger.info(f"  Files Analyzed: {summary.get('files_analyzed', 0)}")
         logger.info(f"  Total Insights: {summary.get('total_insights', 0)}")
 
-        logger.info(f"\n🎯 Strategies Used:")
+        logger.info("\n🎯 Strategies Used:")
         for strategy, count in summary.get("strategies", {}).items():
             logger.info(f"  {strategy}: {count} files")
 
-        logger.info(f"\n⚠️  Insights by Priority:")
+        logger.info("\n⚠️  Insights by Priority:")
         for priority, count in summary.get("by_priority", {}).items():
             logger.info(f"  {priority}: {count}")
 
-        logger.info(f"\n📋 Insights by Type:")
+        logger.info("\n📋 Insights by Type:")
         for itype, count in summary.get("by_type", {}).items():
             logger.info(f"  {itype}: {count}")
 
-        logger.info(f"\n💻 Languages Detected:")
+        logger.info("\n💻 Languages Detected:")
         for lang in summary.get("languages_detected", []):
             logger.info(f"  - {lang}")
 
         if summary.get("frameworks_detected"):
-            logger.info(f"\n🔧 Frameworks Detected:")
+            logger.info("\n🔧 Frameworks Detected:")
             for fw in summary.get("frameworks_detected", []):
                 logger.info(f"  - {fw}")
 
@@ -684,7 +682,7 @@ class AdaptiveAnalyzer:
             if i.get("priority") == "critical"
         ]
         if critical:
-            logger.info(f"\n🔴 CRITICAL Issues:")
+            logger.info("\n🔴 CRITICAL Issues:")
             for insight in critical[:5]:
                 logger.info(f"\n  {insight['title']}")
                 logger.info(f"    {insight['message']}")

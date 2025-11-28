@@ -4,7 +4,6 @@ Advanced Duplicate Remover - Multiple detection methods
 Uses content hashing, similarity analysis, and pattern matching
 """
 
-import os
 import csv
 import hashlib
 import difflib
@@ -189,7 +188,7 @@ class AdvancedDuplicateRemover:
                 if not dry_run:
                     try:
                         file_to_remove.unlink()
-                        logger.info(f"         ✅ Deleted successfully")
+                        logger.info("         ✅ Deleted successfully")
                         total_files_to_remove += 1
 
                         self.changes.append(
@@ -213,7 +212,7 @@ class AdvancedDuplicateRemover:
                             }
                         )
                 else:
-                    logger.info(f"         🔍 Dry run - would delete")
+                    logger.info("         🔍 Dry run - would delete")
                     total_files_to_remove += 1
                     self.changes.append(
                         {
@@ -242,7 +241,7 @@ class AdvancedDuplicateRemover:
                 if not dry_run:
                     try:
                         file_to_remove.unlink()
-                        logger.info(f"         ✅ Deleted successfully")
+                        logger.info("         ✅ Deleted successfully")
                         total_files_to_remove += 1
 
                         self.changes.append(
@@ -266,7 +265,7 @@ class AdvancedDuplicateRemover:
                             }
                         )
                 else:
-                    logger.info(f"         🔍 Dry run - would delete")
+                    logger.info("         🔍 Dry run - would delete")
                     total_files_to_remove += 1
                     self.changes.append(
                         {
@@ -293,7 +292,7 @@ class AdvancedDuplicateRemover:
                 if not dry_run:
                     try:
                         file_to_remove.unlink()
-                        logger.info(f"         ✅ Deleted successfully")
+                        logger.info("         ✅ Deleted successfully")
                         total_files_to_remove += 1
 
                         self.changes.append(
@@ -317,7 +316,7 @@ class AdvancedDuplicateRemover:
                             }
                         )
                 else:
-                    logger.info(f"         🔍 Dry run - would delete")
+                    logger.info("         🔍 Dry run - would delete")
                     total_files_to_remove += 1
                     self.changes.append(
                         {
@@ -366,7 +365,7 @@ def main():
     logger.info("=" * 70)
     results = remover.remove_duplicates(dry_run=True)
 
-    logger.info(f"\n📊 DRY RUN RESULTS:")
+    logger.info("\n📊 DRY RUN RESULTS:")
     logger.info(f"   Exact duplicate groups: {results['exact_groups']}")
     logger.info(f"   Similar file groups: {results['similar_groups']}")
     logger.info(f"   Pattern duplicate groups: {results['pattern_groups']}")
@@ -377,8 +376,8 @@ def main():
     csv_file = remover.save_changes_csv()
     logger.info(f"\n📄 Dry run results saved to: {csv_file}")
 
-    logger.info(f"\n💡 To execute the advanced duplicate removal, run:")
-    logger.info(f"   python3 advanced_duplicate_remover.py --execute")
+    logger.info("\n💡 To execute the advanced duplicate removal, run:")
+    logger.info("   python3 advanced_duplicate_remover.py --execute")
 
 
 if __name__ == "__main__":
@@ -391,7 +390,7 @@ if __name__ == "__main__":
         results = remover.remove_duplicates(dry_run=False)
         csv_file = remover.save_changes_csv()
 
-        logger.info(f"\n🎯 ADVANCED DUPLICATE REMOVAL COMPLETE!")
+        logger.info("\n🎯 ADVANCED DUPLICATE REMOVAL COMPLETE!")
         logger.info(f"   Exact duplicate groups: {results['exact_groups']}")
         logger.info(f"   Similar file groups: {results['similar_groups']}")
         logger.info(f"   Pattern duplicate groups: {results['pattern_groups']}")

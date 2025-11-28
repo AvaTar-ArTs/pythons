@@ -21,7 +21,6 @@ CONSTANT_300 = 300
 
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-import os
 
 from dotenv import load_dotenv
 

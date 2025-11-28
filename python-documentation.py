@@ -4,13 +4,10 @@ Python API Documentation Generator
 Automated API documentation system for discovered endpoints
 """
 
-import os
 import re
 import json
-import ast
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
 
 
 class APIDocumentationGenerator:
@@ -159,7 +156,7 @@ class APIDocumentationGenerator:
                 content = f.read()
 
             # Look for function docstrings
-            pattern = rf'def\s+\w+.*?:\s*"""(.*?)"""'
+            pattern = r'def\s+\w+.*?:\s*"""(.*?)"""'
             match = re.search(pattern, content, re.DOTALL)
             if match:
                 return match.group(1).strip()
@@ -381,7 +378,7 @@ logger.info(response.json())"""
 
             html += "        </div>"
 
-            html += f"""
+            html += """
         <h3>Examples</h3>
         <div class="examples">
 """
@@ -452,20 +449,20 @@ def main():
     # Discover and document APIs
     endpoints, documentation = generator.discover_and_document_apis()
 
-    logger.info(f"\n✅ API DOCUMENTATION GENERATION COMPLETE!")
+    logger.info("\n✅ API DOCUMENTATION GENERATION COMPLETE!")
     logger.info("=" * 80)
-    logger.info(f"📊 Documentation Summary:")
+    logger.info("📊 Documentation Summary:")
     logger.info(f"   Total endpoints documented: {len(endpoints)}")
-    logger.info(f"   Documentation formats: OpenAPI, HTML, Markdown")
-    logger.info(f"   Files generated: 3 documentation files")
+    logger.info("   Documentation formats: OpenAPI, HTML, Markdown")
+    logger.info("   Files generated: 3 documentation files")
 
-    logger.info(f"\n🎯 Next Steps:")
-    logger.info(f"   1. Review the generated documentation files")
-    logger.info(f"   2. Use OpenAPI file with Swagger UI")
-    logger.info(f"   3. Deploy HTML documentation to web server")
-    logger.info(f"   4. Update documentation as APIs evolve")
+    logger.info("\n🎯 Next Steps:")
+    logger.info("   1. Review the generated documentation files")
+    logger.info("   2. Use OpenAPI file with Swagger UI")
+    logger.info("   3. Deploy HTML documentation to web server")
+    logger.info("   4. Update documentation as APIs evolve")
 
-    logger.info(f"\n📋 All API endpoints have been automatically documented!")
+    logger.info("\n📋 All API endpoints have been automatically documented!")
 
 
 if __name__ == "__main__":

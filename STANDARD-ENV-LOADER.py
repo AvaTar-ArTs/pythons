@@ -6,7 +6,6 @@ Add this code to the top of your Python scripts
 
 from pathlib import Path
 from dotenv import load_dotenv
-import os
 
 # Load all .env files from ~/.env.d/
 env_dir = Path.home() / ".env.d"

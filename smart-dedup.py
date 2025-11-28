@@ -32,7 +32,6 @@ Features:
 import os
 import sys
 import hashlib
-import json
 import shutil
 from pathlib import Path
 from datetime import datetime
@@ -142,7 +141,7 @@ class SmartDeduplicator:
 
                             if file_count % CONSTANT_100 == 0:
                                 logger.info(f"{Colors.YELLOW}  Processed: {file_count} files...{Colors.END}", end='\r')
-                    except Exception as e:
+                    except Exception:
                         pass
 
         logger.info(f"\n{Colors.GREEN}{Emojis.CHECK} Scanned {file_count} files{Colors.END}")
@@ -334,8 +333,8 @@ class SmartDeduplicator:
 
             # Statistics
             f.write("## 📊 STATISTICS\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| **Groups Processed** | {self.stats['groups_processed']:,} |\n")
             f.write(f"| **Files Deleted** | {self.stats['files_deleted']:,} |\n")
             f.write(f"| **Files Kept** | {self.stats['files_kept']:,} |\n")

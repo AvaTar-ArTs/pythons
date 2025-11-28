@@ -12,20 +12,14 @@ import json
 import re
 import hashlib
 import math
-import statistics
 from pathlib import Path
-from datetime import datetime, timedelta
-from collections import defaultdict, Counter, deque
-from typing import Dict, List, Tuple, Optional, Union, Any
+from datetime import datetime
+from collections import defaultdict, Counter
+from typing import Dict, List, Tuple, Optional, Any
 import mimetypes
-import base64
-import zlib
-import pickle
 from dataclasses import dataclass, field
 from enum import Enum
-import threading
 import queue
-import time
 
 class ContentComplexity(Enum):
     SIMPLE = "simple"
@@ -1782,7 +1776,7 @@ class UltraAdvancedContentAnalyzer:
         else:
             self._analyze_files_sequential(files_to_analyze)
         
-        logger.info(f"\n✅ Ultra-advanced analysis complete!")
+        logger.info("\n✅ Ultra-advanced analysis complete!")
         logger.info(f"   Files analyzed: {len(self.content_analysis)}")
     
     def _analyze_files_sequential(self, files_to_analyze: List[Dict[str, Any]]):
@@ -1861,7 +1855,7 @@ def main():
     # Save reports
     json_file = analyzer.save_ultra_analysis_report()
     
-    logger.info(f"\n✅ Ultra-advanced content analysis complete!")
+    logger.info("\n✅ Ultra-advanced content analysis complete!")
     logger.info(f"📊 Check the generated file for detailed insights: {json_file}")
 
 if __name__ == "__main__":

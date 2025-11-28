@@ -13,7 +13,6 @@ from tqdm import tqdm
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():
@@ -54,7 +53,7 @@ ANALYSIS_DIR = os.path.join(AUDIO_DIR, "analysis")
 os.makedirs(TRANSCRIPT_DIR, exist_ok=True)
 os.makedirs(ANALYSIS_DIR, exist_ok=True)
 
-logger.info(colored(f"📁 Directories set up successfully!", "green"))
+logger.info(colored("📁 Directories set up successfully!", "green"))
 logger.info(f"🔍 AUDIO_DIR: {colored(AUDIO_DIR, 'cyan')}")
 logger.info(f"📝 TRANSCRIPT_DIR: {colored(TRANSCRIPT_DIR, 'cyan')}")
 logger.info(f"🔬 ANALYSIS_DIR: {colored(ANALYSIS_DIR, 'cyan')}")

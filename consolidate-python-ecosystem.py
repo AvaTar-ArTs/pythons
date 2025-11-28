@@ -28,13 +28,11 @@ Safety:
 ✅ Undo script generated
 """
 
-import os
 import hashlib
 import shutil
 import subprocess
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
 
 
 # Colors
@@ -85,7 +83,7 @@ class FinalConsolidator:
         """Build hash index of master directory"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🔍 SCANNING MASTER DIRECTORY")
+        logger.info("🔍 SCANNING MASTER DIRECTORY")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.CYAN}Master: {self.master_dir}{Colors.END}")
@@ -111,7 +109,7 @@ class FinalConsolidator:
         """Quick check of archive contents without full extraction"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"📦 CHECKING ARCHIVES (Quick Review)")
+        logger.info("📦 CHECKING ARCHIVES (Quick Review)")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         # Check python.zip
@@ -123,7 +121,7 @@ class FinalConsolidator:
             py_count = result.stdout.count(".py\n")
             logger.info(f"{Colors.CYAN}python.zip:{Colors.END}")
             logger.info(f"  Estimated .py files: ~{py_count}")
-            logger.info(f"  Size: 4.6 GB")
+            logger.info("  Size: 4.6 GB")
             logger.info(
                 f"  {Colors.YELLOW}Recommendation: Keep as backup (too large, likely old){Colors.END}\n"
             )
@@ -137,7 +135,7 @@ class FinalConsolidator:
             py_count = result.stdout.count(".py\n")
             logger.info(f"{Colors.CYAN}python 2.zip:{Colors.END}")
             logger.info(f"  Estimated .py files: ~{py_count}")
-            logger.info(f"  Size: 1.5 GB")
+            logger.info("  Size: 1.5 GB")
             logger.info(
                 f"  {Colors.YELLOW}Recommendation: Extract to check for unique files{Colors.END}\n"
             )
@@ -146,7 +144,7 @@ class FinalConsolidator:
         """Move documentation files into master"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"📚 MOVING DOCUMENTATION")
+        logger.info("📚 MOVING DOCUMENTATION")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         docs_dir = self.master_dir / "docs" / "consolidation_reports"
@@ -255,7 +253,7 @@ class FinalConsolidator:
 
         # Final summary
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🎊 CONSOLIDATION COMPLETE!")
+        logger.info("🎊 CONSOLIDATION COMPLETE!")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.BOLD}📊 FINAL STATUS:{Colors.END}\n")

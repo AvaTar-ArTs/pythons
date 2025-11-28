@@ -1,7 +1,6 @@
 from pathlib import Path
 import subprocess
 import csv
-import os
 
 import logging
 

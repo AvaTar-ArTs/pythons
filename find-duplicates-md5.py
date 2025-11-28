@@ -1,6 +1,5 @@
 import csv
 import hashlib
-import os
 import re
 from collections import defaultdict
 

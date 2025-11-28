@@ -5,8 +5,6 @@ Scans multiple directories for all Suno-related exports
 """
 
 from pathlib import Path
-from collections import defaultdict
-import json
 
 def scan_directory(path):
     """Scan a directory for Suno files"""
@@ -153,10 +151,10 @@ def main():
 
     largest_csv = all_csvs[0] if all_csvs else None
     if largest_csv:
-        print(f"\n   ✅ RECOMMENDED FILE TO PROCESS:")
+        print("\n   ✅ RECOMMENDED FILE TO PROCESS:")
         print(f"      {largest_csv['name']}")
         print(f"      Location: {largest_csv['directory']}")
-        print(f"\n   🔧 Process with:")
+        print("\n   🔧 Process with:")
         full_path = Path(largest_csv['directory']) / largest_csv['path']
         print(f"      python suno-data-processor.py \"{full_path}\"")
 
