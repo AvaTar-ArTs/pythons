@@ -8,7 +8,7 @@ Handles both flat and subfolder structures
 from pathlib import Path
 import shutil
 import argparse
-from typing import List, Tuple
+from typing import Tuple
 
 
 def organize_folder(folder_path: Path, dry_run: bool = False) -> Tuple[int, int]:
@@ -26,7 +26,7 @@ def organize_folder(folder_path: Path, dry_run: bool = False) -> Tuple[int, int]
     mp3s = list(folder_path.glob("*.mp3"))
     
     if not mp3s:
-        print(f"   ??  No MP3s found, skipping")
+        print("   ??  No MP3s found, skipping")
         return (0, 0)
     
     # Check for subfolder structure
@@ -109,11 +109,11 @@ def main():
     args = parser.parse_args()
     
     print(f"\n{'='*80}")
-    print(f"  ?? Album Companion Organizer")
+    print("  ?? Album Companion Organizer")
     print(f"{'='*80}")
     
     if args.dry_run:
-        print(f"\n??  DRY RUN MODE - No files will be moved\n")
+        print("\n??  DRY RUN MODE - No files will be moved\n")
     
     total_moved = 0
     total_skipped = 0
@@ -135,16 +135,16 @@ def main():
     
     # Summary
     print(f"\n{'='*80}")
-    print(f"  ? Organization Complete!")
+    print("  ? Organization Complete!")
     print(f"{'='*80}")
-    print(f"\n?? Summary:")
+    print("\n?? Summary:")
     print(f"   Folders processed: {processed_folders}")
     print(f"   Files moved: {total_moved}")
     print(f"   Files skipped: {total_skipped}")
     
     if args.dry_run:
-        print(f"\n??  This was a dry run - no files were actually moved")
-        print(f"   Run without --dry-run to apply changes")
+        print("\n??  This was a dry run - no files were actually moved")
+        print("   Run without --dry-run to apply changes")
     
     print(f"\n{'='*80}\n")
 

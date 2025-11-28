@@ -833,9 +833,9 @@ def main():
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, default=str)
     
-    print(f"\n✅ Analysis complete!")
+    print("\n✅ Analysis complete!")
     print(f"📄 Results saved to: {output_file}")
-    print(f"\n📊 Summary:")
+    print("\n📊 Summary:")
     print(f"   Files analyzed: {results['summary']['total_files_analyzed']}")
     print(f"   APIs found: {len(results['summary']['apis_integrated'])}")
     print(f"   Technologies: {len(results['summary']['technologies'])}")

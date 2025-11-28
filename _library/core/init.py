@@ -215,12 +215,12 @@ def create_gallery_json(gallery_root, remote_link, use_defaults=False):
 
         # Ask the user for the background image
         gallery_config["background_photo"] = input(
-            f'Which image should be used as background for the header? (default: "")\n'
+            'Which image should be used as background for the header? (default: "")\n'
         )
 
         # Ask the user for the site URL
         gallery_config["url"] = input(
-            f'What is your site URL? This is only needed to better show links to your galleries on social media (default: "")\n'
+            'What is your site URL? This is only needed to better show links to your galleries on social media (default: "")\n'
         )
 
         # Set the default background offset right after the background image

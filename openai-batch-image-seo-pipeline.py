@@ -2,7 +2,6 @@ import os
 import sys
 import csv
 import json
-import time
 import logging
 import argparse
 from datetime import datetime
@@ -18,7 +17,6 @@ from tqdm import tqdm
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

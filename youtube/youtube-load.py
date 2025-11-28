@@ -25,10 +25,7 @@ def load_env_d():
 load_env_d()
 
 import csv
-import requests
 import openai
-from PIL import Image
-from io import BytesIO
 
 # Initialize the OpenAI client
 client = openai(api_key=os.getenv("OPENAI_API_KEY"))

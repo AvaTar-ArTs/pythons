@@ -3,8 +3,6 @@ import csv
 import re
 from datetime import datetime
 from mutagen.mp4 import MP4
-from mutagen.easymp4 import EasyMP4
-import config  # Import the configuration
 
 import logging
 

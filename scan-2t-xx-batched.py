@@ -147,11 +147,11 @@ def main():
     print("\n" + "=" * 80)
     print("? BATCH SCAN COMPLETE")
     print("=" * 80)
-    print(f"\n?? Totals for this run:")
+    print("\n?? Totals for this run:")
     print(f"  ? Batches processed: {num_batches}")
     print(f"  ? Duplicates found: {total_dupes}")
     print(f"  ? Unique files: {total_unique}")
-    print(f"\n?? Results in: _analysis/2T-Xx_batch_*.csv")
+    print("\n?? Results in: _analysis/2T-Xx_batch_*.csv")
     print(f"\n??  Next: python scan-2t-xx-batched.py {start_batch + num_batches} 5")
 
 if __name__ == "__main__":

@@ -1,8 +1,7 @@
 import os
 import webbrowser
 
-from colorama import Back, Fore, Style
-from libs.logo import print_logo
+from colorama import Style
 from libs.utils import clearConsole
 
 import logging

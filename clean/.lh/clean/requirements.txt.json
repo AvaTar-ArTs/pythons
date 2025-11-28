@@ -1,0 +1,18 @@
+{
+    "sourceFile": "clean/requirements.txt",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1734069740315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1734069740315,
+            "name": "Commit-0",
+            "content": "mutagen==1.47.0\nopenai==1.53.0\nPillow==9\npython-dotenv==1.0.1\n"
+        }
+    ]
+}

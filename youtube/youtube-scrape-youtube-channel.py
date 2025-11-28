@@ -2,13 +2,8 @@ from pathlib import Path
 import datetime
 import sys
 import time
-import unittest
-import urllib.error
-import urllib.parse
-import urllib.request
 
 from selenium import webdriver
-from selenium.common.exceptions import InvalidArgumentException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait

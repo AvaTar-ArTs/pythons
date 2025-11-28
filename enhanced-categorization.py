@@ -5,9 +5,7 @@ Use your provided categories and code patterns to better organize scripts
 """
 
 import csv
-import json
 from pathlib import Path
-from collections import defaultdict
 from datetime import datetime
 
 class EnhancedCategorizer:
@@ -108,7 +106,7 @@ class EnhancedCategorizer:
             if not categorized:
                 uncategorized.append(filepath.name)
         
-        print(f"? Categorization complete")
+        print("? Categorization complete")
         print(f"  ? Categorized: {len(py_files) - len(uncategorized)}")
         print(f"  ? Uncategorized: {len(uncategorized)}")
         
@@ -191,7 +189,6 @@ class EnhancedCategorizer:
                 print(f"    ? {name}")
 
 def main():
-    from datetime import datetime
     
     categorizer = EnhancedCategorizer()
     

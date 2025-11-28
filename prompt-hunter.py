@@ -18,7 +18,7 @@ import os
 import re
 import json
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List
 from dataclasses import dataclass, field
 from collections import defaultdict
 import PyPDF2
@@ -129,7 +129,7 @@ class PromptHunterUltimate:
             if filepath.name in {'index.html', 'package.json', 'README.md'}:
                 self._analyze_site(filepath, content)
                 
-        except Exception as e:
+        except Exception:
             # Silent fail for unreadable files
             pass
     
@@ -509,7 +509,7 @@ def main():
         f.write(report)
     
     print("\n✅ Report saved: PROMPT_HUNTER_REPORT.md")
-    print(f"\n📊 FINAL STATS:")
+    print("\n📊 FINAL STATS:")
     print(f"   Files Scanned: {results['files_scanned']:,}")
     print(f"   Prompts Found: {len(hunter.prompts)}")
     print(f"   Nocturne Content: {len(hunter.nocturne_content)}")

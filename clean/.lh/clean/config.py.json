@@ -1,0 +1,30 @@
+{
+    "sourceFile": "clean/config.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1734069412184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734069421677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,2 @@\n # config.py\n-SOURCE_DIRECTORY = \"        r\".*\\/Movies\\/CapCut\\/.*\",  # Specific capcut directory\n-s\"\n+SOURCE_DIRECTORY = \"/Users/steven/Music/NocTurnE-meLoDieSs\"\n"
+                },
+                {
+                    "date": 1734069434656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n # config.py\n-SOURCE_DIRECTORY = \"/Users/steven/Music/NocTurnE-meLoDieSs\"\n+SOURCE_DIRECTORY = \"/Users/steven/Music/NocTurnE-meLoDieS\"\n"
+                },
+                {
+                    "date": 1734069457025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n # config.py\n SOURCE_DIRECTORY = \"/Users/steven/Music/NocTurnE-meLoDieS\"\n+\n"
+                }
+            ],
+            "date": 1734069412184,
+            "name": "Commit-0",
+            "content": "# config.py\nSOURCE_DIRECTORY = \"        r\".*\\/Movies\\/CapCut\\/.*\",  # Specific capcut directory\ns\"\n"
+        }
+    ]
+}

@@ -12,7 +12,6 @@ Features:
 ✨ Dry-run mode for safety
 """
 
-import os
 import csv
 import json
 import shutil

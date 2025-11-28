@@ -4,7 +4,6 @@ Comprehensive Script Analyzer
 Analyzes ALL Python files and outputs to CSV for batch renaming
 """
 
-import os
 import re
 import ast
 import csv
@@ -211,7 +210,7 @@ class ComprehensiveScriptAnalyzer:
         py_files = sorted([f for f in self.pythons_dir.glob('*.py') if f.is_file()])
         
         print(f"📊 Found {len(py_files)} Python files")
-        print(f"📝 Analyzing...\n")
+        print("📝 Analyzing...\n")
         
         for i, filepath in enumerate(py_files, 1):
             if i % 10 == 0:
@@ -243,7 +242,7 @@ class ComprehensiveScriptAnalyzer:
                 'size_kb': filepath.stat().st_size / 1024
             })
         
-        print(f"\n✅ Analysis complete!")
+        print("\n✅ Analysis complete!")
         
     def count_lines(self, filepath):
         """Count lines in file"""
@@ -296,11 +295,11 @@ class ComprehensiveScriptAnalyzer:
         print("📊 ANALYSIS SUMMARY")
         print("="*80)
         
-        print(f"\n📂 By Category:")
+        print("\n📂 By Category:")
         for cat, count in sorted(by_category.items(), key=lambda x: x[1], reverse=True):
             print(f"   {cat:30} {count:3} files")
         
-        print(f"\n🎯 By Action:")
+        print("\n🎯 By Action:")
         for action, count in sorted(by_action.items()):
             emoji = {'DELETE': '🗑️', 'KEEP': '✅', 'REVIEW': '📝', 'RENAME': '🏷️'}.get(action, '📌')
             print(f"   {emoji} {action:10} {count:3} files")
@@ -317,13 +316,13 @@ def main():
     csv_path = analyzer.save_csv()
     analyzer.print_summary()
     
-    print(f"\n💾 Results saved to:")
+    print("\n💾 Results saved to:")
     print(f"   {csv_path}")
-    print(f"\n💡 Next steps:")
+    print("\n💡 Next steps:")
     print(f"   1. Open CSV in spreadsheet: open {csv_path}")
-    print(f"   2. Review and edit 'suggested_name' column")
-    print(f"   3. Update 'action' column (RENAME/DELETE/KEEP)")
-    print(f"   4. Run batch rename script")
+    print("   2. Review and edit 'suggested_name' column")
+    print("   3. Update 'action' column (RENAME/DELETE/KEEP)")
+    print("   4. Run batch rename script")
 
 
 if __name__ == '__main__':

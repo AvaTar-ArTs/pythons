@@ -1,4 +1,3 @@
-from pathlib import Path
 from moviepy.editor import *
 from skimage.filters import gaussian
 

@@ -4,10 +4,8 @@ File Organization Script for AI Export Tools
 Implements the recommendations from the analysis report
 """
 
-import os
 import shutil
 from pathlib import Path
-import re
 from datetime import datetime
 
 
@@ -177,7 +175,7 @@ def main():
     # Organize files
     moved_count, archived_count = organize_files(base_dir)
 
-    logger.info(f"\nOrganization Complete!")
+    logger.info("\nOrganization Complete!")
     logger.info(f"✓ Files moved to organized structure: {moved_count}")
     logger.info(f"✓ Files archived: {archived_count}")
     logger.info(f"✓ Total files processed: {moved_count + archived_count}")

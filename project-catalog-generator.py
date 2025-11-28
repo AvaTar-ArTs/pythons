@@ -17,13 +17,11 @@ Creates:
 4. Deployment readiness assessment
 """
 
-import os
 import json
 from pathlib import Path
-from typing import Dict, List, Set, Any
+from typing import Dict, List, Any
 from dataclasses import dataclass, field
 from collections import defaultdict
-import subprocess
 
 
 @dataclass
@@ -321,7 +319,7 @@ class AdvancedSystemsCatalog:
         for system in self.systems:
             by_type[system.system_type].append(system)
         
-        print(f"\nSystems by Type:")
+        print("\nSystems by Type:")
         for sys_type, systems in sorted(by_type.items(), key=lambda x: len(x[1]), reverse=True):
             print(f"  • {sys_type}: {len(systems)}")
         
@@ -499,7 +497,7 @@ These systems are ready for immediate deployment:
         docs_path = Path('docs')
         if docs_path.exists():
             (docs_path / 'systems_catalog.rst').write_text(sphinx_content)
-            print(f"✅ Generated: docs/systems_catalog.rst")
+            print("✅ Generated: docs/systems_catalog.rst")
     
     def _generate_deployment_plan(self):
         """Generate deployment plan"""
@@ -521,7 +519,7 @@ These systems are ready for immediate deployment:
             lines.append(f"**Tech:** {', '.join(system.technologies)}")
             lines.append("")
             lines.append("**Deployment Steps:**")
-            lines.append(f"```bash")
+            lines.append("```bash")
             lines.append(f"cd {system.path}")
             
             if 'Next.js' in system.technologies:
@@ -537,7 +535,7 @@ These systems are ready for immediate deployment:
             lines.append("")
         
         Path("DEPLOYMENT_PLAN.md").write_text('\n'.join(lines))
-        print(f"✅ Generated: DEPLOYMENT_PLAN.md")
+        print("✅ Generated: DEPLOYMENT_PLAN.md")
 
 
 def main():

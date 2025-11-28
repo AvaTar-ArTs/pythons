@@ -25,7 +25,7 @@ import time
 import requests
 import openai
 from pathlib import Path
-from typing import Dict, List, Any, Optional
+from typing import Dict, Any, Optional
 from datetime import datetime
 
 
@@ -288,7 +288,7 @@ Format as JSON:
                                 video_file = self.output_dir / f"video_{timestamp}.mp4"
                                 video_file.write_bytes(video_response.content)
 
-                                logger.info(f"   ✅ Video generated")
+                                logger.info("   ✅ Video generated")
                                 logger.info(f"   📁 {video_file}")
 
                                 return video_file
@@ -411,7 +411,7 @@ Format as JSON:
                             srt_file = self.output_dir / f"captions_{timestamp}.srt"
                             srt_file.write_text(srt)
 
-                            logger.info(f"   ✅ Captions generated")
+                            logger.info("   ✅ Captions generated")
                             logger.info(f"   📁 {srt_file}")
 
                         return {

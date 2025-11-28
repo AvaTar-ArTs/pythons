@@ -24,7 +24,6 @@ def load_env_d():
 
 load_env_d()
 
-import os
 
 import pandas as pd  # This line is necessary to use pandas in your script
 import requests

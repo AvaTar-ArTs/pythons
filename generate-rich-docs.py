@@ -5,11 +5,8 @@ Creates engaging, narrative documentation with detailed descriptions
 Outputs: Detailed Markdown, Interactive HTML, CSV, and JSON
 """
 
-import json
-import csv
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict
 from collections import Counter
 
 class RichDocGenerator:
@@ -518,7 +515,7 @@ class RichDocGenerator:
         print("✅ Generated rich documentation:")
         print(f"   📄 Markdown: {md_path}")
         print(f"   🌐 HTML:     {html_path}")
-        print(f"\n💡 Open HTML in browser:")
+        print("\n💡 Open HTML in browser:")
         print(f"   open {html_path}")
         
         return md_path, html_path
@@ -739,6 +736,6 @@ if __name__ == '__main__':
     gen = generate_current_batch()
     md_path, html_path = gen.generate_all()
     
-    print(f"\n📖 View documentation:")
+    print("\n📖 View documentation:")
     print(f"   cat {md_path}")
     print(f"   open {html_path}")

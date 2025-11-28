@@ -40,7 +40,7 @@ class CodeReviewSystem:
     async def review_code(self, file_path: Path) -> Dict:
         """Comprehensive code review"""
         logger.info("=" * 60)
-        logger.info(f"💻 CODE REVIEW SYSTEM")
+        logger.info("💻 CODE REVIEW SYSTEM")
         logger.info(f"File: {file_path}")
         logger.info("=" * 60)
 

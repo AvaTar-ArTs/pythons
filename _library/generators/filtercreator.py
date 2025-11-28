@@ -1,13 +1,8 @@
 import os
 
 import database
-import scriptwrapper
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
+from PyQt5 import QtWidgets, uic
 from PyQt5.QtCore import *
-from PyQt5.QtCore import QDir, QObject, QPoint, QRect, Qt, QUrl, pyqtSignal
-from PyQt5.QtMultimedia import (QAbstractVideoBuffer, QAbstractVideoSurface,
-                                QMediaContent, QMediaPlayer, QMediaPlaylist,
-                                QVideoFrame, QVideoSurfaceFormat)
 from PyQt5.QtWidgets import *
 
 current_path = os.path.dirname(os.path.realpath(__file__))

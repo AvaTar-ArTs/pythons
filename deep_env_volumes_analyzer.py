@@ -17,12 +17,9 @@ import json
 import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Set
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from collections import defaultdict
-import hashlib
-import mimetypes
-import subprocess
 
 # Add parent directory for imports
 sys.path.insert(0, str(Path(__file__).parent))
@@ -589,7 +586,7 @@ class DeepEnvVolumesAnalyzer:
         with open(md_file, 'w') as f:
             f.write(self.generate_markdown_report(analysis, timestamp))
         
-        print(f"\n💾 Analysis saved:")
+        print("\n💾 Analysis saved:")
         print(f"   - JSON: {json_file.name}")
         print(f"   - Markdown: {md_file.name}")
     
@@ -644,7 +641,7 @@ class DeepEnvVolumesAnalyzer:
                     report += f"- {opp}\n"
                 report += "\n"
         
-        report += f"""
+        report += """
 ---
 
 ## 💾 VOLUMES ANALYSIS
@@ -712,7 +709,7 @@ class DeepEnvVolumesAnalyzer:
         for opp in analysis.opportunities:
             report += f"- {opp}\n"
         
-        report += f"""
+        report += """
 ---
 
 ## 📋 RECOMMENDATIONS
@@ -721,7 +718,7 @@ class DeepEnvVolumesAnalyzer:
         for rec in analysis.recommendations:
             report += f"- {rec}\n"
         
-        report += f"""
+        report += """
 ---
 
 ## 🔗 RESOURCE MAPPING
@@ -735,7 +732,7 @@ class DeepEnvVolumesAnalyzer:
                 report += f"- {category.title()}: {count:,} files\n"
             report += "\n"
         
-        report += f"""
+        report += """
 ---
 
 **Analysis Complete** ✅

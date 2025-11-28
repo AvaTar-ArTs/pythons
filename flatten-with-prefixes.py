@@ -192,7 +192,7 @@ if __name__ == "__main__":
     # Final flatten
     moved_files, errors, removed_dirs = final_flatten(root_directory)
 
-    logger.info(f"\nFinal flattening complete!")
+    logger.info("\nFinal flattening complete!")
     logger.info(f"Moved {len(moved_files)} files to root")
     logger.info(f"Removed {len(removed_dirs)} directories")
 
@@ -205,7 +205,7 @@ if __name__ == "__main__":
     logger.info("\nCreating final index...")
     index_path = create_final_index(root_directory)
 
-    logger.info(f"\n✅ FLATTENING COMPLETE!")
-    logger.info(f"All files are now in the root directory")
-    logger.info(f"All subdirectories have been removed")
+    logger.info("\n✅ FLATTENING COMPLETE!")
+    logger.info("All files are now in the root directory")
+    logger.info("All subdirectories have been removed")
     logger.info(f"Final index: {index_path}")

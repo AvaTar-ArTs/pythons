@@ -4,7 +4,6 @@ Robust Documents Analyzer
 Handles extremely long file paths and other edge cases.
 """
 
-import os
 import json
 import hashlib
 from pathlib import Path
@@ -25,7 +24,7 @@ class RobustDocumentsAnalyzer:
         """Safely perform file operations with error handling"""
         try:
             return operation(file_path)
-        except (OSError, UnicodeError, PermissionError) as e:
+        except (OSError, UnicodeError, PermissionError):
             self.error_files += 1
             if self.error_files % CONSTANT_1000 == 0:
                 logger.info(f"Skipped {self.error_files} files due to errors...")
@@ -394,16 +393,16 @@ class RobustDocumentsAnalyzer:
         with open(self.root_path / 'documents_analysis_report_robust.md', 'w') as f:
             f.write(report)
         
-        logger.info(f"Analysis saved to:")
-        logger.info(f"- documents_analysis_robust.json")
-        logger.info(f"- documents_analysis_report_robust.md")
+        logger.info("Analysis saved to:")
+        logger.info("- documents_analysis_robust.json")
+        logger.info("- documents_analysis_report_robust.md")
 
 def main():
     analyzer = RobustDocumentsAnalyzer(Path(str(Path.home()) + "/Documents"))
     analysis = analyzer.run_complete_analysis()
     analyzer.save_analysis()
     
-    logger.info(f"\nAnalysis Complete!")
+    logger.info("\nAnalysis Complete!")
     logger.info(f"Found {analysis['summary']['total_files']:,} files in {analysis['summary']['total_directories']:,} directories")
     logger.info(f"Total size: {analysis['summary']['total_size_gb']:.2f} GB")
     logger.info(f"Duplicate groups: {analysis['summary']['duplicate_groups']:,}")

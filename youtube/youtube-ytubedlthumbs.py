@@ -27,7 +27,6 @@ load_env_d()
 import pandas as pd  # This line is necessary to use pandas in your script
 from googleapiclient.discovery import build
 import requests
-import os
 
 # Initialize YouTube API
 api_key = os.getenv("ELEVENLABS_API_KEY")

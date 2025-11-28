@@ -8,13 +8,11 @@ Integrates with advanced_toolkit and deep_env_volumes_analyzer
 import os
 import json
 import ast
-import re
 import sys
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Any, Optional, Set
+from typing import Dict, List, Any, Optional
 from collections import defaultdict
-import mimetypes
 
 # Add paths for imports
 sys.path.insert(0, str(Path(__file__).parent))
@@ -332,7 +330,7 @@ class AdvancedBatchVolumeAnalyzer:
                 volume_data['directories'][rel_path] = dir_analysis
         
         # Step 4: File statistics
-        print(f"\n📊 Step 4: Collecting file statistics...")
+        print("\n📊 Step 4: Collecting file statistics...")
         for root, dirs, files in os.walk(volume):
             depth = len(Path(root).relative_to(volume).parts)
             if depth > max_depth:
@@ -363,7 +361,7 @@ class AdvancedBatchVolumeAnalyzer:
             'top_purposes': self._get_top_purposes(volume_data['python_scripts']),
         }
         
-        print(f"\n✅ Volume analysis complete!")
+        print("\n✅ Volume analysis complete!")
         print(f"   Total files: {volume_data['total_files']:,}")
         print(f"   Total size: {volume_data['total_size'] / (1024**3):.2f} GB")
         print(f"   Python scripts: {len(volume_data['python_scripts'])}")
@@ -545,10 +543,10 @@ def main():
         generate_report({'home': home_data}, report_file, analyzer.stats)
         
         print(f"📝 Report saved: {report_file}")
-        print(f"\n✅ Analysis complete!")
+        print("\n✅ Analysis complete!")
         
     except KeyboardInterrupt:
-        print(f"\n⚠️  Interrupted by user.")
+        print("\n⚠️  Interrupted by user.")
     except Exception as e:
         print(f"\n❌ Error: {e}")
         import traceback

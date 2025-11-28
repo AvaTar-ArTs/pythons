@@ -7,7 +7,7 @@ from os import _exit  # line:5
 
 import requests  # line:2
 from colorama import *  # line:3
-from colorama import Back, Fore, Style  # line:6
+from colorama import Fore, Style  # line:6
 from libs.animation import colorText  # line:9
 
 import logging

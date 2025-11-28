@@ -4,10 +4,8 @@ Content-Aware Chat Analysis Organizer
 Deep analyzes chat files to understand patterns and organize intelligently
 """
 
-import os
 import re
 import json
-import shutil
 from datetime import datetime
 from pathlib import Path
 import hashlib
@@ -553,7 +551,7 @@ class ContentAwareAnalyzer:
                     f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\\n\\n"
                 )
 
-                f.write(f"## Project Overview\\n")
+                f.write("## Project Overview\\n")
                 f.write(f"- **Files:** {len(files)}\\n")
                 f.write(f"- **Total Size:** {sum(f['size'] for f in files):,} bytes\\n")
                 f.write(
@@ -595,7 +593,7 @@ class ContentAwareAnalyzer:
                     f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\\n\\n"
                 )
 
-                f.write(f"## Category Overview\\n")
+                f.write("## Category Overview\\n")
                 f.write(f"- **Files:** {len(files)}\\n")
                 f.write(f"- **Total Size:** {sum(f['size'] for f in files):,} bytes\\n")
                 f.write(
@@ -651,7 +649,7 @@ class ContentAwareAnalyzer:
                     f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\\n\\n"
                 )
 
-                f.write(f"## Code Type Overview\\n")
+                f.write("## Code Type Overview\\n")
                 f.write(f"- **Total Blocks:** {stats['count']}\\n")
                 f.write(f"- **Total Size:** {stats['total_size']:,} bytes\\n")
                 f.write(f"- **Languages:** {', '.join(stats['languages'])}\\n")
@@ -755,9 +753,9 @@ class ContentAwareAnalyzer:
         self.generate_comprehensive_reports()
         self.export_analysis_data()
 
-        logger.info(f"\\n✅ Content-Aware Analysis Complete!")
+        logger.info("\\n✅ Content-Aware Analysis Complete!")
         logger.info(f"📁 Organized content saved to: {self.target_dir}")
-        logger.info(f"📋 Check MASTER_ANALYSIS_REPORT.md for overview")
+        logger.info("📋 Check MASTER_ANALYSIS_REPORT.md for overview")
 
 
 def main():

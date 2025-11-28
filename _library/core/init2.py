@@ -7,7 +7,6 @@ import json
 from shutil import copytree as copy_tree
 import pkg_resources
 import simplegallery.common as spg_common
-import simplegallery.logic.gallery_logic as gallery_logic
 
 # Constants
 CONSTANT_160 = 160
@@ -216,7 +215,7 @@ def create_gallery_json(gallery_root, remote_link, use_defaults=False):
 
         # Ask the user for the background image
         gallery_config["background_photo"] = input(
-            f'Which image should be used as background for the header? (default: "")\n'
+            'Which image should be used as background for the header? (default: "")\n'
         )
 
         # Ask the user for the site URL

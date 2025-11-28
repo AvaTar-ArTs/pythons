@@ -6,13 +6,11 @@ Analyzes volumes one at a time to avoid resource overload
 
 import os
 import json
-import ast
 import re
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 from collections import defaultdict
-import mimetypes
 
 try:
     from PIL import Image
@@ -97,7 +95,7 @@ class BatchVolumeAnalyzer:
                     })
         
         # Step 3: Count files
-        print(f"\n📊 Step 2: Counting files...")
+        print("\n📊 Step 2: Counting files...")
         for root, dirs, files in os.walk(volume):
             depth = len(Path(root).relative_to(volume).parts)
             if depth > max_depth:
@@ -120,7 +118,7 @@ class BatchVolumeAnalyzer:
         volume_data['technologies'] = sorted(list(volume_data['technologies']))
         volume_data['apis'] = sorted(list(volume_data['apis']))
         
-        print(f"\n✅ Volume analysis complete!")
+        print("\n✅ Volume analysis complete!")
         print(f"   Total files: {volume_data['total_files']:,}")
         print(f"   Total size: {volume_data['total_size'] / (1024**3):.2f} GB")
         print(f"   Projects found: {len(volume_data['projects'])}")
@@ -282,7 +280,7 @@ class BatchVolumeAnalyzer:
             self.stats['files_analyzed'] += 1
             return analysis
             
-        except Exception as e:
+        except Exception:
             return None
     
     def _analyze_python_quick(self, filepath: Path) -> Dict[str, Any]:
@@ -482,7 +480,7 @@ def main():
     generate_report(all_results, report_file, analyzer.stats)
     
     print(f"\n{'='*60}")
-    print(f"✅ COMPLETE ANALYSIS FINISHED")
+    print("✅ COMPLETE ANALYSIS FINISHED")
     print(f"{'='*60}")
     print(f"📄 Final JSON: {final_file}")
     print(f"📝 Markdown Report: {report_file}")

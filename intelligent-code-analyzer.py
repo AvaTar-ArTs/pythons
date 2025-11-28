@@ -7,9 +7,7 @@ intelligent patterns, architectural decisions, and content awareness.
 """
 
 import ast
-import re
 from pathlib import Path
-from collections import defaultdict, Counter
 from datetime import datetime
 
 
@@ -667,13 +665,13 @@ class DeepCodeAnalyzer:
         logger.info("🧠 DEEP CODE ANALYSIS - ADVANCED CONTENT-AWARE SYSTEM")
         logger.info("=" * 80)
 
-        logger.info(f"\n📊 METADATA:")
+        logger.info("\n📊 METADATA:")
         logger.info(f"   File: {analysis['metadata']['file_path']}")
         logger.info(f"   Size: {analysis['metadata']['file_size']:,} characters")
         logger.info(f"   Lines: {analysis['metadata']['line_count']:,}")
         logger.info(f"   Analyzed: {analysis['metadata']['analysis_timestamp']}")
 
-        logger.info(f"\n🧠 INTELLIGENT PATTERNS:")
+        logger.info("\n🧠 INTELLIGENT PATTERNS:")
         patterns = analysis["intelligent_patterns"]
         for category, items in patterns.items():
             if items:
@@ -685,7 +683,7 @@ class DeepCodeAnalyzer:
                 if len(items) > 3:
                     logger.info(f"      ... and {len(items) - 3} more")
 
-        logger.info(f"\n🏗️  ARCHITECTURE SOPHISTICATION:")
+        logger.info("\n🏗️  ARCHITECTURE SOPHISTICATION:")
         arch = analysis["architecture_sophistication"]
         for category, items in arch.items():
             if items:
@@ -695,7 +693,7 @@ class DeepCodeAnalyzer:
                 for item in items[:2]:  # Show first 2
                     logger.info(f"      • {item}")
 
-        logger.info(f"\n🔍 CONTENT AWARENESS DEPTH:")
+        logger.info("\n🔍 CONTENT AWARENESS DEPTH:")
         awareness = analysis["content_awareness_depth"]
         for category, items in awareness.items():
             if items:
@@ -705,7 +703,7 @@ class DeepCodeAnalyzer:
                 for item in items[:2]:  # Show first 2
                     logger.info(f"      • {item}")
 
-        logger.info(f"\n💼 BUSINESS LOGIC SOPHISTICATION:")
+        logger.info("\n💼 BUSINESS LOGIC SOPHISTICATION:")
         business = analysis["business_logic_sophistication"]
         for category, items in business.items():
             if items:
@@ -715,7 +713,7 @@ class DeepCodeAnalyzer:
                 for item in items[:2]:  # Show first 2
                     logger.info(f"      • {item}")
 
-        logger.info(f"\n🚀 TECHNICAL INNOVATIONS:")
+        logger.info("\n🚀 TECHNICAL INNOVATIONS:")
         innovations = analysis["technical_innovations"]
         for category, items in innovations.items():
             if items:
@@ -725,7 +723,7 @@ class DeepCodeAnalyzer:
                 for item in items[:2]:  # Show first 2
                     logger.info(f"      • {item}")
 
-        logger.info(f"\n💎 DEEP INSIGHTS:")
+        logger.info("\n💎 DEEP INSIGHTS:")
         insights = analysis["deep_insights"]
         logger.info(
             f"   Content Awareness Level: {insights['content_awareness_level']}"
@@ -738,27 +736,27 @@ class DeepCodeAnalyzer:
         logger.info(f"   Technical Innovation: {insights['technical_innovation']}")
         logger.info(f"   Business Value: {insights['business_value']}")
 
-        logger.info(f"\n🎯 KEY INNOVATIONS:")
+        logger.info("\n🎯 KEY INNOVATIONS:")
         for innovation in insights["key_innovations"][:5]:
             logger.info(f"   • {innovation}")
 
-        logger.info(f"\n🏆 ARCHITECTURAL STRENGTHS:")
+        logger.info("\n🏆 ARCHITECTURAL STRENGTHS:")
         for strength in insights["architectural_strengths"][:5]:
             logger.info(f"   • {strength}")
 
-        logger.info(f"\n🧠 INTELLIGENT FEATURES:")
+        logger.info("\n🧠 INTELLIGENT FEATURES:")
         for feature in insights["intelligent_features"][:5]:
             logger.info(f"   • {feature}")
 
-        logger.info(f"\n💼 BUSINESS LOGIC SOPHISTICATION:")
+        logger.info("\n💼 BUSINESS LOGIC SOPHISTICATION:")
         for logic in insights["business_logic_sophistication"][:5]:
             logger.info(f"   • {logic}")
 
-        logger.info(f"\n🔧 TECHNICAL EXCELLENCE:")
+        logger.info("\n🔧 TECHNICAL EXCELLENCE:")
         for excellence in insights["technical_excellence"][:5]:
             logger.info(f"   • {excellence}")
 
-        logger.info(f"\n📚 CONTENT UNDERSTANDING DEPTH:")
+        logger.info("\n📚 CONTENT UNDERSTANDING DEPTH:")
         for depth in insights["content_understanding_depth"][:5]:
             logger.info(f"   • {depth}")
 

@@ -2,8 +2,6 @@ from pathlib import Path
 import googleapiclient.discovery
 import googleapiclient.errors
 import google_auth_oauthlib.flow
-import google.auth.transport.requests
-import os
 
 import logging
 

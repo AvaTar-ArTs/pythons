@@ -1,0 +1,439 @@
+hash,source,dest,action
+b357898e71b5b8521aa2a16de6ad5a91,/Users/steven/Documents/Archives/repos/maigret/sjchaplinski@gmail.com.csv,/Users/steven/workspace/csvs-consolidated/general_sjchaplinski@gmail.com.csv,move
+3f083cf5a44536de0360b52da3d6055a,/Users/steven/Documents/Archives/repos/maigret/schaplinski.csv,/Users/steven/workspace/csvs-consolidated/general_schaplinski.csv,move
+9fcab3bfedd2e0a12af17701e5dda417,/Users/steven/Documents/Archives/repos/maigret/reports/report_sjchaplinski@gmail.com.csv,/Users/steven/workspace/csvs-consolidated/analysis_report_sjchaplinski@gmail.com.csv,move
+ff9aeac86b03fca4ceb89bc533f4e06e,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/OpenCL.csv,/Users/steven/workspace/csvs-consolidated/general_OpenCL.csv,move
+aed6c0754c033f77933ae8c5f9c5ec5d,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/zDNN.csv,/Users/steven/workspace/csvs-consolidated/general_zDNN.csv,move
+a51541a2b30e15438c09cdeb1ccf2ac5,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/CUDA.csv,/Users/steven/workspace/csvs-consolidated/general_CUDA.csv,move
+728a93a2b23e1e7f6e42426b0422c5c3,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/SYCL.csv,/Users/steven/workspace/csvs-consolidated/general_SYCL.csv,move
+27d7dea4b851b835785f771b8d63de81,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/BLAS.csv,/Users/steven/workspace/csvs-consolidated/general_BLAS.csv,move
+9d451d754aef005211e6903ac93db992,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/CANN.csv,/Users/steven/workspace/csvs-consolidated/general_CANN.csv,move
+921d55530aaab9ad6a70b65f5a8d190c,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/CPU.csv,/Users/steven/workspace/csvs-consolidated/general_CPU.csv,move
+078b424d94770187fc8cb14ac4baeab5,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/Vulkan.csv,/Users/steven/workspace/csvs-consolidated/general_Vulkan.csv,move
+188d82f22a279faa795fa4ce02128745,/Users/steven/Documents/Archives/repos/llama.cpp/docs/ops/Metal.csv,/Users/steven/workspace/csvs-consolidated/general_Metal.csv,move
+499b2e2c8f83cb1916b53a8de977f682,/Users/steven/Documents/Archives/repos/llama.cpp/examples/jeopardy/qasheet.csv,/Users/steven/workspace/csvs-consolidated/general_qasheet.csv,move
+de3eaa82a84515a646991a4a7ef61fad,/Users/steven/Documents/CsV/Untitled_15536221d8b280549cc9cff887535e09.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_15536221d8b280549cc9cff887535e09.csv,move
+3346eeb5c17f9102441c6b229880717d,/Users/steven/Documents/CsV/Mythic-legendary-places.csv,/Users/steven/workspace/csvs-consolidated/general_Mythic-legendary-places.csv,move
+ad298de65c14004246f946808ee388af,/Users/steven/Documents/CsV/playlist_info.csv,/Users/steven/workspace/csvs-consolidated/general_playlist_info.csv,move
+a7a16aec1a5e5ed5e747880f5460f559,/Users/steven/Documents/CsV/Prompt_Database_15436221d8b2813d9134f2b77dc7ddc8.csv,/Users/steven/workspace/csvs-consolidated/general_Prompt_Database_15436221d8b2813d9134f2b77dc7ddc8.csv,move
+ec30fbfdcdb7e834827ea948a6f1fd25,/Users/steven/Documents/CsV/vidIQ CSV export for Hasan Aboul Hasan 2025-10-25.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for Hasan Aboul Hasan 2025-10-25.csv,move
+16a4afda4452e7595f020f79a1520ca3,/Users/steven/Documents/CsV/script_directory_metadata.csv,/Users/steven/workspace/csvs-consolidated/general_script_directory_metadata.csv,move
+773808dec2d8201ba3e8ff2f65ab4a76,/Users/steven/Documents/CsV/parsed_pdf_docs_with_embeddings.csv,/Users/steven/workspace/csvs-consolidated/general_parsed_pdf_docs_with_embeddings.csv,move
+6c4971accc9441667588b89e015ac5c4,/Users/steven/Documents/CsV/Pictures_2025-02-01_2128.csv,/Users/steven/workspace/csvs-consolidated/media_Pictures_2025-02-01_2128.csv,move
+f007678cf311ef81a9159d99e2afe48f,/Users/steven/Documents/CsV/25000_spend_dataset_current.csv,/Users/steven/workspace/csvs-consolidated/general_25000_spend_dataset_current.csv,move
+feaf9efeb9485ac46217efb1d71b950a,/Users/steven/Documents/CsV/relatedQueries.csv,/Users/steven/workspace/csvs-consolidated/general_relatedQueries.csv,move
+c50c2f39f9425a0211bb18efb8e203b4,/Users/steven/Documents/CsV/Untitled_13c36221d8b2801cb38dcc7f06ab377b.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_13c36221d8b2801cb38dcc7f06ab377b.csv,move
+6e3fc20ec9c213d1851cddb9bcc6ce7b,/Users/steven/Documents/CsV/image_data-04-29-25.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-04-29-25.csv,move
+00bf6ae7798a31d97334d8d65505e356,/Users/steven/Documents/CsV/pictures.csv,/Users/steven/workspace/csvs-consolidated/media_pictures.csv,move
+eaa818578f1a01b857d1cba0f7f38321,/Users/steven/Documents/CsV/reorganization_map.csv,/Users/steven/workspace/csvs-consolidated/general_reorganization_map.csv,move
+9b480d4cafa9778886b6d6cafedafebf,/Users/steven/Documents/CsV/summary.csv,/Users/steven/workspace/csvs-consolidated/general_summary.csv,move
+2b4946b6685a08c8443a5e5be9271395,/Users/steven/Documents/CsV/Untitled_25328af8d6a84e89aecf8ac2a7429b0a.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_25328af8d6a84e89aecf8ac2a7429b0a.csv,move
+2db6c29500a0f5d479eed1295bc0b388,/Users/steven/Documents/CsV/keywords-hot-trends.csv,/Users/steven/workspace/csvs-consolidated/business_keywords-hot-trends.csv,move
+0e371ca8e586428983d1f84efc27c6a9,/Users/steven/Documents/CsV/etsy_0959.csv,/Users/steven/workspace/csvs-consolidated/business_etsy_0959.csv,move
+b464ab3b4429578b1b223135ebadae19,/Users/steven/Documents/CsV/Untitled_fbe2b263d823488aa46a2b7603c0a018.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_fbe2b263d823488aa46a2b7603c0a018.csv,move
+67e3407d2079eefb689bd924cca417c3,/Users/steven/Documents/CsV/advanced_recommendations.csv,/Users/steven/workspace/csvs-consolidated/general_advanced_recommendations.csv,move
+bc7c57fa4bca4b847ae7cac67d5416b4,/Users/steven/Documents/CsV/pip3.csv,/Users/steven/workspace/csvs-consolidated/general_pip3.csv,move
+36952060ba8342e28fc45e563f1c385f,/Users/steven/Documents/CsV/Trending_keywords_2.csv,/Users/steven/workspace/csvs-consolidated/business_Trending_keywords_2.csv,move
+7a731ae7b423c1e6fd2d678e2a854b86,/Users/steven/Documents/CsV/etsylisting0mydesign (1).CSV,/Users/steven/workspace/csvs-consolidated/general_mydl.csv,move
+e556ec2acb62c3935e1fa2fd68c67cd3,/Users/steven/Documents/CsV/functional_files.csv,/Users/steven/workspace/csvs-consolidated/general_functional_files.csv,move
+e3ae8162f000a8dffafeb63baa686662,/Users/steven/Documents/CsV/seo_keywords.csv,/Users/steven/workspace/csvs-consolidated/general_seo_keywords.csv,move
+3057e3e70c3e5a21e2f4e0fc9d624e00,/Users/steven/Documents/CsV/cookbook_recipes_nlg_10k.csv,/Users/steven/workspace/csvs-consolidated/general_cookbook_recipes_nlg_10k.csv,move
+4d7fad96033b1c970a07c9fc9e0ecdc4,/Users/steven/Documents/CsV/tools_71f741c6142846b39b256ace8df8e582.csv,/Users/steven/workspace/csvs-consolidated/general_tools_71f741c6142846b39b256ace8df8e582.csv,move
+a8ed8cfffac72670981cd21b58400e0c,/Users/steven/Documents/CsV/judgement_summary_1.csv,/Users/steven/workspace/csvs-consolidated/general_judgement_summary_1.csv,move
+fb57e36979442b75da85b6291ec68850,/Users/steven/Documents/CsV/songs_data_1.csv,/Users/steven/workspace/csvs-consolidated/music_songs_data_1.csv,move
+efd4dccafe62389bae772a362a7eb485,/Users/steven/Documents/CsV/vidIQ CSV export for undefined Top Keywords (2).csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for undefined Top Keywords (2).csv,move
+09e5f2dca3757d9d802adcd0510df5de,/Users/steven/Documents/CsV/classifications.csv,/Users/steven/workspace/csvs-consolidated/general_classifications.csv,move
+09e5f2dca3757d9d802adcd0510df5de,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/script_classifications.csv,/Users/steven/workspace/csvs-consolidated/general_classifications.csv,move
+77f166352e29fb2035075d0c8f58220a,/Users/steven/Documents/CsV/smart_recovery_log_20251028_035235.csv,/Users/steven/workspace/csvs-consolidated/general_smart_recovery_log_20251028_035235.csv,move
+020df3f1448aa468878402b1911e75d7,/Users/steven/Documents/CsV/dataset_suno-ai-scraper_05-48-24-634.csv,/Users/steven/workspace/csvs-consolidated/music_dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv,move
+020df3f1448aa468878402b1911e75d7,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/dataset_suno-ai-scraper_2025-03-08_05-48-24-634_data.csv,/Users/steven/workspace/csvs-consolidated/music_dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv,move
+32bc08cd43e22859d925167ad24465d8,/Users/steven/Documents/CsV/songs.csv,/Users/steven/workspace/csvs-consolidated/music_songs.csv,move
+a184799b376a7661cb76ddfbddfe4507,/Users/steven/Documents/CsV/image_data-05-30-21-05.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-05-30-21-05.csv,move
+f05c22a029c97d9982a207cb5f00287e,/Users/steven/Documents/CsV/chatgpt_9984265b49ce4333bf22494b75cec2b9.csv,/Users/steven/workspace/csvs-consolidated/general_chatgpt_9984265b49ce4333bf22494b75cec2b9.csv,move
+6d26cb1382a4217709accd47b8c0dd64,/Users/steven/Documents/CsV/2025_BreakDown_-_Sheet1.csv,/Users/steven/workspace/csvs-consolidated/general_2025_BreakDown_-_Sheet1.csv,move
+026762a7ac170d910e9230e4e26c4460,/Users/steven/Documents/CsV/prompts_expanded.csv,/Users/steven/workspace/csvs-consolidated/general_prompts_expanded.csv,move
+5e6e75f9fd515a37290a9ae041b41cc4,/Users/steven/Documents/CsV/Shorts_-_2024_15336221d8b280be9760eae3f1708be2.csv,/Users/steven/workspace/csvs-consolidated/general_Shorts_-_2024_15336221d8b280be9760eae3f1708be2.csv,move
+bb40aa30e2e4a7a882572a0ce7eba529,/Users/steven/Documents/CsV/vidIQ CSV export for undefined Top Keywords (3).csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for undefined Top Keywords (3).csv,move
+7b2ec6d77227e56a16178583e01161c1,/Users/steven/Documents/CsV/smart_organization.csv,/Users/steven/workspace/csvs-consolidated/general_smart_organization.csv,move
+9a9e15cb32ea5aca7d57fba2f9c03a1d,/Users/steven/Documents/CsV/redbubble_product.csv,/Users/steven/workspace/csvs-consolidated/business_redbubble_product.csv,move
+9a9e15cb32ea5aca7d57fba2f9c03a1d,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/Redbubble_Product_Trends.csv,/Users/steven/workspace/csvs-consolidated/business_redbubble_product.csv,move
+f2ddf829bdf90d87790a74bd75f7c4c4,/Users/steven/Documents/CsV/results_failsafeqa_optimized.csv,/Users/steven/workspace/csvs-consolidated/general_results_failsafeqa_optimized.csv,move
+6139a01df2342015328a3b99b2053456,/Users/steven/Documents/CsV/all_combined.csv,/Users/steven/workspace/csvs-consolidated/general_all_combined.csv,move
+6139a01df2342015328a3b99b2053456,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/clean-csv/all_combined.csv,/Users/steven/workspace/csvs-consolidated/general_all_combined.csv,move
+385ba8e6e40e6204186df4869c0b1ec6,/Users/steven/Documents/CsV/scarletiriscreation_analytics20241211-11-p1i1l4.csv,/Users/steven/workspace/csvs-consolidated/general_scarletiriscreation_analytics20241211-11-p1i1l4.csv,move
+385ba8e6e40e6204186df4869c0b1ec6,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/everBee/scarletiriscreation_analytics20241211-11-p1i1l4.csv,/Users/steven/workspace/csvs-consolidated/general_scarletiriscreation_analytics20241211-11-p1i1l4.csv,move
+633d86f3db2eeaeafb0a59e385e52c16,/Users/steven/Documents/CsV/vidIQ_CSV_export_for_undefined_Top_Keywords_2.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ_CSV_export_for_undefined_Top_Keywords_2.csv,move
+504ad41e69ec97a73c9ca8613b109474,/Users/steven/Documents/CsV/recovery_log_20251028_035152.csv,/Users/steven/workspace/csvs-consolidated/general_recovery_log_20251028_035152.csv,move
+961dad8a7cc7c7b875c5a76c154254f6,/Users/steven/Documents/CsV/image.csv,/Users/steven/workspace/csvs-consolidated/media_image.csv,move
+961dad8a7cc7c7b875c5a76c154254f6,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/image_data-09-05-12-29.csv,/Users/steven/workspace/csvs-consolidated/media_image.csv,move
+961dad8a7cc7c7b875c5a76c154254f6,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/image_data-09-05-12-31.csv,/Users/steven/workspace/csvs-consolidated/media_image.csv,move
+84d63c2c8bf4edb213bf079b1d0d6ec9,/Users/steven/Documents/CsV/messages.csv,/Users/steven/workspace/csvs-consolidated/general_messages.csv,move
+5026b50c3436af255ba6edf57a002abe,/Users/steven/Documents/CsV/vidIQ_CSV_export_for_I_ve_Had_It_2025-05-10.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ_CSV_export_for_I_ve_Had_It_2025-05-10.csv,move
+302988774578a469cc52a25946d735a8,/Users/steven/Documents/CsV/2025_BreakDown_-_Sheet2.csv,/Users/steven/workspace/csvs-consolidated/general_2025_BreakDown_-_Sheet2.csv,move
+5c88e9c52370008072345c5a20143ccf,/Users/steven/Documents/CsV/hahnclifford.csv,/Users/steven/workspace/csvs-consolidated/general_hahnclifford.csv,move
+bd0507d9e46c0370bb01ebe622afd94d,/Users/steven/Documents/CsV/python_organization_progress.csv,/Users/steven/workspace/csvs-consolidated/general_python_organization_progress.csv,move
+d3b5cfe1063d2f8998e347f384a7f30b,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/duplicates.csv,/Users/steven/workspace/csvs-consolidated/duplicates.csv,move
+fdad77dd58707b27fc905bafac0abce9,/Users/steven/Documents/CsV/quiz_quiz54.csv,/Users/steven/workspace/csvs-consolidated/general_quiz_quiz54.csv,move
+c84fad8c5995e0143666d7895654c11f,/Users/steven/Documents/CsV/e6137cb8-HEAD.csv,/Users/steven/workspace/csvs-consolidated/general_e6137cb8-HEAD.csv,move
+2b317e1e2e92c16ff78e55020af9627d,/Users/steven/Documents/CsV/Project2025-ResistQuiz.csv,/Users/steven/workspace/csvs-consolidated/general_Project2025-ResistQuiz.csv,move
+c44e379ea39756bc81a417574ed44e02,/Users/steven/Documents/CsV/Project_2025_Quiz_-_ReSiSt.csv,/Users/steven/workspace/csvs-consolidated/general_Project_2025_Quiz_-_ReSiSt.csv,move
+6928fd7a34f7bc96af5ff92b0c2d6977,/Users/steven/Documents/CsV/printify_bulk_upload.csv,/Users/steven/workspace/csvs-consolidated/business_printify_bulk_upload.csv,move
+037daeaaa5b0752fa45cfcdf750826f3,/Users/steven/Documents/CsV/functional_summary.csv,/Users/steven/workspace/csvs-consolidated/general_functional_summary.csv,move
+c66b22688662e299e303af2ef913e9b4,/Users/steven/Documents/CsV/scan_results.csv,/Users/steven/workspace/csvs-consolidated/general_scan_results.csv,move
+c66b22688662e299e303af2ef913e9b4,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/scan_results_20250328_231414.csv,/Users/steven/workspace/csvs-consolidated/general_scan_results.csv,move
+256f068bb8134e8370dce43684ded8be,/Users/steven/Documents/CsV/leonardo.csv,/Users/steven/workspace/csvs-consolidated/general_leonardo.csv,move
+c6c9761bd3224c93aaebf8c257cef503,/Users/steven/Documents/CsV/whisper-3-8.csv,/Users/steven/workspace/csvs-consolidated/general_whisper-3-8.csv,move
+15bd1ef610a0749e51217985dd0048ee,/Users/steven/Documents/CsV/organization_recommendations.csv,/Users/steven/workspace/csvs-consolidated/general_organization_recommendations.csv,move
+abf4c28b751465bfb59d64c9f4c0d30c,/Users/steven/Documents/CsV/cleaned.csv,/Users/steven/workspace/csvs-consolidated/general_cleaned.csv,move
+abf4c28b751465bfb59d64c9f4c0d30c,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/clean-csv/docs_cleaned.csv,/Users/steven/workspace/csvs-consolidated/general_cleaned.csv,move
+496f27ed992e1169054df1012103a223,/Users/steven/Documents/CsV/Table_2.csv,/Users/steven/workspace/csvs-consolidated/general_Table_2.csv,move
+ba2a36bf4ea108b0ba7edc9294dd5d53,/Users/steven/Documents/CsV/imdb_top_1000.csv,/Users/steven/workspace/csvs-consolidated/general_imdb_top_1000.csv,move
+676773ad5278185ea5b067c14e33de85,/Users/steven/Documents/CsV/Cards_13b36221d8b280bf8f2ddff29f702bd8.csv,/Users/steven/workspace/csvs-consolidated/general_Cards_13b36221d8b280bf8f2ddff29f702bd8.csv,move
+3f963ee76458d1f1877c0b60a78c58a5,/Users/steven/Documents/CsV/image_data-05-30-22-21.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-05-30-22-21.csv,move
+bc6b6ed8550ef15357fa8d0d5738f380,/Users/steven/Documents/CsV/topics_1b35d06ed6234fc4ad6d946aa065b02b.csv,/Users/steven/workspace/csvs-consolidated/media_topics_1b35d06ed6234fc4ad6d946aa065b02b.csv,move
+44c8470ddc9a22fe145c13c62b5d52e7,/Users/steven/Documents/CsV/youtube_search_results.csv,/Users/steven/workspace/csvs-consolidated/general_youtube_search_results.csv,move
+a03e1cb7ab2726a8c1b02dc24df432d3,/Users/steven/Documents/CsV/trending-designs.csv,/Users/steven/workspace/csvs-consolidated/business_trending-designs.csv,move
+72ff64bf3567ea82a0fe04dde6269aa5,/Users/steven/Documents/CsV/other.csv,/Users/steven/workspace/csvs-consolidated/general_other.csv,move
+0a125d95b7162e7f6db8db26344187f9,/Users/steven/Documents/CsV/TrashCats_Image_Generation_Prompts.csv,/Users/steven/workspace/csvs-consolidated/media_TrashCats_Image_Generation_Prompts.csv,move
+0a125d95b7162e7f6db8db26344187f9,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/trashy_output.csv,/Users/steven/workspace/csvs-consolidated/media_TrashCats_Image_Generation_Prompts.csv,move
+71b7e20f8c1cea8c629768e304c62d9d,/Users/steven/Documents/CsV/script_operations.csv,/Users/steven/workspace/csvs-consolidated/general_script_operations.csv,move
+d77a01b5a4355fe7977f7d0eb3442436,/Users/steven/Documents/CsV/rootkey.csv,/Users/steven/workspace/csvs-consolidated/general_rootkey.csv,move
+83d8b25a665221acdb134c4e5398f39f,/Users/steven/Documents/CsV/ichoake_accessKeys.csv,/Users/steven/workspace/csvs-consolidated/general_ichoake_accessKeys.csv,move
+15b3855e952fe62400850cc9a0549677,/Users/steven/Documents/CsV/items_tagged_and_captioned.csv,/Users/steven/workspace/csvs-consolidated/general_items_tagged_and_captioned.csv,move
+5ba4f0702e9b29f90259b699350fc78e,/Users/steven/Documents/CsV/Untitled_15136221d8b280f69eb4e2cba22a8a02.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_15136221d8b280f69eb4e2cba22a8a02.csv,move
+31d54de808e05cd1d6395ad71c5753b6,/Users/steven/Documents/CsV/library_transactions_with_embeddings_359.csv,/Users/steven/workspace/csvs-consolidated/general_library_transactions_with_embeddings_359.csv,move
+33cf02f3dc9fa9e60b45df7ea482417b,/Users/steven/Documents/CsV/EtsyListingsSep2025  EtsyListingsMerge.csv,/Users/steven/workspace/csvs-consolidated/business_EtsyListingsSep2025  EtsyListingsMerge.csv,move
+ff83a340255c72e34a87b470c89c0f31,/Users/steven/Documents/CsV/vidIQ_CSV_export_for_undefined_Top_Keywords.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ_CSV_export_for_undefined_Top_Keywords.csv,move
+8d83e2e5c4cc1ab1a7982a8f7c266a98,/Users/steven/Documents/CsV/Table_3.csv,/Users/steven/workspace/csvs-consolidated/general_Table_3.csv,move
+5f13d1d1fe2be8af7d99181975e67f84,/Users/steven/Documents/CsV/Table_1.csv,/Users/steven/workspace/csvs-consolidated/general_Table_1.csv,move
+bced795ded2b9869ab4e9a9dad29bdec,/Users/steven/Documents/CsV/Video_Ideas_af2218f4359143b0aad97e6e0452533b.csv,/Users/steven/workspace/csvs-consolidated/general_Video_Ideas_af2218f4359143b0aad97e6e0452533b.csv,move
+fd55bcaebd83e4cdb9953c561b0eb4f3,/Users/steven/Documents/CsV/Table_18.csv,/Users/steven/workspace/csvs-consolidated/general_Table_18.csv,move
+8cb476457109fde2db57906ccf386c23,/Users/steven/Documents/CsV/input copy.csv,/Users/steven/workspace/csvs-consolidated/general_input copy.csv,move
+5ef50df0ebe813dc006f3c29e79e017b,/Users/steven/Documents/CsV/printify_blueprints.csv,/Users/steven/workspace/csvs-consolidated/business_printify_blueprints.csv,move
+a67c000a31a867d1774291d6da43f7cf,/Users/steven/Documents/CsV/enhancedimagedata08120339.csv,/Users/steven/workspace/csvs-consolidated/media_enhancedimagedata08120339.csv,move
+efc28b8924c828b906fc3afb5d92a1a3,/Users/steven/Documents/CsV/advanced_analysis.csv,/Users/steven/workspace/csvs-consolidated/analysis_advanced_analysis.csv,move
+6078c6d0ba12e9f5bab42c6082308993,/Users/steven/Documents/CsV/vidIQ CSV export for Frank Garrett 2025-10-25.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for Frank Garrett 2025-10-25.csv,move
+7bf6d36ff598558ad5e0fd56e291444b,/Users/steven/Documents/CsV/comparison_summary.csv,/Users/steven/workspace/csvs-consolidated/general_comparison_summary.csv,move
+03f8d6887d2821cd79cf3250c85b0371,/Users/steven/Documents/CsV/spooky_riddles.csv,/Users/steven/workspace/csvs-consolidated/general_spooky_riddles.csv,move
+16f45bc0d8e24d0c6b7afac7b5bb306c,/Users/steven/Documents/CsV/Untitled_15236221d8b2808aa697d88175ddfe35_all.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_15236221d8b2808aa697d88175ddfe35_all.csv,move
+b6ba0ca45dd53f93975b5ee4dd9ccac7,/Users/steven/Documents/CsV/Disco-Content-4-8-25 - combined_output_04-08-25.csv,/Users/steven/workspace/csvs-consolidated/music_Disco-Content-4-8-25 - combined_output_04-08-25.csv,move
+4c37ea5d4e9742973b9167d48e73f309,/Users/steven/Documents/CsV/Untitled_b2f74f42ee094ac884b1f599633b04f7.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_b2f74f42ee094ac884b1f599633b04f7.csv,move
+219d0fd3bdd6bcd4b23ab71337390efd,/Users/steven/Documents/CsV/context_fluid.csv,/Users/steven/workspace/csvs-consolidated/general_context_fluid.csv,move
+0e1e1aea00bda2c809cc6af3a16b8238,/Users/steven/Documents/CsV/results_failsafeqa_baseline.csv,/Users/steven/workspace/csvs-consolidated/general_results_failsafeqa_baseline.csv,move
+3789568d5dde104f774828f211436b50,/Users/steven/Documents/CsV/Untitled_15436221d8b28116b57ccd9db2d8a9a6.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_15436221d8b28116b57ccd9db2d8a9a6.csv,move
+49e81bdbeae8e01c6ede64b7b89fa848,/Users/steven/Documents/CsV/python-automation-tools-generative-ai-scripting_related_keywords.csv,/Users/steven/workspace/csvs-consolidated/general_python-automation-tools-generative-ai-scripting_related_keywords.csv,move
+9ff42a3871cba1e9e6207069566b59e7,/Users/steven/Documents/CsV/output-.csv,/Users/steven/workspace/csvs-consolidated/general_output-.csv,move
+39891434b48349c529be3ee89a1f65bc,/Users/steven/Pictures/ideo-notion/listing_index.csv,/Users/steven/workspace/csvs-consolidated/general_listing_index.csv,move
+288e755d5805f1b087a33608814b7fff,/Users/steven/Documents/CsV/Table_19.csv,/Users/steven/workspace/csvs-consolidated/general_Table_19.csv,move
+e132a215ca53df92f7d69eeccaf8d831,/Users/steven/Documents/CsV/rankings.csv,/Users/steven/workspace/csvs-consolidated/general_rankings.csv,move
+48c6d34e68b255a24f28408b2b807075,/Users/steven/Documents/CsV/sample_styles.csv,/Users/steven/workspace/csvs-consolidated/general_sample_styles.csv,move
+d83f1b5853c6d5098613f6e3831b6613,/Users/steven/Documents/CsV/Table_4.csv,/Users/steven/workspace/csvs-consolidated/general_Table_4.csv,move
+394d84bf21405f3df4fc9229a237f75f,/Users/steven/Documents/CsV/python_dryrun.csv,/Users/steven/workspace/csvs-consolidated/general_python_dryrun.csv,move
+394d84bf21405f3df4fc9229a237f75f,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/Python_dryrun.csv,/Users/steven/workspace/csvs-consolidated/general_python_dryrun.csv,move
+aa3ca04e4c5b8162f506ea1b04aca15b,/Users/steven/Documents/CsV/Table_21.csv,/Users/steven/workspace/csvs-consolidated/general_Table_21.csv,move
+052541a50f282622ee9c315d3d6984f7,/Users/steven/Documents/CsV/vidIQ_CSV_export_for_TrapTalk_2025-05-31.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ_CSV_export_for_TrapTalk_2025-05-31.csv,move
+1c816b24263ac9a8e9bb64aaa5971e59,/Users/steven/Documents/CsV/out_place.csv,/Users/steven/workspace/csvs-consolidated/general_out_place.csv,move
+711962db6de5b742a5f79dd2e97c5ead,/Users/steven/Documents/CsV/combined_output_04-08-25.csv,/Users/steven/workspace/csvs-consolidated/general_combined_output_04-08-25.csv,move
+8a273d070331674b09214799713df8ec,/Users/steven/Documents/CsV/Content_Planner_b4d54e9da47a4bea9a68537d022d73fe.csv,/Users/steven/workspace/csvs-consolidated/general_Content_Planner_b4d54e9da47a4bea9a68537d022d73fe.csv,move
+b63e92f254a0a82e8ccb483b69898e93,/Users/steven/Documents/CsV/audio.csv,/Users/steven/workspace/csvs-consolidated/general_audio.csv,move
+de0a353fe3cd2fcd007479060f737bc4,/Users/steven/Documents/CsV/Listingsmydesignsexport.csv,/Users/steven/workspace/csvs-consolidated/general_Listingsmydesignsexport.csv,move
+7878dc4148823b9131f734ccf8c66ab0,/Users/steven/Documents/CsV/Top_Keywords.csv,/Users/steven/workspace/csvs-consolidated/general_Top_Keywords.csv,move
+34661551be07eb94ea7da156e81c8bc4,/Users/steven/Documents/CsV/Python_Projects_Directory_Index.csv,/Users/steven/workspace/csvs-consolidated/general_Python_Projects_Directory_Index.csv,move
+34661551be07eb94ea7da156e81c8bc4,/Users/steven/Downloads/Misc/ichoake_python_index.csv,/Users/steven/workspace/csvs-consolidated/general_Python_Projects_Directory_Index.csv,move
+759df77ceeffb562dbe049cd3a54949f,/Users/steven/Documents/CsV/snli_1.0_train_2k.csv,/Users/steven/workspace/csvs-consolidated/general_snli_1.0_train_2k.csv,move
+371b0ad04a2f3d28dfeb27fdfdec7bef,/Users/steven/Documents/CsV/image_cleaned.csv,/Users/steven/workspace/csvs-consolidated/media_image_cleaned.csv,move
+371b0ad04a2f3d28dfeb27fdfdec7bef,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/clean-csv/image_data_cleaned.csv,/Users/steven/workspace/csvs-consolidated/media_image_cleaned.csv,move
+14273fe21a1ac67fbf6310d8023863e9,/Users/steven/Documents/CsV/extracted_song.csv,/Users/steven/workspace/csvs-consolidated/music_extracted_song.csv,move
+14273fe21a1ac67fbf6310d8023863e9,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/clean-csv/extracted_song_details.csv,/Users/steven/workspace/csvs-consolidated/music_extracted_song.csv,move
+77e8171dda439d405093a6295d20fde1,/Users/steven/Documents/CsV/Table_20.csv,/Users/steven/workspace/csvs-consolidated/general_Table_20.csv,move
+64454f162aefd91bc22767862914a402,/Users/steven/Documents/CsV/items_tagged_and_captioned_embeddings.csv,/Users/steven/workspace/csvs-consolidated/general_items_tagged_and_captioned_embeddings.csv,move
+1073f5e5103c5d124ab811600d3afd6b,/Users/steven/Documents/CsV/Table_5.csv,/Users/steven/workspace/csvs-consolidated/general_Table_5.csv,move
+ed71fb9e1a668c2caca55f67b9c7a7cf,/Users/steven/Documents/CsV/Untitled 15936221d8b281f3bbd8f72297986ff2.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled 15936221d8b281f3bbd8f72297986ff2.csv,move
+f72f0f088944903909ab5f7539543276,/Users/steven/Documents/CsV/Table_7.csv,/Users/steven/workspace/csvs-consolidated/general_Table_7.csv,move
+13758a2ec87e0c33719a9cffba5c3587,/Users/steven/Documents/CsV/python_newcho.csv,/Users/steven/workspace/csvs-consolidated/general_python_newcho.csv,move
+13758a2ec87e0c33719a9cffba5c3587,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/clean-csv/python-newcho.csv,/Users/steven/workspace/csvs-consolidated/general_python_newcho.csv,move
+f54682f8a3888d0364aece619f47ca9e,/Users/steven/Documents/CsV/Song_Lyrics_Visual_Storytelling_Framework.csv,/Users/steven/workspace/csvs-consolidated/music_Song_Lyrics_Visual_Storytelling_Framework.csv,move
+64ef3243a6bd150ad4d40424a2de548c,/Users/steven/Documents/CsV/Trending_keywords.csv,/Users/steven/workspace/csvs-consolidated/business_Trending_keywords.csv,move
+282cec869c92c1b99507bcdd9ac4e6ca,/Users/steven/Documents/CsV/tools_15936221d8b28192b15fd6e595cc9b14.csv,/Users/steven/workspace/csvs-consolidated/general_tools_15936221d8b28192b15fd6e595cc9b14.csv,move
+a79a92c1f592041876b3726848fd085a,/Users/steven/Documents/CsV/tools_15936221d8b28161bbbdf01d87ac6b55.csv,/Users/steven/workspace/csvs-consolidated/general_tools_15936221d8b28161bbbdf01d87ac6b55.csv,move
+de3602ea11603487e05d9ee8618de05f,/Users/steven/Documents/CsV/Table_22.csv,/Users/steven/workspace/csvs-consolidated/general_Table_22.csv,move
+06bcbbdf9eb8e59094d086d303b289db,/Users/steven/Documents/CsV/ollama_models_filtered_for_16gb_cpu.csv,/Users/steven/workspace/csvs-consolidated/general_ollama_models_filtered_for_16gb_cpu.csv,move
+a83eccfb6d9d9bab50acaac1ba033629,/Users/steven/Documents/CsV/top-products-list_topt_captured-list_04-55-41_93ee8c95-08a4-46b4-8eb3-f12bbf0a32fc.csv,/Users/steven/workspace/csvs-consolidated/business_top-products-list_topt_captured-list_04-55-41_93ee8c95-08a4-46b4-8eb3-f12bbf0a32fc.csv,move
+a9511ed61e5f6b33fa3c347032c17304,/Users/steven/Documents/CsV/traffic_accidents.csv,/Users/steven/workspace/csvs-consolidated/general_traffic_accidents.csv,move
+19dc915141a5fdd353800a22ad0a2dd2,/Users/steven/Documents/CsV/vids.csv,/Users/steven/workspace/csvs-consolidated/general_vids.csv,move
+d3ef36a006f23b262c63df471eb2c55d,/Users/steven/Documents/CsV/printify_bestsellers_updated.csv,/Users/steven/workspace/csvs-consolidated/business_printify_bestsellers_updated.csv,move
+ee651c0d9f4949fc3c6760bdcee9cbaf,/Users/steven/Documents/CsV/Merged_Trends__preview_.csv,/Users/steven/workspace/csvs-consolidated/business_Merged_Trends__preview_.csv,move
+7abcbfe7063cf377860c76f3766fa73c,/Users/steven/Documents/CsV/trick.csv,/Users/steven/workspace/csvs-consolidated/general_trick.csv,move
+43f7158711b1f55220cbf639b2cf7346,/Users/steven/Documents/CsV/songs_1.csv,/Users/steven/workspace/csvs-consolidated/music_songs_1.csv,move
+1c4c6a8969372739b8b04733e4f2c954,/Users/steven/Documents/CsV/image_data-01-07-15-06.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-01-07-15-06.csv,move
+5c2ae22a15703f95514695893f60c464,/Users/steven/Documents/CsV/Prompt_Library_AI_for_Instagram_15936221d8b28049bf07faeb53ff572d.csv,/Users/steven/workspace/csvs-consolidated/general_Prompt_Library_AI_for_Instagram_15936221d8b28049bf07faeb53ff572d.csv,move
+c20451a63cc3c918c1dc6af333b67c59,/Users/steven/Documents/CsV/formatted_article.csv,/Users/steven/workspace/csvs-consolidated/general_formatted_article.csv,move
+fcceb73afe400020eb234f40dfa9405a,/Users/steven/Documents/CsV/gtriva_emoji.csv,/Users/steven/workspace/csvs-consolidated/general_gtriva_emoji.csv,move
+cfd772ab7e209188ca8b8042f37bf970,/Users/steven/Documents/CsV/Table_6.csv,/Users/steven/workspace/csvs-consolidated/general_Table_6.csv,move
+d348203b70783de0a68d60c3a721adad,/Users/steven/Documents/CsV/image_data-03-10-00-08.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-03-10-00-08.csv,move
+edeebf874fc995f444e05fd8e1898cea,/Users/steven/Documents/CsV/alternatives_avatararts.csv,/Users/steven/workspace/csvs-consolidated/general_alternatives_avatararts.csv,move
+9f46b8dcf3bbc6c4614f609647ef1b2b,/Users/steven/Documents/CsV/Table_12.csv,/Users/steven/workspace/csvs-consolidated/general_Table_12.csv,move
+3d788cf44ef68b0e8b3e77237a21cd6d,/Users/steven/Documents/CsV/Untitled_16e36221d8b2804c9d42c02f508b19a0.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_16e36221d8b2804c9d42c02f508b19a0.csv,move
+a0faa9bacbef5b2cd324130fb7243bd2,/Users/steven/Documents/CsV/Untitled_e5155b902c2346018409b34a379939d5.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_e5155b902c2346018409b34a379939d5.csv,move
+a968d2a266a40362a8ac58cadcca9eef,/Users/steven/Documents/CsV/reorganization_log.csv,/Users/steven/workspace/csvs-consolidated/general_reorganization_log.csv,move
+a4571b7967f4427e88ec6592b6c9d7b4,/Users/steven/Documents/CsV/python_directory.csv,/Users/steven/workspace/csvs-consolidated/general_python_directory.csv,move
+fc0a127c18868701ab0c81004ab8cfb6,/Users/steven/Documents/CsV/PromptTrendydesigns.csv,/Users/steven/workspace/csvs-consolidated/general_Cards 16f36221d8b281bfafd3f4f3e4022622.csv,move
+2d2ade09450b66a0b40d0a6acfd8b9c1,/Users/steven/Documents/CsV/priority_files.csv,/Users/steven/workspace/csvs-consolidated/general_priority_files.csv,move
+bcce80a714e4f66cd83dde022b1d1ac4,/Users/steven/Documents/CsV/Table_13.csv,/Users/steven/workspace/csvs-consolidated/general_Table_13.csv,move
+0adfc567770e992a6bc5c8c5ebdabbf9,/Users/steven/Documents/CsV/zip_contents.csv,/Users/steven/workspace/csvs-consolidated/general_zip_contents.csv,move
+0adfc567770e992a6bc5c8c5ebdabbf9,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/zip_contents_inventory.csv,/Users/steven/workspace/csvs-consolidated/general_zip_contents.csv,move
+67178dad04d05764b52b702bc443c48d,/Users/steven/Documents/CsV/Table_8.csv,/Users/steven/workspace/csvs-consolidated/general_Table_8.csv,move
+b9ee8638d0ca740fd79c5b4ec7b68116,/Users/steven/Documents/CsV/Table_11.csv,/Users/steven/workspace/csvs-consolidated/general_Table_11.csv,move
+ed083904b5757ad7bb0d025f6d7dbabb,/Users/steven/Documents/CsV/file.csv,/Users/steven/workspace/csvs-consolidated/general_file.csv,move
+46d0128cc12feea4759faf0697accc13,/Users/steven/Documents/CsV/dataset_suno-ai-scraper_21-09-00-670.csv,/Users/steven/workspace/csvs-consolidated/music_dataset_suno-ai-scraper_21-09-00-670.csv,move
+b8fbe8250f092fa843759d8efc2abc04,/Users/steven/Documents/CsV/Reusable_Prompt_Database_15436221d8b281a8be12ff9fc5ffd32a.csv,/Users/steven/workspace/csvs-consolidated/general_Reusable_Prompt_Database_15436221d8b281a8be12ff9fc5ffd32a.csv,move
+1a52b73860f5a0ee8334820690d54b40,/Users/steven/Documents/CsV/combined_output - combined_output.csv.csv,/Users/steven/workspace/csvs-consolidated/general_combined_output - combined_output.csv.csv,move
+75f49b9da41e318eb86d2d950892949e,/Users/steven/Documents/CsV/autoupload_auto.csv,/Users/steven/workspace/csvs-consolidated/general_autoupload_auto.csv,move
+22f0cc956403eaac68c3e0877161c449,/Users/steven/Documents/CsV/intelligent_organization.csv,/Users/steven/workspace/csvs-consolidated/general_intelligent_organization.csv,move
+f846df58dbf05dc86c7fdec1e108dd0f,/Users/steven/Documents/CsV/Table_10.csv,/Users/steven/workspace/csvs-consolidated/general_Table_10.csv,move
+51a97343dafe55b779b15d3ec54fa41c,/Users/steven/Documents/CsV/vidiq_santrel.csv,/Users/steven/workspace/csvs-consolidated/general_vidiq_santrel.csv,move
+51a97343dafe55b779b15d3ec54fa41c,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/simplegallery-bin/.history/vidIQ-CSV  Santrel Media_20250502003617.csv,/Users/steven/workspace/csvs-consolidated/general_vidiq_santrel.csv,move
+51a97343dafe55b779b15d3ec54fa41c,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/simplegallery-bin/.history/vidIQ-CSV  Santrel Media_20250502003623.csv,/Users/steven/workspace/csvs-consolidated/general_vidiq_santrel.csv,move
+51a97343dafe55b779b15d3ec54fa41c,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/simplegallery-bin/vidIQ-CSV  Santrel Media.csv,/Users/steven/workspace/csvs-consolidated/general_vidiq_santrel.csv,move
+a3773ce8bd42fb2f1d40767512003b5b,/Users/steven/Documents/CsV/html_intelligent_analysis_20251028_040846.csv,/Users/steven/workspace/csvs-consolidated/analysis_html_intelligent_analysis_20251028_040846.csv,move
+a3d7644e2d81be7e70f34867c9b6ddd4,/Users/steven/Documents/CsV/Table_9.csv,/Users/steven/workspace/csvs-consolidated/general_Table_9.csv,move
+cf5123a5209f51c8d35347232f5015e7,/Users/steven/Documents/CsV/Instagram_Ai_4ec70cde15a44036980ca9dbde3e1086.csv,/Users/steven/workspace/csvs-consolidated/general_Instagram_Ai_4ec70cde15a44036980ca9dbde3e1086.csv,move
+17c49f6d92ea67419bf4fe1cb5ed2817,/Users/steven/Documents/CsV/rollback.csv,/Users/steven/workspace/csvs-consolidated/general_rollback.csv,move
+3e076c4f901600d4c89f03ed2105093a,/Users/steven/Documents/CsV/Table_14.csv,/Users/steven/workspace/csvs-consolidated/general_Table_14.csv,move
+4a284e0fb4527748a2c50ae04555c3db,/Users/steven/Documents/CsV/other_cleaned.csv,/Users/steven/workspace/csvs-consolidated/general_other_cleaned.csv,move
+4a284e0fb4527748a2c50ae04555c3db,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/clean-csv/other_cleaned.csv,/Users/steven/workspace/csvs-consolidated/general_other_cleaned.csv,move
+3e3f99c8de0f30bdcb74c915805a6970,/Users/steven/Documents/CsV/Discography ALL - Shorts -  2024 _9bc187fa-6024-43dd-b80c-8503abd80dac.csv,/Users/steven/workspace/csvs-consolidated/music_Discography ALL - Shorts -  2024 _9bc187fa-6024-43dd-b80c-8503abd80dac.csv,move
+cb287a279f2ad619e4fb4722f71b4a10,/Users/steven/Documents/CsV/Gtrivia.csv,/Users/steven/workspace/csvs-consolidated/general_Gtrivia.csv,move
+0fcc03b070fe807359d58b6e676a77c1,/Users/steven/Documents/CsV/Untitled_bbeae22474fe49d0b024b0c48b512abf.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_bbeae22474fe49d0b024b0c48b512abf.csv,move
+58579893f6cd2be77010211a5a6960ce,/Users/steven/Documents/CsV/intelligent_summary.csv,/Users/steven/workspace/csvs-consolidated/general_intelligent_summary.csv,move
+27826ee3a5428616d85d137beb0ec973,/Users/steven/Documents/CsV/judgement_summary.csv,/Users/steven/workspace/csvs-consolidated/general_judgement_summary.csv,move
+f3632905ee0a1a28f6f273f53277a35f,/Users/steven/Documents/CsV/spooky riddles.csv,/Users/steven/workspace/csvs-consolidated/general_spooky riddles.csv,move
+a4ca86902c11537626d1df3158587f0f,/Users/steven/Documents/CsV/Etsy-12-2-2024.csv,/Users/steven/workspace/csvs-consolidated/business_Etsy-12-2-2024.csv,move
+5fcf0b79b0f4fca50e97643980cc9948,/Users/steven/Documents/CsV/Sample_Quiz_Questions_Database.csv,/Users/steven/workspace/csvs-consolidated/general_Sample_Quiz_Questions_Database.csv,move
+b6ceecd6eb5f8b1b1722be2fd2a12adf,/Users/steven/Documents/CsV/summary_clean.csv,/Users/steven/workspace/csvs-consolidated/general_summary_clean.csv,move
+b74481ff2e4133943a239de3e64d3887,/Users/steven/Documents/CsV/day_calendar.csv,/Users/steven/workspace/csvs-consolidated/general_day_calendar.csv,move
+42e7d7f4d480a2c992e2b588e9224c9c,/Users/steven/Documents/CsV/mythic-riddles.csv,/Users/steven/workspace/csvs-consolidated/general_mythic-riddles.csv,move
+cec9f078167c7b0c6a7f4d7efc729b7a,/Users/steven/Documents/CsV/Table_15.csv,/Users/steven/workspace/csvs-consolidated/general_Table_15.csv,move
+1d42e16978397c9dcbd677255ebe9491,/Users/steven/Documents/CsV/vidIQ_CSV_export_for_50_Photos_2025-02-07.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ_CSV_export_for_50_Photos_2025-02-07.csv,move
+57a7ffa23eef6f18fafc38e3500d65d4,/Users/steven/Documents/CsV/EtsyListingsNov2024  EtsySEOinfo.csv,/Users/steven/workspace/csvs-consolidated/business_EtsyListingsNov2024  EtsySEOinfo.csv,move
+024312ba7d2e3edc43a509a3a92454fb,/Users/steven/Documents/CsV/pr09ns.csv,/Users/steven/workspace/csvs-consolidated/general_pr09ns.csv,move
+cde537b08d48744236bbdd6231039ae5,/Users/steven/Documents/CsV/EtsyBlackTopListingsNov2024  EtsyBlackTop.csv,/Users/steven/workspace/csvs-consolidated/business_EtsyBlackTopListingsNov2024  EtsyBlackTop.csv,move
+a05752f66457fbd1552bdd8c1041be07,/Users/steven/Documents/CsV/trending_designs.csv,/Users/steven/workspace/csvs-consolidated/business_trending_designs.csv,move
+cd880b5f52267aeb5f367a2bec665688,/Users/steven/Documents/CsV/OrigiN_sToRies_1_13536221d8b280fcbb08cfdd95e952cf.csv,/Users/steven/workspace/csvs-consolidated/general_OrigiN_sToRies_1_13536221d8b280fcbb08cfdd95e952cf.csv,move
+6535dc8ccc8a0961fd60fbec3d446db7,/Users/steven/Documents/CsV/username_strategies.csv,/Users/steven/workspace/csvs-consolidated/general_username_strategies.csv,move
+89ce2c47f59aff4f41222adfbcbb5143,/Users/steven/Documents/CsV/Movies_2025-03-09_1150.csv,/Users/steven/workspace/csvs-consolidated/general_Movies_2025-03-09_1150.csv,move
+add60706f05f9b739b0a0cf023a31e72,/Users/steven/Documents/CsV/labelled_transactions.csv,/Users/steven/workspace/csvs-consolidated/general_labelled_transactions.csv,move
+5be0c1e5bf548bac0347a2e59c310229,/Users/steven/Documents/CsV/Table_17.csv,/Users/steven/workspace/csvs-consolidated/general_Table_17.csv,move
+0327c8bd837509de7f370338302ed3ea,/Users/steven/Documents/CsV/flexible_analyzed.csv,/Users/steven/workspace/csvs-consolidated/general_flexible_analyzed.csv,move
+ae62839f2b7283e716f9ed5dd274ad8c,/Users/steven/Documents/CsV/styles_2k.csv,/Users/steven/workspace/csvs-consolidated/general_styles_2k.csv,move
+fc7b3b47c75ba0813f06daa629710584,/Users/steven/Documents/CsV/Video_Ideas_b903de7d3aa4482586babe30801297d3.csv,/Users/steven/workspace/csvs-consolidated/general_Video_Ideas_b903de7d3aa4482586babe30801297d3.csv,move
+dea0595378b3c8933c97397bd2fadd34,/Users/steven/Documents/CsV/Monthly_Follower_Tracker_1_3259dbe8499c4ee784f5a8fd3ef51f65.csv,/Users/steven/workspace/csvs-consolidated/music_Monthly_Follower_Tracker_1_3259dbe8499c4ee784f5a8fd3ef51f65.csv,move
+0c1564014d8419fb7d0c3476a2df97cd,/Users/steven/Documents/CsV/Prompts_3d7f55f1c5ac4d52af74a322b93f871b.csv,/Users/steven/workspace/csvs-consolidated/general_Prompts_3d7f55f1c5ac4d52af74a322b93f871b.csv,move
+ef772d31fed4025b1cec5ede66bad793,/Users/steven/Documents/CsV/detailed_organization.csv,/Users/steven/workspace/csvs-consolidated/general_detailed_organization.csv,move
+561f5f0ef3d4b2c576b012813470c0d7,/Users/steven/Documents/CsV/metadata.csv,/Users/steven/workspace/csvs-consolidated/general_metadata.csv,move
+c686dfde37eac869409751d3ebde1ca7,/Users/steven/Documents/CsV/vidIQ_CSV_export_for_videos_Top_Keywords.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ_CSV_export_for_videos_Top_Keywords.csv,move
+1a8af822b5278ab5111ab10d67670365,/Users/steven/Documents/CsV/Untitled-Database-983d0b56fa34456cb34c0d5453505848.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled-Database-983d0b56fa34456cb34c0d5453505848.csv,move
+1b2de37c2fbbbe55f5e11bfec4a961de,/Users/steven/Documents/CsV/more_products_7_15936221d8b281f2bf81e3799b598c7d.csv,/Users/steven/workspace/csvs-consolidated/business_more_products_7_15936221d8b281f2bf81e3799b598c7d.csv,move
+bb3f59b07768dc11c89e3f94e86beedc,/Users/steven/Documents/CsV/Table_16.csv,/Users/steven/workspace/csvs-consolidated/general_Table_16.csv,move
+2f961debe2b89baf90681048bb3679fc,/Users/steven/Documents/CsV/enhanced_image_data-05-30-21-05.csv,/Users/steven/workspace/csvs-consolidated/media_enhanced_image_data-05-30-21-05.csv,move
+801afb2779b19dc394da21c9f32b241e,/Users/steven/Documents/CsV/print_on_demand_data.csv,/Users/steven/workspace/csvs-consolidated/business_print_on_demand_data.csv,move
+c03dd7c782151f764ecfcd3a20bd8e7e,/Users/steven/Documents/CsV/styles_44k.csv,/Users/steven/workspace/csvs-consolidated/general_styles_44k.csv,move
+622346a1661629c6e0e05a129497c109,/Users/steven/Documents/CsV/image_data-01-07-17-36.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-01-07-17-36.csv,move
+78ffdbc9d202340a16f7db7ca142477a,/Users/steven/Documents/CsV/sample01.csv,/Users/steven/workspace/csvs-consolidated/general_sample01.csv,move
+65cb05d64b10cfe27ee3ed6d32781dce,/Users/steven/Documents/CsV/fine_food_reviews_with_embeddings_1k.csv,/Users/steven/workspace/csvs-consolidated/general_fine_food_reviews_with_embeddings_1k.csv,move
+2c7c5f8b871c2acf260bc97ed5fa05b7,/Users/steven/Documents/CsV/EpicT-CuTs.csv,/Users/steven/workspace/csvs-consolidated/media_EpicT-CuTs.csv,move
+5034f4d2b07c64c90c9077b722e1ec73,/Users/steven/Documents/CsV/classifications_openai.csv,/Users/steven/workspace/csvs-consolidated/general_classifications_openai.csv,move
+5034f4d2b07c64c90c9077b722e1ec73,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/script_classifications_openai.csv,/Users/steven/workspace/csvs-consolidated/general_classifications_openai.csv,move
+d87b91b6d868c3c5f95860b971e2205e,/Users/steven/Documents/CsV/etsymergedmaster.csv,/Users/steven/workspace/csvs-consolidated/business_etsymergedmaster.csv,move
+e4c399bd8255bada4602a04924b9b96b,/Users/steven/Documents/CsV/topbyorders.csv,/Users/steven/workspace/csvs-consolidated/general_topbyorders.csv,move
+43e194a6a36c2e198379e2b38a3c470a,/Users/steven/Documents/CsV/topbyfavorites.csv,/Users/steven/workspace/csvs-consolidated/general_topbyfavorites.csv,move
+0aa9547d29aa38137c985f26dba5e21f,/Users/steven/Documents/CsV/pricedesc.csv,/Users/steven/workspace/csvs-consolidated/general_pricedesc.csv,move
+816d6c2a1f8aae1c7acde45d198f9435,/Users/steven/Documents/CsV/stuck.csv,/Users/steven/workspace/csvs-consolidated/general_stuck.csv,move
+f45570242ba8e719da7b0fc77ce2995e,/Users/steven/Documents/CsV/leonardo_urls.csv,/Users/steven/workspace/csvs-consolidated/general_leonardo_urls.csv,move
+ffc4218b4093b7e9d91501c970c68885,/Users/steven/Documents/CsV/image_output.csv,/Users/steven/workspace/csvs-consolidated/media_image_output.csv,move
+d6aee225e0da102bdbca58e4c325c232,/Users/steven/Documents/CsV/script_directory_detailed_metadata.csv,/Users/steven/workspace/csvs-consolidated/general_script_directory_detailed_metadata.csv,move
+cc37347551c3576ecc550bc5ee1a7221,/Users/steven/Documents/CsV/amazon_furniture_dataset.csv,/Users/steven/workspace/csvs-consolidated/general_amazon_furniture_dataset.csv,move
+b654a5993573de4f9220e65220bc03ef,/Users/steven/Documents/CsV/combined_output_04-07-25.csv,/Users/steven/workspace/csvs-consolidated/general_combined_output_04-07-25.csv,move
+f74ad5fb4fb5349a5cd1a619ca68091c,/Users/steven/Documents/CsV/image_data-08-10-23-27.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-08-10-23-27.csv,move
+7b8ba54887f4df58c214191d892f0678,/Users/steven/Documents/CsV/market_trends_merged_dedup.csv,/Users/steven/workspace/csvs-consolidated/business_market_trends_merged_dedup.csv,move
+017f2e832b5e8575eed502db7759035f,/Users/steven/Documents/CsV/mydesignsexport1.csv,/Users/steven/workspace/csvs-consolidated/general_mydesignsexport1.csv,move
+d693b572eb260bc705404da79debf31d,/Users/steven/Documents/CsV/tools-art-generative-ai-scripting-quantum-automation_related_keywords.csv,/Users/steven/workspace/csvs-consolidated/general_tools-art-generative-ai-scripting-quantum-automation_related_keywords.csv,move
+6e45723763874a2cba6628f3a82f5e58,/Users/steven/Documents/CsV/DB_FeaturedAITools_3bce05e1eb624c489f357292c69a240c.csv,/Users/steven/workspace/csvs-consolidated/general_DB_FeaturedAITools_3bce05e1eb624c489f357292c69a240c.csv,move
+604ccf1b58067d1c79a08876861d6d89,/Users/steven/Documents/CsV/market_trends_merged.csv,/Users/steven/workspace/csvs-consolidated/business_market_trends_merged.csv,move
+c249fc6285404c8d036c7990d4533c64,/Users/steven/Documents/CsV/upscaled_images.csv,/Users/steven/workspace/csvs-consolidated/media_upscaled_images.csv,move
+c249fc6285404c8d036c7990d4533c64,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/upscaled_images_log.csv,/Users/steven/workspace/csvs-consolidated/media_upscaled_images.csv,move
+adbbc1a9ab93d7ff3a60733ff7df7d13,/Users/steven/Documents/CsV/CSV_Example.csv,/Users/steven/workspace/csvs-consolidated/general_CSV_Example.csv,move
+8c1789cc0fd3012ed142d081388d9db8,/Users/steven/Documents/CsV/combined_output-4-4.csv,/Users/steven/workspace/csvs-consolidated/general_combined_output-4-4.csv,move
+5b00dd0fc15b99da36decf244df37e05,/Users/steven/Documents/CsV/audio_cleaned.csv,/Users/steven/workspace/csvs-consolidated/general_audio_cleaned.csv,move
+5b00dd0fc15b99da36decf244df37e05,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/clean-csv/audio_cleaned.csv,/Users/steven/workspace/csvs-consolidated/general_audio_cleaned.csv,move
+3ecd9869b02764aab1ce02be9766b5a9,/Users/steven/Documents/CsV/GPTs_6c2ff37690e743958aeb50d8aad8af3f.csv,/Users/steven/workspace/csvs-consolidated/general_GPTs_6c2ff37690e743958aeb50d8aad8af3f.csv,move
+23220a56cbfd4b47479f99e9a5a62b6a,/Users/steven/Documents/CsV/DALL-E_3_image_gallery_d4a9a67282ef41e19f449617b809bb59.csv,/Users/steven/workspace/csvs-consolidated/media_DALL-E_3_image_gallery_d4a9a67282ef41e19f449617b809bb59.csv,move
+a93d2bb1229381fb501c4a95d828c525,/Users/steven/Documents/CsV/improved_organization.csv,/Users/steven/workspace/csvs-consolidated/general_improved_organization.csv,move
+82f592e122feba73414ed6932e4d0a63,/Users/steven/Documents/CsV/helpcenter_articles.csv,/Users/steven/workspace/csvs-consolidated/general_helpcenter_articles.csv,move
+ceeffc9bfacd8b5be29dcbf4d4dc6a8e,/Users/steven/Documents/CsV/Quick_Links_eb8a14dfb5a04b01bc20ce67a500addb.csv,/Users/steven/workspace/csvs-consolidated/general_Quick_Links_eb8a14dfb5a04b01bc20ce67a500addb.csv,move
+34824f1efdd68d66327143ef3ff74fcd,/Users/steven/Documents/CsV/vids_cleaned.csv,/Users/steven/workspace/csvs-consolidated/general_vids_cleaned.csv,move
+34824f1efdd68d66327143ef3ff74fcd,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/clean-csv/vids_cleaned.csv,/Users/steven/workspace/csvs-consolidated/general_vids_cleaned.csv,move
+ac67cc89e949a39a0a597db139304f03,/Users/steven/Documents/CsV/vidIQ CSV export for Wholesale Ted 2025-10-25.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for Wholesale Ted 2025-10-25.csv,move
+e8ed5840c0241be2f6efcb9bede5bb2e,/Users/steven/Documents/CsV/intelligent_rollback.csv,/Users/steven/workspace/csvs-consolidated/general_intelligent_rollback.csv,move
+a74549994ccdfcf257be8d7d01629fd1,/Users/steven/Documents/CsV/Etsy_Product_Listings_Database.csv,/Users/steven/workspace/csvs-consolidated/business_Etsy_Product_Listings_Database.csv,move
+a74549994ccdfcf257be8d7d01629fd1,/Users/steven/Downloads/06_Archives/10_Uncategorized/02_Development_Projects/launch_assets_bundle/etsy_listing_drafts.csv,/Users/steven/workspace/csvs-consolidated/business_Etsy_Product_Listings_Database.csv,move
+7e86cba2a710952470fde99244983f25,/Users/steven/Documents/CsV/webm_files.csv,/Users/steven/workspace/csvs-consolidated/general_webm_files.csv,move
+050e90f21019a4ff621371030d558a58,/Users/steven/Documents/CsV/run_results_topk_baseline.csv,/Users/steven/workspace/csvs-consolidated/general_run_results_topk_baseline.csv,move
+b69465f6fff3d2649da4bd3bd92754a2,/Users/steven/Documents/CsV/updated_product.csv,/Users/steven/workspace/csvs-consolidated/business_updated_product.csv,move
+c9991d032a5cb0356a99208b12cbdf15,/Users/steven/Documents/CsV/categories_15936221d8b281e9b6e6d5c1cda931be.csv,/Users/steven/workspace/csvs-consolidated/general_categories_15936221d8b281e9b6e6d5c1cda931be.csv,move
+91046ae12c756782a06c8fb627d4a865,/Users/steven/Documents/CsV/Saved_Keywords_Stats_2025-04-05_at_10_23_06.csv,/Users/steven/workspace/csvs-consolidated/general_Saved_Keywords_Stats_2025-04-05_at_10_23_06.csv,move
+f0e0a9f5f9691cf90a03dda2dc2b35b1,/Users/steven/Documents/CsV/Untitled_15036221d8b280a6a687d00887bcde01.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_15036221d8b280a6a687d00887bcde01.csv,move
+af8e321d53ecc4929eae881a2f2613a4,/Users/steven/Documents/CsV/ichoakeTopKeywords.csv,/Users/steven/workspace/csvs-consolidated/general_ichoakeTopKeywords.csv,move
+7d4cfd2987d0711a226731eb7317e3dd,/Users/steven/Documents/CsV/run_results_topk_optimized.csv,/Users/steven/workspace/csvs-consolidated/general_run_results_topk_optimized.csv,move
+c2e7f197ad123bf2c0a21d59cd667b64,/Users/steven/Documents/CsV/Creative FaBrica-prompts_all.csv,/Users/steven/workspace/csvs-consolidated/general_Creative FaBrica-prompts_all.csv,move
+fef18197f84e445c15e336f25aaa1446,/Users/steven/Documents/CsV/fragments_summary.csv,/Users/steven/workspace/csvs-consolidated/general_fragments_summary.csv,move
+c21bf3f6f1f3e50679773681ff40990e,/Users/steven/Documents/CsV/youtube_extract_50_Photos.csv,/Users/steven/workspace/csvs-consolidated/general_youtube_extract_50_Photos.csv,move
+31338c89ab5a19d40441aed0cfab3e0e,/Users/steven/Documents/CsV/Directory_15936221d8b281ccaf09d4e6c7916f88.csv,/Users/steven/workspace/csvs-consolidated/general_Directory_15936221d8b281ccaf09d4e6c7916f88.csv,move
+546014070fe35283fdf73809713d2d4a,/Users/steven/Documents/CsV/whisperTranscripts_-_Sheet1_1ae36221d8b280aba2fcdd95168e5ea9.csv,/Users/steven/workspace/csvs-consolidated/general_whisperTranscripts_-_Sheet1_1ae36221d8b280aba2fcdd95168e5ea9.csv,move
+400eb5920c732814972fc2722316a595,/Users/steven/Documents/CsV/results.csv,/Users/steven/workspace/csvs-consolidated/general_results.csv,move
+9487ab1e34e2f497c540c58aad78bada,/Users/steven/Documents/CsV/AG_news_samples.csv,/Users/steven/workspace/csvs-consolidated/general_AG_news_samples.csv,move
+f5dd76cbf124e6379376c5d16e99a21f,/Users/steven/Documents/CsV/vidIQ CSV export for undefined Top Keywords (1).csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for undefined Top Keywords (1).csv,move
+52cb86920371195ffc27c46b99c39e9f,/Users/steven/Documents/CsV/recovery_analysis_20251028_035128.csv,/Users/steven/workspace/csvs-consolidated/analysis_recovery_analysis_20251028_035128.csv,move
+6b3d945afba9e326e673df17f26a4bb6,/Users/steven/Documents/CsV/Progress bar 15936221d8b281bd9348f9a28797e32f.csv,/Users/steven/workspace/csvs-consolidated/general_Progress bar 15936221d8b281bd9348f9a28797e32f.csv,move
+046eb0cf4dfc5eec77b9da5772c038bd,/Users/steven/Documents/CsV/moved_files.csv,/Users/steven/workspace/csvs-consolidated/general_moved_files.csv,move
+b06be0b72038729de85c4dd66bffd626,/Users/steven/Documents/CsV/Poster_Dimensions_at_300_DPI.csv,/Users/steven/workspace/csvs-consolidated/general_Poster_Dimensions_at_300_DPI.csv,move
+a0aea996c9642587663d18b1361b0fe9,/Users/steven/Documents/CsV/imagedata08120339.csv,/Users/steven/workspace/csvs-consolidated/media_imagedata08120339.csv,move
+83c6924109f35e2456cb40648938cdc5,/Users/steven/Documents/CsV/html_users.csv,/Users/steven/workspace/csvs-consolidated/general_html_users.csv,move
+31f740203c69bdb04024adf0a8963038,/Users/steven/Documents/CsV/DigiTaL_DiVe_15236221d8b2808aa697d88175ddfe35.csv,/Users/steven/workspace/csvs-consolidated/general_DigiTaL_DiVe_15236221d8b2808aa697d88175ddfe35.csv,move
+2001855f320deb797eb6c316028b8af8,/Users/steven/Documents/CsV/python.csv,/Users/steven/workspace/csvs-consolidated/general_python.csv,move
+2001855f320deb797eb6c316028b8af8,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/python.csv,/Users/steven/workspace/csvs-consolidated/general_python.csv,move
+d74e6eb60e790fab2cc1d2e4aab905c5,/Users/steven/Documents/CsV/stormchild_storyboard.csv,/Users/steven/workspace/csvs-consolidated/general_stormchild_storyboard.csv,move
+bc22fdf76e5003147a4c029ea4684a7f,/Users/steven/Documents/CsV/trashcat.csv,/Users/steven/workspace/csvs-consolidated/general_trashcat.csv,move
+a652c8e4b30589a8f12d622dc83f9398,/Users/steven/Documents/CsV/Untitled_d75c6c0fb2dc433db89710381da55808.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_d75c6c0fb2dc433db89710381da55808.csv,move
+7645b80afd087146bc39680ae9143e13,/Users/steven/Documents/CsV/vidIQ CSV export for undefined Top Keywords copy.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for undefined Top Keywords copy.csv,move
+ed90c58a5c99fadc1e9df807e60f18e6,/Users/steven/Documents/CsV/python_050625.csv,/Users/steven/workspace/csvs-consolidated/general_python_050625.csv,move
+ed90c58a5c99fadc1e9df807e60f18e6,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/python-050625.csv,/Users/steven/workspace/csvs-consolidated/general_python_050625.csv,move
+534b134a90433762adbc199f72acef04,/Users/steven/Documents/CsV/vidIQ CSV export for Travis Wardrop 2025-10-25.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for Travis Wardrop 2025-10-25.csv,move
+392556f7d27c28692fd045a0f0710774,/Users/steven/Documents/CsV/audio_output.csv,/Users/steven/workspace/csvs-consolidated/general_audio_output.csv,move
+5f23e0e9faa77470deb7fde8b74a44f5,/Users/steven/Documents/CsV/Quiz_3-29_f8fdbd4051f8413a813b950dfdf2b497.csv,/Users/steven/workspace/csvs-consolidated/general_Quiz_3-29_f8fdbd4051f8413a813b950dfdf2b497.csv,move
+0c993a92bfc9a337de64cf74a48ceb2d,/Users/steven/Documents/CsV/WhisperTextOutput44.csv,/Users/steven/workspace/csvs-consolidated/general_WhisperTextOutput44.csv,move
+0c993a92bfc9a337de64cf74a48ceb2d,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/Downloads/WhisperTextOutput.csv,/Users/steven/workspace/csvs-consolidated/general_WhisperTextOutput44.csv,move
+f4346ef26e632fe456d59ef67897251f,/Users/steven/Documents/CsV/Prompt_Library_AI_for_Instagram_15936221d8b28045a20bcc42b884ed8d.csv,/Users/steven/workspace/csvs-consolidated/general_Prompt_Library_AI_for_Instagram_15936221d8b28045a20bcc42b884ed8d.csv,move
+893f967672add6168d08dac42e8e2ec9,/Users/steven/Documents/CsV/fine_food_reviews_1k.csv,/Users/steven/workspace/csvs-consolidated/general_fine_food_reviews_1k.csv,move
+e215ef56d7b602f0f17d060949aa32bd,/Users/steven/Documents/CsV/vidIQ CSV export for AI Money Maniac 🤑 2025-10-25.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for AI Money Maniac 🤑 2025-10-25.csv,move
+236565d088e83c1deae855dcf1c9c0f1,/Users/steven/Documents/CsV/Untitled_71ac465da7144c4dad5c1dab6da39274.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled_71ac465da7144c4dad5c1dab6da39274.csv,move
+be5968e7db73a10291d0d363536d6163,/Users/steven/Documents/CsV/As-a-Man-Thinketh/Reports/visual_analysis_data.csv,/Users/steven/workspace/csvs-consolidated/analysis_visual_analysis_data.csv,move
+b48d9c865c23465d6e173a63e2c3d524,/Users/steven/Documents/CsV/Data-Analysis/Medium-Files/winter_olympics_2022.csv,/Users/steven/workspace/csvs-consolidated/media_winter_olympics_2022.csv,move
+9b7c2ad48ec2fe6a531cfe88a235f947,/Users/steven/Documents/CsV/Data-Analysis/Medium-Files/winemag-data-130k-v2.csv,/Users/steven/workspace/csvs-consolidated/general_winemag-data-130k-v2.csv,move
+ac7e7ca7065a3eb59f057ca9dd077cb6,/Users/steven/Documents/CsV/Data-Analysis/Templates/Medium-Files/sample_styles_with_embeddings.csv,/Users/steven/workspace/csvs-consolidated/general_sample_styles_with_embeddings.csv,move
+194a1a921ba8fa1b6e9e419da2ebb684,/Users/steven/Documents/CsV/Data-Analysis/Templates/Medium-Files/marketing_sample_for_amazon_com-ecommerce__20200101_20200131__10k_data.csv,/Users/steven/workspace/csvs-consolidated/general_marketing_sample_for_amazon_com-ecommerce__20200101_20200131__10k_data.csv,move
+23d9ea9d12fea281a54cf905ec268b42,/Users/steven/Documents/inventory/python_inventory.csv,/Users/steven/workspace/csvs-consolidated/general_python_inventory.csv,move
+1bf9bcc8e51cd814bc6c80f2ab0b6f50,/Users/steven/Documents/inventory/script_inventory.csv,/Users/steven/workspace/csvs-consolidated/general_script_inventory.csv,move
+78305cd03c4e82881003327c6a63f33b,/Users/steven/Documents/MUSIC_ARCHIVE_PRESERVATION_20251104_190853/CSV_CATALOGS/Song-origins-html_TrashCaTs-Disco_-_TrashCaT-inFo.csv,/Users/steven/workspace/csvs-consolidated/music_TrashCaTs-Disco - TrashCaT-inFo.csv,move
+78305cd03c4e82881003327c6a63f33b,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/DOCS/TrashCaTs-Disco - TrashCaT-inFo_20251104_180747.csv,/Users/steven/workspace/csvs-consolidated/music_TrashCaTs-Disco - TrashCaT-inFo.csv,move
+b337a5382911517545f0bd9b300895df,/Users/steven/Downloads/Misc/Suno Master-0ct2025 - Suno-ScrapeD - songs_master_combined(1).csv,/Users/steven/workspace/csvs-consolidated/GOOGLE_SHEET_SUNO_DATA.csv,move
+e4eeb2d712e72d800453c4f698a7b06c,/Users/steven/Downloads/Misc/mini_index.csv,/Users/steven/workspace/csvs-consolidated/general_mini_index.csv,move
+e4eeb2d712e72d800453c4f698a7b06c,/Users/steven/Pictures/ideo-notion/mini_index.csv,/Users/steven/workspace/csvs-consolidated/general_mini_index.csv,move
+f3d0e83927909279c352c3c64cce84d6,/Users/steven/Downloads/Misc/suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv,/Users/steven/workspace/csvs-consolidated/GOOGLE_SHEET_2_SUNO_DATA.csv,move
+53ab23adbc5e6ac740f794d7af28bb40,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/suno-scrape - short-dataset_data.csv,/Users/steven/workspace/csvs-consolidated/music_suno-scrape - short-dataset.csv,move
+3471f5d7abf8d4bb46b45a32493b5576,/Users/steven/Downloads/Misc/ichoake_python_focus_counts(1).csv,/Users/steven/workspace/csvs-consolidated/ichoake_python_focus_counts.csv,move
+1e73511dabc7c95a612c16a0309391b5,/Users/steven/Downloads/Misc/SEO_variations_trending_top1-5.csv,/Users/steven/workspace/csvs-consolidated/business_SEO_variations_trending_top1-5.csv,move
+1e73511dabc7c95a612c16a0309391b5,/Users/steven/Pictures/ideo-notion/SEO_variations_trending_top1-5.csv,/Users/steven/workspace/csvs-consolidated/business_SEO_variations_trending_top1-5.csv,move
+0e8e5e4e3f82b66bf069f47f42caf2ae,/Users/steven/Library/Application Support/DEVONthink 3/Inbox.dtBase2/Files.noindex/csv/8/dataset_etsy-best-sellers-scraper_2025-08-05_09-42-51-455.csv,/Users/steven/workspace/csvs-consolidated/dataset_etsy-best-sellers-scraper_2025-08-05_09-42-51-455.csv,move
+5d03ed741c1946520a7d7a0fe161fbef,/Users/steven/Downloads/ChatGPT-export-Library/Zip_Files/whisper/whisperTranscripts - Sheet1 1ae36221d8b280aba2fcdd95168e5ea9.csv,/Users/steven/workspace/csvs-consolidated/whisperTranscripts - Sheet1 1ae36221d8b280aba2fcdd95168e5ea9_all.csv,move
+5d03ed741c1946520a7d7a0fe161fbef,/Users/steven/Downloads/ChatGPT-export-Library/Zip_Files/whisper/whisperTranscripts - Sheet1 1ae36221d8b280aba2fcdd95168e5ea9_all.csv,/Users/steven/workspace/csvs-consolidated/whisperTranscripts - Sheet1 1ae36221d8b280aba2fcdd95168e5ea9_all.csv,move
+61b03e9663ac009552c56baabfef14cf,/Users/steven/Downloads/979d5653-54c4-45a3-bef4-cda3b3ec70d2_Export-80036393-3266-4fc8-bef5-78b8048e0863/ideoGram 15b36221d8b280918368e1dcfdedff3c/Untitled 16e36221d8b2804c9d42c02f508b19a0.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled 16e36221d8b2804c9d42c02f508b19a0.csv,move
+61b03e9663ac009552c56baabfef14cf,/Users/steven/Downloads/ideo-notiojn/ideoGram 15b36221d8b280918368e1dcfdedff3c/Untitled 16e36221d8b2804c9d42c02f508b19a0.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled 16e36221d8b2804c9d42c02f508b19a0.csv,move
+61b03e9663ac009552c56baabfef14cf,/Users/steven/Downloads/ideo-notiojn/ideoGram 15b36221d8b280918368e1dcfdedff3c/Untitled 16e36221d8b2804c9d42c02f508b19a0_all.csv,/Users/steven/workspace/csvs-consolidated/general_Untitled 16e36221d8b2804c9d42c02f508b19a0.csv,move
+59a96d33c9e4d899e979af396466ad6e,/Users/steven/Downloads/ExportBlock-45e81a40-1567-4ee2-ac9a-3d8302eda264-Part-1/NocTurnE MeLoDies 16f36221d8b280369c10efce4da68757/Discography ALL 15736221d8b280848e96cade6970e5d7.csv,/Users/steven/workspace/csvs-consolidated/music_Discography-ALL.csv,move
+d15b97407c6025610d874b8d28a45b45,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/script_classifications_with_auto_categories.csv,/Users/steven/workspace/csvs-consolidated/general_script_classifications_with_auto_categories.csv,move
+196c095f67f0593b468158f4b25a890d,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/Python_backup_dryrun.csv,/Users/steven/workspace/csvs-consolidated/general_Python_backup_dryrun.csv,move
+0ef01ae46339c4019a470e769154b012,/Users/steven/GitHub/AvaTarArTs-Suite/docs/reports/scan_results_20250328_231326.csv,/Users/steven/workspace/csvs-consolidated/general_scan_results_20250328_231326.csv,move
+82b2ff55b2bf8d29765d1bbd260f759e,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/image_data-09-05-11-14.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-09-05-11-14.csv,move
+35bdaf049f70b41ba12c7dc690b45478,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/image_data-09-05-12-50.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-09-05-12-50.csv,move
+32e47984f34bc24c797224238b34c9d4,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/vids-09-05-11:11.csv,/Users/steven/workspace/csvs-consolidated/vids-09-05-11:18.csv,move
+848fe02baae4d6fa50831b519b30f2eb,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/image_data-09-05-12-37.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-09-05-12-37.csv,move
+0c70f2ea7466352370b90006dd9b8227,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/system/cleanup/image_data-09-05-12-36.csv,/Users/steven/workspace/csvs-consolidated/media_image_data-09-05-12-36.csv,move
+5f59c18fd3a5f83ee1ee589f3bcf0e56,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/organizers/sorting/sorting/audio-07-11-14:21.csv,/Users/steven/workspace/csvs-consolidated/general_audio-07-11-14:21.csv,move
+421d705601128c2a990414a25d65c928,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/duplicates/fdupes/clean/other-07-24-15:58.csv,/Users/steven/workspace/csvs-consolidated/general_other-07-24-15:58.csv,move
+c8709bd315f1bf4f0ae67ef8d974eda1,/Users/steven/GitHub/AvaTarArTs-Suite/utilities/duplicates/fdupes/clean/audio-07-24-15:56.csv,/Users/steven/workspace/csvs-consolidated/general_audio-07-24-15:56.csv,move
+42942bbbcbbfae2af442c973a14ea2b2,/Users/steven/pythons/_docs/strategy/_HANDLE_MASTER_REGISTRATION_CSV.csv,/Users/steven/workspace/csvs-consolidated/general__HANDLE_MASTER_REGISTRATION_CSV.csv,move
+42942bbbcbbfae2af442c973a14ea2b2,/Users/steven/workspace/archive/system/ECOSYSTEM/docs/EXECUTION/03-Handle-Registration-Guide.csv,/Users/steven/workspace/csvs-consolidated/general__HANDLE_MASTER_REGISTRATION_CSV.csv,move
+4b1b87de9863e81f1ef8945d241c606e,/Users/steven/workspace/archive/system/advanced-systems/MOVE-PROJECTS-SIMPLE-PLAN.csv,/Users/steven/workspace/csvs-consolidated/general_MOVE-PROJECTS-SIMPLE-PLAN.csv,move
+0a32f389ecadceb63348dfbcf6d65423,/Users/steven/workspace/archive/system/advanced-systems/MOVE-PROJECTS-SAFE-DRY-RUN.csv,/Users/steven/workspace/csvs-consolidated/general_MOVE-PROJECTS-SAFE-DRY-RUN.csv,move
+8f5088042ba0ece315cf7cf432a91368,/Users/steven/workspace/archive/system/advanced-systems/MOVE-ALL-PROJECTS-DRY-RUN.csv,/Users/steven/workspace/csvs-consolidated/general_MOVE-ALL-PROJECTS-DRY-RUN.csv,move
+7df0b1c3136f4105157238d7ebe4ac0d,/Users/steven/workspace/archive/system/advanced-systems/DOCUMENTS-ARCHIVE/csv/audio-dry-20251026-222950.csv,/Users/steven/workspace/csvs-consolidated/general_audio-dry-20251026-222950.csv,move
+44d44af53959f96283c0eb0c6e62a005,/Users/steven/workspace/archive/system/advanced-systems/DOCUMENTS-ARCHIVE/csv/chatgpt_library_images_20251027_041700.csv,/Users/steven/workspace/csvs-consolidated/media_chatgpt_library_images_20251027_041700.csv,move
+840bc543bd2d9975a7eb02c845abab59,/Users/steven/workspace/archive/system/advanced-systems/DOCUMENTS-ARCHIVE/csv/vidIQ CSV export for Sandra Di 2025-10-30.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for Sandra Di 2025-10-30.csv,move
+6502652b0d79f81cea3ef98b65539181,/Users/steven/workspace/archive/system/advanced-systems/DOCUMENTS-ARCHIVE/csv/audio-dry-5col-20251026-224257.csv,/Users/steven/workspace/csvs-consolidated/general_audio-dry-5col-20251026-224257.csv,move
+930c2cfeb41669ae2a09866329156892,/Users/steven/workspace/archive/system/advanced-systems/DOCUMENTS-ARCHIVE/csv/vids-dry-20251026-222950.csv,/Users/steven/workspace/csvs-consolidated/general_vids-dry-20251026-222950.csv,move
+60bad6efbb1814f74acd57816c92521c,/Users/steven/workspace/archive/system/advanced-systems/DOCUMENTS-ARCHIVE/csv/vidIQ CSV export for undefined Top Keywords.csv,/Users/steven/workspace/csvs-consolidated/general_vidIQ CSV export for undefined Top Keywords.csv,move
+69465ea57553a77911f5aa4010a08340,/Users/steven/workspace/archive/system/advanced-systems/ORGANIZATION-SYSTEM/dry-run.csv,/Users/steven/workspace/csvs-consolidated/general_dry-run.csv,move
+bcf9bc0cb0dc4e66aacff59fca9545e4,/Users/steven/workspace/archive/system/advanced-systems/ARCHIVE/old-csvs/envd_rename.csv,/Users/steven/workspace/csvs-consolidated/general_envd_rename.csv,move
+38c9881430865ebf44083b51590e37f8,/Users/steven/workspace/archive/system/advanced-systems/ARCHIVE/old-csvs/rename_results_20251031_221542.csv,/Users/steven/workspace/csvs-consolidated/general_rename_results_20251031_221542.csv,move
+1349bb9e0de842bef67b636ba81ddef7,/Users/steven/workspace/archive/system/advanced-systems/CONSOLIDATION-DOCS/COMPLETE-SESSION-LOG.csv,/Users/steven/workspace/csvs-consolidated/general_COMPLETE-SESSION-LOG.csv,move
+a44411e3076ba8cb0475580ee844bb86,/Users/steven/workspace/archive/system/advanced-systems/CONSOLIDATION-DOCS/COMPLETE-CODE-INVENTORY.csv,/Users/steven/workspace/csvs-consolidated/general_COMPLETE-CODE-INVENTORY.csv,move
+c7c8133a1bf9a88a35081ad0f2330f70,/Users/steven/workspace/archive/system/advanced-systems/CONSOLIDATION-DOCS/COMPLETE-DEEP-SCAN-WITH-HIDDEN.csv,/Users/steven/workspace/csvs-consolidated/general_COMPLETE-DEEP-SCAN-WITH-HIDDEN.csv,move
+0505d0fc86d21d161b0293522bc603eb,/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/html_analysis/depth_analysis.csv,/Users/steven/workspace/csvs-consolidated/analysis_depth_analysis.csv,move
+056d5422af9df10cd9e479fbb06fc254,/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/html_analysis/file_analysis.csv,/Users/steven/workspace/csvs-consolidated/analysis_file_analysis.csv,move
+0a9b6cf94ce22373aebd37188c82ea00,/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/html_analysis/duplicate_analysis.csv,/Users/steven/workspace/csvs-consolidated/analysis_duplicate_analysis.csv,move
+5115152453aefee6f6b747d78b796d6e,/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/html_analysis/category_analysis.csv,/Users/steven/workspace/csvs-consolidated/analysis_category_analysis.csv,move
+bb5a52867087684b3a7425547cb5d4e9,/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/html_analysis/codex_analysis.csv,/Users/steven/workspace/csvs-consolidated/analysis_codex_analysis.csv,move
+e1592c58d5c7b16a5af4e83ce4b5aeee,/Users/steven/workspace/archive/old-structure/ai-sites/ORGANIZED/data/quality_summary.csv,/Users/steven/workspace/csvs-consolidated/general_quality_summary.csv,move
+23017b66bec4c395ef37756f78e2cd30,/Users/steven/workspace/archive/old-structure/projects/content-mgmt/retention-hub/recipes/data/affiliates.csv,/Users/steven/workspace/csvs-consolidated/general_affiliates.csv,move
+23017b66bec4c395ef37756f78e2cd30,/Users/steven/workspace/archive/old-structure/revenue-projects/passive-income/passive-income-empire/retention-hub/recipes/data/affiliates.csv,/Users/steven/workspace/csvs-consolidated/general_affiliates.csv,move
+23017b66bec4c395ef37756f78e2cd30,/Users/steven/workspace/passive-income-empire/retention-hub/recipes/data/affiliates.csv,/Users/steven/workspace/csvs-consolidated/general_affiliates.csv,move
+111ddb9a4277e7832cef9ffe896062c6,/Users/steven/workspace/archive/old-structure/revenue-projects/passive-income/passive-income-empire/marketing/calendar.csv,/Users/steven/workspace/csvs-consolidated/general_calendar.csv,move
+111ddb9a4277e7832cef9ffe896062c6,/Users/steven/workspace/passive-income-empire/marketing/calendar.csv,/Users/steven/workspace/csvs-consolidated/general_calendar.csv,move
+ccdd6f24416d2c6bc841b5f56b2ee139,/Users/steven/workspace/archive/old-structure/revenue-projects/passive-income/passive-income-empire/marketing/keywords/keyword-research.csv,/Users/steven/workspace/csvs-consolidated/general_keyword-research.csv,move
+ccdd6f24416d2c6bc841b5f56b2ee139,/Users/steven/workspace/passive-income-empire/marketing/keywords/keyword-research.csv,/Users/steven/workspace/csvs-consolidated/general_keyword-research.csv,move
+fa508f87d9882410ede29e647d69dd8c,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/pcg64-testset-2.csv,/Users/steven/workspace/csvs-consolidated/general_pcg64-testset-2.csv,move
+801fbf30601145e4d6228f28af187e6c,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/songs_master_unique_data.csv,/Users/steven/workspace/csvs-consolidated/music_songs_master_unique.csv,move
+150bbd205f0a7808bd01187892f8f296,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/pcg64-testset-1.csv,/Users/steven/workspace/csvs-consolidated/general_pcg64-testset-1.csv,move
+b613c4aadf84117260ec4cc8aa177ca9,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/pcg64dxsm-testset-2.csv,/Users/steven/workspace/csvs-consolidated/general_pcg64dxsm-testset-2.csv,move
+706a3ac523f62ae699b19d94ae1a1708,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/Downloads/tumbler_dnd_listings_2023-08-08-02-00-31.csv,/Users/steven/workspace/csvs-consolidated/general_tumbler_dnd_listings_2023-08-08-02-00-31.csv,move
+8a2f0bea53d88636d50e9079379d4f25,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-tan.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-tan.csv,move
+525820cea48d1e4bd028614da460fbb3,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-tanh.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-tanh.csv,move
+8fd2b6fbe9b624cc00467db9f03a1e2e,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-expm1.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-expm1.csv,move
+c1abdb2aaec01bb8c9b7a0c4ba37fec6,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-exp.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-exp.csv,move
+ce4321835f30d0b2b09112a698f19544,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/song3_extracted_data.csv,/Users/steven/workspace/csvs-consolidated/music_song3_extracted.csv,move
+dbc86cb74650cfd1aec887f1b74d4a76,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-log2.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-log2.csv,move
+666a9ce733ed4b62cfcc951566dc963b,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/song4_extracted_data.csv,/Users/steven/workspace/csvs-consolidated/music_song4_extracted.csv,move
+3183e7881d445adeee576ec328708a4c,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/philox-testset-1.csv,/Users/steven/workspace/csvs-consolidated/general_philox-testset-1.csv,move
+6879435585754fb7f6b5fb09f22faa84,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/image_data.csv,/Users/steven/workspace/csvs-consolidated/media_image_data.csv,move
+1d4af19aa29c321ab03dfda4b5fd282d,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/philox-testset-2.csv,/Users/steven/workspace/csvs-consolidated/general_philox-testset-2.csv,move
+1526fa2a6a135f7f8fe1877b2d9ee57b,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-cbrt.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-cbrt.csv,move
+9ff80e77a8503b097b57f7151e9b0366,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-log.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-log.csv,move
+26b23e84e30fe4b433a3d3ef97bc12a2,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/song3_extracted_latest_data.csv,/Users/steven/workspace/csvs-consolidated/music_song3_extracted_latest.csv,move
+25d3b77a611e0c044893ac1c2be83209,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/songs2_extracted_data.csv,/Users/steven/workspace/csvs-consolidated/music_songs2_extracted.csv,move
+3883d67d85556f81b7f110c0c28aa437,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-arccosh.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-arccosh.csv,move
+ba27742586467a6116942bc18cd852f3,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-arccos.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-arccos.csv,move
+5a84cb4aba7efefed42d9f1df062f483,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/time_distribution_data.csv,/Users/steven/workspace/csvs-consolidated/general_time_distribution.csv,move
+79b18d7edc6fd1e1a6bd869ab7e550d4,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/songs_extracted.csv,/Users/steven/workspace/csvs-consolidated/music_songs_extracted.csv,move
+a30b5ec8288beb2afb9713b856c2035a,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-arcsin.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-arcsin.csv,move
+79d48193c13b1083d28b3b38ed20096e,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-arctanh.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-arctanh.csv,move
+762fb3e923aa42f2dbf9d010b4922545,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-cosh.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-cosh.csv,move
+105b1258cbf0369612a61009298b5e87,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/sfc64-testset-2.csv,/Users/steven/workspace/csvs-consolidated/general_sfc64-testset-2.csv,move
+4f8a0bb760030d130b3748a5140a2d96,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/pcg64dxsm-testset-1.csv,/Users/steven/workspace/csvs-consolidated/general_pcg64dxsm-testset-1.csv,move
+e9af7389e46de3a6b804d773dd3fe28e,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/mt19937-testset-2.csv,/Users/steven/workspace/csvs-consolidated/general_mt19937-testset-2.csv,move
+e3b31ea4291aba5213f55b3a9043322c,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-log10.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-log10.csv,move
+288855076fa220405bae4f294610329a,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-arcsinh.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-arcsinh.csv,move
+a717ee058bd4322e69d33eeb305857db,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/suno_merged_master_20250904-143205_data.csv,/Users/steven/workspace/csvs-consolidated/music_suno_merged_master_20250904-143205.csv,move
+ba21dd18918369d23da72c8600674c36,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/songs_master_combined_data.csv,/Users/steven/workspace/csvs-consolidated/music_songs_master_combined.csv,move
+fb7da561cdbbafecaa8992aa91fa463b,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-arctan.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-arctan.csv,move
+e3372a8a685fe4106a0392e3363ef65e,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/sfc64-testset-1.csv,/Users/steven/workspace/csvs-consolidated/general_sfc64-testset-1.csv,move
+42f930477266cc22c4a0bf3859ad0655,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/random/tests/data/mt19937-testset-1.csv,/Users/steven/workspace/csvs-consolidated/general_mt19937-testset-1.csv,move
+02cc0ff0e827748d39dee2ced71b290d,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-log1p.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-log1p.csv,move
+ad163fdd5450bb7acdf2a234727b8924,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/keyword_frequency_data.csv,/Users/steven/workspace/csvs-consolidated/general_keyword_frequency.csv,move
+4613e8d70bc85548f350827a3cff0ab1,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-sinh.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-sinh.csv,move
+1c61604b63fc6be9ac9ecdf74bd744a2,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/songs_duplicates_report_data.csv,/Users/steven/workspace/csvs-consolidated/music_songs_duplicates_report.csv,move
+497f0ecc43009a5b6514cc7f62d753eb,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/suno-9-2025 - songs_master_combined_data.csv,/Users/steven/workspace/csvs-consolidated/music_suno-9-2025 - songs_master_combined.csv,move
+fb4d9f67b7b885d213a87beeb917faeb,/Users/steven/Pictures/ideo-notion/domain-list.csv,/Users/steven/workspace/csvs-consolidated/general_domain-list.csv,move
+11f657050557a273527069e0376142cf,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/everBee/goldiemocksstudio_analytics20241212-9-mnsk7.csv,/Users/steven/workspace/csvs-consolidated/general_goldiemocksstudio_analytics20241212-9-mnsk7.csv,move
+aa2b4b6be5d7ec3c0782d03d71bcf8ce,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670_data.csv,/Users/steven/workspace/csvs-consolidated/music_suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv,move
+39dfc7a5bc717dfddfb363fb22281621,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-exp2.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-exp2.csv,move
+6026a018dedc706fa673352e055543ca,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-cos.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-cos.csv,move
+0c433af3b8e05b8098c16fa90af0dfea,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/songs_master_analytical_data.csv,/Users/steven/workspace/csvs-consolidated/music_songs_master_analytical.csv,move
+e387f65bd1ef536dcf29718a7dc55781,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/Beetlejuice_Themes_Prompts.csv,/Users/steven/workspace/csvs-consolidated/general_Beetlejuice_Themes_Prompts.csv,move
+c70380b08736b821b046ea7bbd53f36a,/Users/steven/Library/Python/3.12/lib/python/site-packages/numpy/core/tests/data/umath-validation-set-sin.csv,/Users/steven/workspace/csvs-consolidated/general_umath-validation-set-sin.csv,move
+e746cad45fd51b33efd9e594ae13c699,/Users/steven/Pictures/etsy/01_ideogram_designs/ideo-all-top_20251007_151333.csv,/Users/steven/workspace/csvs-consolidated/general_ideo-all-top_20251007_151333.csv,move
+0549dbfc657e5f8cedf1cb3cf14d26ab,/Users/steven/Pictures/ideo-notion/Suno-ScrapeD - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv,/Users/steven/workspace/csvs-consolidated/music_Suno-ScrapeD - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv,move
+cb3e924051e9d1c48c845181fd2b72f0,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/nocTurneMeLoDieS/suno_backups/data/data/songs_merged_data.csv,/Users/steven/workspace/csvs-consolidated/music_songs_merged.csv,move
+ca3c50731596f10588c8963a76a56194,/Users/steven/pythons/_analysis/archived/batch_reports/EXECUTED_BATCH_01_20251105_114540.csv,/Users/steven/workspace/csvs-consolidated/EXECUTED_BATCH_01_20251105_114514.csv,move
+68b001cb4668e372c4f75ca7d786088a,/Users/steven/pythons/_analysis/archived/batch_reports/EXECUTED_BATCH_02_20251105_114542.csv,/Users/steven/workspace/csvs-consolidated/EXECUTED_BATCH_02_20251105_114517.csv,move
+a68e4999a3d8a3f90b3f2ab130f97d86,/Users/steven/Library/Mobile Documents/com~apple~CloudDocs/Export-d5cfcf41-d554-4632-9f0f-386d091ffd76/Ultimate YouTube Generator 1 0 4a7c59dc3f1b4b10adb6a4d05df1084e/Untitled bbeae22474fe49d0b024b0c48b512abf.csv,/Users/steven/workspace/csvs-consolidated/Untitled bbeae22474fe49d0b024b0c48b512abf.csv,move

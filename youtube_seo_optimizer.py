@@ -10,14 +10,11 @@ Integrates with:
 - customer_retention_engine.py (Viewer retention)
 """
 
-import os
 import json
 import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field
-from datetime import datetime
-import subprocess
 
 # Add parent directory for imports
 sys.path.insert(0, str(Path(__file__).parent))
@@ -528,16 +525,16 @@ def main():
     print("📊 SEO ANALYSIS")
     print("="*70)
     print(f"\nSEO Score: {analysis.seo_score:.1f}/100")
-    print(f"\nTitle Optimization:")
+    print("\nTitle Optimization:")
     for key, value in analysis.title_optimization.items():
         print(f"  {key}: {value}")
     
-    print(f"\nDescription Optimization:")
+    print("\nDescription Optimization:")
     for key, value in analysis.description_optimization.items():
         print(f"  {key}: {value}")
     
     if analysis.recommendations:
-        print(f"\n💡 Recommendations:")
+        print("\n💡 Recommendations:")
         for rec in analysis.recommendations:
             print(f"  - {rec}")
     

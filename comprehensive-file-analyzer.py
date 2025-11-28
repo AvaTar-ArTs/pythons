@@ -14,7 +14,6 @@ import subprocess
 import sys
 from pathlib import Path
 from datetime import datetime
-import json
 
 
 class MasterAnalyzer:
@@ -157,7 +156,7 @@ class MasterAnalyzer:
                 scan = self.results["scan"]
                 f.write(f"- **Total Scripts:** {scan['total_scripts']:,}\n")
                 f.write(f"- **Categories:** {scan['categories']}\n")
-                f.write(f"- **Structure:** 100% FLAT\n\n")
+                f.write("- **Structure:** 100% FLAT\n\n")
 
             f.write("## Tool Results\n\n")
             for tool, data in self.results.items():
@@ -204,7 +203,7 @@ class MasterAnalyzer:
             print(
                 f"🛠️ Ran {len([r for r in self.results.values() if r.get('success')])} production tools"
             )
-            print(f"✅ Your Python ecosystem is fully analyzed!\n")
+            print("✅ Your Python ecosystem is fully analyzed!\n")
 
 
 if __name__ == "__main__":

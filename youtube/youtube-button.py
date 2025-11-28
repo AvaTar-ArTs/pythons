@@ -1,6 +1,5 @@
 import asyncio
 import json
-import math
 import os
 import shutil
 import time
@@ -20,7 +19,6 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import humanbytes, progress_for_pyrogram
 from helper_funcs.help_Nekmo_ffmpeg import generate_screen_shots
 
@@ -41,7 +39,7 @@ async def youtube_dl_call_back(bot, update):
     try:
         with open(save_ytdl_json_path, "r", encoding="utf8") as f:
             response_json = json.load(f)
-    except FileNotFoundError as e:
+    except FileNotFoundError:
         await bot.delete_messages(
             chat_id=update.message.chat.id,
             message_ids=update.message.message_id,
@@ -201,7 +199,7 @@ async def youtube_dl_call_back(bot, update):
         file_size = Config.TG_MAX_FILE_SIZE + 1
         try:
             file_size = os.stat(download_directory).st_size
-        except FileNotFoundError as exc:
+        except FileNotFoundError:
             download_directory = os.path.splitext(download_directory)[0] + "." + "mkv"
             # https://stackoverflow.com/a/678242/4723940
             file_size = os.stat(download_directory).st_size

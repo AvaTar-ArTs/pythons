@@ -5,7 +5,6 @@ Renames Python files AND updates all markdown documentation references
 """
 
 import csv
-import re
 from pathlib import Path
 from datetime import datetime
 import shutil
@@ -121,7 +120,7 @@ class RenameWithDocUpdate:
                     })
             
             if files_updated == 0:
-                print(f"   No markdown references found")
+                print("   No markdown references found")
             else:
                 total_files_updated += files_updated
         
@@ -163,7 +162,7 @@ class RenameWithDocUpdate:
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         backup_dir = self.pythons_dir.parent / f'pythons_backup_{timestamp}'
         
-        print(f"💾 Creating backup...")
+        print("💾 Creating backup...")
         print(f"   {backup_dir}")
         
         # Only backup markdown files (Python files will be renamed, not deleted)
@@ -189,7 +188,7 @@ class RenameWithDocUpdate:
             f.write(f"**Date:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
             f.write("---\n\n")
             
-            f.write(f"## 📊 Summary\n\n")
+            f.write("## 📊 Summary\n\n")
             f.write(f"- **Python Files Renamed:** {len(self.renames)}\n")
             f.write(f"- **Documentation Files Updated:** {len(set(u['doc_file'] for u in self.updates_made))}\n")
             f.write(f"- **Total Replacements:** {sum(u['replacements'] for u in self.updates_made)}\n\n")
@@ -235,7 +234,7 @@ class RenameWithDocUpdate:
         print(f"\n{'='*80}")
         print("✅ COMPLETE!")
         print("="*80)
-        print(f"\n📊 Results:")
+        print("\n📊 Results:")
         print(f"   🏷️ Renamed: {renamed_count} Python files")
         print(f"   📝 Updated: {len(set(u['doc_file'] for u in self.updates_made))} markdown files")
         print(f"   💾 Backup: {backup_dir}")

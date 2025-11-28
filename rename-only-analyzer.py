@@ -6,7 +6,6 @@ NO deletions - all files stay, just get better names
 """
 
 import csv
-import re
 from pathlib import Path
 from datetime import datetime
 
@@ -177,11 +176,11 @@ class RenameOnlyAnalyzer:
         print("📊 FINAL SUMMARY")
         print("="*80)
         
-        print(f"\n✨ Results:")
+        print("\n✨ Results:")
         print(f"   🏷️ {len(actual_renames)} files will be renamed")
         print(f"   ✅ {len(self.renames) - len(actual_renames)} files keep current names")
         
-        print(f"\n🏷️ Top 30 Renames:")
+        print("\n🏷️ Top 30 Renames:")
         for i, item in enumerate(actual_renames[:30], 1):
             print(f"\n{i}. {item['current_name']}")
             print(f"   → {item['suggested_name']}")
@@ -199,9 +198,9 @@ def main():
     analyzer.print_summary()
     
     print(f"\n{'='*80}")
-    print(f"💾 FINAL RENAME PLAN saved to:")
+    print("💾 FINAL RENAME PLAN saved to:")
     print(f"   {output_csv}")
-    print(f"\n🎯 Review the CSV and execute renames!")
+    print("\n🎯 Review the CSV and execute renames!")
 
 
 if __name__ == '__main__':

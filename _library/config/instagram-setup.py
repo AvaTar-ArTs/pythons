@@ -52,7 +52,6 @@ Notes:
 """
 
 from pathlib import Path
-import glob
 import os
 import sys
 # DEPRECATED: distutils removed in Python 3.12
@@ -62,7 +61,6 @@ import sys
 # DEPRECATED: distutils removed in Python 3.12
 # from distutils.core import setup
 from shutil import copyfile
-from subprocess import call
 
 PY2EXE = len(sys.argv) >= 2 and sys.argv[1] == "py2exe"
 

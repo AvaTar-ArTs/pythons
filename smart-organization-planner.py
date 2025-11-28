@@ -6,12 +6,9 @@ Creates a comprehensive CSV with organization suggestions including
 original locations for easy restoration if needed.
 """
 
-import os
 import csv
-import json
 from pathlib import Path
 from datetime import datetime
-import re
 from collections import defaultdict
 
 
@@ -439,22 +436,22 @@ class SmartOrganizationPlanner:
         logger.info("🎯 SMART ORGANIZATION PLAN SUMMARY")
         logger.info("=" * 80)
 
-        logger.info(f"\n📊 OVERVIEW:")
+        logger.info("\n📊 OVERVIEW:")
         logger.info(f"   Total files to organize: {summary['total_files']:,}")
         logger.info(f"   Total size: {summary['total_size_gb']:.2f} GB")
         logger.info(f"   Immediate actions needed: {summary['immediate_actions']:,}")
         logger.info(f"   Files requiring backup: {summary['backup_recommended']:,}")
 
-        logger.info(f"\n🎯 PRIORITY BREAKDOWN:")
+        logger.info("\n🎯 PRIORITY BREAKDOWN:")
         for priority, count in summary["priority_breakdown"].items():
             size = summary["size_by_priority"][priority]
             logger.info(f"   {priority}: {count:,} files ({size:.1f} MB)")
 
-        logger.info(f"\n🏆 TOP PROJECT CATEGORIES:")
+        logger.info("\n🏆 TOP PROJECT CATEGORIES:")
         for project, count in list(summary["top_projects"].items())[:5]:
             logger.info(f"   {project.replace('_', ' ').title()}: {count:,} files")
 
-        logger.info(f"\n🚀 TOP 10 FILES FOR IMMEDIATE ACTION:")
+        logger.info("\n🚀 TOP 10 FILES FOR IMMEDIATE ACTION:")
         for i, entry in enumerate(self.organization_plan[:10], 1):
             logger.info(
                 f"   {i:2d}. {entry['file_name']} ({entry['file_size_mb']:.1f} MB)"
@@ -462,7 +459,7 @@ class SmartOrganizationPlanner:
             logger.info(f"       → {entry['suggested_destination']}")
             logger.info(f"       Reason: {entry['organization_reason']}")
             if entry["backup_recommended"]:
-                logger.info(f"       ⚠️  BACKUP RECOMMENDED")
+                logger.info("       ⚠️  BACKUP RECOMMENDED")
 
 
 def main():
@@ -496,13 +493,13 @@ def main():
     # Print summary
     planner.print_summary()
 
-    logger.info(f"\n✅ Smart organization plan complete!")
+    logger.info("\n✅ Smart organization plan complete!")
     logger.info(f"📋 CSV saved to: {csv_filename}")
-    logger.info(f"\n💡 Next steps:")
-    logger.info(f"   1. Review the CSV file")
-    logger.info(f"   2. Start with 'immediate_action' = True files")
-    logger.info(f"   3. Use 'restore_path' column to restore if needed")
-    logger.info(f"   4. Follow 'suggested_destination' for organization")
+    logger.info("\n💡 Next steps:")
+    logger.info("   1. Review the CSV file")
+    logger.info("   2. Start with 'immediate_action' = True files")
+    logger.info("   3. Use 'restore_path' column to restore if needed")
+    logger.info("   4. Follow 'suggested_destination' for organization")
 
 
 if __name__ == "__main__":

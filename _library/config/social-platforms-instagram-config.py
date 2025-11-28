@@ -11,7 +11,12 @@ Edit: It Works Now :)
 from pathlib import Path
 from __future__ import unicode_literals
 from .banner import *
-import os, sys, json, itertools, threading, shutil, configparser, optparse
+import os
+import sys
+import threading
+import shutil
+import configparser
+import optparse
 from time import sleep as sl
 from random import shuffle, randint
 from .colors import get_colors

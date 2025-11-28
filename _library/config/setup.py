@@ -6,10 +6,8 @@ Sets up n8n workflows, backend services, and database for social media automatio
 
 import os
 import json
-import subprocess
 import sys
 from pathlib import Path
-from typing import Dict, List, Any
 import logging
 
 

@@ -157,7 +157,7 @@ def main():
     output_csv = filter.save_bad_names_csv()
     
     print(f"\n{'='*80}")
-    print(f"💾 Files needing rename saved to:")
+    print("💾 Files needing rename saved to:")
     print(f"   {output_csv}")
     print(f"\n💡 These {len(filter.bad_names)} files need your attention!")
     print(f"   {len(filter.scripts) - len(filter.bad_names)} files already have good names ✅")

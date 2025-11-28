@@ -5,7 +5,6 @@ Creates CSV mapping of old → new names for easy restoration
 """
 
 import csv
-import re
 from pathlib import Path
 from datetime import datetime
 import argparse
@@ -199,7 +198,7 @@ class RenameExecutor:
                             f.write(content)
                         files_updated += 1
                         
-                except Exception as e:
+                except Exception:
                     continue
             
             if files_updated > 0:
@@ -256,17 +255,17 @@ def main():
             print(f"   {r['old_name']:40} → {r['new_name']}")
         if len(executor.renames) > 20:
             print(f"\n   ... and {len(executor.renames) - 20} more")
-        print(f"\n💡 Run without --dry-run to execute")
+        print("\n💡 Run without --dry-run to execute")
         return
     
     # Execute
-    print(f"\n⚠️  About to:")
+    print("\n⚠️  About to:")
     print(f"   • Rename {count} Python files")
-    print(f"   • Update ~20 markdown docs")
-    print(f"   • Create CSV backup for restoration")
+    print("   • Update ~20 markdown docs")
+    print("   • Create CSV backup for restoration")
     
     if not args.yes:
-        confirm = input(f"\nContinue? (yes/no): ")
+        confirm = input("\nContinue? (yes/no): ")
         if confirm.lower() not in ['yes', 'y']:
             print("❌ Cancelled")
             return
@@ -287,7 +286,7 @@ def main():
     print("✅ COMPLETE!")
     print("="*80)
     print(f"\n💾 Backup CSV: {backup_csv.name}")
-    print(f"\n💡 To restore:")
+    print("\n💡 To restore:")
     print(f"   python3 execute-renames-with-restore.py --restore {backup_csv.name}")
 
 
