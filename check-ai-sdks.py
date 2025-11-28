@@ -171,7 +171,7 @@ def main():
     xai_key = os.getenv('XAI_API_KEY')
     if not xai_key or xai_key == 'your_xai_api_key_here':
         print(f"{RED}🚨{RESET} XAI_API_KEY is not set in llm-apis.env!")
-        print(f"   Add it from ~/.secrets/.ai-apis.env or ~/.codex/.env")
+        print("   Add it from ~/.secrets/.ai-apis.env or ~/.codex/.env")
     
     print(f"\n{BOLD}{BLUE}{'='*70}{RESET}\n")
     

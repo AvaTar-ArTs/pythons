@@ -5,7 +5,6 @@ Analyzes the CSV and provides intelligent rename suggestions
 """
 
 import csv
-import re
 from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
@@ -232,9 +231,9 @@ def main():
     output_csv = suggester.save_suggestions_csv()
     
     print(f"\n{'='*80}")
-    print(f"💾 Suggestions saved to:")
+    print("💾 Suggestions saved to:")
     print(f"   {output_csv}")
-    print(f"\n💡 Review the CSV and update 'suggested_name' where needed")
+    print("\n💡 Review the CSV and update 'suggested_name' where needed")
 
 
 if __name__ == '__main__':

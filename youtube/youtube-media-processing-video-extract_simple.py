@@ -12,13 +12,12 @@ import json
 import subprocess
 import hashlib
 from pathlib import Path
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict
 from dotenv import load_dotenv
 
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():
@@ -615,7 +614,7 @@ def main():
         # Process all media files
         analyzer.process_all_media_files()
 
-        logger.info(f"\n✅ Analysis complete!")
+        logger.info("\n✅ Analysis complete!")
         logger.info("Check 'transcripts' and 'analysis' folders for results.")
 
     except Exception as e:

@@ -214,7 +214,7 @@ def main():
     print(f"✅ Compression script generated: {script_path}")
     print()
     print("📋 Next steps:")
-    print(f"1. Install ffmpeg if needed: brew install ffmpeg")
+    print("1. Install ffmpeg if needed: brew install ffmpeg")
     print(f"2. Review the script: cat {script_path}")
     print(f"3. Run compression: ./{script_path}")
     print()

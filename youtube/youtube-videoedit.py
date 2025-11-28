@@ -1,7 +1,6 @@
 import os  # used for some file grabbing
 
 from moviepy.editor import *  # movie editor
-from PIL import Image  # Image library
 
 import logging
 

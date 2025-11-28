@@ -5,7 +5,6 @@ Search Markdown Files for Portfolio Content
 
 from pathlib import Path
 import csv
-from datetime import datetime
 
 def search_md_content(filepath, keywords):
     """Search MD file for keywords"""
@@ -73,7 +72,7 @@ def main():
     print(f"?? Saved: {csv_path}")
     
     # Top 20
-    print(f"\n?? Top 20:")
+    print("\n?? Top 20:")
     for i, r in enumerate(sorted(results, key=lambda x: -x['keyword_count'])[:20], 1):
         print(f"  {i}. {r['name']} ({r['keyword_count']} keywords, {r['size_kb']:.0f}KB)")
 

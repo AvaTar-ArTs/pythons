@@ -4,7 +4,6 @@ Find Portfolio & Skill Documentation
 Search for HTML, MD, PDF files that reference Python, APIs, and technical skills
 """
 
-import re
 from pathlib import Path
 from collections import defaultdict
 

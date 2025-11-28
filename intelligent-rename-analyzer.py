@@ -6,7 +6,6 @@ Handles: ALL_CAPS, generic analyze-, and missing documentation
 """
 
 import csv
-import re
 import ast
 from pathlib import Path
 from datetime import datetime
@@ -98,7 +97,7 @@ class IntelligentRenameAnalyzer:
         }
         
         if base in all_caps_mapping:
-            return all_caps_mapping[base] + '.py', f"Converted ALL_CAPS to meaningful lowercase"
+            return all_caps_mapping[base] + '.py', "Converted ALL_CAPS to meaningful lowercase"
         
         # Generic conversion: remove ULTIMATE, convert to lowercase with hyphens
         better_name = base.replace('_ULTIMATE', '').replace('_FINAL', '').replace('_MASTER', '')
@@ -176,7 +175,7 @@ class IntelligentRenameAnalyzer:
                 return 'master-file-analyzer.py', "Master file analysis orchestrator"
         
         # Default: convert analyze-X to X-analyzer
-        return f'{base}-analyzer.py', f"Converted from generic analyze- prefix"
+        return f'{base}-analyzer.py', "Converted from generic analyze- prefix"
     
     def suggest_for_missing_docs(self, script):
         """Handle files with no documentation"""
@@ -314,7 +313,7 @@ class IntelligentRenameAnalyzer:
                 'size_kb': script.get('size_kb', '')
             })
         
-        print(f"✅ Generated suggestions for all files\n")
+        print("✅ Generated suggestions for all files\n")
     
     def print_suggestions_by_category(self, limit_per_cat=15):
         """Print suggestions organized by category"""
@@ -406,13 +405,13 @@ class IntelligentRenameAnalyzer:
         print("📊 INTELLIGENT RENAME SUMMARY")
         print("="*80)
         
-        print(f"\n🎯 By Action:")
+        print("\n🎯 By Action:")
         for action in ['RENAME', 'KEEP', 'REVIEW', 'DELETE']:
             count = by_action.get(action, 0)
             emoji = {'RENAME': '🏷️', 'KEEP': '✅', 'REVIEW': '📝', 'DELETE': '🗑️'}.get(action, '📌')
             print(f"   {emoji} {action:10} {count:3} files")
         
-        print(f"\n📂 Top Categories Needing Attention:")
+        print("\n📂 Top Categories Needing Attention:")
         for cat, count in sorted(by_category.items(), key=lambda x: x[1], reverse=True)[:5]:
             print(f"   {cat:30} {count:3} files")
         
@@ -420,7 +419,7 @@ class IntelligentRenameAnalyzer:
         actual_renames = [s for s in self.smart_suggestions 
                          if s['action'] == 'RENAME' and s['current_name'] != s['suggested_name']]
         
-        print(f"\n✨ Actual Changes:")
+        print("\n✨ Actual Changes:")
         print(f"   {len(actual_renames)} files will get new names")
         print(f"   {by_action.get('DELETE', 0)} files will be deleted")
         print(f"   {by_action.get('KEEP', 0)} files already perfect")
@@ -438,10 +437,10 @@ def main():
     analyzer.generate_summary()
     
     print(f"\n{'='*80}")
-    print(f"💾 Smart suggestions saved to:")
+    print("💾 Smart suggestions saved to:")
     print(f"   {output_csv}")
-    print(f"\n💡 Review the suggestions and update as needed!")
-    print(f"   Then run the batch rename script to execute")
+    print("\n💡 Review the suggestions and update as needed!")
+    print("   Then run the batch rename script to execute")
 
 
 if __name__ == '__main__':

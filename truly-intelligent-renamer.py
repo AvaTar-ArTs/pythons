@@ -6,7 +6,6 @@ Actually reads code and understands what it does to suggest perfect names
 
 import csv
 import re
-import ast
 from pathlib import Path
 from datetime import datetime
 
@@ -133,7 +132,7 @@ class TrulyIntelligentRenamer:
             
             return analysis
             
-        except Exception as e:
+        except Exception:
             return None
     
     def build_name_from_analysis(self, analysis, current_name, desc):
@@ -293,7 +292,7 @@ class TrulyIntelligentRenamer:
                 'original_issue': script.get('bad_name_reason', '')
             })
         
-        print(f"\n✅ Intelligent analysis complete!")
+        print("\n✅ Intelligent analysis complete!")
     
     def save_csv(self):
         """Save final suggestions"""
@@ -344,7 +343,7 @@ class TrulyIntelligentRenamer:
         print("📊 INTELLIGENT RENAME SUMMARY")
         print("="*80)
         
-        print(f"\n✨ Results:")
+        print("\n✨ Results:")
         print(f"   🏷️ {len(renames)} files getting better names")
         print(f"   ✅ {len(keeps)} files already perfect")
         print(f"   🗑️ {len(deletes)} files to delete")
@@ -356,7 +355,7 @@ class TrulyIntelligentRenamer:
             cat = r['category']
             by_cat.setdefault(cat, []).append(r)
         
-        print(f"\n📂 Top Renames by Category:")
+        print("\n📂 Top Renames by Category:")
         for cat in sorted(by_cat.keys(), key=lambda x: len(by_cat[x]), reverse=True)[:5]:
             print(f"\n   {cat} ({len(by_cat[cat])} renames):")
             for item in by_cat[cat][:3]:
@@ -375,10 +374,10 @@ def main():
     renamer.print_summary()
     
     print(f"\n{'='*80}")
-    print(f"💾 Final rename plan saved to:")
+    print("💾 Final rename plan saved to:")
     print(f"   {output_csv}")
-    print(f"\n🎯 This CSV has ACTUAL intelligent suggestions!")
-    print(f"   Review and execute the renames")
+    print("\n🎯 This CSV has ACTUAL intelligent suggestions!")
+    print("   Review and execute the renames")
 
 
 if __name__ == '__main__':

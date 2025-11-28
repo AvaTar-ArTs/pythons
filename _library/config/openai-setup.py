@@ -4,7 +4,6 @@ Test script to verify the transcription analyzer setup
 """
 
 import os
-import sys
 from pathlib import Path
 
 

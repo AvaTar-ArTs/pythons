@@ -1,8 +1,5 @@
 import asyncio
-import json
-import math
 import os
-import shutil
 import time
 from datetime import datetime
 
@@ -15,14 +12,12 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-import pyrogram
 from translation import Translation
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import (
     TimeFormatter,
     humanbytes,
@@ -123,7 +118,7 @@ async def ddl_call_back(bot, update):
         file_size = Config.TG_MAX_FILE_SIZE + 1
         try:
             file_size = os.stat(download_directory).st_size
-        except FileNotFoundError as exc:
+        except FileNotFoundError:
             download_directory = os.path.splitext(download_directory)[0] + "." + "mkv"
             # https://stackoverflow.com/a/678242/4723940
             file_size = os.stat(download_directory).st_size

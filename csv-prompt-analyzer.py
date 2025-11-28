@@ -22,7 +22,7 @@ import json
 import re
 from pathlib import Path
 from typing import Dict, List, Set, Any
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from collections import defaultdict
 from datetime import datetime
 import pandas as pd
@@ -224,7 +224,7 @@ class PromptCSVAnalyzerUltimate:
                     ))
                     self.stats['prompts_found'] += 1
                 
-            except Exception as e:
+            except Exception:
                 continue
     
     def _process_prompt_csv(self, df: pd.DataFrame, source: str):

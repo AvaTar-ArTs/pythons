@@ -3,16 +3,13 @@ import os
 import sys
 import time
 import urllib.request
-from io import BytesIO, StringIO
 
 # Optional
 import chromedriver_autoinstaller
 import cv2
 import imutils
-import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from wand.display import display
 from wand.image import Image
 
 import logging

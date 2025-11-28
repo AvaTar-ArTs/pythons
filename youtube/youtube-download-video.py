@@ -24,6 +24,6 @@ def getVideo(num):
     for video in videos:
         download_url = "https://pexels.com/video/" + str(video.id) + Path("/download")
         r = requests.get(download_url)
-        with open(f"./videos/" + video.url.split("/")[-2] + ".mp4", "wb") as out:
+        with open("./videos/" + video.url.split("/")[-2] + ".mp4", "wb") as out:
             out.write(r.content)
             logger.info(f"{video.url.split('/')[-2]}.mp4 is downloaded successfully!")

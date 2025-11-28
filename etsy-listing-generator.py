@@ -15,10 +15,14 @@ Usage:
   python analyze_images_to_csv.py --input Path("/path/to/folder") --out analyzed_images.csv
 """
 from __future__ import annotations
-import argparse, base64, csv, io, json, os
-from dataclasses import dataclass, asdict
+import argparse
+import base64
+import csv
+import io
+import json
+import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Tuple
 
 from PIL import Image, UnidentifiedImageError, ExifTags
 from tqdm import tqdm

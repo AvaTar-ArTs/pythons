@@ -26,9 +26,6 @@ from dotenv import load_dotenv
 import openai
 from anthropic import Anthropic
 import google.generativeai as genai
-import requests
-import aiohttp
-import boto3  # For AWS services if needed
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

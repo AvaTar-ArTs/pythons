@@ -4,12 +4,10 @@ As-a-Man-Thinketh Content-Aware Renamer
 Specialized renaming for the As-a-man-thinketh directory with massive duplicate cleanup
 """
 
-import os
 import re
 import json
 from pathlib import Path
 from datetime import datetime
-import hashlib
 
 class ThinkethContentRenamer:
     def __init__(self, target_dir):

@@ -103,7 +103,7 @@ class ExternalVolumeCleanup:
             
             self.duplicates_to_remove.extend(duplicates)
         
-        print(f"\n?? Total Summary:")
+        print("\n?? Total Summary:")
         print(f"  Total duplicates: {total_duplicates}")
         print(f"  Total space to reclaim: {total_size / (1024**3):.2f} GB")
     
@@ -195,7 +195,7 @@ class ExternalVolumeCleanup:
                 content += f"\n### {cat_name.replace('_', ' ').title()}\n"
                 content += f"- **Count**: {len(items)} files\n"
                 content += f"- **Size**: {cat_size / (1024**2):.1f} MB\n"
-                content += f"- **Safety**: "
+                content += "- **Safety**: "
                 
                 if cat_name in ['pycache', 'node_modules']:
                     content += "? SAFE (can be regenerated)\n"
@@ -398,7 +398,7 @@ tar -czf external_volumes_backup_$(date +%Y%m%d).tar.gz [files...]
         print("? Analysis Complete!")
         print("=" * 80)
         print(f"\n?? Review the cleanup plan: {plan_path}")
-        print(f"\n??  IMPORTANT: Review carefully before executing any deletions!")
+        print("\n??  IMPORTANT: Review carefully before executing any deletions!")
         
         if mode == 'safe-preview':
             self.execute_safe_cleanup(dry_run=True)

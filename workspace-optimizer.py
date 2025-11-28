@@ -8,12 +8,10 @@ Focuses on:
 """
 
 import os
-import shutil
 import json
 from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
-import hashlib
 
 class WorkspaceOptimizer:
     def __init__(self, home_path="~/"):

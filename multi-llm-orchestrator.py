@@ -29,7 +29,7 @@ Features:
 import os
 import json
 import asyncio
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Any, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
 from datetime import datetime

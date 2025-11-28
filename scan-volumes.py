@@ -8,7 +8,7 @@ import ast
 import re
 import json
 from pathlib import Path
-from collections import defaultdict, Counter
+from collections import defaultdict
 from datetime import datetime
 
 class VolumeScriptScanner:
@@ -119,7 +119,7 @@ class VolumeScriptScanner:
             
             return stats
             
-        except Exception as e:
+        except Exception:
             return None
     
     def scan_volume(self, volume_path: Path, max_files=500):

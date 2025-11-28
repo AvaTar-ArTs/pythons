@@ -84,7 +84,7 @@ class SmartAIConsolidation:
                 # Average hash (faster, for exact duplicates)
                 ahash = str(imagehash.average_hash(img))
                 return (phash, ahash)
-        except Exception as e:
+        except Exception:
             return (None, None)
 
     def get_aspect_ratio_category(self, width: int, height: int) -> str:

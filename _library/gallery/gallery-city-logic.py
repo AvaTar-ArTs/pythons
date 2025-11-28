@@ -5,7 +5,7 @@ Following the dark patterns of simplegallery with urban photography focus
 
 import os
 import glob
-from typing import Dict, Any, List
+from typing import Dict, Any
 from PIL import Image
 import common as cg_common
 from .base_gallery_logic import BaseCityGalleryLogic

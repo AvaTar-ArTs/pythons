@@ -18,7 +18,7 @@ import logging
 import subprocess
 from pathlib import Path
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Any
 from dataclasses import dataclass, asdict
 
 # Configure logging
@@ -563,8 +563,8 @@ def main():
             logger.info(f"❌ {dashboard['error']}")
         else:
             current = dashboard["current_metrics"]
-            logger.info(f"📊 Quality Dashboard")
-            logger.info(f"=" * 50)
+            logger.info("📊 Quality Dashboard")
+            logger.info("=" * 50)
             logger.info(f"📁 Total Files: {current['total_files']:,}")
             logger.info(f"📝 Total Lines: {current['total_lines']:,}")
             logger.info(f"🔧 Functions: {current['total_functions']:,}")
@@ -594,7 +594,7 @@ def main():
                     current["files_with_logging"] / total_files
                 ) * CONSTANT_100
 
-                logger.info(f"\n📊 Coverage Metrics:")
+                logger.info("\n📊 Coverage Metrics:")
                 logger.info(f"📖 Docstrings: {docstring_coverage:.1f}%")
                 logger.info(f"🏷️ Type Hints: {type_hint_coverage:.1f}%")
                 logger.info(f"⚠️ Error Handling: {error_handling_coverage:.1f}%")
@@ -602,7 +602,7 @@ def main():
 
             # Trends
             if dashboard["trends"]:
-                logger.info(f"\n📈 Trends:")
+                logger.info("\n📈 Trends:")
                 for trend in dashboard["trends"]:
                     direction = (
                         "📈"

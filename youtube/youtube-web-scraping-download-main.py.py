@@ -4,12 +4,9 @@ import time  # Library that allows us to manipulate time
 
 # PROTOTYPE
 import mpv
-import mpvListener
-import pafy
 import pyttsx3  # Library that allows for text to speech
 import requests  # Library that allows us to send HTTP requests
 import speech_recognition as sr  # Library that allows us to find
-from bs4 import BeautifulSoup  # Library that allows us to scrape elements from an HTML file
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 

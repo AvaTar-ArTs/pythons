@@ -3,7 +3,6 @@ import csv
 import os
 
 import requests
-from tqdm import tqdm
 
 import logging
 

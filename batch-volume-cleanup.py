@@ -37,7 +37,7 @@ class BatchVolumeCleanup:
         index_file = self.analysis_dir / 'master_index.json'
         
         if index_file.exists():
-            print(f"  ? Loading existing index")
+            print("  ? Loading existing index")
             with open(index_file) as f:
                 self.master_index = json.load(f)
             print(f"  ? Loaded {len(self.master_index)} master files")
@@ -78,10 +78,10 @@ class BatchVolumeCleanup:
         
         vol_path = Path(f'/Volumes/{volume_name}')
         if not vol_path.exists():
-            print(f"  ??  Volume not mounted")
+            print("  ??  Volume not mounted")
             return
         
-        print(f"  Finding Python files...")
+        print("  Finding Python files...")
         
         # Get iterator to avoid loading all into memory
         all_py_files = vol_path.rglob('*.py')
@@ -157,7 +157,7 @@ class BatchVolumeCleanup:
     
     def step3_summarize_findings(self):
         """Step 3: Create summary report"""
-        print(f"\n?? STEP 3: Generate Summary Report")
+        print("\n?? STEP 3: Generate Summary Report")
         print("=" * 80)
         
         # Find all scan results
@@ -206,7 +206,6 @@ class BatchVolumeCleanup:
         print("\n" + "".join(report_lines))
 
 def main():
-    import sys
     
     cleanup = BatchVolumeCleanup()
     

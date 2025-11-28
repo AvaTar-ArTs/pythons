@@ -15,12 +15,9 @@ Features:
 
 import os
 import csv
-import shutil
 from pathlib import Path
 from datetime import datetime
 from difflib import SequenceMatcher
-from collections import defaultdict
-from typing import Dict, List, Tuple
 import re
 
 class Colors:
@@ -319,7 +316,7 @@ class TranscriptNameFixer:
             f.write("#!/usr/bin/env python3\n")
             f.write('"""\nRevert transcript renames using CSV log\n"""\n\n')
             f.write("import csv\nfrom pathlib import Path\n\n")
-            f.write(f"csv_file = Path(__file__).parent / 'TRANSCRIPT_RENAMES.csv'\n\n")
+            f.write("csv_file = Path(__file__).parent / 'TRANSCRIPT_RENAMES.csv'\n\n")
             f.write("with open(csv_file, 'r') as f:\n")
             f.write("    reader = csv.DictReader(f)\n")
             f.write("    for row in reader:\n")

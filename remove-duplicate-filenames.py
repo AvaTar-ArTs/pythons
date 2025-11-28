@@ -4,7 +4,6 @@ Aggressive Filename Cleaner - Fix the filename insanity
 Removes duplicate numbers, redundant suffixes, and generic words
 """
 
-import os
 import re
 import csv
 from pathlib import Path
@@ -224,7 +223,7 @@ class AggressiveFilenameCleaner:
 
                     # Rename the file
                     original_path.rename(new_path)
-                    logger.info(f"   ✅ Renamed successfully")
+                    logger.info("   ✅ Renamed successfully")
                     cleaned_count += 1
 
                     # Record the change
@@ -252,7 +251,7 @@ class AggressiveFilenameCleaner:
                         }
                     )
             else:
-                logger.info(f"   🔍 Dry run - would rename")
+                logger.info("   🔍 Dry run - would rename")
                 cleaned_count += 1
 
                 self.changes.append(
@@ -300,7 +299,7 @@ def main():
     logger.info("=" * 60)
     results = cleaner.clean_files(dry_run=True)
 
-    logger.info(f"\n📊 DRY RUN RESULTS:")
+    logger.info("\n📊 DRY RUN RESULTS:")
     logger.info(f"   Files to clean: {results['cleaned']}")
     logger.info(f"   Errors: {results['errors']}")
 
@@ -308,8 +307,8 @@ def main():
     csv_file = cleaner.save_changes_csv()
     logger.info(f"\n📄 Dry run results saved to: {csv_file}")
 
-    logger.info(f"\n💡 To execute the cleaning, run:")
-    logger.info(f"   python3 aggressive_filename_cleaner.py --execute")
+    logger.info("\n💡 To execute the cleaning, run:")
+    logger.info("   python3 aggressive_filename_cleaner.py --execute")
 
 
 if __name__ == "__main__":
@@ -322,7 +321,7 @@ if __name__ == "__main__":
         results = cleaner.clean_files(dry_run=False)
         csv_file = cleaner.save_changes_csv()
 
-        logger.info(f"\n🎯 CLEANUP COMPLETE!")
+        logger.info("\n🎯 CLEANUP COMPLETE!")
         logger.info(f"   Files cleaned: {results['cleaned']}")
         logger.info(f"   Errors: {results['errors']}")
         logger.info(f"   Changes saved to: {csv_file}")

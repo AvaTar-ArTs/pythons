@@ -117,7 +117,7 @@ class ComprehensiveRenameCleaner:
         
         # Use inferred purpose if available
         if info['purpose'] != 'Unknown' and info['purpose'].endswith('.py'):
-            return info['purpose'], f"Analyzed from code functionality"
+            return info['purpose'], "Analyzed from code functionality"
         
         # Specific file mappings based on actual content
         specific_renames = {
@@ -231,7 +231,7 @@ class ComprehensiveRenameCleaner:
                 'size_kb': round(filepath.stat().st_size / 1024, 2)
             })
         
-        print(f"\n✅ Analysis complete!")
+        print("\n✅ Analysis complete!")
     
     def smart_categorize(self, filename, info, filepath):
         """Smart categorization"""
@@ -321,13 +321,13 @@ class ComprehensiveRenameCleaner:
         print("📊 COMPREHENSIVE RENAME & CLEANUP SUMMARY")
         print("="*80)
         
-        print(f"\n🎯 By Action:")
+        print("\n🎯 By Action:")
         for action in ['DELETE', 'RENAME', 'KEEP', 'REVIEW']:
             count = by_action.get(action, 0)
             emoji = {'DELETE': '🗑️', 'RENAME': '🏷️', 'KEEP': '✅', 'REVIEW': '📝'}[action]
             print(f"   {emoji} {action:10} {count:4} files")
         
-        print(f"\n📂 By Category:")
+        print("\n📂 By Category:")
         for cat, count in sorted(by_category.items(), key=lambda x: x[1], reverse=True):
             print(f"   {cat:35} {count:4} files")
         
@@ -363,13 +363,13 @@ def main():
     cleaner.print_summary()
     
     print(f"\n{'='*80}")
-    print(f"💾 Clean rename plan saved to:")
+    print("💾 Clean rename plan saved to:")
     print(f"   {output_csv}")
-    print(f"\n✨ This CSV is:")
-    print(f"   • Sorted by action (DELETE first, then RENAME)")
-    print(f"   • Categorized properly")
-    print(f"   • Has accurate rename suggestions")
-    print(f"   • Identifies third-party code to remove")
+    print("\n✨ This CSV is:")
+    print("   • Sorted by action (DELETE first, then RENAME)")
+    print("   • Categorized properly")
+    print("   • Has accurate rename suggestions")
+    print("   • Identifies third-party code to remove")
 
 
 if __name__ == '__main__':

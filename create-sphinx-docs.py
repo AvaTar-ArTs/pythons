@@ -20,7 +20,6 @@ Generates:
 - Cross-referenced HTML documentation
 """
 
-import os
 from pathlib import Path
 import subprocess
 

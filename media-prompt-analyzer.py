@@ -20,12 +20,11 @@ Outputs:
 6. URLS_MASTER.csv - All URLs extracted
 """
 
-import os
 import csv
 import json
 import re
 from pathlib import Path
-from typing import Dict, List, Set, Any, Tuple
+from typing import Dict, List, Set, Any
 from dataclasses import dataclass, field
 from collections import defaultdict
 from datetime import datetime
@@ -337,7 +336,7 @@ class CompleteMediaPromptAnalyzer:
             
             return media
             
-        except Exception as e:
+        except Exception:
             return None
     
     def _check_metadata_files(self, image_path: Path):

@@ -1,5 +1,4 @@
 import os
-import random
 
 import moviepy.editor as mp
 from moviepy.audio.AudioClip import CompositeAudioClip, concatenate_audioclips

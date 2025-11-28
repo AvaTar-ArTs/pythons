@@ -6,7 +6,6 @@ Find HTML files referencing Python, API, automation skills
 
 from pathlib import Path
 import csv
-from datetime import datetime
 
 def search_html_content(filepath, keywords):
     """Search HTML file for keywords"""
@@ -79,15 +78,15 @@ def main():
         for r in sorted(results, key=lambda x: -x['keyword_count']):
             writer.writerow(r)
     
-    print(f"\n" + "=" * 80)
+    print("\n" + "=" * 80)
     print("? HTML SEARCH COMPLETE")
     print("=" * 80)
-    print(f"\n?? Results:")
+    print("\n?? Results:")
     print(f"  ? Total relevant HTML files: {len(results)}")
     print(f"  ? Saved to: {csv_path}")
     
     # Show top 10
-    print(f"\n?? Top 10 Most Relevant:")
+    print("\n?? Top 10 Most Relevant:")
     for i, r in enumerate(sorted(results, key=lambda x: -x['keyword_count'])[:10], 1):
         print(f"  {i}. {r['name']} ({r['keyword_count']} keywords)")
         print(f"     {r['path'][:80]}")

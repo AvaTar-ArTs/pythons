@@ -5,10 +5,8 @@ Incorporates Dr. Adu SEO project updates and improvements
 Outputs comprehensive analysis in professional format with actionable insights
 """
 
-import os
 import re
 import json
-import shutil
 from datetime import datetime
 from pathlib import Path
 import hashlib
@@ -1082,7 +1080,7 @@ Found **{len(master_stats['seo_files'])} files** with SEO optimization potential
         for code_type in sorted(master_stats["unique_code_types"]):
             report += f"- **{code_type.replace('_', ' ').title()}** - Professional implementation patterns\n"
 
-        report += f"""
+        report += """
 **Tool Usage Patterns:**
 """
         for tool_type in sorted(master_stats["unique_tool_types"]):
@@ -1282,14 +1280,14 @@ This content ecosystem represents a **significant business asset** with substant
         self.scan_all_files_batched()
         self.generate_master_enhanced_report()
 
-        logger.info(f"\n✅ Enhanced Analysis Complete!")
+        logger.info("\n✅ Enhanced Analysis Complete!")
         logger.info(f"📁 Professional reports saved to: {self.target_dir}")
         logger.info(
-            f"📋 Check ENHANCED_MASTER_ANALYSIS_V2.md for comprehensive overview"
+            "📋 Check ENHANCED_MASTER_ANALYSIS_V2.md for comprehensive overview"
         )
-        logger.info(f"📦 Individual batch reports in: 07_Exports/batches/")
-        logger.info(f"🏥 Dr. Adu practice content in: 08_Dr_Adu_Content/")
-        logger.info(f"🔍 SEO optimization content in: 09_SEO_Optimization/")
+        logger.info("📦 Individual batch reports in: 07_Exports/batches/")
+        logger.info("🏥 Dr. Adu practice content in: 08_Dr_Adu_Content/")
+        logger.info("🔍 SEO optimization content in: 09_SEO_Optimization/")
 
 
 def main():

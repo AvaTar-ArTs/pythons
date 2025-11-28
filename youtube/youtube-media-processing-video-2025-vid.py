@@ -3,7 +3,6 @@ import os
 import re
 from datetime import datetime
 
-from mutagen.easymp4 import EasyMP4
 from mutagen.mp4 import MP4
 
 import logging

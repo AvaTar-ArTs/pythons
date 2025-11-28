@@ -3,9 +3,7 @@
 Analyze current structure and show what will be migrated where
 """
 
-import os
 from pathlib import Path
-from collections import defaultdict
 
 
 def analyze_current_structure():
@@ -206,7 +204,7 @@ def main():
 
     # Summary
     total_items = sum(len(items) for items in categories.values())
-    logger.info(f"\n📊 SUMMARY")
+    logger.info("\n📊 SUMMARY")
     logger.info("=" * 50)
     logger.info(f"Total items to migrate: {total_items}")
     logger.info(f"Analysis scripts: {len(categories['analysis_scripts'])}")
@@ -216,7 +214,7 @@ def main():
     logger.info(f"Duplicates to clean: {len(categories['duplicates'])}")
     logger.info(f"Backups to archive: {len(categories['backups'])}")
 
-    logger.info(f"\n🚀 Ready to migrate? Run: python migrate_projects.py")
+    logger.info("\n🚀 Ready to migrate? Run: python migrate_projects.py")
 
 
 if __name__ == "__main__":

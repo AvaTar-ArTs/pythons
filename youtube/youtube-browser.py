@@ -1,12 +1,8 @@
 from pathlib import Path
-import argparse
 import logging
-from argparse import ArgumentError
-from datetime import datetime
 
 from login import confirm_logged_in, login_using_cookie_file
 from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.remote.file_detector import LocalFileDetector
 from upload import upload_file

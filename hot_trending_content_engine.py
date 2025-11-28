@@ -15,9 +15,9 @@ import os
 import json
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime
 from collections import defaultdict
 import subprocess
 
@@ -1444,7 +1444,7 @@ DESIGN PRINCIPLES:
         with open(metadata_file, 'w') as f:
             json.dump(metadata, f, indent=2)
         
-        print(f"\n💾 Content package saved:")
+        print("\n💾 Content package saved:")
         print(f"   - Description: {desc_file.name}")
         print(f"   - Metadata: {metadata_file.name}")
 

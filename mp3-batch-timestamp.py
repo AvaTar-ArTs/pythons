@@ -22,7 +22,7 @@ if env_dir.exists():
 
 
 # Constants
-MAX_TOKENS = 1500
+CONSTANT_1500 = 1500
 
 
 # Initialize OpenAI client
@@ -43,7 +43,7 @@ AUDIO_DIR = input(
     "🎵 Enter the full path to the main directory containing your MP3 files (including subfolders): "
 )
 if not os.path.isdir(AUDIO_DIR):
-    print(colored("❌ Invalid directory path. Please check and try again.", "red"))
+    logger.info(colored("❌ Invalid directory path. Please check and try again.", "red"))
     sys.exit(1)
 
 # Define subdirectory paths
@@ -54,23 +54,24 @@ ANALYSIS_DIR = os.path.join(AUDIO_DIR, "analysis")
 os.makedirs(TRANSCRIPT_DIR, exist_ok=True)
 os.makedirs(ANALYSIS_DIR, exist_ok=True)
 
-print(colored("📁 Directories set up successfully!", "green"))
-print(f"🔍 AUDIO_DIR: {colored(AUDIO_DIR, 'cyan')}")
-print(f"📝 TRANSCRIPT_DIR: {colored(TRANSCRIPT_DIR, 'cyan')}")
-print(f"🔬 ANALYSIS_DIR: {colored(ANALYSIS_DIR, 'cyan')}")
+logger.info(colored("📁 Directories set up successfully!", "green"))
+logger.info(f"🔍 AUDIO_DIR: {colored(AUDIO_DIR, 'cyan')}")
+logger.info(f"📝 TRANSCRIPT_DIR: {colored(TRANSCRIPT_DIR, 'cyan')}")
+logger.info(f"🔬 ANALYSIS_DIR: {colored(ANALYSIS_DIR, 'cyan')}")
 
 # Helper function to format timestamps
 def format_timestamp(seconds):
-    """Format seconds as MM:SS."""
+    """Function."""
+
     minutes = int(seconds // 60)
-    secs = int(seconds % 60)
-    return f"{minutes:02d}:{secs:02d}"
+    seconds = int(seconds % 60)
+    return f"{minutes:02d}:{seconds:02d}"
 
 # Parse transcript into segments
 def parse_transcript(transcript_text):
     segments = []
-    for line in transcript_text.split("\n"):
-        if "-" in line:
+    for line in transcript_text.split(Path("\n")):
+        if "--" in line:
             parts = line.split(": ")
             if len(parts) == 2:
                 timestamp, text = parts
@@ -79,7 +80,7 @@ def parse_transcript(transcript_text):
 # Transcribe audio with retry mechanism
 def transcribe_audio(file_path, max_attempts=3):
     if not os.path.isfile(file_path) or os.path.getsize(file_path) == 0:
-        print(colored(f"❌ {os.path.basename(file_path)} is invalid or empty.", "red"))
+        logger.info(colored(f"❌ {os.path.basename(file_path)} is invalid or empty.", "red"))
         return None
 
     for attempt in range(max_attempts):
@@ -89,15 +90,15 @@ def transcribe_audio(file_path, max_attempts=3):
                     "whisper-1", audio_file, response_format="verbose_json"
                 )
                 transcript_with_timestamps = [
-                    f"{format_timestamp(segment['start'])}-{format_timestamp(segment['end'])}: {segment['text']}"
+                    f"{format_timestamp(segment['start'])} -- {format_timestamp(segment['end'])}: {segment['text']}"
                     for segment in transcript_data.segments
                 ]
-                return "\n".join(transcript_with_timestamps)
+                return Path("\n").join(transcript_with_timestamps)
         except Exception as e:
             logging.error(f"🚨 Attempt {attempt + 1}: Error transcribing {file_path}: {e}")
-            print(colored(f"🚨 Attempt {attempt + 1}: Error transcribing {os.path.basename(file_path)}. Retrying...", "yellow"))
+            logger.info(colored(f"🚨 Attempt {attempt + 1}: Error transcribing {os.path.basename(file_path)}. Retrying...", "yellow"))
             time.sleep(2)
-    print(colored(f"❌ Failed to transcribe {os.path.basename(file_path)} after {max_attempts} attempts.", "red"))
+    logger.info(colored(f"❌ Failed to transcribe {os.path.basename(file_path)} after {max_attempts} attempts.", "red"))
     return None
 # Analyze text with retry mechanism
 def analyze_text_for_section(text, max_attempts=3):
@@ -130,14 +131,14 @@ def analyze_text_for_section(text, max_attempts=3):
                         ),
                     },
                 ],
-                max_tokens=MAX_TOKENS,
+                max_tokens=CONSTANT_1500,
                 temperature=0.7)
             return response.choices[0].message.content.strip()
         except Exception as e:
             logging.error(f"⚠️ Attempt {attempt + 1}: Error analyzing text: {e}")
-            print(colored(f"⚠️ Attempt {attempt + 1}: Error analyzing the transcript. Retrying...", "yellow"))
+            logger.info(colored(f"⚠️ Attempt {attempt + 1}: Error analyzing the transcript. Retrying...", "yellow"))
             time.sleep(2)
-    print(colored(f"❌ Failed to analyze the transcript after {max_attempts} attempts.", "red"))
+    logger.info(colored(f"❌ Failed to analyze the transcript after {max_attempts} attempts.", "red"))
     return None
 
 # Link timestamps to analysis
@@ -153,7 +154,7 @@ def link_timestamps_to_analysis(transcript_segments, analysis_text):
 # Process a single audio file
 def process_audio_file(audio_file):
     filename_no_ext = os.path.splitext(os.path.basename(audio_file))[0]
-    print(colored(f"🔄 Processing {filename_no_ext}...", "blue"))
+    logger.info(colored(f"🔄 Processing {filename_no_ext}...", "blue"))
 
     # Transcribe the audio file
     transcript = transcribe_audio(audio_file)
@@ -161,7 +162,7 @@ def process_audio_file(audio_file):
         transcript_file_path = os.path.join(TRANSCRIPT_DIR, f"{filename_no_ext}_transcript.txt")
         with open(transcript_file_path, "w") as f:
             f.write(transcript)
-        print(f"✅ Transcription saved for {filename_no_ext} at {transcript_file_path}")
+        logger.info(f"✅ Transcription saved for {filename_no_ext} at {transcript_file_path}")
 
         # Parse transcript for segments
         transcript_segments = parse_transcript(transcript)
@@ -175,11 +176,11 @@ def process_audio_file(audio_file):
             analysis_file_path = os.path.join(ANALYSIS_DIR, f"{filename_no_ext}_analysis.txt")
             with open(analysis_file_path, "w") as f:
                 f.write(f"# Analysis of {filename_no_ext}\n\n{linked_analysis}")
-            print(f"📝 Analysis with timestamps saved for {filename_no_ext} at {analysis_file_path}")
+            logger.info(f"📝 Analysis with timestamps saved for {filename_no_ext} at {analysis_file_path}")
         else:
-            print(colored(f"⚠️ Skipping analysis for {filename_no_ext} due to error.", "yellow"))
+            logger.info(colored(f"⚠️ Skipping analysis for {filename_no_ext} due to error.", "yellow"))
     else:
-        print(colored(f"⚠️ Skipping {filename_no_ext} due to transcription error.", "yellow"))
+        logger.info(colored(f"⚠️ Skipping {filename_no_ext} due to transcription error.", "yellow"))
 
 # Process all audio files in the directory
 def process_audio_directory(audio_dir):
@@ -190,10 +191,10 @@ def process_audio_directory(audio_dir):
         if f.lower().endswith(".mp3")
     ]
     if not audio_files:
-        print(colored("📂 No MP3 files found in the directory. Please check your path.", "red"))
+        logger.info(colored("📂 No MP3 files found in the directory. Please check your path.", "red"))
         return
 
-    print(colored(f"🎶 Found {len(audio_files)} audio files. Starting processing...", "green"))
+    logger.info(colored(f"🎶 Found {len(audio_files)} audio files. Starting processing...", "green"))
 
     with ThreadPoolExecutor() as executor:
         list(

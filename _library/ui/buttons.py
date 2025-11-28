@@ -1,8 +1,5 @@
-import json
-import math
 import os
 import shutil
-import subprocess
 import time
 
 # the secret configuration specific things
@@ -17,13 +14,9 @@ from translation import Translation
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
-from helper_funcs.chat_base import TRChatBase
-from helper_funcs.display_progress import humanbytes, progress_for_pyrogram
+from helper_funcs.display_progress import progress_for_pyrogram
 
 # https://stackoverflow.com/a/37631799/4723940
-from PIL import Image
 from plugins.dl_button import ddl_call_back
 from plugins.youtube_dl_button import youtube_dl_call_back
 

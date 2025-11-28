@@ -8,8 +8,7 @@ Handles: .mp3, _transcript.txt, _analysis.txt, .srt files
 from pathlib import Path
 import shutil
 import argparse
-from typing import List, Tuple, Set
-from collections import defaultdict
+from typing import List, Tuple
 
 
 # Configuration
@@ -152,12 +151,12 @@ def scan_and_organize(music_root: Path = MUSIC_ROOT, dry_run: bool = False):
     Scan music library and organize all MP3s into album folders.
     """
     print(f"\n{'='*80}")
-    print(f"  ?? NocTurnE Album Organizer")
+    print("  ?? NocTurnE Album Organizer")
     print(f"{'='*80}")
     print(f"\n?? Scanning: {music_root}")
     
     if dry_run:
-        print(f"??  DRY RUN MODE - No files will be moved\n")
+        print("??  DRY RUN MODE - No files will be moved\n")
     
     # Find all MP3s in root directory
     root_mp3s = list(music_root.glob("*.mp3"))
@@ -179,15 +178,15 @@ def scan_and_organize(music_root: Path = MUSIC_ROOT, dry_run: bool = False):
     
     # Summary
     print(f"\n{'='*80}")
-    print(f"  ? Organization Complete!")
+    print("  ? Organization Complete!")
     print(f"{'='*80}")
-    print(f"\n?? Summary:")
+    print("\n?? Summary:")
     print(f"   Files moved: {total_moved}")
     print(f"   Files skipped: {total_skipped}")
     
     if dry_run:
-        print(f"\n??  This was a dry run - no files were actually moved")
-        print(f"   Run without --dry-run to apply changes")
+        print("\n??  This was a dry run - no files were actually moved")
+        print("   Run without --dry-run to apply changes")
     
     print(f"\n{'='*80}\n")
 
@@ -197,7 +196,7 @@ def verify_organization(music_root: Path = MUSIC_ROOT):
     Verify that all MP3s have their companion files in the same folder.
     """
     print(f"\n{'='*80}")
-    print(f"  ?? Verifying Album Organization")
+    print("  ?? Verifying Album Organization")
     print(f"{'='*80}\n")
     
     issues = []

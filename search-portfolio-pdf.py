@@ -6,7 +6,6 @@ Find PDF resumes, portfolios, and skill documents
 
 from pathlib import Path
 import csv
-from datetime import datetime
 
 def main():
     print("?? Searching PDF Files")
@@ -66,7 +65,7 @@ def main():
     print(f"?? Saved: {csv_path}")
     
     # Top results
-    print(f"\n?? Top 20:")
+    print("\n?? Top 20:")
     for i, r in enumerate(sorted(results, key=lambda x: -x['keyword_count'])[:20], 1):
         print(f"  {i}. {r['name'][:70]} ({r['keyword_count']} keywords)")
 

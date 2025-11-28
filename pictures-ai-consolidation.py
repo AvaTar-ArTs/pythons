@@ -13,7 +13,6 @@ Features:
 ✨ Dry-run mode for safety
 """
 
-import os
 import re
 import csv
 import shutil
@@ -107,7 +106,7 @@ class PicturesAIConsolidation:
                         return "16-9"
                     else:
                         return "16-9"  # Default landscape to 16:9
-        except Exception as e:
+        except Exception:
             # If can't read image, use default
             return "unknown"
 
@@ -353,19 +352,19 @@ class PicturesAIConsolidation:
         print(f"  Space saved: {Colors.GREEN}{self.stats['space_saved_mb']:.2f} MB{Colors.END}\n")
         
         print(f"{Colors.BOLD}📝 New Structure:{Colors.END}")
-        print(f"  ~/Pictures/AI-Images/")
-        print(f"    ├── Ideogram/")
-        print(f"    │   ├── 1-1/          [square images]")
-        print(f"    │   ├── 9-16/         [portrait/vertical]")
-        print(f"    │   ├── 16-9/         [landscape/horizontal]")
-        print(f"    │   └── _metadata/    [txt, html, json files]")
-        print(f"    ├── DaLLe/")
-        print(f"    │   ├── 1-1/")
-        print(f"    │   ├── 9-16/")
-        print(f"    │   └── 16-9/")
-        print(f"    ├── Sora/")
-        print(f"    ├── Grok/")
-        print(f"    └── DreamLab/\n")
+        print("  ~/Pictures/AI-Images/")
+        print("    ├── Ideogram/")
+        print("    │   ├── 1-1/          [square images]")
+        print("    │   ├── 9-16/         [portrait/vertical]")
+        print("    │   ├── 16-9/         [landscape/horizontal]")
+        print("    │   └── _metadata/    [txt, html, json files]")
+        print("    ├── DaLLe/")
+        print("    │   ├── 1-1/")
+        print("    │   ├── 9-16/")
+        print("    │   └── 16-9/")
+        print("    ├── Sora/")
+        print("    ├── Grok/")
+        print("    └── DreamLab/\n")
         
         if self.dry_run:
             print(f"{Colors.YELLOW}⚠️  This was a DRY RUN. Run with --live to execute.{Colors.END}\n")

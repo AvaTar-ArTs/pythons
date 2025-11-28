@@ -9,7 +9,6 @@ import json
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-import difflib
 
 class ProjectConsolidator:
     def __init__(self, home_path="~/"):
@@ -147,7 +146,7 @@ class ProjectConsolidator:
             for i, rec in enumerate(recommendations, 1):
                 print(f"{i}. {rec['group']} ({rec['type'].upper()})")
                 print(f"   ✓ KEEP: {rec['keep']['path']}")
-                print(f"   ✗ ARCHIVE/DELETE:")
+                print("   ✗ ARCHIVE/DELETE:")
                 for arch in rec['archive']:
                     print(f"      • {arch['path']}")
                 print()
@@ -195,9 +194,9 @@ class ProjectConsolidator:
                 script_lines.append(f"if [ -d \"{full_path}\" ]; then")
                 script_lines.append(f"    echo '  Archiving: {path}'")
                 script_lines.append(f"    tar -czf \"$ARCHIVE_DIR/{Path(path).name}.tar.gz\" -C \"$(dirname \"{full_path}\")\" \"$(basename \"{full_path}\")\"")
-                script_lines.append(f"    # Uncomment to delete after archiving:")
+                script_lines.append("    # Uncomment to delete after archiving:")
                 script_lines.append(f"    # rm -rf \"{full_path}\"")
-                script_lines.append(f"fi")
+                script_lines.append("fi")
                 script_lines.append("")
         
         script_lines.extend([
@@ -227,12 +226,12 @@ class ProjectConsolidator:
         js_active = [p for p in self.js_projects if 'archive' not in p['path'].lower()]
         js_archived = [p for p in self.js_projects if 'archive' in p['path'].lower()]
         
-        print(f"\n🐍 Python Projects:")
+        print("\n🐍 Python Projects:")
         print(f"   Active: {len(py_active)}")
         print(f"   Archived: {len(py_archived)}")
         print(f"   Total: {len(self.python_projects)}")
         
-        print(f"\n📦 JavaScript Projects:")
+        print("\n📦 JavaScript Projects:")
         print(f"   Active: {len(js_active)}")
         print(f"   Archived: {len(js_archived)}")
         print(f"   Total: {len(self.js_projects)}")
@@ -257,7 +256,7 @@ def main():
         consolidator.generate_consolidation_script(recommendations, script_path)
         
         print("\n📋 Next Steps:")
-        print(f"1. Review recommendations above")
+        print("1. Review recommendations above")
         print(f"2. Review the script: {script_path}")
         print(f"3. Run consolidation: ./{script_path}")
         print("\n⚠️  IMPORTANT: This will create archives but NOT delete originals by default")

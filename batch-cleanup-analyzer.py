@@ -7,8 +7,6 @@ Process volumes incrementally to avoid timeouts
 import hashlib
 import json
 from pathlib import Path
-from collections import defaultdict
-from datetime import datetime
 import csv
 
 class BatchCleanupAnalyzer:
@@ -73,7 +71,7 @@ class BatchCleanupAnalyzer:
         print(f"\n?? Scanning {volume_path.name} in batches of {batch_size}...")
         
         if not volume_path.exists():
-            print(f"  ??  Volume not mounted")
+            print("  ??  Volume not mounted")
             return []
         
         # Get all Python files
@@ -104,7 +102,7 @@ class BatchCleanupAnalyzer:
                         'size': filepath.stat().st_size,
                         'parent': str(filepath.parent)
                     })
-                except Exception as e:
+                except Exception:
                     pass
             
             # Save batch results
@@ -171,7 +169,7 @@ class BatchCleanupAnalyzer:
     
     def execute_from_csv(self, csv_path, dry_run=True):
         """Execute cleanup from CSV file"""
-        print(f"\n???  Executing Cleanup from CSV...")
+        print("\n???  Executing Cleanup from CSV...")
         print(f"  CSV: {csv_path}")
         print(f"  Mode: {'DRY RUN' if dry_run else 'LIVE DELETION'}")
         
@@ -265,7 +263,7 @@ def main():
         csv_path = analyzer.generate_cleanup_csv(volume_name, duplicates)
         
         total_size = sum(d['size'] for d in duplicates)
-        print(f"\n?? Summary:")
+        print("\n?? Summary:")
         print(f"  Duplicates: {len(duplicates)} files")
         print(f"  Space to reclaim: {total_size / (1024**3):.2f} GB")
         print(f"  Unique external files: {len(unique)}")

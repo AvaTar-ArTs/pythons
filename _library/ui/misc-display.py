@@ -11,33 +11,5 @@
 # Imports
 # -----------------------------------------------------------------------------
 
-from IPython.core.display import (
-    HTML,
-    JSON,
-    SVG,
-    DisplayObject,
-    GeoJSON,
-    Image,
-    Javascript,
-    Latex,
-    Markdown,
-    Math,
-    Pretty,
-    ProgressBar,
-    TextDisplayObject,
-    Video,
-    display_html,
-    display_javascript,
-    display_jpeg,
-    display_json,
-    display_latex,
-    display_markdown,
-    display_pdf,
-    display_png,
-    display_pretty,
-    display_svg,
-    set_matplotlib_close,
-    set_matplotlib_formats,
-)
 from IPython.core.display_functions import *
 from IPython.lib.display import *

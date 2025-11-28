@@ -3,13 +3,10 @@
 from pathlib import Path
 import os
 import random
-import re
-import time
 from os import path
 from sys import exit
 
-from colorama import Back, Fore, Style
-from requests import get
+from colorama import Fore, Style
 
 import logging
 

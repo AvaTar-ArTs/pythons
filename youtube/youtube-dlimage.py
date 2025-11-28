@@ -1,11 +1,8 @@
 from pathlib import Path
-import math
 import time
 import urllib.request
 
-import keyboard
 import praw
-import requests
 from InstagramAPI import InstagramAPI
 from PIL import Image
 

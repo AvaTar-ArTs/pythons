@@ -18,15 +18,13 @@ Features:
 - Integration with existing systems
 """
 
-import os
 import json
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Set
+from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field
 from datetime import datetime
 import csv
-import hashlib
 import re
 
 # Add parent directory for imports
@@ -43,7 +41,6 @@ except ImportError:
     import subprocess
     subprocess.run([sys.executable, "-m", "pip", "install", "-q", "selenium", "webdriver-manager"])
     from selenium import webdriver
-    from selenium.webdriver.common.by import By
 
 try:
     import requests
@@ -52,8 +49,6 @@ except ImportError:
     print("Installing requests, beautifulsoup4...")
     import subprocess
     subprocess.run([sys.executable, "-m", "pip", "install", "-q", "requests", "beautifulsoup4"])
-    import requests
-    from bs4 import BeautifulSoup
 
 
 @dataclass

@@ -9,7 +9,6 @@ import json
 import csv
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict
 
 class RenameDocGenerator:
     """Generate rename documentation in multiple formats"""
@@ -145,7 +144,7 @@ class RenameDocGenerator:
         csv_path = self.generate_csv()
         json_path = self.generate_json()
         
-        print(f"✅ Generated documentation:")
+        print("✅ Generated documentation:")
         print(f"   📄 Markdown: {md_path}")
         print(f"   📊 CSV:      {csv_path}")
         print(f"   🔧 JSON:     {json_path}")

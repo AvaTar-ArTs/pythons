@@ -32,7 +32,7 @@ def compare_files(file1, file2):
     )
 
     if not diff:
-        print(f"? Files are identical!")
+        print("? Files are identical!")
         return
 
     # Count changes

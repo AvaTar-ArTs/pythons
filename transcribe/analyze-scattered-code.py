@@ -125,7 +125,7 @@ class CodeContentAnalyzer:
             
             return functionality
             
-        except Exception as e:
+        except Exception:
             return functionality
     
     def extract_docstring(self, filepath):
@@ -189,7 +189,7 @@ class CodeContentAnalyzer:
     
     def analyze_all(self, files, limit=None):
         """Analyze all files"""
-        print(f"\n?? Analyzing file contents...")
+        print("\n?? Analyzing file contents...")
         print("=" * 80)
         
         if limit:
@@ -244,7 +244,7 @@ class CodeContentAnalyzer:
         dupes = {k: v for k, v in self.duplicates.items() if len(v) > 1}
         
         if dupes:
-            print(f"\n???  Duplicates to Remove:")
+            print("\n???  Duplicates to Remove:")
             for hash_val, files in list(dupes.items())[:5]:
                 # Keep the one in ~/Documents/pythons, remove others
                 keep = None
@@ -263,7 +263,7 @@ class CodeContentAnalyzer:
                         print(f"  Remove: {r['path']}")
         
         # Find valuable scripts on external drives
-        print(f"\n? Valuable Scripts on External Drives:")
+        print("\n? Valuable Scripts on External Drives:")
         external_valuable = [
             a for a in self.analyzed 
             if ('2T-Xx' in a['location'] or 'DeVonDaTa' in a['location'])

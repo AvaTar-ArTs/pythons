@@ -282,7 +282,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
 
         chat_id = os.getenv("TELEGRAM_CHAT_ID", "@your_channel")
 
-        logger.info(f"📤 Uploading to Telegram...")
+        logger.info("📤 Uploading to Telegram...")
 
         try:
             with open(audio_file, "rb") as audio:

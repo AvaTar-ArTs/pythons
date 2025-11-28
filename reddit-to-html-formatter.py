@@ -1,6 +1,4 @@
 from moviepy.editor import *
-import datetime as dt
-import pandas as pd
 import praw
 
 import logging

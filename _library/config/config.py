@@ -1,8 +1,7 @@
 import asyncio
 
-from libs.utils import ask_question, print_error, print_status, print_success
+from libs.utils import print_success
 from proxybroker import Broker
-from requests import get
 
 
 async def show(proxies, proxy_list):

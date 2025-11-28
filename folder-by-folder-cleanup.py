@@ -8,7 +8,6 @@ import hashlib
 import json
 import csv
 from pathlib import Path
-from datetime import datetime
 
 class FolderCleanup:
     """Analyze one folder at a time"""
@@ -113,7 +112,7 @@ class FolderCleanup:
         
         dup_size = sum(d['size'] for d in duplicates) / (1024**2)
         
-        print(f"\n  ? Results:")
+        print("\n  ? Results:")
         print(f"    ? Duplicates: {len(duplicates)} ({dup_size:.1f} MB)")
         print(f"    ? Unique: {len(unique)}")
         print(f"    ? CSV: {csv_path.name}")
@@ -165,8 +164,8 @@ def main():
         for name, count in sorted(folder_stats, key=lambda x: -x[1]):
             print(f"  {count:6,} .py files  ?  {name}")
         
-        print(f"\nTo analyze a folder:")
-        print(f"  python folder-by-folder-cleanup.py analyze <folder_name>")
+        print("\nTo analyze a folder:")
+        print("  python folder-by-folder-cleanup.py analyze <folder_name>")
     
     elif command == 'analyze':
         if len(sys.argv) < 3:
@@ -209,7 +208,7 @@ def main():
         for r in all_results:
             print(f"  ? {r['folder']}: {r['duplicates']} dupes ({r['size_mb']:.1f} MB)")
         
-        print(f"\n?? Total:")
+        print("\n?? Total:")
         print(f"  ? Duplicates: {total_dupes}")
         print(f"  ? Space to reclaim: {total_size:.1f} MB")
 

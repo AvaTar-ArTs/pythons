@@ -26,8 +26,6 @@ import json
 import asyncio
 from typing import Dict, List, Optional, Any, Tuple
 from dataclasses import dataclass, field
-from datetime import datetime
-from pathlib import Path
 import anthropic
 from openai import OpenAI
 import groq
@@ -669,7 +667,7 @@ async def main():
         image_descriptions="Futuristic AI interface, vibrant colors, professional"
     )
     
-    print(f"✅ Generated YouTube content:")
+    print("✅ Generated YouTube content:")
     print(f"   Title: {youtube_result['title']}")
     print(f"   SEO Score: {youtube_result['seo_score']}/100")
     print(f"   Engagement Score: {youtube_result['engagement_score']}/100")
@@ -688,7 +686,7 @@ async def main():
     
     analyzed_asset = await orchestrator.deep_content_analysis(asset)
     
-    print(f"✅ Analyzed content:")
+    print("✅ Analyzed content:")
     print(f"   Tags: {', '.join(analyzed_asset.tags[:5])}")
     print(f"   Top scores: {analyzed_asset.tag_scores[:3]}")
     print()

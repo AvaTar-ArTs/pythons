@@ -4,12 +4,11 @@ Advanced Script Finder - Find the best Python scripts to inspire improvements
 Analyzes Python files for advanced patterns and features
 """
 
-import os
 import ast
 import re
 import json
 from pathlib import Path
-from collections import defaultdict, Counter
+from collections import defaultdict
 from datetime import datetime
 
 class AdvancedScriptFinder:
@@ -139,7 +138,7 @@ class AdvancedScriptFinder:
             
             return stats
             
-        except Exception as e:
+        except Exception:
             return None
     
     def scan_directory(self, directory: Path, max_files=200):

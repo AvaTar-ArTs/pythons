@@ -134,7 +134,7 @@ def generate_video(generated_files_response):
         OUTPUT_FINAL_INFO + "video-info-" + get_current_date() + ".json", "w"
     ) as outfile:
         json.dump(final_json, outfile, indent=4)
-    logger.info(f"Task completed ...")
+    logger.info("Task completed ...")
 
     """check_and_add_topic function."""
 
@@ -163,7 +163,7 @@ def check_and_add_topic(new_topic, existing_topics_file):
 
 
 if __name__ == "__main__":
-    logger.info(f"####.................. Service starting .................######")
+    logger.info("####.................. Service starting .................######")
     # tech topic's tech_topics = ["elon musk", "apple", "iphone 15", "amazon", "google", "chatgpt", "ai",
     # "technologies", "ticktok","instagram", "news", "smartphone", "microsoft", "meta", "metaverse","new game
     # release", "new features", " "] tech_topics = ["elon musk", "iphone", "game", " "] for tp in tech_topics:
@@ -198,5 +198,5 @@ if __name__ == "__main__":
         )
         _news(top_news)
     logger.info(
-        f"####.................. Service Ended Successfully .................######"
+        "####.................. Service Ended Successfully .................######"
     )
