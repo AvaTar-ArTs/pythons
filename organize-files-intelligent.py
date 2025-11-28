@@ -18,14 +18,12 @@ Key Features:
 import ast
 import json
 import logging
-import os
 import re
 import time
-from collections import defaultdict, Counter
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple, Union
-import hashlib
 import mimetypes
 
 # Configure logging
@@ -330,7 +328,7 @@ class IntelligentAnalyzer:
         for file_path in directory.rglob("*"):
             if file_path.is_file():
                 # Skip hidden files and common non-code files
-                if not file_path.name.startswith(".") and not file_path.suffix in {
+                if not file_path.name.startswith(".") and file_path.suffix not in {
                     ".pyc",
                     ".pyo",
                     ".pyd",

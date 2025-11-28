@@ -4,12 +4,10 @@ NanoBanana API Prompt Analyzer
 Deep content-aware research on image/video prompts and NanoBanana API integration
 """
 
-import os
 import re
 import json
-import ast
 from pathlib import Path
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional
 from collections import Counter, defaultdict
 import logging
 

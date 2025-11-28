@@ -1,5 +1,7 @@
 from pathlib import Path
-import os, zipfile, shutil, textwrap, json, pathlib
+import os
+import zipfile
+import shutil
 
 # Constants
 CONSTANT_102 = 102
@@ -104,7 +106,7 @@ if os.path.exists(og_src):
     shutil.copy(og_src, og_dest)
 else:
     # make a tiny placeholder png if not found
-    from PIL import Image, ImageDraw, ImageFont
+    from PIL import Image, ImageDraw
 
     img = Image.new("RGB", (CONSTANT_1200, CONSTANT_630), (11, 15, 26))
     d = ImageDraw.Draw(img)

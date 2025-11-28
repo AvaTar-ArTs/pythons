@@ -149,14 +149,13 @@ def display_rename_plan(rename_plan):
     total = len(rename_plan)
     keepers = sum(1 for r in rename_plan if r["is_keeper"])
 
-    print(f"\n?? Summary:")
+    print("\n?? Summary:")
     print(f"  Total files: {total}")
     print(f"  Keepers: {keepers}")
     print(f"  Archive: {total - keepers}")
 
 
 def main():
-    import sys
 
     print("?? Analyzing script purposes...")
     rename_plan = create_rename_plan()

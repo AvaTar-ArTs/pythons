@@ -18,7 +18,7 @@ from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
 from difflib import SequenceMatcher
-from typing import Dict, List
+from typing import Dict
 import re
 import mutagen
 
@@ -317,8 +317,8 @@ class MissingSongVerifier:
             f.write("---\n\n")
             
             f.write("## 📊 Summary\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Claimed Missing | {self.stats['missing_claimed']} |\n")
             f.write(f"| **Truly Missing** | **{self.stats['truly_missing']}** |\n")
             f.write(f"| Found (Different Name) | {self.stats['found_different_name']} |\n\n")

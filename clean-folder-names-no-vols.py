@@ -11,12 +11,10 @@ Features:
 ✨ Handle all edge cases
 """
 
-import os
 import csv
 import shutil
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
 
 class Colors:
     CYAN = "\033[96m"

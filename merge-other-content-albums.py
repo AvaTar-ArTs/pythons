@@ -6,10 +6,8 @@ Move all albums from Other_Content/Albums into nocTurneMeLoDieS
 with flat structure
 """
 
-import os
 import shutil
 from pathlib import Path
-from datetime import datetime
 
 class Colors:
     CYAN = "\033[96m"

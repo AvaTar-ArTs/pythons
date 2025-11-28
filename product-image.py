@@ -1,6 +1,5 @@
 from pathlib import Path
 import csv
-import os
 
 import requests
 from slugify import slugify  # Install with: pip install python-slugify

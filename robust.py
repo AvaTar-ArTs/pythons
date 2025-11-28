@@ -7,15 +7,12 @@ Handles edge cases and focuses on the most important files for content-aware pro
 import os
 import json
 import hashlib
-import difflib
 import shutil
 from pathlib import Path
 from datetime import datetime
 import re
 from collections import defaultdict, Counter
-import mimetypes
 import signal
-import time
 
 class RobustFileProcessor:
     def __init__(self, file_list_path, base_dir=Path("/Users/steven")):
@@ -132,7 +129,7 @@ class RobustFileProcessor:
             
             return file_info
             
-        except (TimeoutError, OSError, UnicodeDecodeError, Exception) as e:
+        except (TimeoutError, OSError, UnicodeDecodeError, Exception):
             # Cancel timeout
             signal.alarm(0)
             return None
@@ -190,7 +187,7 @@ class RobustFileProcessor:
             
             return file_info
             
-        except Exception as e:
+        except Exception:
             return None
     
     def determine_content_type(self, content, file_path):
@@ -619,7 +616,7 @@ class RobustFileProcessor:
         
         self.optimization_plan = plan
         
-        logger.info(f"📊 Optimization Plan Created:")
+        logger.info("📊 Optimization Plan Created:")
         logger.info(f"  📋 Phases: {len(plan['phases'])}")
         logger.info(f"  📄 Files Affected: {plan['total_files_affected']}")
         logger.info(f"  ⚠️  Risk Level: {plan['risk_level']}")
@@ -798,7 +795,7 @@ class RobustFileProcessor:
         logger.info(f"      🔗 Optimizing dependencies for {len(files)} files")
         
         if dry_run:
-            logger.info(f"      🔍 DRY RUN: Would optimize dependencies")
+            logger.info("      🔍 DRY RUN: Would optimize dependencies")
             for file_path in files:
                 logger.info(f"         - {file_path}")
         else:
@@ -827,7 +824,7 @@ class RobustFileProcessor:
         md_file = self.analysis_dir / f"robust_analysis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
         self.generate_markdown_report(md_file)
         
-        logger.info(f"📋 Reports Generated:")
+        logger.info("📋 Reports Generated:")
         logger.info(f"  📄 JSON: {json_file}")
         logger.info(f"  📄 Markdown: {md_file}")
         
@@ -901,7 +898,7 @@ class RobustFileProcessor:
         # Generate reports
         json_file, md_file = self.generate_comprehensive_report()
         
-        logger.info(f"\n🎉 Robust Analysis Complete!")
+        logger.info("\n🎉 Robust Analysis Complete!")
         logger.info(f"📊 Files analyzed: {file_count}")
         logger.info(f"📊 Content types: {len(self.relationships.get('type_groups', {}))}")
         logger.info(f"📊 Similar groups: {len(self.relationships.get('similar_groups', []))}")

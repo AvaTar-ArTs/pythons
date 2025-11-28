@@ -3,7 +3,7 @@ from openai import OpenAI
 client = OpenAI(api_key=YOUR_OPENAI_API_KEY)
 import logging
 
-from utilities.const import GPT_MODEL, YOUR_OPENAI_API_KEY
+from utilities.const import GPT_MODEL
 
 # Configure OpenAI API
 
@@ -18,7 +18,7 @@ logger.addHandler(file_handler)
 
 
 class Rephrase:
-    logger.info(f"Inside class Rephrase")
+    logger.info("Inside class Rephrase")
 
     def __init__(self, content):
         """__init__ function."""

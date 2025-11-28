@@ -19,17 +19,15 @@ Usage:
 """
 
 import os
-import sys
 import json
 import time
 import asyncio
 import requests
 import openai
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any
 from anthropic import Anthropic
-from concurrent.futures import ThreadPoolExecutor
 
 
 class ContentAgency:
@@ -98,7 +96,7 @@ Format as JSON.""",
             if response.status_code == CONSTANT_200:
                 result = response.json()
                 trends_text = result["choices"][0]["message"]["content"]
-                logger.info(f"   ✅ Analyzed trending topics")
+                logger.info("   ✅ Analyzed trending topics")
                 logger.info(
                     f"   📊 Sources: {len(result.get('citations', []))} citations"
                 )
@@ -264,8 +262,8 @@ Be brutally honest. Only recommend producing ideas that are truly exceptional.""
             # Sort by total score
             ranked.sort(key=lambda x: x.get("total_score", 0), reverse=True)
 
-            logger.info(f"   ✅ Claude critique complete")
-            logger.info(f"   📊 Recommendations:")
+            logger.info("   ✅ Claude critique complete")
+            logger.info("   📊 Recommendations:")
             produce_count = sum(
                 1 for r in ranked if r.get("recommendation") == "produce"
             )
@@ -293,7 +291,7 @@ Be brutally honest. Only recommend producing ideas that are truly exceptional.""
 
     async def produce_content_variants(self, idea: Dict, top_ideas: List[Dict]) -> Dict:
         """Step 5: Generate content variants in parallel"""
-        logger.info(f"\n🎬 PHASE 2: PRODUCING CONTENT")
+        logger.info("\n🎬 PHASE 2: PRODUCING CONTENT")
         logger.info(
             f"   Topic: {idea['title'] if 'title' in idea else top_ideas[idea['id']]['title']}"
         )
@@ -434,7 +432,7 @@ Return just the script text.""",
 
     def distribute_variants(self, content_batch: Dict, test_size: int = CONSTANT_100):
         """Step 6: Distribute variants for testing"""
-        logger.info(f"\n🧪 PHASE 3: A/B TESTING")
+        logger.info("\n🧪 PHASE 3: A/B TESTING")
 
         variants = content_batch.get("variants", [])
         logger.info(f"   Testing {len(variants)} variants with {test_size} users")
@@ -448,7 +446,7 @@ Return just the script text.""",
             variant["test_start"] = datetime.now().isoformat()
             variant["test_group_size"] = test_size // len(variants)
 
-        logger.info(f"   ✅ Variants distributed for testing")
+        logger.info("   ✅ Variants distributed for testing")
         return variants
 
     def _send_test_to_telegram(self, variant: Dict, idea: Dict):
@@ -482,7 +480,7 @@ Please react to provide feedback!"""
 
     def analyze_performance(self, variants: List[Dict]) -> Dict[str, Any]:
         """Step 7: Analyze variant performance"""
-        logger.info(f"\n📊 PHASE 4: PERFORMANCE ANALYSIS")
+        logger.info("\n📊 PHASE 4: PERFORMANCE ANALYSIS")
 
         # Mock performance data (in production, pull from analytics)
         for variant in variants:
@@ -688,7 +686,7 @@ Timestamp: {performance_data['analysis_time']}"""
 
             # Wait before next iteration (in production)
             if i < iterations - 1:
-                logger.info(f"\n⏳ Waiting 10 seconds before next iteration...")
+                logger.info("\n⏳ Waiting 10 seconds before next iteration...")
                 time.sleep(10)
 
         logger.info(Path("\n") + "=" * 60)

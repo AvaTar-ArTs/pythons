@@ -9,12 +9,10 @@ Author: Enhanced by Claude
 Version: 1.0
 """
 
-import os
 import sys
 import json
 import subprocess
 from pathlib import Path
-from datetime import datetime
 
 
 def setup_monitoring():
@@ -255,8 +253,8 @@ if __name__ == "__main__":
     start_script.chmod(0o755)
     check_script.chmod(0o755)
 
-    logger.info(f"✅ Created start_monitoring.py")
-    logger.info(f"✅ Created check_quality.py")
+    logger.info("✅ Created start_monitoring.py")
+    logger.info("✅ Created check_quality.py")
 
 
 if __name__ == "__main__":

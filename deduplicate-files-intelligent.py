@@ -24,8 +24,6 @@ Features:
 ✨ Detailed removal report with undo script
 """
 
-import os
-import sys
 import ast
 import json
 import hashlib
@@ -33,7 +31,7 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-from typing import Dict, List, Optional, Tuple, Any, Set
+from typing import Dict, List, Tuple, Any
 
 
 # Colors
@@ -452,8 +450,8 @@ class IntelligentDeduplicator:
 
             # Summary
             f.write("## 📊 DEDUPLICATION SUMMARY\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Total Files Scanned | {self.stats['total_files']:,} |\n")
             f.write(
                 f"| Exact Duplicate Groups | {self.stats['exact_duplicates']:,} |\n"

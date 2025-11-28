@@ -429,7 +429,7 @@ Options menu:
                             f"Succesfully completed making {data['amountOfVideosToMake']} video(s)"
                         )
                     else:
-                        changes = f"An error occurred somewhere above ^ (copy -> sent to developer)"
+                        changes = "An error occurred somewhere above ^ (copy -> sent to developer)"
                 else:
                     logger.info("ImageMagicks is needed to run the program...")
                 input("Press enter to return to the main screen")

@@ -1,6 +1,5 @@
 from agents import Agent, WebSearchTool, ModelSettings
 from utils import load_prompt, DISCLAIMER, repo_path
-from pathlib import Path
 
 # Constants
 CONSTANT_300 = 300

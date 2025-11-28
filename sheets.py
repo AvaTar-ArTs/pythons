@@ -13,7 +13,7 @@ The worksheet will have header row = fieldnames in order.
 
 from __future__ import annotations
 import os
-from typing import List, Dict, Optional
+from typing import List, Dict
 import gspread
 from google.oauth2.service_account import Credentials as ServiceAccountCredentials
 from google.oauth2.credentials import Credentials as UserCredentials
@@ -48,7 +48,6 @@ def _load_client() -> gspread.Client:
                 "No credentials found. Provide service_account.json or client_secret.json (OAuth)."
             )
         # Run local OAuth flow
-        import google.auth.transport.requests
         from google_auth_oauthlib.flow import InstalledAppFlow
 
         flow = InstalledAppFlow.from_client_secrets_file(client_secret, SCOPES)

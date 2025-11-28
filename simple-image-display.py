@@ -3,7 +3,6 @@ import os
 import re
 from datetime import datetime
 
-import config  # Import the configuration
 
 import logging
 

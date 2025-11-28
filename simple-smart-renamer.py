@@ -156,7 +156,7 @@ class SimpleSmartRenamer:
             if renamed > 3:
                 print(f"  ... and {renamed - 3} more")
             elif renamed == 0:
-                print(f"  ✅ All good!")
+                print("  ✅ All good!")
 
         print(f"\n{'='*80}")
         print(

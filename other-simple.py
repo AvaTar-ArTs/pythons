@@ -2,7 +2,6 @@ import os
 import csv
 import re
 from datetime import datetime
-import config  # Import the configuration
 
 import logging
 

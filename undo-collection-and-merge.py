@@ -7,7 +7,6 @@
 3. Remove Steven_Chaplinski_Collection folder completely
 """
 
-import os
 import shutil
 from pathlib import Path
 from datetime import datetime
@@ -50,7 +49,7 @@ class UndoAndMergeCollection:
         # Find all MP3s that were recently moved (they're in album/files/ folders)
         # We'll just move ALL MP3s from ALL albums to collection temporarily
         
-        print(f"Scanning all albums for MP3s...\n")
+        print("Scanning all albums for MP3s...\n")
         
         for album_folder in self.nocturne_dir.iterdir():
             if not album_folder.is_dir():

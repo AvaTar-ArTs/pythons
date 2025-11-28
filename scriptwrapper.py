@@ -1,9 +1,6 @@
-import datetime
-import math
 import os
 import pickle
 import random
-import subprocess
 
 import database
 import settings

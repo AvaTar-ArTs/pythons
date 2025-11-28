@@ -45,7 +45,7 @@ bot.login(username=args.u, password=args.p, proxy=args.proxy)
 media_id = bot.get_media_id_from_link(args.link)
 comments = bot.get_media_comments(media_id)
 if len(comments) == 0:
-    bot.logger.info("Media `{link}` has got no comments yet.".format(args.link))
+    bot.logger.info("Media `{link}` has got no comments yet.")
     exit()
 
 commented_users = []

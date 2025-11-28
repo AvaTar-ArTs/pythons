@@ -3,7 +3,6 @@ import logging
 import os
 import time
 import urllib
-from pathlib import Path
 from urllib.request import Request, urlopen
 
 import requests

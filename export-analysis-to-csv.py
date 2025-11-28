@@ -24,7 +24,6 @@ import json
 import csv
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
 
 
 # Colors
@@ -306,7 +305,7 @@ class AnalysisExporter:
         self.export_summary_csv(self.source_dir / f"analysis_summary_{timestamp}.csv")
 
         logger.info(f"\n{Colors.GREEN}{'='*80}")
-        logger.info(f"✅ EXPORT COMPLETE!")
+        logger.info("✅ EXPORT COMPLETE!")
         logger.info(f"{'='*80}{Colors.END}\n")
 
 

@@ -5,7 +5,6 @@ Analyzes Python files to extract and generate requirements.txt files.
 """
 
 import ast
-import os
 from pathlib import Path
 from collections import defaultdict
 from typing import Set, Dict, List
@@ -236,7 +235,7 @@ def analyze_category_directories():
 
     # Generate global requirements
     if global_packages:
-        logger.info(f"\n📦 Generating global requirements.txt")
+        logger.info("\n📦 Generating global requirements.txt")
         generate_requirements_file(
             sorted(global_packages), base_dir / "requirements.txt", "All Projects"
         )
@@ -259,11 +258,11 @@ def analyze_category_directories():
 
     # Print summary
     logger.info(f"\n{'='*60}")
-    logger.info(f"📊 REQUIREMENTS ANALYSIS SUMMARY")
+    logger.info("📊 REQUIREMENTS ANALYSIS SUMMARY")
     logger.info(f"{'='*60}")
     logger.info(f"Categories analyzed: {len(category_requirements)}")
     logger.info(f"Unique packages found: {len(global_packages)}")
-    logger.info(f"\n🏆 TOP PACKAGES:")
+    logger.info("\n🏆 TOP PACKAGES:")
 
     # Count package frequency across categories
     package_freq = defaultdict(int)

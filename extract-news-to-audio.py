@@ -1,6 +1,6 @@
 from topic.news import NEWS
 from tts.polly import AudioProcessor
-from utilities.const import LOG_PATH, TECH_NEWS
+from utilities.const import LOG_PATH
 
 logging.basicConfig(
     level=logging.INFO, format="[%(levelname)s] %(message)s", filename=LOG_PATH

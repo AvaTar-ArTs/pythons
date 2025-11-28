@@ -343,7 +343,7 @@ class ExactStructureReorganizer:
                             shutil.move(str(move["source"]), str(target))
                             logger.info(f"      ✅ {move['source'].name}")
                             moved_count += 1
-                        except Exception as e:
+                        except Exception:
                             logger.info(f"      ❌ {move['source'].name} - ERROR")
                             error_count += 1
 

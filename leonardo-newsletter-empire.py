@@ -41,7 +41,7 @@ class NewsletterEmpire:
     async def generate_newsletter(self, niche: str, edition: str = "daily"):
         """Generate complete newsletter"""
         logger.info("=" * 60)
-        logger.info(f"📰 NEWSLETTER GENERATOR")
+        logger.info("📰 NEWSLETTER GENERATOR")
         logger.info(f"Niche: {niche}")
         logger.info(f"Edition: {edition}")
         logger.info("=" * 60)

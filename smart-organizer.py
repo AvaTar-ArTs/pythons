@@ -6,7 +6,6 @@ Fixes filename mess AND organizes files by type into proper directories
 
 import os
 import re
-import shutil
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -374,14 +373,14 @@ if __name__ == "__main__":
 
     def generate_report(self, plan):
         """Generate organization report."""
-        logger.info(f"\n📊 ORGANIZATION REPORT")
+        logger.info("\n📊 ORGANIZATION REPORT")
         logger.info("=" * 80)
 
-        logger.info(f"🐍 PYTHON FILE RENAMES")
+        logger.info("🐍 PYTHON FILE RENAMES")
         logger.info(f"   Files to rename: {len(plan['python_renames'])}")
-        logger.info(f"   (Kept in ~/Documents/python)")
+        logger.info("   (Kept in ~/Documents/python)")
 
-        logger.info(f"\n📁 FILE MOVES BY TYPE")
+        logger.info("\n📁 FILE MOVES BY TYPE")
         file_moves = plan["file_moves"]
         by_extension = defaultdict(list)
         for move in file_moves:
@@ -391,16 +390,16 @@ if __name__ == "__main__":
             target_dir = self.file_type_dirs.get(ext, "Unknown")
             logger.info(f"   {ext}: {len(moves)} files → {target_dir}")
 
-        logger.info(f"\n📁 DIRECTORIES TO CREATE")
+        logger.info("\n📁 DIRECTORIES TO CREATE")
         for target_dir in plan["directories_to_create"]:
             logger.info(f"   {target_dir}")
 
-        logger.info(f"\n🔧 PYTHON RENAME EXAMPLES")
+        logger.info("\n🔧 PYTHON RENAME EXAMPLES")
         for i, rename in enumerate(plan["python_renames"][:10], 1):
             logger.info(f"   {i}. {rename['old_name']} → {rename['new_name']}")
             logger.info(f"      Reason: {rename['reason']}")
 
-        logger.info(f"\n📁 FILE MOVE EXAMPLES")
+        logger.info("\n📁 FILE MOVE EXAMPLES")
         for i, move in enumerate(file_moves[:10], 1):
             logger.info(f"   {i}. {move['old_name']} → {move['extension']} directory")
             logger.info(f"      From: {move['old_path']}")
@@ -431,17 +430,17 @@ def main():
     # Generate report
     organizer.generate_report(plan)
 
-    logger.info(f"\n💾 BACKUP & SAFETY")
+    logger.info("\n💾 BACKUP & SAFETY")
     logger.info(f"   Execution script: {execution_script}")
-    logger.info(f"   🛡️  All changes will be backed up!")
+    logger.info("   🛡️  All changes will be backed up!")
 
-    logger.info(f"\n🚀 NEXT STEPS")
-    logger.info(f"   1. Review the organization plan above")
+    logger.info("\n🚀 NEXT STEPS")
+    logger.info("   1. Review the organization plan above")
     logger.info(f"   2. Run the execution script: python3 {execution_script}")
-    logger.info(f"   3. Files will be organized by type!")
+    logger.info("   3. Files will be organized by type!")
 
-    logger.info(f"\n✅ SMART ORGANIZER READY!")
-    logger.info(f"   This will fix the filename mess AND organize properly!")
+    logger.info("\n✅ SMART ORGANIZER READY!")
+    logger.info("   This will fix the filename mess AND organize properly!")
 
 
 if __name__ == "__main__":

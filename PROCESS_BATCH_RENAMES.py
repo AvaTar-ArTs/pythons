@@ -63,7 +63,7 @@ def process_batch(batch_num):
         return False
 
     # Show summary
-    print(f"📝 Summary:")
+    print("📝 Summary:")
     print(f"   ✏️  Rename: {len(renames)} files")
     print(f"   📦 Library: {len(libraries)} files")
     print(f"   🗑️  Delete: {len(deletes)} files")

@@ -28,15 +28,12 @@ Merge python_backup/ and python-repo/ INTO python/ (master)
 Remove duplicates, keep best versions, archive source dirs
 """
 
-import os
 import hashlib
 import shutil
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
 from typing import List
 import csv
-import json
 
 
 # Colors
@@ -133,7 +130,7 @@ class CrossDirectoryMerger:
         """Scan all directories and build inventory"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🔍 SCANNING DIRECTORIES")
+        logger.info("🔍 SCANNING DIRECTORIES")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         # Scan master directory
@@ -197,7 +194,7 @@ class CrossDirectoryMerger:
         """Create plan to merge unique files into master"""
 
         logger.info(f"{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🧠 CREATING MERGE PLAN")
+        logger.info("🧠 CREATING MERGE PLAN")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         duplicates_across_dirs = 0
@@ -256,7 +253,7 @@ class CrossDirectoryMerger:
         """Execute the merge plan"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🔄 EXECUTING MERGE")
+        logger.info("🔄 EXECUTING MERGE")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.YELLOW}Mode: {'DRY RUN' if self.dry_run else 'LIVE MERGE'}{Colors.END}\n")
@@ -308,8 +305,8 @@ class CrossDirectoryMerger:
             f.write("# 🔄 CROSS-DIRECTORY MERGE REPORT\n\n")
             f.write(f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
             f.write("## 📊 SUMMARY\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Master Files | {self.stats['master_files']:,} |\n")
             f.write(f"| Source Files | {self.stats['source_files']:,} |\n")
             f.write(f"| Cross-Dir Duplicates | {self.stats['duplicates_found']:,} |\n")
@@ -379,7 +376,7 @@ class CrossDirectoryMerger:
         self.generate_report()
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"✅ MERGE COMPLETE!")
+        logger.info("✅ MERGE COMPLETE!")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.BOLD}📊 STATS:{Colors.END}\n")

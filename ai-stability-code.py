@@ -23,13 +23,12 @@ Intelligent Code Analyzer
 Adaptive content-aware analysis that dynamically adjusts based on context
 """
 
-import os
 import json
 import re
 from pathlib import Path
-from collections import defaultdict, Counter
+from collections import Counter
 from datetime import datetime
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional
 from dataclasses import dataclass, asdict
 
 
@@ -882,7 +881,7 @@ class AnalysisReporter:
         # Detailed insights
         if show_details and result.insights:
             logger.info(f"\n{AnalysisReporter.COLORS['bold']}{'='*80}")
-            logger.info(f"DETAILED INSIGHTS")
+            logger.info("DETAILED INSIGHTS")
             logger.info(f"{'='*80}{AnalysisReporter.COLORS['reset']}\n")
 
             # Group by severity

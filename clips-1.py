@@ -1,23 +1,13 @@
 import string
 import random
-import textwrap
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 import numpy as np
 from moviepy.editor import *
-import soundfile as sf
-from pydub import AudioSegment
-from pydub.playback import play
 
 from gtts import gTTS
-from io import BytesIO
 
-from moviepy.audio.fx.audio_fadein import audio_fadein
-from moviepy.audio.fx.audio_fadeout import audio_fadeout
-from moviepy.audio.fx.audio_left_right import audio_left_right
-from moviepy.audio.fx.audio_loop import audio_loop
-from moviepy.audio.fx.audio_normalize import audio_normalize
 from moviepy.audio.fx.volumex import volumex
 
 from pathlib import Path

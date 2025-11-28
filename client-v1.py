@@ -92,7 +92,7 @@ def testFTPConnection(username, password):
         ftp.connect(settings.address, settings.FTP_PORT)
         ftp.login(username, password)
         return True
-    except Exception as e:
+    except Exception:
         return False
 
 def requestClipsWithoutClips(game, amount, clips, window):

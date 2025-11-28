@@ -1,7 +1,6 @@
 import pickle
 from datetime import date
 
-import mysql.connector
 import settings
 from mysql.connector import pooling
 
@@ -92,7 +91,7 @@ def addFilter(filter_name, filterobject):
     connection_object = connection_pool.get_connection()
     cursor = connection_object.cursor()
     cursor.execute("USE tiktokdb;")
-    query = f"INSERT INTO filters(`name`, `filterwrapper`) VALUES(%s, %s);"
+    query = "INSERT INTO filters(`name`, `filterwrapper`) VALUES(%s, %s);"
     filterobjectdumped = pickle.dumps(filterobject)
     args = (filter_name, filterobjectdumped)
     cursor.execute(query, args)

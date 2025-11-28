@@ -43,7 +43,7 @@ class GoogleGalleryLogic(BaseGalleryLogic):
         # Configure the driver in headless mode
         options = Options()
         options.headless = True
-        spg_common.log(f"Starting Firefox webdriver...")
+        spg_common.log("Starting Firefox webdriver...")
         driver = webdriver.Firefox(options=options, executable_path=webdriver_path)
 
         # Load the album page
@@ -94,7 +94,7 @@ class GoogleGalleryLogic(BaseGalleryLogic):
                 type="image",
             )
 
-        spg_common.log(f"All photos processed!")
+        spg_common.log("All photos processed!")
 
         driver.quit()
 

@@ -3,7 +3,6 @@ import os
 import re
 from datetime import datetime
 
-import config  # Import the configuration
 from mutagen.easyid3 import EasyID3
 from mutagen.mp3 import MP3
 

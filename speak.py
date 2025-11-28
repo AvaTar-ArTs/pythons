@@ -17,7 +17,7 @@ def generate_speech(
     # Adding a pause using the SSML <break> tag
     # Assuming that 'text' contains something like "Option 3: <your text>"
     # and you want to insert a pause right after this before continuing with the answer
-    modified_text = text.replace("Option 3:", f'Option 3:"/>')
+    modified_text = text.replace("Option 3:", 'Option 3:"/>')
 
     response = OpenAI.Audio.create(
         model="tts-1-hd",  # Ensure this model supports the audio creation

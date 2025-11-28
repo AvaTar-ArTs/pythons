@@ -9,8 +9,6 @@ else:
 # the Strings used for this "thing"
 # the Telegram trackings
 from chatbase import Message
-from pyrogram import Client, Filters
-from translation import Translation
 
 
 def TRChatBase(chat_id, message_text, intent):

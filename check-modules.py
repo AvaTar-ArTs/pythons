@@ -16,7 +16,7 @@ def check_modules():
         sys.exiprint_errort(0)
 
     try:
-        import colorama
+        pass
     except Exception as e:
         print_error("'colorama' package not installed!")
         print_status("run install_requirements.bat to install the modules")

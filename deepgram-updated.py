@@ -8,8 +8,6 @@ from pathlib import Path
 import os
 from deepgram import (
     DeepgramClient,
-    LiveTranscriptionEvents,
-    LiveOptions,
 )
 
 # Load API key from environment
@@ -71,7 +69,7 @@ def test_file_transcription():
         )
 
         transcript = response.results.channels[0].alternatives[0].transcript
-        logger.info(f"\n✅ Transcription successful!")
+        logger.info("\n✅ Transcription successful!")
         logger.info(f'   Text: "{transcript}"')
 
         return True

@@ -4,15 +4,12 @@ Enhanced Gallery System - Merging simplegallery and city-16-9 features
 Combines the best of both projects with advanced features
 """
 
-import os
 import json
 import jinja2
 import argparse
-from pathlib import Path
 from typing import Dict, Any, List
 from collections import OrderedDict
 import common as cg_common
-from logic.city_gallery_logic import get_city_gallery_logic
 
 
 class EnhancedGalleryBuilder:
@@ -237,8 +234,8 @@ class EnhancedGalleryBuilder:
             except Exception as e:
                 logger.info(f"❌ Failed to build {layout_name}: {e}")
 
-        logger.info(f"\n🎉 Enhanced gallery generation complete!")
-        logger.info(f"\n📁 Generated files:")
+        logger.info("\n🎉 Enhanced gallery generation complete!")
+        logger.info("\n📁 Generated files:")
         for layout_name, config in self.layouts.items():
             logger.info(
                 f"   • public/index_{layout_name}.html - {config['description']}"

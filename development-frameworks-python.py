@@ -248,7 +248,7 @@ def main():
     total_size = sum(row["size_bytes"] for row in metadata_list)
     python_files = [row for row in metadata_list if row["filename"].endswith(".py")]
 
-    logger.info(f"\n=== ANALYSIS COMPLETE ===")
+    logger.info("\n=== ANALYSIS COMPLETE ===")
     logger.info(f"Total files analyzed: {total_files}")
     logger.info(f"Total size: {total_size / (CONSTANT_1024*CONSTANT_1024):.2f} MB")
     logger.info(f"Python files: {len(python_files)}")
@@ -261,12 +261,12 @@ def main():
         all_categories.extend(row["categories"].split("|"))
 
     category_counts = Counter(all_categories)
-    logger.info(f"\nTop file categories:")
+    logger.info("\nTop file categories:")
     for category, count in category_counts.most_common(10):
         logger.info(f"  {category}: {count}")
 
     # Show largest files
-    logger.info(f"\nLargest files:")
+    logger.info("\nLargest files:")
     largest_files = sorted(metadata_list, key=lambda x: x["size_bytes"], reverse=True)[
         :10
     ]
@@ -275,7 +275,7 @@ def main():
 
     # Show duplicates
     if duplicate_groups:
-        logger.info(f"\nDuplicate files found:")
+        logger.info("\nDuplicate files found:")
         for group in duplicate_groups[:5]:  # Show top 5 duplicate groups
             logger.info(f"  Hash {group['hash'][:8]}... ({group['count']} files)")
             for file_path in group["files"]:

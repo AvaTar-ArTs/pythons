@@ -5,11 +5,9 @@ Organize Root Python Scripts by Content
 Moves all remaining .py files from root into appropriate category folders.
 """
 
-import os
 import shutil
 from pathlib import Path
 from datetime import datetime
-import ast
 
 
 class RootScriptOrganizer:
@@ -161,7 +159,7 @@ class RootScriptOrganizer:
 
         # Move files
         if not dry_run:
-            print(f"\n🚀 Moving files...\n")
+            print("\n🚀 Moving files...\n")
 
             for category, scripts in categorized.items():
                 category_dir = self.target_dir / category

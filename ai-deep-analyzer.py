@@ -25,11 +25,8 @@ Features:
 """
 
 import ast
-import difflib
-import hashlib
 import json
 import os
-import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -461,8 +458,8 @@ class AIDeepIntelligentAnalyzer:
 
             # Summary
             f.write("## 📊 EXECUTIVE SUMMARY\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Total Files | {self.stats['total_files']:,} |\n")
             f.write(f"| Analyzed | {self.stats['analyzed']:,} |\n")
             f.write(f"| AI-Analyzed | {self.stats['ai_analyzed']:,} |\n\n")

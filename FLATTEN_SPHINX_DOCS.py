@@ -95,13 +95,13 @@ print()
 try:
     if source.exists() and not any(source.iterdir()):
         source.rmdir()
-        print(f"   ✅ Removed empty source directory")
+        print("   ✅ Removed empty source directory")
     elif source.exists():
-        print(f"   ⚠️  Source directory still has content (subdirectories may remain)")
+        print("   ⚠️  Source directory still has content (subdirectories may remain)")
 except:
     pass
 
 print()
 print(f"📁 Files are now in: {target.relative_to(documents_dir)}")
-print(f"   Depth reduced from 4 to 2")
+print("   Depth reduced from 4 to 2")
 

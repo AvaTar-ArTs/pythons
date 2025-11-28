@@ -16,7 +16,6 @@ Created in 07/CONSTANT_2020
 """
 
 # imported libraries
-import os
 import platform
 
 import art

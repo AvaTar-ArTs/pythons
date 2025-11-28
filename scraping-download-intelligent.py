@@ -4,13 +4,12 @@ Intelligent Content-Aware File Renamer
 Analyzes file content to suggest better, more descriptive names
 """
 
-import os
 import re
 import ast
 import json
 import subprocess
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 from collections import Counter
 import logging
 
@@ -284,10 +283,10 @@ class IntelligentFileRenamer:
                     subprocess.run(
                         ["git", "mv", str(current), str(suggested)], check=True
                     )
-                    logger.info(f"   ✅ Renamed (git tracked)")
+                    logger.info("   ✅ Renamed (git tracked)")
                 else:
                     current.rename(suggested)
-                    logger.info(f"   ✅ Renamed")
+                    logger.info("   ✅ Renamed")
                 applied += 1
             except Exception as e:
                 logger.error(f"   ❌ Error: {e}")
@@ -297,7 +296,7 @@ class IntelligentFileRenamer:
         if auto_approve:
             logger.info(f"✅ Successfully renamed {applied}/{len(suggestions)} files")
         else:
-            logger.info(f"\n💡 To apply renames, run with --apply flag")
+            logger.info("\n💡 To apply renames, run with --apply flag")
 
 
 def main():

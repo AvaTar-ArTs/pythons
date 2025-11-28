@@ -6,7 +6,6 @@ SIMPLIFIES filenames by removing all the junk and keeping only the meaningful pa
 
 import os
 import re
-import shutil
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -437,14 +436,14 @@ if __name__ == "__main__":
 
     def generate_report(self, plan):
         """Generate organization report."""
-        logger.info(f"\n📊 SIMPLIFICATION REPORT")
+        logger.info("\n📊 SIMPLIFICATION REPORT")
         logger.info("=" * 80)
 
-        logger.info(f"🐍 PYTHON FILE SIMPLIFICATIONS")
+        logger.info("🐍 PYTHON FILE SIMPLIFICATIONS")
         logger.info(f"   Files to simplify: {len(plan['python_renames'])}")
-        logger.info(f"   (Kept in ~/Documents/python)")
+        logger.info("   (Kept in ~/Documents/python)")
 
-        logger.info(f"\n📁 FILE MOVES BY TYPE")
+        logger.info("\n📁 FILE MOVES BY TYPE")
         file_moves = plan["file_moves"]
         by_extension = defaultdict(list)
         for move in file_moves:
@@ -454,16 +453,16 @@ if __name__ == "__main__":
             target_dir = self.file_type_dirs.get(ext, "Unknown")
             logger.info(f"   {ext}: {len(moves)} files → {target_dir}")
 
-        logger.info(f"\n📁 DIRECTORIES TO CREATE")
+        logger.info("\n📁 DIRECTORIES TO CREATE")
         for target_dir in plan["directories_to_create"]:
             logger.info(f"   {target_dir}")
 
-        logger.info(f"\n🎯 PYTHON SIMPLIFICATION EXAMPLES")
+        logger.info("\n🎯 PYTHON SIMPLIFICATION EXAMPLES")
         for i, rename in enumerate(plan["python_renames"][:15], 1):
             logger.info(f"   {i}. {rename['old_name']} → {rename['new_name']}")
             logger.info(f"      Reason: {rename['reason']}")
 
-        logger.info(f"\n📁 FILE MOVE EXAMPLES")
+        logger.info("\n📁 FILE MOVE EXAMPLES")
         for i, move in enumerate(file_moves[:10], 1):
             logger.info(f"   {i}. {move['old_name']} → {move['extension']} directory")
             logger.info(f"      From: {move['old_path']}")
@@ -496,17 +495,17 @@ def main():
     # Generate report
     organizer.generate_report(plan)
 
-    logger.info(f"\n💾 BACKUP & SAFETY")
+    logger.info("\n💾 BACKUP & SAFETY")
     logger.info(f"   Execution script: {execution_script}")
-    logger.info(f"   🛡️  All changes will be backed up!")
+    logger.info("   🛡️  All changes will be backed up!")
 
-    logger.info(f"\n🚀 NEXT STEPS")
-    logger.info(f"   1. Review the simplification plan above")
+    logger.info("\n🚀 NEXT STEPS")
+    logger.info("   1. Review the simplification plan above")
     logger.info(f"   2. Run the execution script: python3 {execution_script}")
-    logger.info(f"   3. Files will be simplified and organized!")
+    logger.info("   3. Files will be simplified and organized!")
 
-    logger.info(f"\n✅ SIMPLIFY ORGANIZER READY!")
-    logger.info(f"   This will SIMPLIFY filenames and organize properly!")
+    logger.info("\n✅ SIMPLIFY ORGANIZER READY!")
+    logger.info("   This will SIMPLIFY filenames and organize properly!")
 
 
 if __name__ == "__main__":

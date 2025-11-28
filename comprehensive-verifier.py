@@ -9,7 +9,6 @@ Checks for:
 4. Parent folder context preservation
 """
 
-import os
 import hashlib
 from pathlib import Path
 from collections import defaultdict
@@ -72,12 +71,12 @@ class ComprehensiveVerifier:
                 f"❌ Found {len(self.issues['exact_duplicates'])} exact duplicate groups:\n"
             )
             for group in self.issues["exact_duplicates"][:5]:
-                print(f"  Duplicates:")
+                print("  Duplicates:")
                 for file in group:
                     print(f"    - {file.parent.name}/{file.name}")
                 print()
         else:
-            print(f"✅ No exact duplicates found!\n")
+            print("✅ No exact duplicates found!\n")
 
     def find_similar_names(self):
         """Find files with very similar names (likely duplicates)."""
@@ -116,7 +115,7 @@ class ComprehensiveVerifier:
                     print(f"    ... and {len(group) - 5} more")
                 print()
         else:
-            print(f"✅ No problematic similar names!\n")
+            print("✅ No problematic similar names!\n")
 
     def check_naming_quality(self):
         """Check for poor naming practices."""
@@ -144,7 +143,7 @@ class ComprehensiveVerifier:
                 f"⚠️  {len(self.issues['overly_long'])} files have overly long names (>60 chars)\n"
             )
         else:
-            print(f"✅ All filenames are reasonable length!\n")
+            print("✅ All filenames are reasonable length!\n")
 
         if self.issues["poorly_named"]:
             print(
@@ -153,7 +152,7 @@ class ComprehensiveVerifier:
             for file in self.issues["poorly_named"][:10]:
                 print(f"    {file.parent.name}/{file.name}")
         else:
-            print(f"✅ All filenames are descriptive!\n")
+            print("✅ All filenames are descriptive!\n")
 
     def generate_report(self):
         """Generate verification report."""
@@ -177,7 +176,7 @@ class ComprehensiveVerifier:
             if self.issues["exact_duplicates"]:
                 f.write("## ❌ Exact Duplicates to Remove\n\n")
                 for group in self.issues["exact_duplicates"]:
-                    f.write(f"### Duplicate Group\n")
+                    f.write("### Duplicate Group\n")
                     for file in group:
                         f.write(f"- `{file.parent.name}/{file.name}`\n")
                     f.write("\n")

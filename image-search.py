@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
-import http.cookiejar
 import json
 import logging
 import os
-import re
-import sys
 import urllib.error
 import urllib.parse
 import urllib.request
 
-import requests
 from bs4 import BeautifulSoup
 
 # Constants

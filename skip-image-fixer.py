@@ -46,7 +46,7 @@ def apply_dpi(im, output_path):
     im.save(output_path, dpi=(TARGET_DPI, TARGET_DPI), quality=95)
 # 🔻 Resize images larger than 9MB
 def resize_image(im, output_path):
-    logger.info(f"📉 Resizing image to reduce file size...")
+    logger.info("📉 Resizing image to reduce file size...")
 
     quality = 95  # Start with high quality
     while quality > 10:  # Don't go below 10, because nobody likes pixel soup
@@ -60,7 +60,7 @@ def resize_image(im, output_path):
     logger.info(f"⚠️ Could not shrink below {file_size_mb:.2f} MB, keeping best effort.")
 # 🔺 Upscale images smaller than 9MB
 def upscale_image(im, output_path):
-    logger.info(f"📈 Upscaling image to meet quality standards...")
+    logger.info("📈 Upscaling image to meet quality standards...")
 
     new_width = im.width * UPSCALE_MULTIPLIER
     new_height = im.height * UPSCALE_MULTIPLIER
@@ -92,12 +92,12 @@ def process_batch(batch, root, mode):
 
             # Resize if it's 9MB+ and user chose mode 1 or 2
             if file_size_mb >= SIZE_THRESHOLD_MB and mode in (1, 2):
-                logger.info(f"🔻 Shrinking file (TOO BIG!)...")
+                logger.info("🔻 Shrinking file (TOO BIG!)...")
                 resize_image(im, temp_file)
 
             # Upscale if it's below 9MB and user chose mode 2 or 3
             elif file_size_mb < SIZE_THRESHOLD_MB and mode in (2, 3):
-                logger.info(f"🔺 Enlarging file (TOO SMALL!)...")
+                logger.info("🔺 Enlarging file (TOO SMALL!)...")
                 upscale_image(im, temp_file)
 
             os.replace(temp_file, file_path)  # Overwrite original

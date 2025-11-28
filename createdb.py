@@ -1,4 +1,4 @@
-from tinydb import Query, TinyDB
+from tinydb import TinyDB
 
 db = TinyDB("log/db.json")
 table = db.table("created_videos")

@@ -5,13 +5,11 @@ Analyzes ~/Documents directory to identify valuable scripts for reference reposi
 """
 
 import os
-import sys
 import json
-import hashlib
 from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass, asdict
-from typing import List, Dict, Set, Optional
+from typing import List, Optional
 import re
 
 

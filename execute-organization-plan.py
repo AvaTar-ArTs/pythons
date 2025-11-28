@@ -10,7 +10,6 @@ import csv
 import shutil
 from pathlib import Path
 from datetime import datetime
-import subprocess
 
 
 class OrganizationExecutor:
@@ -144,7 +143,7 @@ class OrganizationExecutor:
         # Sort by priority (highest first)
         files_to_move.sort(key=lambda x: int(x["priority"]), reverse=True)
 
-        logger.info(f"\n📋 EXECUTION PLAN:")
+        logger.info("\n📋 EXECUTION PLAN:")
         logger.info(f"   Files to process: {len(files_to_move)}")
         logger.info(
             f"   Starting with: {files_to_move[0]['file_name'] if files_to_move else 'None'}"
@@ -245,7 +244,7 @@ class OrganizationExecutor:
                 if len(self.errors) > 10:
                     f.write(f"... and {len(self.errors) - 10} more errors\n")
 
-        logger.info(f"✅ Reports saved:")
+        logger.info("✅ Reports saved:")
         if self.moved_files:
             logger.info(f"   📋 Moved files: {moved_csv}")
         if self.errors:
@@ -260,7 +259,7 @@ class OrganizationExecutor:
         logger.info("🎯 ORGANIZATION EXECUTION SUMMARY")
         logger.info("=" * 80)
 
-        logger.info(f"\n📊 STATISTICS:")
+        logger.info("\n📊 STATISTICS:")
         logger.info(f"   Total files processed: {self.stats['total_files']:,}")
         logger.info(f"   Files moved successfully: {self.stats['moved_files']:,}")
         logger.info(f"   Files skipped: {self.stats['skipped_files']:,}")
@@ -270,7 +269,7 @@ class OrganizationExecutor:
         )
 
         if self.moved_files:
-            logger.info(f"\n✅ TOP MOVED FILES:")
+            logger.info("\n✅ TOP MOVED FILES:")
             for i, file_info in enumerate(self.moved_files[:5], 1):
                 logger.info(
                     f"   {i}. {file_info['file_name']} ({file_info['file_size_mb']:.1f} MB)"
@@ -278,15 +277,15 @@ class OrganizationExecutor:
                 logger.info(f"      → {file_info['destination_path']}")
 
         if self.errors:
-            logger.info(f"\n❌ ERRORS ENCOUNTERED:")
+            logger.info("\n❌ ERRORS ENCOUNTERED:")
             for i, error in enumerate(self.errors[:5], 1):
                 logger.info(f"   {i}. {error['file_name']}: {error['error']}")
 
-        logger.info(f"\n💡 NEXT STEPS:")
-        logger.info(f"   1. Review the execution reports")
-        logger.info(f"   2. Check moved files in their new locations")
-        logger.info(f"   3. Use restore information if needed")
-        logger.info(f"   4. Continue with remaining files if desired")
+        logger.info("\n💡 NEXT STEPS:")
+        logger.info("   1. Review the execution reports")
+        logger.info("   2. Check moved files in their new locations")
+        logger.info("   3. Use restore information if needed")
+        logger.info("   4. Continue with remaining files if desired")
 
 
 def main():
@@ -314,8 +313,8 @@ def main():
     executor.load_organization_plan()
 
     # Execute with immediate action files only (automated)
-    logger.info(f"\n🎯 EXECUTING: Starting with immediate action files only")
-    logger.info(f"   This will process the highest priority files first")
+    logger.info("\n🎯 EXECUTING: Starting with immediate action files only")
+    logger.info("   This will process the highest priority files first")
 
     # Process immediate action files only
     executor.execute_organization(start_with_immediate=True)
@@ -326,7 +325,7 @@ def main():
     # Print summary
     executor.print_summary()
 
-    logger.info(f"\n✅ Organization execution complete!")
+    logger.info("\n✅ Organization execution complete!")
 
 
 if __name__ == "__main__":

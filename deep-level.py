@@ -6,7 +6,6 @@ Handles 6 levels deep and simplifies ALL the massive repetitive filenames
 
 import os
 import re
-import shutil
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -95,7 +94,7 @@ class Deep6LevelSimplifier:
                 depth_counts[depth] += 1
 
         logger.info(f"   Found {len(all_files)} files to analyze")
-        logger.info(f"   Depth distribution:")
+        logger.info("   Depth distribution:")
         for depth in sorted(depth_counts.keys()):
             logger.info(f"     Level {depth}: {depth_counts[depth]} files")
 
@@ -475,23 +474,23 @@ if __name__ == "__main__":
 
     def generate_deep_report(self, plan):
         """Generate deep organization report."""
-        logger.info(f"\n📊 DEEP 6-LEVEL SIMPLIFICATION REPORT")
+        logger.info("\n📊 DEEP 6-LEVEL SIMPLIFICATION REPORT")
         logger.info("=" * 80)
 
-        logger.info(f"🐍 PYTHON FILE SIMPLIFICATIONS")
+        logger.info("🐍 PYTHON FILE SIMPLIFICATIONS")
         logger.info(f"   Files to simplify: {len(plan['python_renames'])}")
-        logger.info(f"   (Kept in ~/Documents/python)")
+        logger.info("   (Kept in ~/Documents/python)")
 
         # Group by depth
         python_by_depth = defaultdict(list)
         for rename in plan["python_renames"]:
             python_by_depth[rename["depth"]].append(rename)
 
-        logger.info(f"\n🐍 PYTHON SIMPLIFICATIONS BY DEPTH")
+        logger.info("\n🐍 PYTHON SIMPLIFICATIONS BY DEPTH")
         for depth in sorted(python_by_depth.keys()):
             logger.info(f"   Level {depth}: {len(python_by_depth[depth])} files")
 
-        logger.info(f"\n📁 FILE MOVES BY TYPE")
+        logger.info("\n📁 FILE MOVES BY TYPE")
         file_moves = plan["file_moves"]
         by_extension = defaultdict(list)
         for move in file_moves:
@@ -506,20 +505,20 @@ if __name__ == "__main__":
         for move in file_moves:
             moves_by_depth[move["depth"]].append(move)
 
-        logger.info(f"\n📁 FILE MOVES BY DEPTH")
+        logger.info("\n📁 FILE MOVES BY DEPTH")
         for depth in sorted(moves_by_depth.keys()):
             logger.info(f"   Level {depth}: {len(moves_by_depth[depth])} files")
 
-        logger.info(f"\n📁 DIRECTORIES TO CREATE")
+        logger.info("\n📁 DIRECTORIES TO CREATE")
         for target_dir in plan["directories_to_create"]:
             logger.info(f"   {target_dir}")
 
-        logger.info(f"\n🎯 PYTHON SIMPLIFICATION EXAMPLES")
+        logger.info("\n🎯 PYTHON SIMPLIFICATION EXAMPLES")
         for i, rename in enumerate(plan["python_renames"][:15], 1):
             logger.info(f"   {i}. {rename['old_name']} → {rename['new_name']}")
             logger.info(f"      Depth: {rename['depth']} | Reason: {rename['reason']}")
 
-        logger.info(f"\n📁 FILE MOVE EXAMPLES")
+        logger.info("\n📁 FILE MOVE EXAMPLES")
         for i, move in enumerate(file_moves[:15], 1):
             logger.info(f"   {i}. {move['old_name']} → {move['extension']} directory")
             logger.info(f"      Depth: {move['depth']} | From: {move['relative_path']}")
@@ -551,17 +550,17 @@ def main():
     # Generate deep report
     simplifier.generate_deep_report(plan)
 
-    logger.info(f"\n💾 BACKUP & SAFETY")
+    logger.info("\n💾 BACKUP & SAFETY")
     logger.info(f"   Execution script: {execution_script}")
-    logger.info(f"   🛡️  All changes will be backed up!")
+    logger.info("   🛡️  All changes will be backed up!")
 
-    logger.info(f"\n🚀 NEXT STEPS")
-    logger.info(f"   1. Review the deep simplification plan above")
+    logger.info("\n🚀 NEXT STEPS")
+    logger.info("   1. Review the deep simplification plan above")
     logger.info(f"   2. Run the execution script: python3 {execution_script}")
-    logger.info(f"   3. Files will be simplified and organized at ALL depths!")
+    logger.info("   3. Files will be simplified and organized at ALL depths!")
 
-    logger.info(f"\n✅ DEEP 6-LEVEL SIMPLIFIER READY!")
-    logger.info(f"   This will handle ALL the nested mess!")
+    logger.info("\n✅ DEEP 6-LEVEL SIMPLIFIER READY!")
+    logger.info("   This will handle ALL the nested mess!")
 
 
 if __name__ == "__main__":

@@ -5,11 +5,9 @@ Converts specified markdown files to PDF format using markdown and weasyprint li
 """
 
 import os
-import sys
 import markdown
-from weasyprint import HTML, CSS
+from weasyprint import HTML
 from weasyprint.text.fonts import FontConfiguration
-import argparse
 from pathlib import Path
 
 
@@ -218,7 +216,7 @@ def main():
             failed_conversions += 1
 
     logger.info("-" * 50)
-    logger.info(f"📊 Conversion Summary:")
+    logger.info("📊 Conversion Summary:")
     logger.info(f"   ✅ Successful: {successful_conversions}")
     logger.info(f"   ❌ Failed: {failed_conversions}")
     logger.info(f"   📁 PDFs saved to: {output_dir}")

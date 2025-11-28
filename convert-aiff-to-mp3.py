@@ -3,7 +3,6 @@
 Convert AIFF files to MP3 format
 """
 
-import os
 import subprocess
 from pathlib import Path
 

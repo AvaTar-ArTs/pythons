@@ -214,7 +214,7 @@ class SimpleFlatOrganizer:
                     try:
                         shutil.move(str(file_path), str(target))
                         self.stats["files_moved"] += 1
-                    except Exception as e:
+                    except Exception:
                         self.stats["errors"] += 1
 
                 # Show sample
@@ -226,7 +226,7 @@ class SimpleFlatOrganizer:
 
         # Remove empty folders
         if not dry_run:
-            print(f"\n🗑️ Removing empty folders...")
+            print("\n🗑️ Removing empty folders...")
             self.remove_empty_folders()
 
         # Final summary

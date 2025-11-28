@@ -16,14 +16,12 @@ Features:
 
 import os
 import csv
-import json
 import re
-import hashlib
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
 from difflib import SequenceMatcher
-from typing import Dict, List, Tuple
+from typing import Dict
 import mutagen
 from mutagen.mp3 import MP3
 from mutagen.id3 import ID3
@@ -143,7 +141,7 @@ class ComprehensiveMusicContentScanner:
                 if audio:
                     metadata['duration'] = audio.info.length if hasattr(audio.info, 'length') else 0
                     
-        except Exception as e:
+        except Exception:
             pass
         
         return metadata
@@ -227,7 +225,7 @@ class ComprehensiveMusicContentScanner:
                         if scanned_count % 100 == 0:
                             print(f"  Scanned {scanned_count} audio files...", end='\r')
                         
-                    except Exception as e:
+                    except Exception:
                         pass
         
         self.stats['total_size_gb'] = total_size / (1024**3)
@@ -491,8 +489,8 @@ class ComprehensiveMusicContentScanner:
             f.write("---\n\n")
             
             f.write("## 📊 Summary Statistics\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Total Audio Files | {self.stats['total_audio']:,} |\n")
             f.write(f"| Total Content Files | {self.stats['total_content']:,} |\n")
             f.write(f"| Total Music Size | {self.stats['total_size_gb']:.2f} GB |\n")
@@ -574,10 +572,10 @@ class ComprehensiveMusicContentScanner:
         print(f"  {self.output_dir}\n")
         
         print(f"{Colors.BOLD}📝 Key Reports:{Colors.END}")
-        print(f"  1. AUDIO_CONTENT_MAP.csv - Complete audio→content mapping")
-        print(f"  2. ORPHANED_AUDIO_NO_CONTENT.csv - Audio without transcripts/lyrics")
-        print(f"  3. ORPHANED_CONTENT_NO_AUDIO.csv - Content to review before cleanup")
-        print(f"  4. COMPREHENSIVE_SCAN_REPORT.md - Full analysis\n")
+        print("  1. AUDIO_CONTENT_MAP.csv - Complete audio→content mapping")
+        print("  2. ORPHANED_AUDIO_NO_CONTENT.csv - Audio without transcripts/lyrics")
+        print("  3. ORPHANED_CONTENT_NO_AUDIO.csv - Content to review before cleanup")
+        print("  4. COMPREHENSIVE_SCAN_REPORT.md - Full analysis\n")
         
         if self.stats['content_without_audio'] > 0:
             print(f"{Colors.YELLOW}⚠️  IMPORTANT: {self.stats['content_without_audio']} orphaned content files found!{Colors.END}")

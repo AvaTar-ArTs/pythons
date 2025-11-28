@@ -4,14 +4,10 @@ Enhanced GitHub Repository Manager
 Comprehensive tool for managing and improving GitHub repositories
 """
 
-import os
-import json
-import subprocess
 import shutil
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Any, Optional, Tuple
-import re
+from typing import Dict, Any
 import logging
 
 # Configure logging
@@ -1628,14 +1624,14 @@ limitations under the License.
                 f"- **{repo_name}** - Quality Score: {quality_score}/CONSTANT_100\n"
             )
 
-        summary += f"""
+        summary += """
 ## 🔍 Common Issues
 
 """
         for issue in analysis["common_issues"][:5]:
             summary += f"- {issue}\n"
 
-        summary += f"""
+        summary += """
 ## 💡 Improvement Suggestions
 
 """
@@ -1684,13 +1680,13 @@ def main():
     logger.info("🔧 Applying improvements to all repositories...")
     results = manager.batch_improve_repositories()
 
-    logger.info(f"\n📊 Results:")
+    logger.info("\n📊 Results:")
     logger.info(f"Total repositories: {results['total_repos']}")
     logger.info(f"Successful: {results['successful']}")
     logger.info(f"Failed: {results['failed']}")
 
     if results["errors"]:
-        logger.info(f"\n❌ Errors:")
+        logger.info("\n❌ Errors:")
         for error in results["errors"][:5]:
             logger.info(f"  - {error['repo']}: {error['error']}")
 

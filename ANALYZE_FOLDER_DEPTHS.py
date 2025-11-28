@@ -89,7 +89,7 @@ def analyze_path(path, base_depth=0):
             if item.is_dir():
                 analyze_path(item, depth)
     
-    except (PermissionError, OSError) as e:
+    except (PermissionError, OSError):
         pass
 
 print("Analyzing folder structure...")

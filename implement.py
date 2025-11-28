@@ -4,10 +4,8 @@ Implement Smart Organization System
 Creates the final organization structure with symbolic links and navigation.
 """
 
-import os
 import json
 from pathlib import Path
-from collections import defaultdict
 
 
 class SmartOrganizationImplementer:
@@ -61,7 +59,7 @@ class SmartOrganizationImplementer:
                 for subcat, desc in subcategories.items():
                     f.write(f"- **{subcat.replace('_', ' ').title()}**: {desc}\n")
                 f.write(
-                    f"\n*This is a navigation directory - original files remain in their locations.*\n"
+                    "\n*This is a navigation directory - original files remain in their locations.*\n"
                 )
 
             # Create subdirectories
@@ -321,7 +319,7 @@ class SmartOrganizationImplementer:
             "content_categories": len(search_interface["content_categories"]),
         }
 
-        logger.info(f"\nSmart Organization Complete!")
+        logger.info("\nSmart Organization Complete!")
         logger.info(f"Created {summary['navigation_categories']} navigation categories")
         logger.info(f"Created {summary['shortcuts_created']} content shortcuts")
         logger.info(f"Indexed {summary['projects_indexed']} projects")

@@ -7,7 +7,6 @@ Demonstrates and runs all advanced renaming capabilities
 import argparse
 import sys
 from pathlib import Path
-from typing import List, Dict, Any
 
 
 # Load API keys from ~/.env.d/

@@ -40,13 +40,10 @@ import hashlib
 import json
 import os
 import re
-import subprocess
-import sys
-import time
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 
 # Color codes for beautiful output
@@ -457,7 +454,7 @@ class AIDeepIntelligentAnalyzer:
                         self.scan_directory(item, current_depth + 1)
                 except PermissionError:
                     pass
-                except Exception as e:
+                except Exception:
                     pass
 
         except Exception as e:
@@ -501,7 +498,7 @@ class AIDeepIntelligentAnalyzer:
             self.stats['total_files'] += 1
             self.stats['total_size'] += size
 
-        except Exception as e:
+        except Exception:
             pass
 
     def analyze_duplicates(self):
@@ -567,8 +564,8 @@ class AIDeepIntelligentAnalyzer:
 
             # Executive Summary
             report.write("## 📊 EXECUTIVE SUMMARY\n\n")
-            report.write(f"| Metric | Value |\n")
-            report.write(f"|--------|-------|\n")
+            report.write("| Metric | Value |\n")
+            report.write("|--------|-------|\n")
             report.write(f"| **Total Files** | {self.stats['total_files']:,} |\n")
             report.write(f"| **Total Size** | {self.stats['total_size'] / (CONSTANT_1024**3):.2f} GB |\n")
             report.write(f"| **Python Files** | {self.stats['py_files']:,} |\n")

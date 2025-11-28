@@ -6,9 +6,8 @@ Based on the advanced yt_deep_content_renamer.py
 """
 
 import ast
-import re
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 from collections import Counter
 import subprocess
 import logging

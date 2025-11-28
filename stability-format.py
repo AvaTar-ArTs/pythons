@@ -6,16 +6,12 @@ Enhanced version with proper sorting, formatting, and content structure
 for professional Medium articles.
 """
 
-import os
-import sys
 import json
 import csv
 import re
-import hashlib
-import math
 from pathlib import Path
 from datetime import datetime
-from collections import Counter, defaultdict
+from collections import defaultdict
 import subprocess
 
 
@@ -1092,8 +1088,8 @@ def main():
     logger.info("🤖 Format-Optimized Medium Article Automation Maker")
     logger.info("=" * 60)
     logger.info(f"📁 Analyzing folder: {python_folder}")
-    logger.info(f"📊 Looking for Python projects and files...")
-    logger.info(f"🎨 Ensuring proper formatting and structure...")
+    logger.info("📊 Looking for Python projects and files...")
+    logger.info("🎨 Ensuring proper formatting and structure...")
 
     # Create automation instance
     automation = FormatOptimizedAutomation(python_folder)
@@ -1101,7 +1097,7 @@ def main():
     # Run the complete automation
     results = automation.run_automation()
 
-    logger.info(f"\n✅ Format-optimized automation complete!")
+    logger.info("\n✅ Format-optimized automation complete!")
     logger.info(f"📄 Article: {results['html_file']}")
     logger.info(f"📊 Data: {results['json_file']}")
     logger.info(f"📈 Metrics: {results['csv_file']}")

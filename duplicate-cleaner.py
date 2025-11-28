@@ -3,7 +3,6 @@
 Duplicate Cleaner - Remove duplicate files and consolidate naming
 """
 
-import os
 import csv
 import hashlib
 from pathlib import Path
@@ -180,7 +179,7 @@ class DuplicateCleaner:
                         try:
                             file_path = Path(file_info["path"])
                             file_path.unlink()  # Delete the file
-                            logger.info(f"      ✅ Deleted successfully")
+                            logger.info("      ✅ Deleted successfully")
                             cleaned_count += 1
 
                             self.changes.append(
@@ -207,7 +206,7 @@ class DuplicateCleaner:
                                 }
                             )
                     else:
-                        logger.info(f"      🔍 Dry run - would delete")
+                        logger.info("      🔍 Dry run - would delete")
                         cleaned_count += 1
 
                         self.changes.append(
@@ -249,7 +248,7 @@ def main():
     logger.info("=" * 70)
     results = cleaner.clean_duplicates(dry_run=True)
 
-    logger.info(f"\n📊 DRY RUN RESULTS:")
+    logger.info("\n📊 DRY RUN RESULTS:")
     logger.info(f"   Files to clean: {results['cleaned']}")
     logger.info(f"   Errors: {results['errors']}")
 
@@ -257,8 +256,8 @@ def main():
     csv_file = cleaner.save_changes_csv()
     logger.info(f"\n📄 Dry run results saved to: {csv_file}")
 
-    logger.info(f"\n💡 To execute the duplicate cleaning, run:")
-    logger.info(f"   python3 duplicate_cleaner.py --execute")
+    logger.info("\n💡 To execute the duplicate cleaning, run:")
+    logger.info("   python3 duplicate_cleaner.py --execute")
 
 
 if __name__ == "__main__":
@@ -271,7 +270,7 @@ if __name__ == "__main__":
         results = cleaner.clean_duplicates(dry_run=False)
         csv_file = cleaner.save_changes_csv()
 
-        logger.info(f"\n🎯 DUPLICATE CLEANUP COMPLETE!")
+        logger.info("\n🎯 DUPLICATE CLEANUP COMPLETE!")
         logger.info(f"   Files cleaned: {results['cleaned']}")
         logger.info(f"   Errors: {results['errors']}")
         logger.info(f"   Changes saved to: {csv_file}")

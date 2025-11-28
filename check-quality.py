@@ -7,7 +7,6 @@ Shows the current quality status and dashboard.
 """
 
 import sys
-import json
 from pathlib import Path
 
 # Add the development tools to the path
@@ -59,7 +58,7 @@ if __name__ == "__main__":
                 current["files_with_logging"] / total_files
             ) * CONSTANT_100
 
-            logger.info(f"\n📊 Coverage Metrics:")
+            logger.info("\n📊 Coverage Metrics:")
             logger.info(f"📖 Docstrings: {docstring_coverage:.1f}%")
             logger.info(f"🏷️ Type Hints: {type_hint_coverage:.1f}%")
             logger.info(f"⚠️ Error Handling: {error_handling_coverage:.1f}%")
@@ -67,7 +66,7 @@ if __name__ == "__main__":
 
         # Trends
         if dashboard["trends"]:
-            logger.info(f"\n📈 Trends:")
+            logger.info("\n📈 Trends:")
             for trend in dashboard["trends"]:
                 direction = (
                     "📈"

@@ -5,11 +5,9 @@ Final Root Directory Organizer
 Organizes all remaining loose files in root directory into proper structure.
 """
 
-import os
 import shutil
 from pathlib import Path
 from datetime import datetime
-import re
 
 
 class FinalRootOrganizer:
@@ -90,7 +88,7 @@ class FinalRootOrganizer:
 
     def organize_files(self, dry_run=True):
         """Organize all loose files in root."""
-        print(f"\n📊 Organizing root directory files...\n")
+        print("\n📊 Organizing root directory files...\n")
         print(f"Mode: {'DRY RUN' if dry_run else 'LIVE'}\n")
 
         # Get all files in root
@@ -140,7 +138,7 @@ class FinalRootOrganizer:
                     if moved_count[category] <= 5:
                         print(f"  {category}: {file_path.name}")
 
-        print(f"\n📊 Files to move by category:")
+        print("\n📊 Files to move by category:")
         for category, count in moved_count.items():
             if count > 0:
                 print(f"  {category}: {count} files")
@@ -149,7 +147,7 @@ class FinalRootOrganizer:
 
     def merge_duplicate_folders(self, dry_run=True):
         """Merge duplicate category folders."""
-        print(f"\n🔄 Checking for duplicate folders...\n")
+        print("\n🔄 Checking for duplicate folders...\n")
 
         # Check for duplicates like 04_web_scraping and 04-web-scraping
         folders = [f for f in self.target_dir.iterdir() if f.is_dir()]

@@ -151,7 +151,7 @@ def main():
         print("\n" + "=" * 70)
         print("✅ MERGE AND DEDUPLICATION COMPLETE")
         print("=" * 70)
-        print(f"📊 Summary:")
+        print("📊 Summary:")
         print(f"   Zip files processed: {len(zip_paths)}")
         print(f"   Files processed: {files_processed}")
         print(f"   Unique files: {unique_files}")
@@ -162,7 +162,7 @@ def main():
     finally:
         # Clean up temporary extraction directory
         if temp_dir.exists():
-            print(f"\nCleaning up temporary files...")
+            print("\nCleaning up temporary files...")
             shutil.rmtree(temp_dir)
             print("✓ Cleanup complete")
 

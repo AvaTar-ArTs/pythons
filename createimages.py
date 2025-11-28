@@ -2,7 +2,6 @@ import os
 
 from openai import OpenAI
 
-import os
 from dotenv import load_dotenv
 
 import logging
@@ -10,7 +9,6 @@ import logging
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():
@@ -33,7 +31,7 @@ import io
 
 import pandas as pd
 import requests
-from PIL import Image, ImageDraw
+from PIL import Image
 from tqdm import tqdm
 
 # Set OpenAI and Stability.ai API keys https://platform.openai.com/account/api-keys AND https://beta.dreamstudio.ai/account

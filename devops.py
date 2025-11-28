@@ -7,9 +7,6 @@ Specialized expert for deployment, CI/CD, and infrastructure analysis.
 import sys
 from pathlib import Path
 from typing import Dict, List
-import re
-import yaml
-import json
 
 
 class DevOpsEngineerAgent:

@@ -9,7 +9,6 @@ from concurrent.futures import ThreadPoolExecutor
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

@@ -26,21 +26,16 @@ __status__ = "being developed"
 
 from multiprocessing import Process
 from random import choice
-from time import sleep, time
 
 from libs.instaclient import InstaClient
 from libs.utils import (
-    CheckPublicIP,
     GetInput,
-    IsProxyWorking,
     LoadProxies,
     LoadUsers,
     PrintBanner,
     PrintChoices,
-    PrintError,
     PrintFatalError,
     PrintStatus,
-    PrintSuccess,
 )
 
 USERS = []

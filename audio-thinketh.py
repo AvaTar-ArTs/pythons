@@ -7,7 +7,8 @@ Cinematic hybrid edition:
 - widening, fades, -14 LUFS target, CONSTANT_320 kbps mastering
 """
 
-import os, random
+import os
+import random
 from pathlib import Path
 from dotenv import load_dotenv
 from docx import Document
@@ -21,7 +22,6 @@ import requests
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

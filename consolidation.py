@@ -11,7 +11,6 @@ from pathlib import Path
 from collections import defaultdict
 import json
 from datetime import datetime
-import re
 
 
 class FinalConsolidator:
@@ -350,7 +349,7 @@ def main():
         json.dump(report, f, indent=2)
 
     logger.info(
-        f"\nDry-run report saved to: /Users/steven/final_consolidation_dry_run_report.json"
+        "\nDry-run report saved to: /Users/steven/final_consolidation_dry_run_report.json"
     )
 
     # Show summary
@@ -365,7 +364,7 @@ def main():
     logger.info(f"Errors: {report['summary']['errors']}")
 
     if report["consolidated_files"]:
-        logger.info(f"\nFiles that would be consolidated:")
+        logger.info("\nFiles that would be consolidated:")
         for item in report["consolidated_files"]:
             if isinstance(item["source"], list):
                 logger.info(
@@ -397,8 +396,8 @@ def main():
     with open(str(Path.home()) + "/final_consolidation_report.json", "w") as f:
         json.dump(final_report, f, indent=2)
 
-    logger.info(f"\nFinal consolidation completed!")
-    logger.info(f"Final report saved to: /Users/steven/final_consolidation_report.json")
+    logger.info("\nFinal consolidation completed!")
+    logger.info("Final report saved to: /Users/steven/final_consolidation_report.json")
 
     # Show final summary
     logger.info(Path("\n") + "=" * 60)
@@ -411,7 +410,7 @@ def main():
     logger.info(f"Errors: {final_report['summary']['errors']}")
 
     if final_report["consolidated_files"]:
-        logger.info(f"\nFiles consolidated:")
+        logger.info("\nFiles consolidated:")
         for item in final_report["consolidated_files"]:
             if isinstance(item["source"], list):
                 logger.info(

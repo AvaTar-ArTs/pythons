@@ -31,7 +31,7 @@ import requests
 import openai
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List
 from anthropic import Anthropic
 
 
@@ -189,7 +189,7 @@ class SEODominationEngine:
     async def generate_full_metadata_pack(self, domain: str):
         """Generate complete SEO metadata pack for domain"""
         logger.info("=" * 60)
-        logger.info(f"🚀 SEO METADATA PACK GENERATOR")
+        logger.info("🚀 SEO METADATA PACK GENERATOR")
         logger.info(f"Domain: {domain}")
         logger.info("=" * 60)
 
@@ -240,7 +240,7 @@ class SEODominationEngine:
         readme_file = self.output_dir / f"{domain}_SEO_IMPLEMENTATION.md"
         readme_file.write_text(readme)
 
-        logger.info(f"\n✅ Metadata pack generated!")
+        logger.info("\n✅ Metadata pack generated!")
         logger.info(f"   JSON: {pack_file}")
         logger.info(f"   Guide: {readme_file}")
 
@@ -690,7 +690,7 @@ Add to every page in <head>:
 ```
 """
 
-        guide += f"""
+        guide += """
 
 ## Target Keywords (Top 1-5% Growth CONSTANT_2025)
 
@@ -698,7 +698,7 @@ Add to every page in <head>:
         for i, kw in enumerate(pack["target_keywords"], 1):
             guide += f"{i}. **{kw}**\n"
 
-        guide += f"""
+        guide += """
 
 ## Content Brief Examples
 

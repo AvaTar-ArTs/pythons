@@ -194,7 +194,7 @@ class DirectoryOrganizer:
             depth_counts[depth] += 1
 
         logger.info(f"\n📊 Found {len(all_items)} items to process")
-        logger.info(f"   Depth distribution:")
+        logger.info("   Depth distribution:")
         for depth in sorted(depth_counts.keys()):
             logger.info(f"     Level {depth}: {depth_counts[depth]} items")
 
@@ -229,7 +229,7 @@ class DirectoryOrganizer:
                                     "depth_level": len(
                                         item_path.relative_to(self.root_path).parts
                                     ),
-                                    "change_reason": f"Cleaned filename - removed junk patterns",
+                                    "change_reason": "Cleaned filename - removed junk patterns",
                                     "timestamp": datetime.now().isoformat(),
                                 }
                             )
@@ -311,12 +311,12 @@ class DirectoryOrganizer:
         csv_file = fstr(Path.home()) + "/Documents/python/directory_rollback_{timestamp}.csv"
         self.create_rollback_csv(self.changes, csv_file)
 
-        logger.info(f"\n✅ Directory organization complete!")
+        logger.info("\n✅ Directory organization complete!")
         logger.info(f"📂 Directories moved: {directories_moved}")
         logger.info(f"🐍 Python files renamed: {files_renamed}")
         logger.info(f"📁 Files moved: {files_moved}")
         logger.info(f"📊 CSV rollback: {csv_file}")
-        logger.info(f"\n💡 All deep directories moved to ~/Documents/python")
+        logger.info("\n💡 All deep directories moved to ~/Documents/python")
 
 
 def main():

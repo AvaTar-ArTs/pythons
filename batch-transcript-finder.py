@@ -6,7 +6,6 @@ Search for transcripts/lyrics one folder at a time
 Compile results into CSV
 """
 
-import os
 import csv
 from pathlib import Path
 from datetime import datetime

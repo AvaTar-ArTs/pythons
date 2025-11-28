@@ -7,7 +7,6 @@ NO guessing, NO hallucinations, just FACTS from the code.
 """
 
 import ast
-import re
 import shutil
 from datetime import datetime
 from pathlib import Path
@@ -180,7 +179,7 @@ class SmartLocalRenamer:
         if renamed_count > 5:
             print(f"  ... and {renamed_count - 5} more")
         elif renamed_count == 0:
-            print(f"  ✅ All files already well-named!")
+            print("  ✅ All files already well-named!")
 
         return renamed_count
 

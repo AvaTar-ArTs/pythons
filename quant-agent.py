@@ -1,7 +1,6 @@
 from agents import Agent, ModelSettings
 from tools import run_code_interpreter, get_fred_series, read_file, list_output_files
 from utils import load_prompt, DISCLAIMER, repo_path
-from pathlib import Path
 
 # Constants
 CONSTANT_300 = 300

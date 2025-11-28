@@ -5,7 +5,6 @@ Analyze related items CSV and suggest organizational improvements
 
 from pathlib import Path
 import csv
-from collections import defaultdict
 from datetime import datetime
 
 documents_dir = Path.home() / "Documents"
@@ -108,27 +107,27 @@ print("=" * 100)
 print()
 
 print(f"1. MP3s without lyrics: {len(analysis['mp3s_no_lyrics']):,} groups")
-print(f"   These MP3s might benefit from lyric files")
+print("   These MP3s might benefit from lyric files")
 print()
 
 print(f"2. Lyrics without MP3s: {len(analysis['lyrics_no_mp3s']):,} groups")
-print(f"   These lyrics might be orphaned or MP3s are elsewhere")
+print("   These lyrics might be orphaned or MP3s are elsewhere")
 print()
 
 print(f"3. Large orphaned lyric collections: {len(analysis['orphaned_lyrics']):,} groups")
-print(f"   These have 5+ lyrics but no MP3s")
+print("   These have 5+ lyrics but no MP3s")
 print()
 
 print(f"4. Large orphaned prompt collections: {len(analysis['orphaned_prompts']):,} groups")
-print(f"   These have 5+ prompts but no MP3s")
+print("   These have 5+ prompts but no MP3s")
 print()
 
 print(f"5. Large MP3 collections: {len(analysis['large_mp3_collections']):,} groups")
-print(f"   These have 50+ MP3s and might need sub-organization")
+print("   These have 50+ MP3s and might need sub-organization")
 print()
 
 print(f"6. Well-organized groups: {len(analysis['well_organized']):,} groups")
-print(f"   These have MP3s + lyrics + other content")
+print("   These have MP3s + lyrics + other content")
 print()
 
 # Detailed suggestions
@@ -145,7 +144,7 @@ if analysis['large_mp3_collections']:
                                    key=lambda x: int(x['mp3_count']), reverse=True)[:10], 1):
         print(f"   {i}. {row['base_directory']}")
         print(f"      {row['mp3_count']} MP3s, {row['total_size_mb']} MB")
-        print(f"      💡 Consider organizing by artist, album, or genre")
+        print("      💡 Consider organizing by artist, album, or genre")
     print()
 
 # Suggestion 2: Orphaned lyrics
@@ -156,7 +155,7 @@ if analysis['orphaned_lyrics']:
                                    key=lambda x: int(x['lyric_count']), reverse=True)[:10], 1):
         print(f"   {i}. {row['base_directory']}")
         print(f"      {row['lyric_count']} lyrics, no MP3s")
-        print(f"      💡 Search for matching MP3s or move lyrics to MP3 location")
+        print("      💡 Search for matching MP3s or move lyrics to MP3 location")
     print()
 
 # Suggestion 3: MP3s without lyrics
@@ -169,7 +168,7 @@ if analysis['mp3s_no_lyrics']:
         print(f"   {i}. {row['base_directory']}")
         print(f"      {row['mp3_count']} MP3s, 0 lyrics")
         if int(row['mp3_count']) > 10:
-            print(f"      💡 Large collection - consider transcribing or finding lyrics")
+            print("      💡 Large collection - consider transcribing or finding lyrics")
     print()
 
 # Suggestion 4: Well-organized examples
@@ -181,7 +180,7 @@ if analysis['well_organized']:
         print(f"   {i}. {row['base_directory']}")
         print(f"      {row['mp3_count']} MP3s, {row['lyric_count']} lyrics, "
               f"{row['prompt_count']} prompts, {row['discography_count']} discography")
-        print(f"      ✅ Good organization - all related content together")
+        print("      ✅ Good organization - all related content together")
     print()
 
 # Create suggestions CSV

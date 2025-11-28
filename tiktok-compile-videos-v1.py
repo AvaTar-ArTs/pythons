@@ -6,7 +6,6 @@ import os
 import random
 import shutil
 
-import moviepy
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 OUTPUT_DIR = r"directory where the compiled video will be saved"

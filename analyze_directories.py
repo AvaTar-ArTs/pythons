@@ -5,7 +5,6 @@ Deep dive analysis of directories and zip files
 import os
 import zipfile
 import json
-from pathlib import Path
 from collections import defaultdict
 import subprocess
 
@@ -131,26 +130,26 @@ def main():
             continue
         
         if "zip" in path.lower():
-            print(f"📦 ZIP FILE ANALYSIS")
+            print("📦 ZIP FILE ANALYSIS")
             print(f"   Size: {data.get('size_mb', 0)} MB")
             print(f"   Files: {data.get('total_files', 0)}")
             print(f"   Compressed: {data.get('compressed_size_mb', 0)} MB")
             print(f"   Uncompressed: {data.get('uncompressed_size_mb', 0)} MB")
-            print(f"\n   Top file types:")
+            print("\n   Top file types:")
             for ext, count in list(data.get('file_types', {}).items())[:10]:
                 print(f"     {ext}: {count}")
-            print(f"\n   Sample files (first 10):")
+            print("\n   Sample files (first 10):")
             for f in data.get('sample_files', [])[:10]:
                 print(f"     - {f}")
         else:
-            print(f"📂 DIRECTORY ANALYSIS")
+            print("📂 DIRECTORY ANALYSIS")
             print(f"   Size: {data.get('size', 'unknown')} ({data.get('size_mb', 0)} MB)")
             print(f"   Files: {data.get('file_count', 0):,}")
             print(f"   Directories: {data.get('dir_count', 0):,}")
-            print(f"\n   Top file types:")
+            print("\n   Top file types:")
             for ext, count in list(data.get('file_types', {}).items())[:15]:
                 print(f"     {ext}: {count:,}")
-            print(f"\n   Top-level items (first 20):")
+            print("\n   Top-level items (first 20):")
             for item in data.get('top_level_items', [])[:20]:
                 print(f"     - {item}")
     

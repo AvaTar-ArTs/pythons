@@ -5,7 +5,11 @@ Deepseek Importer v3
 - Collapsible raw JSON via <details>.
 - Optional conversation grouping by year (tags include year).
 """
-import argparse, datetime, json, re, yaml
+import argparse
+import datetime
+import json
+import re
+import yaml
 from pathlib import Path
 
 def slugify(text: str) -> str:

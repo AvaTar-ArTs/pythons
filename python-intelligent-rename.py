@@ -4,7 +4,6 @@ Intelligent Python File Renamer - Execution Script
 Generated: CONSTANT_2025-10-28 01:40:43
 """
 
-import os
 import shutil
 from pathlib import Path
 
@@ -2583,7 +2582,7 @@ def execute_renaming():
             # Rename file
             try:
                 old_path.rename(new_path)
-                logger.info(f"     ✅ Renamed successfully")
+                logger.info("     ✅ Renamed successfully")
             except OSError as e:
                 logger.info(f"     ❌ Error renaming: {e}")
         else:

@@ -8,11 +8,9 @@ Alfred Script Filter for Claude Code Conversations - Enhanced Version
 
 import json
 import sys
-import os
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime
 import re
-import hashlib
 
 # Configuration
 CONVERSATIONS_DIR = Path.home() / "claude_conversations"
@@ -98,7 +96,7 @@ def extract_conversation_preview(file_path, max_length=CONSTANT_150):
 
         return preview if preview else "Empty conversation"
 
-    except Exception as e:
+    except Exception:
         return "Error reading conversation"
 
 
@@ -141,7 +139,7 @@ def parse_conversation_metadata(file_path):
             "preview": preview,
             "total_exchanges": user_count + assistant_count,
         }
-    except Exception as e:
+    except Exception:
         return None
 
 
@@ -325,7 +323,7 @@ def search_conversations(query):
 
             results.append(result)
 
-        except Exception as e:
+        except Exception:
             continue
 
     if not results and query_lower:

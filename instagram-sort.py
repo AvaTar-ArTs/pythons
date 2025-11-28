@@ -4,7 +4,6 @@ Final Intelligent Sort
 Use advanced content-awareness to sort all remaining items into 4 main categories
 """
 
-import ast
 import shutil
 from pathlib import Path
 from collections import defaultdict

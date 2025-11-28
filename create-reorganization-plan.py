@@ -24,7 +24,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-from typing import Dict, List, Tuple
+from typing import Dict
 
 
 # Colors
@@ -57,7 +57,7 @@ class ReorganizationPlanner:
         """Analyze current folder structure"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🔍 ANALYZING CURRENT STRUCTURE")
+        logger.info("🔍 ANALYZING CURRENT STRUCTURE")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         folders_by_depth = defaultdict(list)
@@ -109,7 +109,7 @@ class ReorganizationPlanner:
         """Create plan to flatten deep folders"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"📋 CREATING FLATTENING PLAN")
+        logger.info("📋 CREATING FLATTENING PLAN")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         # Process folders deeper than max_depth
@@ -173,8 +173,8 @@ class ReorganizationPlanner:
 
             # Summary
             f.write("## 📊 REORGANIZATION SUMMARY\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Total Folders | {self.stats['total_folders']:,} |\n")
             f.write(
                 f"| Deep Folders (>{self.max_depth}) | {self.stats['deep_folders']:,} |\n"
@@ -308,7 +308,7 @@ class ReorganizationPlanner:
 
         # Summary
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"✅ PLAN COMPLETE!")
+        logger.info("✅ PLAN COMPLETE!")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(f"{Colors.BOLD}📊 STATS:{Colors.END}\n")

@@ -18,7 +18,6 @@ import re
 import csv
 import argparse
 from pathlib import Path
-from collections import Counter
 import hashlib
 
 # Key patterns to detect functionality
@@ -235,9 +234,9 @@ def main():
         writer.writeheader()
         writer.writerows(results)
 
-    logger.info(f"\n? Analysis complete!")
+    logger.info("\n? Analysis complete!")
     logger.info(f"?? Results saved to: {output_path}")
-    logger.info(f"\n?? Summary:")
+    logger.info("\n?? Summary:")
     logger.info(f"   Total analyzed: {len(results)}")
     suggestions = sum(1 for r in results if r["suggested"])
     logger.info(

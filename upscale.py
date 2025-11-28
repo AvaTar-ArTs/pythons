@@ -15,7 +15,7 @@ import sys
 import shutil
 import logging
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import Dict
 import json
 from datetime import datetime
 

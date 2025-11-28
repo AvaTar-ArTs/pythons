@@ -4,8 +4,6 @@ Complete Cleanup Orchestrator
 Coordinates all cleanup operations for the Documents folder
 """
 
-import os
-import json
 from pathlib import Path
 from datetime import datetime
 import subprocess
@@ -182,7 +180,7 @@ def main():
     orchestrator.run_complete_cleanup(dry_run=True)
 
     # Ask for confirmation
-    logger.info(f"\n❓ Do you want to proceed with the actual cleanup?")
+    logger.info("\n❓ Do you want to proceed with the actual cleanup?")
     logger.info("   This will remove duplicate files and create backups.")
     logger.info("   Type 'YES' to proceed, anything else to cancel:")
 
@@ -192,7 +190,7 @@ def main():
         logger.info("\n🚀 STEP 2: LIVE CLEANUP - Removing duplicates...")
         orchestrator.run_complete_cleanup(dry_run=False)
 
-        logger.info(f"\n🎉 COMPLETE CLEANUP FINISHED!")
+        logger.info("\n🎉 COMPLETE CLEANUP FINISHED!")
         logger.info("📋 Check the generated reports for details")
     else:
         logger.info("\n❌ Cleanup cancelled. Dry run results saved for review.")

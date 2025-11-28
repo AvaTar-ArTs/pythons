@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-import pprint  # line:6
 import random  # line:5
 import string  # line:4
-from sys import exit  # line:3
 
 from libs.user_agents import get_user_agent  # line:11
-from libs.utils import parse_proxy_file  # line:10
 from libs.utils import print_error  # line:8
-from libs.utils import print_status  # line:9
 from libs.utils import print_success  # line:7
 from requests import Session  # line:2
 

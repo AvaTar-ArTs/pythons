@@ -9,10 +9,8 @@ import os
 import sys
 import json
 import random
-import math
 from datetime import datetime
-from pydub import AudioSegment
-from pydub.generators import Sine, WhiteNoise, Square, Sawtooth
+from pydub.generators import Sine
 from pydub.effects import (
     normalize,
     compress_dynamic_range,

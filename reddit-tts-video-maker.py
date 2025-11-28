@@ -8,7 +8,6 @@ import config
 import praw
 import settings
 import video
-import yaml
 
 # Constants
 CONSTANT_100 = 100
@@ -74,7 +73,7 @@ class ttsvibelounge:
             os.makedirs(path)
 
     def clean_temp_dir(self):
-        logging.info(f"Cleaning Files")
+        logging.info("Cleaning Files")
         audio_files = os.listdir(settings.audio_directory)
         for item in audio_files:
             if item.endswith(".mp3"):

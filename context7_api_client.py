@@ -6,7 +6,6 @@ Uses the REST API: https://context7.com/api/v2
 """
 
 import os
-import sys
 import json
 from pathlib import Path
 from typing import Dict, List, Any, Optional

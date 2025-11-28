@@ -6,7 +6,6 @@ Recovery Analyzer - Comprehensive analysis of Python backup locations
 import os
 import csv
 import hashlib
-import shutil
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -95,7 +94,7 @@ class RecoveryAnalyzer:
             self.analysis_results["file_hashes"]
         )
 
-        logger.info(f"\n📊 DUPLICATE ANALYSIS:")
+        logger.info("\n📊 DUPLICATE ANALYSIS:")
         logger.info(f"   Total files found: {self.analysis_results['total_files']}")
         logger.info(f"   Unique files: {self.analysis_results['unique_files']}")
         logger.info(f"   Duplicates: {duplicates}")
@@ -202,7 +201,7 @@ class RecoveryAnalyzer:
         # Save report
         report_file = self.save_analysis_report()
 
-        logger.info(f"\n🎯 ANALYSIS COMPLETE!")
+        logger.info("\n🎯 ANALYSIS COMPLETE!")
         logger.info(f"   📊 Total files found: {self.analysis_results['total_files']}")
         logger.info(f"   📄 Unique files: {self.analysis_results['unique_files']}")
         logger.info(f"   🔄 Duplicates: {self.analysis_results['duplicates']}")
@@ -221,10 +220,10 @@ def main():
     analyzer = RecoveryAnalyzer()
     results = analyzer.run_analysis()
 
-    logger.info(f"\n💡 NEXT STEPS:")
-    logger.info(f"   1. Review the analysis report")
-    logger.info(f"   2. Run recovery to restore missing files")
-    logger.info(f"   3. Remove duplicates if needed")
+    logger.info("\n💡 NEXT STEPS:")
+    logger.info("   1. Review the analysis report")
+    logger.info("   2. Run recovery to restore missing files")
+    logger.info("   3. Remove duplicates if needed")
 
 
 if __name__ == "__main__":

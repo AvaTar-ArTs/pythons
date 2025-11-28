@@ -1,7 +1,6 @@
 from pathlib import Path
 import os
 import re
-import subprocess
 import pandas as pd
 
 def generate_dry_run_csv(directories, csv_path):

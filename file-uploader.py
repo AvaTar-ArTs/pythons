@@ -3,8 +3,8 @@
 # Updated In 09/04/2020
 from .colors import get_colors
 from random import shuffle
-import threading
-import os, sys
+import os
+import sys
 from time import sleep as sl
 
 import logging

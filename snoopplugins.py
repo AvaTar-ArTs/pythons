@@ -76,10 +76,10 @@ progressYa = Progress(TimeElapsedColumn(), "[progress.percentage]{task.percentag
 ## ERR.
 def Erf(hvostfile):
     print(f"\CONSTANT_33[31;1mНе могу найти_прочитать файл: '{hvostfile}'.\CONSTANT_33[0m \CONSTANT_33[36m\n " + \
-          f"\nПожалуйста, укажите текстовый файл в кодировке —\CONSTANT_33[0m \CONSTANT_33[36;1mutf-8.\CONSTANT_33[0m\n" + \
-          f"\CONSTANT_33[36mПо умолчанию, например, блокнот в OS Windows сохраняет текст в кодировке — ANSI.\CONSTANT_33[0m\n" + \
+          "\nПожалуйста, укажите текстовый файл в кодировке —\CONSTANT_33[0m \CONSTANT_33[36;1mutf-8.\CONSTANT_33[0m\n" + \
+          "\CONSTANT_33[36mПо умолчанию, например, блокнот в OS Windows сохраняет текст в кодировке — ANSI.\CONSTANT_33[0m\n" + \
           f"\CONSTANT_33[36mОткройте ваш файл '{hvostfile}' и измените кодировку [файл ---> сохранить как ---> utf-8].\n" + \
-          f"\CONSTANT_33[36mИли удалите из файла нечитаемые спецсимволы.")
+          "\CONSTANT_33[36mИли удалите из файла нечитаемые спецсимволы.")
     ravno()
 
 
@@ -155,7 +155,7 @@ def module3():
                         market = f"https://market.yandex.ru/user/{pub}/reviews"
 
                         if Ya == '3':
-                            music = f"\CONSTANT_33[33;1mПропуск\CONSTANT_33[0m"
+                            music = "\CONSTANT_33[33;1mПропуск\CONSTANT_33[0m"
                         else:
                             music = f"https://music.yandex.ru/users/{login}/tracks"
                         dzen = f"https://zen.yandex.ru/user/{pub}"
@@ -468,7 +468,7 @@ def module1():
                 T3 = dip_dic["latitude"] if err is False else dip_dic["location"]["latitude"]
                 T4 = dip_dic["longitude"] if err is False else dip_dic["location"]["longitude"]
                 if err is True and res4 == '-':
-                    T5 = my_session.get(url=f"https://ipinfo.io/ip", timeout=3).text
+                    T5 = my_session.get(url="https://ipinfo.io/ip", timeout=3).text
                 else:
                     T5 = dip_dic.get("ip")
             except Exception:

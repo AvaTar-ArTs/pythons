@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
 
-import the
 import whisper
 import yaml
 

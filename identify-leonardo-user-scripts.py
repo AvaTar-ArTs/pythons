@@ -25,14 +25,11 @@ Detection Methods:
 ✨ File content fingerprinting
 """
 
-import os
 import ast
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
-from typing import Dict, List, Set, Tuple
+from typing import Tuple
 import csv
-import json
 
 
 # Colors
@@ -286,7 +283,7 @@ class UserScriptIdentifier:
         """Scan directory and categorize files"""
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"🔍 SCANNING AND CATEGORIZING FILES")
+        logger.info("🔍 SCANNING AND CATEGORIZING FILES")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         python_files = list(self.target_dir.rglob("*.py"))
@@ -331,7 +328,7 @@ class UserScriptIdentifier:
         """Generate categorization report"""
 
         logger.info(f"{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"📊 CATEGORIZATION RESULTS")
+        logger.info("📊 CATEGORIZATION RESULTS")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         # Print stats
@@ -380,8 +377,8 @@ class UserScriptIdentifier:
                 f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
             )
             f.write("## 📊 SUMMARY\n\n")
-            f.write(f"| Category | Count | Percentage |\n")
-            f.write(f"|----------|-------|------------|\n")
+            f.write("| Category | Count | Percentage |\n")
+            f.write("|----------|-------|------------|\n")
 
             total = self.stats["total_scanned"]
             for category in [
@@ -484,7 +481,7 @@ class UserScriptIdentifier:
         self.generate_report()
 
         logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
-        logger.info(f"✅ IDENTIFICATION COMPLETE!")
+        logger.info("✅ IDENTIFICATION COMPLETE!")
         logger.info(f"{'='*80}{Colors.END}\n")
 
         logger.info(

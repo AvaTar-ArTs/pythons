@@ -77,7 +77,7 @@ def main():
 
     # Check if the uploader location is valid
     if not uploader.check_location(location):
-        spg_common.log(f"The specified location if not valid for this hosting type.")
+        spg_common.log("The specified location if not valid for this hosting type.")
         sys.exit(1)
 
     # Check if the gallery is built
@@ -85,7 +85,7 @@ def main():
         os.path.join(gallery_root, gallery_config["public_path"], "index.html")
     ):
         spg_common.log(
-            f"Cannot find index.html. Please build the gallery first with gallery_build.!"
+            "Cannot find index.html. Please build the gallery first with gallery_build.!"
         )
         sys.exit(1)
 

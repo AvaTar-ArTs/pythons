@@ -4,12 +4,8 @@ Content-Aware Etsy Collection Organizer
 Uses deep analysis to create intelligent organization without breaking existing projects.
 """
 
-import os
 import json
-import re
 from pathlib import Path
-from collections import defaultdict, Counter
-import hashlib
 from datetime import datetime
 
 
@@ -487,7 +483,7 @@ def main():
     nav = organizer.create_navigation_system()
     logger.info("✓ Navigation system created")
 
-    logger.info(f"\nOrganization complete!")
+    logger.info("\nOrganization complete!")
     logger.info(
         f"Found {index['metadata']['total_projects']} projects across {index['metadata']['themes_analyzed']} themes"
     )
@@ -495,7 +491,7 @@ def main():
     logger.info(f"Created {len(links)} navigation links")
 
     logger.info(
-        f"\nFiles are organized in: /Users/steven/Pictures/etsy/00_Organization/"
+        "\nFiles are organized in: /Users/steven/Pictures/etsy/00_Organization/"
     )
     logger.info(
         "Your original files remain untouched - this creates a smart navigation system!"

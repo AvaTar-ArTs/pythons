@@ -30,7 +30,7 @@ from pathlib import Path
 try:
     import requests
     from dotenv import load_dotenv
-except Exception as e:
+except Exception:
     logger.info("❌ Missing dependencies. Install with:")
     logger.info("   mamba install -c conda-forge python-dotenv requests")
     sys.exit(1)

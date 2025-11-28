@@ -12,8 +12,6 @@ Features:
 ✨ Generate CSV report with status
 """
 
-import os
-import re
 import csv
 from pathlib import Path
 from datetime import datetime

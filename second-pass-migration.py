@@ -3,10 +3,7 @@
 Analyze remaining Python files and directories for second migration pass
 """
 
-import os
-import re
 from pathlib import Path
-from collections import defaultdict
 
 
 def analyze_remaining_files():
@@ -532,7 +529,7 @@ if __name__ == "__main__":
     with open(Path(str(Path.home()) + "/Documents/python/migrate_remaining.py"), "w") as f:
         f.write(script_content)
 
-    logger.info(f"\n📝 Second migration script created: migrate_remaining.py")
+    logger.info("\n📝 Second migration script created: migrate_remaining.py")
 
 
 def main():
@@ -553,7 +550,7 @@ def main():
     total_files = sum(
         len(files) for files in categories.values() if isinstance(files, list) and files
     )
-    logger.info(f"\n📊 SUMMARY")
+    logger.info("\n📊 SUMMARY")
     logger.info("=" * 60)
     logger.info(f"Total remaining files: {total_files}")
     logger.info(
@@ -561,7 +558,7 @@ def main():
     )
     logger.info(f"Directories: {len(categories['unorganized_dirs'])}")
 
-    logger.info(f"\n🚀 Ready for second migration? Run: python migrate_remaining.py")
+    logger.info("\n🚀 Ready for second migration? Run: python migrate_remaining.py")
 
 
 if __name__ == "__main__":

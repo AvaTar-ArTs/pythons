@@ -13,9 +13,7 @@ Special handling:
 ✨ Generate download checklist
 """
 
-import os
 import csv
-import hashlib
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -198,8 +196,8 @@ class MissingSongFolderPrep:
         self.print_header("🔍 ANALYZING 'Echoes of Yesterday'")
         
         print(f"{Colors.CYAN}Song: Echoes of Yesterday{Colors.END}")
-        print(f"Duration: 3:30")
-        print(f"Genre: acoustic indie-folk rock edgy\n")
+        print("Duration: 3:30")
+        print("Genre: acoustic indie-folk rock edgy\n")
         
         # Check if it fits existing series
         print("Analyzing title and genre...\n")
@@ -369,22 +367,22 @@ class MissingSongFolderPrep:
         print(f"  Subfolders created: {Colors.CYAN}{self.stats['subfolders_created']}{Colors.END}\n")
         
         print(f"{Colors.BOLD}📁 Folders Created:{Colors.END}\n")
-        print(f"  🎵 ~/Music/nocTurneMeLoDieS/")
-        print(f"     ├── Junkyard_Symphony/ (7 songs)")
-        print(f"     ├── Moonlight_Serenade/ (7 songs)")
-        print(f"     ├── Feline_Tales/ (2 songs)")
-        print(f"     ├── Blues_in_the_Alley/ (1 song)")
-        print(f"     ├── Heroes_Rise/ (1 song)")
+        print("  🎵 ~/Music/nocTurneMeLoDieS/")
+        print("     ├── Junkyard_Symphony/ (7 songs)")
+        print("     ├── Moonlight_Serenade/ (7 songs)")
+        print("     ├── Feline_Tales/ (2 songs)")
+        print("     ├── Blues_in_the_Alley/ (1 song)")
+        print("     ├── Heroes_Rise/ (1 song)")
         print(f"     └── {echoes_series}/ (1 song)\n")
         
-        print(f"  🎬 ~/Movies/")
-        print(f"     └── Project_2025/ (2 songs - political/documentary)\n")
+        print("  🎬 ~/Movies/")
+        print("     └── Project_2025/ (2 songs - political/documentary)\n")
         
         print(f"{Colors.BOLD}📝 Next Steps:{Colors.END}\n")
         print(f"  1. Open {Colors.CYAN}{checklist_file.name}{Colors.END}")
-        print(f"  2. Download each song from Suno link")
-        print(f"  3. Save to the specified folder")
-        print(f"  4. Check off when complete\n")
+        print("  2. Download each song from Suno link")
+        print("  3. Save to the specified folder")
+        print("  4. Check off when complete\n")
         
         if self.dry_run:
             print(f"{Colors.YELLOW}⚠️  This was a DRY RUN. Run with --live to create folders.{Colors.END}\n")

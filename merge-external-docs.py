@@ -4,7 +4,6 @@ Merge External Volume Documentation into Home Directory
 Intelligently organize content from /Volumes into ~/
 """
 
-import os
 import shutil
 from pathlib import Path
 from datetime import datetime
@@ -297,15 +296,15 @@ for f in ~/.env.d/*.env; do source "$f"; done
         print("\n" + "=" * 80)
         print("? Merge Complete!")
         print("=" * 80)
-        print(f"\n?? Summary:")
+        print("\n?? Summary:")
         print(f"  ? API Docs merged: {api_count}")
         print(f"  ? Quick links created: {link_count}")
         print(f"  ? Project catalog: {catalog}")
         
-        print(f"\n?? New Locations:")
-        print(f"  ? API Docs: ~/Documents/api-documentation/")
-        print(f"  ? Quick Refs: ~/.config/quick-refs/")
-        print(f"  ? Catalog: ~/Documents/EXTERNAL_PROJECTS_CATALOG.md")
+        print("\n?? New Locations:")
+        print("  ? API Docs: ~/Documents/api-documentation/")
+        print("  ? Quick Refs: ~/.config/quick-refs/")
+        print("  ? Catalog: ~/Documents/EXTERNAL_PROJECTS_CATALOG.md")
 
 def main():
     merger = ExternalDocsMerger()

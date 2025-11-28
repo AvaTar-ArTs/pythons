@@ -7,7 +7,6 @@ Triggers conversation export when user types: exit, bye, save, done
 import json
 import sys
 import subprocess
-import os
 from pathlib import Path
 
 # Keywords that trigger auto-save
@@ -101,7 +100,7 @@ def main():
         logger.info(json.dumps({"action": "allow"}))
         sys.exit(0)
 
-    except Exception as e:
+    except Exception:
         # On error, allow message through
         logger.info(json.dumps({"action": "allow"}))
         sys.exit(1)

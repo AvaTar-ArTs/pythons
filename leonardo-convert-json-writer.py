@@ -8,7 +8,6 @@ from datetime import datetime
 import requests
 from PIL import Image
 
-import os
 from dotenv import load_dotenv
 
 import logging
@@ -16,7 +15,6 @@ import logging
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
 env_dir = PathLib.home() / ".env.d"
 if env_dir.exists():

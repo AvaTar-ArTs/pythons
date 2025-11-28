@@ -5,12 +5,10 @@ Captures and updates conversation data in real-time
 """
 
 import json
-import os
 import sqlite3
 import time
 from datetime import datetime
 from pathlib import Path
-import shutil
 
 
 class ConversationArchiver:
@@ -435,7 +433,7 @@ Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         self.generate_html_archive()
         md_path = self.generate_markdown_archive()
 
-        logger.info(f"✅ Archive update complete!")
+        logger.info("✅ Archive update complete!")
         logger.info(f"📊 Total conversations: {len(conversations)}")
         logger.info(f"📄 HTML: {self.base_dir / 'conversation_archive.html'}")
         logger.info(f"📄 Markdown: {md_path}")

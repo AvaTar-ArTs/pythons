@@ -4,7 +4,6 @@ AvaTarArTs Suite - Codebase Analyzer
 Analyzes the codebase for issues, duplicates, and improvement opportunities
 """
 
-import os
 import re
 import json
 from pathlib import Path

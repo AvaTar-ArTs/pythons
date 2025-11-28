@@ -97,7 +97,7 @@ class ContentFactory:
             logger.info("   Waiting for generation...", end="", flush=True)
             image_url = self._wait_for_generation(generation_id)
 
-            logger.info(f" ✅")
+            logger.info(" ✅")
             return image_url
 
         except Exception as e:
@@ -145,7 +145,7 @@ class ContentFactory:
         """
         Step 2: Remove background with Remove.bg
         """
-        logger.info(f"✂️  Removing background...")
+        logger.info("✂️  Removing background...")
 
         try:
             with open(image_path, "rb") as image_file:
@@ -164,7 +164,7 @@ class ContentFactory:
             no_bg_path = image_path.with_stem(f"{image_path.stem}_no_bg")
             no_bg_path.write_bytes(response.content)
 
-            logger.info(f"   ✅ Background removed")
+            logger.info("   ✅ Background removed")
             return no_bg_path
 
         except Exception as e:
@@ -179,7 +179,7 @@ class ContentFactory:
             logger.info("⚠️ Imagga not configured, skipping tagging")
             return []
 
-        logger.info(f"🏷️  Auto-tagging...")
+        logger.info("🏷️  Auto-tagging...")
 
         try:
             with open(image_path, "rb") as image_file:
@@ -212,7 +212,7 @@ class ContentFactory:
             logger.info("⚠️ Stability AI not configured, skipping variations")
             return []
 
-        logger.info(f"🎭 Creating style variations...")
+        logger.info("🎭 Creating style variations...")
 
         styles = [
             ("minimalist", "minimalist, clean, simple background, modern"),

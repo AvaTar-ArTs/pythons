@@ -216,8 +216,8 @@ class NetlifyUploader(BaseUploader):
         """
         # Open the Netlify authorization page
         auth_code_url = (
-            f"https://app.netlify.com/authorize?"
-            + f"response_type=token&"
+            "https://app.netlify.com/authorize?"
+            + "response_type=token&"
             + f"client_id={self.client_id}&"
             + f"redirect_uri={self.redirect_uri}&"
             + f"state={self.state}"
@@ -265,5 +265,5 @@ class NetlifyUploader(BaseUploader):
             webbrowser.open(gallery_url)
         else:
             raise spg_common.SPGException(
-                f"Something went wrong while uploading to Netlify"
+                "Something went wrong while uploading to Netlify"
             )

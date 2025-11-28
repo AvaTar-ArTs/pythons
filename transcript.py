@@ -7,13 +7,11 @@ import os
 import random
 import re
 import sys
-import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from shared.config import *
-from openai import OpenAI
 from termcolor import colored
 from tqdm import tqdm
 

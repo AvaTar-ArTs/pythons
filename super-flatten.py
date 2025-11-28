@@ -179,7 +179,7 @@ class SuperFlattener:
             )
 
         # Show preview
-        print(f"📊 FLATTENING PLAN:\n")
+        print("📊 FLATTENING PLAN:\n")
         print(f"Total files to move: {len(moves)}\n")
 
         if moves:
@@ -194,7 +194,7 @@ class SuperFlattener:
 
         # Execute moves
         if not dry_run:
-            print(f"\n🚀 Executing moves...\n")
+            print("\n🚀 Executing moves...\n")
 
             for i, move in enumerate(moves, 1):
                 if i % 100 == 0:
@@ -208,7 +208,7 @@ class SuperFlattener:
                     self.stats["errors"] += 1
 
             # Remove empty folders
-            print(f"\n🗑️ Removing empty folders...\n")
+            print("\n🗑️ Removing empty folders...\n")
             self.remove_empty_folders()
 
         # Final summary

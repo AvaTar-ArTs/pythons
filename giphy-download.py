@@ -6,9 +6,7 @@ Based on the proven 9mbs.py approach using macOS sips
 """
 
 import os
-import sys
 import subprocess
-import math
 from pathlib import Path
 import shutil
 
@@ -219,7 +217,7 @@ def process_images_with_aspect_ratios(directory, max_size_mb=9):
         logger.info("No image files found in the directory.")
         return
 
-    logger.info(f"🖼️  AUTOMATED IMAGE UPSCALER")
+    logger.info("🖼️  AUTOMATED IMAGE UPSCALER")
     logger.info("=" * 50)
     logger.info(f"Found {len(image_files)} image files")
     logger.info(f"Processing with {len(aspect_ratios)} aspect ratios")
@@ -261,20 +259,20 @@ def process_images_with_aspect_ratios(directory, max_size_mb=9):
         logger.info(f"  📊 {display_name}: {successful} successful, {failed} failed")
 
     # Final summary
-    logger.info(f"\n🎉 BATCH PROCESSING COMPLETE!")
+    logger.info("\n🎉 BATCH PROCESSING COMPLETE!")
     logger.info("=" * 50)
     logger.info(f"Total images processed: {total_processed}")
     logger.info(f"Total successful: {total_successful}")
     logger.info(f"Total failed: {total_processed - total_successful}")
-    logger.info(f"\n📁 Output directories created:")
+    logger.info("\n📁 Output directories created:")
     for ratio_name in aspect_ratios.keys():
         logger.info(f"  • upscaled_{ratio_name}/")
 
-    logger.info(f"\n💡 All images are:")
-    logger.info(f"  • CONSTANT_300 DPI for print quality")
+    logger.info("\n💡 All images are:")
+    logger.info("  • CONSTANT_300 DPI for print quality")
     logger.info(f"  • Under {max_size_mb}MB file size")
-    logger.info(f"  • Optimized for web and print use")
-    logger.info(f"  • Cropped to exact aspect ratios")
+    logger.info("  • Optimized for web and print use")
+    logger.info("  • Cropped to exact aspect ratios")
 
 
 def main():
@@ -294,8 +292,8 @@ def main():
     # Use current directory
     current_dir = os.getcwd()
     logger.info(f"\n📁 Working directory: {current_dir}")
-    logger.info(f"📏 Max file size: 9MB")
-    logger.info(f"🎯 Target DPI: 300")
+    logger.info("📏 Max file size: 9MB")
+    logger.info("🎯 Target DPI: 300")
 
     # Process with default settings
     process_images_with_aspect_ratios(current_dir, 9)

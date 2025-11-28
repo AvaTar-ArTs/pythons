@@ -16,13 +16,12 @@ Features:
 
 import os
 import csv
-import json
 import re
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
 from difflib import SequenceMatcher
-from typing import Dict, List, Tuple
+from typing import List
 
 class Colors:
     CYAN = "\033[96m"
@@ -219,7 +218,7 @@ class DeepContentCrossReference:
                         elif content_type == 'prompts':
                             self.stats['prompts_found'] += 1
                         
-                    except Exception as e:
+                    except Exception:
                         pass
         
         # Summary
@@ -449,8 +448,8 @@ class DeepContentCrossReference:
             f.write("---\n\n")
             
             f.write("## 📊 Summary Statistics\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| Documents Scanned | {self.stats['documents_scanned']:,} |\n")
             f.write(f"| Audio Files | {self.stats['audio_files']:,} |\n")
             f.write(f"| Lyrics Found | {self.stats['lyrics_found']:,} |\n")
@@ -462,16 +461,16 @@ class DeepContentCrossReference:
             f.write(f"| Orphaned Content | {self.stats['orphaned_content']:,} |\n\n")
             
             f.write("## ⚠️ Important Findings\n\n")
-            f.write(f"### Audio Files Without Content\n\n")
+            f.write("### Audio Files Without Content\n\n")
             f.write(f"Found **{self.stats['orphaned_audio']}** audio files with no associated content.\n")
-            f.write(f"These may be safe to archive/remove.\n\n")
+            f.write("These may be safe to archive/remove.\n\n")
             
-            f.write(f"### Content Without Audio\n\n")
+            f.write("### Content Without Audio\n\n")
             f.write(f"Found **{self.stats['orphaned_content']}** content files with no associated audio.\n")
-            f.write(f"Review these before removing any content - they may be:\n")
-            f.write(f"- Drafts for future songs\n")
-            f.write(f"- Story fragments\n")
-            f.write(f"- Standalone creative writing\n\n")
+            f.write("Review these before removing any content - they may be:\n")
+            f.write("- Drafts for future songs\n")
+            f.write("- Story fragments\n")
+            f.write("- Standalone creative writing\n\n")
             
             f.write("## 🎯 Recommendations\n\n")
             f.write("1. **Review Orphaned Content** - Check `ORPHANED_CONTENT_NO_AUDIO.csv` before removing anything\n")
@@ -521,10 +520,10 @@ class DeepContentCrossReference:
         print(f"  {self.output_dir}\n")
         
         print(f"{Colors.BOLD}📝 Key Reports:{Colors.END}")
-        print(f"  1. MATCHED_AUDIO_CONTENT_PAIRS.csv - Audio with associated content")
-        print(f"  2. ORPHANED_AUDIO_NO_CONTENT.csv - Audio without content (may be safe to archive)")
-        print(f"  3. ORPHANED_CONTENT_NO_AUDIO.csv - Content without audio (REVIEW before removing!)")
-        print(f"  4. CROSS_REFERENCE_REPORT.md - Full analysis\n")
+        print("  1. MATCHED_AUDIO_CONTENT_PAIRS.csv - Audio with associated content")
+        print("  2. ORPHANED_AUDIO_NO_CONTENT.csv - Audio without content (may be safe to archive)")
+        print("  3. ORPHANED_CONTENT_NO_AUDIO.csv - Content without audio (REVIEW before removing!)")
+        print("  4. CROSS_REFERENCE_REPORT.md - Full analysis\n")
         
         print(f"{Colors.YELLOW}⚠️  IMPORTANT:{Colors.END}")
         print(f"{Colors.YELLOW}Review ORPHANED_CONTENT_NO_AUDIO.csv before removing any duplicates!{Colors.END}")

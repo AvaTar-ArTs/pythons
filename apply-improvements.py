@@ -4,7 +4,6 @@ GitHub Repository Improvement Script
 Applies common improvements to GitHub repositories
 """
 
-import os
 import shutil
 from pathlib import Path
 import argparse

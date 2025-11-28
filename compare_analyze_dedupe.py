@@ -7,7 +7,6 @@ import sys
 from pathlib import Path
 from collections import defaultdict
 import csv
-import json
 from datetime import datetime
 
 def calculate_file_hash(file_path):
@@ -18,7 +17,7 @@ def calculate_file_hash(file_path):
             for byte_block in iter(lambda: f.read(4096), b""):
                 sha256_hash.update(byte_block)
         return sha256_hash.hexdigest()
-    except Exception as e:
+    except Exception:
         return None
 
 def get_file_info(file_path):

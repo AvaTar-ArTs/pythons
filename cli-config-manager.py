@@ -8,9 +8,8 @@ from pathlib import Path
 import os
 import json
 import webbrowser
-import time
-from typing import Dict, List, Any
-from dataclasses import dataclass, asdict
+from typing import Dict, List
+from dataclasses import dataclass
 
 
 @dataclass
@@ -650,23 +649,23 @@ class AIConfigManager:
         enabled_count = sum(1 for s in self.services.values() if s.enabled)
         total_count = len(self.services)
 
-        logger.info(f"📊 Statistics:")
+        logger.info("📊 Statistics:")
         logger.info(f"   Total APIs: {total_count}")
         logger.info(f"   Enabled: {enabled_count}")
         logger.info(f"   Disabled: {total_count - enabled_count}")
         print()
 
-        logger.info(f"🔧 Actions:")
-        logger.info(f"   1. Save configuration")
-        logger.info(f"   2. Update .env file")
-        logger.info(f"   3. Open all enabled APIs")
-        logger.info(f"   4. Reset all to disabled")
-        logger.info(f"   5. Enable all essential APIs")
-        logger.info(f"   6. Export configuration")
-        logger.info(f"   7. Import configuration")
+        logger.info("🔧 Actions:")
+        logger.info("   1. Save configuration")
+        logger.info("   2. Update .env file")
+        logger.info("   3. Open all enabled APIs")
+        logger.info("   4. Reset all to disabled")
+        logger.info("   5. Enable all essential APIs")
+        logger.info("   6. Export configuration")
+        logger.info("   7. Import configuration")
         print()
 
-        logger.info(f"📁 Files:")
+        logger.info("📁 Files:")
         logger.info(f"   Config: {self.config_file}")
         logger.info(f"   .env: {self.env_file}")
 

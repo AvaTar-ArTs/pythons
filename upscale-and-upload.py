@@ -1,5 +1,4 @@
 import base64
-import os
 
 import pandas as pd
 import requests

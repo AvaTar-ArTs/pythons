@@ -23,11 +23,9 @@ Usage: python3 api_key_manager.py [options]
 import os
 import re
 import webbrowser
-import json
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple
 import subprocess
-import sys
 
 
 # Color codes for terminal output

@@ -6,7 +6,6 @@ Intelligently archives backup directories, removing exact duplicates while prese
 
 import hashlib
 import json
-import shutil
 import zipfile
 from collections import defaultdict
 from datetime import datetime
@@ -175,7 +174,7 @@ def main():
         len(files) - 1 for files in file_hashes.values() if len(files) > 1
     )
 
-    logger.info(f"\nAnalysis:")
+    logger.info("\nAnalysis:")
     logger.info(f"  Total files: {total_files}")
     logger.info(f"  Unique files: {unique_hashes}")
     logger.info(f"  Duplicate groups: {duplicate_groups}")

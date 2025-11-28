@@ -12,16 +12,13 @@ Features:
 ✨ Safe preservation with backups
 """
 
-import os
 import re
 import csv
-import json
 import shutil
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
 from difflib import SequenceMatcher
-from typing import Dict, List, Tuple
+from typing import List
 from bs4 import BeautifulSoup
 
 class Colors:
@@ -390,8 +387,8 @@ class ArchivedContentExtractor:
             f.write("---\n\n")
             
             f.write("## 📊 Summary Statistics\n\n")
-            f.write(f"| Metric | Value |\n")
-            f.write(f"|--------|-------|\n")
+            f.write("| Metric | Value |\n")
+            f.write("|--------|-------|\n")
             f.write(f"| CSV Files Extracted | {self.stats['csv_files']} |\n")
             f.write(f"| Markdown Files Extracted | {self.stats['md_files']} |\n")
             f.write(f"| HTML Files Parsed | {self.stats['html_files']} |\n")
@@ -401,15 +398,15 @@ class ArchivedContentExtractor:
             f.write(f"| **Missing Songs** | **{self.stats['missing_songs']}** |\n\n")
             
             f.write("## 📁 Preserved Files\n\n")
-            f.write(f"### CSV Files\n")
+            f.write("### CSV Files\n")
             f.write(f"- Preserved to: `{self.music_data_dir}`\n\n")
             
-            f.write(f"### Markdown Files\n")
+            f.write("### Markdown Files\n")
             f.write(f"- Preserved to: `{self.docs_dir}`\n\n")
             
             f.write("## ⚠️ Missing Songs\n\n")
             f.write(f"Found {len(csv_missing)} songs in CSV that are NOT in your current collection.\n")
-            f.write(f"See `MISSING_SONGS.csv` for full list with Suno links.\n\n")
+            f.write("See `MISSING_SONGS.csv` for full list with Suno links.\n\n")
             
             f.write("## ✅ Next Steps\n\n")
             f.write("1. Review `MISSING_SONGS.csv` to identify songs to download\n")
@@ -475,9 +472,9 @@ class ArchivedContentExtractor:
         
         print(f"{Colors.BOLD}📝 Key Reports:{Colors.END}")
         print(f"  {summary_file}")
-        print(f"  MISSING_SONGS.csv - Songs to download")
-        print(f"  FOUND_SONGS.csv - Songs already in collection")
-        print(f"  HTML_EXTRACTED_SONGS.csv - Songs from HTML files\n")
+        print("  MISSING_SONGS.csv - Songs to download")
+        print("  FOUND_SONGS.csv - Songs already in collection")
+        print("  HTML_EXTRACTED_SONGS.csv - Songs from HTML files\n")
         
         if self.stats['missing_songs'] > 0:
             print(f"{Colors.YELLOW}⚠️  IMPORTANT: {self.stats['missing_songs']} songs from CSV are NOT in your collection!{Colors.END}")

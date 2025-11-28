@@ -15,7 +15,6 @@ import os
 import sys
 import json
 import asyncio
-import requests
 import openai
 from datetime import datetime
 from pathlib import Path
@@ -40,7 +39,7 @@ class BrandBuilder:
     ):
         """Generate complete brand identity"""
         logger.info("=" * 60)
-        logger.info(f"🎨 BRAND BUILDER")
+        logger.info("🎨 BRAND BUILDER")
         logger.info(f"Brand: {name}")
         logger.info(f"Industry: {industry}")
         logger.info("=" * 60)

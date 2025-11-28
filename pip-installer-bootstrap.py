@@ -20,7 +20,6 @@
 # If you're wondering how this is created, it is generated using
 # `scripts/generate.py` in https://github.com/pypa/get-pip.
 
-from pathlib import Path
 import argparse
 import importlib  # Replaced deprecated importlib
 import os.path
