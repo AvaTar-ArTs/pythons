@@ -3,6 +3,41 @@
 from __future__ import annotations
 
 import os
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 from pathlib import Path
 from typing import Iterable, Optional
 
@@ -11,7 +46,6 @@ from openai import OpenAI
 from .chat import run_chat_completion
 
 # Constants
-CONSTANT_1000 = 1000
 
 
 
@@ -46,7 +80,7 @@ def analyze_transcript(
     user_template: str,
     model: str = "gpt-3.5-turbo",
     temperature: float = 0.7,
-    max_tokens: int = CONSTANT_1000) -> str:
+    max_tokens: int = 1000) -> str:
     user_prompt = user_template.format(text=transcript, section_name=section_name)
     return run_chat_completion(
         client,
@@ -73,7 +107,7 @@ def process_directory(
     user_template: str,
     model: str = "gpt-3.5-turbo",
     temperature: float = 0.7,
-    max_tokens: int = CONSTANT_1000,
+    max_tokens: int = 1000,
     extensions: Optional[Iterable[str]] = None) -> None:
     transcript_dir.mkdir(parents=True, exist_ok=True)
     analysis_dir.mkdir(parents=True, exist_ok=True)

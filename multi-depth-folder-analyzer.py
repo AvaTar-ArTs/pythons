@@ -34,12 +34,12 @@ class Colors:
 class MultiDepthFolderAnalyzer:
     """Analyze and consolidate at all folder depths"""
     
-    def __init__(self, dry_run: bool = True):
+    def __init__(self, target_dir: Path, dry_run: bool = True):
         self.dry_run = dry_run
         self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
-        self.nocturne_dir = Path.home() / "Music" / "nocTurneMeLoDieS"
-        self.output_dir = self.nocturne_dir / f"MULTI_DEPTH_ANALYSIS_{self.timestamp}"
+        self.target_dir = target_dir
+        self.output_dir = self.target_dir / f"MULTI_DEPTH_ANALYSIS_{self.timestamp}"
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
         self.all_folders = []  # All folders at all depths
@@ -79,16 +79,17 @@ class MultiDepthFolderAnalyzer:
         skip_patterns = [
             'ARCHIVE_', 'BACKUP_', 'CLEANUP_', 'LOG_', 'SCAN_',
             'CONSOLIDATION', 'EXTRACTION', 'VERIFICATION',
-            'ANALYSIS', 'MULTI_DEPTH'
+            'ANALYSIS', 'MULTI_DEPTH', '__pycache__', '.git', 
+            'node_modules', '.venv', '.idea', '.vscode', 'dist', 'build'
         ]
         
-        return any(p in folder_name.upper() for p in skip_patterns)
+        return any(p in folder_name for p in skip_patterns)
     
     def get_folder_info(self, folder_path: Path, depth: int) -> Dict:
         """Get comprehensive folder info"""
-        audio_exts = {'.mp3', '.m4a', '.wav', '.flac'}
+        code_exts = {'.py', '.js', '.ts', '.sh', '.html', '.css', '.md', '.json', '.txt'}
         
-        audio_count = 0
+        code_count = 0
         file_count = 0
         total_size = 0
         has_subfolders = False
@@ -108,13 +109,13 @@ class MultiDepthFolderAnalyzer:
                     size = item.stat().st_size
                     total_size += size
                     
-                    if item.suffix.lower() in audio_exts:
-                        audio_count += 1
+                    if item.suffix.lower() in code_exts:
+                        code_count += 1
         except Exception:
             pass
         
         return {
-            'audio_count': audio_count,
+            'code_count': code_count,
             'file_count': file_count,
             'total_size_mb': total_size / (1024**2),
             'has_subfolders': has_subfolders,
@@ -125,16 +126,16 @@ class MultiDepthFolderAnalyzer:
         """Recursively scan all folder depths"""
         self.print_header("🔍 SCANNING ALL FOLDER DEPTHS")
         
-        print(f"Scanning: {self.nocturne_dir}\n")
+        print(f"Scanning: {self.target_dir}\n")
         
-        for root, dirs, files in os.walk(self.nocturne_dir):
+        for root, dirs, files in os.walk(self.target_dir):
             # Skip hidden and system folders
             dirs[:] = [d for d in dirs if not d.startswith('.') and not self.should_skip(d)]
             
             current_path = Path(root)
             
             try:
-                depth = len(current_path.relative_to(self.nocturne_dir).parts)
+                depth = len(current_path.relative_to(self.target_dir).parts)
             except ValueError:
                 continue
             
@@ -153,7 +154,7 @@ class MultiDepthFolderAnalyzer:
                     'path': folder_path,
                     'name': dir_name,
                     'full_path': str(folder_path),
-                    'relative_path': str(folder_path.relative_to(self.nocturne_dir)),
+                    'relative_path': str(folder_path.relative_to(self.target_dir)),
                     'normalized': self.normalize_name(dir_name),
                     'depth': depth + 1,
                     **info
@@ -193,7 +194,7 @@ class MultiDepthFolderAnalyzer:
                 for norm_name, variants in duplicates[:5]:  # Show first 5 per level
                     print(f"  '{norm_name}':")
                     for v in variants:
-                        print(f"    • {v['relative_path']} ({v['audio_count']} audio, {v['file_count']} files)")
+                        print(f"    • {v['relative_path']} ({v['code_count']} code files, {v['file_count']} files)")
                     print()
                 
                 if len(duplicates) > 5:
@@ -218,7 +219,7 @@ class MultiDepthFolderAnalyzer:
             
             for norm_name, variants in duplicates:
                 # Sort by file count (keep the one with most content)
-                variants_sorted = sorted(variants, key=lambda x: (-x['audio_count'], -x['file_count']))
+                variants_sorted = sorted(variants, key=lambda x: (-x['code_count'], -x['file_count']))
                 
                 primary = variants_sorted[0]
                 merge_into_primary = variants_sorted[1:]
@@ -407,10 +408,18 @@ def main():
                        help='Dry run mode (default)')
     parser.add_argument('--live', action='store_true',
                        help='Live mode (execute consolidation)')
+    parser.add_argument('--directory', type=str,
+                       default=str(Path.home() / "pythons"),
+                       help='Target directory to analyze (default: ~/pythons)')
     
     args = parser.parse_args()
+    target_dir = Path(args.directory)
     
-    analyzer = MultiDepthFolderAnalyzer(dry_run=not args.live)
+    if not target_dir.exists():
+        print(f"Error: Directory not found: {target_dir}")
+        return
+        
+    analyzer = MultiDepthFolderAnalyzer(target_dir, dry_run=not args.live)
     analyzer.run()
 
 

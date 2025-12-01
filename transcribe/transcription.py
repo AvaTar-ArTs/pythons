@@ -4,13 +4,48 @@ Audio/Video Transcription and Analysis Tool
 Converts MP4 to MP3, transcribes with timestamps, and provides GPT-4o analysis
 """
 
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 import os
 import sys
 import json
 import logging
 from pathlib import Path
 from datetime import datetime
-from typing import Optional, Dict, Any
+from typing import Dict, Any
 
 import whisper
 from moviepy.editor import VideoFileClip
@@ -22,10 +57,7 @@ import config
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
-env_dir = PathLib.home() / ".env.d"
-if env_dir.exists():
     for env_file in env_dir.glob("*.env"):
         load_dotenv(env_file)
 
@@ -83,8 +115,7 @@ class TranscriptionAnalyzer:
 
             return {
                 "full_transcript": result["text"],
-                "timestamped_transcript": "
-".join(transcript_with_timestamps),
+                "timestamped_transcript": Path("\n").join(transcript_with_timestamps),
                 "segments": result["segments"],
                 "language": result.get("language", "unknown"),
             }
@@ -370,8 +401,8 @@ class TranscriptionAnalyzer:
         try:
             summary_file = dirs["base_dir"] / f"{input_file.stem}_summary.txt"
             with open(summary_file, "w", encoding="utf-8") as f:
-                f.write(f"Transcription and Analysis Summary\n")
-                f.write(f"================================\n\n")
+                f.write("Transcription and Analysis Summary\n")
+                f.write("================================\n\n")
                 f.write(f"Original File: {input_file.name}\n")
                 f.write(f"Processed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
                 f.write(
@@ -397,7 +428,7 @@ class TranscriptionAnalyzer:
                         f"Duration: {self._format_timestamp(transcription_result['segments'][-1]['end'])}\n"
                     )
 
-                f.write(f"\nFiles Created:\n")
+                f.write("\nFiles Created:\n")
                 f.write(f"- Transcript: {input_file.stem}_transcript.txt\n")
                 f.write(f"- Timestamped: {input_file.stem}_timestamped.txt\n")
                 f.write(f"- Analysis: {input_file.stem}_analysis.json\n")
@@ -411,7 +442,7 @@ class TranscriptionAnalyzer:
                     and isinstance(analysis, dict)
                     and "chunking_info" in analysis
                 ):
-                    f.write(f"\nChunking Details:\n")
+                    f.write("\nChunking Details:\n")
                     f.write(f"- Original file was split into {chunk_count} chunks\n")
                     f.write(
                         f"- Each chunk max {config.MAX_CHUNK_DURATION_MINUTES} minutes\n"
@@ -419,7 +450,7 @@ class TranscriptionAnalyzer:
                     f.write(
                         f"- {config.CHUNK_OVERLAP_SECONDS}s overlap between chunks\n"
                     )
-                    f.write(f"- Chunks processed individually and merged\n")
+                    f.write("- Chunks processed individually and merged\n")
 
         except Exception as e:
             logger.warning(f"Could not create summary file: {e}")

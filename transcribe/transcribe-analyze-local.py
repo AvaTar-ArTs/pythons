@@ -14,6 +14,41 @@ Requires:
 Usage:
   python analyze_mp3_open_source.py --dir Path("/path/to/media") --whisper medium --llm "llama3.1:8b-instruct"
 """
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 from __future__ import annotations
 
 import os
@@ -21,45 +56,8 @@ import sys
 import json
 import math
 import argparse
-from datetime import datetime
 from pathlib import Path
 from typing import Iterable, Tuple, Optional, List
-
-# Fix OpenMP duplicate library issue (faster-whisper + numpy on macOS)
-os.environ.setdefault('KMP_DUPLICATE_LIB_OK', 'TRUE')
-
-def auto_install_package(package_name: str, import_name: str = None) -> bool:
-    """
-    Automatically install a missing package.
-    Returns True if successful, False otherwise.
-    """
-    import_name = import_name or package_name
-    try:
-        __import__(import_name)
-        return True
-    except ImportError:
-        print(f"?? Installing missing package: {package_name}")
-        try:
-            import subprocess
-            subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", package_name])
-            print(f"? Successfully installed {package_name}")
-            return True
-        except Exception as e:
-            print(f"? Failed to install {package_name}: {e}")
-            return False
-
-# Auto-install core dependencies
-CORE_PACKAGES = {
-    'python-dotenv': 'dotenv',
-    'requests': 'requests',
-    'tqdm': 'tqdm',
-    'rich': 'rich',
-    'faster-whisper': 'faster_whisper',
-    'groq': 'groq',
-}
-
-for pkg, import_name in CORE_PACKAGES.items():
-    auto_install_package(pkg, import_name)
 
 from dotenv import load_dotenv
 import requests
@@ -71,8 +69,6 @@ from rich.console import Console
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
 
-env_dir = PathLib.home() / ".env.d"
-if env_dir.exists():
     for env_file in env_dir.glob("*.env"):
         load_dotenv(env_file)
 
@@ -101,12 +97,12 @@ DEFAULT_SYSTEM_PROMPT = (
 
 def expanduser_if_needed(p: str) -> str:
     return os.path.expanduser(p) if p else p
-def mmss(seconds: float) -> str:
-    """Format as MM:SS"""
+def hhmmss(seconds: float) -> str:
     if seconds is None or math.isnan(seconds):
-        return "00:00"
+        return "00:00:00"
     m, s = divmod(int(seconds), 60)
-    return f"{m:02d}:{s:02d}"
+    h, m = divmod(m, 60)
+    return f"{h:02d}:{m:02d}:{s:02d}"
 def load_env():
     # Respect user's ~/.env by default
     env_path = expanduser_if_needed(os.getenv("ENV_PATH", "~/.env"))
@@ -156,7 +152,7 @@ def save_transcript_txt_srt(segments: List[Tuple[float, float, str]], out_txt: P
     # Plain TXT
     with out_txt.open("w", encoding="utf-8") as f:
         for (s, e, t) in segments:
-            f.write(f"{mmss(s)}-{mmss(e)}: {t}\n")
+            f.write(f"{hhmmss(s)} -- {hhmmss(e)}: {t}\n")
 
     # SRT
     def srt_timestamp(t: float) -> str:
@@ -168,122 +164,12 @@ def save_transcript_txt_srt(segments: List[Tuple[float, float, str]], out_txt: P
         for idx, (s, e, t) in enumerate(segments, 1):
             f.write(f"{idx}\n{srt_timestamp(s)} --> {srt_timestamp(e)}\n{t}\n\n")
 
-def analyze_with_llm(text: str, filename: str, backend: str = "groq", model: str = None, system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> str:
-    """
-    Universal LLM analysis function that routes to different backends.
-    Supports: groq, openai, anthropic, gemini, deepseek, ollama
-    Auto-installs backend-specific packages as needed.
-    """
-    # Default models per backend
-    DEFAULT_MODELS = {
-        "groq": "llama-3.3-70b-versatile",  # Fast, free, high quality
-        "openai": "gpt-4o-mini",  # Cost-effective
-        "anthropic": "claude-3-5-sonnet-20241022",  # Best quality
-        "gemini": "gemini-2.0-flash-exp",  # Free tier
-        "deepseek": "deepseek-chat",  # Cost-effective
-        "ollama": "llama3.2:1b"  # Local
-    }
-    
-    # Backend-specific package requirements
-    BACKEND_PACKAGES = {
-        "groq": ("groq", "groq"),
-        "openai": ("openai", "openai"),
-        "anthropic": ("anthropic", "anthropic"),
-        "gemini": ("google-generativeai", "google.generativeai"),
-        "deepseek": ("openai", "openai"),
-    }
-    
-    # Auto-install backend package if needed
-    if backend in BACKEND_PACKAGES:
-        pkg, import_name = BACKEND_PACKAGES[backend]
-        auto_install_package(pkg, import_name)
-    
-    model = model or DEFAULT_MODELS.get(backend, "gpt-4o-mini")
-    user_prompt = f"File: {filename}\nTranscript:\n{text}\n\nReturn a structured analysis with section headers."
-    
-    try:
-        if backend == "groq":
-            from groq import Groq
-            client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-            completion = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                temperature=0.7,
-                max_tokens=2000,
-            )
-            return completion.choices[0].message.content
-            
-        elif backend == "openai":
-            import openai
-            client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-            completion = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                temperature=0.7,
-                max_tokens=2000,
-            )
-            return completion.choices[0].message.content
-            
-        elif backend == "anthropic":
-            import anthropic
-            client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-            message = client.messages.create(
-                model=model,
-                max_tokens=2000,
-                system=system_prompt,
-                messages=[{"role": "user", "content": user_prompt}]
-            )
-            return message.content[0].text
-            
-        elif backend == "gemini":
-            import google.generativeai as genai
-            genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-            model_obj = genai.GenerativeModel(model)
-            response = model_obj.generate_content(f"{system_prompt}\n\n{user_prompt}")
-            return response.text
-            
-        elif backend == "deepseek":
-            import openai
-            client = openai.OpenAI(
-                api_key=os.getenv("DEEPSEEK_API_KEY"),
-                base_url="https://api.deepseek.com"
-            )
-            completion = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                temperature=0.7,
-                max_tokens=2000,
-            )
-            return completion.choices[0].message.content
-            
-        elif backend == "ollama":
-            return analyze_with_ollama(text, filename, model, system_prompt)
-            
-        else:
-            return f"[ERROR] Unknown backend: {backend}"
-            
-    except Exception as e:
-        return f"[ERROR] {backend.upper()} API call failed: {e}\nCheck API key in ~/.env.d/llm-apis.env"
-
-def analyze_with_groq(text: str, filename: str, model: str = "llama-3.3-70b-versatile", system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> str:
-    """DEPRECATED: Use analyze_with_llm() instead."""
-    return analyze_with_llm(text, filename, "groq", model, system_prompt)
-
 def ollama_host() -> str:
     return os.getenv("OLLAMA_HOST", "http://127.0.0.1:11434")
 
 def analyze_with_ollama(text: str, filename: str, model: str, system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> str:
     """
-    Calls Ollama /api/generate with a composed prompt (DEPRECATED: Use Groq instead).
+    Calls Ollama /api/generate with a composed prompt.
     """
     url = f"{ollama_host().rstrip('/')}/api/generate"
     prompt = (
@@ -328,11 +214,8 @@ def main():
                         help="Whisper model size (tiny/base/small/medium/large-v2, etc.)")
     parser.add_argument("--compute", dest="compute_type", default="int8",
                         help="CTranslate2 compute type (int8, int8_float16, float16, float32)")
-    parser.add_argument("--backend", dest="backend", default="groq", 
-                        choices=["groq", "openai", "anthropic", "gemini", "deepseek", "ollama"],
-                        help="LLM backend (default: groq - fastest & free)")
-    parser.add_argument("--llm", dest="llm_model", default=None,
-                        help="Model name (optional - uses best default per backend)")
+    parser.add_argument("--llm", dest="llm_model", default="llama3.1:8b-instruct",
+                        help="Ollama model for analysis (e.g., llama3.1:8b-instruct, deepseek-r1:8b)")
     args = parser.parse_args()
 
     media_root = Path(args.media_dir).expanduser().resolve()
@@ -340,7 +223,7 @@ def main():
 
     rprint(f"[bold cyan]Media root:[/bold cyan] {media_root}")
     rprint(f"[dim]Transcripts -> {transcripts_dir} | Analysis -> {analysis_dir}[/dim]")
-    rprint(f"[dim]Whisper: {args.whisper_model} | Compute: {args.compute_type} | Backend: {args.backend} | Model: {args.llm_model}[/dim]")
+    rprint(f"[dim]Whisper: {args.whisper_model} | Compute: {args.compute_type} | LLM: {args.llm_model}[/dim]")
 
     files = list(iter_media_files(media_root))
     if not files:
@@ -366,39 +249,20 @@ def main():
             continue
 
         save_transcript_txt_srt(segments, out_txt, out_srt)
-        rprint(f"[green]? Transcript saved[/green] {out_txt.name}  ([dim]{lang}[/dim])")
+        rprint(f"[green]✓ Transcript saved[/green] {out_txt.name}  ([dim]{lang}[/dim])")
 
         # Build text for LLM (concat segments)
-        transcript_text = "\n".join(f"{mmss(s)}-{mmss(e)} {t}" for (s, e, t) in segments)
+        transcript_text = Path("\n").join(f"{hhmmss(s)}--{hhmmss(e)} {t}" for (s, e, t) in segments)
 
         # Optional lightweight features
         feats = extract_features(path)
         if feats:
             transcript_text = f"[AUDIO FEATURES] {feats}\n\n" + transcript_text
 
-        # Analyze with LLM (auto-select backend)
-        analysis = analyze_with_llm(
-            transcript_text, 
-            path.name, 
-            backend=args.backend,
-            model=args.llm_model
-        )
-        
-        # Add header to analysis
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        header = f"""MUSIC ANALYSIS FOR: {stem}
-{'=' * 60}
-Analysis timestamp: {timestamp}
-Transcription method: Whisper AI ({args.whisper_model} model)
-LLM Backend: {args.backend}
-LLM Model: {args.llm_model}
-Detected language: {lang}
-{'=' * 60}
-
-"""
-        full_analysis = header + analysis
-        out_analysis.write_text(full_analysis, encoding="utf-8")
-        rprint(f"[green]? Analysis saved[/green] {out_analysis.name}")
+        # Analyze with local LLM via Ollama
+        analysis = analyze_with_ollama(transcript_text, path.name, args.llm_model)
+        out_analysis.write_text(analysis, encoding="utf-8")
+        rprint(f"[green]✓ Analysis saved[/green] {out_analysis.name}")
 
     rprint("[bold green]Done.[/bold green]")
 

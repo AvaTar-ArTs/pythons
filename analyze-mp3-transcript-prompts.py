@@ -1,4 +1,39 @@
 #!/usr/bin/env python3
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 import argparse
 import json
 import logging
@@ -12,7 +47,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import OpenAI, APIConnectionError, RateLimitError, APIStatusError, AuthenticationError
 from termcolor import colored
 from tqdm import tqdm
 
@@ -20,8 +55,6 @@ from tqdm import tqdm
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
 
-env_dir = PathLib.home() / ".env.d"
-if env_dir.exists():
     for env_file in env_dir.glob("*.env"):
         load_dotenv(env_file)
 
@@ -32,6 +65,10 @@ CONSTANT_1500 = 1500
 
 
 # ---------- CONFIG & UTILITIES ----------
+
+# Setup logging first
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
 
 # Load .env first
 load_dotenv(os.path.expanduser("~/.env"))
@@ -46,24 +83,56 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 # Safe slugify for filenames
 def slugify(name: str) -> str:
     name = name.strip().lower()
-    name = re.sub(r"[\/\\]+", "-", name)  # replace slashes
+    name = re.sub(r"[\/\\\\]+", "-", name)  # replace slashes
     name = re.sub(r"[^\w\-_\. ]+", "", name)  # allow word chars, dash, underscore, dot, space
     name = re.sub(r"\s+", "_", name)
     return name[:CONSTANT_200]  # cap length
 
-# Exponential backoff with full jitter
-def retry_with_backoff(func, *args, max_attempts=4, base_delay=1.0, cap=10.0, **kwargs):
+# Enhanced Retry Logic
+def retry_with_backoff(func, *args, max_attempts=3, base_delay=5.0, backoff_type="linear", **kwargs):
+    """
+    Retry logic with specific handling for OpenAI errors.
+    - max_attempts: 3 (default)
+    - base_delay: 5s (default)
+    - backoff_type: "linear" or "exponential"
+    """
     for attempt in range(1, max_attempts + 1):
         try:
             return func(*args, **kwargs)
-        except Exception as e:
+        except RateLimitError as e:
+            # Check if it's a quota issue (insufficient_quota) vs rate limit
+            if e.code == 'insufficient_quota':
+                logger.error(colored("❌ CRITICAL: OpenAI Quota Exceeded. Please check billing.", "red"))
+                raise e # Do not retry quota errors, they won't fix themselves quickly
+            
             if attempt == max_attempts:
+                logger.error(f"Rate limit hit. Max retries ({max_attempts}) exceeded.")
                 raise
-            sleep_time = min(cap, base_delay * (2 ** (attempt - 1)))
-            # full jitter
-            sleep_time = random.uniform(0, sleep_time)
-            logging.warning(f"Attempt {attempt} failed with {e!r}; waiting {sleep_time:.2f}s before retry.")
+            
+            sleep_time = base_delay * attempt if backoff_type == "linear" else base_delay * (2 ** (attempt - 1))
+            # Add jitter
+            sleep_time += random.uniform(0, 1)
+            
+            logger.warning(colored(f"⚠️ Rate limit hit. Retrying in {sleep_time:.2f}s (Attempt {attempt}/{max_attempts})...", "yellow"))
             time.sleep(sleep_time)
+            
+        except (APIConnectionError, APIStatusError) as e:
+            if attempt == max_attempts:
+                logger.error(f"API Error: {e}. Max retries exceeded.")
+                raise
+            
+            sleep_time = base_delay * attempt if backoff_type == "linear" else base_delay * (2 ** (attempt - 1))
+            logger.warning(colored(f"⚠️ API Error: {e}. Retrying in {sleep_time:.2f}s...", "yellow"))
+            time.sleep(sleep_time)
+            
+        except AuthenticationError as e:
+            logger.error(colored(f"❌ Authentication Error: {e}. Check your API key.", "red"))
+            raise # Do not retry auth errors
+            
+        except Exception as e:
+            logger.error(f"Unexpected error: {e}")
+            raise
+
 def format_timestamp(seconds):
     minutes = int(seconds // 60)
     sec = int(seconds % 60)
@@ -79,6 +148,7 @@ def parse_transcript(transcript_text):
             except ValueError:
                 continue
     return segments
+
 # ---------- TRANSCRIPTION & ANALYSIS ----------
 
 def transcribe_audio(file_path: Path, model="whisper-1") -> str | None:
@@ -89,25 +159,28 @@ def transcribe_audio(file_path: Path, model="whisper-1") -> str | None:
 
     def _call():
         with open(file_path, "rb") as f:
-            return client.audio.transcribe(model=model, file=f, response_format="verbose_json")
+            # UPDATED METHOD: client.audio.transcriptions.create
+            return client.audio.transcriptions.create(model=model, file=f, response_format="verbose_json")
 
     try:
-        transcript_data = retry_with_backoff(_call, max_attempts=4)
+        transcript_data = retry_with_backoff(_call, max_attempts=3, base_delay=5.0, backoff_type="linear")
+    except RateLimitError:
+        return None # Skip this file if rate limited/quota exceeded
     except Exception as e:
         logging.error(f"Failed to transcribe {file_path.name}: {e}")
         logger.info(colored(f"❌ Failed to transcribe {file_path.name}: {e}", "red"))
         return None
 
-    segments = transcript_data.get("segments", [])
+    segments = transcript_data.segments
     lines = []
     for seg in segments:
-        start = seg.get("start", 0)
-        end = seg.get("end", 0)
-        text = seg.get("text", "").strip()
+        start = seg['start']
+        end = seg['end']
+        text = seg['text'].strip()
         lines.append(f"{format_timestamp(start)} -- {format_timestamp(end)}: {text}")
-    return Path("\n").join(lines)
+    return "\n".join(lines)
 
-def analyze_text_for_section(text: str, model="gpt-3.5-turbo") -> str | None:
+def analyze_text_for_section(text: str, model="gpt-4o") -> str | None:
     system_prompt = (
         "You are an experienced language and music expert. Your role is to provide an in-depth, structured analysis of song lyrics. "
         "Focus on uncovering the central context, emotional nuances, narrative arc, and deeper meanings. Analyze the emotional tone, "
@@ -135,14 +208,16 @@ def analyze_text_for_section(text: str, model="gpt-3.5-turbo") -> str | None:
             temperature=0.7)
 
     try:
-        response = retry_with_backoff(_call, max_attempts=3)
+        response = retry_with_backoff(_call, max_attempts=3, base_delay=5.0, backoff_type="linear")
+    except RateLimitError:
+        return None
     except Exception as e:
         logging.error(f"Analysis failed: {e}")
         logger.info(colored(f"⚠️ Analysis error: {e}", "yellow"))
         return None
+    
     choice = response.choices[0]
-    # Depending on API version, adjust access
-    content = getattr(choice.message, "content", None) if hasattr(choice, "message") else choice.text
+    content = choice.message.content
     return content.strip() if content else None
 
 def link_timestamps_to_analysis(transcript_segments, analysis_text):
@@ -160,6 +235,7 @@ def process_audio_file(
     transcript_dir: Path,
     analysis_dir: Path,
     force: bool = False,
+    analysis_model: str = "gpt-4o",
 ):
     safe_name = slugify(audio_file.stem)
     transcript_path = transcript_dir / f"{safe_name}_transcript.txt"
@@ -182,7 +258,7 @@ def process_audio_file(
 
     transcript_segments = parse_transcript(transcript)
 
-    analysis = analyze_text_for_section(transcript)
+    analysis = analyze_text_for_section(transcript, model=analysis_model)
     if not analysis:
         logger.info(colored(f"⚠️ Skipping analysis for {audio_file.name}.", "yellow"))
         return
@@ -210,7 +286,7 @@ def save_progress_cache(cache_file: Path, data):
     except Exception as e:
         logging.warning(f"Failed saving cache: {e}")
 
-def process_audio_directory(audio_dir: Path, max_workers: int, force: bool):
+def process_audio_directory(audio_dir: Path, max_workers: int, force: bool, analysis_model: str):
     transcript_dir = audio_dir / "transcript"
     analysis_dir = audio_dir / "analysis"
     transcript_dir.mkdir(parents=True, exist_ok=True)
@@ -228,7 +304,7 @@ def process_audio_directory(audio_dir: Path, max_workers: int, force: bool):
 
     def worker(path: Path):
         try:
-            process_audio_file(path, transcript_dir, analysis_dir, force=force)
+            process_audio_file(path, transcript_dir, analysis_dir, force=force, analysis_model=analysis_model)
             cache_key = slugify(path.stem)
             cache[cache_key] = {"processed_at": time.time()}
             save_progress_cache(cache_file, cache)
@@ -246,13 +322,16 @@ def main():
         "-d",
         "--audio-dir",
         type=str,
-        default=Path(str(Path.home()) + "/Music/nocTurneMeLoDieS/MP3/"),
+        default=Path(str(Path.home()) + "/Music/nocTurneMeLoDieS"),
         help="Directory containing MP3s (recursive).")
     parser.add_argument(
         "-w", "--max-workers", type=int, default=4, help="Number of concurrent transcription workers."
     )
     parser.add_argument(
         "-f", "--force", action="store_true", help="Reprocess even if transcript+analysis exist."
+    )
+    parser.add_argument(
+        "-m", "--model", type=str, default="gpt-4o", help="OpenAI model to use for analysis (e.g., gpt-3.5-turbo, gpt-4o)."
     )
     args = parser.parse_args()
 
@@ -278,7 +357,8 @@ def main():
     console.setFormatter(formatter)
     root.addHandler(console)
 
-    process_audio_directory(audio_dir, max_workers=args.max_workers, force=args.force)
+    # Pass the model argument to the processing function
+    process_audio_directory(audio_dir, max_workers=args.max_workers, force=args.force, analysis_model=args.model)
 
 
 if __name__ == "__main__":

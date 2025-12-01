@@ -1,3 +1,38 @@
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 from pathlib import Path
 from openai import OpenAI
 
@@ -8,8 +43,6 @@ import logging
 from pathlib import Path as PathLib
 from dotenv import load_dotenv
 
-env_dir = PathLib.home() / ".env.d"
-if env_dir.exists():
     for env_file in env_dir.glob("*.env"):
         load_dotenv(env_file)
 
@@ -18,7 +51,6 @@ logger = logging.getLogger(__name__)
 
 
 # Constants
-CONSTANT_1000 = 1000
 
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -94,7 +126,7 @@ def analyze_text_for_section(text, section_number):
                 "content": f"Analyze the following song transcript and provide a detailed analysis of: (1) the central themes and meaning, (2) the emotional tone of the song, (3) the intent of the artist, (4) any significant metaphors, symbols, or imagery used, and (5) how these elements come together to create an overall emotional and narrative experience: {text}",
             },
         ],
-        max_tokens=CONSTANT_1000,
+        max_tokens=1000,
         temperature=0.7,
     )
 
