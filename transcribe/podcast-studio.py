@@ -18,6 +18,41 @@ Usage:
     python3 podcast_studio.py
 """
 
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 import os
 import sys
 import json
@@ -133,8 +168,8 @@ class PodcastStudio:
         if research.get("content"):
             context += f"Research:\n{research['content']}\n\n"
 
-        # Word count estimate (CONSTANT_150 words per minute for natural speech)
-        target_words = duration * CONSTANT_150
+        # Word count estimate (150 words per minute for natural speech)
+        target_words = duration * 150
 
         system_prompt = """You are a professional podcast scriptwriter. Create engaging, conversational scripts that:
 - Start with a compelling hook
@@ -221,7 +256,7 @@ Make it conversational, engaging, and natural. Write ONLY the script text (no la
                 f.write(response.content)
 
             # Get file size in MB
-            size_mb = audio_file.stat().st_size / (CONSTANT_1024 * CONSTANT_1024)
+            size_mb = audio_file.stat().st_size / (1024 * 1024)
 
             logger.info(f"✅ Audio saved: {audio_file.name} ({size_mb:.1f} MB)")
 

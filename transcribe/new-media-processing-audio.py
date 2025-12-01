@@ -1,4 +1,39 @@
 #!/usr/bin/env python3
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 import argparse
 import logging
 import logging.handlers
@@ -17,8 +52,6 @@ from tqdm import tqdm
 
 # --- Load API Keys ---
 # Load from ~/.env.d/ first
-env_dir = Path.home() / ".env.d"
-if env_dir.exists():
     for env_file in env_dir.glob("*.env"):
         load_dotenv(env_file)
 
@@ -28,7 +61,6 @@ if env_path.exists():
     load_dotenv(dotenv_path=env_path)
 
 # --- Constants & Globals ---
-CONSTANT_1500 = 1500
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Setup a logger for the module
@@ -147,7 +179,7 @@ def analyze_text(text: str, file_name: str) -> str | None:
                     ),
                 },
             ],
-            max_tokens=CONSTANT_1500,
+            max_tokens=1500,
             temperature=0.7,
         )
 

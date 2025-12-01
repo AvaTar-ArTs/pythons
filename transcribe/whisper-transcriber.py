@@ -1,3 +1,39 @@
+import os
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 import json
 from pathlib import Path
 
@@ -10,9 +46,6 @@ logger = logging.getLogger(__name__)
 
 
 # Constants
-CONSTANT_1000 = 1000
-CONSTANT_60000 = 60000
-CONSTANT_3600000 = 3600000
 
 
 
@@ -192,11 +225,11 @@ def write_srt_with_default_line_breaks(result, file):
         text = segment["text"].strip().replace("-->", "->")
         logger.info(f"{segment['id']}\n{start} --> {end}\n{text}\n", file=file)
 def format_timestamp(seconds: float):
-    milliseconds = int(seconds * CONSTANT_1000)
-    hours = milliseconds // CONSTANT_3600000
-    minutes = (milliseconds % CONSTANT_3600000) // CONSTANT_60000
-    seconds = (milliseconds % CONSTANT_60000) // CONSTANT_1000
-    milliseconds = milliseconds % CONSTANT_1000
+    milliseconds = int(seconds * 1000)
+    hours = milliseconds // 3600000
+    minutes = (milliseconds % 3600000) // 60000
+    seconds = (milliseconds % 60000) // 1000
+    milliseconds = milliseconds % 1000
     return f"{hours:02d}:{minutes:02d}:{seconds:02d},{milliseconds:03d}"
 
 

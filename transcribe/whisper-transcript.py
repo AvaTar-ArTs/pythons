@@ -1,3 +1,38 @@
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 from pathlib import Path
 import os
 import subprocess
@@ -11,15 +46,11 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path as PathLib
 from dotenv import load_dotenv
 
-env_dir = PathLib.home() / ".env.d"
-if env_dir.exists():
     for env_file in env_dir.glob("*.env"):
         load_dotenv(env_file)
 
 
 # Constants
-CONSTANT_300 = 300
-CONSTANT_1000 = 1000
 
 
 # Configure logging
@@ -53,7 +84,7 @@ client = OpenAI(api_key=api_key)
 
 
 # Split video into smaller segments
-def split_video_to_segments(video_path, segment_length=CONSTANT_300):
+def split_video_to_segments(video_path, segment_length=300):
     """Split the video into smaller segments."""
     video_name = os.path.splitext(os.path.basename(video_path))[0]
     output_dir = os.path.join(VIDEO_DIR, video_name + "_segments")
@@ -141,7 +172,7 @@ def analyze_text_for_section(text, section_number):
                     "content": f"Analyze the following song transcript to extract: (1) main themeAnalyze the following transcript and associated content for {text}. Provide a comprehensive analysis covering:1. **Central Themes and Messages**: Identify the primary ideas or messages conveyed. How do they connect to the broader narrative?2. **Emotional Tone**: What emotions are evoked, and how are they conveyed through the combination of audio and visuals? 3. **Narrative Arc**: Describe how this section contributes to the overall story or progression. Are there key turning points or developments?\n4. **Creator’s Intent**: What is the likely purpose or message the creator is trying to communicate? Is it to entertain, inform, inspire, or persuade?\n5. **Significant Metaphors, Symbols, and Imagery**: Highlight notable metaphors, symbols, or visual/audio motifs that enhance the narrative or emotional impact.\n6. **Storytelling Techniques**: Identify specific techniques used, such as pacing, transitions, visual effects, or sound design. How do they contribute to the overall experience?\n7. **Interplay Between Visuals and Audio**: Analyze how visuals and audio work together to create meaning and impact. Are there any standout moments?\n8. **Audience Engagement and Impact**: Evaluate how effectively the content captures and holds attention. How well does it resonate with its intended audience?\n9. **Overall Effectiveness**: Summarize how these elements combine to create a cohesive, immersive, and impactful experience for the viewer.\n\nTranscript:\n{text}",
                 },
             ],
-            max_tokens=CONSTANT_1000,
+            max_tokens=1000,
             temperature=0.7,
         )
         return response.choices[0].message.content.strip()
@@ -153,7 +184,7 @@ def analyze_text_for_section(text, section_number):
 
 
 # Process video by sections
-def process_video_by_section(video_file, segment_length=CONSTANT_300):
+def process_video_by_section(video_file, segment_length=300):
     segments = split_video_to_segments(video_file, segment_length)
     if not segments:
         return
@@ -198,4 +229,4 @@ if __name__ == "__main__":
         sys.exit("Usage: python script.py <path_to_video_file>")
 
     video_file = sys.argv[1]
-    process_video_by_section(video_file, segment_length=CONSTANT_300)
+    process_video_by_section(video_file, segment_length=300)

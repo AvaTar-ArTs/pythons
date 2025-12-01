@@ -11,6 +11,42 @@ Features:
 ✨ Never expose actual values
 """
 
+import os
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 import csv
 from pathlib import Path
 from datetime import datetime
@@ -30,8 +66,6 @@ class APIKeyInventoryV2:
     """Show what you actually have"""
     
     def __init__(self):
-        self.env_dir = Path.home() / ".env.d"
-        self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         self.output_file = self.env_dir / f"API_KEY_INVENTORY_COMPLETE_{self.timestamp}.csv"
         
         self.all_keys = {}  # key_name -> info

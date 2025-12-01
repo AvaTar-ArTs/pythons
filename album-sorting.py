@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # ── CONFIGURATION ──────────────────────────────────────────────────────────────
 
-PROJECT_ROOT = Path(str(Path.home()) + "/Movies/PROJECt2025-DoMinIon/Media")
+PROJECT_ROOT = Path(str(Path.home()) + "/Users/steven/Music/nocTurneMeLoDieS")
 DIRECTORIES = {
     ".mp4": os.path.join(PROJECT_ROOT, "mp4"),
     ".mp3": os.path.join(PROJECT_ROOT, "mp3"),

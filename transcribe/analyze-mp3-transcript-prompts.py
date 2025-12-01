@@ -1,4 +1,50 @@
 #!/usr/bin/env python3
+"""
+SUPER CLEAR FILE PATHS:
+========================
+SCRIPT LOCATION: /Users/steven/pythons/transcribe/analyze-mp3-transcript-prompts.py
+
+OUTPUT DIRECTORIES (DO NOT CHANGE):
+- TRANSCRIPTS: /Users/steven/Music/nocTurneMeLoDieS/transcript
+- ANALYSIS:    /Users/steven/Music/nocTurneMeLoDieS/analysis
+
+INPUT: Scans /Users/steven/Music/nocTurneMeLoDieS recursively for MP3 files
+"""
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 import argparse
 import json
 import logging
@@ -22,18 +68,18 @@ from tqdm import tqdm
 from pathlib import Path as PathLib
 from dotenv import load_dotenv
 
-env_dir = PathLib.home() / ".env.d"
-if env_dir.exists():
     for env_file in env_dir.glob("*.env"):
         load_dotenv(env_file)
 
 
 # Constants
-CONSTANT_200 = 200
-CONSTANT_1500 = 1500
 
 
 # ---------- CONFIG & UTILITIES ----------
+
+# Setup logging first (before using logger)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
 
 # Load .env first
 load_dotenv(os.path.expanduser("~/.env"))
@@ -51,7 +97,7 @@ def slugify(name: str) -> str:
     name = re.sub(r"[\/\\]+", "-", name)  # replace slashes
     name = re.sub(r"[^\w\-_\. ]+", "", name)  # allow word chars, dash, underscore, dot, space
     name = re.sub(r"\s+", "_", name)
-    return name[:CONSTANT_200]  # cap length
+    return name[:200]  # cap length
 
 # Exponential backoff with full jitter
 def retry_with_backoff(func, *args, max_attempts=4, base_delay=1.0, cap=10.0, **kwargs):
@@ -91,7 +137,7 @@ def transcribe_audio(file_path: Path, model="whisper-1") -> str | None:
 
     def _call():
         with open(file_path, "rb") as f:
-            return client.audio.transcribe(model=model, file=f, response_format="verbose_json")
+            return client.audio.transcriptions.create(model=model, file=f, response_format="verbose_json")
 
     try:
         transcript_data = retry_with_backoff(_call, max_attempts=4)
@@ -106,9 +152,8 @@ def transcribe_audio(file_path: Path, model="whisper-1") -> str | None:
         start = seg.get("start", 0)
         end = seg.get("end", 0)
         text = seg.get("text", "").strip()
-        lines.append(f"{format_timestamp(start)}-{format_timestamp(end)}: {text}")
-    return "
-".join(lines)
+        lines.append(f"{format_timestamp(start)} -- {format_timestamp(end)}: {text}")
+    return "\n".join(lines)
 
 def analyze_text_for_section(text: str, model="gpt-3.5-turbo") -> str | None:
     system_prompt = (
@@ -134,7 +179,7 @@ def analyze_text_for_section(text: str, model="gpt-3.5-turbo") -> str | None:
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
-            max_tokens=CONSTANT_1500,
+            max_tokens=1500,
             temperature=0.7)
 
     try:
@@ -213,9 +258,12 @@ def save_progress_cache(cache_file: Path, data):
     except Exception as e:
         logging.warning(f"Failed saving cache: {e}")
 
-def process_audio_directory(audio_dir: Path, max_workers: int, force: bool):
-    transcript_dir = audio_dir / "transcript"
-    analysis_dir = audio_dir / "analysis"
+def process_audio_directory(audio_dir: Path, max_workers: int, force: bool, limit: int = None):
+    # SUPER CLEAR: Output directories - DO NOT CHANGE THESE PATHS
+    # Transcripts go to: /Users/steven/Music/nocTurneMeLoDieS/transcript
+    # Analysis goes to: /Users/steven/Music/nocTurneMeLoDieS/analysis
+    transcript_dir = Path("/Users/steven/Music/nocTurneMeLoDieS/transcript")
+    analysis_dir = Path("/Users/steven/Music/nocTurneMeLoDieS/analysis")
     transcript_dir.mkdir(parents=True, exist_ok=True)
     analysis_dir.mkdir(parents=True, exist_ok=True)
 
@@ -223,6 +271,11 @@ def process_audio_directory(audio_dir: Path, max_workers: int, force: bool):
     if not audio_files:
         logger.info(colored("⚠️ No MP3s found in the directory.", "red"))
         return
+    
+    # Limit files for testing
+    if limit:
+        audio_files = audio_files[:limit]
+        logger.info(colored(f"🧪 TEST MODE: Processing only {len(audio_files)} files", "yellow"))
 
     logger.info(colored(f"🗂 Found {len(audio_files)} MP3 files. Starting...", "green"))
 
@@ -257,6 +310,9 @@ def main():
     parser.add_argument(
         "-f", "--force", action="store_true", help="Reprocess even if transcript+analysis exist."
     )
+    parser.add_argument(
+        "-l", "--limit", type=int, default=None, help="Limit number of files to process (for testing)."
+    )
     args = parser.parse_args()
 
     check_conda_env("ai-media")
@@ -281,7 +337,7 @@ def main():
     console.setFormatter(formatter)
     root.addHandler(console)
 
-    process_audio_directory(audio_dir, max_workers=args.max_workers, force=args.force)
+    process_audio_directory(audio_dir, max_workers=args.max_workers, force=args.force, limit=args.limit)
 
 
 if __name__ == "__main__":

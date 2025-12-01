@@ -6,28 +6,56 @@ This script consolidates all transcription functionality from multiple transcrip
 into a comprehensive, feature-rich transcription tool.
 """
 
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
 import os
-import sys
 import logging
 import argparse
 import subprocess
 from pathlib import Path
-from typing import Dict, List, Optional, Union
-from concurrent.futures import ThreadPoolExecutor
-import time
+from typing import Dict, List, Optional
 
 from dotenv import load_dotenv
 from openai import OpenAI
-from termcolor import colored
 from tqdm import tqdm
 
 
 # Load API keys from ~/.env.d/
 from pathlib import Path as PathLib
-from dotenv import load_dotenv
 
-env_dir = PathLib.home() / ".env.d"
-if env_dir.exists():
     for env_file in env_dir.glob("*.env"):
         load_dotenv(env_file)
 
@@ -93,8 +121,7 @@ class AdvancedTranscriber:
                 f"{self.format_timestamp(start_time)} -- {self.format_timestamp(end_time)}: {text}"
             )
 
-        return "
-".join(transcript_with_timestamps)
+        return Path("\n").join(transcript_with_timestamps)
 
     def convert_mp4_to_mp3(self, mp4_path: Path) -> Optional[Path]:
         """Convert MP4 to MP3 using ffmpeg."""
