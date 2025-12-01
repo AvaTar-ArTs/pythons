@@ -5,6 +5,7 @@ Combines all advanced renaming capabilities into a unified interface
 """
 
 # Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+import os
 from pathlib import Path as PathLib
 
 def load_env_d():
@@ -40,7 +41,6 @@ except ImportError:
     pass
 
 import ast
-import os
 import re
 import json
 import csv
@@ -52,12 +52,6 @@ from collections import Counter
 from datetime import datetime
 
 
-# Load API keys from ~/.env.d/
-from pathlib import Path as PathLib
-from dotenv import load_dotenv
-
-    for env_file in env_dir.glob("*.env"):
-        load_dotenv(env_file)
 
 
 # Optional imports for advanced features
@@ -110,8 +104,8 @@ class MasterRenamer:
             "file_types": [".py", ".md", ".txt", ".json", ".csv"],
             "image_types": [".jpg", ".jpeg", ".png", ".webp", ".tiff"],
             "video_types": [".mp4", ".webm", ".mov", ".mkv"],
-            "min_file_size": CONSTANT_100,  # bytes
-            "max_file_size": CONSTANT_100 * CONSTANT_1024 * CONSTANT_1024,  # 100MB
+            "min_file_size": 100,  # bytes
+            "max_file_size": 100 * 1024 * 1024,  # 100MB
             "exclude_patterns": [
                 r"^\.",
                 r"__pycache__",
