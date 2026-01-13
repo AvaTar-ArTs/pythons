@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Projects Directory - AvatarArts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-card h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .stat-card p {
+            opacity: 0.9;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        .category-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            border: 1px solid #e0e0e0;
+        }
+        .item-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .item.directory {
+            border-left: 4px solid #667eea;
+        }
+        .item.file {
+            border-left: 4px solid #48bb78;
+        }
+        .item-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+        .item-path {
+            font-size: 0.85em;
+            color: #666;
+            font-family: 'Monaco', 'Courier New', monospace;
+            margin-bottom: 5px;
+        }
+        .item-meta {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 8px;
+        }
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            margin-right: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐍 Python Projects Directory</h1>
+        <p class="subtitle">Comprehensive collection of Python scripts, tools, and projects</p>
+        
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3>10</h3>
+                <p>Categories</p>
+            </div>
+            <div class="stat-card">
+                <h3>202</h3>
+                <p>Total Items</p>
+            </div>
+            <div class="stat-card">
+                <h3>40</h3>
+                <p>Directories</p>
+            </div>
+            <div class="stat-card">
+                <h3>162</h3>
+                <p>Python Files</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">AI & Machine Learning</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item directory">
+                        <div class="item-name">audio_transcription</div>
+                        <div class="item-path">audio_transcription</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">axolotl-main</div>
+                        <div class="item-path">axolotl-main</div>
+
+                        <div class="item-meta">
+                            <span class="badge">13 .py files</span>
+                            <span class="badge">17 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">compare_duplicates_detail.py</div>
+                        <div class="item-path">compare_duplicates_detail.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">test_transcribe_5.py</div>
+                        <div class="item-path">test_transcribe_5.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">test_transcribe_5_files.py</div>
+                        <div class="item-path">test_transcribe_5_files.py</div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">Analysis & Scanning</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item file">
+                        <div class="item-name">CONTENT_SIMILARITY_SCANNER.py</div>
+                        <div class="item-path">CONTENT_SIMILARITY_SCANNER.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">DEEP ENV & VOLUMES CONTENT-AWARE ANALYZER.py</div>
+                        <div class="item-path">DEEP ENV & VOLUMES CONTENT-AWARE ANALYZER.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">DEEP_SCAN_ALL_CONTENT.py</div>
+                        <div class="item-path">DEEP_SCAN_ALL_CONTENT.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">FAST_SIMILARITY_SCANNER.py</div>
+                        <div class="item-path">FAST_SIMILARITY_SCANNER.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">FIND_DUPLICATE_CONTENT.py</div>
+                        <div class="item-path">FIND_DUPLICATE_CONTENT.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">FUNCTIONAL_DUPLICATE_SCANNER.py</div>
+                        <div class="item-path">FUNCTIONAL_DUPLICATE_SCANNER.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">INTELLIGENT_VERSION_ANALYZER.py</div>
+                        <div class="item-path">INTELLIGENT_VERSION_ANALYZER.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">RECURSIVE_DEEP_SCAN.py</div>
+                        <div class="item-path">RECURSIVE_DEEP_SCAN.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">analyze.py</div>
+                        <div class="item-path">analyze.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">analyze_custom_code.py</div>
+                        <div class="item-path">analyze_custom_code.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">analyze_exact_duplicates.py</div>
+                        <div class="item-path">analyze_exact_duplicates.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">analyze_for_miniforge_mamba.py</div>
+                        <div class="item-path">analyze_for_miniforge_mamba.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">analyze_large_files.py</div>
+                        <div class="item-path">analyze_large_files.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">analyze_tsv.py</div>
+                        <div class="item-path">analyze_tsv.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">analyzerr.py</div>
+                        <div class="item-path">analyzerr.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">batch_csv_analyzer.py</div>
+                        <div class="item-path">batch_csv_analyzer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">batch_dupe_content_analyzer.py</div>
+                        <div class="item-path">batch_dupe_content_analyzer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">content_based_duplicate_analyzer.py</div>
+                        <div class="item-path">content_based_duplicate_analyzer.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">content_index</div>
+                        <div class="item-path">content_index</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">csv_analyzer.py</div>
+                        <div class="item-path">csv_analyzer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">deep-home-scan.py</div>
+                        <div class="item-path">deep-home-scan.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">deepdive_analysis.py</div>
+                        <div class="item-path">deepdive_analysis.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">deepdive_content_analysis.py</div>
+                        <div class="item-path">deepdive_content_analysis.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">deepdive_scan_20251225_023925</div>
+                        <div class="item-path">deepdive_scan_20251225_023925</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">duplicate_removal_analyzer.py</div>
+                        <div class="item-path">duplicate_removal_analyzer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">ecosystem_analyzer.py</div>
+                        <div class="item-path">ecosystem_analyzer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">enhanced_duplicate_finder.py</div>
+                        <div class="item-path">enhanced_duplicate_finder.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">fast_content_analysis.py</div>
+                        <div class="item-path">fast_content_analysis.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">find_duplicate_scripts.py</div>
+                        <div class="item-path">find_duplicate_scripts.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">find_duplicates.py</div>
+                        <div class="item-path">find_duplicates.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">find_duplicates_downloads.py</div>
+                        <div class="item-path">find_duplicates_downloads.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">function_scanner.py</div>
+                        <div class="item-path">function_scanner.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">index_content_and_functions.py</div>
+                        <div class="item-path">index_content_and_functions.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">index_pythons_for_transcription.py</div>
+                        <div class="item-path">index_pythons_for_transcription.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">index_videos_for_transcription.py</div>
+                        <div class="item-path">index_videos_for_transcription.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">intelligent_deepdive_scanner.py</div>
+                        <div class="item-path">intelligent_deepdive_scanner.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">mp4-split-analyze-prompt.py</div>
+                        <div class="item-path">mp4-split-analyze-prompt.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">multi_depth_scan_downloads.py</div>
+                        <div class="item-path">multi_depth_scan_downloads.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">pdf_analyzer.py</div>
+                        <div class="item-path">pdf_analyzer.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">python_analysis</div>
+                        <div class="item-path">python_analysis</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">python_index</div>
+                        <div class="item-path">python_index</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">query_content_index.py</div>
+                        <div class="item-path">query_content_index.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">rescan_compare.py</div>
+                        <div class="item-path">rescan_compare.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">video_index</div>
+                        <div class="item-path">video_index</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">Automation & Bots</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item directory">
+                        <div class="item-name">TG-MegaBot</div>
+                        <div class="item-path">TG-MegaBot</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">botty</div>
+                        <div class="item-path">botty</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">platforms</div>
+                        <div class="item-path">platforms</div>
+
+                        <div class="item-meta">
+                            <span class="badge">1 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">Data Processing</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item directory">
+                        <div class="item-name">data</div>
+                        <div class="item-path">data</div>
+
+                        <div class="item-meta">
+                            <span class="badge">37 .py files</span>
+                            <span class="badge">1 subdirs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">E-commerce</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item directory">
+                        <div class="item-name">revenue-dashboard</div>
+                        <div class="item-path">revenue-dashboard</div>
+
+                        <div class="item-meta">
+                            <span class="badge">3 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">Media Processing</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item directory">
+                        <div class="item-name">MEDIA_PROCESSING</div>
+                        <div class="item-path">MEDIA_PROCESSING</div>
+
+                        <div class="item-meta">
+                            <span class="badge">408 .py files</span>
+                            <span class="badge">9 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">audio_generation</div>
+                        <div class="item-path">audio_generation</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">1 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">simplegallery</div>
+                        <div class="item-path">simplegallery</div>
+
+                        <div class="item-meta">
+                            <span class="badge">154 .py files</span>
+                            <span class="badge">4 subdirs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">Organization & Cleanup</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item file">
+                        <div class="item-name">AGGRESSIVE_CLEANUP_EXECUTE.py</div>
+                        <div class="item-path">AGGRESSIVE_CLEANUP_EXECUTE.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">AGGRESSIVE_DEDUPE.py</div>
+                        <div class="item-path">AGGRESSIVE_DEDUPE.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">CLEANUP_ROOT_DUPLICATES.py</div>
+                        <div class="item-path">CLEANUP_ROOT_DUPLICATES.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">COMPREHENSIVE_DIRECTORY_CLEANUP.py</div>
+                        <div class="item-path">COMPREHENSIVE_DIRECTORY_CLEANUP.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">Complete_Cleanup_Orchestrator.py</div>
+                        <div class="item-path">Complete_Cleanup_Orchestrator.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">FINAL_POLISH_CLEANUP.py</div>
+                        <div class="item-path">FINAL_POLISH_CLEANUP.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">REMOVE_CONTENT_DUPLICATES.py</div>
+                        <div class="item-path">REMOVE_CONTENT_DUPLICATES.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">Run_General_Cleanup.py</div>
+                        <div class="item-path">Run_General_Cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">Run_Python_Cleanup.py</div>
+                        <div class="item-path">Run_Python_Cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">STRUCTURAL_CLEANUP_MASTER.py</div>
+                        <div class="item-path">STRUCTURAL_CLEANUP_MASTER.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">Targeted_Cleanup.py</div>
+                        <div class="item-path">Targeted_Cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">advanced-cleanup-analyzer.py</div>
+                        <div class="item-path">advanced-cleanup-analyzer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">aggressive-python-cleanup.py</div>
+                        <div class="item-path">aggressive-python-cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">auto_cleanup.py</div>
+                        <div class="item-path">auto_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">auto_organize_dry_run_from_seo-optimizer.py</div>
+                        <div class="item-path">auto_organize_dry_run_from_seo-optimizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">canva_dedup_compress_organize.py</div>
+                        <div class="item-path">canva_dedup_compress_organize.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">check_vid_from_file-organizer.py</div>
+                        <div class="item-path">check_vid_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanup2_from_03_utilities.py</div>
+                        <div class="item-path">cleanup2_from_03_utilities.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanup_backup_files.py</div>
+                        <div class="item-path">cleanup_backup_files.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanup_duplicates copy.py</div>
+                        <div class="item-path">cleanup_duplicates copy.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanup_duplicates.py</div>
+                        <div class="item-path">cleanup_duplicates.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanup_exact_duplicates.py</div>
+                        <div class="item-path">cleanup_exact_duplicates.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanup_from_03_utilities.py</div>
+                        <div class="item-path">cleanup_from_03_utilities.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanup_large_files.py</div>
+                        <div class="item-path">cleanup_large_files.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanupd.py</div>
+                        <div class="item-path">cleanupd.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanups.py</div>
+                        <div class="item-path">cleanups.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">cleanups_1.py</div>
+                        <div class="item-path">cleanups_1.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">complete_final_cleanup.py</div>
+                        <div class="item-path">complete_final_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">convert_text_from_file-organizer.py</div>
+                        <div class="item-path">convert_text_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">convert_vid_from_file-organizer.py</div>
+                        <div class="item-path">convert_vid_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">dedupes_merge_diff_du.py</div>
+                        <div class="item-path">dedupes_merge_diff_du.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">deep_structure_cleanup.py</div>
+                        <div class="item-path">deep_structure_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">directory_merger_organizer.py</div>
+                        <div class="item-path">directory_merger_organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">download_file_from_file-organizer.py</div>
+                        <div class="item-path">download_file_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">download_json_from_file-organizer.py</div>
+                        <div class="item-path">download_json_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">download_vid_from_file-organizer.py</div>
+                        <div class="item-path">download_vid_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">entrypoints_from_file-organizer.py</div>
+                        <div class="item-path">entrypoints_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">etsy_focused_cleanup.py</div>
+                        <div class="item-path">etsy_focused_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">etsy_organizer.py</div>
+                        <div class="item-path">etsy_organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">execute_comprehensive_cleanup.py</div>
+                        <div class="item-path">execute_comprehensive_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">extract_vid_from_file-organizer.py</div>
+                        <div class="item-path">extract_vid_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">fetch_file_from_file-organizer.py</div>
+                        <div class="item-path">fetch_file_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">file_from_file-organizer.py</div>
+                        <div class="item-path">file_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">final_cleanup_summary_1.py</div>
+                        <div class="item-path">final_cleanup_summary_1.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">final_root_cleanup.py</div>
+                        <div class="item-path">final_root_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">gen_text_from_file-organizer.py</div>
+                        <div class="item-path">gen_text_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">get_instagram_from_file-organizer.py</div>
+                        <div class="item-path">get_instagram_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">get_vid_from_file-organizer.py</div>
+                        <div class="item-path">get_vid_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">hash_subtitle_from_file-organizer.py</div>
+                        <div class="item-path">hash_subtitle_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">home_cleanup.py</div>
+                        <div class="item-path">home_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">intelligent_script_reorganizer.py</div>
+                        <div class="item-path">intelligent_script_reorganizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">merge_analysis_results.py</div>
+                        <div class="item-path">merge_analysis_results.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">merge_and_cleanup.py</div>
+                        <div class="item-path">merge_and_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">merge_and_dedupe_directories.py</div>
+                        <div class="item-path">merge_and_dedupe_directories.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">merge_and_remove.py</div>
+                        <div class="item-path">merge_and_remove.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">merge_dirs.py</div>
+                        <div class="item-path">merge_dirs.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">merge_zips.py</div>
+                        <div class="item-path">merge_zips.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize (1).py</div>
+                        <div class="item-path">organize (1).py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize (1)_1.py</div>
+                        <div class="item-path">organize (1)_1.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize.py_02.py</div>
+                        <div class="item-path">organize.py_02.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_3.py</div>
+                        <div class="item-path">organize_3.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_4.py</div>
+                        <div class="item-path">organize_4.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_and_optimize.py</div>
+                        <div class="item-path">organize_and_optimize.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_by_category.py</div>
+                        <div class="item-path">organize_by_category.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_csv.py</div>
+                        <div class="item-path">organize_csv.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_experiments.py</div>
+                        <div class="item-path">organize_experiments.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_files.py</div>
+                        <div class="item-path">organize_files.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_files_from_utilities.py</div>
+                        <div class="item-path">organize_files_from_utilities.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_from_utilities.py</div>
+                        <div class="item-path">organize_from_utilities.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_html_files.py</div>
+                        <div class="item-path">organize_html_files.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_media.py</div>
+                        <div class="item-path">organize_media.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_music_library 2.py</div>
+                        <div class="item-path">organize_music_library 2.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_music_library_merged.py</div>
+                        <div class="item-path">organize_music_library_merged.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_plan_proposal.py</div>
+                        <div class="item-path">organize_plan_proposal.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organize_project2025_subdirs.py</div>
+                        <div class="item-path">organize_project2025_subdirs.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organizer_2.py</div>
+                        <div class="item-path">organizer_2.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">organizer_from_video-downloader.py</div>
+                        <div class="item-path">organizer_from_video-downloader.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">parse_vid_from_file-organizer.py</div>
+                        <div class="item-path">parse_vid_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">post_text_from_file-organizer.py</div>
+                        <div class="item-path">post_text_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">printify-organize.py</div>
+                        <div class="item-path">printify-organize.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">printify-organize_1.py</div>
+                        <div class="item-path">printify-organize_1.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">proc_vid_from_file-organizer.py</div>
+                        <div class="item-path">proc_vid_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">process_leonardo_from_file-organizer.py</div>
+                        <div class="item-path">process_leonardo_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">pyorganize.py</div>
+                        <div class="item-path">pyorganize.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">pyorganizerr.py</div>
+                        <div class="item-path">pyorganizerr.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">pyrepo_doc_organizer_from_file-utilities.py</div>
+                        <div class="item-path">pyrepo_doc_organizer_from_file-utilities.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">python-env-cleanup.py</div>
+                        <div class="item-path">python-env-cleanup.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">remove-bg-cli</div>
+                        <div class="item-path">remove-bg-cli</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">remove_duplicates.py</div>
+                        <div class="item-path">remove_duplicates.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">remove_duplicates_downloads.py</div>
+                        <div class="item-path">remove_duplicates_downloads.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">remove_merge_diff.py</div>
+                        <div class="item-path">remove_merge_diff.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">remove_source_directories.py</div>
+                        <div class="item-path">remove_source_directories.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">robust_sort_and_dedupe_merged.py</div>
+                        <div class="item-path">robust_sort_and_dedupe_merged.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">safe_duplicate_cleanup.py</div>
+                        <div class="item-path">safe_duplicate_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">send_text_from_file-organizer.py</div>
+                        <div class="item-path">send_text_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">simple_organize.py</div>
+                        <div class="item-path">simple_organize.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">smart_cleanup.py</div>
+                        <div class="item-path">smart_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">tehSiTes_deep_cleanup_from_ai-image-generator.py</div>
+                        <div class="item-path">tehSiTes_deep_cleanup_from_ai-image-generator.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">tehSiTes_targeted_cleanup_from_file-utilities.py</div>
+                        <div class="item-path">tehSiTes_targeted_cleanup_from_file-utilities.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">tehSiTes_ultimate_cleanup.py</div>
+                        <div class="item-path">tehSiTes_ultimate_cleanup.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">test_instagram_from_file-organizer.py</div>
+                        <div class="item-path">test_instagram_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">test_setup_from_file-organizer.py</div>
+                        <div class="item-path">test_setup_from_file-organizer.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">vanceai-removebg_from_file-organizer.py</div>
+                        <div class="item-path">vanceai-removebg_from_file-organizer.py</div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">Other</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item directory">
+                        <div class="item-name">CONTENT</div>
+                        <div class="item-path">CONTENT</div>
+
+                        <div class="item-meta">
+                            <span class="badge">17 .py files</span>
+                            <span class="badge">1 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">FIX_NAMING_ISSUES.py</div>
+                        <div class="item-path">FIX_NAMING_ISSUES.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">MISC</div>
+                        <div class="item-path">MISC</div>
+
+                        <div class="item-meta">
+                            <span class="badge">3 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">MarkD</div>
+                        <div class="item-path">MarkD</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">SMART_DEDUPLICATE.py</div>
+                        <div class="item-path">SMART_DEDUPLICATE.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">ULTRA_AGGRESSIVE_SIMILARITY.py</div>
+                        <div class="item-path">ULTRA_AGGRESSIVE_SIMILARITY.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">avatararts</div>
+                        <div class="item-path">avatararts</div>
+
+                        <div class="item-meta">
+                            <span class="badge">3 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">avatararts-deployment</div>
+                        <div class="item-path">avatararts-deployment</div>
+
+                        <div class="item-meta">
+                            <span class="badge">1 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">busy-liskov</div>
+                        <div class="item-path">busy-liskov</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">cataloging</div>
+                        <div class="item-path">cataloging</div>
+
+                        <div class="item-meta">
+                            <span class="badge">8 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">categorize_root_scripts.py</div>
+                        <div class="item-path">categorize_root_scripts.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">check_empty.py</div>
+                        <div class="item-path">check_empty.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">combine_dirs_to_zip.py</div>
+                        <div class="item-path">combine_dirs_to_zip.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">combine_subdirs.py</div>
+                        <div class="item-path">combine_subdirs.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">compare_combine.py</div>
+                        <div class="item-path">compare_combine.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">compare_content_and_functions.py</div>
+                        <div class="item-path">compare_content_and_functions.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">compare_dirs.py</div>
+                        <div class="item-path">compare_dirs.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">compare_zips.py</div>
+                        <div class="item-path">compare_zips.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">config</div>
+                        <div class="item-path">config</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">create_pythons_list.py</div>
+                        <div class="item-path">create_pythons_list.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">diagnose.py</div>
+                        <div class="item-path">diagnose.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">documentation</div>
+                        <div class="item-path">documentation</div>
+
+                        <div class="item-meta">
+                            <span class="badge">20 .py files</span>
+                            <span class="badge">3 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">file_organization</div>
+                        <div class="item-path">file_organization</div>
+
+                        <div class="item-meta">
+                            <span class="badge">43 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">generate_inventory.py</div>
+                        <div class="item-path">generate_inventory.py</div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">generate_removal_scripts.py</div>
+                        <div class="item-path">generate_removal_scripts.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">gol-ia-newq</div>
+                        <div class="item-path">gol-ia-newq</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">2 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">intelligent_duplicate_resolver.py</div>
+                        <div class="item-path">intelligent_duplicate_resolver.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">n8n-local</div>
+                        <div class="item-path">n8n-local</div>
+
+                        <div class="item-meta">
+                            <span class="badge">2 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">organization_reports</div>
+                        <div class="item-path">organization_reports</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">organization_scripts</div>
+                        <div class="item-path">organization_scripts</div>
+
+                        <div class="item-meta">
+                            <span class="badge">13 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">projects</div>
+                        <div class="item-path">projects</div>
+
+                        <div class="item-meta">
+                            <span class="badge">58 .py files</span>
+                            <span class="badge">4 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">python_transcripts</div>
+                        <div class="item-path">python_transcripts</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">pythons_sort.py</div>
+                        <div class="item-path">pythons_sort.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">references</div>
+                        <div class="item-path">references</div>
+
+                        <div class="item-meta">
+                            <span class="badge">2 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item file">
+                        <div class="item-name">setup.py</div>
+                        <div class="item-path">setup.py</div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">spicetify-themes</div>
+                        <div class="item-path">spicetify-themes</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">system-archive</div>
+                        <div class="item-path">system-archive</div>
+
+                        <div class="item-meta">
+                            <span class="badge">73 .py files</span>
+                            <span class="badge">3 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">tools</div>
+                        <div class="item-path">tools</div>
+
+                        <div class="item-meta">
+                            <span class="badge">695 .py files</span>
+                            <span class="badge">22 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">txt</div>
+                        <div class="item-path">txt</div>
+
+                        <div class="item-meta">
+                            <span class="badge">0 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                    <div class="item directory">
+                        <div class="item-name">vibrant-chaplygin</div>
+                        <div class="item-path">vibrant-chaplygin</div>
+
+                        <div class="item-meta">
+                            <span class="badge">976 .py files</span>
+                            <span class="badge">8 subdirs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">SEO & Marketing</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item directory">
+                        <div class="item-name">SEO_MARKETING</div>
+                        <div class="item-path">SEO_MARKETING</div>
+
+                        <div class="item-meta">
+                            <span class="badge">18 .py files</span>
+                            <span class="badge">0 subdirs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">Web Development</div>
+            <div class="category-content">
+                <div class="item-list">
+
+                    <div class="item directory">
+                        <div class="item-name">WEBSITES</div>
+                        <div class="item-path">WEBSITES</div>
+
+                        <div class="item-meta">
+                            <span class="badge">78 .py files</span>
+                            <span class="badge">2 subdirs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Generated: January 12, 2026 at 08:54 PM</p>
+            <p>Total: 202 items across 10 categories</p>
+        </div>
+    </div>
+</body>
+</html>

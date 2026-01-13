@@ -1,0 +1,5 @@
+openai>=1.0.0
+whisper-openai>=20231117
+moviepy>=1.0.3
+python-dotenv>=1.0.0
+pathlib>=1.0.1

@@ -1,0 +1,6 @@
+FILES WITH SYNTAX ERRORS
+======================================================================
+
+thinketh_tts_transcription.py
+  Error: Line 246: closing parenthesis ']' does not match opening parenthesis '(' on line 186
+

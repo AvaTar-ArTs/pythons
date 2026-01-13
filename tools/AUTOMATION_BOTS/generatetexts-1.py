@@ -1,0 +1,83 @@
+import os
+from pathlib import Path
+from pathlib import Path as PathLib
+
+from dotenv import load_dotenv
+
+from openai import OpenAI
+
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            line = line.removeprefix("export ")
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
+
+# Constants
+CONSTANT_150 = 150
+
+
+# Load environment variables from ~/.env.d
+def load_env_d():
+    """Load all .env files from ~/.env.d directory"""
+    env_d_path = Path.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            with open(env_file) as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        key, value = line.split("=", 1)
+                        key = key.strip()
+                        value = value.strip().strip('"').strip("'")
+                        if not key.startswith("source"):
+                            os.environ[key] = value
+
+
+load_env_d()
+
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+
+def get_facts(topic):
+    """get_facts function."""
+    response = client.completions.create(
+        model="text-davinci-004",
+        prompt="Create three tik-tok like plain text for curious facts about "
+        + topic
+        + " separated by enters without text before or after",
+        temperature=0.5,
+        max_tokens=CONSTANT_150,
+        top_p=1.0,
+        frequency_penalty=0.0,
+        presence_penalty=0.0,
+    )
+    facts = response.choices[0].text.strip().split(Path("\n"))
+    return facts

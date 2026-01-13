@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search · {{ site.title }}</title>
+  <meta name="description" content="Search this site">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="home" href="index.html">{{ site.title }}</a>
+      <p class="tagline">Search</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <input id="q" type="search" placeholder="Type to search…" autofocus aria-label="Search">
+    <ul id="results" class="listing"></ul>
+  </main>
+  <footer class="site-footer"><div class="wrap"><p>© {{ site.title }}</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+FILE CATEGORIZATION SUMMARY
+======================================================================
+
+General Utility: 206 files
+  - 2mentest.py
+  - SendNotification.py
+  - _RefreshThread.py
+  - add_text.py
+  - against.py
+  - alias.py
+  - analyze-prompt.py
+  - apps-render.py
+  - apps.py
+  - autocall.py
+  ... and 196 more
+
+AI Content Generation: 135 files
+  - Multi-Modal.py
+  - agent.py
+  - ai-conversation-exports.py
+  - alchemy-quiz.py
+  - analyze-metadata.py
+  - analyze-mp3-transcript-prompts.py
+  - analyze-reader.py
+  - analyze-shorts-info_code.py
+  - analyze-writer.py
+  - analyzer.py
+  ... and 125 more
+
+Instagram Automation: 121 files
+  - advanced_content_pipeline.py
+  - aggressive-renamer.py
+  - analyze.py
+  - api_key_inventory.py
+  - api_key_inventory_v2.py
+  - approve.py
+  - black-white.py
+  - block-bots.py
+  - bot-library.py
+  - botLike.py
+  ... and 111 more
+
+Gallery Generation: 104 files
+  - MultiThread.py
+  - adaptive-content-awareness.py
+  - adown.py
+  - alphabet.py
+  - analyze-code-complexity.py
+  - ascii-python.py
+  - avatar-download.py
+  - avatararts-flatten.py
+  - backupcsv.py
+  - base-gallery-logic.py
+  ... and 94 more
+
+File Management: 93 files
+  - CLEANUP_SUNO_TOOLS.py
+  - aggressive-filename-cleaner.py
+  - ai-stability-code.py
+  - album-sorting.py
+  - album.py
+  - albums.py
+  - analyze-json-writer.py
+  - analyze_versions.py
+  - automated-fixer.py
+  - base-classes.py
+  ... and 83 more
+
+YouTube Automation: 71 files
+  - AskReddit.py
+  - analyze-folder-reader.py
+  - askreddit-loop-1.py
+  - automation-selenium-content.py
+  - batch-processor.py
+  - button.py
+  - buttons.py
+  - compare_versions.py
+  - config.py.py
+  - constants.py
+  ... and 61 more
+
+Image Processing: 62 files
+  - 2leomotion.py
+  - api.py
+  - batch.py
+  - clipEditor.py
+  - consolidation.py
+  - contacts.py
+  - convert-json-writer.py
+  - convert-loop.py
+  - convert-loop2.py
+  - converts.py
+  ... and 52 more
+
+CSV Processing: 51 files
+  - 15day.py
+  - 15days.py
+  - backup-installations.py
+  - compile.py
+  - content-creation-leonardo.py
+  - create-files.py
+  - csv-extract-webm-files.py
+  - down.py
+  - download.py
+  - downs.py
+  ... and 41 more
+
+Reddit Automation: 24 files
+  - askredditbot.py
+  - audio-app.py
+  - automation-playwright-screenshot.py
+  - generate-text-overlay.py
+  - get-threads.py
+  - gtts-text-to-speech.py
+  - image-generater.py
+  - misc-gtts.py
+  - reddit-download.py
+  - reddit-scrape.py
+  ... and 14 more
+
+AI Tool: 20 files
+  - check-1.py
+  - claude.py
+  - cli-config-manager.py
+  - cloud-services-aws-streamlit.py
+  - computer.py
+  - convert.py
+  - download-data.py
+  - extract.py
+  - fundamental-analysis.py
+  - hardcoded.py
+  ... and 10 more
+
+Telegram Bot: 18 files
+  - ai_deep_analyzer.py
+  - autonomous-content-agency.py
+  - business-intelligence.py
+  - chat-base.py
+  - claude-chief.py
+  - claude-code-review-system.py
+  - custom-thumbnail.py
+  - deep-code.py
+  - ffmpeg-help.py
+  - ffmpeg-robot.py
+  ... and 8 more
+
+Audio Transcription: 17 files
+  - WhisperTranscriber.py
+  - analyze_and_transcribe_missing.py
+  - archive-reader.py
+  - audio-sub.py
+  - audio.py
+  - convert-mp4-transcribe.py
+  - convert-video-segments.py
+  - deepgram-updated.py
+  - deepgram_test.py
+  - download-2.py
+  ... and 7 more
+
+Data Merging: 15 files
+  - PSDImage.py
+  - apply-improvements.py
+  - csvmerge.py
+  - finetune-unsloth.py
+  - instagram-script_simple.py
+  - merge-1.py
+  - misc-merge.py
+  - output.py
+  - process-csv.py
+  - processing-pandas-docs.py
+  ... and 5 more
+
+Data Analysis: 12 files
+  - dummies.py
+  - environment.py
+  - optional.py
+  - pytables.py
+  - resolution.py
+  - testjoin-v1.py
+  - ufunc.py
+  - user.py
+  - youtube-cumsum.py
+  - youtube-isin.py
+  ... and 2 more
+
+AI Transcription: 1 files
+  - openai-setup.py
+

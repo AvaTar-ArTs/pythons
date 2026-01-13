@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ tag }} · {{ site.title }}</title>
+  <meta name="description" content="Pages tagged {{ tag }}">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="home" href="index.html">{{ site.title }}</a>
+      <p class="tagline">Tag: {{ tag }}</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <ul class="listing">
+      {% for p in pages %}
+        <li>
+          <a class="title" href="{{ p.slug }}.html">{{ p.title }}</a>
+          <span class="meta">{{ p.date }}{% if p.minutes %} · {{ p.minutes }} min{% endif %}</span>
+          <div class="desc">{{ p.description }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+  <footer class="site-footer"><div class="wrap"><p>© {{ site.title }}</p></div></footer>
+</body>
+</html>

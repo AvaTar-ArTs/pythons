@@ -1,0 +1,18 @@
+# Image Upscaling Toolkit - Dependencies
+
+# Core image processing
+Pillow>=10.0.0
+
+# Command-line interface
+click>=8.0.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Testing (optional, for development)
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Optional: For video processing features
+# requests>=2.31.0
+
