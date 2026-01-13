@@ -1,0 +1,17 @@
+chat==1.0.7.dev136
+config==0.5.1
+faster_whisper==1.2.1
+httpx==0.28.1
+librosa==0.11.0
+moviepy==2.2.1
+openai==2.7.1
+openai_whisper==20250625
+pydub==0.25.1
+python-dotenv==1.2.1
+PyYAML==6.0.3
+Requests==2.32.5
+rich==14.2.0
+shared==0.0.32
+termcolor==3.2.0
+the==0.1.5
+tqdm==4.67.1
