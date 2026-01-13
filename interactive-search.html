@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Automation Arsenal - Interactive Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px 40px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        
+        .search-section {
+            padding: 40px;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 20px 60px 20px 20px;
+            font-size: 1.2em;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #667eea;
+        }
+        
+        .filters {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .filter-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+        
+        .filter-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .results-count {
+            font-size: 1.1em;
+            color: #495057;
+        }
+        
+        .sort-options {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .sort-btn {
+            padding: 8px 16px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .sort-btn:hover, .sort-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .scripts-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .script-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .script-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .script-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+        
+        .script-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2c3e50;
+            flex: 1;
+        }
+        
+        .complexity-badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .complexity-beginner { background: #d4edda; color: #155724; }
+        .complexity-intermediate { background: #fff3cd; color: #856404; }
+        .complexity-advanced { background: #f8d7da; color: #721c24; }
+        .complexity-expert { background: #d6d8db; color: #1b1e21; }
+        
+        .script-filename {
+            font-family: 'Courier New', monospace;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: #495057;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        
+        .script-purpose {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .script-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            padding: 5px 12px;
+            background: #e7f3ff;
+            color: #0066cc;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        
+        .category-tag {
+            background: #f0e5ff;
+            color: #6610f2;
+        }
+        
+        .service-tag {
+            background: #ffe5f0;
+            color: #d63384;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+        
+        .no-results-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #6c757d;
+            border-top: 2px solid #e9ecef;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 100px;
+            font-size: 1.5em;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>?? Python Automation Arsenal</h1>
+            <p>Interactive Script Search & Discovery</p>
+        </header>
+        
+        <div class="stats" id="stats">
+            <div class="stat-box">
+                <div class="stat-number" id="totalScripts">-</div>
+                <div class="stat-label">Total Scripts</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="totalCategories">-</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="aiPowered">-</div>
+                <div class="stat-label">AI-Powered</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="showing">-</div>
+                <div class="stat-label">Showing</div>
+            </div>
+        </div>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput"
+                    placeholder="?? Search scripts by name, purpose, features, or services..."
+                />
+                <span class="search-icon">??</span>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="categoryFilter">?? Category</label>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="complexityFilter">?? Complexity</label>
+                    <select id="complexityFilter">
+                        <option value="">All Levels</option>
+                        <option value="Beginner">?? Beginner</option>
+                        <option value="Intermediate">?? Intermediate</option>
+                        <option value="Advanced">?? Advanced</option>
+                        <option value="Expert">?? Expert</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="serviceFilter">?? Service</label>
+                    <select id="serviceFilter">
+                        <option value="">All Services</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="results-header">
+                <div class="results-count" id="resultsCount">Loading scripts...</div>
+                <div class="sort-options">
+                    <button class="sort-btn active" data-sort="name">Name</button>
+                    <button class="sort-btn" data-sort="complexity">Complexity</button>
+                    <button class="sort-btn" data-sort="size">Size</button>
+                </div>
+            </div>
+            
+            <div class="scripts-grid" id="scriptsGrid">
+                <div class="loading">Loading scripts...</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Python Automation Arsenal</strong> - 760+ automation scripts</p>
+            <p>Built with AI-powered analysis ? Updated November 2025</p>
+        </footer>
+    </div>
+    
+    <script>
+        let allScripts = [];
+        let filteredScripts = [];
+        let currentSort = 'name';
+        
+        // Load scripts from CSV
+        async function loadScripts() {
+            try {
+                // Try to load from AI index first
+                const response = await fetch('_analysis/SCRIPTS_CATEGORIZED.csv');
+                const text = await response.text();
+                
+                // Parse CSV
+                const lines = text.split('\n');
+                const headers = lines[0].split(',');
+                
+                allScripts = lines.slice(1).filter(line => line.trim()).map(line => {
+                    const values = parseCSVLine(line);
+                    const script = {};
+                    headers.forEach((header, i) => {
+                        script[header.trim()] = values[i]?.trim() || '';
+                    });
+                    
+                    // Enrich data
+                    script.complexity = script.complexity || 'Intermediate';
+                    script.services = extractServices(script.filename);
+                    
+                    return script;
+                });
+                
+                console.log(`Loaded ${allScripts.length} scripts`);
+                
+                // Populate filters
+                populateFilters();
+                
+                // Update stats
+                updateStats();
+                
+                // Show all scripts initially
+                filterScripts();
+                
+            } catch (error) {
+                console.error('Error loading scripts:', error);
+                document.getElementById('scriptsGrid').innerHTML = 
+                    '<div class="no-results"><div class="no-results-icon">??</div><h2>Error Loading Scripts</h2><p>Make sure SCRIPTS_CATEGORIZED.csv exists in _analysis/</p></div>';
+            }
+        }
+        
+        function parseCSVLine(line) {
+            const values = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let char of line) {
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    values.push(current);
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            values.push(current);
+            return values;
+        }
+        
+        function extractServices(filename) {
+            const services = [];
+            const serviceMap = {
+                'instagram': 'Instagram',
+                'leonardo': 'Leonardo AI',
+                'openai': 'OpenAI',
+                'claude': 'Claude',
+                'suno': 'Suno',
+                'youtube': 'YouTube',
+                'aws': 'AWS',
+                'image': 'Image Processing',
+                'audio': 'Audio',
+                'video': 'Video'
+            };
+            
+            for (const [key, value] of Object.entries(serviceMap)) {
+                if (filename.toLowerCase().includes(key)) {
+                    services.push(value);
+                }
+            }
+            
+            return services;
+        }
+        
+        function populateFilters() {
+            // Categories
+            const categories = [...new Set(allScripts.map(s => s.category))].filter(Boolean).sort();
+            const categoryFilter = document.getElementById('categoryFilter');
+            categories.forEach(cat => {
+                const option = document.createElement('option');
+                option.value = cat;
+                option.textContent = cat;
+                categoryFilter.appendChild(option);
+            });
+            
+            // Services
+            const allServices = new Set();
+            allScripts.forEach(s => s.services.forEach(srv => allServices.add(srv)));
+            const serviceFilter = document.getElementById('serviceFilter');
+            [...allServices].sort().forEach(srv => {
+                const option = document.createElement('option');
+                option.value = srv;
+                option.textContent = srv;
+                serviceFilter.appendChild(option);
+            });
+        }
+        
+        function updateStats() {
+            document.getElementById('totalScripts').textContent = allScripts.length;
+            document.getElementById('totalCategories').textContent = 
+                new Set(allScripts.map(s => s.category).filter(Boolean)).size;
+            document.getElementById('aiPowered').textContent = 
+                allScripts.filter(s => s.services.some(srv => 
+                    srv.includes('OpenAI') || srv.includes('Claude')
+                )).length;
+        }
+        
+        function filterScripts() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const category = document.getElementById('categoryFilter').value;
+            const complexity = document.getElementById('complexityFilter').value;
+            const service = document.getElementById('serviceFilter').value;
+            
+            filteredScripts = allScripts.filter(script => {
+                // Search term
+                if (searchTerm && !JSON.stringify(script).toLowerCase().includes(searchTerm)) {
+                    return false;
+                }
+                
+                // Category filter
+                if (category && script.category !== category) {
+                    return false;
+                }
+                
+                // Complexity filter
+                if (complexity && script.complexity !== complexity) {
+                    return false;
+                }
+                
+                // Service filter
+                if (service && !script.services.includes(service)) {
+                    return false;
+                }
+                
+                return true;
+            });
+            
+            // Sort
+            sortScripts();
+            
+            // Render
+            renderScripts();
+            
+            // Update showing count
+            document.getElementById('showing').textContent = filteredScripts.length;
+        }
+        
+        function sortScripts() {
+            filteredScripts.sort((a, b) => {
+                switch(currentSort) {
+                    case 'name':
+                        return a.filename.localeCompare(b.filename);
+                    case 'complexity':
+                        const complexityOrder = { 'Beginner': 1, 'Intermediate': 2, 'Advanced': 3, 'Expert': 4 };
+                        return (complexityOrder[a.complexity] || 2) - (complexityOrder[b.complexity] || 2);
+                    case 'size':
+                        return parseFloat(b.size_kb || 0) - parseFloat(a.size_kb || 0);
+                    default:
+                        return 0;
+                }
+            });
+        }
+        
+        function renderScripts() {
+            const grid = document.getElementById('scriptsGrid');
+            document.getElementById('resultsCount').textContent = 
+                `Showing ${filteredScripts.length} of ${allScripts.length} scripts`;
+            
+            if (filteredScripts.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-results">
+                        <div class="no-results-icon">??</div>
+                        <h2>No scripts found</h2>
+                        <p>Try adjusting your search or filters</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            grid.innerHTML = filteredScripts.map(script => `
+                <div class="script-card" onclick="showScriptDetails('${script.filename}')">
+                    <div class="script-header">
+                        <div class="script-title">${formatTitle(script.filename)}</div>
+                        <span class="complexity-badge complexity-${(script.complexity || 'intermediate').toLowerCase()}">
+                            ${getComplexityEmoji(script.complexity)} ${script.complexity || 'Intermediate'}
+                        </span>
+                    </div>
+                    
+                    <div class="script-filename">${script.filename}</div>
+                    
+                    ${script.purpose ? `<div class="script-purpose">${script.purpose}</div>` : ''}
+                    
+                    <div class="script-tags">
+                        ${script.category ? `<span class="tag category-tag">?? ${script.category}</span>` : ''}
+                        ${script.services.map(s => `<span class="tag service-tag">?? ${s}</span>`).join('')}
+                        ${script.size_kb ? `<span class="tag">${parseFloat(script.size_kb).toFixed(1)} KB</span>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function formatTitle(filename) {
+            return filename
+                .replace('.py', '')
+                .split('-')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+        }
+        
+        function getComplexityEmoji(complexity) {
+            const emojis = {
+                'Beginner': '??',
+                'Intermediate': '??',
+                'Advanced': '??',
+                'Expert': '??'
+            };
+            return emojis[complexity] || '?';
+        }
+        
+        function showScriptDetails(filename) {
+            const script = allScripts.find(s => s.filename === filename);
+            if (script) {
+                alert(`Script: ${script.filename}\n\nCategory: ${script.category}\nPath: ${script.path}\n\nClick OK to close`);
+            }
+        }
+        
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            loadScripts();
+            
+            document.getElementById('searchInput').addEventListener('input', filterScripts);
+            document.getElementById('categoryFilter').addEventListener('change', filterScripts);
+            document.getElementById('complexityFilter').addEventListener('change', filterScripts);
+            document.getElementById('serviceFilter').addEventListener('change', filterScripts);
+            
+            document.querySelectorAll('.sort-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentSort = btn.dataset.sort;
+                    sortScripts();
+                    renderScripts();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

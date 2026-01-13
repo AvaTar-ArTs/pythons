@@ -1,0 +1,2 @@
+/Users/steven/Music/NocTurnE-meLoDieS
+        r".*\/Movies\/CapCut\/.*",  # Specific gitHub directory

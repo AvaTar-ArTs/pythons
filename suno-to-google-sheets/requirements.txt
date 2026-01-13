@@ -1,0 +1,6 @@
+playwright>=1.46.0
+tenacity>=8.2.3
+gspread>=6.1.4
+google-auth>=2.31.0
+google-auth-oauthlib>=1.2.1
+pandas>=2.2.2

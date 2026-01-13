@@ -1,0 +1,1763 @@
+{
+  "timestamp": "20251106_123938",
+  "total_analyzed": 273,
+  "top_scripts": [
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/ultimate_content_intelligence.py",
+      "name": "ultimate_content_intelligence.py",
+      "size": 44364,
+      "lines": 1178,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "ElevenLabs",
+        "PIL/Pillow",
+        "Requests",
+        "AsyncIO"
+      ],
+      "classes": 6,
+      "functions": 18,
+      "imports": [
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing",
+        "dotenv",
+        "PIL",
+        "PIL.ExifTags",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 266
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/unified_intelligence/ultimate_content_intelligence.py",
+      "name": "ultimate_content_intelligence.py",
+      "size": 44364,
+      "lines": 1178,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "ElevenLabs",
+        "PIL/Pillow",
+        "Requests",
+        "AsyncIO"
+      ],
+      "classes": 6,
+      "functions": 18,
+      "imports": [
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing",
+        "dotenv",
+        "PIL",
+        "PIL.ExifTags",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 266
+    },
+    {
+      "path": "/Users/steven/pythons/DEEP_CONTENT_ANALYZER_ULTIMATE.py",
+      "name": "DEEP_CONTENT_ANALYZER_ULTIMATE.py",
+      "size": 31570,
+      "lines": 865,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "ElevenLabs",
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 5,
+      "functions": 28,
+      "imports": [
+        "typing",
+        "dataclasses",
+        "pathlib",
+        "collections",
+        "openai",
+        "datetime"
+      ],
+      "docstring": false,
+      "score": 251
+    },
+    {
+      "path": "/Users/steven/GitHub/AvaTarArTs-Suite/scripts/ai_deep_analyzer.py",
+      "name": "ai_deep_analyzer.py",
+      "size": 18966,
+      "lines": 561,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "Streamlit"
+      ],
+      "classes": 7,
+      "functions": 18,
+      "imports": [
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "docstring": false,
+      "score": 241
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/ultra-deep-intelligence/ai-powered-deep-analyzer.py",
+      "name": "ai-powered-deep-analyzer.py",
+      "size": 28996,
+      "lines": 734,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "Streamlit"
+      ],
+      "classes": 6,
+      "functions": 23,
+      "imports": [
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "docstring": false,
+      "score": 236
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/ultra-deep-intelligence/ULTRA_DEEP_INTELLIGENCE_ORCHESTRATOR.py",
+      "name": "ULTRA_DEEP_INTELLIGENCE_ORCHESTRATOR.py",
+      "size": 24882,
+      "lines": 642,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Gemini",
+        "Groq",
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 6,
+      "functions": 16,
+      "imports": [
+        "pathlib",
+        "datetime",
+        "typing",
+        "collections",
+        "groq"
+      ],
+      "docstring": false,
+      "score": 232
+    },
+    {
+      "path": "/Users/steven/pythons/organize-files-intelligent.py",
+      "name": "organize-files-intelligent.py",
+      "size": 37975,
+      "lines": 1013,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "Streamlit"
+      ],
+      "classes": 4,
+      "functions": 40,
+      "imports": [
+        "collections",
+        "dataclasses",
+        "pathlib",
+        "typing"
+      ],
+      "docstring": true,
+      "score": 215
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/SCRIPTS/enhanced_intelligent_organization_system.py",
+      "name": "enhanced_intelligent_organization_system.py",
+      "size": 26653,
+      "lines": 781,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling",
+        "multi_threading"
+      ],
+      "apis": [
+        "HuggingFace",
+        "AsyncIO",
+        "SQLite"
+      ],
+      "classes": 5,
+      "functions": 10,
+      "imports": [
+        "collections",
+        "dataclasses",
+        "datetime",
+        "enum",
+        "pathlib",
+        "typing",
+        "agentic_workflows",
+        "ast_analyzer",
+        "automation_platform",
+        "vector_search",
+        "sklearn.cluster",
+        "sklearn.metrics.pairwise",
+        "transformers"
+      ],
+      "docstring": false,
+      "score": 205
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/SCRIPTS/docs_combined.py",
+      "name": "docs_combined.py",
+      "size": 20338,
+      "lines": 621,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling",
+        "multi_threading"
+      ],
+      "apis": [
+        "Streamlit",
+        "AsyncIO",
+        "Pandas"
+      ],
+      "classes": 3,
+      "functions": 25,
+      "imports": [
+        "abc",
+        "dataclasses",
+        "datetime",
+        "functools",
+        "pathlib",
+        "typing",
+        "pandas.errors"
+      ],
+      "docstring": false,
+      "score": 200
+    },
+    {
+      "path": "/Users/steven/pythons/intelligent-renamer-1.py",
+      "name": "intelligent-renamer-1.py",
+      "size": 40835,
+      "lines": 1017,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "ElevenLabs",
+        "Streamlit"
+      ],
+      "classes": 3,
+      "functions": 18,
+      "imports": [
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "docstring": false,
+      "score": 196
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/SCRIPTS/img_combined.py",
+      "name": "img_combined.py",
+      "size": 15283,
+      "lines": 479,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling",
+        "multi_threading"
+      ],
+      "apis": [
+        "PIL/Pillow",
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 3,
+      "functions": 22,
+      "imports": [
+        "abc",
+        "dataclasses",
+        "datetime",
+        "functools",
+        "pathlib",
+        "typing",
+        "PIL"
+      ],
+      "docstring": false,
+      "score": 194
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/media-intelligence/image_intelligence_seo.py",
+      "name": "image_intelligence_seo.py",
+      "size": 27510,
+      "lines": 771,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "PIL/Pillow",
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 14,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "PIL",
+        "PIL.ExifTags",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 173
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/unified_intelligence/core/image_engine.py",
+      "name": "image_engine.py",
+      "size": 27510,
+      "lines": 771,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "PIL/Pillow",
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 14,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "PIL",
+        "PIL.ExifTags",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 173
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/unified_intelligence/media_intelligence/image_intelligence_seo.py",
+      "name": "image_intelligence_seo.py",
+      "size": 27510,
+      "lines": 771,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "PIL/Pillow",
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 14,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "PIL",
+        "PIL.ExifTags",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 173
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/content_intelligence/core/image_engine.py",
+      "name": "image_engine.py",
+      "size": 27510,
+      "lines": 771,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "PIL/Pillow",
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 14,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "PIL",
+        "PIL.ExifTags",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 173
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/advanced-new.py",
+      "name": "advanced-new.py",
+      "size": 41817,
+      "lines": 1058,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "ElevenLabs",
+        "Requests",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 13,
+      "imports": [
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing",
+        "anthropic",
+        "dotenv"
+      ],
+      "docstring": false,
+      "score": 166
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/SCRIPTS/vids.py",
+      "name": "vids.py",
+      "size": 15141,
+      "lines": 520,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling",
+        "multi_threading"
+      ],
+      "apis": [
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 3,
+      "functions": 23,
+      "imports": [
+        "abc",
+        "dataclasses",
+        "datetime",
+        "functools",
+        "pathlib",
+        "typing",
+        "mutagen.easymp4",
+        "mutagen.mp4"
+      ],
+      "docstring": false,
+      "score": 166
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/unified_intelligence/content_pipeline/advanced_content_pipeline.py",
+      "name": "advanced_content_pipeline.py",
+      "size": 41817,
+      "lines": 1058,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "ElevenLabs",
+        "Requests",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 13,
+      "imports": [
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing",
+        "anthropic",
+        "dotenv"
+      ],
+      "docstring": false,
+      "score": 166
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/SCRIPTS/audio_combined.py",
+      "name": "audio_combined.py",
+      "size": 15013,
+      "lines": 481,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling",
+        "multi_threading"
+      ],
+      "apis": [
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 3,
+      "functions": 22,
+      "imports": [
+        "abc",
+        "dataclasses",
+        "datetime",
+        "functools",
+        "pathlib",
+        "typing",
+        "mutagen",
+        "mutagen.easyid3",
+        "mutagen.mp3"
+      ],
+      "docstring": false,
+      "score": 164
+    },
+    {
+      "path": "/Users/steven/GitHub/AvaTarArTs-Suite/scripts/content_aware_organizer.py",
+      "name": "content_aware_organizer.py",
+      "size": 23091,
+      "lines": 617,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "Streamlit"
+      ],
+      "classes": 5,
+      "functions": 19,
+      "imports": [
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "docstring": false,
+      "score": 163
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/src/analyzers/python_organizer.py",
+      "name": "python_organizer.py",
+      "size": 21329,
+      "lines": 532,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "Streamlit"
+      ],
+      "classes": 5,
+      "functions": 18,
+      "imports": [
+        "dataclasses",
+        "pathlib",
+        "typing",
+        "collections"
+      ],
+      "docstring": false,
+      "score": 161
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/media-intelligence/audio_intelligence_seo.py",
+      "name": "audio_intelligence_seo.py",
+      "size": 32023,
+      "lines": 890,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 16,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "mutagen.easyid3",
+        "mutagen.mp3",
+        "mutagen.flac",
+        "mutagen.wave",
+        "mutagen.oggvorbis",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 157
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/unified_intelligence/core/audio_engine.py",
+      "name": "audio_engine.py",
+      "size": 32023,
+      "lines": 890,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 16,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "mutagen.easyid3",
+        "mutagen.mp3",
+        "mutagen.flac",
+        "mutagen.wave",
+        "mutagen.oggvorbis",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 157
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/unified_intelligence/media_intelligence/audio_intelligence_seo.py",
+      "name": "audio_intelligence_seo.py",
+      "size": 32023,
+      "lines": 890,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 16,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "mutagen.easyid3",
+        "mutagen.mp3",
+        "mutagen.flac",
+        "mutagen.wave",
+        "mutagen.oggvorbis",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 157
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/content_intelligence/core/audio_engine.py",
+      "name": "audio_engine.py",
+      "size": 32023,
+      "lines": 890,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 16,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "mutagen.easyid3",
+        "mutagen.mp3",
+        "mutagen.flac",
+        "mutagen.wave",
+        "mutagen.oggvorbis",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 157
+    },
+    {
+      "path": "/Users/steven/pythons/validate-json-reader.py",
+      "name": "validate-json-reader.py",
+      "size": 28007,
+      "lines": 753,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "f-strings",
+        "logging",
+        "argparse",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Groq",
+        "ElevenLabs"
+      ],
+      "classes": 2,
+      "functions": 16,
+      "imports": [
+        "pathlib",
+        "typing"
+      ],
+      "docstring": false,
+      "score": 157
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/src/analyzers/pydoc_generator.py",
+      "name": "pydoc_generator.py",
+      "size": 25614,
+      "lines": 660,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "Streamlit"
+      ],
+      "classes": 4,
+      "functions": 19,
+      "imports": [
+        "dataclasses",
+        "pathlib",
+        "typing",
+        "collections"
+      ],
+      "docstring": false,
+      "score": 153
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/specialized_systems/ultra_content/ultra_content_engine.py",
+      "name": "ultra_content_engine.py",
+      "size": 24386,
+      "lines": 702,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 14,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "collections",
+        "dotenv",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 153
+    },
+    {
+      "path": "/Users/steven/pythons/rename-files-utility.py",
+      "name": "rename-files-utility.py",
+      "size": 29311,
+      "lines": 854,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "PIL/Pillow",
+        "Streamlit"
+      ],
+      "classes": 1,
+      "functions": 21,
+      "imports": [
+        "pathlib",
+        "typing",
+        "collections",
+        "datetime",
+        "pathlib",
+        "dotenv",
+        "env_d_loader",
+        "PIL"
+      ],
+      "docstring": false,
+      "score": 152
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/intelligent_code_orchestrator.py",
+      "name": "intelligent_code_orchestrator.py",
+      "size": 18628,
+      "lines": 468,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "Streamlit",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 9,
+      "imports": [
+        "typing",
+        "pathlib",
+        "datetime",
+        "dotenv",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 148
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/advanced_content_pipeline.py",
+      "name": "advanced_content_pipeline.py",
+      "size": 13688,
+      "lines": 364,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "ElevenLabs",
+        "Requests",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 6,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "dotenv",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 147
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/content_pipeline/advanced_content_pipeline.py",
+      "name": "advanced_content_pipeline.py",
+      "size": 13687,
+      "lines": 363,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "ElevenLabs",
+        "Requests",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 6,
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "dotenv",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 147
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/src/analyzers/python_codebase_organizer.py",
+      "name": "python_codebase_organizer.py",
+      "size": 21750,
+      "lines": 548,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "HuggingFace",
+        "Streamlit"
+      ],
+      "classes": 3,
+      "functions": 17,
+      "imports": [
+        "dataclasses",
+        "pathlib",
+        "typing",
+        "collections"
+      ],
+      "docstring": false,
+      "score": 144
+    },
+    {
+      "path": "/Users/steven/pythons/research-assistant.py",
+      "name": "research-assistant.py",
+      "size": 12697,
+      "lines": 402,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Streamlit",
+        "Requests"
+      ],
+      "classes": 1,
+      "functions": 12,
+      "imports": [
+        "datetime",
+        "pathlib",
+        "typing",
+        "anthropic"
+      ],
+      "docstring": false,
+      "score": 139
+    },
+    {
+      "path": "/Users/steven/GitHub/AvaTarArTs-Suite/devtools/periodic_quality_monitor.py",
+      "name": "periodic_quality_monitor.py",
+      "size": 26004,
+      "lines": 605,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling",
+        "multi_threading"
+      ],
+      "apis": [],
+      "classes": 3,
+      "functions": 15,
+      "imports": [
+        "pathlib",
+        "datetime",
+        "typing",
+        "dataclasses",
+        "email.mime.text",
+        "email.mime.multipart"
+      ],
+      "docstring": false,
+      "score": 135
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/SCRIPTS/content_management_system.py",
+      "name": "content_management_system.py",
+      "size": 20560,
+      "lines": 534,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "SQLite"
+      ],
+      "classes": 3,
+      "functions": 17,
+      "imports": [
+        "typing",
+        "dataclasses",
+        "pathlib"
+      ],
+      "docstring": false,
+      "score": 134
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/src/analyzers/codex_analyzer.py",
+      "name": "codex_analyzer.py",
+      "size": 25060,
+      "lines": 635,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [],
+      "classes": 2,
+      "functions": 29,
+      "imports": [
+        "pathlib",
+        "typing",
+        "dataclasses",
+        "collections"
+      ],
+      "docstring": false,
+      "score": 133
+    },
+    {
+      "path": "/Users/steven/GitHub/AvaTarArTs-Suite/core/shared_libs/comprehensive_test_generator.py",
+      "name": "comprehensive_test_generator.py",
+      "size": 35484,
+      "lines": 1070,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling",
+        "multi_threading",
+        "multi_processing"
+      ],
+      "apis": [
+        "Streamlit"
+      ],
+      "classes": 2,
+      "functions": 13,
+      "imports": [
+        "pathlib",
+        "typing",
+        "dataclasses",
+        "datetime"
+      ],
+      "docstring": false,
+      "score": 131
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/deep-research-tool/src/analyzers/python_syntax_fixer.py",
+      "name": "python_syntax_fixer.py",
+      "size": 16958,
+      "lines": 460,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "Streamlit"
+      ],
+      "classes": 3,
+      "functions": 17,
+      "imports": [
+        "dataclasses",
+        "pathlib",
+        "typing",
+        "collections"
+      ],
+      "docstring": false,
+      "score": 129
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/SCRIPTS/heavenly_hands_call_center.py",
+      "name": "heavenly_hands_call_center.py",
+      "size": 19435,
+      "lines": 480,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "AsyncIO"
+      ],
+      "classes": 3,
+      "functions": 13,
+      "imports": [
+        "datetime",
+        "typing",
+        "dataclasses",
+        "dotenv"
+      ],
+      "docstring": false,
+      "score": 126
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/ultra-deep-intelligence/ULTIMATE_ORCHESTRATOR.py",
+      "name": "ULTIMATE_ORCHESTRATOR.py",
+      "size": 16455,
+      "lines": 401,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "AsyncIO"
+      ],
+      "classes": 4,
+      "functions": 9,
+      "imports": [
+        "pathlib",
+        "datetime",
+        "typing",
+        "collections",
+        "ULTRA_DEEP_INTELLIGENCE_ORCHESTRATOR",
+        "core.deep_researcher"
+      ],
+      "docstring": false,
+      "score": 123
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/specialized_systems/ultra_image/ultra_image_engine.py",
+      "name": "ultra_image_engine.py",
+      "size": 12982,
+      "lines": 362,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "PIL/Pillow",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 9,
+      "imports": [
+        "pathlib",
+        "typing",
+        "datetime",
+        "dotenv",
+        "PIL",
+        "PIL.ExifTags"
+      ],
+      "docstring": false,
+      "score": 123
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/specialized_systems/ultra_audio/ultra_audio_engine.py",
+      "name": "ultra_audio_engine.py",
+      "size": 10823,
+      "lines": 303,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "ElevenLabs",
+        "AsyncIO"
+      ],
+      "classes": 1,
+      "functions": 6,
+      "imports": [
+        "pathlib",
+        "typing",
+        "datetime",
+        "dotenv",
+        "mutagen.easyid3"
+      ],
+      "docstring": false,
+      "score": 122
+    },
+    {
+      "path": "/Users/steven/pythons/system-monitor.py",
+      "name": "system-monitor.py",
+      "size": 8511,
+      "lines": 248,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "decorators",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "ElevenLabs",
+        "Requests"
+      ],
+      "classes": 1,
+      "functions": 11,
+      "imports": [
+        "pathlib",
+        "datetime",
+        "typing"
+      ],
+      "docstring": false,
+      "score": 122
+    },
+    {
+      "path": "/Users/steven/workspace/archive/system/advanced-systems/SCRIPTS/master_revenue_dashboard.py",
+      "name": "master_revenue_dashboard.py",
+      "size": 15559,
+      "lines": 420,
+      "patterns": [
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "f-strings",
+        "logging",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "SQLite"
+      ],
+      "classes": 3,
+      "functions": 13,
+      "imports": [
+        "typing",
+        "dataclasses",
+        "pathlib"
+      ],
+      "docstring": false,
+      "score": 121
+    },
+    {
+      "path": "/Users/steven/GitHub/AvaTarArTs-Suite/scripts/deep_content_renamer.py",
+      "name": "deep_content_renamer.py",
+      "size": 21615,
+      "lines": 559,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "argparse",
+        "pathlib",
+        "error_handling"
+      ],
+      "apis": [
+        "ElevenLabs",
+        "Streamlit"
+      ],
+      "classes": 3,
+      "functions": 10,
+      "imports": [
+        "pathlib",
+        "datetime",
+        "collections",
+        "typing"
+      ],
+      "docstring": false,
+      "score": 120
+    },
+    {
+      "path": "/Users/steven/GitHub/AvaTarArTs-Suite/scripts/intelligent_dedup.py",
+      "name": "intelligent_dedup.py",
+      "size": 21841,
+      "lines": 563,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "list_comprehension",
+        "f-strings",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "Streamlit"
+      ],
+      "classes": 3,
+      "functions": 12,
+      "imports": [
+        "pathlib",
+        "datetime",
+        "collections",
+        "typing"
+      ],
+      "docstring": false,
+      "score": 119
+    },
+    {
+      "path": "/Users/steven/pythons/ai-docs-generator.py",
+      "name": "ai-docs-generator.py",
+      "size": 10463,
+      "lines": 299,
+      "patterns": [
+        "type_hints",
+        "context_managers",
+        "f-strings",
+        "pathlib",
+        "json_handling",
+        "error_handling"
+      ],
+      "apis": [
+        "OpenAI",
+        "Anthropic",
+        "Streamlit"
+      ],
+      "classes": 1,
+      "functions": 11,
+      "imports": [
+        "pathlib",
+        "dotenv",
+        "openai",
+        "collections"
+      ],
+      "docstring": false,
+      "score": 117
+    },
+    {
+      "path": "/Users/steven/GitHub/AvaTarArTs-Suite/devtools/advanced_quality_enhancer.py",
+      "name": "advanced_quality_enhancer.py",
+      "size": 34424,
+      "lines": 934,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling",
+        "multi_threading"
+      ],
+      "apis": [
+        "Streamlit",
+        "Requests",
+        "AsyncIO"
+      ],
+      "classes": 0,
+      "functions": 0,
+      "imports": [],
+      "docstring": false,
+      "score": 115
+    },
+    {
+      "path": "/Users/steven/GitHub/AvaTarArTs-Suite/devtools/content_aware_improver.py",
+      "name": "content_aware_improver.py",
+      "size": 44945,
+      "lines": 1226,
+      "patterns": [
+        "async/await",
+        "type_hints",
+        "dataclass",
+        "context_managers",
+        "decorators",
+        "list_comprehension",
+        "f-strings",
+        "logging",
+        "argparse",
+        "pathlib",
+        "json_handling",
+        "error_handling",
+        "multi_threading"
+      ],
+      "apis": [
+        "Streamlit",
+        "Requests",
+        "AsyncIO"
+      ],
+      "classes": 0,
+      "functions": 0,
+      "imports": [],
+      "docstring": false,
+      "score": 115
+    }
+  ],
+  "patterns": {
+    "async/await": 101,
+    "type_hints": 214,
+    "context_managers": 259,
+    "list_comprehension": 151,
+    "f-strings": 266,
+    "logging": 189,
+    "pathlib": 205,
+    "json_handling": 99,
+    "error_handling": 231,
+    "decorators": 141,
+    "dataclass": 107,
+    "multi_threading": 14,
+    "argparse": 61,
+    "multi_processing": 5
+  },
+  "apis": {
+    "OpenAI": 40,
+    "Anthropic": 25,
+    "Gemini": 24,
+    "Streamlit": 116,
+    "AsyncIO": 101,
+    "ElevenLabs": 14,
+    "Requests": 24,
+    "PIL/Pillow": 21,
+    "SQLite": 9,
+    "Pandas": 10,
+    "HuggingFace": 3,
+    "Groq": 2,
+    "FastAPI": 1
+  },
+  "best_practices": {
+    "logging": 189,
+    "type_hints": 214,
+    "cli_interface": 61,
+    "documented": 16
+  },
+  "categories": {
+    "class_based": 136,
+    "async": 0,
+    "multi_api": 42
+  }
+}

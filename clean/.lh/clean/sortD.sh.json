@@ -1,0 +1,18 @@
+{
+    "sourceFile": "clean/sortD.sh",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1734070147347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1734070147347,
+            "name": "Commit-0",
+            "content": "#!/bin/bash\n\n# Function to run a script\nrun_script() {\n    local script_path=$1\n    echo \"Running $script_path\"\n    python3 \"$script_path\"\n    if [ $? -ne 0 ]; then\n        echo \"Failed to run $script_path\"\n        exit 1\n    else\n        echo \"Successfully ran $script_path\"\n    fi\n}\n   \n# List of scripts to run\nscripts=(\n    \"/Users/steven/clean/img.py\"\n    \"/Users/steven/clean/audio.py\"\n    \"/Users/steven/clean/docs.py\"\n    \"/Users/steven/clean/other.py\"\n    \n    \"/Users/steven/clean/vids.py\" \n)\n\n# Run each script in the list\nfor script in \"${scripts[@]}\"; do\n    run_script \"$script\"\ndone\n\n"
+        }
+    ]
+}

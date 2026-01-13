@@ -1,0 +1,90 @@
+import os
+# Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
+from pathlib import Path as PathLib
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            if line.startswith("export "):
+                                line = line[7:]
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+    pass
+
+import random
+
+from elevenlabs import generate, save
+from utils import settings
+
+# Constants
+CONSTANT_2500 = 2500
+
+
+voices = [
+    "Adam",
+    "Antoni",
+    "Arnold",
+    "Bella",
+    "Domi",
+    "Elli",
+    "Josh",
+    "Rachel",
+    "Sam",
+]
+
+
+class elevenlabs:
+    def __init__(self):
+        """__init__ function."""
+
+        self.max_chars = CONSTANT_2500
+        self.voices = voices
+
+        """run function."""
+
+    def run(self, text, filepath, random_voice: bool = False):
+        if random_voice:
+            voice = self.randomvoice()
+        else:
+            voice = str(
+                settings.config["settings"]["tts"]["elevenlabs_voice_name"]
+            ).capitalize()
+
+        if settings.config["settings"]["tts"]["elevenlabs_api_key"]:
+            api_key = settings.config["settings"]["tts"]["elevenlabs_api_key"]
+        else:
+            raise ValueError(
+                "You didn't set an Elevenlabs API key! Please set the config variable ELEVENLABS_API_KEY to a valid API key."
+            )
+
+        audio = generate(
+            api_key=api_key, text=text, voice=voice, model="eleven_multilingual_v1"
+        )
+        save(audio=audio, filename=filepath)
+        """randomvoice function."""
+
+    def randomvoice(self):
+        return random.choice(self.voices)

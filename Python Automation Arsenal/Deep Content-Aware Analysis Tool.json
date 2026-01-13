@@ -1,0 +1,4996 @@
+{
+  "analyzed": 100,
+  "categorized": {
+    "Deep": [
+      {
+        "filename": "DEEP-CONTENT-ANALYSIS.py",
+        "path": "/Users/steven/Documents/pythons/DEEP-CONTENT-ANALYSIS.py",
+        "category": "Deep",
+        "lines": 271,
+        "imports": [
+          "import re",
+          "import ast",
+          "from pathlib import Path",
+          "import csv",
+          "import json",
+          "from collections import defaultdict"
+        ],
+        "docstring": "",
+        "size_kb": 9.5234375,
+        "title": "Deep Content-Aware Analysis Tool",
+        "purpose": "Analyzes Python files to extract meaningful insights about their content and structure.",
+        "key_features": [
+          "Extracts docstrings and summarizes file purpose",
+          "Analyzes classes, functions, and imports using AST",
+          "Detects API services and operations performed in the code"
+        ],
+        "use_case": "Ideal for developers wanting to understand legacy code or assess third-party libraries.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "AST parsing",
+          "Code analysis",
+          "Static code analysis"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Multi": [
+      {
+        "filename": "Multi-Modal.py",
+        "path": "/Users/steven/Documents/pythons/Multi-Modal.py",
+        "category": "Multi",
+        "lines": 616,
+        "imports": [
+          "import os",
+          "import logging",
+          "import time",
+          "import json",
+          "import subprocess",
+          "import hashlib",
+          "from pathlib import Path",
+          "from typing import Optional, Dict, Any, List",
+          "from dotenv import load_dotenv",
+          "from pathlib import Path as PathLib"
+        ],
+        "docstring": "",
+        "size_kb": 24.5576171875,
+        "title": "Ultimate Media Analysis Pipeline - Multi-API Edition",
+        "purpose": "A robust pipeline for analyzing large media files using multiple APIs.",
+        "key_features": [
+          "Supports large file processing (2GB+ MP4s)",
+          "Audio extraction from video files using ffmpeg",
+          "Integration with various AI services for media analysis"
+        ],
+        "use_case": "Ideal for developers needing to analyze audio and video content from large media files efficiently.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI",
+          "Google Generative AI",
+          "AssemblyAI",
+          "Deepgram"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Process_Batch_Renames": [
+      {
+        "filename": "PROCESS_BATCH_RENAMES.py",
+        "path": "/Users/steven/Documents/pythons/PROCESS_BATCH_RENAMES.py",
+        "category": "Process_Batch_Renames",
+        "lines": 187,
+        "imports": [
+          "import sys",
+          "import csv",
+          "import shutil",
+          "from pathlib import Path",
+          "from datetime import datetime"
+        ],
+        "docstring": "",
+        "size_kb": 5.6279296875,
+        "title": "Batch Rename Processor",
+        "purpose": "Efficiently processes batch CSVs to rename, move, or delete files based on specified actions.",
+        "key_features": [
+          "Processes multiple batch files at once",
+          "Supports renaming, moving to library, deleting, and keeping files",
+          "User confirmation before executing changes"
+        ],
+        "use_case": "Ideal for organizing large sets of files based on batch analysis results.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "File Management",
+          "Data Organization"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Psdimage": [
+      {
+        "filename": "PSDImage.py",
+        "path": "/Users/steven/Documents/pythons/PSDImage.py",
+        "category": "Psdimage",
+        "lines": 748,
+        "imports": [
+          "import logging",
+          "import os",
+          "from typing import Any, BinaryIO, Callable, Literal, Optional, Union",
+          "from typing import Self",
+          "from typing_extensions import Self",
+          "import numpy as np",
+          "from PIL.Image import Image as PILImage",
+          "from psd_tools.api import adjustments",
+          "from psd_tools.api.layers import (",
+          "from psd_tools.api.pil_io import get_pil_channels, get_pil_mode"
+        ],
+        "docstring": "\nPSD Image module.\n",
+        "size_kb": 22.919921875,
+        "title": "PSD Image Module for Python",
+        "purpose": "A module for creating and manipulating Photoshop PSD/PSB files in Python.",
+        "key_features": [
+          "Create new PSD documents with specified parameters",
+          "Load and manipulate existing PSD files",
+          "Support for various layer types and image adjustments"
+        ],
+        "use_case": "Ideal for developers needing to generate or edit PSD files programmatically for graphic design applications.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Image processing",
+          "Graphic design automation"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Standard": [
+      {
+        "filename": "STANDARD-ENV-LOADER.py",
+        "path": "/Users/steven/Documents/pythons/STANDARD-ENV-LOADER.py",
+        "category": "Standard",
+        "lines": 16,
+        "imports": [
+          "from pathlib import Path",
+          "from dotenv import load_dotenv",
+          "import os"
+        ],
+        "docstring": "",
+        "size_kb": 0.3369140625,
+        "title": "Standard Environment Loader for Python Scripts",
+        "purpose": "This script loads environment variables from all .env files in the user's ~/.env.d/ directory.",
+        "key_features": [
+          "Automatically loads multiple .env files",
+          "Utilizes pathlib for file path management",
+          "Integrates with python-dotenv for environment variable handling"
+        ],
+        "use_case": "Use this script at the beginning of your Python applications to manage configuration settings securely.",
+        "complexity": "Beginner",
+        "related_services": [
+          "python-dotenv",
+          "pathlib"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "_Refreshthread": [
+      {
+        "filename": "_RefreshThread.py",
+        "path": "/Users/steven/Documents/pythons/_RefreshThread.py",
+        "category": "_Refreshthread",
+        "lines": 411,
+        "imports": [
+          "from __future__ import annotations",
+          "import sys",
+          "from threading import Event, RLock, Thread",
+          "from types import TracebackType",
+          "from typing import IO, TYPE_CHECKING, Any, Callable, List, Optional, TextIO, Type, cast",
+          "from . import get_console",
+          "from .console import Console, ConsoleRenderable, Group, RenderableType, RenderHook",
+          "from .control import Control",
+          "from .file_proxy import FileProxy",
+          "from .jupyter import JupyterMixin"
+        ],
+        "docstring": "",
+        "size_kb": 14.99609375,
+        "title": "_RefreshThread: Live Display Updater",
+        "purpose": "This script manages a thread that refreshes a live display at specified intervals.",
+        "key_features": [
+          "Auto-updating live display of renderables",
+          "Configurable refresh rate",
+          "Supports console output redirection"
+        ],
+        "use_case": "Ideal for applications needing real-time updates, such as monitoring system metrics or displaying live data feeds.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Jupyter Notebooks",
+          "Real-time dashboards"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Adaptive": [
+      {
+        "filename": "adaptive-content-awareness.py",
+        "path": "/Users/steven/Documents/pythons/adaptive-content-awareness.py",
+        "category": "Adaptive",
+        "lines": 726,
+        "imports": [
+          "import os",
+          "import json",
+          "import re",
+          "from pathlib import Path",
+          "from collections import defaultdict, Counter",
+          "from datetime import datetime",
+          "from typing import Dict, List, Any, Optional, Tuple",
+          "import mimetypes"
+        ],
+        "docstring": "",
+        "size_kb": 25.5439453125,
+        "title": "Adaptive Content-Aware Analysis System",
+        "purpose": "Dynamically adjusts analysis approach based on file content and context.",
+        "key_features": [
+          "Detects programming languages and frameworks",
+          "Identifies content purpose and structure",
+          "Utilizes regex patterns for accurate detection"
+        ],
+        "use_case": "Ideal for automated content analysis in software development environments.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Code analysis tools",
+          "Static analysis frameworks"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Advanced": [
+      {
+        "filename": "advanced-content-pipeline.py",
+        "path": "/Users/steven/Documents/pythons/advanced-content-pipeline.py",
+        "category": "Advanced",
+        "lines": 364,
+        "imports": [
+          "import os",
+          "import json",
+          "import logging",
+          "import asyncio",
+          "from typing import Dict, List, Optional, Any",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "from dotenv import load_dotenv",
+          "import openai",
+          "from anthropic import Anthropic"
+        ],
+        "docstring": "",
+        "size_kb": 13.384765625,
+        "title": "Advanced Content Generation Pipeline",
+        "purpose": "An intelligent system for multi-modal content creation using various AI APIs.",
+        "key_features": [
+          "Multi-LLM routing based on content type",
+          "Integrated image generation and editing",
+          "AI-powered audio and music creation",
+          "Social media automation and posting",
+          "Performance analytics and optimization"
+        ],
+        "use_case": "Ideal for content creators looking to automate and enhance their multimedia production processes.",
+        "complexity": "Advanced",
+        "related_services": [
+          "OpenAI",
+          "Anthropic",
+          "Google Generative AI",
+          "AWS Services"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Aggressive": [
+      {
+        "filename": "aggressive-filename-cleaner.py",
+        "path": "/Users/steven/Documents/pythons/aggressive-filename-cleaner.py",
+        "category": "Aggressive",
+        "lines": 331,
+        "imports": [
+          "import os",
+          "import re",
+          "import csv",
+          "from pathlib import Path",
+          "from datetime import datetime"
+        ],
+        "docstring": "",
+        "size_kb": 10.22265625,
+        "title": "Aggressive Filename Cleaner",
+        "purpose": "This script cleans up filenames by removing duplicates and unnecessary patterns.",
+        "key_features": [
+          "Removes duplicate numbers and redundant suffixes",
+          "Cleans generic words and patterns from filenames",
+          "Supports customizable junk patterns and words"
+        ],
+        "use_case": "Use this script to tidy up a directory of Python files with inconsistent naming conventions.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "File Management",
+          "Data Organization"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Ai": [
+      {
+        "filename": "ai-conversation-exports.py",
+        "path": "/Users/steven/Documents/pythons/ai-conversation-exports.py",
+        "category": "Ai",
+        "lines": 188,
+        "imports": [
+          "import os",
+          "import shutil",
+          "from pathlib import Path",
+          "import re",
+          "from datetime import datetime"
+        ],
+        "docstring": "",
+        "size_kb": 7.421875,
+        "title": "AI Conversation File Organization Script",
+        "purpose": "This script organizes AI export files into a structured directory format.",
+        "key_features": [
+          "Creates organized directory structure for AI tools",
+          "Moves essential files to designated folders",
+          "Archives obsolete or duplicate files"
+        ],
+        "use_case": "Use this script to tidy up your AI export files after a project to ensure easy access and management.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "File Management",
+          "Data Archiving"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "ai-stability-code.py",
+        "path": "/Users/steven/Documents/pythons/ai-stability-code.py",
+        "category": "Ai",
+        "lines": 982,
+        "imports": [
+          "import logging",
+          "import os",
+          "import json",
+          "import re",
+          "from pathlib import Path",
+          "from collections import defaultdict, Counter",
+          "from datetime import datetime",
+          "from typing import Dict, List, Any, Optional, Tuple",
+          "from dataclasses import dataclass, asdict"
+        ],
+        "docstring": "",
+        "size_kb": 37.73828125,
+        "title": "Intelligent Code Analyzer for Adaptive Insights",
+        "purpose": "Analyzes code dynamically to provide context-aware insights.",
+        "key_features": [
+          "Detects programming language and frameworks",
+          "Generates detailed analysis reports",
+          "Identifies security, quality, and performance issues"
+        ],
+        "use_case": "Ideal for developers looking to improve code quality and maintainability in large projects.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Code Quality Analysis Tools",
+          "Static Code Analysis Services"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "AI": [
+      {
+        "filename": "ai-deep-analyzer.py",
+        "path": "/Users/steven/Documents/pythons/ai-deep-analyzer.py",
+        "category": "AI",
+        "lines": 575,
+        "imports": [
+          "import logging",
+          "import ast",
+          "import difflib",
+          "import hashlib",
+          "import json",
+          "import os",
+          "import sys",
+          "from collections import defaultdict",
+          "from datetime import datetime",
+          "from pathlib import Path"
+        ],
+        "docstring": "",
+        "size_kb": 19.390625,
+        "description": "AI-powered deep intelligent content-aware analyzer for advanced code analysis.",
+        "features": [
+          "Deep AST-based code understanding",
+          "AI-powered semantic analysis (OpenAI/Gemini/Claude)",
+          "Vector embeddings for similarity detection",
+          "Architectural pattern recognition",
+          "Confidence scoring system",
+          "Intelligent categorization & tagging",
+          "Developer-friendly with artistic flair"
+        ],
+        "constants": {
+          "CONSTANT_600": 600,
+          "CONSTANT_2000": 2000
+        },
+        "classes": [
+          {
+            "name": "Colors",
+            "description": "Defines color codes for terminal output."
+          },
+          {
+            "name": "Emojis",
+            "description": "Defines emoji constants for use in output."
+          },
+          {
+            "name": "AICodeAnalyzer",
+            "description": "Handles AI-powered semantic code analysis."
+          }
+        ],
+        "methods": [
+          {
+            "name": "analyze_with_ai",
+            "description": "Performs deep AI analysis of the provided code."
+          }
+        ],
+        "api_keys": [
+          "OPENAI_API_KEY",
+          "GEMINI_API_KEY",
+          "ANTHROPIC_API_KEY",
+          "DEEPSEEK_API_KEY"
+        ],
+        "logging": {
+          "logger": "Configured logger for the module."
+        },
+        "emojis": [
+          "\ud83e\udde0",
+          "\u2728",
+          "\ud83d\ude80",
+          "\ud83d\udd25",
+          "\ud83d\udd2c",
+          "\ud83e\udd16",
+          "\ud83c\udfaf",
+          "\ud83d\udcca",
+          "\ud83d\udca1",
+          "\ud83e\ude84",
+          "\u2705",
+          "\u26a0\ufe0f"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "ai-docs-generator.py",
+        "path": "/Users/steven/Documents/pythons/ai-docs-generator.py",
+        "category": "AI",
+        "lines": 300,
+        "imports": [
+          "import os",
+          "import sys",
+          "from pathlib import Path",
+          "from dotenv import load_dotenv",
+          "import anthropic",
+          "from openai import OpenAI",
+          "import json",
+          "from collections import defaultdict"
+        ],
+        "docstring": "",
+        "size_kb": 10.2177734375,
+        "description": {
+          "script_purpose": "AI-Powered Documentation Generator that uses OpenAI GPT-4 to analyze and document Python scripts.",
+          "key_classes": [
+            {
+              "class_name": "IntelligentDocGenerator",
+              "description": "Generates intelligent documentation using AI analysis.",
+              "methods": [
+                {
+                  "method_name": "__init__",
+                  "description": "Initializes OpenAI and Anthropic clients with API keys."
+                },
+                {
+                  "method_name": "analyze_script_with_ai",
+                  "description": "Analyzes a Python script to extract its purpose, features, and other metadata using AI."
+                },
+                {
+                  "method_name": "_fallback_analysis",
+                  "description": "Provides a basic analysis if AI analysis fails."
+                }
+              ]
+            }
+          ],
+          "dependencies": [
+            "os",
+            "sys",
+            "pathlib",
+            "dotenv",
+            "anthropic",
+            "openai",
+            "json",
+            "collections"
+          ],
+          "complexity_level": "Intermediate",
+          "use_cases": [
+            "Generating documentation for Python scripts automatically.",
+            "Assisting developers in understanding existing codebases."
+          ],
+          "tags": [
+            "documentation",
+            "AI",
+            "automation",
+            "Python"
+          ]
+        },
+        "ai_analyzed": true
+      }
+    ],
+    "Album": [
+      {
+        "filename": "album-sorting.py",
+        "path": "/Users/steven/Documents/pythons/album-sorting.py",
+        "category": "Album",
+        "lines": 134,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import shutil",
+          "import argparse",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 4.8779296875,
+        "title": "Album Sorting Script for Media Files",
+        "purpose": "Organizes media files into structured directories based on their extensions.",
+        "key_features": [
+          "Automatically creates folders for each media base name",
+          "Moves files to their respective directories if they exist",
+          "Supports dry run mode for safe execution"
+        ],
+        "use_case": "Ideal for organizing large collections of media files after downloading or capturing them.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "File Management",
+          "Media Organization"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Alchemy": [
+      {
+        "filename": "alchemy-quiz.py",
+        "path": "/Users/steven/Documents/pythons/alchemy-quiz.py",
+        "category": "Alchemy",
+        "lines": 162,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import sys",
+          "from dotenv import load_dotenv",
+          "from pydub import AudioSegment",
+          "import requests",
+          "import csv",
+          "from pathlib import Path as PathLib",
+          "from dotenv import load_dotenv"
+        ],
+        "docstring": "",
+        "size_kb": 4.9462890625,
+        "title": "Alchemy Quiz MP3 Generator",
+        "purpose": "Automatically generates MP3 files from quiz data using OpenAI's TTS API.",
+        "key_features": [
+          "Loads API keys from environment files",
+          "Processes CSV files to extract quiz questions and answers",
+          "Generates speech audio files in MP3 format"
+        ],
+        "use_case": "Ideal for educators looking to create audio quizzes for interactive learning.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI TTS API",
+          "Pydub for audio processing"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Alchemyapi": [
+      {
+        "filename": "alchemyapi-audio-demo-generator.py",
+        "path": "/Users/steven/Documents/pythons/alchemyapi-audio-demo-generator.py",
+        "category": "Alchemyapi",
+        "lines": 553,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import sys",
+          "import json",
+          "import random",
+          "import math",
+          "from datetime import datetime",
+          "from pydub import AudioSegment",
+          "from pydub.generators import Sine, WhiteNoise, Square, Sawtooth",
+          "from pydub.effects import ("
+        ],
+        "docstring": "",
+        "size_kb": 22.29296875,
+        "title": "AlchemyAPI Advanced Audio Demo Generator",
+        "purpose": "Generates complex audio patterns with emotional characteristics for demos.",
+        "key_features": [
+          "Creates MP3s with various emotional profiles",
+          "Utilizes advanced audio generation techniques",
+          "Supports multiple audio effects and modifications"
+        ],
+        "use_case": "Ideal for creating soundtracks for presentations or multimedia projects.",
+        "complexity": "Advanced",
+        "related_services": [
+          "Audio Processing",
+          "Sound Design"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Analyze": [
+      {
+        "filename": "analyze-code-complexity.py",
+        "path": "/Users/steven/Documents/pythons/analyze-code-complexity.py",
+        "category": "Analyze",
+        "lines": 521,
+        "imports": [
+          "import os",
+          "import sys",
+          "import ast",
+          "import csv",
+          "import json",
+          "import subprocess",
+          "import platform",
+          "import datetime",
+          "import networkx as nx",
+          "import matplotlib.pyplot as plt"
+        ],
+        "docstring": "",
+        "size_kb": 17.8984375,
+        "title": "Advanced Python Code Complexity Analyzer",
+        "purpose": "Analyzes Python code complexity and metrics for better maintainability.",
+        "key_features": [
+          "AST-based analysis for code structure",
+          "Integration with complexity and linting tools",
+          "Path relationship analysis between files"
+        ],
+        "use_case": "Ideal for developers looking to improve code quality and identify potential issues in large Python projects.",
+        "complexity": "Advanced",
+        "related_services": [
+          "Code quality assessment tools",
+          "Static analysis services"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-file-migration.py",
+        "path": "/Users/steven/Documents/pythons/analyze-file-migration.py",
+        "category": "Analyze",
+        "lines": 224,
+        "imports": [
+          "import os",
+          "from pathlib import Path",
+          "from collections import defaultdict"
+        ],
+        "docstring": "",
+        "size_kb": 7.9072265625,
+        "title": "Directory Structure Migration Analyzer",
+        "purpose": "Analyzes and categorizes directory structures for migration planning.",
+        "key_features": [
+          "Categorizes directories and files based on naming patterns",
+          "Generates a migration plan for identified categories",
+          "Logs detailed analysis and migration information"
+        ],
+        "use_case": "Useful for organizing and migrating files in a structured manner when transitioning to a new system.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "File Management",
+          "Data Migration"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-file-versions.py",
+        "path": "/Users/steven/Documents/pythons/analyze-file-versions.py",
+        "category": "Analyze",
+        "lines": 237,
+        "imports": [
+          "import os",
+          "import re",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "from collections import defaultdict",
+          "import json"
+        ],
+        "docstring": "",
+        "size_kb": 7.5712890625,
+        "title": "Script Version Analyzer",
+        "purpose": "This script identifies and analyzes versioned Python scripts to determine the best version to keep.",
+        "key_features": [
+          "Identifies versioned scripts using regex patterns",
+          "Scores versions based on size, recency, and line count",
+          "Filters and groups scripts with multiple versions"
+        ],
+        "use_case": "Use this script to clean up your Python project directory by retaining only the most relevant script versions.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "File Management",
+          "Version Control"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-files-comprehensive.py",
+        "path": "/Users/steven/Documents/pythons/analyze-files-comprehensive.py",
+        "category": "Analyze",
+        "lines": 213,
+        "imports": [
+          "import subprocess",
+          "import sys",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "import json"
+        ],
+        "docstring": "",
+        "size_kb": 6.896484375,
+        "title": "Comprehensive File Analyzer Tool",
+        "purpose": "Analyzes codebases using multiple production tools and AI models for quality assessment.",
+        "key_features": [
+          "Runs 14 production tools for code analysis",
+          "Integrates 8 AI models for intelligent categorization",
+          "Provides detailed output and error reporting"
+        ],
+        "use_case": "Ideal for developers looking to assess and improve the quality of their codebase before deployment.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Code Quality Assessment",
+          "Static Code Analysis"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-folder-reader.py",
+        "path": "/Users/steven/Documents/pythons/analyze-folder-reader.py",
+        "category": "Analyze",
+        "lines": 474,
+        "imports": [
+          "from __future__ import annotations",
+          "import argparse",
+          "import ast",
+          "import csv",
+          "import html",
+          "import json",
+          "import os",
+          "import re",
+          "import sys",
+          "from dataclasses import asdict, dataclass, field"
+        ],
+        "docstring": "",
+        "size_kb": 14.6474609375,
+        "title": "Python Repository Document Organizer",
+        "purpose": "A CLI tool to audit and document Python repositories efficiently.",
+        "key_features": [
+          "Audits Python code using AST for module/function summaries",
+          "Generates Markdown and CSV outputs for documentation",
+          "Optional OpenAI integration for enhanced categorization"
+        ],
+        "use_case": "Ideal for developers looking to analyze and document their Python projects.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI",
+          "Markdown",
+          "CSV"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-json-writer.py",
+        "path": "/Users/steven/Documents/pythons/analyze-json-writer.py",
+        "category": "Analyze",
+        "lines": 203,
+        "imports": [
+          "import os",
+          "import json",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "import subprocess",
+          "import sys"
+        ],
+        "docstring": "",
+        "size_kb": 6.5673828125,
+        "title": "Document Cleanup Orchestrator",
+        "purpose": "Automates and coordinates cleanup operations in the Documents folder.",
+        "key_features": [
+          "Runs comprehensive analysis of documents",
+          "Performs Python-specific and general duplicate cleanup",
+          "Generates a summary of cleanup operations"
+        ],
+        "use_case": "Ideal for users needing to manage and clean up their Documents folder efficiently.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "File Management",
+          "Data Organization"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-metadata.py",
+        "path": "/Users/steven/Documents/pythons/analyze-metadata.py",
+        "category": "Analyze",
+        "lines": 202,
+        "imports": [
+          "from __future__ import annotations",
+          "import csv",
+          "import json",
+          "import os",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "from typing import Dict, Iterable, Iterator, Optional",
+          "from PIL import Image, UnidentifiedImageError",
+          "from openai import OpenAI",
+          "from tqdm import tqdm"
+        ],
+        "docstring": "Shared helpers for GPT-based image metadata enrichment.",
+        "size_kb": 6.1298828125,
+        "title": "Image Metadata Enrichment with GPT",
+        "purpose": "This script enriches image metadata using GPT-based analysis.",
+        "key_features": [
+          "Discovers images in a directory recursively",
+          "Extracts metadata from images including dimensions and creation date",
+          "Analyzes images using OpenAI's GPT for enhanced descriptions"
+        ],
+        "use_case": "Use this script to automate the enrichment of image metadata for a digital asset library.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "Image Processing Libraries"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-mp3-transcript-prompts.py",
+        "path": "/Users/steven/Documents/pythons/analyze-mp3-transcript-prompts.py",
+        "category": "Analyze",
+        "lines": 288,
+        "imports": [
+          "import argparse",
+          "import json",
+          "import logging",
+          "import logging.handlers",
+          "import os",
+          "import random",
+          "import re",
+          "import sys",
+          "import threading",
+          "import time"
+        ],
+        "docstring": "",
+        "size_kb": 10.7421875,
+        "title": "MP3 Transcript Analysis and Prompt Generation",
+        "purpose": "This script transcribes audio files and analyzes the resulting text using OpenAI's API.",
+        "key_features": [
+          "Loads API keys from environment files",
+          "Transcribes audio files with error handling and retries",
+          "Formats and parses transcript text into structured segments"
+        ],
+        "use_case": "Use this script to convert audio interviews into text for easier analysis and prompt generation.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "dotenv for environment management"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-prompt.py",
+        "path": "/Users/steven/Documents/pythons/analyze-prompt.py",
+        "category": "Analyze",
+        "lines": 153,
+        "imports": [
+          "import argparse, sys, json, re",
+          "from pathlib import Path"
+        ],
+        "docstring": "",
+        "size_kb": 6.3271484375,
+        "title": "Image Prompt Generator from Transcript",
+        "purpose": "Transforms timestamped transcripts into detailed image prompts.",
+        "key_features": [
+          "Infers mood, setting, and symbolism from text",
+          "Generates multiple image types for each prompt",
+          "Uses lightweight heuristics for rich outputs"
+        ],
+        "use_case": "Ideal for creators needing visual prompts from narrative scripts.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Text Analysis",
+          "Image Generation"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-reader.py",
+        "path": "/Users/steven/Documents/pythons/analyze-reader.py",
+        "category": "Analyze",
+        "lines": 334,
+        "imports": [
+          "import os",
+          "import csv",
+          "import json",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "from typing import Dict, Any, List, Optional",
+          "from PIL import Image, UnidentifiedImageError",
+          "import openai",
+          "from env_d_loader import load_dotenv",
+          "from tqdm import tqdm"
+        ],
+        "docstring": "",
+        "size_kb": 11.0908203125,
+        "title": "Image Analysis with GPT-4o API",
+        "purpose": "This script analyzes images using the GPT-4o Vision API to generate metadata for print-on-demand applications.",
+        "key_features": [
+          "Loads environment variables for API keys",
+          "Analyzes images and returns detailed metadata",
+          "Handles API errors gracefully"
+        ],
+        "use_case": "Use this script to automatically generate SEO-friendly descriptions and tags for images in an e-commerce platform.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "Image Processing"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-transcribe-missing-audio.py",
+        "path": "/Users/steven/Documents/pythons/analyze-transcribe-missing-audio.py",
+        "category": "Analyze",
+        "lines": 278,
+        "imports": [
+          "import os",
+          "import csv",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "from collections import defaultdict"
+        ],
+        "docstring": "",
+        "size_kb": 11.4697265625,
+        "title": "Analyze and Transcribe Missing Audio Content",
+        "purpose": "This script scans directories for MP3 files, checks for existing transcripts, and transcribes any missing content.",
+        "key_features": [
+          "Scans folders for MP3 files",
+          "Checks for existing transcripts",
+          "Transcribes only missing audio content"
+        ],
+        "use_case": "Ideal for content creators needing to ensure all audio files have corresponding transcripts.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Audio Transcription Services",
+          "File Management Tools"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-transcript.py",
+        "path": "/Users/steven/Documents/pythons/analyze-transcript.py",
+        "category": "Analyze",
+        "lines": 245,
+        "imports": [
+          "import logging",
+          "import os",
+          "import sys",
+          "from pathlib import Path",
+          "from dotenv import load_dotenv",
+          "from typing import Optional, Tuple",
+          "from transcription_analyzer import TranscriptionAnalyzer"
+        ],
+        "docstring": "",
+        "size_kb": 7.677734375,
+        "title": "Transcription Analyzer Script",
+        "purpose": "This script analyzes transcription files using the OpenAI API.",
+        "key_features": [
+          "Environment variable loading for API keys",
+          "File and directory validation",
+          "Batch processing of transcription files"
+        ],
+        "use_case": "Use this script to process and analyze multiple transcription files efficiently.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "File processing utilities"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-writer.py",
+        "path": "/Users/steven/Documents/pythons/analyze-writer.py",
+        "category": "Analyze",
+        "lines": 646,
+        "imports": [
+          "import os",
+          "import sys",
+          "import json",
+          "import time",
+          "import logging",
+          "import subprocess",
+          "from pathlib import Path",
+          "from datetime import datetime, timedelta",
+          "from typing import Dict, List, Optional, Any",
+          "from dataclasses import dataclass, asdict"
+        ],
+        "docstring": "",
+        "size_kb": 23.89453125,
+        "title": "Simple Quality Monitor for Code Analysis",
+        "purpose": "A lightweight tool for periodic code quality analysis without external dependencies.",
+        "key_features": [
+          "Configurable analysis intervals",
+          "Metrics tracking and reporting",
+          "Detection of quality patterns and anti-patterns"
+        ],
+        "use_case": "Ideal for development teams wanting to maintain code quality over time.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Code Quality Tools",
+          "Static Analysis Tools"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "analyze-youtube-shorts-info.py",
+        "path": "/Users/steven/Documents/pythons/analyze-youtube-shorts-info.py",
+        "category": "Analyze",
+        "lines": 144,
+        "imports": [
+          "from pathlib import Path as PathLib",
+          "from dotenv import load_dotenv",
+          "import openai",
+          "from pathlib import Path",
+          "import logging",
+          "import os",
+          "import sys",
+          "import time",
+          "from concurrent.futures import ThreadPoolExecutor",
+          "from dotenv import load_dotenv"
+        ],
+        "docstring": "",
+        "size_kb": 6.37890625,
+        "title": "YouTube Shorts Audio Analysis Tool",
+        "purpose": "This script transcribes audio from YouTube Shorts and analyzes the content using OpenAI's models.",
+        "key_features": [
+          "Transcribes audio files using OpenAI Whisper",
+          "Analyzes transcribed text for themes and emotional tone",
+          "Handles multiple audio files concurrently"
+        ],
+        "use_case": "Use this script to analyze the content of YouTube Shorts for insights on storytelling and audience engagement.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "dotenv for environment management"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Anthropic": [
+      {
+        "filename": "anthropic-download.py",
+        "path": "/Users/steven/Documents/pythons/anthropic-download.py",
+        "category": "Anthropic",
+        "lines": 774,
+        "imports": [
+          "import os",
+          "import re",
+          "import json",
+          "import shutil",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "import hashlib"
+        ],
+        "docstring": "",
+        "size_kb": 29.0498046875,
+        "title": "Content-Aware Chat Analysis Organizer",
+        "purpose": "Deeply analyzes chat files to uncover patterns and organize insights intelligently.",
+        "key_features": [
+          "Extracts chat structure and metadata",
+          "Categorizes and analyzes code blocks",
+          "Identifies project types and relationships"
+        ],
+        "use_case": "Ideal for developers and researchers looking to analyze chat logs for patterns in communication or code usage.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Chat Analysis Tools",
+          "Code Analysis Platforms"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Api": [
+      {
+        "filename": "api-key-inventory-v2.py",
+        "path": "/Users/steven/Documents/pythons/api-key-inventory-v2.py",
+        "category": "Api",
+        "lines": 286,
+        "imports": [
+          "import os",
+          "import csv",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "from collections import defaultdict",
+          "from typing import Tuple"
+        ],
+        "docstring": "",
+        "size_kb": 11.3623046875,
+        "title": "API Key Inventory V2",
+        "purpose": "Manage and audit your API keys securely and efficiently.",
+        "key_features": [
+          "Displays all keys found in .env files",
+          "Groups keys by category/service",
+          "Flags truly missing important keys without exposing values"
+        ],
+        "use_case": "Use this script to ensure all necessary API keys are present and properly categorized in your development environment.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI",
+          "Midjourney",
+          "ElevenLabs",
+          "Instagram"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "api-key-inventory.py",
+        "path": "/Users/steven/Documents/pythons/api-key-inventory.py",
+        "category": "Api",
+        "lines": 347,
+        "imports": [
+          "import os",
+          "import re",
+          "import csv",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "from collections import defaultdict",
+          "from typing import Tuple"
+        ],
+        "docstring": "",
+        "size_kb": 13.765625,
+        "title": "API Key Inventory Scanner",
+        "purpose": "Effortlessly scan and inventory API keys without revealing sensitive values.",
+        "key_features": [
+          "Scans all .env files in ~/.env.d",
+          "Identifies present and missing API keys",
+          "Generates a CSV report with key statuses"
+        ],
+        "use_case": "Ideal for developers managing multiple API keys across projects to ensure security and compliance.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI",
+          "Google Cloud",
+          "AWS",
+          "Twitter API"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Application": [
+      {
+        "filename": "application-query-expanison.py",
+        "path": "/Users/steven/Documents/pythons/application-query-expanison.py",
+        "category": "Application",
+        "lines": 57,
+        "imports": [
+          "import opik",
+          "from langchain_openai import ChatOpenAI",
+          "from loguru import logger",
+          "from llm_engineering.domain.queries import Query",
+          "from llm_engineering.settings import settings",
+          "from .base import RAGStep",
+          "from .prompt_templates import QueryExpansionTemplate"
+        ],
+        "docstring": "",
+        "size_kb": 1.65234375,
+        "title": "Query Expansion for Enhanced Search Applications",
+        "purpose": "This script generates multiple variations of a given query to improve search results.",
+        "key_features": [
+          "Generates multiple query variations",
+          "Integrates with OpenAI's language model",
+          "Uses a customizable prompt template"
+        ],
+        "use_case": "When developing a search application that needs to enhance user queries for better results.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "LangChain"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "application-self-query.py",
+        "path": "/Users/steven/Documents/pythons/application-self-query.py",
+        "category": "Application",
+        "lines": 53,
+        "imports": [
+          "import opik",
+          "from langchain_openai import ChatOpenAI",
+          "from llm_engineering.application import utils",
+          "from llm_engineering.domain.documents import UserDocument",
+          "from llm_engineering.domain.queries import Query",
+          "from llm_engineering.settings import settings",
+          "from loguru import logger",
+          "from .base import RAGStep",
+          "from .prompt_templates import SelfQueryTemplate"
+        ],
+        "docstring": "",
+        "size_kb": 1.55078125,
+        "title": "Self Query Generation for User Identification",
+        "purpose": "This script generates user information from a query using OpenAI's language model.",
+        "key_features": [
+          "Integrates with OpenAI API for natural language processing",
+          "Extracts user full name from a query",
+          "Creates or retrieves user documents based on extracted names"
+        ],
+        "use_case": "Use this script to automatically identify and document authors from user queries in applications.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "Langchain"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Apply": [
+      {
+        "filename": "apply-improvements.py",
+        "path": "/Users/steven/Documents/pythons/apply-improvements.py",
+        "category": "Apply",
+        "lines": 160,
+        "imports": [
+          "import os",
+          "import shutil",
+          "from pathlib import Path",
+          "import argparse"
+        ],
+        "docstring": "",
+        "size_kb": 4.7294921875,
+        "title": "GitHub Repository Improvement Script",
+        "purpose": "This script automates the addition of essential files to GitHub repositories.",
+        "key_features": [
+          "Adds README.md if missing",
+          "Creates .gitignore based on project type",
+          "Generates a default MIT LICENSE file"
+        ],
+        "use_case": "Use this script when setting up a new GitHub repository to ensure it has essential documentation and configuration files.",
+        "complexity": "Beginner",
+        "related_services": [
+          "GitHub",
+          "Git"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Archive": [
+      {
+        "filename": "archive-reader.py",
+        "path": "/Users/steven/Documents/pythons/archive-reader.py",
+        "category": "Archive",
+        "lines": 598,
+        "imports": [
+          "import os",
+          "import sys",
+          "import logging",
+          "import shutil",
+          "import hashlib",
+          "import json",
+          "import zipfile",
+          "from pathlib import Path",
+          "from typing import Dict, List, Set, Tuple, Optional",
+          "from collections import defaultdict"
+        ],
+        "docstring": "",
+        "size_kb": 21.5791015625,
+        "title": "Comprehensive Merge and Consolidation Tool",
+        "purpose": "This script merges and organizes Python files from multiple sources into a unified structure.",
+        "key_features": [
+          "Merges files from various directories and archives",
+          "Organizes files into categorized structures",
+          "Detects and handles duplicate files"
+        ],
+        "use_case": "Ideal for developers needing to consolidate multiple Python projects into a single, organized repository.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "File Management",
+          "Data Consolidation"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Ascii": [
+      {
+        "filename": "ascii-python.py",
+        "path": "/Users/steven/Documents/pythons/ascii-python.py",
+        "category": "Ascii",
+        "lines": 267,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import ast",
+          "import sys",
+          "import json",
+          "import csv",
+          "import platform",
+          "import datetime",
+          "import subprocess",
+          "import radon"
+        ],
+        "docstring": "",
+        "size_kb": 8.43359375,
+        "title": "Python Code Analysis and ASCII Art Generator",
+        "purpose": "This script analyzes Python files in a directory and generates ASCII art for visual representation.",
+        "key_features": [
+          "Generates ASCII art from text input",
+          "Analyzes Python code for complexity and metrics",
+          "Visualizes code structure and dependencies"
+        ],
+        "use_case": "Use this script to assess the quality and complexity of Python codebases while adding a creative ASCII art banner.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Code Quality Analysis",
+          "Static Code Analysis"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Ask": [
+      {
+        "filename": "ask-reddit.py",
+        "path": "/Users/steven/Documents/pythons/ask-reddit.py",
+        "category": "Ask",
+        "lines": 213,
+        "imports": [
+          "from pathlib import Path",
+          "import praw",
+          "from clips import *",
+          "from yt_upload import upload_video",
+          "from tinydb import TinyDB, Query",
+          "import json",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 8.1953125,
+        "title": "Ask Reddit Video Creator",
+        "purpose": "Generates videos from Reddit AskReddit submissions and comments.",
+        "key_features": [
+          "Checks for existing uploaded videos",
+          "Generates video clips from Reddit comments",
+          "Logs video creation and uploads to a database"
+        ],
+        "use_case": "Use this script to create engaging video content from popular Reddit discussions.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Reddit API",
+          "PRAW",
+          "TinyDB"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Askreddit": [
+      {
+        "filename": "askreddit-loop-1.py",
+        "path": "/Users/steven/Documents/pythons/askreddit-loop-1.py",
+        "category": "Askreddit",
+        "lines": 153,
+        "imports": [
+          "from pathlib import Path",
+          "import praw",
+          "from clips import *",
+          "from yt_upload import upload_video",
+          "from tinydb import TinyDB, Query",
+          "import json",
+          "import time",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 5.2294921875,
+        "title": "Automated AskReddit Video Creator",
+        "purpose": "This script automates the creation of videos from AskReddit submissions and their comments.",
+        "key_features": [
+          "Generates videos from Reddit submissions",
+          "Checks for existing videos to avoid duplicates",
+          "Logs activities and errors for debugging"
+        ],
+        "use_case": "Use this script to create engaging video content from popular Reddit discussions for YouTube or social media.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Reddit API",
+          "YouTube API",
+          "TinyDB"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Askredditbot": [
+      {
+        "filename": "askredditbot.py",
+        "path": "/Users/steven/Documents/pythons/askredditbot.py",
+        "category": "Askredditbot",
+        "lines": 10,
+        "imports": [
+          "import time",
+          "from AskReddit import gen_video_from_hot"
+        ],
+        "docstring": "",
+        "size_kb": 0.1328125,
+        "title": "AskReddit Video Generator Bot",
+        "purpose": "This script generates videos from trending AskReddit posts every 12 hours.",
+        "key_features": [
+          "Generates videos from hot posts",
+          "Automated execution",
+          "Customizable delay"
+        ],
+        "use_case": "Use this bot to create engaging video content from popular Reddit discussions for social media.",
+        "complexity": "Beginner",
+        "related_services": [
+          "Reddit API",
+          "Video editing libraries"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Assemblyai": [
+      {
+        "filename": "assemblyai-audio-transcriber.py",
+        "path": "/Users/steven/Documents/pythons/assemblyai-audio-transcriber.py",
+        "category": "Assemblyai",
+        "lines": 94,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import time",
+          "import config",
+          "import requests"
+        ],
+        "docstring": "\nThis script is used to generate a transcript from an audio file using AssemblyAI api.\n",
+        "size_kb": 2.6474609375,
+        "title": "AssemblyAI Audio Transcriber",
+        "purpose": "This script transcribes audio files into text using the AssemblyAI API.",
+        "key_features": [
+          "Uploads audio files to AssemblyAI",
+          "Requests transcription and polls for completion",
+          "Saves the transcript in SRT format"
+        ],
+        "use_case": "Use this script to convert recorded meetings or lectures into text for easy reference.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "AssemblyAI",
+          "Audio Processing APIs"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Audio": [
+      {
+        "filename": "audio-analyzer.py",
+        "path": "/Users/steven/Documents/pythons/audio-analyzer.py",
+        "category": "Audio",
+        "lines": 138,
+        "imports": [
+          "from pathlib import Path",
+          "from openai import OpenAI",
+          "import logging",
+          "from pathlib import Path as PathLib",
+          "from dotenv import load_dotenv",
+          "import os",
+          "import subprocess",
+          "from dotenv import load_dotenv"
+        ],
+        "docstring": "",
+        "size_kb": 4.6357421875,
+        "title": "Audio Analyzer with Transcription and Analysis",
+        "purpose": "This script transcribes audio files and analyzes song lyrics for deeper insights.",
+        "key_features": [
+          "Transcribes audio using OpenAI's Whisper API",
+          "Generates timestamps for transcribed text",
+          "Analyzes song lyrics for themes and emotional content"
+        ],
+        "use_case": "Use this script to transcribe and analyze music lyrics for research or creative projects.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "Whisper API"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "audio-normalize.py",
+        "path": "/Users/steven/Documents/pythons/audio-normalize.py",
+        "category": "Audio",
+        "lines": 25,
+        "imports": [
+          "from pydub import AudioSegment, effects",
+          "import random",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 0.6767578125,
+        "title": "Audio Normalization and Voice Selection Script",
+        "purpose": "This script normalizes audio levels and randomly selects a voice for audio processing.",
+        "key_features": [
+          "Normalizes audio to a specified dBFS level",
+          "Randomly selects a voice from predefined options",
+          "Logs selected voice for tracking"
+        ],
+        "use_case": "Use this script when preparing audio files for consistent playback volume and selecting voice styles for narration.",
+        "complexity": "Beginner",
+        "related_services": [
+          "Audio Processing",
+          "Voice Synthesis"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "audio-thinketh.py",
+        "path": "/Users/steven/Documents/pythons/audio-thinketh.py",
+        "category": "Audio",
+        "lines": 148,
+        "imports": [
+          "import os, random",
+          "from pathlib import Path",
+          "from dotenv import load_dotenv",
+          "from docx import Document",
+          "from pydub import AudioSegment",
+          "from utils.splitter import split_text",
+          "from utils.mixer import overlay_ambience, widen, normalize_audio",
+          "from utils.styles import apply_cheerful_guide_style",
+          "from utils.model_select import choose_best_openai_model, can_use_hf, hf_params",
+          "import requests"
+        ],
+        "docstring": "",
+        "size_kb": 4.759765625,
+        "title": "Cinematic Audio Synthesis Tool",
+        "purpose": "Generates cinematic audio experiences from text documents.",
+        "key_features": [
+          "Dynamic voice rotation for varied narration",
+          "Ambient sound overlays tailored to chapters",
+          "Audio normalization and mastering for quality output"
+        ],
+        "use_case": "Ideal for creating engaging audiobooks or guided meditations from written content.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI TTS",
+          "Hugging Face TTS"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "audio-transcription-pipeline.py",
+        "path": "/Users/steven/Documents/pythons/audio-transcription-pipeline.py",
+        "category": "Audio",
+        "lines": 101,
+        "imports": [
+          "from __future__ import annotations",
+          "import os",
+          "from pathlib import Path",
+          "from typing import Iterable, Optional",
+          "from openai import OpenAI",
+          "from .chat import run_chat_completion"
+        ],
+        "docstring": "Shared audio transcription + analysis pipeline helpers.",
+        "size_kb": 3.05859375,
+        "title": "Audio Transcription and Analysis Pipeline",
+        "purpose": "This script transcribes audio files and analyzes the transcripts using OpenAI's models.",
+        "key_features": [
+          "Transcribes audio files using Whisper model",
+          "Formats transcripts with timestamps",
+          "Analyzes transcripts with customizable prompts"
+        ],
+        "use_case": "Ideal for processing lecture recordings to generate and analyze transcripts for study purposes.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "Audio Processing Libraries"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "audio.py",
+        "path": "/Users/steven/Documents/pythons/audio.py",
+        "category": "Audio",
+        "lines": 64,
+        "imports": [
+          "import os",
+          "import whisper",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 1.66015625,
+        "title": "Audio Transcription Script Using Whisper",
+        "purpose": "This script transcribes MP3 audio files into text with timestamps.",
+        "key_features": [
+          "Loads Whisper model for transcription",
+          "Processes all MP3 files in a directory",
+          "Saves transcriptions with timestamps to text files"
+        ],
+        "use_case": "Ideal for converting recorded meetings or lectures into written format for easy reference.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Speech-to-Text APIs",
+          "Audio Processing Libraries"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Audiobook": [
+      {
+        "filename": "audiobook-producer.py",
+        "path": "/Users/steven/Documents/pythons/audiobook-producer.py",
+        "category": "Audiobook",
+        "lines": 352,
+        "imports": [
+          "import os",
+          "import json",
+          "import time",
+          "from pathlib import Path",
+          "from openai import OpenAI",
+          "from datetime import datetime"
+        ],
+        "docstring": "",
+        "size_kb": 15.5673828125,
+        "title": "OpenAI TTS Audiobook Producer",
+        "purpose": "Generates emotional audiobooks using OpenAI's text-to-speech technology.",
+        "key_features": [
+          "Supports multiple emotional tones for narration",
+          "Customizable SSML for enhanced audio delivery",
+          "Automatic creation of audio files in a designated directory"
+        ],
+        "use_case": "Ideal for authors and content creators looking to produce engaging audiobooks with emotional depth.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "OpenAI API",
+          "Text-to-Speech Services"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Automated": [
+      {
+        "filename": "automated-fixer.py",
+        "path": "/Users/steven/Documents/pythons/automated-fixer.py",
+        "category": "Automated",
+        "lines": 189,
+        "imports": [],
+        "docstring": "",
+        "size_kb": 6.5654296875,
+        "title": "Automated Code Fixer for Python Scripts",
+        "purpose": "This script automatically adds docstrings and fixes common code issues in Python files.",
+        "key_features": [
+          "Adds missing function and module docstrings",
+          "Creates backups before modifying files",
+          "Fixes magic numbers and hardcoded paths"
+        ],
+        "use_case": "Ideal for developers looking to improve code documentation and maintainability in large Python projects.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Code Quality Tools",
+          "Static Code Analysis"
+        ],
+        "ai_analyzed": true
+      }
+    ],
+    "Automation": [
+      {
+        "filename": "automation-playwright-screenshot.py",
+        "path": "/Users/steven/Documents/pythons/automation-playwright-screenshot.py",
+        "category": "Automation",
+        "lines": 55,
+        "imports": [
+          "from pathlib import Path",
+          "from playwright.sync_api import sync_playwright",
+          "from rich.progress import track",
+          "from utils.console import print_step, print_substep"
+        ],
+        "docstring": "",
+        "size_kb": 1.939453125,
+        "title": "Reddit Post Screenshot Downloader",
+        "purpose": "This script automates the process of downloading screenshots of Reddit posts and their comments.",
+        "key_features": [
+          "Downloads screenshots of Reddit posts and comments",
+          "Handles NSFW content with a click-through",
+          "Organizes screenshots in a specified directory"
+        ],
+        "use_case": "Use this script to capture visual content from Reddit threads for analysis or sharing.",
+        "complexity": "Intermediate",
+        "related_services": [
+          "Reddit API",
+          "Playwright"
+        ],
+        "ai_analyzed": true
+      },
+      {
+        "filename": "automation-selenium-content.py",
+        "path": "/Users/steven/Documents/pythons/automation-selenium-content.py",
+        "category": "Automation",
+        "lines": 480,
+        "imports": [
+          "import json",
+          "import random",
+          "import datetime",
+          "from typing import List, Dict, Any",
+          "import os"
+        ],
+        "docstring": "",
+        "size_kb": 19.77734375
+      }
+    ],
+    "Avatararts": [
+      {
+        "filename": "avatararts-flatten.py",
+        "path": "/Users/steven/Documents/pythons/avatararts-flatten.py",
+        "category": "Avatararts",
+        "lines": 212,
+        "imports": [
+          "import os",
+          "import shutil",
+          "import re",
+          "from pathlib import Path"
+        ],
+        "docstring": "",
+        "size_kb": 7.0595703125
+      }
+    ],
+    "Aws": [
+      {
+        "filename": "aws-polly-tts.py",
+        "path": "/Users/steven/Documents/pythons/aws-polly-tts.py",
+        "category": "Aws",
+        "lines": 93,
+        "imports": [
+          "import random",
+          "import sys",
+          "from boto3 import Session",
+          "from botocore.exceptions import BotoCoreError, ClientError, ProfileNotFound",
+          "from utils import settings",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 2.6123046875
+      },
+      {
+        "filename": "aws-sqs-image-queue.py",
+        "path": "/Users/steven/Documents/pythons/aws-sqs-image-queue.py",
+        "category": "Aws",
+        "lines": 223,
+        "imports": [
+          "from pathlib import Path",
+          "import csv",
+          "import os",
+          "import time",
+          "from datetime import datetime",
+          "from dotenv import load_dotenv",
+          "from openai import OpenAI",
+          "from PIL import Image, UnidentifiedImageError",
+          "import logging",
+          "from pathlib import Path as PathLib"
+        ],
+        "docstring": "",
+        "size_kb": 7.1640625
+      }
+    ],
+    "Backlinker": [
+      {
+        "filename": "backlinker.py",
+        "path": "/Users/steven/Documents/pythons/backlinker.py",
+        "category": "Backlinker",
+        "lines": 50,
+        "imports": [
+          "import json",
+          "import re",
+          "import sys",
+          "import requests",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 1.5634765625
+      }
+    ],
+    "Backup": [
+      {
+        "filename": "backup-avatararts-system.py",
+        "path": "/Users/steven/Documents/pythons/backup-avatararts-system.py",
+        "category": "Backup",
+        "lines": 554,
+        "imports": [
+          "import os",
+          "import shutil",
+          "import json",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "import hashlib"
+        ],
+        "docstring": "",
+        "size_kb": 17.904296875
+      },
+      {
+        "filename": "backup-installations.py",
+        "path": "/Users/steven/Documents/pythons/backup-installations.py",
+        "category": "Backup",
+        "lines": 51,
+        "imports": [
+          "import subprocess",
+          "import csv",
+          "import os",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 1.3671875
+      }
+    ],
+    "Backupcsv": [
+      {
+        "filename": "backupcsv.py",
+        "path": "/Users/steven/Documents/pythons/backupcsv.py",
+        "category": "Backupcsv",
+        "lines": 66,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import re",
+          "import subprocess",
+          "import pandas as pd"
+        ],
+        "docstring": "",
+        "size_kb": 2.1279296875
+      }
+    ],
+    "Basic": [
+      {
+        "filename": "basic-follow-unfollow.py",
+        "path": "/Users/steven/Documents/pythons/basic-follow-unfollow.py",
+        "category": "Basic",
+        "lines": 116,
+        "imports": [
+          "from instapy import InstaPy, smart_run"
+        ],
+        "docstring": "\nThis template is written by @cormo1990\n\nWhat does this quickstart script aim to do?\n- Basic follow/unfollow activity.\n\nNOTES:\n- I don't want to automate comment and too much likes because I want to d",
+        "size_kb": 3.2626953125
+      }
+    ],
+    "Batch": [
+      {
+        "filename": "batch-folder-writer.py",
+        "path": "/Users/steven/Documents/pythons/batch-folder-writer.py",
+        "category": "Batch",
+        "lines": 72,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import subprocess",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 2.3251953125
+      },
+      {
+        "filename": "batch-image.py",
+        "path": "/Users/steven/Documents/pythons/batch-image.py",
+        "category": "Batch",
+        "lines": 444,
+        "imports": [
+          "import os",
+          "import sys",
+          "import csv",
+          "import json",
+          "import time",
+          "import logging",
+          "import argparse",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "from typing import Dict, Any, List, Optional"
+        ],
+        "docstring": "",
+        "size_kb": 16.8974609375
+      },
+      {
+        "filename": "batch-info.py",
+        "path": "/Users/steven/Documents/pythons/batch-info.py",
+        "category": "Batch",
+        "lines": 176,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "from openai import OpenAI",
+          "import logging",
+          "from pathlib import Path as PathLib",
+          "from dotenv import load_dotenv",
+          "from dotenv import load_dotenv"
+        ],
+        "docstring": "",
+        "size_kb": 5.310546875
+      },
+      {
+        "filename": "batch-processor.py",
+        "path": "/Users/steven/Documents/pythons/batch-processor.py",
+        "category": "Batch",
+        "lines": 71,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import google_auth_oauthlib.flow",
+          "import googleapiclient.discovery",
+          "import googleapiclient.errors",
+          "import pandas as pd",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 1.8857421875
+      },
+      {
+        "filename": "batch-transcript-finder.py",
+        "path": "/Users/steven/Documents/pythons/batch-transcript-finder.py",
+        "category": "Batch",
+        "lines": 128,
+        "imports": [
+          "import os",
+          "import csv",
+          "from pathlib import Path",
+          "from datetime import datetime"
+        ],
+        "docstring": "",
+        "size_kb": 4.12109375
+      }
+    ],
+    "Bookmarks": [
+      {
+        "filename": "bookmarks.py",
+        "path": "/Users/steven/Documents/pythons/bookmarks.py",
+        "category": "Bookmarks",
+        "lines": 30,
+        "imports": [
+          "from pypdf import PdfReader, PdfWriter"
+        ],
+        "docstring": "",
+        "size_kb": 0.708984375
+      }
+    ],
+    "Bot": [
+      {
+        "filename": "bot-instagram.py",
+        "path": "/Users/steven/Documents/pythons/bot-instagram.py",
+        "category": "Bot",
+        "lines": 65,
+        "imports": [
+          "import logging",
+          "import os",
+          "import platform",
+          "import art",
+          "import botComment",
+          "import botDraw",
+          "import botLike",
+          "import botStories"
+        ],
+        "docstring": "",
+        "size_kb": 1.357421875
+      },
+      {
+        "filename": "bot-like.py",
+        "path": "/Users/steven/Documents/pythons/bot-like.py",
+        "category": "Bot",
+        "lines": 212,
+        "imports": [
+          "import logging",
+          "import os",
+          "import random",
+          "from pathlib import Path",
+          "from time import sleep",
+          "import art",
+          "from selenium import webdriver",
+          "from selenium.webdriver.common.keys import Keys"
+        ],
+        "docstring": "",
+        "size_kb": 5.9462890625
+      },
+      {
+        "filename": "bot-photo.py",
+        "path": "/Users/steven/Documents/pythons/bot-photo.py",
+        "category": "Bot",
+        "lines": 125,
+        "imports": [
+          "import os",
+          "from io import open",
+          "from tqdm import tqdm"
+        ],
+        "docstring": "",
+        "size_kb": 3.9345703125
+      }
+    ],
+    "Brand": [
+      {
+        "filename": "brand.py",
+        "path": "/Users/steven/Documents/pythons/brand.py",
+        "category": "Brand",
+        "lines": 28,
+        "imports": [
+          "from __future__ import annotations",
+          "import dataclasses",
+          "import json",
+          "from typing import Any, Dict"
+        ],
+        "docstring": "",
+        "size_kb": 0.7021484375
+      }
+    ],
+    "Breakdown": [
+      {
+        "filename": "breakdown.py",
+        "path": "/Users/steven/Documents/pythons/breakdown.py",
+        "category": "Breakdown",
+        "lines": 65,
+        "imports": [
+          "from pathlib import Path",
+          "from openai import OpenAI",
+          "import logging",
+          "import os"
+        ],
+        "docstring": "",
+        "size_kb": 1.83203125
+      }
+    ],
+    "Bubblespider": [
+      {
+        "filename": "bubblespider-amazon-scraper.py",
+        "path": "/Users/steven/Documents/pythons/bubblespider-amazon-scraper.py",
+        "category": "Bubblespider",
+        "lines": 45,
+        "imports": [
+          "import csv",
+          "import os",
+          "import re",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 1.33203125
+      }
+    ],
+    "Build": [
+      {
+        "filename": "build.py",
+        "path": "/Users/steven/Documents/pythons/build.py",
+        "category": "Build",
+        "lines": 175,
+        "imports": [
+          "import argparse",
+          "import os",
+          "import sys",
+          "import json",
+          "import jinja2",
+          "from collections import OrderedDict",
+          "import simplegallery.common as spg_common",
+          "from simplegallery.logic.gallery_logic import get_gallery_logic"
+        ],
+        "docstring": "",
+        "size_kb": 5.6201171875
+      }
+    ],
+    "Business": [
+      {
+        "filename": "business-intelligence.py",
+        "path": "/Users/steven/Documents/pythons/business-intelligence.py",
+        "category": "Business",
+        "lines": 280,
+        "imports": [
+          "import os",
+          "import sys",
+          "import json",
+          "import asyncio",
+          "import requests",
+          "import openai",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "from typing import Dict, List, Any",
+          "from anthropic import Anthropic"
+        ],
+        "docstring": "",
+        "size_kb": 8.7509765625
+      }
+    ],
+    "Calculator": [
+      {
+        "filename": "calculator.py",
+        "path": "/Users/steven/Documents/pythons/calculator.py",
+        "category": "Calculator",
+        "lines": 56,
+        "imports": [
+          "import math",
+          "from mcp.server import FastMCP"
+        ],
+        "docstring": "",
+        "size_kb": 1.5224609375
+      }
+    ],
+    "Capture": [
+      {
+        "filename": "capture.py",
+        "path": "/Users/steven/Documents/pythons/capture.py",
+        "category": "Capture",
+        "lines": 169,
+        "imports": [
+          "import sys",
+          "import pytest",
+          "from IPython.utils import capture"
+        ],
+        "docstring": "Tests for IPython.utils.capture",
+        "size_kb": 5.2080078125
+      }
+    ],
+    "Catalog": [
+      {
+        "filename": "catalog-to-csv.py",
+        "path": "/Users/steven/Documents/pythons/catalog-to-csv.py",
+        "category": "Catalog",
+        "lines": 140,
+        "imports": [
+          "from __future__ import annotations",
+          "import argparse, base64, csv, io, json, os",
+          "from dataclasses import dataclass, asdict",
+          "from pathlib import Path",
+          "from typing import Any, Dict, List, Optional, Tuple",
+          "from PIL import Image, UnidentifiedImageError, ExifTags",
+          "from tqdm import tqdm",
+          "from openai import OpenAI"
+        ],
+        "docstring": "",
+        "size_kb": 5.2744140625
+      }
+    ],
+    "Categorizer": [
+      {
+        "filename": "categorizer.py",
+        "path": "/Users/steven/Documents/pythons/categorizer.py",
+        "category": "Categorizer",
+        "lines": 108,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "from openai import OpenAI",
+          "import logging",
+          "import hashlib",
+          "import re",
+          "import shutil"
+        ],
+        "docstring": "",
+        "size_kb": 3.3330078125
+      }
+    ],
+    "Category": [
+      {
+        "filename": "category-readme-generator.py",
+        "path": "/Users/steven/Documents/pythons/category-readme-generator.py",
+        "category": "Category",
+        "lines": 232,
+        "imports": [
+          "import json",
+          "from pathlib import Path",
+          "from collections import defaultdict",
+          "from typing import Dict, List"
+        ],
+        "docstring": "",
+        "size_kb": 6.4638671875
+      }
+    ],
+    "Chat": [
+      {
+        "filename": "chat-base.py",
+        "path": "/Users/steven/Documents/pythons/chat-base.py",
+        "category": "Chat",
+        "lines": 28,
+        "imports": [
+          "import os",
+          "from sample_config import Config",
+          "from config import Config",
+          "from chatbase import Message",
+          "from pyrogram import Client, Filters",
+          "from translation import Translation"
+        ],
+        "docstring": "",
+        "size_kb": 0.6171875
+      }
+    ],
+    "Chatgpt": [
+      {
+        "filename": "chatgpt-conversation-exporter.py",
+        "path": "/Users/steven/Documents/pythons/chatgpt-conversation-exporter.py",
+        "category": "Chatgpt",
+        "lines": 509,
+        "imports": [
+          "import os",
+          "import re",
+          "import html",
+          "import json",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "from typing import Dict, List, Optional, Any",
+          "import argparse"
+        ],
+        "docstring": "",
+        "size_kb": 17.9873046875
+      },
+      {
+        "filename": "chatgpt.py",
+        "path": "/Users/steven/Documents/pythons/chatgpt.py",
+        "category": "Chatgpt",
+        "lines": 190,
+        "imports": [
+          "import os",
+          "import sys",
+          "from typing import List, Dict, Any",
+          "from openai import OpenAI",
+          "from dotenv import load_dotenv",
+          "import json"
+        ],
+        "docstring": "",
+        "size_kb": 6.7666015625
+      }
+    ],
+    "Chatprompt": [
+      {
+        "filename": "chatprompt.py",
+        "path": "/Users/steven/Documents/pythons/chatprompt.py",
+        "category": "Chatprompt",
+        "lines": 56,
+        "imports": [
+          "from __future__ import annotations",
+          "from dataclasses import dataclass",
+          "from typing import Any, Dict, Iterable, Mapping, Optional",
+          "from openai import OpenAI"
+        ],
+        "docstring": "Shared helpers for chat-based OpenAI interactions.",
+        "size_kb": 1.439453125
+      }
+    ],
+    "Check": [
+      {
+        "filename": "check-1.py",
+        "path": "/Users/steven/Documents/pythons/check-1.py",
+        "category": "Check",
+        "lines": 19,
+        "imports": [
+          "import sys",
+          "from pypdf import PdfReader",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 0.4296875
+      },
+      {
+        "filename": "check-file.py",
+        "path": "/Users/steven/Documents/pythons/check-file.py",
+        "category": "Check",
+        "lines": 85,
+        "imports": [
+          "import os",
+          "from pathlib import Path",
+          "from shutil import move, rmtree",
+          "from sys import platform",
+          "from uuid import uuid1",
+          "from urllib.request import urlretrieve",
+          "from zipfile import ZipFile",
+          "import tarfile"
+        ],
+        "docstring": "",
+        "size_kb": 2.7197265625
+      },
+      {
+        "filename": "check-modules.py",
+        "path": "/Users/steven/Documents/pythons/check-modules.py",
+        "category": "Check",
+        "lines": 54,
+        "imports": [
+          "import sys",
+          "import logging",
+          "import requests",
+          "import colorama",
+          "import asyncio",
+          "import proxybroker",
+          "import warnings",
+          "import warnings",
+          "from colorama import init"
+        ],
+        "docstring": "",
+        "size_kb": 1.4072265625
+      },
+      {
+        "filename": "check-quality.py",
+        "path": "/Users/steven/Documents/pythons/check-quality.py",
+        "category": "Check",
+        "lines": 94,
+        "imports": [
+          "import sys",
+          "import json",
+          "from pathlib import Path",
+          "from simple_quality_monitor import SimpleQualityMonitor"
+        ],
+        "docstring": "",
+        "size_kb": 3.5517578125
+      },
+      {
+        "filename": "check.py",
+        "path": "/Users/steven/Documents/pythons/check.py",
+        "category": "Check",
+        "lines": 75,
+        "imports": [
+          "from dataclasses import dataclass",
+          "import json",
+          "import sys",
+          "import logging"
+        ],
+        "docstring": "",
+        "size_kb": 3.1298828125
+      }
+    ],
+    "Classify": [
+      {
+        "filename": "classify.py",
+        "path": "/Users/steven/Documents/pythons/classify.py",
+        "category": "Classify",
+        "lines": 196,
+        "imports": [
+          "from pathlib import Path",
+          "import ast",
+          "import os",
+          "from openai import OpenAI",
+          "import logging",
+          "from pathlib import Path as PathLib",
+          "from dotenv import load_dotenv",
+          "import csv",
+          "from datetime import datetime",
+          "from dotenv import load_dotenv"
+        ],
+        "docstring": "",
+        "size_kb": 6.2373046875
+      }
+    ],
+    "Claude": [
+      {
+        "filename": "claude-anthropic-download.py",
+        "path": "/Users/steven/Documents/pythons/claude-anthropic-download.py",
+        "category": "Claude",
+        "lines": 1307,
+        "imports": [
+          "import os",
+          "import re",
+          "import json",
+          "import shutil",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "import hashlib"
+        ],
+        "docstring": "",
+        "size_kb": 49.1396484375
+      },
+      {
+        "filename": "claude-chief.py",
+        "path": "/Users/steven/Documents/pythons/claude-chief.py",
+        "category": "Claude",
+        "lines": 946,
+        "imports": [
+          "import os",
+          "import sys",
+          "import json",
+          "import time",
+          "import asyncio",
+          "import requests",
+          "import openai",
+          "from datetime import datetime, timedelta",
+          "from pathlib import Path",
+          "from typing import Dict, List, Any, Optional"
+        ],
+        "docstring": "",
+        "size_kb": 30.638671875
+      },
+      {
+        "filename": "claude-code-review-system.py",
+        "path": "/Users/steven/Documents/pythons/claude-code-review-system.py",
+        "category": "Claude",
+        "lines": 388,
+        "imports": [
+          "import os",
+          "import sys",
+          "import json",
+          "import asyncio",
+          "import requests",
+          "import openai",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "from typing import Dict, List",
+          "from anthropic import Anthropic"
+        ],
+        "docstring": "",
+        "size_kb": 10.83984375
+      },
+      {
+        "filename": "claude-deep.py",
+        "path": "/Users/steven/Documents/pythons/claude-deep.py",
+        "category": "Claude",
+        "lines": 799,
+        "imports": [
+          "import ast",
+          "import re",
+          "from pathlib import Path",
+          "from collections import defaultdict, Counter",
+          "from datetime import datetime"
+        ],
+        "docstring": "",
+        "size_kb": 28.267578125
+      },
+      {
+        "filename": "claude-script.py",
+        "path": "/Users/steven/Documents/pythons/claude-script.py",
+        "category": "Claude",
+        "lines": 39,
+        "imports": [
+          "from dataclasses import dataclass",
+          "from typing import Any, Optional"
+        ],
+        "docstring": "Web search server tool for the agent framework.",
+        "size_kb": 1.1513671875
+      }
+    ],
+    "Clean": [
+      {
+        "filename": "clean-flatten-names.py",
+        "path": "/Users/steven/Documents/pythons/clean-flatten-names.py",
+        "category": "Clean",
+        "lines": 139,
+        "imports": [
+          "import os",
+          "import shutil",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "import re"
+        ],
+        "docstring": "",
+        "size_kb": 4.197265625
+      },
+      {
+        "filename": "clean-folder-names-no-vols.py",
+        "path": "/Users/steven/Documents/pythons/clean-folder-names-no-vols.py",
+        "category": "Clean",
+        "lines": 286,
+        "imports": [
+          "import os",
+          "import csv",
+          "import shutil",
+          "from pathlib import Path",
+          "from datetime import datetime",
+          "from collections import defaultdict",
+          "import re"
+        ],
+        "docstring": "",
+        "size_kb": 11.2421875
+      }
+    ],
+    "Cli": [
+      {
+        "filename": "cli-config-manager.py",
+        "path": "/Users/steven/Documents/pythons/cli-config-manager.py",
+        "category": "Cli",
+        "lines": 796,
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import json",
+          "import webbrowser",
+          "import time",
+          "from typing import Dict, List, Any",
+          "from dataclasses import dataclass, asdict"
+        ],
+        "docstring": "",
+        "size_kb": 30.3115234375
+      },
+      {
+        "filename": "cli.py",
+        "path": "/Users/steven/Documents/pythons/cli.py",
+        "category": "Cli",
+        "lines": 103,
+        "imports": [
+          "import os",
+          "import sys",
+          "import argparse",
+          "from anthropic import Anthropic"
+        ],
+        "docstring": "\nSimple Claude CLI for terminal usage\nUsage: python claude-cli.py \"Your question here\"\n",
+        "size_kb": 3.0048828125
+      }
+    ],
+    "Client": [
+      {
+        "filename": "client-v1.py",
+        "path": "/Users/steven/Documents/pythons/client-v1.py",
+        "category": "Client",
+        "lines": 265,
+        "imports": [
+          "from pathlib import Path",
+          "import ftplib",
+          "import sys",
+          "import traceback",
+          "import clientUI",
+          "import requests",
+          "import scriptwrapper",
+          "import settings",
+          "import logging",
+          "from time import sleep"
+        ],
+        "docstring": "",
+        "size_kb": 7.9091796875
+      }
+    ],
+    "Clip": [
+      {
+        "filename": "clip-editor.py",
+        "path": "/Users/steven/Documents/pythons/clip-editor.py",
+        "category": "Clip",
+        "lines": 225,
+        "imports": [
+          "import random",
+          "from modules.configHandler import *",
+          "from moviepy.editor import *",
+          "from PIL import Image, ImageDraw, ImageFont",
+          "import cv2",
+          "import cv2",
+          "import cv2"
+        ],
+        "docstring": "",
+        "size_kb": 7.240234375
+      }
+    ],
+    "Clips": [
+      {
+        "filename": "clips-1.py",
+        "path": "/Users/steven/Documents/pythons/clips-1.py",
+        "category": "Clips",
+        "lines": 180,
+        "imports": [
+          "import string",
+          "import random",
+          "import textwrap",
+          "from PIL import Image",
+          "from PIL import ImageDraw",
+          "from PIL import ImageFont",
+          "import numpy as np",
+          "from moviepy.editor import *",
+          "import soundfile as sf",
+          "from pydub import AudioSegment"
+        ],
+        "docstring": "",
+        "size_kb": 4.7421875
+      }
+    ]
+  },
+  "scripts": [
+    {
+      "filename": "DEEP-CONTENT-ANALYSIS.py",
+      "path": "/Users/steven/Documents/pythons/DEEP-CONTENT-ANALYSIS.py",
+      "category": "Deep",
+      "lines": 271,
+      "imports": [
+        "import re",
+        "import ast",
+        "from pathlib import Path",
+        "import csv",
+        "import json",
+        "from collections import defaultdict"
+      ],
+      "docstring": "",
+      "size_kb": 9.5234375,
+      "title": "Deep Content-Aware Analysis Tool",
+      "purpose": "Analyzes Python files to extract meaningful insights about their content and structure.",
+      "key_features": [
+        "Extracts docstrings and summarizes file purpose",
+        "Analyzes classes, functions, and imports using AST",
+        "Detects API services and operations performed in the code"
+      ],
+      "use_case": "Ideal for developers wanting to understand legacy code or assess third-party libraries.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "AST parsing",
+        "Code analysis",
+        "Static code analysis"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "Multi-Modal.py",
+      "path": "/Users/steven/Documents/pythons/Multi-Modal.py",
+      "category": "Multi",
+      "lines": 616,
+      "imports": [
+        "import os",
+        "import logging",
+        "import time",
+        "import json",
+        "import subprocess",
+        "import hashlib",
+        "from pathlib import Path",
+        "from typing import Optional, Dict, Any, List",
+        "from dotenv import load_dotenv",
+        "from pathlib import Path as PathLib"
+      ],
+      "docstring": "",
+      "size_kb": 24.5576171875,
+      "title": "Ultimate Media Analysis Pipeline - Multi-API Edition",
+      "purpose": "A robust pipeline for analyzing large media files using multiple APIs.",
+      "key_features": [
+        "Supports large file processing (2GB+ MP4s)",
+        "Audio extraction from video files using ffmpeg",
+        "Integration with various AI services for media analysis"
+      ],
+      "use_case": "Ideal for developers needing to analyze audio and video content from large media files efficiently.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI",
+        "Google Generative AI",
+        "AssemblyAI",
+        "Deepgram"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "PROCESS_BATCH_RENAMES.py",
+      "path": "/Users/steven/Documents/pythons/PROCESS_BATCH_RENAMES.py",
+      "category": "Process_Batch_Renames",
+      "lines": 187,
+      "imports": [
+        "import sys",
+        "import csv",
+        "import shutil",
+        "from pathlib import Path",
+        "from datetime import datetime"
+      ],
+      "docstring": "",
+      "size_kb": 5.6279296875,
+      "title": "Batch Rename Processor",
+      "purpose": "Efficiently processes batch CSVs to rename, move, or delete files based on specified actions.",
+      "key_features": [
+        "Processes multiple batch files at once",
+        "Supports renaming, moving to library, deleting, and keeping files",
+        "User confirmation before executing changes"
+      ],
+      "use_case": "Ideal for organizing large sets of files based on batch analysis results.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "File Management",
+        "Data Organization"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "PSDImage.py",
+      "path": "/Users/steven/Documents/pythons/PSDImage.py",
+      "category": "Psdimage",
+      "lines": 748,
+      "imports": [
+        "import logging",
+        "import os",
+        "from typing import Any, BinaryIO, Callable, Literal, Optional, Union",
+        "from typing import Self",
+        "from typing_extensions import Self",
+        "import numpy as np",
+        "from PIL.Image import Image as PILImage",
+        "from psd_tools.api import adjustments",
+        "from psd_tools.api.layers import (",
+        "from psd_tools.api.pil_io import get_pil_channels, get_pil_mode"
+      ],
+      "docstring": "\nPSD Image module.\n",
+      "size_kb": 22.919921875,
+      "title": "PSD Image Module for Python",
+      "purpose": "A module for creating and manipulating Photoshop PSD/PSB files in Python.",
+      "key_features": [
+        "Create new PSD documents with specified parameters",
+        "Load and manipulate existing PSD files",
+        "Support for various layer types and image adjustments"
+      ],
+      "use_case": "Ideal for developers needing to generate or edit PSD files programmatically for graphic design applications.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Image processing",
+        "Graphic design automation"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "STANDARD-ENV-LOADER.py",
+      "path": "/Users/steven/Documents/pythons/STANDARD-ENV-LOADER.py",
+      "category": "Standard",
+      "lines": 16,
+      "imports": [
+        "from pathlib import Path",
+        "from dotenv import load_dotenv",
+        "import os"
+      ],
+      "docstring": "",
+      "size_kb": 0.3369140625,
+      "title": "Standard Environment Loader for Python Scripts",
+      "purpose": "This script loads environment variables from all .env files in the user's ~/.env.d/ directory.",
+      "key_features": [
+        "Automatically loads multiple .env files",
+        "Utilizes pathlib for file path management",
+        "Integrates with python-dotenv for environment variable handling"
+      ],
+      "use_case": "Use this script at the beginning of your Python applications to manage configuration settings securely.",
+      "complexity": "Beginner",
+      "related_services": [
+        "python-dotenv",
+        "pathlib"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "_RefreshThread.py",
+      "path": "/Users/steven/Documents/pythons/_RefreshThread.py",
+      "category": "_Refreshthread",
+      "lines": 411,
+      "imports": [
+        "from __future__ import annotations",
+        "import sys",
+        "from threading import Event, RLock, Thread",
+        "from types import TracebackType",
+        "from typing import IO, TYPE_CHECKING, Any, Callable, List, Optional, TextIO, Type, cast",
+        "from . import get_console",
+        "from .console import Console, ConsoleRenderable, Group, RenderableType, RenderHook",
+        "from .control import Control",
+        "from .file_proxy import FileProxy",
+        "from .jupyter import JupyterMixin"
+      ],
+      "docstring": "",
+      "size_kb": 14.99609375,
+      "title": "_RefreshThread: Live Display Updater",
+      "purpose": "This script manages a thread that refreshes a live display at specified intervals.",
+      "key_features": [
+        "Auto-updating live display of renderables",
+        "Configurable refresh rate",
+        "Supports console output redirection"
+      ],
+      "use_case": "Ideal for applications needing real-time updates, such as monitoring system metrics or displaying live data feeds.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Jupyter Notebooks",
+        "Real-time dashboards"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "adaptive-content-awareness.py",
+      "path": "/Users/steven/Documents/pythons/adaptive-content-awareness.py",
+      "category": "Adaptive",
+      "lines": 726,
+      "imports": [
+        "import os",
+        "import json",
+        "import re",
+        "from pathlib import Path",
+        "from collections import defaultdict, Counter",
+        "from datetime import datetime",
+        "from typing import Dict, List, Any, Optional, Tuple",
+        "import mimetypes"
+      ],
+      "docstring": "",
+      "size_kb": 25.5439453125,
+      "title": "Adaptive Content-Aware Analysis System",
+      "purpose": "Dynamically adjusts analysis approach based on file content and context.",
+      "key_features": [
+        "Detects programming languages and frameworks",
+        "Identifies content purpose and structure",
+        "Utilizes regex patterns for accurate detection"
+      ],
+      "use_case": "Ideal for automated content analysis in software development environments.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Code analysis tools",
+        "Static analysis frameworks"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "advanced-content-pipeline.py",
+      "path": "/Users/steven/Documents/pythons/advanced-content-pipeline.py",
+      "category": "Advanced",
+      "lines": 364,
+      "imports": [
+        "import os",
+        "import json",
+        "import logging",
+        "import asyncio",
+        "from typing import Dict, List, Optional, Any",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "from dotenv import load_dotenv",
+        "import openai",
+        "from anthropic import Anthropic"
+      ],
+      "docstring": "",
+      "size_kb": 13.384765625,
+      "title": "Advanced Content Generation Pipeline",
+      "purpose": "An intelligent system for multi-modal content creation using various AI APIs.",
+      "key_features": [
+        "Multi-LLM routing based on content type",
+        "Integrated image generation and editing",
+        "AI-powered audio and music creation",
+        "Social media automation and posting",
+        "Performance analytics and optimization"
+      ],
+      "use_case": "Ideal for content creators looking to automate and enhance their multimedia production processes.",
+      "complexity": "Advanced",
+      "related_services": [
+        "OpenAI",
+        "Anthropic",
+        "Google Generative AI",
+        "AWS Services"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "aggressive-filename-cleaner.py",
+      "path": "/Users/steven/Documents/pythons/aggressive-filename-cleaner.py",
+      "category": "Aggressive",
+      "lines": 331,
+      "imports": [
+        "import os",
+        "import re",
+        "import csv",
+        "from pathlib import Path",
+        "from datetime import datetime"
+      ],
+      "docstring": "",
+      "size_kb": 10.22265625,
+      "title": "Aggressive Filename Cleaner",
+      "purpose": "This script cleans up filenames by removing duplicates and unnecessary patterns.",
+      "key_features": [
+        "Removes duplicate numbers and redundant suffixes",
+        "Cleans generic words and patterns from filenames",
+        "Supports customizable junk patterns and words"
+      ],
+      "use_case": "Use this script to tidy up a directory of Python files with inconsistent naming conventions.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "File Management",
+        "Data Organization"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "ai-conversation-exports.py",
+      "path": "/Users/steven/Documents/pythons/ai-conversation-exports.py",
+      "category": "Ai",
+      "lines": 188,
+      "imports": [
+        "import os",
+        "import shutil",
+        "from pathlib import Path",
+        "import re",
+        "from datetime import datetime"
+      ],
+      "docstring": "",
+      "size_kb": 7.421875,
+      "title": "AI Conversation File Organization Script",
+      "purpose": "This script organizes AI export files into a structured directory format.",
+      "key_features": [
+        "Creates organized directory structure for AI tools",
+        "Moves essential files to designated folders",
+        "Archives obsolete or duplicate files"
+      ],
+      "use_case": "Use this script to tidy up your AI export files after a project to ensure easy access and management.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "File Management",
+        "Data Archiving"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "ai-deep-analyzer.py",
+      "path": "/Users/steven/Documents/pythons/ai-deep-analyzer.py",
+      "category": "AI",
+      "lines": 575,
+      "imports": [
+        "import logging",
+        "import ast",
+        "import difflib",
+        "import hashlib",
+        "import json",
+        "import os",
+        "import sys",
+        "from collections import defaultdict",
+        "from datetime import datetime",
+        "from pathlib import Path"
+      ],
+      "docstring": "",
+      "size_kb": 19.390625,
+      "description": "AI-powered deep intelligent content-aware analyzer for advanced code analysis.",
+      "features": [
+        "Deep AST-based code understanding",
+        "AI-powered semantic analysis (OpenAI/Gemini/Claude)",
+        "Vector embeddings for similarity detection",
+        "Architectural pattern recognition",
+        "Confidence scoring system",
+        "Intelligent categorization & tagging",
+        "Developer-friendly with artistic flair"
+      ],
+      "constants": {
+        "CONSTANT_600": 600,
+        "CONSTANT_2000": 2000
+      },
+      "classes": [
+        {
+          "name": "Colors",
+          "description": "Defines color codes for terminal output."
+        },
+        {
+          "name": "Emojis",
+          "description": "Defines emoji constants for use in output."
+        },
+        {
+          "name": "AICodeAnalyzer",
+          "description": "Handles AI-powered semantic code analysis."
+        }
+      ],
+      "methods": [
+        {
+          "name": "analyze_with_ai",
+          "description": "Performs deep AI analysis of the provided code."
+        }
+      ],
+      "api_keys": [
+        "OPENAI_API_KEY",
+        "GEMINI_API_KEY",
+        "ANTHROPIC_API_KEY",
+        "DEEPSEEK_API_KEY"
+      ],
+      "logging": {
+        "logger": "Configured logger for the module."
+      },
+      "emojis": [
+        "\ud83e\udde0",
+        "\u2728",
+        "\ud83d\ude80",
+        "\ud83d\udd25",
+        "\ud83d\udd2c",
+        "\ud83e\udd16",
+        "\ud83c\udfaf",
+        "\ud83d\udcca",
+        "\ud83d\udca1",
+        "\ud83e\ude84",
+        "\u2705",
+        "\u26a0\ufe0f"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "ai-docs-generator.py",
+      "path": "/Users/steven/Documents/pythons/ai-docs-generator.py",
+      "category": "AI",
+      "lines": 300,
+      "imports": [
+        "import os",
+        "import sys",
+        "from pathlib import Path",
+        "from dotenv import load_dotenv",
+        "import anthropic",
+        "from openai import OpenAI",
+        "import json",
+        "from collections import defaultdict"
+      ],
+      "docstring": "",
+      "size_kb": 10.2177734375,
+      "description": {
+        "script_purpose": "AI-Powered Documentation Generator that uses OpenAI GPT-4 to analyze and document Python scripts.",
+        "key_classes": [
+          {
+            "class_name": "IntelligentDocGenerator",
+            "description": "Generates intelligent documentation using AI analysis.",
+            "methods": [
+              {
+                "method_name": "__init__",
+                "description": "Initializes OpenAI and Anthropic clients with API keys."
+              },
+              {
+                "method_name": "analyze_script_with_ai",
+                "description": "Analyzes a Python script to extract its purpose, features, and other metadata using AI."
+              },
+              {
+                "method_name": "_fallback_analysis",
+                "description": "Provides a basic analysis if AI analysis fails."
+              }
+            ]
+          }
+        ],
+        "dependencies": [
+          "os",
+          "sys",
+          "pathlib",
+          "dotenv",
+          "anthropic",
+          "openai",
+          "json",
+          "collections"
+        ],
+        "complexity_level": "Intermediate",
+        "use_cases": [
+          "Generating documentation for Python scripts automatically.",
+          "Assisting developers in understanding existing codebases."
+        ],
+        "tags": [
+          "documentation",
+          "AI",
+          "automation",
+          "Python"
+        ]
+      },
+      "ai_analyzed": true
+    },
+    {
+      "filename": "ai-stability-code.py",
+      "path": "/Users/steven/Documents/pythons/ai-stability-code.py",
+      "category": "Ai",
+      "lines": 982,
+      "imports": [
+        "import logging",
+        "import os",
+        "import json",
+        "import re",
+        "from pathlib import Path",
+        "from collections import defaultdict, Counter",
+        "from datetime import datetime",
+        "from typing import Dict, List, Any, Optional, Tuple",
+        "from dataclasses import dataclass, asdict"
+      ],
+      "docstring": "",
+      "size_kb": 37.73828125,
+      "title": "Intelligent Code Analyzer for Adaptive Insights",
+      "purpose": "Analyzes code dynamically to provide context-aware insights.",
+      "key_features": [
+        "Detects programming language and frameworks",
+        "Generates detailed analysis reports",
+        "Identifies security, quality, and performance issues"
+      ],
+      "use_case": "Ideal for developers looking to improve code quality and maintainability in large projects.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Code Quality Analysis Tools",
+        "Static Code Analysis Services"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "album-sorting.py",
+      "path": "/Users/steven/Documents/pythons/album-sorting.py",
+      "category": "Album",
+      "lines": 134,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import shutil",
+        "import argparse",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 4.8779296875,
+      "title": "Album Sorting Script for Media Files",
+      "purpose": "Organizes media files into structured directories based on their extensions.",
+      "key_features": [
+        "Automatically creates folders for each media base name",
+        "Moves files to their respective directories if they exist",
+        "Supports dry run mode for safe execution"
+      ],
+      "use_case": "Ideal for organizing large collections of media files after downloading or capturing them.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "File Management",
+        "Media Organization"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "alchemy-quiz.py",
+      "path": "/Users/steven/Documents/pythons/alchemy-quiz.py",
+      "category": "Alchemy",
+      "lines": 162,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import sys",
+        "from dotenv import load_dotenv",
+        "from pydub import AudioSegment",
+        "import requests",
+        "import csv",
+        "from pathlib import Path as PathLib",
+        "from dotenv import load_dotenv"
+      ],
+      "docstring": "",
+      "size_kb": 4.9462890625,
+      "title": "Alchemy Quiz MP3 Generator",
+      "purpose": "Automatically generates MP3 files from quiz data using OpenAI's TTS API.",
+      "key_features": [
+        "Loads API keys from environment files",
+        "Processes CSV files to extract quiz questions and answers",
+        "Generates speech audio files in MP3 format"
+      ],
+      "use_case": "Ideal for educators looking to create audio quizzes for interactive learning.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI TTS API",
+        "Pydub for audio processing"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "alchemyapi-audio-demo-generator.py",
+      "path": "/Users/steven/Documents/pythons/alchemyapi-audio-demo-generator.py",
+      "category": "Alchemyapi",
+      "lines": 553,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import sys",
+        "import json",
+        "import random",
+        "import math",
+        "from datetime import datetime",
+        "from pydub import AudioSegment",
+        "from pydub.generators import Sine, WhiteNoise, Square, Sawtooth",
+        "from pydub.effects import ("
+      ],
+      "docstring": "",
+      "size_kb": 22.29296875,
+      "title": "AlchemyAPI Advanced Audio Demo Generator",
+      "purpose": "Generates complex audio patterns with emotional characteristics for demos.",
+      "key_features": [
+        "Creates MP3s with various emotional profiles",
+        "Utilizes advanced audio generation techniques",
+        "Supports multiple audio effects and modifications"
+      ],
+      "use_case": "Ideal for creating soundtracks for presentations or multimedia projects.",
+      "complexity": "Advanced",
+      "related_services": [
+        "Audio Processing",
+        "Sound Design"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-code-complexity.py",
+      "path": "/Users/steven/Documents/pythons/analyze-code-complexity.py",
+      "category": "Analyze",
+      "lines": 521,
+      "imports": [
+        "import os",
+        "import sys",
+        "import ast",
+        "import csv",
+        "import json",
+        "import subprocess",
+        "import platform",
+        "import datetime",
+        "import networkx as nx",
+        "import matplotlib.pyplot as plt"
+      ],
+      "docstring": "",
+      "size_kb": 17.8984375,
+      "title": "Advanced Python Code Complexity Analyzer",
+      "purpose": "Analyzes Python code complexity and metrics for better maintainability.",
+      "key_features": [
+        "AST-based analysis for code structure",
+        "Integration with complexity and linting tools",
+        "Path relationship analysis between files"
+      ],
+      "use_case": "Ideal for developers looking to improve code quality and identify potential issues in large Python projects.",
+      "complexity": "Advanced",
+      "related_services": [
+        "Code quality assessment tools",
+        "Static analysis services"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-file-migration.py",
+      "path": "/Users/steven/Documents/pythons/analyze-file-migration.py",
+      "category": "Analyze",
+      "lines": 224,
+      "imports": [
+        "import os",
+        "from pathlib import Path",
+        "from collections import defaultdict"
+      ],
+      "docstring": "",
+      "size_kb": 7.9072265625,
+      "title": "Directory Structure Migration Analyzer",
+      "purpose": "Analyzes and categorizes directory structures for migration planning.",
+      "key_features": [
+        "Categorizes directories and files based on naming patterns",
+        "Generates a migration plan for identified categories",
+        "Logs detailed analysis and migration information"
+      ],
+      "use_case": "Useful for organizing and migrating files in a structured manner when transitioning to a new system.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "File Management",
+        "Data Migration"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-file-versions.py",
+      "path": "/Users/steven/Documents/pythons/analyze-file-versions.py",
+      "category": "Analyze",
+      "lines": 237,
+      "imports": [
+        "import os",
+        "import re",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "from collections import defaultdict",
+        "import json"
+      ],
+      "docstring": "",
+      "size_kb": 7.5712890625,
+      "title": "Script Version Analyzer",
+      "purpose": "This script identifies and analyzes versioned Python scripts to determine the best version to keep.",
+      "key_features": [
+        "Identifies versioned scripts using regex patterns",
+        "Scores versions based on size, recency, and line count",
+        "Filters and groups scripts with multiple versions"
+      ],
+      "use_case": "Use this script to clean up your Python project directory by retaining only the most relevant script versions.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "File Management",
+        "Version Control"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-files-comprehensive.py",
+      "path": "/Users/steven/Documents/pythons/analyze-files-comprehensive.py",
+      "category": "Analyze",
+      "lines": 213,
+      "imports": [
+        "import subprocess",
+        "import sys",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "import json"
+      ],
+      "docstring": "",
+      "size_kb": 6.896484375,
+      "title": "Comprehensive File Analyzer Tool",
+      "purpose": "Analyzes codebases using multiple production tools and AI models for quality assessment.",
+      "key_features": [
+        "Runs 14 production tools for code analysis",
+        "Integrates 8 AI models for intelligent categorization",
+        "Provides detailed output and error reporting"
+      ],
+      "use_case": "Ideal for developers looking to assess and improve the quality of their codebase before deployment.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Code Quality Assessment",
+        "Static Code Analysis"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-folder-reader.py",
+      "path": "/Users/steven/Documents/pythons/analyze-folder-reader.py",
+      "category": "Analyze",
+      "lines": 474,
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import ast",
+        "import csv",
+        "import html",
+        "import json",
+        "import os",
+        "import re",
+        "import sys",
+        "from dataclasses import asdict, dataclass, field"
+      ],
+      "docstring": "",
+      "size_kb": 14.6474609375,
+      "title": "Python Repository Document Organizer",
+      "purpose": "A CLI tool to audit and document Python repositories efficiently.",
+      "key_features": [
+        "Audits Python code using AST for module/function summaries",
+        "Generates Markdown and CSV outputs for documentation",
+        "Optional OpenAI integration for enhanced categorization"
+      ],
+      "use_case": "Ideal for developers looking to analyze and document their Python projects.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI",
+        "Markdown",
+        "CSV"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-json-writer.py",
+      "path": "/Users/steven/Documents/pythons/analyze-json-writer.py",
+      "category": "Analyze",
+      "lines": 203,
+      "imports": [
+        "import os",
+        "import json",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "import subprocess",
+        "import sys"
+      ],
+      "docstring": "",
+      "size_kb": 6.5673828125,
+      "title": "Document Cleanup Orchestrator",
+      "purpose": "Automates and coordinates cleanup operations in the Documents folder.",
+      "key_features": [
+        "Runs comprehensive analysis of documents",
+        "Performs Python-specific and general duplicate cleanup",
+        "Generates a summary of cleanup operations"
+      ],
+      "use_case": "Ideal for users needing to manage and clean up their Documents folder efficiently.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "File Management",
+        "Data Organization"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-metadata.py",
+      "path": "/Users/steven/Documents/pythons/analyze-metadata.py",
+      "category": "Analyze",
+      "lines": 202,
+      "imports": [
+        "from __future__ import annotations",
+        "import csv",
+        "import json",
+        "import os",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "from typing import Dict, Iterable, Iterator, Optional",
+        "from PIL import Image, UnidentifiedImageError",
+        "from openai import OpenAI",
+        "from tqdm import tqdm"
+      ],
+      "docstring": "Shared helpers for GPT-based image metadata enrichment.",
+      "size_kb": 6.1298828125,
+      "title": "Image Metadata Enrichment with GPT",
+      "purpose": "This script enriches image metadata using GPT-based analysis.",
+      "key_features": [
+        "Discovers images in a directory recursively",
+        "Extracts metadata from images including dimensions and creation date",
+        "Analyzes images using OpenAI's GPT for enhanced descriptions"
+      ],
+      "use_case": "Use this script to automate the enrichment of image metadata for a digital asset library.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "Image Processing Libraries"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-mp3-transcript-prompts.py",
+      "path": "/Users/steven/Documents/pythons/analyze-mp3-transcript-prompts.py",
+      "category": "Analyze",
+      "lines": 288,
+      "imports": [
+        "import argparse",
+        "import json",
+        "import logging",
+        "import logging.handlers",
+        "import os",
+        "import random",
+        "import re",
+        "import sys",
+        "import threading",
+        "import time"
+      ],
+      "docstring": "",
+      "size_kb": 10.7421875,
+      "title": "MP3 Transcript Analysis and Prompt Generation",
+      "purpose": "This script transcribes audio files and analyzes the resulting text using OpenAI's API.",
+      "key_features": [
+        "Loads API keys from environment files",
+        "Transcribes audio files with error handling and retries",
+        "Formats and parses transcript text into structured segments"
+      ],
+      "use_case": "Use this script to convert audio interviews into text for easier analysis and prompt generation.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "dotenv for environment management"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-prompt.py",
+      "path": "/Users/steven/Documents/pythons/analyze-prompt.py",
+      "category": "Analyze",
+      "lines": 153,
+      "imports": [
+        "import argparse, sys, json, re",
+        "from pathlib import Path"
+      ],
+      "docstring": "",
+      "size_kb": 6.3271484375,
+      "title": "Image Prompt Generator from Transcript",
+      "purpose": "Transforms timestamped transcripts into detailed image prompts.",
+      "key_features": [
+        "Infers mood, setting, and symbolism from text",
+        "Generates multiple image types for each prompt",
+        "Uses lightweight heuristics for rich outputs"
+      ],
+      "use_case": "Ideal for creators needing visual prompts from narrative scripts.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Text Analysis",
+        "Image Generation"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-reader.py",
+      "path": "/Users/steven/Documents/pythons/analyze-reader.py",
+      "category": "Analyze",
+      "lines": 334,
+      "imports": [
+        "import os",
+        "import csv",
+        "import json",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "from typing import Dict, Any, List, Optional",
+        "from PIL import Image, UnidentifiedImageError",
+        "import openai",
+        "from env_d_loader import load_dotenv",
+        "from tqdm import tqdm"
+      ],
+      "docstring": "",
+      "size_kb": 11.0908203125,
+      "title": "Image Analysis with GPT-4o API",
+      "purpose": "This script analyzes images using the GPT-4o Vision API to generate metadata for print-on-demand applications.",
+      "key_features": [
+        "Loads environment variables for API keys",
+        "Analyzes images and returns detailed metadata",
+        "Handles API errors gracefully"
+      ],
+      "use_case": "Use this script to automatically generate SEO-friendly descriptions and tags for images in an e-commerce platform.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "Image Processing"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-transcribe-missing-audio.py",
+      "path": "/Users/steven/Documents/pythons/analyze-transcribe-missing-audio.py",
+      "category": "Analyze",
+      "lines": 278,
+      "imports": [
+        "import os",
+        "import csv",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "from collections import defaultdict"
+      ],
+      "docstring": "",
+      "size_kb": 11.4697265625,
+      "title": "Analyze and Transcribe Missing Audio Content",
+      "purpose": "This script scans directories for MP3 files, checks for existing transcripts, and transcribes any missing content.",
+      "key_features": [
+        "Scans folders for MP3 files",
+        "Checks for existing transcripts",
+        "Transcribes only missing audio content"
+      ],
+      "use_case": "Ideal for content creators needing to ensure all audio files have corresponding transcripts.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Audio Transcription Services",
+        "File Management Tools"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-transcript.py",
+      "path": "/Users/steven/Documents/pythons/analyze-transcript.py",
+      "category": "Analyze",
+      "lines": 245,
+      "imports": [
+        "import logging",
+        "import os",
+        "import sys",
+        "from pathlib import Path",
+        "from dotenv import load_dotenv",
+        "from typing import Optional, Tuple",
+        "from transcription_analyzer import TranscriptionAnalyzer"
+      ],
+      "docstring": "",
+      "size_kb": 7.677734375,
+      "title": "Transcription Analyzer Script",
+      "purpose": "This script analyzes transcription files using the OpenAI API.",
+      "key_features": [
+        "Environment variable loading for API keys",
+        "File and directory validation",
+        "Batch processing of transcription files"
+      ],
+      "use_case": "Use this script to process and analyze multiple transcription files efficiently.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "File processing utilities"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-writer.py",
+      "path": "/Users/steven/Documents/pythons/analyze-writer.py",
+      "category": "Analyze",
+      "lines": 646,
+      "imports": [
+        "import os",
+        "import sys",
+        "import json",
+        "import time",
+        "import logging",
+        "import subprocess",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta",
+        "from typing import Dict, List, Optional, Any",
+        "from dataclasses import dataclass, asdict"
+      ],
+      "docstring": "",
+      "size_kb": 23.89453125,
+      "title": "Simple Quality Monitor for Code Analysis",
+      "purpose": "A lightweight tool for periodic code quality analysis without external dependencies.",
+      "key_features": [
+        "Configurable analysis intervals",
+        "Metrics tracking and reporting",
+        "Detection of quality patterns and anti-patterns"
+      ],
+      "use_case": "Ideal for development teams wanting to maintain code quality over time.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Code Quality Tools",
+        "Static Analysis Tools"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "analyze-youtube-shorts-info.py",
+      "path": "/Users/steven/Documents/pythons/analyze-youtube-shorts-info.py",
+      "category": "Analyze",
+      "lines": 144,
+      "imports": [
+        "from pathlib import Path as PathLib",
+        "from dotenv import load_dotenv",
+        "import openai",
+        "from pathlib import Path",
+        "import logging",
+        "import os",
+        "import sys",
+        "import time",
+        "from concurrent.futures import ThreadPoolExecutor",
+        "from dotenv import load_dotenv"
+      ],
+      "docstring": "",
+      "size_kb": 6.37890625,
+      "title": "YouTube Shorts Audio Analysis Tool",
+      "purpose": "This script transcribes audio from YouTube Shorts and analyzes the content using OpenAI's models.",
+      "key_features": [
+        "Transcribes audio files using OpenAI Whisper",
+        "Analyzes transcribed text for themes and emotional tone",
+        "Handles multiple audio files concurrently"
+      ],
+      "use_case": "Use this script to analyze the content of YouTube Shorts for insights on storytelling and audience engagement.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "dotenv for environment management"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "anthropic-download.py",
+      "path": "/Users/steven/Documents/pythons/anthropic-download.py",
+      "category": "Anthropic",
+      "lines": 774,
+      "imports": [
+        "import os",
+        "import re",
+        "import json",
+        "import shutil",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "import hashlib"
+      ],
+      "docstring": "",
+      "size_kb": 29.0498046875,
+      "title": "Content-Aware Chat Analysis Organizer",
+      "purpose": "Deeply analyzes chat files to uncover patterns and organize insights intelligently.",
+      "key_features": [
+        "Extracts chat structure and metadata",
+        "Categorizes and analyzes code blocks",
+        "Identifies project types and relationships"
+      ],
+      "use_case": "Ideal for developers and researchers looking to analyze chat logs for patterns in communication or code usage.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Chat Analysis Tools",
+        "Code Analysis Platforms"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "api-key-inventory-v2.py",
+      "path": "/Users/steven/Documents/pythons/api-key-inventory-v2.py",
+      "category": "Api",
+      "lines": 286,
+      "imports": [
+        "import os",
+        "import csv",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "from collections import defaultdict",
+        "from typing import Tuple"
+      ],
+      "docstring": "",
+      "size_kb": 11.3623046875,
+      "title": "API Key Inventory V2",
+      "purpose": "Manage and audit your API keys securely and efficiently.",
+      "key_features": [
+        "Displays all keys found in .env files",
+        "Groups keys by category/service",
+        "Flags truly missing important keys without exposing values"
+      ],
+      "use_case": "Use this script to ensure all necessary API keys are present and properly categorized in your development environment.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI",
+        "Midjourney",
+        "ElevenLabs",
+        "Instagram"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "api-key-inventory.py",
+      "path": "/Users/steven/Documents/pythons/api-key-inventory.py",
+      "category": "Api",
+      "lines": 347,
+      "imports": [
+        "import os",
+        "import re",
+        "import csv",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "from collections import defaultdict",
+        "from typing import Tuple"
+      ],
+      "docstring": "",
+      "size_kb": 13.765625,
+      "title": "API Key Inventory Scanner",
+      "purpose": "Effortlessly scan and inventory API keys without revealing sensitive values.",
+      "key_features": [
+        "Scans all .env files in ~/.env.d",
+        "Identifies present and missing API keys",
+        "Generates a CSV report with key statuses"
+      ],
+      "use_case": "Ideal for developers managing multiple API keys across projects to ensure security and compliance.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI",
+        "Google Cloud",
+        "AWS",
+        "Twitter API"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "application-query-expanison.py",
+      "path": "/Users/steven/Documents/pythons/application-query-expanison.py",
+      "category": "Application",
+      "lines": 57,
+      "imports": [
+        "import opik",
+        "from langchain_openai import ChatOpenAI",
+        "from loguru import logger",
+        "from llm_engineering.domain.queries import Query",
+        "from llm_engineering.settings import settings",
+        "from .base import RAGStep",
+        "from .prompt_templates import QueryExpansionTemplate"
+      ],
+      "docstring": "",
+      "size_kb": 1.65234375,
+      "title": "Query Expansion for Enhanced Search Applications",
+      "purpose": "This script generates multiple variations of a given query to improve search results.",
+      "key_features": [
+        "Generates multiple query variations",
+        "Integrates with OpenAI's language model",
+        "Uses a customizable prompt template"
+      ],
+      "use_case": "When developing a search application that needs to enhance user queries for better results.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "LangChain"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "application-self-query.py",
+      "path": "/Users/steven/Documents/pythons/application-self-query.py",
+      "category": "Application",
+      "lines": 53,
+      "imports": [
+        "import opik",
+        "from langchain_openai import ChatOpenAI",
+        "from llm_engineering.application import utils",
+        "from llm_engineering.domain.documents import UserDocument",
+        "from llm_engineering.domain.queries import Query",
+        "from llm_engineering.settings import settings",
+        "from loguru import logger",
+        "from .base import RAGStep",
+        "from .prompt_templates import SelfQueryTemplate"
+      ],
+      "docstring": "",
+      "size_kb": 1.55078125,
+      "title": "Self Query Generation for User Identification",
+      "purpose": "This script generates user information from a query using OpenAI's language model.",
+      "key_features": [
+        "Integrates with OpenAI API for natural language processing",
+        "Extracts user full name from a query",
+        "Creates or retrieves user documents based on extracted names"
+      ],
+      "use_case": "Use this script to automatically identify and document authors from user queries in applications.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "Langchain"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "apply-improvements.py",
+      "path": "/Users/steven/Documents/pythons/apply-improvements.py",
+      "category": "Apply",
+      "lines": 160,
+      "imports": [
+        "import os",
+        "import shutil",
+        "from pathlib import Path",
+        "import argparse"
+      ],
+      "docstring": "",
+      "size_kb": 4.7294921875,
+      "title": "GitHub Repository Improvement Script",
+      "purpose": "This script automates the addition of essential files to GitHub repositories.",
+      "key_features": [
+        "Adds README.md if missing",
+        "Creates .gitignore based on project type",
+        "Generates a default MIT LICENSE file"
+      ],
+      "use_case": "Use this script when setting up a new GitHub repository to ensure it has essential documentation and configuration files.",
+      "complexity": "Beginner",
+      "related_services": [
+        "GitHub",
+        "Git"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "archive-reader.py",
+      "path": "/Users/steven/Documents/pythons/archive-reader.py",
+      "category": "Archive",
+      "lines": 598,
+      "imports": [
+        "import os",
+        "import sys",
+        "import logging",
+        "import shutil",
+        "import hashlib",
+        "import json",
+        "import zipfile",
+        "from pathlib import Path",
+        "from typing import Dict, List, Set, Tuple, Optional",
+        "from collections import defaultdict"
+      ],
+      "docstring": "",
+      "size_kb": 21.5791015625,
+      "title": "Comprehensive Merge and Consolidation Tool",
+      "purpose": "This script merges and organizes Python files from multiple sources into a unified structure.",
+      "key_features": [
+        "Merges files from various directories and archives",
+        "Organizes files into categorized structures",
+        "Detects and handles duplicate files"
+      ],
+      "use_case": "Ideal for developers needing to consolidate multiple Python projects into a single, organized repository.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "File Management",
+        "Data Consolidation"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "ascii-python.py",
+      "path": "/Users/steven/Documents/pythons/ascii-python.py",
+      "category": "Ascii",
+      "lines": 267,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import ast",
+        "import sys",
+        "import json",
+        "import csv",
+        "import platform",
+        "import datetime",
+        "import subprocess",
+        "import radon"
+      ],
+      "docstring": "",
+      "size_kb": 8.43359375,
+      "title": "Python Code Analysis and ASCII Art Generator",
+      "purpose": "This script analyzes Python files in a directory and generates ASCII art for visual representation.",
+      "key_features": [
+        "Generates ASCII art from text input",
+        "Analyzes Python code for complexity and metrics",
+        "Visualizes code structure and dependencies"
+      ],
+      "use_case": "Use this script to assess the quality and complexity of Python codebases while adding a creative ASCII art banner.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Code Quality Analysis",
+        "Static Code Analysis"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "ask-reddit.py",
+      "path": "/Users/steven/Documents/pythons/ask-reddit.py",
+      "category": "Ask",
+      "lines": 213,
+      "imports": [
+        "from pathlib import Path",
+        "import praw",
+        "from clips import *",
+        "from yt_upload import upload_video",
+        "from tinydb import TinyDB, Query",
+        "import json",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 8.1953125,
+      "title": "Ask Reddit Video Creator",
+      "purpose": "Generates videos from Reddit AskReddit submissions and comments.",
+      "key_features": [
+        "Checks for existing uploaded videos",
+        "Generates video clips from Reddit comments",
+        "Logs video creation and uploads to a database"
+      ],
+      "use_case": "Use this script to create engaging video content from popular Reddit discussions.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Reddit API",
+        "PRAW",
+        "TinyDB"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "askreddit-loop-1.py",
+      "path": "/Users/steven/Documents/pythons/askreddit-loop-1.py",
+      "category": "Askreddit",
+      "lines": 153,
+      "imports": [
+        "from pathlib import Path",
+        "import praw",
+        "from clips import *",
+        "from yt_upload import upload_video",
+        "from tinydb import TinyDB, Query",
+        "import json",
+        "import time",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 5.2294921875,
+      "title": "Automated AskReddit Video Creator",
+      "purpose": "This script automates the creation of videos from AskReddit submissions and their comments.",
+      "key_features": [
+        "Generates videos from Reddit submissions",
+        "Checks for existing videos to avoid duplicates",
+        "Logs activities and errors for debugging"
+      ],
+      "use_case": "Use this script to create engaging video content from popular Reddit discussions for YouTube or social media.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Reddit API",
+        "YouTube API",
+        "TinyDB"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "askredditbot.py",
+      "path": "/Users/steven/Documents/pythons/askredditbot.py",
+      "category": "Askredditbot",
+      "lines": 10,
+      "imports": [
+        "import time",
+        "from AskReddit import gen_video_from_hot"
+      ],
+      "docstring": "",
+      "size_kb": 0.1328125,
+      "title": "AskReddit Video Generator Bot",
+      "purpose": "This script generates videos from trending AskReddit posts every 12 hours.",
+      "key_features": [
+        "Generates videos from hot posts",
+        "Automated execution",
+        "Customizable delay"
+      ],
+      "use_case": "Use this bot to create engaging video content from popular Reddit discussions for social media.",
+      "complexity": "Beginner",
+      "related_services": [
+        "Reddit API",
+        "Video editing libraries"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "assemblyai-audio-transcriber.py",
+      "path": "/Users/steven/Documents/pythons/assemblyai-audio-transcriber.py",
+      "category": "Assemblyai",
+      "lines": 94,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import time",
+        "import config",
+        "import requests"
+      ],
+      "docstring": "\nThis script is used to generate a transcript from an audio file using AssemblyAI api.\n",
+      "size_kb": 2.6474609375,
+      "title": "AssemblyAI Audio Transcriber",
+      "purpose": "This script transcribes audio files into text using the AssemblyAI API.",
+      "key_features": [
+        "Uploads audio files to AssemblyAI",
+        "Requests transcription and polls for completion",
+        "Saves the transcript in SRT format"
+      ],
+      "use_case": "Use this script to convert recorded meetings or lectures into text for easy reference.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "AssemblyAI",
+        "Audio Processing APIs"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "audio-analyzer.py",
+      "path": "/Users/steven/Documents/pythons/audio-analyzer.py",
+      "category": "Audio",
+      "lines": 138,
+      "imports": [
+        "from pathlib import Path",
+        "from openai import OpenAI",
+        "import logging",
+        "from pathlib import Path as PathLib",
+        "from dotenv import load_dotenv",
+        "import os",
+        "import subprocess",
+        "from dotenv import load_dotenv"
+      ],
+      "docstring": "",
+      "size_kb": 4.6357421875,
+      "title": "Audio Analyzer with Transcription and Analysis",
+      "purpose": "This script transcribes audio files and analyzes song lyrics for deeper insights.",
+      "key_features": [
+        "Transcribes audio using OpenAI's Whisper API",
+        "Generates timestamps for transcribed text",
+        "Analyzes song lyrics for themes and emotional content"
+      ],
+      "use_case": "Use this script to transcribe and analyze music lyrics for research or creative projects.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "Whisper API"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "audio-normalize.py",
+      "path": "/Users/steven/Documents/pythons/audio-normalize.py",
+      "category": "Audio",
+      "lines": 25,
+      "imports": [
+        "from pydub import AudioSegment, effects",
+        "import random",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 0.6767578125,
+      "title": "Audio Normalization and Voice Selection Script",
+      "purpose": "This script normalizes audio levels and randomly selects a voice for audio processing.",
+      "key_features": [
+        "Normalizes audio to a specified dBFS level",
+        "Randomly selects a voice from predefined options",
+        "Logs selected voice for tracking"
+      ],
+      "use_case": "Use this script when preparing audio files for consistent playback volume and selecting voice styles for narration.",
+      "complexity": "Beginner",
+      "related_services": [
+        "Audio Processing",
+        "Voice Synthesis"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "audio-thinketh.py",
+      "path": "/Users/steven/Documents/pythons/audio-thinketh.py",
+      "category": "Audio",
+      "lines": 148,
+      "imports": [
+        "import os, random",
+        "from pathlib import Path",
+        "from dotenv import load_dotenv",
+        "from docx import Document",
+        "from pydub import AudioSegment",
+        "from utils.splitter import split_text",
+        "from utils.mixer import overlay_ambience, widen, normalize_audio",
+        "from utils.styles import apply_cheerful_guide_style",
+        "from utils.model_select import choose_best_openai_model, can_use_hf, hf_params",
+        "import requests"
+      ],
+      "docstring": "",
+      "size_kb": 4.759765625,
+      "title": "Cinematic Audio Synthesis Tool",
+      "purpose": "Generates cinematic audio experiences from text documents.",
+      "key_features": [
+        "Dynamic voice rotation for varied narration",
+        "Ambient sound overlays tailored to chapters",
+        "Audio normalization and mastering for quality output"
+      ],
+      "use_case": "Ideal for creating engaging audiobooks or guided meditations from written content.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI TTS",
+        "Hugging Face TTS"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "audio-transcription-pipeline.py",
+      "path": "/Users/steven/Documents/pythons/audio-transcription-pipeline.py",
+      "category": "Audio",
+      "lines": 101,
+      "imports": [
+        "from __future__ import annotations",
+        "import os",
+        "from pathlib import Path",
+        "from typing import Iterable, Optional",
+        "from openai import OpenAI",
+        "from .chat import run_chat_completion"
+      ],
+      "docstring": "Shared audio transcription + analysis pipeline helpers.",
+      "size_kb": 3.05859375,
+      "title": "Audio Transcription and Analysis Pipeline",
+      "purpose": "This script transcribes audio files and analyzes the transcripts using OpenAI's models.",
+      "key_features": [
+        "Transcribes audio files using Whisper model",
+        "Formats transcripts with timestamps",
+        "Analyzes transcripts with customizable prompts"
+      ],
+      "use_case": "Ideal for processing lecture recordings to generate and analyze transcripts for study purposes.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "Audio Processing Libraries"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "audio.py",
+      "path": "/Users/steven/Documents/pythons/audio.py",
+      "category": "Audio",
+      "lines": 64,
+      "imports": [
+        "import os",
+        "import whisper",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 1.66015625,
+      "title": "Audio Transcription Script Using Whisper",
+      "purpose": "This script transcribes MP3 audio files into text with timestamps.",
+      "key_features": [
+        "Loads Whisper model for transcription",
+        "Processes all MP3 files in a directory",
+        "Saves transcriptions with timestamps to text files"
+      ],
+      "use_case": "Ideal for converting recorded meetings or lectures into written format for easy reference.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Speech-to-Text APIs",
+        "Audio Processing Libraries"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "audiobook-producer.py",
+      "path": "/Users/steven/Documents/pythons/audiobook-producer.py",
+      "category": "Audiobook",
+      "lines": 352,
+      "imports": [
+        "import os",
+        "import json",
+        "import time",
+        "from pathlib import Path",
+        "from openai import OpenAI",
+        "from datetime import datetime"
+      ],
+      "docstring": "",
+      "size_kb": 15.5673828125,
+      "title": "OpenAI TTS Audiobook Producer",
+      "purpose": "Generates emotional audiobooks using OpenAI's text-to-speech technology.",
+      "key_features": [
+        "Supports multiple emotional tones for narration",
+        "Customizable SSML for enhanced audio delivery",
+        "Automatic creation of audio files in a designated directory"
+      ],
+      "use_case": "Ideal for authors and content creators looking to produce engaging audiobooks with emotional depth.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "OpenAI API",
+        "Text-to-Speech Services"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "automated-fixer.py",
+      "path": "/Users/steven/Documents/pythons/automated-fixer.py",
+      "category": "Automated",
+      "lines": 189,
+      "imports": [],
+      "docstring": "",
+      "size_kb": 6.5654296875,
+      "title": "Automated Code Fixer for Python Scripts",
+      "purpose": "This script automatically adds docstrings and fixes common code issues in Python files.",
+      "key_features": [
+        "Adds missing function and module docstrings",
+        "Creates backups before modifying files",
+        "Fixes magic numbers and hardcoded paths"
+      ],
+      "use_case": "Ideal for developers looking to improve code documentation and maintainability in large Python projects.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Code Quality Tools",
+        "Static Code Analysis"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "automation-playwright-screenshot.py",
+      "path": "/Users/steven/Documents/pythons/automation-playwright-screenshot.py",
+      "category": "Automation",
+      "lines": 55,
+      "imports": [
+        "from pathlib import Path",
+        "from playwright.sync_api import sync_playwright",
+        "from rich.progress import track",
+        "from utils.console import print_step, print_substep"
+      ],
+      "docstring": "",
+      "size_kb": 1.939453125,
+      "title": "Reddit Post Screenshot Downloader",
+      "purpose": "This script automates the process of downloading screenshots of Reddit posts and their comments.",
+      "key_features": [
+        "Downloads screenshots of Reddit posts and comments",
+        "Handles NSFW content with a click-through",
+        "Organizes screenshots in a specified directory"
+      ],
+      "use_case": "Use this script to capture visual content from Reddit threads for analysis or sharing.",
+      "complexity": "Intermediate",
+      "related_services": [
+        "Reddit API",
+        "Playwright"
+      ],
+      "ai_analyzed": true
+    },
+    {
+      "filename": "automation-selenium-content.py",
+      "path": "/Users/steven/Documents/pythons/automation-selenium-content.py",
+      "category": "Automation",
+      "lines": 480,
+      "imports": [
+        "import json",
+        "import random",
+        "import datetime",
+        "from typing import List, Dict, Any",
+        "import os"
+      ],
+      "docstring": "",
+      "size_kb": 19.77734375
+    },
+    {
+      "filename": "avatararts-flatten.py",
+      "path": "/Users/steven/Documents/pythons/avatararts-flatten.py",
+      "category": "Avatararts",
+      "lines": 212,
+      "imports": [
+        "import os",
+        "import shutil",
+        "import re",
+        "from pathlib import Path"
+      ],
+      "docstring": "",
+      "size_kb": 7.0595703125
+    },
+    {
+      "filename": "aws-polly-tts.py",
+      "path": "/Users/steven/Documents/pythons/aws-polly-tts.py",
+      "category": "Aws",
+      "lines": 93,
+      "imports": [
+        "import random",
+        "import sys",
+        "from boto3 import Session",
+        "from botocore.exceptions import BotoCoreError, ClientError, ProfileNotFound",
+        "from utils import settings",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 2.6123046875
+    },
+    {
+      "filename": "aws-sqs-image-queue.py",
+      "path": "/Users/steven/Documents/pythons/aws-sqs-image-queue.py",
+      "category": "Aws",
+      "lines": 223,
+      "imports": [
+        "from pathlib import Path",
+        "import csv",
+        "import os",
+        "import time",
+        "from datetime import datetime",
+        "from dotenv import load_dotenv",
+        "from openai import OpenAI",
+        "from PIL import Image, UnidentifiedImageError",
+        "import logging",
+        "from pathlib import Path as PathLib"
+      ],
+      "docstring": "",
+      "size_kb": 7.1640625
+    },
+    {
+      "filename": "backlinker.py",
+      "path": "/Users/steven/Documents/pythons/backlinker.py",
+      "category": "Backlinker",
+      "lines": 50,
+      "imports": [
+        "import json",
+        "import re",
+        "import sys",
+        "import requests",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 1.5634765625
+    },
+    {
+      "filename": "backup-avatararts-system.py",
+      "path": "/Users/steven/Documents/pythons/backup-avatararts-system.py",
+      "category": "Backup",
+      "lines": 554,
+      "imports": [
+        "import os",
+        "import shutil",
+        "import json",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "import hashlib"
+      ],
+      "docstring": "",
+      "size_kb": 17.904296875
+    },
+    {
+      "filename": "backup-installations.py",
+      "path": "/Users/steven/Documents/pythons/backup-installations.py",
+      "category": "Backup",
+      "lines": 51,
+      "imports": [
+        "import subprocess",
+        "import csv",
+        "import os",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 1.3671875
+    },
+    {
+      "filename": "backupcsv.py",
+      "path": "/Users/steven/Documents/pythons/backupcsv.py",
+      "category": "Backupcsv",
+      "lines": 66,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import re",
+        "import subprocess",
+        "import pandas as pd"
+      ],
+      "docstring": "",
+      "size_kb": 2.1279296875
+    },
+    {
+      "filename": "basic-follow-unfollow.py",
+      "path": "/Users/steven/Documents/pythons/basic-follow-unfollow.py",
+      "category": "Basic",
+      "lines": 116,
+      "imports": [
+        "from instapy import InstaPy, smart_run"
+      ],
+      "docstring": "\nThis template is written by @cormo1990\n\nWhat does this quickstart script aim to do?\n- Basic follow/unfollow activity.\n\nNOTES:\n- I don't want to automate comment and too much likes because I want to d",
+      "size_kb": 3.2626953125
+    },
+    {
+      "filename": "batch-folder-writer.py",
+      "path": "/Users/steven/Documents/pythons/batch-folder-writer.py",
+      "category": "Batch",
+      "lines": 72,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import subprocess",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 2.3251953125
+    },
+    {
+      "filename": "batch-image.py",
+      "path": "/Users/steven/Documents/pythons/batch-image.py",
+      "category": "Batch",
+      "lines": 444,
+      "imports": [
+        "import os",
+        "import sys",
+        "import csv",
+        "import json",
+        "import time",
+        "import logging",
+        "import argparse",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "from typing import Dict, Any, List, Optional"
+      ],
+      "docstring": "",
+      "size_kb": 16.8974609375
+    },
+    {
+      "filename": "batch-info.py",
+      "path": "/Users/steven/Documents/pythons/batch-info.py",
+      "category": "Batch",
+      "lines": 176,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "from openai import OpenAI",
+        "import logging",
+        "from pathlib import Path as PathLib",
+        "from dotenv import load_dotenv",
+        "from dotenv import load_dotenv"
+      ],
+      "docstring": "",
+      "size_kb": 5.310546875
+    },
+    {
+      "filename": "batch-processor.py",
+      "path": "/Users/steven/Documents/pythons/batch-processor.py",
+      "category": "Batch",
+      "lines": 71,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import google_auth_oauthlib.flow",
+        "import googleapiclient.discovery",
+        "import googleapiclient.errors",
+        "import pandas as pd",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 1.8857421875
+    },
+    {
+      "filename": "batch-transcript-finder.py",
+      "path": "/Users/steven/Documents/pythons/batch-transcript-finder.py",
+      "category": "Batch",
+      "lines": 128,
+      "imports": [
+        "import os",
+        "import csv",
+        "from pathlib import Path",
+        "from datetime import datetime"
+      ],
+      "docstring": "",
+      "size_kb": 4.12109375
+    },
+    {
+      "filename": "bookmarks.py",
+      "path": "/Users/steven/Documents/pythons/bookmarks.py",
+      "category": "Bookmarks",
+      "lines": 30,
+      "imports": [
+        "from pypdf import PdfReader, PdfWriter"
+      ],
+      "docstring": "",
+      "size_kb": 0.708984375
+    },
+    {
+      "filename": "bot-instagram.py",
+      "path": "/Users/steven/Documents/pythons/bot-instagram.py",
+      "category": "Bot",
+      "lines": 65,
+      "imports": [
+        "import logging",
+        "import os",
+        "import platform",
+        "import art",
+        "import botComment",
+        "import botDraw",
+        "import botLike",
+        "import botStories"
+      ],
+      "docstring": "",
+      "size_kb": 1.357421875
+    },
+    {
+      "filename": "bot-like.py",
+      "path": "/Users/steven/Documents/pythons/bot-like.py",
+      "category": "Bot",
+      "lines": 212,
+      "imports": [
+        "import logging",
+        "import os",
+        "import random",
+        "from pathlib import Path",
+        "from time import sleep",
+        "import art",
+        "from selenium import webdriver",
+        "from selenium.webdriver.common.keys import Keys"
+      ],
+      "docstring": "",
+      "size_kb": 5.9462890625
+    },
+    {
+      "filename": "bot-photo.py",
+      "path": "/Users/steven/Documents/pythons/bot-photo.py",
+      "category": "Bot",
+      "lines": 125,
+      "imports": [
+        "import os",
+        "from io import open",
+        "from tqdm import tqdm"
+      ],
+      "docstring": "",
+      "size_kb": 3.9345703125
+    },
+    {
+      "filename": "brand.py",
+      "path": "/Users/steven/Documents/pythons/brand.py",
+      "category": "Brand",
+      "lines": 28,
+      "imports": [
+        "from __future__ import annotations",
+        "import dataclasses",
+        "import json",
+        "from typing import Any, Dict"
+      ],
+      "docstring": "",
+      "size_kb": 0.7021484375
+    },
+    {
+      "filename": "breakdown.py",
+      "path": "/Users/steven/Documents/pythons/breakdown.py",
+      "category": "Breakdown",
+      "lines": 65,
+      "imports": [
+        "from pathlib import Path",
+        "from openai import OpenAI",
+        "import logging",
+        "import os"
+      ],
+      "docstring": "",
+      "size_kb": 1.83203125
+    },
+    {
+      "filename": "bubblespider-amazon-scraper.py",
+      "path": "/Users/steven/Documents/pythons/bubblespider-amazon-scraper.py",
+      "category": "Bubblespider",
+      "lines": 45,
+      "imports": [
+        "import csv",
+        "import os",
+        "import re",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 1.33203125
+    },
+    {
+      "filename": "build.py",
+      "path": "/Users/steven/Documents/pythons/build.py",
+      "category": "Build",
+      "lines": 175,
+      "imports": [
+        "import argparse",
+        "import os",
+        "import sys",
+        "import json",
+        "import jinja2",
+        "from collections import OrderedDict",
+        "import simplegallery.common as spg_common",
+        "from simplegallery.logic.gallery_logic import get_gallery_logic"
+      ],
+      "docstring": "",
+      "size_kb": 5.6201171875
+    },
+    {
+      "filename": "business-intelligence.py",
+      "path": "/Users/steven/Documents/pythons/business-intelligence.py",
+      "category": "Business",
+      "lines": 280,
+      "imports": [
+        "import os",
+        "import sys",
+        "import json",
+        "import asyncio",
+        "import requests",
+        "import openai",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "from typing import Dict, List, Any",
+        "from anthropic import Anthropic"
+      ],
+      "docstring": "",
+      "size_kb": 8.7509765625
+    },
+    {
+      "filename": "calculator.py",
+      "path": "/Users/steven/Documents/pythons/calculator.py",
+      "category": "Calculator",
+      "lines": 56,
+      "imports": [
+        "import math",
+        "from mcp.server import FastMCP"
+      ],
+      "docstring": "",
+      "size_kb": 1.5224609375
+    },
+    {
+      "filename": "capture.py",
+      "path": "/Users/steven/Documents/pythons/capture.py",
+      "category": "Capture",
+      "lines": 169,
+      "imports": [
+        "import sys",
+        "import pytest",
+        "from IPython.utils import capture"
+      ],
+      "docstring": "Tests for IPython.utils.capture",
+      "size_kb": 5.2080078125
+    },
+    {
+      "filename": "catalog-to-csv.py",
+      "path": "/Users/steven/Documents/pythons/catalog-to-csv.py",
+      "category": "Catalog",
+      "lines": 140,
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse, base64, csv, io, json, os",
+        "from dataclasses import dataclass, asdict",
+        "from pathlib import Path",
+        "from typing import Any, Dict, List, Optional, Tuple",
+        "from PIL import Image, UnidentifiedImageError, ExifTags",
+        "from tqdm import tqdm",
+        "from openai import OpenAI"
+      ],
+      "docstring": "",
+      "size_kb": 5.2744140625
+    },
+    {
+      "filename": "categorizer.py",
+      "path": "/Users/steven/Documents/pythons/categorizer.py",
+      "category": "Categorizer",
+      "lines": 108,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "from openai import OpenAI",
+        "import logging",
+        "import hashlib",
+        "import re",
+        "import shutil"
+      ],
+      "docstring": "",
+      "size_kb": 3.3330078125
+    },
+    {
+      "filename": "category-readme-generator.py",
+      "path": "/Users/steven/Documents/pythons/category-readme-generator.py",
+      "category": "Category",
+      "lines": 232,
+      "imports": [
+        "import json",
+        "from pathlib import Path",
+        "from collections import defaultdict",
+        "from typing import Dict, List"
+      ],
+      "docstring": "",
+      "size_kb": 6.4638671875
+    },
+    {
+      "filename": "chat-base.py",
+      "path": "/Users/steven/Documents/pythons/chat-base.py",
+      "category": "Chat",
+      "lines": 28,
+      "imports": [
+        "import os",
+        "from sample_config import Config",
+        "from config import Config",
+        "from chatbase import Message",
+        "from pyrogram import Client, Filters",
+        "from translation import Translation"
+      ],
+      "docstring": "",
+      "size_kb": 0.6171875
+    },
+    {
+      "filename": "chatgpt-conversation-exporter.py",
+      "path": "/Users/steven/Documents/pythons/chatgpt-conversation-exporter.py",
+      "category": "Chatgpt",
+      "lines": 509,
+      "imports": [
+        "import os",
+        "import re",
+        "import html",
+        "import json",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "from typing import Dict, List, Optional, Any",
+        "import argparse"
+      ],
+      "docstring": "",
+      "size_kb": 17.9873046875
+    },
+    {
+      "filename": "chatgpt.py",
+      "path": "/Users/steven/Documents/pythons/chatgpt.py",
+      "category": "Chatgpt",
+      "lines": 190,
+      "imports": [
+        "import os",
+        "import sys",
+        "from typing import List, Dict, Any",
+        "from openai import OpenAI",
+        "from dotenv import load_dotenv",
+        "import json"
+      ],
+      "docstring": "",
+      "size_kb": 6.7666015625
+    },
+    {
+      "filename": "chatprompt.py",
+      "path": "/Users/steven/Documents/pythons/chatprompt.py",
+      "category": "Chatprompt",
+      "lines": 56,
+      "imports": [
+        "from __future__ import annotations",
+        "from dataclasses import dataclass",
+        "from typing import Any, Dict, Iterable, Mapping, Optional",
+        "from openai import OpenAI"
+      ],
+      "docstring": "Shared helpers for chat-based OpenAI interactions.",
+      "size_kb": 1.439453125
+    },
+    {
+      "filename": "check-1.py",
+      "path": "/Users/steven/Documents/pythons/check-1.py",
+      "category": "Check",
+      "lines": 19,
+      "imports": [
+        "import sys",
+        "from pypdf import PdfReader",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 0.4296875
+    },
+    {
+      "filename": "check-file.py",
+      "path": "/Users/steven/Documents/pythons/check-file.py",
+      "category": "Check",
+      "lines": 85,
+      "imports": [
+        "import os",
+        "from pathlib import Path",
+        "from shutil import move, rmtree",
+        "from sys import platform",
+        "from uuid import uuid1",
+        "from urllib.request import urlretrieve",
+        "from zipfile import ZipFile",
+        "import tarfile"
+      ],
+      "docstring": "",
+      "size_kb": 2.7197265625
+    },
+    {
+      "filename": "check-modules.py",
+      "path": "/Users/steven/Documents/pythons/check-modules.py",
+      "category": "Check",
+      "lines": 54,
+      "imports": [
+        "import sys",
+        "import logging",
+        "import requests",
+        "import colorama",
+        "import asyncio",
+        "import proxybroker",
+        "import warnings",
+        "import warnings",
+        "from colorama import init"
+      ],
+      "docstring": "",
+      "size_kb": 1.4072265625
+    },
+    {
+      "filename": "check-quality.py",
+      "path": "/Users/steven/Documents/pythons/check-quality.py",
+      "category": "Check",
+      "lines": 94,
+      "imports": [
+        "import sys",
+        "import json",
+        "from pathlib import Path",
+        "from simple_quality_monitor import SimpleQualityMonitor"
+      ],
+      "docstring": "",
+      "size_kb": 3.5517578125
+    },
+    {
+      "filename": "check.py",
+      "path": "/Users/steven/Documents/pythons/check.py",
+      "category": "Check",
+      "lines": 75,
+      "imports": [
+        "from dataclasses import dataclass",
+        "import json",
+        "import sys",
+        "import logging"
+      ],
+      "docstring": "",
+      "size_kb": 3.1298828125
+    },
+    {
+      "filename": "classify.py",
+      "path": "/Users/steven/Documents/pythons/classify.py",
+      "category": "Classify",
+      "lines": 196,
+      "imports": [
+        "from pathlib import Path",
+        "import ast",
+        "import os",
+        "from openai import OpenAI",
+        "import logging",
+        "from pathlib import Path as PathLib",
+        "from dotenv import load_dotenv",
+        "import csv",
+        "from datetime import datetime",
+        "from dotenv import load_dotenv"
+      ],
+      "docstring": "",
+      "size_kb": 6.2373046875
+    },
+    {
+      "filename": "claude-anthropic-download.py",
+      "path": "/Users/steven/Documents/pythons/claude-anthropic-download.py",
+      "category": "Claude",
+      "lines": 1307,
+      "imports": [
+        "import os",
+        "import re",
+        "import json",
+        "import shutil",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "import hashlib"
+      ],
+      "docstring": "",
+      "size_kb": 49.1396484375
+    },
+    {
+      "filename": "claude-chief.py",
+      "path": "/Users/steven/Documents/pythons/claude-chief.py",
+      "category": "Claude",
+      "lines": 946,
+      "imports": [
+        "import os",
+        "import sys",
+        "import json",
+        "import time",
+        "import asyncio",
+        "import requests",
+        "import openai",
+        "from datetime import datetime, timedelta",
+        "from pathlib import Path",
+        "from typing import Dict, List, Any, Optional"
+      ],
+      "docstring": "",
+      "size_kb": 30.638671875
+    },
+    {
+      "filename": "claude-code-review-system.py",
+      "path": "/Users/steven/Documents/pythons/claude-code-review-system.py",
+      "category": "Claude",
+      "lines": 388,
+      "imports": [
+        "import os",
+        "import sys",
+        "import json",
+        "import asyncio",
+        "import requests",
+        "import openai",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "from typing import Dict, List",
+        "from anthropic import Anthropic"
+      ],
+      "docstring": "",
+      "size_kb": 10.83984375
+    },
+    {
+      "filename": "claude-deep.py",
+      "path": "/Users/steven/Documents/pythons/claude-deep.py",
+      "category": "Claude",
+      "lines": 799,
+      "imports": [
+        "import ast",
+        "import re",
+        "from pathlib import Path",
+        "from collections import defaultdict, Counter",
+        "from datetime import datetime"
+      ],
+      "docstring": "",
+      "size_kb": 28.267578125
+    },
+    {
+      "filename": "claude-script.py",
+      "path": "/Users/steven/Documents/pythons/claude-script.py",
+      "category": "Claude",
+      "lines": 39,
+      "imports": [
+        "from dataclasses import dataclass",
+        "from typing import Any, Optional"
+      ],
+      "docstring": "Web search server tool for the agent framework.",
+      "size_kb": 1.1513671875
+    },
+    {
+      "filename": "clean-flatten-names.py",
+      "path": "/Users/steven/Documents/pythons/clean-flatten-names.py",
+      "category": "Clean",
+      "lines": 139,
+      "imports": [
+        "import os",
+        "import shutil",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "import re"
+      ],
+      "docstring": "",
+      "size_kb": 4.197265625
+    },
+    {
+      "filename": "clean-folder-names-no-vols.py",
+      "path": "/Users/steven/Documents/pythons/clean-folder-names-no-vols.py",
+      "category": "Clean",
+      "lines": 286,
+      "imports": [
+        "import os",
+        "import csv",
+        "import shutil",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "from collections import defaultdict",
+        "import re"
+      ],
+      "docstring": "",
+      "size_kb": 11.2421875
+    },
+    {
+      "filename": "cli-config-manager.py",
+      "path": "/Users/steven/Documents/pythons/cli-config-manager.py",
+      "category": "Cli",
+      "lines": 796,
+      "imports": [
+        "from pathlib import Path",
+        "import os",
+        "import json",
+        "import webbrowser",
+        "import time",
+        "from typing import Dict, List, Any",
+        "from dataclasses import dataclass, asdict"
+      ],
+      "docstring": "",
+      "size_kb": 30.3115234375
+    },
+    {
+      "filename": "cli.py",
+      "path": "/Users/steven/Documents/pythons/cli.py",
+      "category": "Cli",
+      "lines": 103,
+      "imports": [
+        "import os",
+        "import sys",
+        "import argparse",
+        "from anthropic import Anthropic"
+      ],
+      "docstring": "\nSimple Claude CLI for terminal usage\nUsage: python claude-cli.py \"Your question here\"\n",
+      "size_kb": 3.0048828125
+    },
+    {
+      "filename": "client-v1.py",
+      "path": "/Users/steven/Documents/pythons/client-v1.py",
+      "category": "Client",
+      "lines": 265,
+      "imports": [
+        "from pathlib import Path",
+        "import ftplib",
+        "import sys",
+        "import traceback",
+        "import clientUI",
+        "import requests",
+        "import scriptwrapper",
+        "import settings",
+        "import logging",
+        "from time import sleep"
+      ],
+      "docstring": "",
+      "size_kb": 7.9091796875
+    },
+    {
+      "filename": "clip-editor.py",
+      "path": "/Users/steven/Documents/pythons/clip-editor.py",
+      "category": "Clip",
+      "lines": 225,
+      "imports": [
+        "import random",
+        "from modules.configHandler import *",
+        "from moviepy.editor import *",
+        "from PIL import Image, ImageDraw, ImageFont",
+        "import cv2",
+        "import cv2",
+        "import cv2"
+      ],
+      "docstring": "",
+      "size_kb": 7.240234375
+    },
+    {
+      "filename": "clips-1.py",
+      "path": "/Users/steven/Documents/pythons/clips-1.py",
+      "category": "Clips",
+      "lines": 180,
+      "imports": [
+        "import string",
+        "import random",
+        "import textwrap",
+        "from PIL import Image",
+        "from PIL import ImageDraw",
+        "from PIL import ImageFont",
+        "import numpy as np",
+        "from moviepy.editor import *",
+        "import soundfile as sf",
+        "from pydub import AudioSegment"
+      ],
+      "docstring": "",
+      "size_kb": 4.7421875
+    }
+  ],
+  "insights": []
+}

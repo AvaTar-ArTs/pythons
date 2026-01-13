@@ -1,0 +1,1545 @@
+action,current_name,suggested_name,reason,category,description,lines,size_kb
+DELETE,comprehensive-rename-cleaner.py,,Third-party code: from .compat import,Cleanup,from .compat import,376,16.07
+DELETE,createdb.py,,Third-party code: Example file,Cleanup,Example file,5,0.15
+DELETE,development-utils-jsonutil.py,,Third-party code: # Copyright (c),Cleanup,# Copyright (c),198,5.93
+DELETE,extract-files.py,,Third-party code: Example file,Cleanup,Example file,61,1.72
+DELETE,get-hashtags-from.py,,"Third-party code: sys.path.append(os.path.join(sys.path[0], ""../""))",Cleanup,"sys.path.append(os.path.join(sys.path[0], ""../""))",82,1.87
+DELETE,image-add-text-overlay.py,,Third-party code: Example file,Cleanup,Example file,65,1.74
+DELETE,instagram-archive-media.py,,Third-party code: instabot example,Cleanup,instabot example,36,0.77
+DELETE,instagram-blacklist-timeline-liker.py,,Third-party code: instabot example,Cleanup,instabot example,37,0.96
+DELETE,instagram-block-bots.py,,Third-party code: instabot example,Cleanup,instabot example,34,0.89
+DELETE,instagram-collect-stats.py,,Third-party code: instabot example,Cleanup,instabot example,31,0.77
+DELETE,instagram-delete-posts.py,,Third-party code: instabot example,Cleanup,instabot example,24,0.57
+DELETE,instagram-direct-send-photo.py,,Third-party code: instabot example,Cleanup,instabot example,23,0.55
+DELETE,instagram-download-photos.py,,Third-party code: instabot example,Cleanup,instabot example,27,0.68
+DELETE,instagram-download-your-photos.py,,Third-party code: instabot example,Cleanup,instabot example,18,0.27
+DELETE,instagram-filter-blacklist-hashtag.py,,"Third-party code: sys.path.append(os.path.join(sys.path[0], ""../""))",Cleanup,"sys.path.append(os.path.join(sys.path[0], ""../""))",26,0.64
+DELETE,instagram-filter-private-profiles.py,,"Third-party code: sys.path.append(os.path.join(sys.path[0], ""../""))",Cleanup,"sys.path.append(os.path.join(sys.path[0], ""../""))",18,0.44
+DELETE,instagram-follow-last-user.py,,Third-party code: instabot example,Cleanup,instabot example,32,0.86
+DELETE,instagram-follow-user-followers.py,,Third-party code: instabot example,Cleanup,instabot example,32,0.79
+DELETE,instagram-follow-user-following.py,,Third-party code: instabot example,Cleanup,instabot example,26,0.63
+DELETE,instagram-follow-users-from.py,,Third-party code: instabot example,Cleanup,instabot example,32,0.83
+DELETE,instagram-follow-users.py,,Third-party code: instabot example,Cleanup,instabot example,27,0.68
+DELETE,instagram-followers.py,,Third-party code: instabot example,Cleanup,instabot example,90,2.39
+DELETE,instagram-infinity-feedliker.py,,Third-party code: instabot example,Cleanup,instabot example,29,0.61
+DELETE,instagram-infinity-hashtags-follower.py,,Third-party code: instabot example,Cleanup,instabot example,32,0.76
+DELETE,instagram-infinity-hashtags-liker.py,,Third-party code: instabot example,Cleanup,instabot example,31,0.71
+DELETE,instagram-interact.py,,Third-party code: instabot example,Cleanup,instabot example,58,1.48
+DELETE,instagram-like-follow.py,,Third-party code: instabot example,Cleanup,instabot example,54,1.34
+DELETE,instagram-like-hashtags-from.py,,Third-party code: instabot example,Cleanup,instabot example,32,0.79
+DELETE,instagram-like-hashtags.py,,Third-party code: instabot example,Cleanup,instabot example,26,0.63
+DELETE,instagram-like-location-feed.py,,"Third-party code: sys.path.append(os.path.join(sys.path[0], ""../""))",Cleanup,"sys.path.append(os.path.join(sys.path[0], ""../""))",19,0.6
+DELETE,instagram-like-user-followers.py,,Third-party code: instabot example,Cleanup,instabot example,26,0.64
+DELETE,instagram-like-user-following.py,,Third-party code: instabot example,Cleanup,instabot example,26,0.64
+DELETE,instagram-like-users-from.py,,Third-party code: instabot example,Cleanup,instabot example,33,0.87
+DELETE,instagram-like-users.py,,Third-party code: instabot example,Cleanup,instabot example,27,0.69
+DELETE,instagram-like-your-last.py,,Third-party code: instabot example,Cleanup,instabot example,40,0.96
+DELETE,instagram-message-users.py,,Third-party code: instabot example,Cleanup,instabot example,92,2.89
+DELETE,instagram-parse.py,,Third-party code: instabot example,Cleanup,instabot example,93,2.96
+DELETE,instagram-repost-photo.py,,Third-party code: instabot example,Cleanup,instabot example,59,1.5
+DELETE,instagram-save-unfollowers-into.py,,Third-party code: instabot example,Cleanup,instabot example,37,0.88
+DELETE,instagram-save-users-followers.py,,Third-party code: instabot example,Cleanup,instabot example,29,0.76
+DELETE,instagram-save-users-following.py,,Third-party code: instabot example,Cleanup,instabot example,29,0.76
+DELETE,instagram-stories-downloader.py,,"Third-party code: sys.path.append(os.path.join(sys.path[0], ""../""))",Cleanup,"sys.path.append(os.path.join(sys.path[0], ""../""))",18,0.54
+DELETE,instagram-unarchive.py,,Third-party code: instabot example,Cleanup,instabot example,18,0.26
+DELETE,instagram-unfollow-everyone.py,,Third-party code: instabot example,Cleanup,instabot example,23,0.53
+DELETE,instagram-unfollow-followers.py,,Third-party code: instabot example,Cleanup,instabot example,23,0.54
+DELETE,instagram-unlike-users.py,,Third-party code: instabot example,Cleanup,instabot example,26,0.62
+DELETE,instagram-upload-story-photo.py,,"Third-party code: sys.path.append(os.path.join(sys.path[0], ""../""))",Cleanup,"sys.path.append(os.path.join(sys.path[0], ""../""))",19,0.58
+DELETE,instagram-welcome-message.py,,Third-party code: instabot example,Cleanup,instabot example,89,2.38
+DELETE,instagram-whitelist.py,,Third-party code: instabot example,Cleanup,instabot example,37,0.99
+DELETE,launcher.py,,Third-party code: # Copyright (c),Cleanup,# Copyright (c),191,6.37
+DELETE,nested.py,,Third-party code: Example file,Cleanup,Example file,56,1.94
+DELETE,openai-wikipedia-data-downloader.py,,Third-party code: Example file,Cleanup,Example file,49,1.72
+DELETE,optimizer.py,,Third-party code: Example file,Cleanup,Example file,52,1.68
+DELETE,pdf-merge-with-toc.py,,Third-party code: Example file,Cleanup,Example file,76,1.91
+DELETE,reset-following.py,,"Third-party code: sys.path.append(os.path.join(sys.path[0], ""../""))",Cleanup,"sys.path.append(os.path.join(sys.path[0], ""../""))",92,2.32
+DELETE,restarter.py,,Third-party code: # Copyright (c),Cleanup,# Copyright (c),168,5.79
+DELETE,savify.py,,Third-party code: from .types import,Cleanup,from .types import,395,12.74
+DELETE,scripts.py,,Third-party code: from .compat import,Cleanup,from .compat import,444,18.06
+DELETE,snoopbanner.py,,Third-party code: # Copyright (c),Cleanup,# Copyright (c),427,33.18
+DELETE,snoopplugins.py,,Third-party code: # Copyright (c),Cleanup,# Copyright (c),563,24.94
+DELETE,society6-upload.py,,Third-party code: Example file,Cleanup,Example file,40,1.29
+DELETE,split.py,,Third-party code: Example file,Cleanup,Example file,53,1.61
+DELETE,subcomponents.py,,Third-party code: Example file,Cleanup,Example file,47,1.17
+DELETE,sysinfo.py,,Third-party code: IPython Development Team,Cleanup,IPython Development Team,146,4.19
+DELETE,temp-file-manager.py,,Third-party code: Example file,Cleanup,Example file,57,1.82
+DELETE,track.py,,Third-party code: from .types import,Cleanup,from .types import,112,3.62
+DELETE,unused.py,,Third-party code: Example file,Cleanup,Example file,35,0.94
+RENAME,AI_ORCHESTRATOR_ULTIMATE.py,AI-ORCHESTRATOR-ULTIMATE.py,Converted snake_case to kebab-case,AI Tools,"🚀 ULTIMATE AI ORCHESTRATOR - Multi-Model Intelligent System
+===========================================================
+
+Leverages ALL 12 AI APIs intelligently based on their strengths:
+- OpenAI (GPT-",514,16.53
+RENAME,PROMPT_HUNTER_ULTIMATE.py,PROMPT-HUNTER-ULTIMATE.py,Converted snake_case to kebab-case,AI Tools,"🔎 PROMPT HUNTER ULTIMATE
+=========================
+
+Hunts for valuable prompts across your entire system:
+- Sora prompts (video generation)
+- Music prompts (especially Nocturnemelodies)
+- AI generatio",521,18.46
+RENAME,categorizer.py,gpt-script-categorizer.py,Analyzed from code functionality,AI Tools,No description,107,3.33
+RENAME,createimages.py,dalle-batch-generator.py,Batch generates images with DALL-E,AI Tools,No description,183,6.22
+RENAME,pyorganize.py,extract-functions-classes.py,Extracts top-level functions/classes,AI Tools,def extract_functions_and_classes(content):,80,2.41
+RENAME,pythoncat.py,gpt-script-categorizer.py,Analyzed from code functionality,AI Tools,No description,107,3.33
+RENAME,pythoncatorize.py,gpt-script-categorizer.py,Analyzed from code functionality,AI Tools,def get_openai_category(script_content):,80,2.25
+RENAME,textgenerator.py,gpt-text-generator.py,Generates text with GPT,AI Tools,def clean_response(text: str) -> list[str]:,53,1.36
+RENAME,tools.py,gpt-script-categorizer.py,Analyzed from code functionality,AI Tools,def get_openai_category(script_content):,79,2.24
+RENAME,upscalecreateimages.py,dalle-generate-upscale.py,Generates with DALL-E and upscales,AI Tools,def load_env_d():,162,5.2
+RENAME,comprehensive-music-content-scan.py,backup-documents-csv.py,Analyzed from code functionality,Audio Tools,"🎵 COMPREHENSIVE MUSIC CONTENT SCANNER
+=======================================
+Deep scan of ALL MP3s and associated content before any cleanup
+
+Features:
+✨ Scan every MP3/audio file in ~/Music
+✨ Find t",603,26.07
+RENAME,cover.py,dalle-typography-generator.py,Creates typography covers with DALL-E,Audio Tools,"def generate_cover_image_with_dalle(file_name, output_path):",61,1.72
+RENAME,renamer.py,backup-documents-csv.py,Analyzed from code functionality,Audio Tools,"Simple Python Renamer for ~/Documents/python
+Follows Steven's preferred naming style: simple, hyphenated, descriptive
+Examples: analyze-mp3-transcript-prompts_from_transcribe-analysis.py",484,16.64
+RENAME,DEEP-CONTENT-ANALYSIS.py,reddit-comment-formatter.py,Analyzed from code functionality,Code Analysis,"DEEP CONTENT-AWARE ANALYSIS
+Analyze what each file REALLY does based on:
+- Actual code content
+- Imports (what APIs/services used)
+- Functions (what operations performed)
+- Classes (what objects creat",270,9.52
+RENAME,DEEP_CONTENT_ANALYZER_ULTIMATE.py,DEEP-CONTENT-ANALYZER-ULTIMATE.py,Converted snake_case to kebab-case,Code Analysis,"🧠 DEEP CONTENT ANALYZER ULTIMATE
+==================================
+
+Advanced content-aware analysis that ACTUALLY READS AND UNDERSTANDS:
+- Python scripts (AST parsing + AI comprehension)
+- Websites a",865,30.92
+RENAME,STANDARD-ENV-LOADER.py,standard-env-loader.py,Converted ALL_CAPS to lowercase,Code Analysis,"STANDARD ENV LOADER FOR ~/.env.d/
+Add this code to the top of your Python scripts",15,0.34
+RENAME,advanced_script_finder.py,advanced-script-finder.py,Converted snake_case to kebab-case,Code Analysis,"Advanced Script Finder - Find the best Python scripts to inspire improvements
+Analyzes Python files for advanced patterns and features",330,12.53
+RENAME,identify-leonardo-user-scripts.py,telegram-file-downloader.py,Analyzed from code functionality,Code Analysis,No description,510,16.45
+RENAME,nativetypes.py,jinja2-native-types.py,Jinja2 native type converter,Code Analysis,def native_concat(values: t.Iterable[t.Any]) -> t.Optional[t.Any]:,132,4.2
+RENAME,parse.py,parse-onedrive-urls.py,Parses OneDrive photo URLs,Code Analysis,def parse_photo_link(photo_url):,102,3.66
+RENAME,scan_volumes.py,scan-volumes.py,Converted snake_case to kebab-case,Code Analysis,Scan External Volumes - Find Python scripts on external drives,294,10.68
+RENAME,scraping-download-intelligent.py,telegram-file-downloader.py,Analyzed from code functionality,Code Analysis,"Intelligent Content-Aware File Renamer
+Analyzes file content to suggest better, more descriptive names",338,11.95
+RENAME,translation.py,telegram-file-downloader.py,Analyzed from code functionality,Code Analysis,class Translation(object):,111,7.6
+RENAME,COMPLETE_MEDIA_PROMPT_ANALYZER.py,COMPLETE-MEDIA-PROMPT-ANALYZER.py,Converted snake_case to kebab-case,Data Processing,"🎬 COMPLETE MEDIA & PROMPT ANALYZER
+====================================
+
+Comprehensive analysis of ALL your content:
+✅ ~/Music/nocTurneMeLoDieS - All Suno CSVs, songs, prompts
+✅ ~/Pictures - Images wi",712,26.71
+RENAME,PROCESS_BATCH_RENAMES.py,PROCESS-BATCH-RENAMES.py,Converted snake_case to kebab-case,Data Processing,"Batch Rename Processor
+Reads batch analysis CSVs and executes approved renames
+
+Usage:
+    python PROCESS_BATCH_RENAMES.py <batch_number>
+    python PROCESS_BATCH_RENAMES.py 1    # Process batch 1
+   ",186,5.63
+RENAME,PROMPT_CSV_ANALYZER_ULTIMATE.py,PROMPT-CSV-ANALYZER-ULTIMATE.py,Converted snake_case to kebab-case,Data Processing,"🎵 PROMPT & CSV ANALYZER ULTIMATE
+==================================
+
+1. Reads ALL existing CSVs (especially Suno/Nocturnemelodies)
+2. Scans for prompts in HTML, MD, PDFs, TXT
+3. Checks Notion exports
+",566,20.62
+RENAME,backupcsv.py,backup-documents-csv.py,Analyzed from code functionality,Data Processing,"def generate_dry_run_csv(directories, csv_path):",65,2.13
+RENAME,batch-volume-cleanup.py,backup-documents-csv.py,Analyzed from code functionality,Data Processing,"Batch Volume Cleanup - Process Large Volumes in Chunks
+Smart batching to handle 65K+ files without timeouts",233,7.98
+RENAME,bubblespider_scraper.py,bubblespider-scraper.py,Converted snake_case to kebab-case,Data Processing,def extract_amazon_urls_to_csv(input_file_path):,44,1.33
+RENAME,compile.py,compile-image-info-csv.py,Compiles image info to master CSV,Data Processing,"def compile_image_info(root_directory, master_csv_file_path):",42,1.35
+RENAME,csvsort.py,csv-download-sort-images.py,Downloads images from CSV and sorts,Data Processing,def safe_filename(title):,63,1.82
+RENAME,documents.py,backup-documents-csv.py,Analyzed from code functionality,Data Processing,Script to create a CSV backup of ~/documents directory in the same format as ~/clean,175,5.82
+RENAME,extract-archived-content.py,backup-documents-csv.py,Analyzed from code functionality,Data Processing,"🔍 EXTRACT & PRESERVE ARCHIVED CONTENT
+========================================
+Extract valuable content from _ARCHIVED_DIRECTORIES before cleanup
+
+Features:
+✨ Extract and preserve CSV, MD, and HTML fi",514,21.78
+RENAME,fluid-document-sweep.py,backup-documents-csv.py,Analyzed from code functionality,Data Processing,"Fluid Document Sweep - Find Interesting Python Scripts and Utilities
+Analyzes ~/Documents directory to identify valuable scripts for reference repository",658,20.71
+RENAME,generate-rich-docs.py,backup-documents-csv.py,Analyzed from code functionality,Data Processing,"Rich Documentation Generator for Script Renames
+Creates engaging, narrative documentation with detailed descriptions
+Outputs: Detailed Markdown, Interactive HTML, CSV, and JSON",744,29.49
+RENAME,smart.py,backup-documents-csv.py,Analyzed from code functionality,Data Processing,"Smart Organization Plan Generator
+================================
+Creates a comprehensive CSV with organization suggestions including
+original locations for easy restoration if needed.",509,18.19
+RENAME,sufflecsv.py,shuffle-csv-rows.py,Analyzed from code functionality,Data Processing,def shuffle_csv(url):,35,0.87
+RENAME,ultra.py,backup-documents-csv.py,Analyzed from code functionality,Data Processing,"Ultra Advanced Content-Aware File Analysis System
+================================================
+Next-generation content analysis with deep learning patterns, advanced NLP,
+quantum-inspired algorith",1868,82.88
+RENAME,deep-content-renamer.py,telegram-file-downloader.py,Analyzed from code functionality,File Organization,"Deep Content-Aware File Renamer
+Reads entire file content to generate VERY SPECIFIC names
+Based on the advanced yt_deep_content_renamer.py",538,17.93
+RENAME,organize.py,ai-outputs-organizer.py,Organizes AI output files,File Organization,"AI Outputs Hub - Auto-Organize Dry Run
+Shows what auto-organize would do without making changes",348,12.48
+RENAME,rename-files-utility.py,telegram-file-downloader.py,Analyzed from code functionality,File Organization,"Master Rename Utility - Advanced Python File Renaming System
+Combines all advanced renaming capabilities into a unified interface",854,28.68
+RENAME,rename.py,batch-rename-images.py,Batch renames image files,File Organization,"async def rename_doc(bot, update):",132,4.97
+RENAME,sorts.py,sort-images-exclude-patterns.py,Sorts images with exclusion patterns,File Organization,"def is_excluded(path, patterns):",299,9.19
+RENAME,truly-intelligent-renamer.py,reddit-comment-formatter.py,Analyzed from code functionality,File Organization,"Truly Intelligent Renamer
+Actually reads code and understands what it does to suggest perfect names",385,16.81
+RENAME,vision.py,gpt-vision-describer.py,Describes images with GPT-4 Vision,Image Analysis,def generate_description(image_url):,65,1.91
+RENAME,INTELLIGENT_WORKFLOW_BUILDER.py,INTELLIGENT-WORKFLOW-BUILDER.py,Converted snake_case to kebab-case,Social Media - Instagram,"🔮 INTELLIGENT WORKFLOW BUILDER
+===============================
+
+Analyzes your 748+ Python scripts and creates optimized AI-powered workflows
+
+Features:
+- 📊 Deep analysis of existing scripts
+- 🔗 Intell",505,18.01
+RENAME,UNIFIED_CONTENT_ORCHESTRATOR.py,UNIFIED-CONTENT-ORCHESTRATOR.py,Converted snake_case to kebab-case,Social Media - Instagram,"🎭 UNIFIED CONTENT ORCHESTRATOR
+================================
+
+Integrates ALL your automation systems into one intelligent pipeline:
+- Python AI scripts (748+)
+- Make.com blueprints (YouTube, SEO, c",711,23.6
+RENAME,instagram-bulk-renamer.py,reddit-comment-formatter.py,Analyzed from code functionality,Social Media - Instagram,"Intelligent Bulk File Renamer
+Analyzes Python files and suggests content-aware names based on:
+- Docstrings
+- Comments
+- Import patterns
+- Code structure
+- File content
+
+Usage:
+    python intelligent_",255,8.15
+RENAME,instagram-ecosystem-master.py,backup-documents-csv.py,Analyzed from code functionality,Social Media - Instagram,"Python Ecosystem Master Mapper
+Comprehensive mapping, analysis, and intelligent reorganization of massive Python ecosystem
+with CSV backup for safe rollback capability.",784,27.51
+RENAME,instagram-eliminate.py,telegram-file-downloader.py,Analyzed from code functionality,Social Media - Instagram,"Eliminate Archive Directories
+Move all items from _archived_cleanup and _organized_root_files
+into proper context-fluid categories",282,8.8
+RENAME,instagram-rename-suno-files.py,backup-documents-csv.py,Analyzed from code functionality,Social Media - Instagram,"Python Intelligent Renamer - Flat Structure
+Intelligent renaming of Python files while keeping them in the root directory
+with CSV backup for safe rollback capability.",668,23.68
+RENAME,instagram-reorganize.py,telegram-file-downloader.py,Analyzed from code functionality,Social Media - Instagram,"Reorganize to Exact Structure
+Sort all content into the exact category structure with proper subcategories",410,15.15
+RENAME,instagram.py,instagram-bot-core.py,Analyzed from code functionality,Social Media - Instagram,def is_a_tty(stream):,55,1.75
+RENAME,askredditbot.py,askreddit-auto-poster.py,Posts to r/AskReddit,Social Media - Reddit,No description,9,0.13
+RENAME,reddit.py,reddit-comment-formatter.py,Analyzed from code functionality,Social Media - Reddit,"def comment_html(username, content):",68,1.8
+RENAME,scrape.py,reddit-scraper-cleaner.py,Scrapes Reddit and cleans text,Social Media - Reddit,def clean_string(string_to_clean):,82,2.42
+RENAME,intelligent-renamer-1.py,backup-documents-csv.py,Analyzed from code functionality,Social Media - YouTube,No description,1017,40.33
+RENAME,smart-content-renamer-v3.py,telegram-file-downloader.py,Analyzed from code functionality,Social Media - YouTube,"?? SMART CONTENT-AWARE RENAMER V3
+==================================
+Next-generation intelligent file renaming with deep semantic analysis.
+
+NEW in V3:
+? Deep AST parsing to understand what Python fil",891,32.48
+RENAME,ADVANCED_SYSTEMS_CATALOG.py,ADVANCED-SYSTEMS-CATALOG.py,Converted snake_case to kebab-case,Utilities,"🏗️ ADVANCED SYSTEMS CATALOG
+============================
+
+Discovers and catalogs ALL advanced systems across:
+- ~/pythons (Python automation scripts)
+- ~/workspace (Web apps, APIs, full-stack projects",561,18.88
+RENAME,AI_SETUP_VERIFICATION.py,AI-SETUP-VERIFICATION.py,Converted snake_case to kebab-case,Utilities,"AI Services Setup Verification Tool
+Checks installation and configuration of all AI service SDKs",189,6.23
+RENAME,SMART_AUTOMATION_DISCOVERY.py,SMART-AUTOMATION-DISCOVERY.py,Converted snake_case to kebab-case,Utilities,"🎯 SMART AUTOMATION DISCOVERY ENGINE
+====================================
+
+Uses ALL 12 AI APIs to intelligently discover automation opportunities
+across your entire system (~/, ~/pythons, projects)
+
+Ba",545,20.14
+RENAME,converts.py,batch-convert-upscale-images.py,Converts and upscales images in batch,Utilities,"def convert_and_upscale_images(source_directory, destination_directory):",77,2.51
+RENAME,convertupscale.py,convert-upscale-images.py,Single convert + upscale operation,Utilities,"def convert_and_upscale_images(source_directory, destination_directory):",67,1.97
+RENAME,create_sphinx_docs.py,create-sphinx-docs.py,Converted snake_case to kebab-case,Utilities,"📚 SPHINX DOCUMENTATION GENERATOR
+==================================
+
+Creates professional Sphinx documentation for ALL systems:
+- AI Orchestrator Ultimate
+- Intelligent Workflow Builder
+- Smart Automa",681,18.31
+RENAME,deep_folder_analyzer.py,deep-folder-analyzer.py,Converted snake_case to kebab-case,Utilities,"Deep Folder Analyzer - Comprehensive directory analysis tool
+Analyzes directory structure, file types, sizes, and patterns",352,14.61
+RENAME,denoiser.py,ffdnet-image-denoiser.py,Denoises images using FFDNet,Utilities,"Denoise an image with the FFDNet denoising method
+
+Copyright (C) CONSTANT_2018, Matias Tassano <matias.tassano@parisdescartes.fr>
+
+This program is free software: you can use, modify and/or
+redistribut",126,4.05
+RENAME,implement.py,execute-organization-plan.py,Executes smart organization system,Utilities,"Implement Smart Organization System
+Creates the final organization structure with symbolic links and navigation.",342,13.53
+RENAME,lexica.py,lexica-art-downloader.py,Downloads images from Lexica.art,Utilities,"def get_image(file_path, sentence, number_of_images=1):",36,1.11
+RENAME,mydesigner.py,batch-process-images.py,Batch processes and downloads images,Utilities,def ensure_directories(base_dir):,121,3.51
+RENAME,project_consolidator.py,project-consolidator.py,Converted snake_case to kebab-case,Utilities,"Project Consolidator - Organize and consolidate Python/JS projects
+Identifies duplicate/similar projects and suggests consolidation",268,10.42
+RENAME,pytables.py,test-pytables-pandas.py,Tests Pandas HDF5 tables,Utilities,def test_pytables_raises():,16,0.38
+RENAME,second-pass-migration.py,reddit-comment-formatter.py,Analyzed from code functionality,Utilities,Analyze remaining Python files and directories for second migration pass,568,24.34
+RENAME,setuptools.py,python-setuptools-bootstrap.py,Setuptools bootstrap script,Utilities,No description,149,4.42
+RENAME,simplify.py,reddit-comment-formatter.py,Analyzed from code functionality,Utilities,No description,111,501.04
+RENAME,ts_python_bridge.py,ts-python-bridge.py,Converted snake_case to kebab-case,Utilities,"🌉 TypeScript-Python Content Awareness Bridge
+==============================================
+
+Bridges your TypeScript deepContentAwareness.ts system with Python AI automation
+
+Features:
+- Bi-directiona",293,9.04
+RENAME,workspace_optimizer.py,workspace-optimizer.py,Converted snake_case to kebab-case,Utilities,"Workspace Optimizer - Clean up archived projects and optimize storage
+Focuses on:
+1. Removing node_modules from archived projects
+2. Identifying duplicate large files
+3. Organizing Python/JS projects",399,16.3
+RENAME,deep-level.py,backup-documents-csv.py,Analyzed from code functionality,Video Tools,"Deep 6-Level Simplifier
+Handles 6 levels deep and simplifies ALL the massive repetitive filenames",568,20.01
+RENAME,organize-directory.py,backup-documents-csv.py,Analyzed from code functionality,Video Tools,"Directory Organizer
+Organizes all directories at depth 6+ and moves them to ~/Documents/python",329,12.96
+RENAME,organizer.py,sort-images-by-format.py,Sorts images by file format,Video Tools,"def sort_images(source_dir, target_dir):",72,2.55
+RENAME,simplify-organizer.py,backup-documents-csv.py,Analyzed from code functionality,Video Tools,"Simplify File Organizer
+SIMPLIFIES filenames by removing all the junk and keeping only the meaningful parts",513,17.79
+RENAME,smart-organizer.py,backup-documents-csv.py,Analyzed from code functionality,Video Tools,"Smart File Organizer
+Fixes filename mess AND organizes files by type into proper directories",448,15.76
+RENAME,video_compressor.py,video-compressor.py,Converted snake_case to kebab-case,Video Tools,"Video Compressor - Compress large videos to save space
+Uses ffmpeg to compress videos while maintaining good quality",226,7.87
+REVIEW,automation-selenium-content.py,automation-selenium-content.py,Needs manual review,AI Tools,"🌟 Content Generator - Quantum Creative Alchemist
+Automated content creation for social media, blog posts, and marketing materials.",479,19.78
+REVIEW,aws-sqs-image-queue.py,aws-sqs-image-queue.py,Needs manual review,AI Tools,No description,222,7.16
+REVIEW,batch-info.py,batch-info.py,Needs manual review,AI Tools,No description,175,5.31
+REVIEW,breakdown.py,breakdown.py,Needs manual review,AI Tools,def get_script_description(file_path):,64,1.83
+REVIEW,business-intelligence.py,business-intelligence.py,Needs manual review,AI Tools,"📊 AI Business Intelligence Platform
+Autonomous market research + competitor analysis + strategic recommendations
+
+11 APIs: Perplexity, GPT-5, Claude, Groq, Pinecone, Mem0, ElevenLabs,
+         Assembl",279,8.75
+REVIEW,chatgpt-conversation-exporter.py,chatgpt-conversation-exporter.py,Needs manual review,AI Tools,"ChatGPT Conversation Exporter
+Creates HTML and Markdown exports matching the style of your existing conversation exports
+
+Author: Steven Chaplinski
+Date: October CONSTANT_2025
+Purpose: Export ChatGPT ",508,17.99
+REVIEW,chatgpt.py,chatgpt.py,Needs manual review,AI Tools,ChatGPT Agent - A simple conversational AI agent using OpenAI's API,189,6.77
+REVIEW,chatprompt.py,chatprompt.py,Needs manual review,AI Tools,Shared helpers for chat-based OpenAI interactions.,55,1.44
+REVIEW,classify.py,classify.py,Needs manual review,AI Tools,No description,195,6.24
+REVIEW,conversation-export-organizer.py,conversation-export-organizer.py,Needs manual review,AI Tools,"File Organization Script for AI Export Tools
+Implements the recommendations from the analysis report",187,7.42
+REVIEW,csv-image-file-mover.py,csv-image-file-mover.py,Needs manual review,AI Tools,def ensure_dir(directory):,58,1.78
+REVIEW,dalle-image-downloader.py,dalle-image-downloader.py,Needs manual review,AI Tools,No description,55,1.5
+REVIEW,etsy-image-metadata.py,etsy-image-metadata.py,Needs manual review,AI Tools,No description,112,3.31
+REVIEW,etsy-product-images.py,etsy-product-images.py,Needs manual review,AI Tools,No description,71,2.43
+REVIEW,export-ai-conversations.py,export-ai-conversations.py,Needs manual review,AI Tools,"Universal Conversation Exporter
+Comprehensive tool for exporting conversations from multiple platforms in your existing style
+
+Author: Steven Chaplinski
+Date: October CONSTANT_2025
+Purpose: Export con",819,29.4
+REVIEW,fancyimg.py,fancyimg.py,Needs manual review,AI Tools,No description,104,3.3
+REVIEW,fancyname.py,fancyname.py,Needs manual review,AI Tools,No description,125,3.73
+REVIEW,fundamental-analysis.py,fundamental-analysis.py,Needs manual review,AI Tools,def build_fundamental_agent():,36,1.16
+REVIEW,generate-emotional-audio.py,generate-emotional-audio.py,Needs manual review,AI Tools,"AlchemyAPI Creative TTS Generator
+Creates diverse MP3 sets using GPT TTS with creative emotional and content variations",530,19.5
+REVIEW,ident.py,ident.py,Needs manual review,AI Tools,No description,205,6.38
+REVIEW,image-batch-downloader.py,image-batch-downloader.py,Needs manual review,AI Tools,No description,193,6.49
+REVIEW,image-extract-prompt-metadata.py,image-extract-prompt-metadata.py,Needs manual review,AI Tools,def get_creation_date(filepath):,206,6.41
+REVIEW,image-gallery-alphabetical.py,image-gallery-alphabetical.py,Needs manual review,AI Tools,"def generate_grouped_gallery(folder_path, output_html, group_size=4):",144,4.38
+REVIEW,image-generate-pics.py,image-generate-pics.py,Needs manual review,AI Tools,def get_creation_date(filepath):,225,6.59
+REVIEW,image-kaleidoscope-effect.py,image-kaleidoscope-effect.py,Needs manual review,AI Tools,"Kaleidoscope Effect - Create mirror/rotation effects.
+
+Apply kaleidoscope effects to frames or objects for psychedelic visuals.",213,6.33
+REVIEW,image-optimize-9mb-threshold.py,image-optimize-9mb-threshold.py,Needs manual review,AI Tools,"def setup_logging(log_file=None, verbose=False):",173,5.52
+REVIEW,image-resize-aspect-ratios.py,image-resize-aspect-ratios.py,Needs manual review,AI Tools,No description,211,6.01
+REVIEW,image-resize.py,image-resize.py,Needs manual review,AI Tools,No description,203,6.58
+REVIEW,image-scan-directory.py,image-scan-directory.py,Needs manual review,AI Tools,"def scan_directory(directory, file_types, min_size):",43,1.12
+REVIEW,image-search.py,image-search.py,Needs manual review,AI Tools,"def get_soup(url, header):",98,2.72
+REVIEW,image-taggy.py,image-taggy.py,Needs manual review,AI Tools,No description,166,5.49
+REVIEW,image-upscale-batch.py,image-upscale-batch.py,Needs manual review,AI Tools,"Merged Content Analysis Tool
+
+This file was automatically merged from the following source files:
+- /Users/steven/Music/nocTurneMeLoDieS/python/FINAL_ORGANIZED/generation/imgupscale.py
+- /Users/steven",94,3.51
+REVIEW,intelligent-docs-builder.py,intelligent-docs-builder.py,Needs manual review,AI Tools,"?? AI-POWERED INTELLIGENT DOCUMENTATION BUILDER
+==============================================
+Uses your extensive API ecosystem to create deeply intelligent,
+context-aware documentation for your Pyth",372,13.15
+REVIEW,leonardo-autonomous-content-agency.py,leonardo-autonomous-content-agency.py,Needs manual review,AI Tools,"🎬 Autonomous Content Agency
+Self-improving content creation system with A/B testing and learning loops
+
+Features:
+- Trend analysis (Perplexity)
+- Multi-model ideation (GPT-5 + Claude)
+- Parallel conte",739,25.6
+REVIEW,leonardo-brand-builder.py,leonardo-brand-builder.py,Needs manual review,AI Tools,"🎨 Multi-Modal Brand Builder
+Complete brand identity: logo, colors, voice, guidelines
+
+12 APIs: GPT-5, Claude, Leonardo.AI, Stability AI, Runway ML, ElevenLabs,
+         Imagga, VanceAI, Remove.bg, Pin",355,9.59
+REVIEW,leonardo-newsletter-empire.py,leonardo-newsletter-empire.py,Needs manual review,AI Tools,"📰 AI-Powered Newsletter Empire
+Multi-niche newsletters with personalization + A/B testing
+
+13 APIs: Perplexity, GPT-5, Claude, Groq, Mem0, Pinecone, Leonardo.AI,
+         ElevenLabs, AssemblyAI, Supab",343,10.51
+REVIEW,leonardo-process-images.py,leonardo-process-images.py,Needs manual review,AI Tools,No description,59,1.65
+REVIEW,leonardo-upload-image.py,leonardo-upload-image.py,Needs manual review,AI Tools,No description,154,4.85
+REVIEW,lyrics-storyboards.py,lyrics-storyboards.py,Needs manual review,AI Tools,No description,80,2.37
+REVIEW,market-research-platform.py,market-research-platform.py,Needs manual review,AI Tools,"🔍 AI Market Research Platform
+Automated competitor tracking + pricing analysis + market intelligence
+
+10 APIs: Perplexity, GPT-5, Claude, Groq, Pinecone, Mem0,
+         Stability AI, Supabase, Telegra",735,23.75
+REVIEW,openai-content-analyzer.py,openai-content-analyzer.py,Needs manual review,AI Tools,"Advanced Content Analyzer - Consolidated Analysis Script
+
+This script consolidates all analysis functionality from multiple analysis scripts
+into a comprehensive, feature-rich content analysis tool.",271,10.72
+REVIEW,openai-csv-metadata-filler.py,openai-csv-metadata-filler.py,Needs manual review,AI Tools,No description,125,3.84
+REVIEW,openai-generate.py,openai-generate.py,Needs manual review,AI Tools,class MemoEditorInput(BaseModel):,48,1.49
+REVIEW,openai-image-generater.py,openai-image-generater.py,Needs manual review,AI Tools,No description,106,3.37
+REVIEW,openai-media-processing-image.py,openai-media-processing-image.py,Needs manual review,AI Tools,def load_env_d():,116,3.24
+REVIEW,openai-script.py,openai-script.py,Needs manual review,AI Tools,"Simple OpenAI CLI for terminal usage
+Usage: python openai-cli.py ""Your question here""",100,2.95
+REVIEW,openai-song-lyrics-analyzer.py,openai-song-lyrics-analyzer.py,Needs manual review,AI Tools,def analyze_text(text):,57,1.4
+REVIEW,organize-images-by-year.py,organize-images-by-year.py,Needs manual review,AI Tools,No description,34,1.06
+REVIEW,personal-ai-assistant.py,personal-ai-assistant.py,Needs manual review,AI Tools,"🤖 Personal AI Chief of Staff
+24/7 intelligent assistant that manages your digital life
+
+Features:
+- Morning briefings (news, calendar, priorities)
+- Email triage & draft responses
+- Meeting prep & fol",945,30.64
+REVIEW,product-image.py,product-image.py,Needs manual review,AI Tools,No description,46,1.28
+REVIEW,pydescribe.py,pydescribe.py,Needs manual review,AI Tools,def extract_functions_and_classes(content):,107,3.38
+REVIEW,python-code-review-system.py,python-code-review-system.py,Needs manual review,AI Tools,"💻 Intelligent Code Review & Documentation System
+Automated review + bug detection + documentation + tests
+
+9 APIs: GPT-5, Claude, Groq, HuggingFace, DeepSeek, Together.ai,
+        Mem0, Pinecone, Tele",387,10.84
+REVIEW,python-namer.py,python-namer.py,Needs manual review,AI Tools,No description,172,5.15
+REVIEW,quant-agent.py,quant-agent.py,Needs manual review,AI Tools,def build_quant_agent():,35,1.13
+REVIEW,rephrase.py,rephrase.py,Needs manual review,AI Tools,class Rephrase:,55,1.54
+REVIEW,research-assistant.py,research-assistant.py,Needs manual review,AI Tools,"🧠 AI Research Assistant with Memory
+Persistent knowledge agent that learns from conversations
+
+Features:
+- Real-time web search (Perplexity)
+- Deep analysis (Claude/GPT-5)
+- Persistent memory (Mem0)
+-",402,12.46
+REVIEW,riddle.py,riddle.py,Needs manual review,AI Tools,def fetch_riddles(number_of_riddles=3):,101,2.86
+REVIEW,run-all-renamers.py,run-all-renamers.py,Needs manual review,AI Tools,"Master Runner for All Rename Utilities
+Demonstrates and runs all advanced renaming capabilities",288,8.57
+REVIEW,scanpython.py,scanpython.py,Needs manual review,AI Tools,def get_script_description(file_path):,63,1.83
+REVIEW,scanpythons.py,scanpythons.py,Needs manual review,AI Tools,def extract_functions_and_classes(content):,77,2.29
+REVIEW,scripty.py,scripty.py,Needs manual review,AI Tools,"scripty_tts_unified_v2.py
+All-in-one audiobook TTS engine with:
+- Model auto-selection (prefers OpenAI gpt-4o-tts; falls back to other tts/audio; then HF Bark)
+- Cheerful Guide persona with micro-paus",511,16.58
+REVIEW,simple-image-display.py,simple-image-display.py,Needs manual review,AI Tools,def get_creation_date(filepath):,241,7.42
+REVIEW,skip-image-fixer.py,skip-image-fixer.py,Needs manual review,AI Tools,No description,172,6.09
+REVIEW,song-process.py,song-process.py,Needs manual review,AI Tools,No description,203,7.27
+REVIEW,story-section.py,story-section.py,Needs manual review,AI Tools,"Merged Content Analysis Tool
+
+This file was automatically merged from the following source files:
+- /Users/steven/Music/nocTurneMeLoDieS/python/FINAL_ORGANIZED/core_analysis/story-section-gpt.py
+- /Us",166,6.78
+REVIEW,story-trans.py,story-trans.py,Needs manual review,AI Tools,No description,159,6.77
+REVIEW,storykeytrans.py,storykeytrans.py,Needs manual review,AI Tools,No description,154,6.78
+REVIEW,suno-model.py,suno-model.py,Needs manual review,AI Tools,def choose_best_openai_model():,50,1.42
+REVIEW,telegraph-download-images.py,telegraph-download-images.py,Needs manual review,AI Tools,No description,425,17.99
+REVIEW,textgenerator-1.py,textgenerator-1.py,Needs manual review,AI Tools,No description,55,1.36
+REVIEW,thinketh-tts-adaptive.py,thinketh-tts-adaptive.py,Needs manual review,AI Tools,"🎧 Adaptive Emotional Audiobook Generator (Cheerful Guide Style) 🎧
+✨ Prefers OpenAI gpt-4o-tts, with a fallback to HF Bark if needed. ✨",126,4.15
+REVIEW,thinketh-tts-universal.py,thinketh-tts-universal.py,Needs manual review,AI Tools,No description,117,3.68
+REVIEW,upload-api.py,upload-api.py,Needs manual review,AI Tools,"def upload_file(file_path, purpose):",136,5.43
+REVIEW,validate-json-reader.py,validate-json-reader.py,Needs manual review,AI Tools,No description,753,27.39
+REVIEW,album-sorting.py,album-sorting.py,Needs manual review,Audio Tools,"def list_bases(directory, suffix):",133,4.88
+REVIEW,alchemy-quiz.py,alchemy-quiz.py,Needs manual review,Audio Tools,"AlchemyAPI MP3 Generator
+Automatically generates MP3 files from quiz data using OpenAI's TTS API",161,4.95
+REVIEW,alchemyapi-audio-demo-generator.py,alchemyapi-audio-demo-generator.py,Needs manual review,Audio Tools,"AlchemyAPI Advanced Demo Generator
+Creates sophisticated demo MP3s with complex audio patterns and emotional characteristics",552,22.29
+REVIEW,audio-normalize.py,audio-normalize.py,Needs manual review,Audio Tools,"def normalize_audio(seg: AudioSegment, target_dbfs: float = -14.0) -> AudioSegment:",24,0.68
+REVIEW,audiobook-producer.py,audiobook-producer.py,Needs manual review,Audio Tools,"OpenAI TTS Audiobook Producer
+Generates emotional audiobook using OpenAI's text-to-speech with emotional delivery",351,15.57
+REVIEW,aws-polly-tts.py,aws-polly-tts.py,Needs manual review,Audio Tools,No description,92,2.61
+REVIEW,backup-avatararts-system.py,backup-avatararts-system.py,Needs manual review,Audio Tools,"Comprehensive Backup System for AvaTarArTs Projects
+Creates organized backups and manages ongoing updates",553,17.9
+REVIEW,confcli.py,confcli.py,Needs manual review,Audio Tools,def remove_old_files() -> None:,101,2.45
+REVIEW,convert-aiff-to-mp3.py,convert-aiff-to-mp3.py,Needs manual review,Audio Tools,Convert AIFF files to MP3 format,69,1.79
+REVIEW,convert.py,convert.py,Needs manual review,Audio Tools,"Advanced File Processor - Consolidated Processing Script
+
+This script consolidates all file processing functionality from multiple processing scripts
+into a comprehensive, feature-rich file processing",406,13.2
+REVIEW,create-audiobook.py,create-audiobook.py,Needs manual review,Audio Tools,def tts_start():,36,1.32
+REVIEW,csv-file-lister.py,csv-file-lister.py,Needs manual review,Audio Tools,No description,105,3.11
+REVIEW,discography-grid-html.py,discography-grid-html.py,Needs manual review,Audio Tools,No description,170,5.04
+REVIEW,discography-html.py,discography-html.py,Needs manual review,Audio Tools,No description,170,5.04
+REVIEW,emotional.py,emotional.py,Needs manual review,Audio Tools,"AlchemyAPI Emotional Quiz Generator
+Creates emotionally engaging quiz MP3s using OpenAI TTS with SSML",267,8.73
+REVIEW,extract-news-to-audio.py,extract-news-to-audio.py,Needs manual review,Audio Tools,class ExtractNews:,54,2.11
+REVIEW,extract-to-audio.py,extract-to-audio.py,Needs manual review,Audio Tools,class ExtractNews:,51,2.08
+REVIEW,flatten-all-album-structure.py,flatten-all-album-structure.py,Needs manual review,Audio Tools,"🎵 FLATTEN ALL ALBUM STRUCTURES
+================================
+Remove files/, lyrics/, metadata/ subfolders
+Move all content directly into album folders
+
+Structure:
+  Before: Bite_in_the_Night/files/",238,8.77
+REVIEW,gemini-storybook-audio.py,gemini-storybook-audio.py,Needs manual review,Audio Tools,"Gemini Storybook Downloader (macOS-friendly)
+--------------------------------------------
+
+Downloads assets (images, videos, audio) and text/metadata from public
+Gemini ""storybook"" share links, e.g.:
+",406,12.44
+REVIEW,merge-moonlight-and-misc.py,merge-moonlight-and-misc.py,Needs manual review,Audio Tools,"🌙 MERGE MOONLIGHT FOLDERS & ORGANIZE MISCELLANEOUS
+====================================================
+Specific consolidation for moonlight-themed and misc folders
+
+Merges:
+✨ Moonlight_Night → Moonli",268,10.24
+REVIEW,mp3-batch-timestamp.py,mp3-batch-timestamp.py,Needs manual review,Audio Tools,No description,207,8.63
+REVIEW,music-catalog.py,music-catalog.py,Needs manual review,Audio Tools,"def get_matching_files(song_title, txt_files):",73,2.26
+REVIEW,nocturne-album-organizer.py,nocturne-album-organizer.py,Needs manual review,Audio Tools,"NocTurnE Album Organizer
+Organizes MP3 files and their companion files into album folders
+Handles: .mp3, _transcript.txt, _analysis.txt, .srt files",258,7.9
+REVIEW,openai-text-to-speech.py,openai-text-to-speech.py,Needs manual review,Audio Tools,"def generate_speech_with_curl(question_text, question_number, api_key):",51,1.46
+REVIEW,organize-album-companions.py,organize-album-companions.py,Needs manual review,Audio Tools,"Organize Album Companion Files
+Moves companion files (transcripts, analyses, .srt) to be with their MP3s
+Handles both flat and subfolder structures",153,4.77
+REVIEW,oshelper.py,oshelper.py,Needs manual review,Audio Tools,def absolute_files(path):,124,3.18
+REVIEW,parse-api.py,parse-api.py,Needs manual review,Audio Tools,No description,228,9.57
+REVIEW,pexels-video-downloader.py,pexels-video-downloader.py,Needs manual review,Audio Tools,No description,444,15.92
+REVIEW,process-remix.py,process-remix.py,Needs manual review,Audio Tools,No description,254,8.96
+REVIEW,processor.py,processor.py,Needs manual review,Audio Tools,def get_creation_date(filepath):,234,7.48
+REVIEW,project.py,project.py,Needs manual review,Audio Tools,"AvaTarArTs Project Manager
+Manages ongoing updates and project organization",492,15.29
+REVIEW,pyttsx3-tts.py,pyttsx3-tts.py,Needs manual review,Audio Tools,class pyttsx:,51,1.34
+REVIEW,sora-sora-storyboard.py,sora-sora-storyboard.py,Needs manual review,Audio Tools,def get_music_directory():,125,4.51
+REVIEW,speak.py,speak.py,Needs manual review,Audio Tools,def generate_speech(,53,1.68
+REVIEW,speech.py,speech.py,Needs manual review,Audio Tools,"def generate_speech(text, file_path):",41,1.22
+REVIEW,speek.py,speek.py,Needs manual review,Audio Tools,No description,14,0.31
+REVIEW,suno-album-file-organizer.py,suno-album-file-organizer.py,Needs manual review,Audio Tools,def extract_album(filename):,103,3.01
+REVIEW,suno-albums-folder-organizer.py,suno-albums-folder-organizer.py,Needs manual review,Audio Tools,def organize_files():,69,2.57
+REVIEW,suno-generator.py,suno-generator.py,Needs manual review,Audio Tools,"def get_matching_files(song_title, txt_files):",73,2.23
+REVIEW,suno-html-scraper.py,suno-html-scraper.py,Needs manual review,Audio Tools,def prompt_for_files():,103,3.13
+REVIEW,suno-music-catalog.py,suno-music-catalog.py,Needs manual review,Audio Tools,"def get_matching_files(song_title, txt_files):",73,2.23
+REVIEW,suno-music-sort-dedup.py,suno-music-sort-dedup.py,Needs manual review,Audio Tools,"Advanced Sort and Deduplication Tool
+
+This script comprehensively sorts, deduplicates, and organizes the Python music processing directory.
+It removes duplicates, consolidates similar files, and creat",561,20.38
+REVIEW,texttospeech-v1.py,texttospeech-v1.py,Needs manual review,Audio Tools,class TextToSpeech:,44,1.34
+REVIEW,thinketh-tts-asmr.py,thinketh-tts-asmr.py,Needs manual review,Audio Tools,"ASMR whisper edition with cheerful-guide affect,
+ambient option, binaural widening, 320 kbps mastering.",105,3.12
+REVIEW,thinketh-tts-transcription.py,thinketh-tts-transcription.py,Needs manual review,Audio Tools,Async HTTP request.,338,9.37
+REVIEW,undo-collection-and-merge.py,undo-collection-and-merge.py,Needs manual review,Audio Tools,"🔄 UNDO COLLECTION FIX & MERGE INTO NOCTURNE
+=============================================
+1. Move all songs back from albums to Steven_Chaplinski_Collection
+2. Distribute ALL songs from collection int",193,7.57
+REVIEW,unified-workflow-poc.py,unified-workflow-poc.py,Needs manual review,Audio Tools,"Unified Workflow Engine - Proof of Concept
+
+This demonstrates how 416 individual scripts can be consolidated into
+a single configurable workflow system.
+
+Usage:
+    python unified_workflow_poc.py --wo",576,19.18
+REVIEW,webm.py,webm.py,Needs manual review,Audio Tools,def convert_webm_to_mp3(directory_path):,52,1.56
+REVIEW,_RefreshThread.py,_RefreshThread.py,Needs manual review,Code Analysis,No description,410,15.0
+REVIEW,adaptive-content-awareness.py,adaptive-content-awareness.py,Needs manual review,Code Analysis,"Adaptive Content-Aware Analysis System
+Dynamically adjusts analysis approach based on file content, context, and patterns",725,25.54
+REVIEW,ai-deep-analyzer.py,ai-deep-analyzer.py,Needs manual review,Code Analysis,No description,574,19.39
+REVIEW,analyze-code-complexity.py,analyze-code-complexity.py,Needs manual review,Code Analysis,class AdvancedPythonAnalyzer:,520,17.9
+REVIEW,analyze-files-comprehensive.py,analyze-files-comprehensive.py,Needs manual review,Code Analysis,"MASTER COMPREHENSIVE ANALYZER
+
+Uses ALL available tools:
+- 14 production tools from scripts/
+- 8 AI models from ~/.env.d/
+- Deep code analysis
+- Intelligent categorization
+- Quality assessment",212,6.9
+REVIEW,analyze-prompt.py,analyze-prompt.py,Needs manual review,Code Analysis,"Generate detailed, descriptive image prompts from a timestamped transcript.
+
+Input:
+  A transcript text file with lines like:
+    [HH:MM:SS] some narrative text...
+Output:
+  - <base>_prompts.jsonl  (o",152,6.33
+REVIEW,application-self-query.py,application-self-query.py,Needs manual review,Code Analysis,class SelfQuery(RAGStep):,52,1.55
+REVIEW,ascii-python.py,ascii-python.py,Needs manual review,Code Analysis,def generate_ascii_art(text):,266,8.43
+REVIEW,automated-fixer.py,automated-fixer.py,Needs manual review,Code Analysis,class AutomatedFixer:,188,6.57
+REVIEW,batch-cleanup-analyzer.py,batch-cleanup-analyzer.py,Needs manual review,Code Analysis,"Batch-Based External Volume Cleanup Analyzer
+Process volumes incrementally to avoid timeouts",292,10.37
+REVIEW,cleanup-external-volumes.py,cleanup-external-volumes.py,Needs manual review,Code Analysis,"Smart Cleanup Tool for External Volumes
+Safely remove redundant Python files based on ~/Documents/pythons master copies",415,13.57
+REVIEW,clips-1.py,clips-1.py,Needs manual review,Code Analysis,No description,179,4.74
+REVIEW,cloud-services-aws-streamlit.py,cloud-services-aws-streamlit.py,Needs manual review,Code Analysis,"Entrypoint for streamlit, see https://docs.streamlit.io/",540,19.19
+REVIEW,code-apply-improvements.py,code-apply-improvements.py,Needs manual review,Code Analysis,"Codebase Improvement Implementer
+===============================
+
+Automatically implements improvements to the Python codebase based on
+the comprehensive analysis. This tool applies fixes, adds docume",492,16.81
+REVIEW,codebase.py,codebase.py,Needs manual review,Code Analysis,"AvaTarArTs Suite - Codebase Analyzer
+Analyzes the codebase for issues, duplicates, and improvement opportunities",205,7.54
+REVIEW,computer.py,computer.py,Needs manual review,Code Analysis,No description,407,14.39
+REVIEW,consolidate-python-ecosystem.py,consolidate-python-ecosystem.py,Needs manual review,Code Analysis,No description,301,10.88
+REVIEW,contacts.py,contacts.py,Needs manual review,Code Analysis,def create_contact_sheet(,63,1.96
+REVIEW,create-strip.py,create-strip.py,Needs manual review,Code Analysis,"def resize_and_add_border(image, target_size, border_size):",47,1.4
+REVIEW,cross-directory-merger.py,cross-directory-merger.py,Needs manual review,Code Analysis,No description,421,16.13
+REVIEW,deduplicate-files-intelligent.py,deduplicate-files-intelligent.py,Needs manual review,Code Analysis,No description,680,23.56
+REVIEW,deep-code.py,deep-code.py,Needs manual review,Code Analysis,No description,751,29.58
+REVIEW,development-process-proc.py,development-process-proc.py,Needs manual review,Code Analysis,No description,167,5.47
+REVIEW,devops.py,devops.py,Needs manual review,Code Analysis,"Context-Efficient DevOps Engineer Agent
+Specialized expert for deployment, CI/CD, and infrastructure analysis.",478,17.09
+REVIEW,direct.py,direct.py,Needs manual review,Code Analysis,"def send_message(self, text, user_ids, thread_id=None):",246,7.65
+REVIEW,downloads-index-builder.py,downloads-index-builder.py,Needs manual review,Code Analysis,"Steven's Downloads Archive - Index Generator
+Generates searchable indexes and HTML pages for the Downloads directory",332,11.24
+REVIEW,editorhooks.py,editorhooks.py,Needs manual review,Code Analysis,"'editor' hooks for common editors that work well with ipython
+
+They should honor the line number argument, at least.
+
+Contributions are *very* welcome.",137,4.02
+REVIEW,evaluation.py,evaluation.py,Needs manual review,Code Analysis,"MCP Server Evaluation Harness
+
+This script evaluates MCP servers by running test questions against them using Claude.",428,13.03
+REVIEW,excolors.py,excolors.py,Needs manual review,Code Analysis,Color schemes for exception handling code in IPython.,161,5.06
+REVIEW,export-data-warehouse.py,export-data-warehouse.py,Needs manual review,Code Analysis,def main(,101,3.03
+REVIEW,file-uploader.py,file-uploader.py,Needs manual review,Code Analysis,def clear():,158,3.56
+REVIEW,finetune-unsloth.py,finetune-unsloth.py,Needs manual review,Code Analysis,No description,400,13.08
+REVIEW,fix-bare-except-statements.py,fix-bare-except-statements.py,Needs manual review,Code Analysis,No description,423,14.75
+REVIEW,fixer.py,fixer.py,Needs manual review,Code Analysis,def format_with_black(filepath):,61,1.63
+REVIEW,folder-by-folder-cleanup.py,folder-by-folder-cleanup.py,Needs manual review,Code Analysis,"Folder-by-Folder Cleanup Analyzer
+Process one directory at a time for 2T-Xx volume",217,6.71
+REVIEW,gallery-url-parser.py,gallery-url-parser.py,Needs manual review,Code Analysis,def parse_photo_link(photo_url):,101,3.66
+REVIEW,getattr.py,getattr.py,Needs manual review,Code Analysis,"A static version of getattr.
+This is a backport of the Python 3 code with a little bit of additional
+information returned to enable Jedi to make decisions.",120,3.76
+REVIEW,goapi-midjourney-imagine.py,goapi-midjourney-imagine.py,Needs manual review,Code Analysis,No description,40,1.26
+REVIEW,hardcoded.py,hardcoded.py,Needs manual review,Code Analysis,"Automated API Key Fixer
+Replaces hardcoded API keys with proper ~/.env.d loading",259,7.79
+REVIEW,import-clean-conversations.py,import-clean-conversations.py,Needs manual review,Code Analysis,"Deepseek Importer v3
+- Clean transcripts with ISO timestamps, attachments section, and fenced code handling.
+- Collapsible raw JSON via <details>.
+- Optional conversation grouping by year (tags includ",133,6.57
+REVIEW,indent.py,indent.py,Needs manual review,Code Analysis,def indent(func):,30,0.9
+REVIEW,intelligent-code-analyzer.py,intelligent-code-analyzer.py,Needs manual review,Code Analysis,"Deep Code Analysis - Advanced Content-Aware System
+=================================================
+Comprehensive analysis of the AdvancedContentAnalyzer code with focus on
+intelligent patterns, arch",798,28.27
+REVIEW,intelligent-code-orchestrator.py,intelligent-code-orchestrator.py,Needs manual review,Code Analysis,"🧠 INTELLIGENT CODE ORCHESTRATOR
+==================================
+AI-powered code analysis and improvement system using integrated LLM APIs.
+Analyzes the ~/Documents/pythons codebase and provides int",469,18.21
+REVIEW,leonardo-cyberpunk-hacker-generator.py,leonardo-cyberpunk-hacker-generator.py,Needs manual review,Code Analysis,No description,115,3.51
+REVIEW,leonardo-leodown.py,leonardo-leodown.py,Needs manual review,Code Analysis,No description,59,1.47
+REVIEW,leonardo.py,leonardo.py,Needs manual review,Code Analysis,"leonardo_motion_cli.py
+A safe Leonardo.AI CLI to: generate image -> upscale -> motion video (SVD).
+
+Improvements vs original:
+- No hardcoded API key. Uses LEONARDO_API_KEY from env or --api-key.
+- CLI",263,8.86
+REVIEW,loop.py,loop.py,Needs manual review,Code Analysis,Agentic sampling loop that calls the Claude API and local implementation of anthropic-defined computer use tools.,325,12.79
+REVIEW,move-improvements.py,move-improvements.py,Needs manual review,Code Analysis,No description,291,10.6
+REVIEW,onedrive-gallery-logic.py,onedrive-gallery-logic.py,Needs manual review,Code Analysis,def parse_photo_link(photo_url):,106,3.77
+REVIEW,other-simple.py,other-simple.py,Needs manual review,Code Analysis,def get_creation_date(filepath):,250,7.59
+REVIEW,page.py,page.py,Needs manual review,Code Analysis,"Page Maker v3 — a lean static generator with good defaults.
+Fixes, improvements, and creative formatting include:
+- Robust asset handling (copied into output/assets).
+- Canonical tags only when site_u",307,13.74
+REVIEW,performance.py,performance.py,Needs manual review,Code Analysis,"Performance Optimization Script
+Implements final optimizations for web performance and file management",273,9.26
+REVIEW,periodic.py,periodic.py,Needs manual review,Code Analysis,"Periodic Quality Monitor
+========================
+
+Automated system for running content-aware analysis periodically to maintain
+code quality and track improvements over time.
+
+Features:
+- Scheduled qu",755,27.4
+REVIEW,pickleshare.py,pickleshare.py,Needs manual review,Code Analysis,"PickleShare - a small 'shelve' like datastore with concurrency support
+
+Like shelve, a PickleShareDB object acts like a normal dictionary. Unlike
+shelve, many processes can access the database simulta",359,9.83
+REVIEW,process-json.py,process-json.py,Needs manual review,Code Analysis,"This script is intended for use as a GYP_GENERATOR. It takes as input (by way of
+the generator flag config_path) the path of a json file that dictates the files
+and targets to search for. The followin",796,31.07
+REVIEW,python-documentation.py,python-documentation.py,Needs manual review,Code Analysis,"Python API Documentation Generator
+Automated API documentation system for discovered endpoints",472,15.85
+REVIEW,python-lint-complexity.py,python-lint-complexity.py,Needs manual review,Code Analysis,def format_with_black(filepath):,61,1.63
+REVIEW,quantum.py,quantum.py,Needs manual review,Code Analysis,class QuantumMediaProcessor:,38,1.42
+REVIEW,refresolver-v1.py,refresolver-v1.py,Needs manual review,Code Analysis,"JSON Schema URI resolution scopes and dereferencing
+
+https://tools.ietf.org/id/draft-zyp-json-schema-04.html#rfc.section.7
+
+Code adapted from https://github.com/Julian/jsonschema",186,5.55
+REVIEW,resolution.py,resolution.py,Needs manual review,Code Analysis,"def test_dti_resolution(request, tz_naive_fixture, freq, expected):",33,0.81
+REVIEW,scan-2t-xx-batched.py,scan-2t-xx-batched.py,Needs manual review,Code Analysis,"Scan 2T-Xx in Small Batches
+Process 65K+ files in manageable 1000-file chunks with progress saving",158,4.75
+REVIEW,scraping-download-news-api-fetcher.py,scraping-download-news-api-fetcher.py,Needs manual review,Code Analysis,No description,198,5.95
+REVIEW,search-claude-conversations.py,search-claude-conversations.py,Needs manual review,Code Analysis,Search conversations filtered by date range,196,5.74
+REVIEW,search-portfolio-pdf.py,search-portfolio-pdf.py,Needs manual review,Code Analysis,"Search PDF Files for Portfolio Content
+Find PDF resumes, portfolios, and skill documents",74,2.37
+REVIEW,search.py,search.py,Needs manual review,Code Analysis,"Alfred Script Filter for Claude Code Conversations - Enhanced Version
+- Intelligent caching for performance
+- Better conversation previews
+- Smart subtitle generation",359,11.03
+REVIEW,setters.py,setters.py,Needs manual review,Code Analysis,Commonly used hooks for on_setattr.,75,1.4
+REVIEW,software.py,software.py,Needs manual review,Code Analysis,"Context-Efficient Software Architect Agent
+Specialized expert for system design and architecture analysis.",398,14.95
+REVIEW,stability-format.py,stability-format.py,Needs manual review,Code Analysis,"Format-Optimized Medium Article Automation
+==========================================
+Enhanced version with proper sorting, formatting, and content structure
+for professional Medium articles.",1111,47.28
+REVIEW,stability-medium.py,stability-medium.py,Needs manual review,Code Analysis,"Medium Article Automation Maker
+==============================
+Automated system to analyze Python projects and generate SEO-optimized
+Medium articles with trending content and professional formatting.",1078,43.92
+REVIEW,stability.py,stability.py,Needs manual review,Code Analysis,def text_to_image(prompt):,104,5.46
+REVIEW,suno-card-html.py,suno-card-html.py,Needs manual review,Code Analysis,No description,142,4.48
+REVIEW,suno-prompt-analyzer.py,suno-prompt-analyzer.py,Needs manual review,Code Analysis,"NanoBanana API Prompt Analyzer
+Deep content-aware research on image/video prompts and NanoBanana API integration",634,21.54
+REVIEW,template-code.py,template-code.py,Needs manual review,Code Analysis,"This template is written by @boldestfortune
+
+What does this quickstart script aim to do?
+- Just started playing around with Quota Supervisor, so I'm still tweaking
+these settings",151,4.05
+REVIEW,ufunc.py,ufunc.py,Needs manual review,Code Analysis,def test_unary_unary(dtype):,309,10.33
+REVIEW,upscale-sips.py,upscale-sips.py,Needs manual review,Code Analysis,def get_creation_date(filepath):,229,7.12
+REVIEW,utilities-async.py,utilities-async.py,Needs manual review,Code Analysis,No description,151,44.2
+REVIEW,voice.py,voice.py,Needs manual review,Code Analysis,def check_ratelimit(response: Response) -> bool:,110,3.05
+REVIEW,wiggle.py,wiggle.py,Needs manual review,Code Analysis,"Wiggle Animation - Smooth, organic wobbling and jiggling motions.
+
+Creates playful, elastic movements that are smoother than shake.",312,10.33
+REVIEW,analyze-all-scripts.py,analyze-all-scripts.py,Needs manual review,Data Processing,"Comprehensive Script Analyzer
+Analyzes ALL Python files and outputs to CSV for batch renaming",330,12.21
+REVIEW,content-aware.py,content-aware.py,Needs manual review,Data Processing,"Content-Aware File Deduplication and Organization System
+Analyzes CSV file inventory and provides intelligent deduplication recommendations",321,11.14
+REVIEW,convert-conversations-to-csv.py,convert-conversations-to-csv.py,Needs manual review,Data Processing,No description,77,2.39
+REVIEW,csv-extract-webm-files.py,csv-extract-webm-files.py,Needs manual review,Data Processing,No description,28,0.77
+REVIEW,csv-media-catalog-helper.py,csv-media-catalog-helper.py,Needs manual review,Data Processing,Helper functions for media catalog CSV cleanup and reporting.,66,1.93
+REVIEW,csv-print-on-demand-catalog.py,csv-print-on-demand-catalog.py,Needs manual review,Data Processing,No description,35,1.0
+REVIEW,csvmerge.py,csvmerge.py,Needs manual review,Data Processing,No description,73,2.06
+REVIEW,dallecsv.py,dallecsv.py,Needs manual review,Data Processing,No description,47,1.08
+REVIEW,development-frameworks-python.py,development-frameworks-python.py,Needs manual review,Data Processing,"Enhanced Python Directory Metadata Analyzer
+Creates comprehensive CSV with file metadata, analysis, and categorization",286,10.13
+REVIEW,drive-compare.py,drive-compare.py,Needs manual review,Data Processing,Compare CSV analysis results from both drives,278,8.61
+REVIEW,etsy-printify-download-csv.py,etsy-printify-download-csv.py,Needs manual review,Data Processing,No description,45,1.37
+REVIEW,etsy-sort.py,etsy-sort.py,Needs manual review,Data Processing,def organize_etsy_csv():,82,2.75
+REVIEW,execute-consolidation.py,execute-consolidation.py,Needs manual review,Data Processing,"🚀 PICTURES CONSOLIDATION EXECUTOR
+===================================
+Execute consolidation with full backup and restore capability
+
+Features:
+✨ Creates backup before any changes
+✨ Uses CSV mapping fo",325,12.6
+REVIEW,execute-organization-plan.py,execute-organization-plan.py,Needs manual review,Data Processing,"Execute Smart Organization Plan
+==============================
+Executes the organization plan based on the CSV recommendations.",333,12.58
+REVIEW,export-analysis-to-csv.py,export-analysis-to-csv.py,Needs manual review,Data Processing,No description,326,10.72
+REVIEW,generate-file-move-log.py,generate-file-move-log.py,Needs manual review,Data Processing,Generate CSV log of file moves from reorganization analysis,77,2.22
+REVIEW,generate-rename-docs.py,generate-rename-docs.py,Needs manual review,Data Processing,"Script Rename Documentation Generator
+Creates organized documentation of file renames with descriptions
+Outputs: Markdown, CSV, and JSON formats",311,9.99
+REVIEW,github-repo-audit.py,github-repo-audit.py,Needs manual review,Data Processing,"github_repo_audit.py
+--------------------
+Scan all GitHub repos for a user, score usefulness, and output CSV/JSON/HTML.
+- Loads token from ~/.env.d/github.env (GITHUB_TOKEN=...)
+- Uses /user/repos (if",402,12.6
+REVIEW,merge-doc-csvs.py,merge-doc-csvs.py,Needs manual review,Data Processing,def combine_csvs():,72,2.46
+REVIEW,pdfcsv.py,pdfcsv.py,Needs manual review,Data Processing,No description,6,0.15
+REVIEW,process-csv-docs.py,process-csv-docs.py,Needs manual review,Data Processing,def get_creation_date(filepath):,209,6.58
+REVIEW,quiz.py,quiz.py,Needs manual review,Data Processing,def generate_trivia_quiz(csv_path):,44,1.33
+REVIEW,scancsv.py,scancsv.py,Needs manual review,Data Processing,def scan_directory(directory):,45,1.15
+REVIEW,split-chunks.py,split-chunks.py,Needs manual review,Data Processing,"def split_csv(input_file_path, output_file_prefix, chunk_size=50):",46,1.56
+REVIEW,suno-content-creation-suno.py,suno-content-creation-suno.py,Needs manual review,Data Processing,"Scrape Suno-like grid HTML into CSV.
+
+This script extracts song information from a Suno-like grid HTML and outputs it into a CSV file. It targets specific HTML structures to gather data such as song t",141,4.3
+REVIEW,suno-extract-suno-html.py,suno-extract-suno-html.py,Needs manual review,Data Processing,"?? SUNO HTML BATCH EXTRACTOR
+============================
+Extracts song data from saved Suno HTML files and outputs to CSV
+
+Usage:
+    python suno_html_batch_extractor.py
+    python suno_html_batch_ex",293,9.62
+REVIEW,suno-merge-csv.py,suno-merge-csv.py,Needs manual review,Data Processing,"🎯 ULTIMATE FOLDER CLEANUP - Final Pass
+=========================================
+Analyze ALL remaining folders and consolidate everything
+
+Features:
+✨ Find all similar/duplicate folders
+✨ Merge all va",240,9.45
+REVIEW,suno-merge-suno-csv.py,suno-merge-suno-csv.py,Needs manual review,Data Processing,"?? SUNO CSV COMPARATOR & MERGER
+================================
+Compares and merges all Suno CSV files to find unique songs
+
+Usage:
+    python suno_csv_comparator.py
+    python suno_csv_comparator.py",312,10.35
+REVIEW,suno-scrape-suno-api.py,suno-scrape-suno-api.py,Needs manual review,Data Processing,"?? SUNO AI SCRAPER - Complete CSV Exporter
+==========================================
+Scrapes Suno AI playlists and outputs to CSV
+
+Usage:
+    python suno_scraper_complete.py --url ""https://suno.com/p",292,9.77
+REVIEW,targeted-v1.py,targeted-v1.py,Needs manual review,Data Processing,"Targeted cleanup: Fix obvious issues
+1. Eliminate generic folder names (csv, json, pdf)
+2. Remove timestamped duplicates
+3. Flatten unnecessary nesting",148,4.45
+REVIEW,to-html-gallery.py,to-html-gallery.py,Needs manual review,Data Processing,"def csv_to_html(csv_file, output_html):",90,2.35
+REVIEW,comprehensive-dedup-rename.py,comprehensive-dedup-rename.py,Needs manual review,File Organization,"Comprehensive Deduplication & Rename
+Applies the upload script approach to ALL versioned files",169,5.72
+REVIEW,content-aware-organizer.py,content-aware-organizer.py,Needs manual review,File Organization,No description,570,22.33
+REVIEW,downloads-organizer-dedup.py,downloads-organizer-dedup.py,Needs manual review,File Organization,"Downloads Directory Organizer & Consolidator
+Comprehensive analysis and organization tool for Downloads directory
+
+Author: Steven Chaplinski
+Date: October CONSTANT_2025
+Purpose: Deep analysis, duplica",610,21.16
+REVIEW,intelligent-rename-analyzer.py,intelligent-rename-analyzer.py,Needs manual review,File Organization,"Intelligent Rename Analyzer
+Analyzes files that need renaming and provides smart, context-aware suggestions
+Handles: ALL_CAPS, generic analyze-, and missing documentation",448,18.48
+REVIEW,organize-excel-files.py,organize-excel-files.py,Needs manual review,File Organization,"Intelligent Excel File Organizer
+Advanced content-awareness system for organizing Excel files based on semantic analysis",645,23.36
+REVIEW,organize-files-intelligent.py,organize-files-intelligent.py,Needs manual review,File Organization,"Intelligent Organization System - Core Analyzer
+
+This module provides the main analysis engine for the intelligent organization system.
+It combines multiple analysis techniques including AST parsing, ",1013,37.08
+REVIEW,organize-files.py,organize-files.py,Needs manual review,File Organization,"💾 SAVE EVERYTHING BEFORE CLEANUP
+==================================
+Comprehensive preservation of ALL content before any cleanup/merge operations
+
+Features:
+✨ Archive all orphaned content (stories, ly",540,22.22
+REVIEW,organize-printify-products.py,organize-printify-products.py,Needs manual review,File Organization,No description,238,7.34
+REVIEW,python-intelligent-rename.py,python-intelligent-rename.py,Needs manual review,File Organization,"Intelligent Python File Renamer - Execution Script
+Generated: CONSTANT_2025-10-28 01:40:43",2599,94.12
+REVIEW,seo-content-organizer.py,seo-content-organizer.py,Needs manual review,File Organization,"Enhanced Content-Aware Chat Analysis Organizer v2.0
+Incorporates Dr. Adu SEO project updates and improvements
+Outputs comprehensive analysis in professional format with actionable insights",1306,49.14
+REVIEW,smart-rename-versions.py,smart-rename-versions.py,Needs manual review,File Organization,"Smart Version Renaming
+Keeps version numbers but adds descriptive context
+Format: original-v{N}-{purpose}.py",176,4.86
+REVIEW,thinketh-content-renamer-from-seo-optimizer.py,thinketh-content-renamer-from-seo-optimizer.py,Needs manual review,File Organization,"As-a-Man-Thinketh Content-Aware Renamer
+Specialized renaming for the As-a-man-thinketh directory with massive duplicate cleanup",303,12.48
+REVIEW,thinketh-content-renamer.py,thinketh-content-renamer.py,Needs manual review,File Organization,"As-a-Man-Thinketh Content-Aware Renamer
+Specialized renaming for the As-a-man-thinketh directory with massive duplicate cleanup",303,12.48
+REVIEW,verify-and-sort-missing-songs.py,verify-and-sort-missing-songs.py,Needs manual review,File Organization,"🔍 VERIFY & SORT MISSING SONGS
+================================
+Deep comparison of ""missing"" songs against ~/Music collection
+Then provide proper sorting recommendations
+
+Features:
+✨ Fuzzy match agains",403,16.97
+REVIEW,PSDImage.py,PSDImage.py,Needs manual review,Image Analysis,PSD Image module.,747,22.92
+REVIEW,analyze-metadata.py,analyze-metadata.py,Needs manual review,Image Analysis,Shared helpers for GPT-based image metadata enrichment.,201,6.13
+REVIEW,analyze-reader.py,analyze-reader.py,Needs manual review,Image Analysis,No description,333,11.09
+REVIEW,audio-thinketh.py,audio-thinketh.py,Needs manual review,Image Analysis,"Cinematic hybrid edition:
+- cheerful-guide affect baked in
+- dynamic voice rotation
+- ambient overlays per chapter
+- widening, fades, -14 LUFS target, CONSTANT_320 kbps mastering",147,4.76
+REVIEW,batch-image.py,batch-image.py,Needs manual review,Image Analysis,No description,443,16.9
+REVIEW,calculator.py,calculator.py,Needs manual review,Image Analysis,Simple calculator tool for basic math operations.,55,1.52
+REVIEW,content-creation-pipeline.py,content-creation-pipeline.py,Needs manual review,Image Analysis,"🚀 ADVANCED CONTENT GENERATION PIPELINE
+============================================
+Intelligent multi-modal content creation system using integrated APIs from ~/.env.d/
+Combines LLM orchestration, ima",364,13.38
+REVIEW,etree.py,etree.py,Needs manual review,Image Analysis,def ensure_str(s):,226,6.38
+REVIEW,etsy-listing-generator.py,etsy-listing-generator.py,Needs manual review,Image Analysis,"analyze_images_to_csv.py
+Analyze a folder of images: write technical EXIF + GPT vision tags into CSV.
+
+Key fixes vs your script:
+- Uses OpenAI v1 client (`from openai import OpenAI`) safely.
+- Support",144,5.35
+REVIEW,genshi.py,genshi.py,Needs manual review,Image Analysis,class TreeWalker(base.TreeWalker):,93,2.41
+REVIEW,image-convert-upscale.py,image-convert-upscale.py,Needs manual review,Image Analysis,"def convert_and_upscale_images(source_directory, destination_directory):",69,1.97
+REVIEW,image-get-cover-images.py,image-get-cover-images.py,Needs manual review,Image Analysis,"def get_cover_images(file_name, cover_image_directory):",73,2.17
+REVIEW,image-to-image-converter.py,image-to-image-converter.py,Needs manual review,Image Analysis,"def convert_and_upscale_images(source_directory, destination_directory):",74,2.2
+REVIEW,image-to-pdf.py,image-to-pdf.py,Needs manual review,Image Analysis,"def image_to_pdf(image_path, pdf_path):",41,1.18
+REVIEW,image-ultimate.py,image-ultimate.py,Needs manual review,Image Analysis,"Ultimate Image Processor V2
+==========================
+
+Enhanced version that:
+- Resizes images larger than 9MB
+- Upscales images that don't have CONSTANT_300 DPI
+- Maintains aspect ratios and quality",594,25.46
+REVIEW,openai-batch-image-seo-pipeline.py,openai-batch-image-seo-pipeline.py,Needs manual review,Image Analysis,No description,443,16.9
+REVIEW,openai-content-creation-nocturne.py,openai-content-creation-nocturne.py,Needs manual review,Image Analysis,"Merged Content Analysis Tool
+
+This file was automatically merged from the following source files:
+- /Users/steven/Music/nocTurneMeLoDieS/python/FINAL_ORGANIZED/generation/groq.py
+- /Users/steven/Music",62,1.51
+REVIEW,openai-gpt4o-image-metadata.py,openai-gpt4o-image-metadata.py,Needs manual review,Image Analysis,No description,241,7.66
+REVIEW,openai-image-enrichment.py,openai-image-enrichment.py,Needs manual review,Image Analysis,def load_env_d():,116,3.3
+REVIEW,openai-vision-image-reader.py,openai-vision-image-reader.py,Needs manual review,Image Analysis,No description,282,8.62
+REVIEW,parse-main.py,parse-main.py,Needs manual review,Image Analysis,"This module contains provisional support for SOCKS proxies from within
+urllib3. This module supports SOCKS4, SOCKS4A (an extension of SOCKS4), and
+SOCKS5. To enable its functionality, either install P",215,6.93
+REVIEW,quote-image-generator.py,quote-image-generator.py,Needs manual review,Image Analysis,class ImageCreator:,98,3.28
+REVIEW,thinketh-tts-main.py,thinketh-tts-main.py,Needs manual review,Image Analysis,"thinketh_tts.py
+Text-to-Speech generator for 'As A Man Thinketh' (James Allen)
+
+Features:
+ - Reads DOCX
+ - Splits into chapters automatically
+ - Handles token limits by chunking text
+ - Merges all chu",165,4.78
+REVIEW,thinketh-tts-scripty.py,thinketh-tts-scripty.py,Needs manual review,Image Analysis,"Cinematic hybrid edition:
+- cheerful-guide affect baked in
+- dynamic voice rotation
+- ambient overlays per chapter
+- widening, fades, -14 LUFS target, 320 kbps mastering",150,4.61
+REVIEW,upscale-images.py,upscale-images.py,Needs manual review,Image Analysis,"def convert_and_upscale_images(source_directory, destination_directory):",66,1.97
+REVIEW,utilities-upscale-images.py,utilities-upscale-images.py,Needs manual review,Image Analysis,"def convert_and_upscale_images(source_directory, destination_directory, max_size_mb=8):",93,3.31
+REVIEW,ai-docs-generator.py,ai-docs-generator.py,Needs manual review,Social Media - Instagram,"AI-Powered Documentation Generator
+Uses OpenAI GPT-4 to intelligently analyze and document Python scripts",299,10.22
+REVIEW,api-key-inventory.py,api-key-inventory.py,Needs manual review,Social Media - Instagram,"🔑 API KEY INVENTORY SCANNER
+=============================
+Scan all .env files and create inventory without exposing actual keys
+
+Features:
+✨ Scan all .env files in ~/.env.d
+✨ Identify which API keys a",346,13.77
+REVIEW,bot-instagram.py,bot-instagram.py,Needs manual review,Social Media - Instagram,No description,64,1.36
+REVIEW,bot-photo.py,bot-photo.py,Needs manual review,Social Media - Instagram,def upload_photo(,124,3.93
+REVIEW,docs-reorganizer.py,docs-reorganizer.py,Needs manual review,Social Media - Instagram,"Documentation Reorganizer
+Create intelligent, narrative-driven documentation with better structure",389,13.92
+REVIEW,enhanced-categorization.py,enhanced-categorization.py,Needs manual review,Social Media - Instagram,"Enhanced Script Categorization
+Use your provided categories and code patterns to better organize scripts",215,7.52
+REVIEW,find-portfolio-content.py,find-portfolio-content.py,Needs manual review,Social Media - Instagram,"Find Portfolio & Skill Documentation
+Search for HTML, MD, PDF files that reference Python, APIs, and technical skills",175,5.89
+REVIEW,instagram-aggressive-renamer.py,instagram-aggressive-renamer.py,Needs manual review,Social Media - Instagram,"Python Aggressive Renamer
+More aggressive renaming system that will actually suggest changes
+for the 6-level deep Python ecosystem",430,14.97
+REVIEW,instagram-bot-comment.py,instagram-bot-comment.py,Needs manual review,Social Media - Instagram,No description,241,7.25
+REVIEW,instagram-bot-library.py,instagram-bot-library.py,Needs manual review,Social Media - Instagram,No description,975,32.86
+REVIEW,instagram-bot-template.py,instagram-bot-template.py,Needs manual review,Social Media - Instagram,"This template is written by @Nuzzo235
+
+What does this quickstart script aim to do?
+- This script is targeting followers of similar accounts and influencers.
+- This is my starting point for a conservat",152,3.96
+REVIEW,instagram-checkpoint.py,instagram-checkpoint.py,Needs manual review,Social Media - Instagram,Instabot Checkpoint methods.,78,2.19
+REVIEW,instagram-combiner.py,instagram-combiner.py,Needs manual review,Social Media - Instagram,No description,80,2.05
+REVIEW,instagram-directory-organizer.py,instagram-directory-organizer.py,Needs manual review,Social Media - Instagram,"Directory Organizer - Intelligently organize all folders
+
+Consolidates backups, categorizes projects, and creates clean structure.",379,12.33
+REVIEW,instagram-dom-tree.py,instagram-dom-tree.py,Needs manual review,Social Media - Instagram,"All methods must return media_ids that can be
+passed into e.g. like() or comment() functions.",507,14.17
+REVIEW,instagram-download-1.py,instagram-download-1.py,Needs manual review,Social Media - Instagram,No description,98,2.71
+REVIEW,instagram-download-user-videos.py,instagram-download-user-videos.py,Needs manual review,Social Media - Instagram,"Download a user videos:
+This script could be very useful to download a users videos.
+
+Dependencies:
+    pip install -U instabot
+Run:
+  python download_user_videos.py -u username -p password -user user",48,1.25
+REVIEW,instagram-download.py,instagram-download.py,Needs manual review,Social Media - Instagram,"Content-Aware Etsy Collection Organizer
+Uses deep analysis to create intelligent organization without breaking existing projects.",506,17.27
+REVIEW,instagram-ecosystem-insights.py,instagram-ecosystem-insights.py,Needs manual review,Social Media - Instagram,"Python Ecosystem Insights
+Deep analysis of your massive 6-level Python directory structure",288,9.54
+REVIEW,instagram-extract-video-reader.py,instagram-extract-video-reader.py,Needs manual review,Social Media - Instagram,No description,95,2.79
+REVIEW,instagram-handle-checker.py,instagram-handle-checker.py,Needs manual review,Social Media - Instagram,"Handle Availability Checker for Dual-Domain Strategy
+Checks availability across multiple platforms",102,3.6
+REVIEW,instagram-image-uploader.py,instagram-image-uploader.py,Needs manual review,Social Media - Instagram,"Based in @jeremycjang and @boldestfortune
+This config is meant to run with docker-compose inside a folder call z_{user}
+(Added to gitignore)
+Folder content:
+  - data.yaml
+  - docker-compose.yaml
+  - s",237,6.57
+REVIEW,instagram-instabot-bot-youtube-user-id.py,instagram-instabot-bot-youtube-user-id.py,Needs manual review,Social Media - Instagram,No description,1042,32.57
+REVIEW,instagram-openai-download.py,instagram-openai-download.py,Needs manual review,Social Media - Instagram,def load_env_d():,104,3.31
+REVIEW,instagram-processor.py,instagram-processor.py,Needs manual review,Social Media - Instagram,def convert_to_colab(python_code):,86,2.19
+REVIEW,instagram-reportbot.py,instagram-reportbot.py,Needs manual review,Social Media - Instagram,def getOptions(args=sys.argv[1:]):,108,2.19
+REVIEW,instagram-requirements.py,instagram-requirements.py,Needs manual review,Social Media - Instagram,"Intelligent Requirements Generator
+Analyzes Python files to extract and generate requirements.txt files.",324,8.52
+REVIEW,instagram-root-scripts.py,instagram-root-scripts.py,Needs manual review,Social Media - Instagram,"Organize Root Python Scripts by Content
+
+Moves all remaining .py files from root into appropriate category folders.",214,6.63
+REVIEW,instagram-scan-leonardo-comprehensive.py,instagram-scan-leonardo-comprehensive.py,Needs manual review,Social Media - Instagram,"Final Comprehensive Scan - Uses ALL tools available
+
+Analyzes your entire Python ecosystem with:
+- File system analysis
+- Duplicate detection
+- Code quality checks
+- Smart categorization",285,9.64
+REVIEW,instagram-script-simple.py,instagram-script-simple.py,Needs manual review,Social Media - Instagram,class _ModuleAttributeName(AbstractNameDefinition):,232,7.94
+REVIEW,instagram-social-platforms-instagram-scraper.py,instagram-social-platforms-instagram-scraper.py,Needs manual review,Social Media - Instagram,class Instagram:,2916,117.11
+REVIEW,instagram-sort.py,instagram-sort.py,Needs manual review,Social Media - Instagram,"Final Intelligent Sort
+Use advanced content-awareness to sort all remaining items into 4 main categories",398,13.74
+REVIEW,instagram-state.py,instagram-state.py,Needs manual review,Social Media - Instagram,class BotState(object):,72,1.62
+REVIEW,instagram-story.py,instagram-story.py,Needs manual review,Social Media - Instagram,"def download_stories(self, username):",69,2.33
+REVIEW,instagram-upload.py,instagram-upload.py,Needs manual review,Social Media - Instagram,No description,23,0.48
+REVIEW,instagram-whisper.py,instagram-whisper.py,Needs manual review,Social Media - Instagram,No description,70,1.68
+REVIEW,instagram-whispertext-combine.py,instagram-whispertext-combine.py,Needs manual review,Social Media - Instagram,No description,81,2.05
+REVIEW,instagram-whispertext.py,instagram-whispertext.py,Needs manual review,Social Media - Instagram,No description,81,2.06
+REVIEW,leonardo-instagram-build.py,leonardo-instagram-build.py,Needs manual review,Social Media - Instagram,def categorize(name: str) -> str:,91,4.79
+REVIEW,remove-redundant-prefixes.py,remove-redundant-prefixes.py,Needs manual review,Social Media - Instagram,"Remove Redundant Folder Name Prefixes
+
+Fixes files like:
+  audio/audio_6.py → audio/script_6.py
+  youtube/youtube_test.py → youtube/test.py
+  instagram/instagram_bot.py → instagram/bot.py",146,4.61
+REVIEW,rename-by-purpose.py,rename-by-purpose.py,Needs manual review,Social Media - Instagram,"Rename by Purpose - What does the script DO?
+
+Reads actual code to determine purpose, then names accordingly.
+Pattern: [service]-[action]-[object]",174,6.49
+REVIEW,reorganize-by-service.py,reorganize-by-service.py,Needs manual review,Social Media - Instagram,"Reorganize by SERVICE instead of FILE TYPE
+
+Moves files from generic folders (json/, file/, csv/) to service folders
+based on what they ACTUALLY do (youtube/, instagram/, ai/, etc.)",193,6.76
+REVIEW,search-portfolio-html.py,search-portfolio-html.py,Needs manual review,Social Media - Instagram,"Search HTML Files for Portfolio Content
+Find HTML files referencing Python, API, automation skills",96,3.1
+REVIEW,search-portfolio-markdown.py,search-portfolio-markdown.py,Needs manual review,Social Media - Instagram,Search Markdown Files for Portfolio Content,81,2.56
+REVIEW,simple-flat-organizer.py,simple-flat-organizer.py,Needs manual review,Social Media - Instagram,"Simple Flat Category Organizer
+
+Creates simple category folders and moves all related scripts there.
+NO subfolders - completely flat within each category.",284,8.84
+REVIEW,simple-smart-renamer.py,simple-smart-renamer.py,Needs manual review,Social Media - Instagram,"Simple Smart Renamer - NO AI, Just Logic!
+
+Rules:
+1. If filename has service (stability, mistral, ygpt) → KEEP IT!
+2. Read actual imports to detect service
+3. Simple cleanup: remove numbers, fix forma",177,5.8
+REVIEW,smart-conservative-renamer.py,smart-conservative-renamer.py,Needs manual review,Social Media - Instagram,No description,467,17.55
+REVIEW,smart-local-renamer.py,smart-local-renamer.py,Needs manual review,Social Media - Instagram,"Smart Local Renamer - NO AI HALLUCINATIONS!
+
+Uses actual code analysis (imports, functions, docstrings) to rename intelligently.
+NO guessing, NO hallucinations, just FACTS from the code.",235,8.01
+REVIEW,smart-rename-suggester.py,smart-rename-suggester.py,Needs manual review,Social Media - Instagram,"Smart Rename Suggester
+Analyzes the CSV and provides intelligent rename suggestions",241,10.34
+REVIEW,social-platforms-instagram-bot-error.py,social-platforms-instagram-bot-error.py,Needs manual review,Social Media - Instagram,No description,731,21.33
+REVIEW,social-platforms-instagram.py,social-platforms-instagram.py,Needs manual review,Social Media - Instagram,Configuration settings for the Transcription Analyzer,33,0.97
+REVIEW,ask-reddit.py,ask-reddit.py,Needs manual review,Social Media - Reddit,def random_title_msg():,212,8.2
+REVIEW,askreddit-loop-1.py,askreddit-loop-1.py,Needs manual review,Social Media - Reddit,def random_title_msg():,152,5.23
+REVIEW,automation-playwright-screenshot.py,automation-playwright-screenshot.py,Needs manual review,Social Media - Reddit,"def download_screenshots_of_reddit_posts(reddit_object, screenshot_num):",54,1.94
+REVIEW,generate-text-overlay.py,generate-text-overlay.py,Needs manual review,Social Media - Reddit,def draw_multiple_line_text(,100,3.1
+REVIEW,get-threads.py,get-threads.py,Needs manual review,Social Media - Reddit,def get_askreddit_threads():,58,1.65
+REVIEW,gtts-text-to-speech.py,gtts-text-to-speech.py,Needs manual review,Social Media - Reddit,class GTTS:,29,0.57
+REVIEW,image-generator-generic.py,image-generator-generic.py,Needs manual review,Social Media - Reddit,No description,145,4.13
+REVIEW,misc-gtts.py,misc-gtts.py,Needs manual review,Social Media - Reddit,class GTTS:,30,0.57
+REVIEW,parse-reddit-post.py,parse-reddit-post.py,Needs manual review,Social Media - Reddit,"def posttextparser(obj, *, tried: bool = False) -> List[str]:",37,0.89
+REVIEW,reddit-download.py,reddit-download.py,Needs manual review,Social Media - Reddit,No description,148,4.14
+REVIEW,reddit-scrape.py,reddit-scrape.py,Needs manual review,Social Media - Reddit,class RedditScrape:,77,2.85
+REVIEW,reddit-tts-video-maker.py,reddit-tts-video-maker.py,Needs manual review,Social Media - Reddit,No description,150,4.49
+REVIEW,scraper.py,scraper.py,Needs manual review,Social Media - Reddit,"def download_vid(url, directory):  # Download reddit vid given URL and directory",52,1.33
+REVIEW,scraping-download-scrape.py,scraping-download-scrape.py,Needs manual review,Social Media - Reddit,No description,16,0.43
+REVIEW,simple.py,simple.py,Needs manual review,Social Media - Reddit,No description,5,0.19
+REVIEW,subreddit.py,subreddit.py,Needs manual review,Social Media - Reddit,def get_subreddit_threads(POST_ID: str):,183,7.07
+REVIEW,subredditsentiment-apps.py,subredditsentiment-apps.py,Needs manual review,Social Media - Reddit,No description,81,2.24
+REVIEW,utilities-misc.py,utilities-misc.py,Needs manual review,Social Media - Reddit,def id(reddit_obj: dict):,12,0.28
+REVIEW,voices.py,voices.py,Needs manual review,Social Media - Reddit,def save_text_to_mp3(reddit_obj):,35,1.26
+REVIEW,analyze-file-migration.py,analyze-file-migration.py,Needs manual review,Social Media - YouTube,Analyze current structure and show what will be migrated where,223,7.91
+REVIEW,batch-processor.py,batch-processor.py,Needs manual review,Social Media - YouTube,def authenticate():,70,1.89
+REVIEW,category-readme-generator.py,category-readme-generator.py,Needs manual review,Social Media - YouTube,"Intelligent Category README Generator
+Creates comprehensive README files for each category based on analysis.",231,6.46
+REVIEW,dalle-prompt.py,dalle-prompt.py,Needs manual review,Social Media - YouTube,No description,120,3.42
+REVIEW,organize-youtube-root.py,organize-youtube-root.py,Needs manual review,Social Media - YouTube,"Final Root Directory Organizer
+
+Organizes all remaining loose files in root directory into proper structure.",282,9.78
+REVIEW,playlist.py,playlist.py,Needs manual review,Social Media - YouTube,def generate_token():,214,6.73
+REVIEW,preservation-renamer.py,preservation-renamer.py,Needs manual review,Social Media - YouTube,"Python Preservation Renamer
+Preserves meaningful names and only fixes problematic ones
+Keeps good names like 15days.py, docx.py, csvp.py
+Only renames messy/duplicate/problematic files",508,18.12
+REVIEW,queue-script.py,queue-script.py,Needs manual review,Social Media - YouTube,Listens to playlist for new tracks,103,3.46
+REVIEW,secret.py,secret.py,Needs manual review,Social Media - YouTube,No description,19,0.46
+REVIEW,selenium-cookie-login.py,selenium-cookie-login.py,Needs manual review,Social Media - YouTube,def domain_to_url(domain: str) -> str:,58,2.0
+REVIEW,setup-legacy.py,setup-legacy.py,Needs manual review,Social Media - YouTube,Upload videos to Youtube.,33,1.17
+REVIEW,shorts-code.py,shorts-code.py,Needs manual review,Social Media - YouTube,No description,136,5.26
+REVIEW,smart-content-renamer-v2.py,smart-content-renamer-v2.py,Needs manual review,Social Media - YouTube,"🏷️ SMART CONTENT-AWARE RENAMER V2
+==================================
+Intelligent file renaming that preserves meaning while applying
+consistent style conventions based on file type.
+
+Style Guide (Base",460,16.07
+REVIEW,thumbnail.py,thumbnail.py,Needs manual review,Social Media - YouTube,def load_env_d():,85,2.67
+REVIEW,upload-content.py,upload-content.py,Needs manual review,Social Media - YouTube,No description,123,3.65
+REVIEW,ai-stability-code.py,ai-stability-code.py,Needs manual review,Utilities,No description,981,37.74
+REVIEW,analyze-file-versions.py,analyze-file-versions.py,Needs manual review,Utilities,"Script Version Analyzer
+Finds all versioned scripts and identifies which version to keep",236,7.57
+REVIEW,analyze-json-writer.py,analyze-json-writer.py,Needs manual review,Utilities,"Complete Cleanup Orchestrator
+Coordinates all cleanup operations for the Documents folder",202,6.57
+REVIEW,analyze-writer.py,analyze-writer.py,Needs manual review,Utilities,"Simple Quality Monitor
+======================
+
+Simplified quality monitoring system that runs analysis periodically
+without external dependencies.
+
+Author: Enhanced by Claude
+Version: 1.0",645,23.89
+REVIEW,api-key-inventory-v2.py,api-key-inventory-v2.py,Needs manual review,Utilities,"🔑 API KEY INVENTORY V2
+========================
+Show ACTUAL keys you have, then check for truly missing ones
+
+Features:
+✨ Show all keys found in .env files
+✨ Group by category/service
+✨ Only flag trul",285,11.36
+REVIEW,application-query-expanison.py,application-query-expanison.py,Needs manual review,Utilities,class QueryExpansion(RAGStep):,56,1.65
+REVIEW,apply-improvements.py,apply-improvements.py,Needs manual review,Utilities,"GitHub Repository Improvement Script
+Applies common improvements to GitHub repositories",159,4.73
+REVIEW,archive-reader.py,archive-reader.py,Needs manual review,Utilities,"Comprehensive Merge and Consolidation Tool
+
+This script merges and combines all Python directories and files from multiple sources:
+- Main directory files
+- Archive directory
+- Archive.zip contents
+- ",597,21.58
+REVIEW,backlinker.py,backlinker.py,Needs manual review,Utilities,No description,49,1.56
+REVIEW,backup-installations.py,backup-installations.py,Needs manual review,Utilities,def run_command(command):,50,1.37
+REVIEW,basic-follow-unfollow.py,basic-follow-unfollow.py,Needs manual review,Utilities,"This template is written by @cormo1990
+
+What does this quickstart script aim to do?
+- Basic follow/unfollow activity.
+
+NOTES:
+- I don't want to automate comment and too much likes because I want to do",115,3.26
+REVIEW,batch-folder-writer.py,batch-folder-writer.py,Needs manual review,Utilities,def list_venv_directories(base_path):,71,2.33
+REVIEW,bookmarks.py,bookmarks.py,Needs manual review,Utilities,"def add_bookmarks(output_path, toc_items):",29,0.71
+REVIEW,bot-like.py,bot-like.py,Needs manual review,Utilities,def functionLike(mySystem):,211,5.95
+REVIEW,brand.py,brand.py,Needs manual review,Utilities,class BrandTemplate:,27,0.7
+REVIEW,chat-base.py,chat-base.py,Needs manual review,Utilities,"def TRChatBase(chat_id, message_text, intent):",27,0.62
+REVIEW,chat-export-analyzer.py,chat-export-analyzer.py,Needs manual review,Utilities,"Content-Aware Chat Analysis Organizer
+Deep analyzes chat files to understand patterns and organize intelligently",773,29.05
+REVIEW,check-1.py,check-1.py,Needs manual review,Utilities,No description,18,0.43
+REVIEW,check-file.py,check-file.py,Needs manual review,Utilities,class FFmpegDL:,84,2.72
+REVIEW,check-modules.py,check-modules.py,Needs manual review,Utilities,def check_modules():,53,1.41
+REVIEW,check-quality.py,check-quality.py,Needs manual review,Utilities,"Check Current Quality Status
+============================
+
+Shows the current quality status and dashboard.",93,3.55
+REVIEW,check.py,check.py,Needs manual review,Utilities,class RectAndField:,74,3.13
+REVIEW,clean-flatten-names.py,clean-flatten-names.py,Needs manual review,Utilities,"Clean and Fix Flattened Filenames
+
+Removes duplicate suffixes and ensures proper parent-folder context.",138,4.2
+REVIEW,clean-folder-names-no-vols.py,clean-folder-names-no-vols.py,Needs manual review,Utilities,"📂 CLEAN FOLDER NAMES - Remove Vol Numbers
+============================================
+Rename folders to remove Vol._1, Vol_2, Vol_3 etc.
+
+Features:
+✨ Remove all ""Vol"" and version numbers from folder ",285,11.24
+REVIEW,cli-config-manager.py,cli-config-manager.py,Needs manual review,Utilities,"AI CLI Configuration Manager
+Tab-based interface for managing API keys and settings",795,30.31
+REVIEW,cli.py,cli.py,Needs manual review,Utilities,"Simple Claude CLI for terminal usage
+Usage: python claude-cli.py ""Your question here""",102,3.0
+REVIEW,clip-editor.py,clip-editor.py,Needs manual review,Utilities,class Slide:,224,7.24
+REVIEW,cloud-services-delete.py,cloud-services-delete.py,Needs manual review,Utilities,def delete_endpoint_and_config(endpoint_name) -> None:,78,2.37
+REVIEW,cloud-services-sagemaker.py,cloud-services-sagemaker.py,Needs manual review,Utilities,class SagemakerHuggingfaceStrategy(DeploymentStrategy):,198,7.58
+REVIEW,comic-strip-generator.py,comic-strip-generator.py,Needs manual review,Utilities,No description,48,1.68
+REVIEW,compare-content.py,compare-content.py,Needs manual review,Utilities,"Descriptor data structure.
+
+Descriptors are basic data structure used throughout PSD files. Descriptor is
+one kind of serialization protocol for data objects, and
+enum classes in :py:mod:`psd_tools.te",783,18.34
+REVIEW,compare-files.py,compare-files.py,Needs manual review,Utilities,"def check_correct_thumbnail_size(thumbnail_path, expected_height):",156,5.8
+REVIEW,comprehensive-folder-consolidation.py,comprehensive-folder-consolidation.py,Needs manual review,Utilities,"🎵 COMPREHENSIVE FOLDER CONSOLIDATION
+======================================
+Analyze ALL folders in nocTurneMeLoDieS and consolidate/merge
+
+Features:
+✨ Find similar/duplicate folders
+✨ Merge related co",413,15.2
+REVIEW,comprehensive-verifier.py,comprehensive-verifier.py,Needs manual review,Utilities,"Comprehensive Structure Verifier
+
+Checks for:
+1. Duplicate files (exact and semantic)
+2. Naming consistency
+3. Proper categorization
+4. Parent folder context preservation",230,8.08
+REVIEW,consolidate-versions.py,consolidate-versions.py,Needs manual review,Utilities,"Script Version Consolidator
+Consolidates versioned scripts based on analysis",142,4.19
+REVIEW,consolidation.py,consolidation.py,Needs manual review,Utilities,"Final File Consolidation Script
+Consolidates ALL files from the user's request into /Users/steven/tehSiTes/DrAdu-SEO-OPTIMIZED",429,18.04
+REVIEW,content-aware-analyzer.py,content-aware-analyzer.py,Needs manual review,Utilities,"Detailed Comparison Report Generator
+===================================
+Generate a comprehensive report showing the differences between
+original and content-aware analysis approaches.",423,15.57
+REVIEW,content-creation-nocturne.py,content-creation-nocturne.py,Needs manual review,Utilities,def collect_image_files(source_directory):,70,2.34
+REVIEW,conversation.py,conversation.py,Needs manual review,Utilities,class ConversationExporter:,368,12.13
+REVIEW,conversion.py,conversion.py,Needs manual review,Utilities,"def _stub_to_python_value_set(stub_value, ignore_compiled=False):",211,7.5
+REVIEW,convert-markdown-to-pdf.py,convert-markdown-to-pdf.py,Needs manual review,Utilities,"Markdown to PDF Converter
+Converts specified markdown files to PDF format using markdown and weasyprint libraries.",228,6.79
+REVIEW,converters.py,converters.py,Needs manual review,Utilities,Commonly useful converters.,142,3.54
+REVIEW,crawl.py,crawl.py,Needs manual review,Utilities,"def crawl(obj: dict, func=lambda x, y: logger.info(x, y, end=Path(""\n"")), path=None):",170,5.52
+REVIEW,create-files.py,create-files.py,Needs manual review,Utilities,"def create_backup(file_path, backup_dir):",115,3.7
+REVIEW,create-reorganization-plan.py,create-reorganization-plan.py,Needs manual review,Utilities,No description,348,12.94
+REVIEW,custom-thumbnail.py,custom-thumbnail.py,Needs manual review,Utilities,"async def generate_custom_thumbnail(bot, update):",155,5.54
+REVIEW,customer-complaint-classifier.py,customer-complaint-classifier.py,Needs manual review,Utilities,def basic_prompt(complaint):,64,2.41
+REVIEW,cutout-process.py,cutout-process.py,Needs manual review,Utilities,"def apply_circular_mask(image_path, output_path):",85,2.62
+REVIEW,database-clients-extract.py,database-clients-extract.py,Needs manual review,Utilities,"Automated Conversation Archive System
+Captures and updates conversation data in real-time",470,15.43
+REVIEW,database.py,database.py,Needs manual review,Utilities,def startDatabase():,303,9.04
+REVIEW,deep-content-cross-reference.py,deep-content-cross-reference.py,Needs manual review,Utilities,"📚 DEEP CONTENT CROSS-REFERENCE SCANNER
+========================================
+Multi-depth scan of ~/Documents for stories, lyrics, transcripts, and prompts
+Cross-reference with music archives to ens",540,22.65
+REVIEW,deep-content.py,deep-content.py,Needs manual review,Utilities,"AI-Powered Deep Analyzer with Content-Awareness
+Combines structural analysis with AI-powered insights",495,18.24
+REVIEW,deep-music-directory-analyzer.py,deep-music-directory-analyzer.py,Needs manual review,Utilities,"🎵 DEEP MUSIC DIRECTORY ANALYZER & MERGER
+==========================================
+Deep multi-depth analysis and consolidation of multiple music archive directories.
+
+Analyzes:
+- /Users/steven/Music/",607,25.78
+REVIEW,deep.py,deep.py,Needs manual review,Utilities,"Deep Analyzer with Content-Awareness
+Intelligent analysis tool for various content types",385,13.94
+REVIEW,defaults.py,defaults.py,Needs manual review,Utilities,No description,46,1.21
+REVIEW,delete-endpoint.py,delete-endpoint.py,Needs manual review,Utilities,def delete_endpoint_and_config(endpoint_name) -> None:,78,2.37
+REVIEW,delete.py,delete.py,Needs manual review,Utilities,"def delete_media(self, media_id):",44,1.22
+REVIEW,deploy-sagemaker.py,deploy-sagemaker.py,Needs manual review,Utilities,"In Amazon SageMaker and other AWS services, Application Auto Scaling allows you to automatically scale resources in and out based on configurable policies. Within this context, registering a scalable ",170,7.72
+REVIEW,development-apps-input.py,development-apps-input.py,Needs manual review,Utilities,No description,285,7.85
+REVIEW,development-gui-apps-hooks.py,development-gui-apps-hooks.py,Needs manual review,Utilities,"Hooks for IPython.
+
+In Python, it is possible to overwrite any method of any object if you really
+want to.  But IPython exposes a few 'hooks', methods which are *designed* to
+be overwritten by users f",169,5.46
+REVIEW,diagnose.py,diagnose.py,Needs manual review,Utilities,"Diagnostic functions, mainly for use when doing tech support.",263,7.54
+REVIEW,domination-engine.py,domination-engine.py,Needs manual review,Utilities,"🚀 SEO Domination Engine
+Automated SEO optimization targeting top 1-5% rising keywords (CONSTANT_2025 Q4)
+
+Features:
+- Metadata pack generation (titles, descriptions, schema)
+- Content automation for h",797,25.54
+REVIEW,dualdomainstrategy-v1.py,dualdomainstrategy-v1.py,Needs manual review,Utilities,"Dual-Domain Strategy Implementation System
+AvatarArts.org & QuantumForgeLabs.org - Trend-Optimized Brand Ecosystem",878,36.86
+REVIEW,duplicate-cleaner.py,duplicate-cleaner.py,Needs manual review,Utilities,Duplicate Cleaner - Remove duplicate files and consolidate naming,279,9.74
+REVIEW,edit.py,edit.py,Needs manual review,Utilities,class EditTool20250124(BaseAnthropicTool):,565,22.42
+REVIEW,elevenlabs.py,elevenlabs.py,Needs manual review,Utilities,class elevenlabs:,54,1.26
+REVIEW,emoji-morph-animation.py,emoji-morph-animation.py,Needs manual review,Utilities,"Morph Animation - Transform between different emojis or shapes.
+
+Creates smooth transitions and transformations.",351,11.68
+REVIEW,evaluate.py,evaluate.py,Needs manual review,Utilities,No description,261,9.2
+REVIEW,execute-deduplication.py,execute-deduplication.py,Needs manual review,Utilities,"Execute Comprehensive Deduplication & Rename
+Actually performs the cleanup with safety checks",155,4.83
+REVIEW,execute-excel-organization.py,execute-excel-organization.py,Needs manual review,Utilities,Execute Excel Organization - Non-interactive version,74,2.29
+REVIEW,extract-topic-from-text.py,extract-topic-from-text.py,Needs manual review,Utilities,class ExtractNews:,55,2.11
+REVIEW,extract.py,extract.py,Needs manual review,Utilities,def get_full_annotation_field_id(annotation):,178,6.65
+REVIEW,ffmpeg-downloader.py,ffmpeg-downloader.py,Needs manual review,Utilities,class FFmpegDL:,106,3.07
+REVIEW,ffmpeg-help.py,ffmpeg-help.py,Needs manual review,Utilities,"async def place_water_mark(input_file, output_file, water_mark_file):",150,4.88
+REVIEW,ffmpeg-installer.py,ffmpeg-installer.py,Needs manual review,Utilities,def ffmpeg_install_windows():,153,5.39
+REVIEW,ffmpeg-robot.py,ffmpeg-robot.py,Needs manual review,Utilities,"async def ffmpegrobot_ad(bot, update):",262,9.37
+REVIEW,file-dedup-scanner.py,file-dedup-scanner.py,Needs manual review,Utilities,"def is_excluded(path, patterns):",176,5.6
+REVIEW,file-diff-viewer.py,file-diff-viewer.py,Needs manual review,Utilities,"Version Comparison Tool
+Shows differences between script versions to help decide which to keep",204,5.79
+REVIEW,fill-utility.py,fill-utility.py,Needs manual review,Utilities,"def fill_pdf_fields(input_pdf_path: str, fields_json_path: str, output_pdf_path: str):",117,4.87
+REVIEW,filter-bad-names.py,filter-bad-names.py,Needs manual review,Utilities,"Filter Bad Names - Identify only files that truly need renaming
+Focuses on vague, misleading, or unclear names",167,6.02
+REVIEW,find-duplicates-fdupes.py,find-duplicates-fdupes.py,Needs manual review,Utilities,No description,19,0.54
+REVIEW,find-duplicates-md5.py,find-duplicates-md5.py,Needs manual review,Utilities,"def is_excluded(path, patterns):",197,6.27
+REVIEW,finder.py,finder.py,Needs manual review,Utilities,"Comprehensive Duplicate File Detection Script
+Analyzes files for exact duplicates using MD5 hashing and naming patterns",162,5.49
+REVIEW,firebase-api-processor.py,firebase-api-processor.py,Needs manual review,Utilities,No description,486,18.97
+REVIEW,flatten-with-prefixes.py,flatten-with-prefixes.py,Needs manual review,Utilities,Final Flattening Script - Move ALL files to root and remove ALL directories,211,7.06
+REVIEW,formdata.py,formdata.py,Needs manual review,Utilities,class FormData:,171,5.96
+REVIEW,gallery-merge-system.py,gallery-merge-system.py,Needs manual review,Utilities,"Enhanced Gallery System - Merging simplegallery and city-16-9 features
+Combines the best of both projects with advanced features",393,13.81
+REVIEW,gdrive-link-converter.py,gdrive-link-converter.py,Needs manual review,Utilities,def convert_to_direct_link(shared_link):,27,1.05
+REVIEW,gdrive.py,gdrive.py,Needs manual review,Utilities,"def convert_to_colab(file_path, google_drive_path):",82,2.19
+REVIEW,generatetexts-1.py,generatetexts-1.py,Needs manual review,Utilities,def load_env_d():,47,1.34
+REVIEW,generatetexts.py,generatetexts.py,Needs manual review,Utilities,def get_facts(topic):,26,0.64
+REVIEW,get-file.py,get-file.py,Needs manual review,Utilities,No description,146,4.69
+REVIEW,get-simple.py,get-simple.py,Needs manual review,Utilities,class FileProxy(io.TextIOBase):,61,1.69
+REVIEW,giphy-download.py,giphy-download.py,Needs manual review,Utilities,"Automated Image Upscaler
+Processes all images with multiple aspect ratios automatically
+Based on the proven 9mbs.py approach using macOS sips",305,9.66
+REVIEW,giphy-downloader.py,giphy-downloader.py,Needs manual review,Utilities,"def load_config(config_file=""config.yaml""):",202,7.29
+REVIEW,giphy-gifs.py,giphy-gifs.py,Needs manual review,Utilities,"def download_gif(giphy_id: str, output_path: str):",95,2.05
+REVIEW,gmupload.py,gmupload.py,Needs manual review,Utilities,This is used for uploading downloaded track to google play music,108,3.16
+REVIEW,good-usage.py,good-usage.py,Needs manual review,Utilities,"This template is written by @jeremycjang
+
+What does this quickstart script aim to do?
+- Here's the configuration I use the most.
+
+NOTES:
+- Read the incredibly amazing advices & ideas from my experienc",154,5.06
+REVIEW,grok-langchain-agent.py,grok-langchain-agent.py,Needs manual review,Utilities,class GrokAgent:,71,2.38
+REVIEW,groq-cli.py,groq-cli.py,Needs manual review,Utilities,"Simple Groq CLI for terminal usage
+Usage: python groq-cli.py ""Your question here""",124,3.59
+REVIEW,gui-apps-downloader.py,gui-apps-downloader.py,Needs manual review,Utilities,class App:,99,2.35
+REVIEW,html-docs-generator.py,html-docs-generator.py,Needs manual review,Utilities,"Simple HTML Documentation Generator
+Creates a comprehensive HTML documentation website without Sphinx dependencies",1140,33.94
+REVIEW,html-keep.py,html-keep.py,Needs manual review,Utilities,"HTML Content Analyzer
+Uses deep analysis and fluid awareness to determine what's worth keeping vs removable",518,18.97
+REVIEW,imove.py,imove.py,Needs manual review,Utilities,No description,33,1.16
+REVIEW,instabot-api-prepare.py,instabot-api-prepare.py,Needs manual review,Utilities,def get_credential_file(base_path=DEFAULT_SECRET_DIR):,105,3.57
+REVIEW,instabot-devices.py,instabot-devices.py,Needs manual review,Utilities,No description,122,3.45
+REVIEW,installations.py,installations.py,Needs manual review,Utilities,def run_command(command):,51,1.4
+REVIEW,instareport-libs-attack.py,instareport-libs-attack.py,Needs manual review,Utilities,No description,414,15.63
+REVIEW,leonardo-api.py,leonardo-api.py,Needs manual review,Utilities,def load_env_d():,134,4.92
+REVIEW,leonardo-content-factory.py,leonardo-content-factory.py,Needs manual review,Utilities,"🎨 AI Content Factory
+Automated product photography and image generation pipeline
+
+Features:
+- AI image generation (Leonardo.AI)
+- Background removal (Remove.bg)
+- Auto-tagging (Imagga)
+- Quality enhan",356,11.92
+REVIEW,leonardo-convert-json-writer.py,leonardo-convert-json-writer.py,Needs manual review,Utilities,No description,223,6.85
+REVIEW,leonardo-convert-loop.py,leonardo-convert-loop.py,Needs manual review,Utilities,def load_env_d():,175,5.6
+REVIEW,leonardo-convert-loop2.py,leonardo-convert-loop2.py,Needs manual review,Utilities,No description,202,6.23
+REVIEW,leonardo-convert.py,leonardo-convert.py,Needs manual review,Utilities,def load_env_d():,224,7.05
+REVIEW,leonardo-download-1.py,leonardo-download-1.py,Needs manual review,Utilities,def load_env_d():,222,7.02
+REVIEW,leonardo-download-batch.py,leonardo-download-batch.py,Needs manual review,Utilities,No description,151,5.07
+REVIEW,leonardo-generation.py,leonardo-generation.py,Needs manual review,Utilities,No description,151,5.06
+REVIEW,leonardo-leoup.py,leonardo-leoup.py,Needs manual review,Utilities,No description,80,1.9
+REVIEW,leonardo-loop-upscale.py,leonardo-loop-upscale.py,Needs manual review,Utilities,No description,88,2.68
+REVIEW,leonardo-myinfo.py,leonardo-myinfo.py,Needs manual review,Utilities,No description,25,0.6
+REVIEW,leonardo-universe4.py,leonardo-universe4.py,Needs manual review,Utilities,No description,110,3.55
+REVIEW,leonardo-upscaled.py,leonardo-upscaled.py,Needs manual review,Utilities,No description,212,6.49
+REVIEW,macro.py,macro.py,Needs manual review,Utilities,Support for interactive macros in IPython,60,1.82
+REVIEW,manage-repo.py,manage-repo.py,Needs manual review,Utilities,"Enhanced GitHub Repository Manager
+Comprehensive tool for managing and improving GitHub repositories",1706,47.33
+REVIEW,massive.py,massive.py,Needs manual review,Utilities,"This template is written by @loopypanda
+
+What does this quickstart script aim to do?
+- My settings is for running InstaPY 24/7 with approximately CONSTANT_1400
+follows/day - CONSTANT_1400 unfollows/da",57,2.06
+REVIEW,media-player.py,media-player.py,Needs manual review,Utilities,No description,1,0.04
+REVIEW,merge-external-docs.py,merge-external-docs.py,Needs manual review,Utilities,"Merge External Volume Documentation into Home Directory
+Intelligently organize content from /Volumes into ~/",315,9.75
+REVIEW,merge-files-intelligent.py,merge-files-intelligent.py,Needs manual review,Utilities,No description,754,31.4
+REVIEW,merge-other-content-albums.py,merge-other-content-albums.py,Needs manual review,Utilities,"🔀 MERGE OTHER_CONTENT/ALBUMS INTO NOCTURNE
+============================================
+Move all albums from Other_Content/Albums into nocTurneMeLoDieS
+with flat structure",158,5.45
+REVIEW,midjourney-tool.py,midjourney-tool.py,Needs manual review,Utilities,No description,30,0.69
+REVIEW,model-evaluation-evaluate.py,model-evaluation-evaluate.py,Needs manual review,Utilities,No description,230,8.86
+REVIEW,model-evaluation-sagemaker.py,model-evaluation-sagemaker.py,Needs manual review,Utilities,def run_evaluation_on_sagemaker(is_dummy: bool = True) -> None:,67,2.03
+REVIEW,model-finetuning-sagemaker.py,model-finetuning-sagemaker.py,Needs manual review,Utilities,def run_finetuning_on_sagemaker(,73,2.5
+REVIEW,multi-depth-folder-analyzer.py,multi-depth-folder-analyzer.py,Needs manual review,Utilities,"🔍 MULTI-DEPTH FOLDER ANALYZER & CONSOLIDATOR
+==============================================
+Deep recursive analysis and consolidation at ALL folder levels
+
+Features:
+✨ Scan recursively to all depths
+✨",419,16.74
+REVIEW,multi-thread.py,multi-thread.py,Needs manual review,Utilities,No description,139,3.63
+REVIEW,multi.py,multi.py,Needs manual review,Utilities,"Multi-API TTS Generator for ""As a Man Thinketh""
+Uses multiple APIs as fallbacks: Anthropic, Groq, ElevenLabs, and local TTS",626,28.86
+REVIEW,mydesign-download.py,mydesign-download.py,Needs manual review,Utilities,def sanitize_title(title):,82,2.77
+REVIEW,named.py,named.py,Needs manual review,Utilities,No description,227,7.24
+REVIEW,openai-download.py,openai-download.py,Needs manual review,Utilities,"Python Script Map Generator
+Creates a comprehensive map of all Python scripts and their locations",258,11.17
+REVIEW,openai-missingapikeyerror.py,openai-missingapikeyerror.py,Needs manual review,Utilities,Environment loading helpers for analyze scripts.,84,2.32
+REVIEW,optional.py,optional.py,Needs manual review,Utilities,def test_import_optional():,109,3.29
+REVIEW,origin-date.py,origin-date.py,Needs manual review,Utilities,def get_creation_date(filepath):,148,4.26
+REVIEW,output.py,output.py,Needs manual review,Utilities,No description,31,0.86
+REVIEW,pager.py,pager.py,Needs manual review,Utilities,class Pager(ABC):,40,0.9
+REVIEW,parse-simple.py,parse-simple.py,Needs manual review,Utilities,No description,100,2.92
+REVIEW,pdf-merge.py,pdf-merge.py,Needs manual review,Utilities,"def merge_pdfs(toc_path, main_pdf_path, output_path):",23,0.55
+REVIEW,pdf2html.py,pdf2html.py,Needs manual review,Utilities,"def extract_images_from_pdf(pdf_path, output_folder):",64,2.11
+REVIEW,pdf2img.py,pdf2img.py,Needs manual review,Utilities,No description,27,0.63
+REVIEW,pictures-ai-consolidation.py,pictures-ai-consolidation.py,Needs manual review,Utilities,"📸 PICTURES AI FOLDERS CONSOLIDATION
+=====================================
+Intelligently consolidate AI-generated image folders in ~/Pictures
+
+Features:
+✨ Merge Ideogram-related folders (ideo, ideo-ALL",392,15.91
+REVIEW,pictures-ai-smart-consolidation.py,pictures-ai-smart-consolidation.py,Needs manual review,Utilities,"📸 SMART PICTURES AI CONSOLIDATION
+===================================
+Intelligently merge, deduplicate, and organize AI images
+
+Features:
+✨ Detect duplicate/similar images using perceptual hashing
+✨ G",367,14.15
+REVIEW,pip-build-environment.py,pip-build-environment.py,Needs manual review,Utilities,def startDatabase():,301,9.03
+REVIEW,pip-install-command.py,pip-install-command.py,Needs manual review,Utilities,def get_unique_filename(filepath):,302,8.58
+REVIEW,pip-installer-bootstrap.py,pip-installer-bootstrap.py,Needs manual review,Utilities,No description,33355,2583.34
+REVIEW,prepare-missing-song-folders.py,prepare-missing-song-folders.py,Needs manual review,Utilities,"📂 PREPARE FOLDERS FOR MISSING SONGS
+======================================
+Create proper folder structure for the 21 missing songs
+
+Special handling:
+✨ Project_2025 → ~/Movies (not Music)
+✨ Merge into",409,16.28
+REVIEW,printify-blueprint-downloader.py,printify-blueprint-downloader.py,Needs manual review,Utilities,No description,97,2.66
+REVIEW,process-imove-backups.py,process-imove-backups.py,Needs manual review,Utilities,No description,34,1.18
+REVIEW,pulse.py,pulse.py,Needs manual review,Utilities,"Pulse Animation - Scale objects rhythmically for emphasis.
+
+Creates pulsing, heartbeat, and throbbing effects.",295,9.22
+REVIEW,pyinstaller.py,pyinstaller.py,Needs manual review,Utilities,"A crude *bit of everything* smoke test to verify PyInstaller compatibility.
+
+PyInstaller typically goes wrong by forgetting to package modules, extension
+modules or shared libraries. This script shoul",32,1.14
+REVIEW,quantumforge-cli.py,quantumforge-cli.py,Needs manual review,Utilities,def cli():,30,0.83
+REVIEW,quantumforgelabs.py,quantumforgelabs.py,Needs manual review,Utilities,No description,362,15.21
+REVIEW,query.py,query.py,Needs manual review,Utilities,class QueryExpansion(RAGStep):,55,1.65
+REVIEW,quickstart.py,quickstart.py,Needs manual review,Utilities,No description,37,1.0
+REVIEW,re-size.py,re-size.py,Needs manual review,Utilities,No description,156,5.48
+REVIEW,rebuild.py,rebuild.py,Needs manual review,Utilities,"def rebuild(filename, tag=None, format=""gz"", zonegroups=[], metadata=None):",76,2.34
+REVIEW,recalc.py,recalc.py,Needs manual review,Utilities,"Excel Formula Recalculation Script
+Recalculates all formulas in an Excel file using LibreOffice",206,6.58
+REVIEW,recovery.py,recovery.py,Needs manual review,Utilities,Recovery Analyzer - Comprehensive analysis of Python backup locations,231,8.17
+REVIEW,remove-background.py,remove-background.py,Needs manual review,Utilities,"def remove_background(input_path, output_path):",91,2.92
+REVIEW,remove-duplicate-filenames.py,remove-duplicate-filenames.py,Needs manual review,Utilities,"Aggressive Filename Cleaner - Fix the filename insanity
+Removes duplicate numbers, redundant suffixes, and generic words",330,10.22
+REVIEW,remove-duplicate-files.py,remove-duplicate-files.py,Needs manual review,Utilities,"def is_excluded(path, patterns):",154,4.87
+REVIEW,remove-duplicates.py,remove-duplicates.py,Needs manual review,Utilities,"Advanced Duplicate Remover - Multiple detection methods
+Uses content hashing, similarity analysis, and pattern matching",402,15.44
+REVIEW,render-text.py,render-text.py,Needs manual review,Utilities,class PromptError(Exception):,401,12.25
+REVIEW,replace.py,replace.py,Needs manual review,Utilities,"Apply text replacements to PowerPoint presentation.
+
+Usage:
+    python replace.py <input.pptx> <replacements.json> <output.pptx>
+
+The replacements JSON should have the structure output by inventory.py",385,13.42
+REVIEW,resize.py,resize.py,Needs manual review,Utilities,No description,277,8.65
+REVIEW,resizer.py,resizer.py,Needs manual review,Utilities,"def setup_logging(log_file=None, verbose=False):",144,4.67
+REVIEW,resource-manager.py,resource-manager.py,Needs manual review,Utilities,class ResourceManager:,47,1.62
+REVIEW,retrieve-docs.py,retrieve-docs.py,Needs manual review,Utilities,class ContextRetriever:,116,4.12
+REVIEW,revenue-engine.py,revenue-engine.py,Needs manual review,Utilities,"💰 AI Revenue Engine
+Monetization strategies to reach $10K+ with customer retention automation
+
+Revenue Streams:
+1. AI Services Marketplace (freelance automation)
+2. SaaS Subscriptions (workflow access",866,27.86
+REVIEW,rich-theme.py,rich-theme.py,Needs manual review,Utilities,class Theme:,120,3.77
+REVIEW,robust.py,robust.py,Needs manual review,Utilities,"Robust File Processor
+Handles edge cases and focuses on the most important files for content-aware processing",923,35.94
+REVIEW,save-ai-outputs.py,save-ai-outputs.py,Needs manual review,Utilities,"AI Outputs Hub - Integration Script
+Automatically saves AI assistant outputs with smart categorization",166,4.86
+REVIEW,save-exit.py,save-exit.py,Needs manual review,Utilities,"Auto-save conversation on exit keywords
+Triggers conversation export when user types: exit, bye, save, done",111,3.09
+REVIEW,scan-and-categorize-files.py,scan-and-categorize-files.py,Needs manual review,Utilities,def scan_directory(directory):,86,2.27
+REVIEW,scheme.py,scheme.py,Needs manual review,Utilities,"For types associated with installation schemes.
+
+For a general overview of available schemes and their context, see
+https://docs.python.org/3/install/index.html#alternate-installation.",30,0.72
+REVIEW,screenshot-generate.py,screenshot-generate.py,Needs manual review,Utilities,"async def generate_screen_shot(bot, update):",115,4.02
+REVIEW,script-simple.py,script-simple.py,Needs manual review,Utilities,"def download_story(self, filename, story_url, username):",98,2.98
+REVIEW,send-notification.py,send-notification.py,Needs manual review,Utilities,4. Send tweet when video is published,31,0.69
+REVIEW,services-gallery.py,services-gallery.py,Needs manual review,Utilities,def parse_args():,108,3.05
+REVIEW,services-s3bucket.py,services-s3bucket.py,Needs manual review,Utilities,"def audio_down(s3_name, audio_book_topic, aws_filename, filename_to_save_local):",70,1.77
+REVIEW,services.py,services.py,Needs manual review,Utilities,"def audio_down(s3_name, audio_book_topic, aws_filename, filename_to_save_local):",70,1.77
+REVIEW,setup-browser.py,setup-browser.py,Needs manual review,Utilities,No description,46,1.46
+REVIEW,setup-simple.py,setup-simple.py,Needs manual review,Utilities,"Setup script for City 16-9 Gallery Generator
+Following the dark patterns of simplegallery",55,1.76
+REVIEW,sheets.py,sheets.py,Needs manual review,Utilities,"Google Sheets helpers using gspread.
+Supports OAuth Installed App (client_secret.json) or Service Account (service_account.json).
+
+Functions:
+- ensure_worksheet(spreadsheet, title) -> Worksheet
+- repl",113,3.58
+REVIEW,simple-effective.py,simple-effective.py,Needs manual review,Utilities,"This template is written by @zackvega
+
+What does this quickstart script aim to do?
+- This is my simple but effective script.",73,1.86
+REVIEW,simple-interaction-good.py,simple-interaction-good.py,Needs manual review,Utilities,"This template is written by @Tachenz
+
+What does this quickstart script aim to do?
+- Interact with user followers, liking 3 pictures, doing 1-2 comment - and
+25% chance of follow (ratios which work the",74,2.17
+REVIEW,simple-photo-gallery.py,simple-photo-gallery.py,Needs manual review,Utilities,def get_creation_date(filepath):,120,3.48
+REVIEW,singleton.py,singleton.py,Needs manual review,Utilities,class Singleton(type):,10,0.27
+REVIEW,sitemap-random-product-extractor.py,sitemap-random-product-extractor.py,Needs manual review,Utilities,"def extract_sitemap_data(xml_file_path, num_urls=CONSTANT_200):",50,1.34
+REVIEW,skip-8below.py,skip-8below.py,Needs manual review,Utilities,No description,168,5.03
+REVIEW,skiprows.py,skiprows.py,Needs manual review,Utilities,No description,343,9.55
+REVIEW,slide.py,slide.py,Needs manual review,Utilities,"Slide Animation - Slide elements in from edges with overshoot/bounce.
+
+Creates smooth entrance and exit animations.",302,9.53
+REVIEW,smart-archive-backups.py,smart-archive-backups.py,Needs manual review,Utilities,"Smart Archive Deduplicator
+Intelligently archives backup directories, removing exact duplicates while preserving different versions",295,9.83
+REVIEW,smart-dedup.py,smart-dedup.py,Needs manual review,Utilities,No description,492,18.93
+REVIEW,sound.py,sound.py,Needs manual review,Utilities,No description,3,0.05
+REVIEW,splt.py,splt.py,Needs manual review,Utilities,No description,51,1.45
+REVIEW,sqs-queue-handler.py,sqs-queue-handler.py,Needs manual review,Utilities,class Awsqueue(object):,37,1.08
+REVIEW,start-with.py,start-with.py,Needs manual review,Utilities,"Merged Content Analysis Tool
+
+This file was automatically merged from the following source files:
+- /Users/steven/Music/nocTurneMeLoDieS/python/FINAL_ORGANIZED/generation/start-with-openai.py
+- /Users",21,0.65
+REVIEW,sticker-download.py,sticker-download.py,Needs manual review,Utilities,"async def DownloadStickersBot(bot, update):",111,3.75
+REVIEW,streamlabs-polly.py,streamlabs-polly.py,Needs manual review,Utilities,No description,79,2.07
+REVIEW,stylish-unfollow-tips.py,stylish-unfollow-tips.py,Needs manual review,Utilities,"This template is written by @Nocturnal-2
+
+What does this quickstart script aim to do?
+- I do some unfollow and like by tags mostly
+
+NOTES:
+- I am an one month old InstaPy user, with a small following.",137,4.45
+REVIEW,subject.py,subject.py,Needs manual review,Utilities,Subject-aware reframing using face/pose detection for intelligent cropping,207,7.08
+REVIEW,subtitle.py,subtitle.py,Needs manual review,Utilities,No description,8,0.28
+REVIEW,suno-analytics-tools.py,suno-analytics-tools.py,Needs manual review,Utilities,"Suno Analytics Tools - Extracted from jupyter notebook
+Useful functions for analyzing Suno music data",156,4.91
+REVIEW,suno-discography.py,suno-discography.py,Needs manual review,Utilities,"AlchemyAPI Discography Merger
+Merges Suno and NocTurnE MeLoDies discography data for QuantumForgeLabs integration",340,12.68
+REVIEW,suno-extract-songs.py,suno-extract-songs.py,Needs manual review,Utilities,def prompt_for_files():,135,4.34
+REVIEW,suno-html-splitter.py,suno-html-splitter.py,Needs manual review,Utilities,"Merged Content Analysis Tool
+
+This file was automatically merged from the following source files:
+- /Users/steven/Music/nocTurneMeLoDieS/python/FINAL_ORGANIZED/generation/splt-1.py
+- /Users/steven/Mus",52,1.72
+REVIEW,super-flatten.py,super-flatten.py,Needs manual review,Utilities,"Super Aggressive Flattener
+
+Flattens EVERYTHING - moves all Python files to root with context-aware names.
+Only keeps essential folders: scripts, _data, _docs, _backups",265,8.34
+REVIEW,super-simple-setting.py,super-simple-setting.py,Needs manual review,Utilities,"This template is written by @Edhim
+
+What does this quickstart script aim to do?
+- I am using simple settings for my personal account with a crontab each 3H,
+it's been working since 5 months with no pr",65,1.5
+REVIEW,synthesize.py,synthesize.py,Needs manual review,Utilities,"As a Man Thinketh - Text to Speech System (Real Content)
+A comprehensive TTS system for James Allen's classic book with actual content from Project Gutenberg.",474,53.78
+REVIEW,system-monitor.py,system-monitor.py,Needs manual review,Utilities,"🔍 AI System Health Monitor
+Tests all critical APIs and sends alerts
+
+Usage:
+    source ~/.env.d/loader.sh
+    python3 ~/.env.d/advanced_workflows/system_monitor.py",248,8.42
+REVIEW,system.py,system.py,Needs manual review,Utilities,"Setup Periodic Quality Monitoring
+=================================
+
+Sets up and configures the periodic quality monitoring system.
+
+Author: Enhanced by Claude
+Version: 1.0",263,8.69
+REVIEW,tehsites-complete.py,tehsites-complete.py,Needs manual review,Utilities,"Complete File Merge and Deduplication Script
+Processes the complete file list to merge differences and remove duplicates",290,11.71
+REVIEW,template.py,template.py,Needs manual review,Utilities,No description,168,4.79
+REVIEW,test-v3.py,test-v3.py,Needs manual review,Utilities,Quick test of V3 renamer functionality,39,1.16
+REVIEW,testfonts-v1.py,testfonts-v1.py,Needs manual review,Utilities,def create_text_slide(slide):,116,2.98
+REVIEW,testjoin-v1.py,testjoin-v1.py,Needs manual review,Utilities,class TestJoin:,54,1.57
+REVIEW,thumbs.py,thumbs.py,Needs manual review,Utilities,"def export_thumbnail(video_path: str, out_png: str, ss: float = 0.25):",23,0.41
+REVIEW,tocpdf.py,tocpdf.py,Needs manual review,Utilities,"def create_toc_pdf(toc_items, output_path):",28,0.66
+REVIEW,twitch-download.py,twitch-download.py,Needs manual review,Utilities,"def request(endpoint: str, headers: dict, params: dict) -> requests.Response:",51,1.29
+REVIEW,twitch-exceptions.py,twitch-exceptions.py,Needs manual review,Utilities,class TwitchTubeError(Exception):,14,0.35
+REVIEW,typography.py,typography.py,Needs manual review,Utilities,"Typography System - Professional text rendering with outlines, shadows, and effects.
+
+This module provides high-quality text rendering that looks crisp and professional
+in GIFs, with outlines for read",371,10.87
+REVIEW,undo-move.py,undo-move.py,Needs manual review,Utilities,def move_files_back(backup_path):,37,1.06
+REVIEW,upload-manager.py,upload-manager.py,Needs manual review,Utilities,"GitHub Upload Manager
+Prepares and uploads repositories to GitHub with proper configuration",518,15.67
+REVIEW,upload-products.py,upload-products.py,Needs manual review,Utilities,No description,95,3.69
+REVIEW,upload-simple.py,upload-simple.py,Needs manual review,Utilities,No description,104,3.0
+REVIEW,upload.py,upload.py,Needs manual review,Utilities,class SimplePhotoGalleryHTTPServer(HTTPServer):,255,8.33
+REVIEW,uploader.py,uploader.py,Needs manual review,Utilities,No description,269,8.56
+REVIEW,upscale-and-upload.py,upscale-and-upload.py,Needs manual review,Utilities,No description,96,3.04
+REVIEW,upscale.py,upscale.py,Needs manual review,Utilities,"Move Improvements Back Script
+=============================
+
+Moves all improved files from the copied_files directory back to the original
+Python directory, replacing the original files with the impro",339,12.24
+REVIEW,upscaler.py,upscaler.py,Needs manual review,Utilities,def get_user_choice():,171,6.09
+REVIEW,upwork.py,upwork.py,Needs manual review,Utilities,No description,245,8.37
+REVIEW,usecols.py,usecols.py,Needs manual review,Utilities,No description,578,17.8
+REVIEW,user.py,user.py,Needs manual review,Utilities,def load_excel(file_path):,35,0.8
+REVIEW,util-json-handler.py,util-json-handler.py,Needs manual review,Utilities,No description,71,2.24
+REVIEW,utils-1.py,utils-1.py,Needs manual review,Utilities,def CheckPublicIP():,182,5.62
+REVIEW,utils-simple.py,utils-simple.py,Needs manual review,Utilities,def repo_path(rel: str | Path) -> Path:,117,3.56
+REVIEW,vanceai-remove-background.py,vanceai-remove-background.py,Needs manual review,Utilities,"def remove_background(input_path, output_path):",93,2.91
+REVIEW,verbose.py,verbose.py,Needs manual review,Utilities,"Tests that work on both the Python and C engines but do not have a
+specific classification into the other test modules.",86,2.36
+REVIEW,verify-connection.py,verify-connection.py,Needs manual review,Utilities,No description,68,1.95
+REVIEW,verify.py,verify.py,Needs manual review,Utilities,No description,258,8.06
+REVIEW,visual.py,visual.py,Needs manual review,Utilities,"Visual Effects - Particles, motion blur, impacts, and other effects for GIFs.
+
+This module provides high-impact visual effects that make animations feel
+professional and dynamic while keeping file siz",554,15.02
+REVIEW,walk-directories-recursive.py,walk-directories-recursive.py,Needs manual review,Utilities,No description,219,7.1
+REVIEW,word-validate-changes.py,word-validate-changes.py,Needs manual review,Utilities,Validator for tracked changes in Word documents.,281,11.03
+REVIEW,workspace-audit.py,workspace-audit.py,Needs manual review,Utilities,"Comprehensive Analysis of Claude Directory
+Analyzes structure, duplicates, usage patterns, and organization",433,13.66
+REVIEW,Multi-Modal.py,Multi-Modal.py,Needs manual review,Video Tools,"ULTIMATE Media Analysis Pipeline - Multi-API Edition
+Enhanced with large file support (2GB+ MP4s)
+Compatible with Pydantic 2.x",616,24.56
+REVIEW,client-v1.py,client-v1.py,Needs manual review,Video Tools,No description,264,7.91
+REVIEW,create-gallery.py,create-gallery.py,Needs manual review,Video Tools,"def generate_grouped_gallery(folder_path, output_html, group_size=4):",142,4.33
+REVIEW,leonardo-avatar-download.py,leonardo-avatar-download.py,Needs manual review,Video Tools,No description,124,2.91
+REVIEW,leonardo-content-creation-leonardo.py,leonardo-content-creation-leonardo.py,Needs manual review,Video Tools,No description,93,2.62
+REVIEW,leonardo-download.py,leonardo-download.py,Needs manual review,Video Tools,No description,93,2.62
+REVIEW,leonardo-process.py,leonardo-process.py,Needs manual review,Video Tools,No description,59,1.65
+REVIEW,leonardo-ssh-avatararts-downloader.py,leonardo-ssh-avatararts-downloader.py,Needs manual review,Video Tools,No description,121,2.84
+REVIEW,photo-gallery-batch-generator.py,photo-gallery-batch-generator.py,Needs manual review,Video Tools,"Enhanced Batch Gallery Generator for Simple Photo Gallery
+
+This script scans through a directory and creates Simple Photo Gallery instances 
+for each subdirectory that contains images, with advanced c",698,24.82
+REVIEW,scriptwrapper.py,scriptwrapper.py,Needs manual review,Video Tools,def reformatPartialJson(videojson):,278,7.96
+REVIEW,static.py,static.py,Needs manual review,Video Tools,No description,8,0.15
+REVIEW,tiktok-compile-videos-v1.py,tiktok-compile-videos-v1.py,Needs manual review,Video Tools,2. Compile video out of clips,76,1.94
+REVIEW,video-clip-editor.py,video-clip-editor.py,Needs manual review,Video Tools,class Clip:,22,0.39
+REVIEW,video-generator-pyqt-app.py,video-generator-pyqt-app.py,Needs manual review,Video Tools,class App:,57,1.43

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "clean/audio.txt",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1734069262660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734069306689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-/Users/steven/Ms\n\\ No newline at end of file\n+/Users/steven/Music/        r\".*\\/Documents\\/gitHub\\/.*\",  # Specific gitHub directory\n"
+                },
+                {
+                    "date": 1734069334992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-/Users/steven/Music/        r\".*\\/Documents\\/gitHub\\/.*\",  # Specific gitHub directory\n+/Users/steven/Music/NocTurnE-meLoDieS        r\".*\\/Documents\\/gitHub\\/.*\",  # Specific gitHub directory\n"
+                },
+                {
+                    "date": 1734069345026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-/Users/steven/Music/NocTurnE-meLoDieS        r\".*\\/Documents\\/gitHub\\/.*\",  # Specific gitHub directory\n+/Users/steven/Music/NocTurnE-meLoDieS\n+        r\".*\\/Movies\\/gitHub\\/.*\",  # Specific gitHub directory\n"
+                },
+                {
+                    "date": 1734069368317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n /Users/steven/Music/NocTurnE-meLoDieS\n-        r\".*\\/Movies\\/gitHub\\/.*\",  # Specific gitHub directory\n+        r\".*\\/Movies\\/C\\/.*\",  # Specific gitHub directory\n"
+                },
+                {
+                    "date": 1734069378722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n /Users/steven/Music/NocTurnE-meLoDieS\n-        r\".*\\/Movies\\/C\\/.*\",  # Specific gitHub directory\n+        r\".*\\/Movies\\/CapCut\\/.*\",  # Specific capcut directory\n"
+                },
+                {
+                    "date": 1734069499121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,1 @@\n-/Users/steven/Music/NocTurnE-meLoDieS\n-        r\".*\\/Movies\\/CapCut\\/.*\",  # Specific capcut directory\n+/Users/steven/Music\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1734069262660,
+            "name": "Commit-0",
+            "content": "/Users/steven/Ms"
+        }
+    ]
+}

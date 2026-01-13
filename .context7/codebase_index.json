@@ -1,0 +1,820 @@
+{
+  "generated_at": "2025-11-27T01:31:48.492799",
+  "codebase_stats": {
+    "total_python_files": 2189,
+    "total_functions": 7927,
+    "total_classes": 998,
+    "unique_libraries": 361,
+    "total_imports": 6801
+  },
+  "libraries": {
+    "os": {
+      "usage_count": 642,
+      "files": [
+        "rename-files-utility.py",
+        "instagram-like-user-followers.py",
+        "audio-thinketh.py",
+        "leonardo.py",
+        "compare-files.py",
+        "file-dedup-scanner.py",
+        "openai-text-to-speech.py",
+        "smart-conservative-renamer.py",
+        "song-process.py",
+        "system-monitor.py"
+      ]
+    },
+    "pathlib": {
+      "usage_count": 619,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "instagram-scan-leonardo-comprehensive.py",
+        "rename-files-utility.py",
+        "audio-thinketh.py",
+        "leonardo.py",
+        "instagram-download.py",
+        "cross-directory-merger.py",
+        "smart-conservative-renamer.py",
+        "song-process.py",
+        "system-monitor.py"
+      ]
+    },
+    "logging": {
+      "usage_count": 512,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "rename-files-utility.py",
+        "cross-directory-merger.py",
+        "setuptools-bootstrap.py",
+        "file-dedup-scanner.py",
+        "openai-text-to-speech.py",
+        "smart-conservative-renamer.py",
+        "song-process.py",
+        "get-simple.py",
+        "openai-gpt4o-image-metadata.py"
+      ]
+    },
+    "typing": {
+      "usage_count": 296,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "rename-files-utility.py",
+        "leonardo.py",
+        "cross-directory-merger.py",
+        "setuptools-bootstrap.py",
+        "smart-conservative-renamer.py",
+        "system-monitor.py",
+        "multi_platform_content_extractor.py",
+        "get-simple.py",
+        "openai-gpt4o-image-metadata.py"
+      ]
+    },
+    "datetime": {
+      "usage_count": 285,
+      "files": [
+        "rename-files-utility.py",
+        "instagram-download.py",
+        "cross-directory-merger.py",
+        "smart-conservative-renamer.py",
+        "system-monitor.py",
+        "multi_platform_content_extractor.py",
+        "openai-gpt4o-image-metadata.py",
+        "cleanup-external-volumes.py",
+        "research-assistant.py",
+        "image-sorter-with-exclusions.py"
+      ]
+    },
+    "json": {
+      "usage_count": 256,
+      "files": [
+        "rename-files-utility.py",
+        "leonardo.py",
+        "instagram-download.py",
+        "multi_platform_content_extractor.py",
+        "openai-gpt4o-image-metadata.py",
+        "cleanup-external-volumes.py",
+        "openai-download.py",
+        "research-assistant.py",
+        "ai-docs-generator.py",
+        "code-apply-improvements.py"
+      ]
+    },
+    "sys": {
+      "usage_count": 226,
+      "files": [
+        "instagram-like-user-followers.py",
+        "leonardo.py",
+        "setuptools-bootstrap.py",
+        "song-process.py",
+        "multi_platform_content_extractor.py",
+        "instagram-whitelist.py",
+        "pulse.py",
+        "research-assistant.py",
+        "wiggle.py",
+        "development-gui-apps-hooks.py"
+      ]
+    },
+    "csv": {
+      "usage_count": 213,
+      "files": [
+        "rename-files-utility.py",
+        "cross-directory-merger.py",
+        "file-dedup-scanner.py",
+        "openai-text-to-speech.py",
+        "smart-conservative-renamer.py",
+        "song-process.py",
+        "multi_platform_content_extractor.py",
+        "openai-gpt4o-image-metadata.py",
+        "image-sorter-with-exclusions.py",
+        "pip-install-command.py"
+      ]
+    },
+    "axolotl": {
+      "usage_count": 213,
+      "files": [
+        "axolotl-main/tests/test_expand_mask.py",
+        "axolotl-main/tests/test_packed_dataset.py",
+        "axolotl-main/tests/test_schedulers.py",
+        "axolotl-main/tests/test_tokenizers.py",
+        "axolotl-main/tests/test_datasets.py",
+        "axolotl-main/tests/test_freeze.py",
+        "axolotl-main/tests/test_exact_deduplication.py",
+        "axolotl-main/tests/test_prompters.py",
+        "axolotl-main/tests/test_validation_dataset.py",
+        "axolotl-main/tests/test_packed_pretraining.py"
+      ]
+    },
+    "re": {
+      "usage_count": 178,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "instagram-scan-leonardo-comprehensive.py",
+        "rename-files-utility.py",
+        "file-dedup-scanner.py",
+        "smart-conservative-renamer.py",
+        "multi_platform_content_extractor.py",
+        "rename-by-purpose.py",
+        "crawl.py",
+        "image-sorter-with-exclusions.py",
+        "html-keep.py"
+      ]
+    },
+    "time": {
+      "usage_count": 136,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "leonardo.py",
+        "onedrive-gallery-logic.py",
+        "firebase-api-processor.py",
+        "organize-files-intelligent.py",
+        "leonardo-convert-loop.py",
+        "re-size.py",
+        "mp3-batch-timestamp.py",
+        "sticker-download.py",
+        "society6-upload.py"
+      ]
+    },
+    "collections": {
+      "usage_count": 130,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "instagram-scan-leonardo-comprehensive.py",
+        "rename-files-utility.py",
+        "file-dedup-scanner.py",
+        "cleanup-external-volumes.py",
+        "image-sorter-with-exclusions.py",
+        "html-keep.py",
+        "ai-docs-generator.py",
+        "comprehensive-folder-consolidation.py",
+        "organize-files-intelligent.py"
+      ]
+    },
+    "transformers": {
+      "usage_count": 126,
+      "files": [
+        "finetune-unsloth.py",
+        "LLM_Course_Engineers_Handbook_Cover/Introduction_to_Weight_Quantization.py",
+        "LLM_Course_Engineers_Handbook_Cover/Decoding_Strategies_in_Large_Language_Models.py",
+        "LLM_Course_Engineers_Handbook_Cover/4_bit_LLM_Quantization_with_GPTQ.py",
+        "LLM_Course_Engineers_Handbook_Cover/Fine_tune_a_Mistral_7b_model_with_DPO.py",
+        "LLM_Course_Engineers_Handbook_Cover/Fine_tune_Llama_2_in_Google_Colab.py",
+        "axolotl-main/tests/test_packed_dataset.py",
+        "axolotl-main/tests/conftest.py",
+        "axolotl-main/tests/test_datasets.py",
+        "axolotl-main/tests/test_perplexity.py"
+      ]
+    },
+    "shutil": {
+      "usage_count": 119,
+      "files": [
+        "cross-directory-merger.py",
+        "rename-by-purpose.py",
+        "cleanup-external-volumes.py",
+        "simplify.py",
+        "comprehensive-folder-consolidation.py",
+        "code-apply-improvements.py",
+        "conversation-export-organizer.py",
+        "organize-youtube-root.py",
+        "simple-flat-organizer.py",
+        "imove.py"
+      ]
+    },
+    "requests": {
+      "usage_count": 113,
+      "files": [
+        "audio-thinketh.py",
+        "leonardo.py",
+        "system-monitor.py",
+        "research-assistant.py",
+        "firebase-api-processor.py",
+        "backlinker.py",
+        "upload-products.py",
+        "leonardo-convert-loop.py",
+        "leonardo-myinfo.py",
+        "ffmpeg-installer.py"
+      ]
+    },
+    "openai": {
+      "usage_count": 112,
+      "files": [
+        "song-process.py",
+        "openai-gpt4o-image-metadata.py",
+        "storykeytrans.py",
+        "research-assistant.py",
+        "gpt-vision-image-describer.py",
+        "ai-docs-generator.py",
+        "openai-text-generator.py",
+        "pydescribe.py",
+        "mp3-batch-timestamp.py",
+        "speak.py"
+      ]
+    },
+    "dotenv": {
+      "usage_count": 110,
+      "files": [
+        "rename-files-utility.py",
+        "audio-thinketh.py",
+        "song-process.py",
+        "openai-gpt4o-image-metadata.py",
+        "storykeytrans.py",
+        "firebase-api-processor.py",
+        "simplify.py",
+        "ai-docs-generator.py",
+        "openai-text-generator.py",
+        "mp3-batch-timestamp.py"
+      ]
+    },
+    "torch": {
+      "usage_count": 109,
+      "files": [
+        "ffdnet-denoiser.py",
+        "finetune-unsloth.py",
+        "LLM_Course_Engineers_Handbook_Cover/Introduction_to_Weight_Quantization.py",
+        "LLM_Course_Engineers_Handbook_Cover/Decoding_Strategies_in_Large_Language_Models.py",
+        "LLM_Course_Engineers_Handbook_Cover/4_bit_LLM_Quantization_with_GPTQ.py",
+        "LLM_Course_Engineers_Handbook_Cover/Fine_tune_a_Mistral_7b_model_with_DPO.py",
+        "LLM_Course_Engineers_Handbook_Cover/Fine_tune_Llama_2_in_Google_Colab.py",
+        "axolotl-main/tests/test_expand_mask.py",
+        "axolotl-main/tests/test_schedulers.py",
+        "axolotl-main/tests/test_freeze.py"
+      ]
+    },
+    "PIL": {
+      "usage_count": 108,
+      "files": [
+        "openai-gpt4o-image-metadata.py",
+        "pulse.py",
+        "image-sorter-with-exclusions.py",
+        "stability.py",
+        "wiggle.py",
+        "typography.py",
+        "leonardo-convert-loop.py",
+        "re-size.py",
+        "image-to-pdf.py",
+        "slide.py"
+      ]
+    },
+    "argparse": {
+      "usage_count": 102,
+      "files": [
+        "instagram-like-user-followers.py",
+        "leonardo.py",
+        "code-apply-improvements.py",
+        "instagram-parse.py",
+        "services-gallery.py",
+        "export-ai-conversations.py",
+        "instagram-follow-user-following.py",
+        "instagram-follow-users.py",
+        "apply-improvements.py",
+        "suno-content-creation-suno.py"
+      ]
+    },
+    "pandas": {
+      "usage_count": 76,
+      "files": [
+        "merge-doc-csvs.py",
+        "image-sorter-with-exclusions.py",
+        "verbose.py",
+        "upload-products.py",
+        "user.py",
+        "suno-content-creation-suno.py",
+        "quiz.py",
+        "optional.py",
+        "testjoin-v1.py",
+        "organize-excel-files.py"
+      ]
+    },
+    "subprocess": {
+      "usage_count": 73,
+      "files": [
+        "rename-files-utility.py",
+        "openai-text-to-speech.py",
+        "development-gui-apps-hooks.py",
+        "comprehensive-file-analyzer.py",
+        "fixer.py",
+        "system.py",
+        "upload-manager.py",
+        "validate-json-reader.py",
+        "ffmpeg-installer.py",
+        "webm.py"
+      ]
+    },
+    "pytest": {
+      "usage_count": 70,
+      "files": [
+        "verbose.py",
+        "optional.py",
+        "skiprows.py",
+        "ufunc.py",
+        "usecols.py",
+        "resolution.py",
+        "test-pandas-hdf5.py",
+        "youtube/youtube-bash-tool.py",
+        "youtube/youtube-read.py",
+        "youtube/youtube-isin.py"
+      ]
+    },
+    "random": {
+      "usage_count": 68,
+      "files": [
+        "audio-thinketh.py",
+        "instagram-whitelist.py",
+        "gtts-text-to-speech.py",
+        "instagram-bot-template.py",
+        "stability.py",
+        "template-code.py",
+        "aws-polly-tts.py",
+        "instagram-social-platforms-instagram-scraper.py",
+        "get-threads.py",
+        "snoopplugins.py"
+      ]
+    },
+    "tqdm": {
+      "usage_count": 62,
+      "files": [
+        "delete.py",
+        "openai-gpt4o-image-metadata.py",
+        "instagram-parse.py",
+        "re-size.py",
+        "mp3-batch-timestamp.py",
+        "parse-api.py",
+        "organize-printify-products.py",
+        "upload-api.py",
+        "instagram-follow-last-user.py",
+        "instagram-like-your-last.py"
+      ]
+    },
+    "unittest": {
+      "usage_count": 59,
+      "files": [
+        "instagram-bot-module.py",
+        "axolotl-main/tests/test_expand_mask.py",
+        "axolotl-main/tests/test_packed_dataset.py",
+        "axolotl-main/tests/test_schedulers.py",
+        "axolotl-main/tests/test_tokenizers.py",
+        "axolotl-main/tests/test_datasets.py",
+        "axolotl-main/tests/test_freeze.py",
+        "axolotl-main/tests/test_exact_deduplication.py",
+        "axolotl-main/tests/test_prompters.py",
+        "axolotl-main/tests/test_data.py"
+      ]
+    },
+    "instabot": {
+      "usage_count": 55,
+      "files": [
+        "instagram-like-user-followers.py",
+        "instagram-whitelist.py",
+        "instagram-parse.py",
+        "instagram-follow-user-following.py",
+        "instagram-follow-users.py",
+        "instagram-like-users-from.py",
+        "instagram-unlike-users.py",
+        "instagram-stories-downloader.py",
+        "instagram-state.py",
+        "instagram-follow-last-user.py"
+      ]
+    },
+    "dataclasses": {
+      "usage_count": 50,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "multi_platform_content_extractor.py",
+        "code-apply-improvements.py",
+        "organize-files-intelligent.py",
+        "video-clip-editor.py",
+        "multi-llm-orchestrator.py",
+        "prompt-hunter.py",
+        "check.py",
+        "automation-discovery-engine.py",
+        "periodic.py"
+      ]
+    },
+    "hashlib": {
+      "usage_count": 50,
+      "files": [
+        "instagram-scan-leonardo-comprehensive.py",
+        "cross-directory-merger.py",
+        "file-dedup-scanner.py",
+        "cleanup-external-volumes.py",
+        "image-sorter-with-exclusions.py",
+        "html-keep.py",
+        "finder.py",
+        "batch-volume-cleanup.py",
+        "smart-archive-backups.py",
+        "instagram-bulk-renamer.py"
+      ]
+    },
+    "ast": {
+      "usage_count": 49,
+      "files": [
+        "instagram-scan-leonardo-comprehensive.py",
+        "rename-files-utility.py",
+        "smart-conservative-renamer.py",
+        "code-apply-improvements.py",
+        "organize-files-intelligent.py",
+        "intelligent-renamer-1.py",
+        "content-aware-organizer.py",
+        "instagram-bulk-renamer.py",
+        "reorganize-by-service.py",
+        "DEEP-CONTENT-ANALYSIS.py"
+      ]
+    },
+    "__future__": {
+      "usage_count": 46,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "leonardo.py",
+        "instagram-parse.py",
+        "utils-simple.py",
+        "suno-content-creation-suno.py",
+        "csv-media-catalog-helper.py",
+        "sheets.py",
+        "subject.py",
+        "load-brand-json.py",
+        "pickleshare.py"
+      ]
+    },
+    "numpy": {
+      "usage_count": 36,
+      "files": [
+        "testjoin-v1.py",
+        "organize-printify-products.py",
+        "skiprows.py",
+        "ufunc.py",
+        "subject.py",
+        "PSDImage.py",
+        "pyinstaller.py",
+        "image-kaleidoscope-effect.py",
+        "usecols.py",
+        "typescript-python-bridge.py"
+      ]
+    },
+    "datasets": {
+      "usage_count": 35,
+      "files": [
+        "model-evaluation-evaluate.py",
+        "evaluate.py",
+        "finetune-unsloth.py",
+        "LLM_Course_Engineers_Handbook_Cover/4_bit_LLM_Quantization_with_GPTQ.py",
+        "LLM_Course_Engineers_Handbook_Cover/Fine_tune_a_Mistral_7b_model_with_DPO.py",
+        "LLM_Course_Engineers_Handbook_Cover/Fine_tune_Llama_2_in_Google_Colab.py",
+        "axolotl-main/tests/test_packed_dataset.py",
+        "axolotl-main/tests/conftest.py",
+        "axolotl-main/tests/test_datasets.py",
+        "axolotl-main/tests/test_exact_deduplication.py"
+      ]
+    },
+    "accelerate": {
+      "usage_count": 33,
+      "files": [
+        "axolotl-main/tests/e2e/test_evaluate.py",
+        "axolotl-main/tests/e2e/test_qwen.py",
+        "axolotl-main/tests/e2e/multigpu/test_llama.py",
+        "axolotl-main/tests/e2e/multigpu/test_ray.py",
+        "axolotl-main/tests/e2e/multigpu/test_gemma3.py",
+        "axolotl-main/tests/e2e/multigpu/test_qwen2.py",
+        "axolotl-main/tests/e2e/multigpu/test_eval.py",
+        "axolotl-main/tests/e2e/patched/test_sp.py",
+        "axolotl-main/tests/e2e/multigpu/solo/test_grpo.py",
+        "axolotl-main/tests/e2e/multigpu/solo/test_flex.py"
+      ]
+    },
+    "functools": {
+      "usage_count": 31,
+      "files": [
+        "ufunc.py",
+        "thinketh-tts-transcription.py",
+        "cloud-services-aws-streamlit.py",
+        "axolotl-main/tests/conftest.py",
+        "axolotl-main/tests/hf_offline_utils.py",
+        "axolotl-main/tests/test_packed_pretraining.py",
+        "axolotl-main/tests/e2e/utils.py",
+        "axolotl-main/tests/e2e/patched/test_sp.py",
+        "axolotl-main/src/axolotl/utils/models.py",
+        "axolotl-main/src/axolotl/utils/bench.py"
+      ]
+    },
+    "io": {
+      "usage_count": 30,
+      "files": [
+        "get-simple.py",
+        "verbose.py",
+        "stability.py",
+        "fixer.py",
+        "skiprows.py",
+        "csv-media-catalog-helper.py",
+        "bot-photo.py",
+        "python-lint-complexity.py",
+        "generate-typography-covers.py",
+        "shuffle-quiz-questions.py"
+      ]
+    },
+    "asyncio": {
+      "usage_count": 29,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "multi-llm-orchestrator.py",
+        "utilities-async.py",
+        "evaluation.py",
+        "python-code-review-system.py",
+        "thinketh-tts-transcription.py",
+        "upwork.py",
+        "content-creation-pipeline.py",
+        "personal-ai-assistant.py",
+        "computer.py"
+      ]
+    },
+    "utils": {
+      "usage_count": 28,
+      "files": [
+        "audio-thinketh.py",
+        "crawl.py",
+        "gtts-text-to-speech.py",
+        "quant-agent.py",
+        "aws-polly-tts.py",
+        "get-threads.py",
+        "parse-reddit-post.py",
+        "openai-generate.py",
+        "streamlabs-polly.py",
+        "fundamental-analysis.py"
+      ]
+    },
+    "yaml": {
+      "usage_count": 28,
+      "files": [
+        "giphy-downloader.py",
+        "page.py",
+        "import-clean-conversations.py",
+        "instagram-image-uploader.py",
+        "LLM_Course_Engineers_Handbook_Cover/Fine_tune_LLMs_with_Axolotl.py",
+        "LLM_Course_Engineers_Handbook_Cover/Mergekit.py",
+        "transcribe/whisper-transcriber.py",
+        "axolotl-main/scripts/chat_datasets.py",
+        "axolotl-main/.runpod/src/handler.py",
+        "axolotl-main/.runpod/src/utils.py"
+      ]
+    },
+    "importlib": {
+      "usage_count": 26,
+      "files": [
+        "pip-installer-bootstrap.py",
+        "check-ai-sdks.py",
+        "openai-missingapikeyerror.py",
+        "verify.py",
+        "axolotl-main/setup.py",
+        "axolotl-main/tests/conftest.py",
+        "axolotl-main/scripts/cutcrossentropy_install.py",
+        "axolotl-main/src/setuptools_axolotl_dynamic_dependencies.py",
+        "axolotl-main/src/axolotl/train.py",
+        "axolotl-main/src/axolotl/core/trainer_builder.py"
+      ]
+    },
+    "tests": {
+      "usage_count": 25,
+      "files": [
+        "axolotl-main/tests/test_packed_dataset.py",
+        "axolotl-main/tests/conftest.py",
+        "axolotl-main/tests/test_tokenizers.py",
+        "axolotl-main/tests/test_datasets.py",
+        "axolotl-main/tests/test_exact_deduplication.py",
+        "axolotl-main/tests/test_data.py",
+        "axolotl-main/tests/test_prompt_tokenizers.py",
+        "axolotl-main/tests/test_packed_batch_sampler.py",
+        "axolotl-main/tests/e2e/test_llama.py",
+        "axolotl-main/tests/e2e/test_deepseekv3.py"
+      ]
+    },
+    "types": {
+      "usage_count": 24,
+      "files": [
+        "optional.py",
+        "getattr.py",
+        "jinja2-native-converter.py",
+        "development-utils-jsonutil.py",
+        "_RefreshThread.py",
+        "axolotl-main/src/axolotl/utils/models.py",
+        "axolotl-main/src/axolotl/cli/utils.py",
+        "axolotl-main/src/axolotl/monkeypatch/unsloth_.py",
+        "axolotl-main/src/axolotl/monkeypatch/lora_kernels.py",
+        "axolotl-main/src/axolotl/integrations/cut_cross_entropy/monkeypatch/qwen2_vl.py"
+      ]
+    },
+    "pydantic": {
+      "usage_count": 24,
+      "files": [
+        "openai-generate.py",
+        "axolotl-main/tests/patched/test_validation.py",
+        "axolotl-main/src/axolotl/cli/utils.py",
+        "axolotl-main/src/axolotl/prompt_strategies/chat_template.py",
+        "axolotl-main/src/axolotl/core/chat/messages.py",
+        "axolotl-main/src/axolotl/utils/schemas/config.py",
+        "axolotl-main/src/axolotl/utils/schemas/vllm.py",
+        "axolotl-main/src/axolotl/utils/schemas/peft.py",
+        "axolotl-main/src/axolotl/utils/schemas/deprecated.py",
+        "axolotl-main/src/axolotl/utils/schemas/multimodal.py"
+      ]
+    },
+    "tempfile": {
+      "usage_count": 23,
+      "files": [
+        "upload.py",
+        "subject.py",
+        "pip-installer-bootstrap.py",
+        "uploader.py",
+        "temp-file-manager.py",
+        "diagnose.py",
+        "image-taggy.py",
+        "rebuild.py",
+        "word-validate-changes.py",
+        "youtube/youtube-downloadr-api.py"
+      ]
+    },
+    "math": {
+      "usage_count": 22,
+      "files": [
+        "pulse.py",
+        "wiggle.py",
+        "page.py",
+        "scripty.py",
+        "image-kaleidoscope-effect.py",
+        "development-utils-jsonutil.py",
+        "calculator.py",
+        "subredditsentiment-apps.py",
+        "visual.py",
+        "image-ultimate.py"
+      ]
+    },
+    "urllib": {
+      "usage_count": 22,
+      "files": [
+        "refresolver-v1.py",
+        "suno-content-creation-suno.py",
+        "upload.py",
+        "instagram-social-platforms-instagram-scraper.py",
+        "snoopplugins.py",
+        "savify.py",
+        "uploader.py",
+        "reddit-download.py",
+        "image-search.py",
+        "gemini-storybook-audio.py"
+      ]
+    },
+    "huggingface_hub": {
+      "usage_count": 22,
+      "files": [
+        "model-finetuning-sagemaker.py",
+        "model-evaluation-sagemaker.py",
+        "model-evaluation-evaluate.py",
+        "evaluate.py",
+        "finetune-unsloth.py",
+        "LLM_Course_Engineers_Handbook_Cover/Fine_tune_LLMs_with_Axolotl.py",
+        "LLM_Course_Engineers_Handbook_Cover/Quantize_Llama_2_models_using_GGUF_and_llama_cpp.py",
+        "LLM_Course_Engineers_Handbook_Cover/Mergekit.py",
+        "LLM_Course_Engineers_Handbook_Cover/Quantize_models_with_ExLlamaV2.py",
+        "axolotl-main/tests/conftest.py"
+      ]
+    },
+    "anthropic": {
+      "usage_count": 21,
+      "files": [
+        "ai-docs-generator.py",
+        "multi-llm-orchestrator.py",
+        "automation-discovery-engine.py",
+        "deep-content-analyzer.py",
+        "intelligent-workflow-builder.py",
+        "evaluation.py",
+        "python-code-review-system.py",
+        "content-creation-pipeline.py",
+        "computer.py",
+        "cloud-services-aws-streamlit.py"
+      ]
+    },
+    "mutagen": {
+      "usage_count": 20,
+      "files": [
+        "pexels-video-downloader.py",
+        "processor.py",
+        "all.py",
+        "voices.py",
+        "vids.py",
+        "audio.py",
+        "comprehensive-music-content-scan.py",
+        "verify-and-sort-missing-songs.py",
+        "youtube/youtube-get-creation.py",
+        "youtube/ytdl-audiometadata.py"
+      ]
+    },
+    "selenium": {
+      "usage_count": 18,
+      "files": [
+        "onedrive-gallery-logic.py",
+        "society6-upload.py",
+        "instagram-social-platforms-instagram-scraper.py",
+        "selenium-cookie-login.py",
+        "parse-onedrive-photo-urls.py",
+        "bot-like.py",
+        "instagram-download-1.py",
+        "reddit-download.py",
+        "instagram-bot-comment.py",
+        "gallery-url-parser.py"
+      ]
+    }
+  },
+  "top_imports": {
+    "os": 642,
+    "pathlib": 619,
+    "logging": 512,
+    "typing": 296,
+    "datetime": 285,
+    "json": 256,
+    "sys": 226,
+    "csv": 213,
+    "axolotl": 213,
+    "re": 178,
+    "time": 136,
+    "collections": 130,
+    "transformers": 126,
+    "shutil": 119,
+    "requests": 113,
+    "openai": 112,
+    "dotenv": 110,
+    "torch": 109,
+    "PIL": 108,
+    "argparse": 102,
+    "pandas": 76,
+    "subprocess": 73,
+    "pytest": 70,
+    "random": 68,
+    "tqdm": 62,
+    "unittest": 59,
+    "instabot": 55,
+    "dataclasses": 50,
+    "hashlib": 50,
+    "ast": 49
+  },
+  "code_patterns": {
+    "pathlib_usage": 635,
+    "llm_api_calls": 69,
+    "image_processing": 260,
+    "env_loading": 152,
+    "html_scripts": 1866
+  },
+  "documentation_files": 1961,
+  "context7_integration": {
+    "api_key_configured": true,
+    "ready_for_queries": true,
+    "recommended_libraries": [
+      "pathlib",
+      "csv",
+      "json",
+      "requests",
+      "openai",
+      "pandas",
+      "anthropic",
+      "langchain_openai",
+      "numpy",
+      "jinja2",
+      "requests_toolbelt",
+      "jsonschema"
+    ]
+  }
+}

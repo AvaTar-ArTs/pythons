@@ -1,0 +1,23 @@
+# Audio/Video files (if you copy them here for processing)
+*.mp3
+*.wav
+*.m4a
+*.mp4
+*.avi
+*.mov
+
+# Transcription outputs
+*.txt
+*.json
+*.srt
+*.vtt
+output/
+transcripts/
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
