@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+pickleshare.py,PickleShare - a small 'shelve' like datastore with concurrency support,,KEEP,
+pip_build_environment.py,[No docstring found],pip-build-environment.py,RENAME,Fix underscore to hyphen
+pip_install_command.py,[No docstring found],pip-install-command.py,RENAME,Fix underscore to hyphen
+pip_installer_bootstrap.py,[OpenAI integration],pip-installer-bootstrap.py,RENAME,Fix underscore to hyphen
+playlist.py,[YouTube automation],,KEEP,
+podcast-studio.py,🎙️ AI Podcast Studio,,KEEP,
+prepare_missing_song_folders.py,📂 PREPARE FOLDERS FOR MISSING SONGS,prepare-missing-song-folders.py,RENAME,Fix underscore to hyphen
+preservation-renamer.py,Python Preservation Renamer,,KEEP,
+printify-blueprint-downloader.py,[No docstring found],,KEEP,
+process-csv-docs.py,[No docstring found],,KEEP,
+process-images.py,[Leonardo AI],leonardo-process-images.py,RENAME,Add Leonardo prefix
+process-imove-backups.py,[No docstring found],,KEEP,
+process-json.py,This script is intended for use as a GYP_GENERATOR. It takes as input (by way of,,KEEP,
+process-remix.py,[OpenAI integration],,KEEP,
+processor.py,[No docstring found],,NEEDS_REVIEW,Too generic - needs specific context
+product-image.py,[No docstring found],,KEEP,
+project.py,AvaTarArTs Project Manager,,KEEP,
+protocols.py,typing.Protocol classes for jsonschema interfaces.,,LIBRARY,Library/framework code - protocols.py
+pulse.py,Pulse Animation - Scale objects rhythmically for emphasis.,,KEEP,
+py3compat.py,Compatibility tricks for Python 3. Mainly to do with unicode.,,LIBRARY,Library/framework code - py3compat
+pydescribe.py,[OpenAI integration],,KEEP,
+pyinstaller.py,A crude *bit of everything* smoke test to verify PyInstaller compatibility.,,KEEP,
+pyorganize.py,[OpenAI integration],,KEEP,
+pytables.py,[No docstring found],,KEEP,
+python-aggressive-cleanup.py,Python Aggressive Cleanup System,,DELETE,One-time script or backup
+python-cleanup-execute.py,Python Directory Cleanup - Auto Execution,,DELETE,One-time script or backup
+python-documentation.py,Python API Documentation Generator,,KEEP,
+python-filename-cleanup.py,Python Filename Cleanup System,,DELETE,One-time script or backup
+python-intelligent-rename.py,Intelligent Python File Renamer - Execution Script,,KEEP,
+python-lint-complexity.py,[No docstring found],,KEEP,
+python-namer.py,[OpenAI integration],,KEEP,
+pythoncat.py,[OpenAI integration],,KEEP,
+pythoncatorize.py,[OpenAI integration],,KEEP,
+pyttsx3-tts.py,[No docstring found],,KEEP,
+quant-agent.py,[OpenAI integration],,KEEP,
+quantum.py,[No docstring found],,KEEP,
+quantumforge-cli.py,[No docstring found],,KEEP,
+quantumforgelabs.py,[OpenAI integration],,KEEP,
+query.py,[OpenAI integration],,KEEP,
+queue-script.py,Listens to playlist for new tracks,,KEEP,
+quickstart.py,[No docstring found],,KEEP,
+quiz.py,[No docstring found],,KEEP,
+quote-image-generator.py,[No docstring found],,KEEP,
+re-size.py,[No docstring found],,KEEP,
+rebuild.py,[No docstring found],,KEEP,
+recalc.py,Excel Formula Recalculation Script,,KEEP,
+recovery.py,Recovery Analyzer - Comprehensive analysis of Python backup locations,,KEEP,
+reddit-download.py,[Reddit automation],,KEEP,Already well-named
+reddit-scrape.py,[Reddit automation],,KEEP,Already well-named
+reddit-tts-video-maker.py,[Reddit automation],,KEEP,Already well-named

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "run.sh",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1757638851225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1757638910433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n $PYTHON_BIN -m playwright install chromium\n \n echo \"[info] Starting downloader...\"\n $PYTHON_BIN gemini_grabber.py --file \"$FILELIST\"\n-$PYTHON_BIN gemini_grabber.py --file \"$FILELIST\"\n\\ No newline at end of file\n+$PYTHON_BIN gemini_storybook_downloader.py --file \"$FILELIST\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757639046975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,5 @@\n echo \"[info] Ensuring Playwright browsers are installed...\"\n $PYTHON_BIN -m playwright install chromium\n \n echo \"[info] Starting downloader...\"\n-$PYTHON_BIN gemini_grabber.py --file \"$FILELIST\"\n $PYTHON_BIN gemini_storybook_downloader.py --file \"$FILELIST\"\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1757638851225,
+            "name": "Commit-0",
+            "content": "\n#!/usr/bin/env bash\nset -euo pipefail\n\nFILELIST=\"${1:-urls.txt}\"\nPYTHON_BIN=\"${PYTHON_BIN:-python3}\"\n\necho \"[info] Using Python: $($PYTHON_BIN -V || true)\"\necho \"[info] Installing Python deps (this may take a minute)...\"\n$PYTHON_BIN -m pip install --upgrade pip >/dev/null\n$PYTHON_BIN -m pip install -r requirements.txt\n\necho \"[info] Ensuring Playwright browsers are installed...\"\n$PYTHON_BIN -m playwright install chromium\n\necho \"[info] Starting downloader...\"\n$PYTHON_BIN gemini_grabber.py --file \"$FILELIST\"\n$PYTHON_BIN gemini_grabber.py --file \"$FILELIST\""
+        }
+    ]
+}

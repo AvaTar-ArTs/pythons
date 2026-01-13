@@ -1,0 +1,8 @@
+# Requirements for doc-generator
+# Generated automatically by generate_requirements.py
+
+docutils
+numpy
+pandas
+pip
+sphinx

@@ -1,0 +1,79 @@
+# Python Scripts Collection - Requirements
+# Generated from analyzing 500+ files
+
+# ═══════════════════════════════════════════════════════════════
+# AI & ML PLATFORMS
+# ═══════════════════════════════════════════════════════════════
+openai
+anthropic
+groq
+
+# ═══════════════════════════════════════════════════════════════
+# MEDIA PROCESSING
+# ═══════════════════════════════════════════════════════════════
+moviepy
+pydub
+whisper
+
+# ═══════════════════════════════════════════════════════════════
+# DATA & WEB
+# ═══════════════════════════════════════════════════════════════
+pandas
+requests
+selenium
+numpy
+
+# ═══════════════════════════════════════════════════════════════
+# SOCIAL MEDIA & AUTOMATION
+# ═══════════════════════════════════════════════════════════════
+spotipy
+
+# ═══════════════════════════════════════════════════════════════
+# UTILITIES
+# ═══════════════════════════════════════════════════════════════
+rich
+tqdm
+jinja2
+
+# ═══════════════════════════════════════════════════════════════
+# OTHER PACKAGES
+# ═══════════════════════════════════════════════════════════════
+PIL
+simplegallery
+numpy
+ytdl
+core
+dataclasses
+helper_funcs
+config
+psd_tools
+glob
+utils
+cv2
+hachoir
+bs4
+asyncio
+mutagen
+pytest
+difflib
+threading
+radon
+zipfile
+pypdf
+concurrent
+PyQt5
+tempfile
+pyrogram
+translation
+sample_config
+utilities
+uuid
+mimetypes
+reportlab
+platform
+googleapiclient
+enum
+llm_engineering
+pptx
+pkg_resources
+termcolor

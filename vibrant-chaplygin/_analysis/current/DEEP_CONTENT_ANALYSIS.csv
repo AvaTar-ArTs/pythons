@@ -1,0 +1,951 @@
+filename,category,purpose,services,operations,classes,class_count,function_count,has_main,uses_env_d,size_kb,lines
+15day.py,CSV Processing,"Ensure the directory exists. If not, create it.",,generate,,0,1,False,False,1.7822265625,59
+15days.py,CSV Processing,"Ensure the directory exists. If not, create it.",,generate,,0,1,False,False,1.74609375,58
+2leomotion.py,Image Processing,No docstring,"Leonardo, AWS","upload, generate, upscale",,0,0,False,True,3.5078125,116
+2mentest.py,General Utility,extract_sitemap_data function.,,analyze,,0,2,True,False,1.3408203125,51
+AskReddit.py,YouTube Automation,No docstring,"YouTube, Reddit","upload, generate, organize",,0,7,True,False,8.1953125,213
+CLEANUP_SUNO_TOOLS.py,File Management,CLEANUP SUNO_TOOLS FOLDER,Suno,"generate, organize",SunoToolsCleanup,1,2,False,False,4.435546875,122
+Multi-Modal.py,AI Content Generation,ULTIMATE Media Analysis Pipeline - Multi-API Edition,"OpenAI, Anthropic, Whisper","upload, download, transcribe, generate, analyze, organize","LargeFileHandler, UltimateMediaAnalyzer",2,27,True,True,24.5498046875,616
+MultiThread.py,Gallery Generation,"Before changing the program and publishing it somewhere, please",,"upload, analyze, gallery",,0,2,False,False,3.626953125,140
+PSDImage.py,Data Merging,PSD Image module.,,"generate, merge, convert",PSDImage,1,46,False,False,22.919921875,748
+SendNotification.py,General Utility,4. Send tweet when video is published,,upload,,0,2,False,False,0.6943359375,32
+WhisperTranscriber.py,Audio Transcription,Load configuration file,Whisper,"transcribe, generate, analyze, organize",,0,6,False,False,7.349609375,206
+_RefreshThread.py,General Utility,A thread that calls refresh() at regular intervals.,,"generate, analyze","_RefreshThread, Live",2,16,False,False,14.99609375,411
+adaptive-content-awareness.py,Gallery Generation,Adaptive Content-Aware Analysis System,Stability,"upload, generate, analyze, merge, gallery","ContextDetector, AdaptiveStrategy, DynamicInsights, AdaptiveAnalyzer",4,23,True,False,25.51953125,726
+add_text.py,General Utility,# Vincent: I think we need a new product.,,generate,,0,2,False,False,1.736328125,65
+adown.py,Gallery Generation,list_remote_files function.,Leonardo,"upload, download, gallery",,0,3,False,False,2.83984375,122
+advanced_content_pipeline.py,Instagram Automation,🚀 ADVANCED CONTENT GENERATION PIPELINE,"OpenAI, Anthropic, Instagram, ElevenLabs, Leonardo, Stability, AWS","upload, generate, analyze, merge",AdvancedContentPipeline,1,6,False,True,13.3662109375,364
+against.py,General Utility,No docstring,,generate,"SingleMindedRequestHandler, H11RequestHandler",2,5,False,False,4.05859375,122
+agent.py,AI Content Generation,__init__ function.,OpenAI,generate,GrokAgent,1,2,False,False,2.376953125,72
+aggressive-filename-cleaner.py,File Management,Aggressive Filename Cleaner - Fix the filename insanity,,"download, generate, analyze, organize, convert",AggressiveFilenameCleaner,1,6,True,False,10.1884765625,331
+aggressive-renamer.py,Instagram Automation,Python Aggressive Renamer,"OpenAI, Anthropic, Instagram, YouTube, Suno","upload, generate, analyze, organize, merge, convert",AggressiveRenamer,1,10,True,False,14.9033203125,431
+ai-conversation-exports.py,AI Content Generation,File Organization Script for AI Export Tools,"Anthropic, Suno","generate, analyze, organize",,0,3,True,False,7.234375,188
+ai-stability-code.py,File Management,Intelligent Code Analyzer,Stability,"upload, generate, analyze, organize, merge","Insight, FileContext, AnalysisResult, ContextAnalyzer, InsightGenerator",7,22,True,False,37.67578125,982
+ai_deep_analyzer.py,Telegram Bot,🧠 AI-POWERED DEEP INTELLIGENT CONTENT-AWARE ANALYZER,"OpenAI, Anthropic, Telegram, Discord","download, generate, analyze, organize, merge, convert","Colors, Emojis, AICodeAnalyzer, VectorEmbeddingAnalyzer, ArchitecturalPatternDetector",7,18,True,True,18.984375,575
+album-sorting.py,File Management,Return a sorted list of base names for files with the given suffix in the directory.,,"generate, analyze, organize",,0,4,False,False,4.177734375,134
+album.py,File Management,extract_album function.,,"generate, organize",,0,1,False,False,3.0087890625,104
+albums.py,File Management,organize_files function.,,"generate, analyze, organize",,0,1,False,False,2.56640625,70
+alchemy-quiz.py,AI Content Generation,AlchemyAPI MP3 Generator,OpenAI,"upload, generate, analyze",,0,4,True,True,4.904296875,162
+alias.py,General Utility,System command aliases.,,analyze,"AliasError, InvalidAliasError, Alias, AliasManager",4,15,False,False,9.5830078125,287
+alphabet.py,Gallery Generation,Generates an HTML gallery grouped alphabetically by sets of images and MP4s.,,"generate, organize, convert, gallery",,0,1,False,False,4.3837890625,145
+analyze-code-complexity.py,Gallery Generation,__init__ function.,,"generate, analyze, gallery",AdvancedPythonAnalyzer,1,13,False,False,17.875,521
+analyze-folder-reader.py,YouTube Automation,pyrepo_doc_organizer.py,"OpenAI, Anthropic, YouTube, Whisper, AWS","transcribe, generate, analyze, organize, convert, gallery",ModuleInfo,1,13,True,False,14.6435546875,474
+analyze-json-writer.py,File Management,Complete Cleanup Orchestrator,,"generate, analyze, organize",CleanupOrchestrator,1,7,True,False,6.5009765625,203
+analyze-metadata.py,AI Content Generation,Shared helpers for GPT-based image metadata enrichment.,OpenAI,"generate, analyze",,0,6,False,False,6.1298828125,202
+analyze-mp3-transcript-prompts.py,AI Content Generation,No docstring,"OpenAI, Whisper","transcribe, generate, analyze, organize",,0,16,True,True,10.7021484375,288
+analyze-prompt.py,General Utility,"Generate detailed, descriptive image prompts from a timestamped transcript.",,"generate, analyze",,0,6,True,False,6.3251953125,153
+analyze-reader.py,AI Content Generation,Calls GPT-4o Vision API to analyze the image at image_path.,OpenAI,"generate, analyze, merge",,0,4,True,True,11.009765625,334
+analyze-shorts-info_code.py,AI Content Generation,Analyze the transcribed text using OpenAI GPT.,"OpenAI, Whisper","transcribe, generate, analyze, merge",,0,4,False,True,6.37890625,144
+analyze-writer.py,AI Content Generation,Simple Quality Monitor,Anthropic,"generate, analyze, merge","QualityMetrics, SimpleQualityMonitor",2,12,True,False,23.796875,646
+analyze.py,Instagram Automation,instabot example,Instagram,analyze,,0,1,False,False,0.7666015625,37
+analyze_and_transcribe_missing.py,Audio Transcription,🔍 ANALYZE & TRANSCRIBE MISSING CONTENT,,"transcribe, generate, analyze, organize","Colors, AnalyzeAndTranscribe",2,8,True,False,11.0947265625,278
+analyze_versions.py,File Management,Script Version Analyzer,,"generate, analyze, organize, merge, convert",,0,3,True,False,7.5712890625,237
+analyzer.py,AI Content Generation,analyze_text function.,OpenAI,"generate, analyze",,0,1,False,True,1.400390625,58
+anthropic-download.py,AI Content Generation,Content-Aware Chat Analysis Organizer,Anthropic,"download, generate, analyze, organize, gallery",ContentAwareAnalyzer,1,24,True,False,29.001953125,774
+api.py,Image Processing,Load all .env files from ~/.env.d directory,Leonardo,"upload, generate, analyze, convert, upscale",,0,7,False,True,4.919921875,135
+api_key_inventory.py,Instagram Automation,🔑 API KEY INVENTORY SCANNER,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Telegram, Whisper, ElevenLabs, Suno, Leonardo, Stability, AWS, Supabase, Pinecone","transcribe, generate, analyze, organize","Colors, APIKeyInventory",2,10,True,True,13.3759765625,347
+api_key_inventory_v2.py,Instagram Automation,🔑 API KEY INVENTORY V2,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Telegram, Discord, Whisper, ElevenLabs, Suno, Leonardo, Stability, AWS, Supabase, Pinecone","upload, transcribe, organize","Colors, APIKeyInventoryV2",2,10,True,True,10.9501953125,286
+application-query-expanison.py,AI Content Generation,generate function.,OpenAI,generate,QueryExpansion,1,1,False,False,1.65234375,57
+application-self-query.py,AI Content Generation,generate function.,OpenAI,generate,SelfQuery,1,1,False,False,1.55078125,53
+apply-improvements.py,Data Merging,GitHub Repository Improvement Script,,"upload, analyze, merge",,0,2,True,False,4.71875,160
+approve.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.5419921875,24
+apps-render.py,General Utility,__init__ function.,,"generate, analyze",App,1,1,False,False,1.4326171875,58
+apps.py,General Utility,convert_to_direct_link function.,,convert,,0,1,False,False,1.0458984375,28
+archive-reader.py,Audio Transcription,Comprehensive Merge and Consolidation Tool,"Whisper, Suno","download, transcribe, generate, analyze, organize, merge, convert, gallery",ComprehensiveMerger,1,14,True,False,21.513671875,598
+ascii-python.py,Gallery Generation,Generate ASCII art text using simple character patterns,,"generate, analyze, gallery",PythonAnalyzer,1,8,False,False,8.2529296875,267
+askreddit-loop-1.py,YouTube Automation,random_title_msg function.,"YouTube, Reddit","upload, generate, organize",,0,4,False,False,5.2294921875,153
+askredditbot.py,Reddit Automation,No docstring,Reddit,,,0,0,False,False,0.1328125,10
+audio-analyzer.py,AI Content Generation,transcribe_audio function.,"OpenAI, Whisper","transcribe, generate, analyze",,0,4,False,True,4.6357421875,138
+audio-app.py,Reddit Automation,No docstring,Reddit,"upload, download, generate, analyze",ttsvibelounge,1,8,True,False,4.4912109375,151
+audio-sub.py,Audio Transcription,This script is used to generate a transcript from an audio file using AssemblyAI api.,,"upload, transcribe, generate",,0,6,False,False,2.6474609375,94
+audio-thinketh.py,AI Content Generation,Cinematic hybrid edition:,OpenAI,"upload, generate, analyze, merge",,0,6,True,True,4.73828125,148
+audio.py,Audio Transcription,transcribe_audio function.,Whisper,"transcribe, analyze",,0,4,True,False,1.66015625,64
+audiobook-producer.py,AI Content Generation,OpenAI TTS Audiobook Producer,OpenAI,"generate, analyze, merge, convert",OpenAITTSProducer,1,7,True,False,15.4853515625,352
+autocall.py,General Utility,Autocall capabilities for IPython.core.,,,"IPyAutocall, ExitAutocall, ZMQExitAutocall",3,4,False,False,1.9306640625,76
+autofill.py,AI Content Generation,gpt_fill function.,OpenAI,generate,,0,2,False,True,3.8359375,126
+automated-fixer.py,File Management,Automated code fixer,,"generate, analyze, organize",AutomatedFixer,1,6,True,False,6.5654296875,189
+automation-playwright-screenshot.py,Reddit Automation,Downloads screenshots of reddit posts as they are seen on the web.,Reddit,"upload, download",,0,1,False,False,1.9365234375,55
+automation-selenium-content.py,YouTube Automation,🌟 Content Generator - Quantum Creative Alchemist,"OpenAI, YouTube","upload, generate, analyze, organize",ContentGenerator,1,9,True,False,19.716796875,480
+autonomous-content-agency.py,Telegram Bot,🎬 Autonomous Content Agency,"OpenAI, Anthropic, Telegram, ElevenLabs, Leonardo","upload, generate, analyze, organize",ContentAgency,1,13,True,True,25.4814453125,740
+avatar-download.py,Gallery Generation,list_remote_files function.,Leonardo,"upload, download, gallery",,0,3,False,False,2.9052734375,125
+avatararts-flatten.py,Gallery Generation,Final Flattening Script - Move ALL files to root and remove ALL directories,,"generate, analyze, organize, gallery",,0,4,False,False,7.0576171875,212
+backlinker.py,General Utility,_ ____             _    _ _       _             ,,,,0,0,False,False,1.5634765625,50
+backup-avatararts-system.py,AI Content Generation,Comprehensive Backup System for AvaTarArTs Projects,"OpenAI, Leonardo","download, generate, analyze, organize, convert, gallery",AvaTarArTsBackupSystem,1,7,True,False,17.841796875,554
+backup-installations.py,CSV Processing,run_command function.,,analyze,,0,1,False,False,1.3671875,51
+backupcsv.py,Gallery Generation,No docstring,,"generate, analyze, gallery",,0,2,False,False,2.1279296875,66
+base-classes.py,File Management,Robust Documents Analyzer,,"generate, analyze, organize, merge",RobustDocumentsAnalyzer,1,17,True,False,16.931640625,414
+base-gallery-logic.py,Gallery Generation,Base class for defining a gallery logic. Derived classes should implement the methods create_thumbnails and,,"generate, gallery",BaseGalleryLogic,1,4,False,False,1.8916015625,54
+basic-follow-unfollow.py,General Utility,This template is written by @cormo1990,,upload,,0,0,False,False,3.2626953125,116
+basics.py,File Management,MIT License,,"upload, download, generate, analyze, organize, merge",,0,7,False,False,8.8251953125,283
+batch-1.py,AI Content Generation,Load OpenAI API key from .env and return a configured OpenAI client.,OpenAI,"upload, generate, analyze, merge",,0,9,True,True,15.6435546875,444
+batch-folder-writer.py,General Utility,List all virtual environment directories.,,analyze,,0,2,True,False,2.3251953125,72
+batch-image.py,AI Content Generation,Load OpenAI API key from .env and return a configured OpenAI client.,OpenAI,"upload, generate, analyze, merge",,0,9,True,True,15.6435546875,444
+batch-info.py,AI Content Generation,Prepare a batch request to OpenAI for suggesting appropriate titles for scripts.,OpenAI,"generate, analyze",,0,3,False,True,5.310546875,176
+batch-processor.py,YouTube Automation,Authenticates the user and returns a YouTube API client.,YouTube,"upload, analyze",,0,3,True,False,1.8857421875,71
+batch.py,Image Processing,Enhanced Batch Gallery Generator for Simple Photo Gallery,AWS,"upload, download, generate, analyze, organize, upscale, gallery",,0,11,True,False,24.81640625,699
+batch.py.bak.py,AI Content Generation,Prepare a batch request to OpenAI for suggesting appropriate titles for scripts.,OpenAI,"generate, analyze",,0,3,False,True,5.154296875,173
+batch_transcript_finder.py,File Management,🔍 BATCH TRANSCRIPT FINDER,,organize,"Colors, BatchTranscriptFinder",2,5,True,False,4.103515625,128
+black-white.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.9638671875,38
+block-bots.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.8916015625,35
+bookmarks.py,General Utility,add_bookmarks function.,,upload,,0,1,False,False,0.708984375,30
+bot-library.py,Instagram Automation,"if login function is run threaded, for example in scheduled job,",Instagram,"upload, download, generate, organize, convert",Bot,1,153,False,False,32.861328125,976
+botInstagram.py,General Utility,Created in 07/CONSTANT_2020,,generate,,0,0,False,False,1.357421875,65
+botLike.py,Instagram Automation,Created in 12/CONSTANT_2019,Instagram,"upload, generate",,0,4,False,False,5.9462890625,212
+bot_photo.py,Instagram Automation,Upload photo to Instagram,Instagram,"upload, download, generate, organize",,0,4,False,False,3.9345703125,125
+brand-builder.py,AI Content Generation,🎨 Multi-Modal Brand Builder,"OpenAI, Anthropic, ElevenLabs, Leonardo, Stability, Supabase, Pinecone","upload, generate, analyze",BrandBuilder,1,2,False,False,9.560546875,356
+brand.py,General Utility,load function.,,,BrandTemplate,1,1,False,False,0.7021484375,28
+breakdown.py,AI Content Generation,get_script_description function.,OpenAI,"generate, analyze",,0,2,False,False,1.83203125,65
+bubblespider-amazon-scraper.py,Gallery Generation,extract_amazon_urls_to_csv function.,,"download, gallery",,0,1,False,False,1.33203125,45
+build.py,Gallery Generation,Configures the argument parser,,"generate, analyze, gallery",,0,3,True,False,5.6201171875,175
+bulk-renamer.py,Instagram Automation,Intelligent Bulk File Renamer,"OpenAI, Instagram, YouTube, Reddit, Whisper","transcribe, generate, analyze, organize, merge, convert, upscale, gallery",,0,8,True,False,8.1474609375,256
+business-intelligence.py,Telegram Bot,📊 AI Business Intelligence Platform,"OpenAI, Anthropic, Telegram, ElevenLabs, Supabase, Pinecone","upload, generate, analyze",BusinessIntelligence,1,4,False,False,8.7158203125,280
+button.py,YouTube Automation,Initiating Download,"YouTube, Telegram","upload, download, generate, analyze, convert, upscale, gallery",,0,0,False,False,12.779296875,328
+buttons.py,YouTube Automation,No docstring,"YouTube, Telegram","upload, download, generate, analyze, gallery",,0,0,False,False,4.6591796875,131
+cache.py,Instagram Automation,__init__ function.,Instagram,,BotCache,1,2,False,False,0.4052734375,19
+calculator.py,General Utility,Simple calculator tool for basic math operations.,,,,0,1,False,False,1.5224609375,56
+capture.py,Gallery Generation,Tests for IPython.utils.capture,,gallery,,0,9,False,False,5.2080078125,169
+catalog-to-csv.py,AI Content Generation,analyze_images_to_csv.py,OpenAI,"generate, analyze",,0,5,True,False,5.2724609375,140
+categorizer.py,AI Content Generation,get_openai_category function.,OpenAI,generate,,0,5,False,False,3.3330078125,108
+category-readme-generator.py,Instagram Automation,Intelligent Category README Generator,"Instagram, YouTube","download, transcribe, generate, analyze, organize, convert, upscale, gallery",,0,4,True,False,6.4267578125,232
+chat-base.py,Telegram Bot,TRChatBase function.,Telegram,,,0,1,False,False,0.6171875,28
+chatgpt-conversation-exporter.py,AI Content Generation,ChatGPT Conversation Exporter,"OpenAI, Suno","download, generate, analyze, gallery",ChatGPTConversationExporter,1,11,True,False,17.9453125,509
+chatgpt.py,AI Content Generation,ChatGPT Agent - A simple conversational AI agent using OpenAI's API,OpenAI,generate,ChatGPTAgent,1,7,True,True,6.7294921875,190
+chatprompt.py,AI Content Generation,Shared helpers for chat-based OpenAI interactions.,OpenAI,generate,ChatPrompt,1,2,False,False,1.439453125,56
+check-1.py,AI Tool,No docstring,Anthropic,,,0,0,False,False,0.4296875,19
+check-modules.py,General Utility,check_modules function.,,,,0,1,False,False,1.4072265625,54
+check-quality.py,General Utility,Check Current Quality Status,,,,0,0,False,False,3.4755859375,94
+check.py,AI Content Generation,No docstring,Anthropic,generate,RectAndField,1,2,False,False,3.1298828125,75
+check_file.py,File Management,No docstring,,"download, organize",FFmpegDL,1,10,False,False,2.7197265625,85
+checkpoint.py,Instagram Automation,Instabot Checkpoint methods.,Instagram,,Checkpoint,1,6,False,False,2.1884765625,79
+classify.py,AI Content Generation,generate_category_with_openai function.,OpenAI,"generate, analyze",,0,4,False,True,6.2373046875,196
+claude-anthropic-download.py,AI Content Generation,Enhanced Content-Aware Chat Analysis Organizer v2.0,Anthropic,"download, generate, analyze, organize, convert, gallery",EnhancedContentAnalyzerV2,1,28,True,False,49.0322265625,1307
+claude-chief.py,Telegram Bot,🤖 Personal AI Chief of Staff,"OpenAI, Anthropic, Telegram, ElevenLabs, Stability, Supabase, Pinecone","upload, transcribe, generate, analyze","Task, Meeting, ChiefOfStaff",3,9,False,False,30.50390625,946
+claude-code-review-system.py,Telegram Bot,💻 Intelligent Code Review & Documentation System,"OpenAI, Anthropic, Telegram, Pinecone","upload, generate, analyze",CodeReviewSystem,1,3,False,False,10.7919921875,388
+claude-deep.py,AI Content Generation,Deep Code Analysis - Advanced Content-Aware System,"OpenAI, Anthropic","generate, analyze, gallery",DeepCodeAnalyzer,1,11,True,False,28.193359375,799
+claude.py,AI Tool,Web search server tool for the agent framework.,Anthropic,convert,WebSearchServerTool,1,1,False,False,1.1513671875,39
+clean_flatten_names.py,File Management,Clean and Fix Flattened Filenames,,"analyze, organize",CleanFlattenNames,1,5,True,False,4.185546875,139
+clean_folder_names_no_vols.py,File Management,📂 CLEAN FOLDER NAMES - Remove Vol Numbers,,"analyze, organize, merge","Colors, CleanFolderNames",2,8,True,False,10.8525390625,286
+cleanup-messy-names.py,Gallery Generation,🔧 Fix Timestamped Files - Clean Up Messy Filenames,,"generate, analyze, organize, gallery",TimestampedFileFixer,1,11,True,False,13.8720703125,400
+cli-config-manager.py,AI Tool,AI CLI Configuration Manager,"OpenAI, ElevenLabs, Suno, Leonardo, Stability, Supabase, Pinecone",,"APIService, AIConfigManager",2,20,True,False,30.087890625,796
+cli.py,AI Content Generation,Simple Claude CLI for terminal usage,Anthropic,"generate, analyze",,0,2,True,False,2.9775390625,103
+client-v1.py,File Management,No docstring,,"upload, download, generate, organize",,0,9,False,False,7.9091796875,265
+clipEditor.py,Image Processing,No docstring,,"generate, upscale",Slide,1,9,False,False,7.240234375,225
+clips-1.py,General Utility,gen_comment_image function.,,"generate, analyze",,0,15,False,False,4.7421875,180
+cloud-services-aws-streamlit.py,AI Tool,"Entrypoint for streamlit, see https://docs.streamlit.io/","Anthropic, AWS","analyze, convert, gallery","ModelConfig, Sender",2,14,False,False,19.1865234375,541
+cloud-services-delete.py,General Utility,Deletes an AWS SageMaker endpoint and its associated configuration.,AWS,,,0,1,False,False,2.3681640625,79
+cloud-services-sagemaker.py,General Utility,Initializes the deployment strategy with the necessary services.,AWS,analyze,"SagemakerHuggingfaceStrategy, DeploymentService",2,5,False,False,7.5810546875,199
+code-apply-improvements.py,AI Content Generation,Codebase Improvement Implementer,Anthropic,"generate, analyze","ImprovementResult, CodeImprovementImplementer",2,22,True,False,16.8701171875,493
+codebase.py,File Management,AvaTarArTs Suite - Codebase Analyzer,,"generate, analyze, organize",CodebaseAnalyzer,1,8,False,False,7.4931640625,206
+collect-stats.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.7705078125,32
+combiner.py,Instagram Automation,No docstring,"Instagram, YouTube, Whisper","upload, transcribe, generate, organize, merge",,0,0,False,False,2.0361328125,81
+compare-content.py,General Utility,Descriptor data structure.,,convert,"_DescriptorMixin, Descriptor, ObjectArray, List, Property",29,49,False,False,18.33984375,784
+compare-files.py,Gallery Generation,Check if a thumbnail has the correct height,,"generate, organize, gallery",FilesGalleryLogic,1,5,False,False,5.796875,157
+compare_versions.py,YouTube Automation,Version Comparison Tool,YouTube,"upload, generate, analyze, organize",,0,4,True,False,5.791015625,205
+compile.py,CSV Processing,compile_image_info function.,,,,0,1,False,False,1.3505859375,43
+comprehensive_dedup_rename.py,File Management,Comprehensive Deduplication & Rename,,"upload, analyze, organize",,0,3,True,False,5.7001953125,170
+comprehensive_folder_consolidation.py,File Management,🎵 COMPREHENSIVE FOLDER CONSOLIDATION,Suno,"generate, analyze, organize, merge","Colors, ComprehensiveFolderConsolidation",2,13,True,False,15.1630859375,401
+comprehensive_music_content_scan.py,File Management,🎵 COMPREHENSIVE MUSIC CONTENT SCANNER,Suno,"generate, organize, merge","Colors, ComprehensiveMusicContentScanner",2,12,True,False,25.6298828125,604
+comprehensive_transcript_search.py,File Management,🔍 COMPREHENSIVE TRANSCRIPT & LYRICS SEARCH,,"analyze, organize","Colors, ComprehensiveTranscriptSearch",2,8,True,False,7.62109375,225
+comprehensive_verifier.py,General Utility,Comprehensive Structure Verifier,,"generate, analyze",ComprehensiveVerifier,1,8,True,False,8.0361328125,231
+computer.py,AI Tool,"A tool that allows the agent to interact with the screen, keyboard, and mouse of the current computer.",Anthropic,"convert, upscale","Resolution, ScalingSource, ComputerToolOptions, BaseComputerTool, ComputerTool20241022",6,7,False,False,14.3857421875,408
+confcli.py,General Utility,remove_old_files function.,,"download, generate",,0,2,True,False,2.4521484375,102
+config.py,General Utility,find_proxies function.,,,,0,1,False,False,1.0478515625,43
+config.py.py,YouTube Automation,No docstring,YouTube,"upload, download, upscale",,0,0,False,False,3.0546875,78
+consolidate_versions.py,File Management,Script Version Consolidator,,"generate, analyze, organize, merge",,0,2,True,False,4.189453125,143
+consolidation.py,Image Processing,Final File Consolidation Script,,"download, generate, analyze, organize, merge, upscale, gallery",FinalConsolidator,1,10,True,False,18.037109375,430
+constants.py,YouTube Automation,WARNING: Please configure OAuth 2.0,YouTube,upload,,0,0,False,False,2.38671875,73
+contacts.py,Image Processing,No docstring,,"generate, analyze, upscale",,0,1,False,False,1.95703125,64
+content-aware-analyzer.py,Gallery Generation,Detailed Comparison Report Generator,,"generate, analyze, gallery",,0,4,False,False,15.53125,424
+content-aware.py,Gallery Generation,Content-Aware File Deduplication and Organization System,,"generate, analyze, organize, gallery",ContentAwareDeduplicator,1,11,True,False,11.1416015625,322
+content-creation-leonardo.py,CSV Processing,Save image and motion MP4 URLs to CSV.,Leonardo,"download, generate, analyze",,0,2,False,False,2.6171875,94
+content-creation-nocturne.py,General Utility,"Collects all PNG, JPG, JPEG files from the source directory and its subdirectories.",,"generate, analyze, convert",,0,3,True,False,2.33984375,71
+content-creation-suno.py,Gallery Generation,Scrape Suno-like grid HTML into CSV.,Suno,"download, analyze, convert, gallery",,0,6,True,False,4.296875,142
+content-factory.py,General Utility,🎨 AI Content Factory,"Leonardo, Stability","upload, download, generate, analyze",ContentFactory,1,10,True,True,11.8291015625,357
+content_aware_organizer.py,Instagram Automation,🌳 CONTENT-AWARE PARENT FOLDER STRUCTURE ANALYZER,"OpenAI, Anthropic, Instagram, Reddit","download, generate, analyze, organize, merge","Colors, Emojis, FolderNode, ContentAwareAnalyzer, ParentFolderStructureAnalyzer",5,19,True,False,22.923828125,636
+conversation.py,AI Content Generation,Claude Code Conversation Exporter,Anthropic,"generate, analyze, gallery",ConversationExporter,1,7,True,False,12.09375,369
+conversion.py,General Utility,No docstring,,"generate, convert",,0,8,False,False,7.5048828125,212
+convert-aiff-to-mp3.py,General Utility,Convert AIFF files to MP3 format,,"generate, analyze, convert",,0,2,False,False,1.7841796875,70
+convert-json-writer.py,Image Processing,Convert an image to JPEG format with specified DPI.,Leonardo,"upload, generate, analyze, convert, upscale",,0,7,False,True,6.8515625,224
+convert-loop.py,Image Processing,Load all .env files from ~/.env.d directory,Leonardo,"upload, generate, analyze, convert, upscale",,0,6,False,True,5.6025390625,176
+convert-loop2.py,Image Processing,Convert an image to JPEG format with specified DPI.,Leonardo,"upload, generate, analyze, convert, upscale",,0,5,False,True,6.2255859375,203
+convert-mp4-transcribe.py,Audio Transcription,No docstring,Whisper,"transcribe, analyze, convert",,0,5,True,False,1.814453125,60
+convert-video-segments.py,Audio Transcription,No docstring,Whisper,"transcribe, analyze, convert",,0,5,True,False,1.86328125,59
+convert.py,AI Tool,Advanced File Processor - Consolidated Processing Script,OpenAI,"analyze, organize, merge, convert, upscale",AdvancedFileProcessor,1,9,True,True,13.197265625,407
+converters.py,General Utility,Commonly useful converters.,,convert,,0,6,False,False,3.53515625,143
+converts.py,Image Processing,convert_and_upscale_images function.,,"generate, analyze, convert, upscale",,0,2,True,False,2.513671875,78
+convertupscale.py,Image Processing,convert_and_upscale_images function.,,"generate, convert, upscale",,0,2,True,False,1.9697265625,68
+cover.py,AI Content Generation,generate_cover_image_with_dalle function.,OpenAI,"generate, analyze, convert",,0,3,False,False,1.7177734375,62
+crawl.py,General Utility,get_check_value function.,,,,0,6,False,False,5.9013671875,194
+create-audiobook.py,General Utility,tts_start function.,,"download, generate",,0,1,False,False,1.3203125,37
+create-files.py,CSV Processing,Create a backup of the given file in the specified backup directory.,,"generate, analyze",,0,4,False,False,3.7001953125,116
+create-gallery.py,Gallery Generation,Generates an HTML gallery grouped alphabetically by sets of images and MP4s.,,"generate, organize, convert, gallery",,0,1,False,False,4.326171875,143
+create-strip.py,Image Processing,resize_and_add_border function.,,"generate, merge, upscale",,0,2,False,False,1.3984375,48
+create_reorganization_plan.py,File Management,🗂️ INTELLIGENT REORGANIZATION PLANNER,,"generate, analyze, organize, convert","Colors, ReorganizationPlanner",2,6,True,False,12.529296875,349
+createdb.py,General Utility,No docstring,,generate,,0,0,False,False,0.1455078125,6
+createimages.py,AI Content Generation,generate_clickable_title function.,"OpenAI, Stability","upload, generate",,0,4,False,True,6.2197265625,184
+cross_directory_merger.py,Instagram Automation,🔄 CROSS-DIRECTORY INTELLIGENT MERGER,"OpenAI, Instagram, YouTube, Leonardo","upload, download, generate, analyze, organize, merge","Colors, CrossDirectoryMerger",2,9,True,False,16.498046875,476
+csv-extract-webm-files.py,CSV Processing,No docstring,,,,0,0,False,False,0.76953125,29
+csvmerge.py,Data Merging,No docstring,,merge,,0,0,False,False,2.064453125,74
+csvsort.py,File Management,Create a safe filename from a title.,,"download, generate, analyze, organize",,0,2,False,False,1.8232421875,64
+custom-thumbnail.py,Telegram Bot,No docstring,Telegram,"download, generate, analyze, organize, merge, upscale, gallery",,0,0,False,False,5.5419921875,156
+cutout-process.py,General Utility,Applies a circular mask to the input image and saves it with transparency.,,"generate, analyze",,0,2,False,False,2.619140625,86
+dalle-prompt.py,YouTube Automation,upscale_image function.,"OpenAI, YouTube","download, generate, analyze, upscale",,0,3,False,True,3.4169921875,121
+dallecsv.py,AI Content Generation,No docstring,OpenAI,generate,,0,0,False,False,1.0791015625,48
+database-clients-extract.py,Gallery Generation,Automated Conversation Archive System,,"download, generate, analyze, organize, merge, convert, gallery",ConversationArchiver,1,16,True,False,15.4091796875,471
+database.py,General Utility,No docstring,,"download, generate",,0,19,False,False,9.0361328125,304
+decorator.py,General Utility,"Decorators are not really values, however we need some wrappers to improve",,,Decoratee,1,4,False,False,1.177734375,34
+deep-code.py,Telegram Bot,🧠 AI-POWERED DEEP INTELLIGENT CONTENT-AWARE ANALYZER,"OpenAI, Anthropic, Telegram, Discord","download, generate, analyze, organize, merge, convert, upscale","Colors, Emojis, AICodeAnalyzer, VectorEmbeddingAnalyzer, ArchitecturalPatternDetector",6,23,True,True,29.1376953125,752
+deep-content.py,AI Content Generation,AI-Powered Deep Analyzer with Content-Awareness,Anthropic,"generate, analyze, organize, merge, gallery","AIAnalysisResult, AIDeepAnalyzer",2,11,True,False,18.2001953125,496
+deep-level.py,Gallery Generation,Deep 6-Level Simplifier,,"upload, download, generate, analyze, organize, convert, gallery",Deep6LevelSimplifier,1,11,True,False,19.9140625,569
+deep.py,Gallery Generation,Deep Analyzer with Content-Awareness,,"generate, analyze, organize, gallery","AnalysisResult, DeepAnalyzer",2,10,True,False,13.908203125,386
+deep_content_cross_reference.py,File Management,📚 DEEP CONTENT CROSS-REFERENCE SCANNER,,"generate, analyze, organize, convert","Colors, DeepContentCrossReference",2,11,True,False,22.2236328125,541
+deep_music_directory_analyzer.py,File Management,🎵 DEEP MUSIC DIRECTORY ANALYZER & MERGER,,"generate, analyze, organize, merge","Colors, DeepMusicDirectoryAnalyzer",2,13,True,False,25.328125,608
+deepgram-updated.py,Audio Transcription,Updated Deepgram Live Transcription Test,,"transcribe, generate",,0,2,False,True,2.939453125,101
+deepgram_test.py,Audio Transcription,No docstring,,"transcribe, generate",,0,3,True,True,2.32421875,85
+defaults.py,File Management,No docstring,,"generate, analyze, organize",,0,0,False,False,1.21484375,47
+delete-endpoint.py,General Utility,Deletes an AWS SageMaker endpoint and its associated configuration.,AWS,,,0,1,False,False,2.3681640625,79
+delete-posts.py,Instagram Automation,instabot example,Instagram,"upload, analyze",,0,0,False,False,0.568359375,25
+delete.py,General Utility,delete_media function.,,,,0,3,False,False,1.2197265625,45
+denoiser.py,Image Processing,Denoise an image with the FFDNet denoising method,,"upload, analyze, upscale",FFDNetDenoiser,1,3,False,False,4.052734375,127
+deploy-sagemaker.py,File Management,"In Amazon SageMaker and other AWS services, Application Auto Scaling allows you to automatically scale resources in and out based on configurable poli",AWS,"analyze, organize","IAutoScalingClient, ScalingPolicyStrategy, TargetTrackingScalingPolicy, ScalableTarget, AutoscalingSagemakerEndpoint",5,14,False,False,7.724609375,171
+development-apps-input.py,General Utility,get_inputs function.,,generate,,0,6,False,False,7.05078125,286
+development-frameworks-python.py,File Management,Enhanced Python Directory Metadata Analyzer,,"generate, analyze, organize, convert",,0,4,True,False,10.1259765625,287
+development-gui-apps-hooks.py,File Management,Hooks for IPython.,,"analyze, organize",CommandChainDispatcher,1,10,False,False,5.4609375,170
+development-process-proc.py,File Management,categorize_image function.,,"generate, analyze, organize",,0,3,True,False,5.41796875,168
+development-utils-jsonutil.py,General Utility,Utilities to manipulate JSON objects.,,"analyze, convert",,0,7,False,False,5.9306640625,199
+devops.py,File Management,Context-Efficient DevOps Engineer Agent,,"generate, analyze, organize",DevOpsEngineerAgent,1,11,True,False,17.001953125,479
+diagnose.py,Gallery Generation,"Diagnostic functions, mainly for use when doing tech support.",,"generate, analyze, organize, gallery",AnnouncingParser,1,18,False,False,7.53515625,264
+direct.py,General Utility,:param self: bot,,convert,,0,10,False,False,7.6455078125,247
+directory-organizer.py,Instagram Automation,Directory Organizer - Intelligently organize all folders,"Instagram, YouTube, Reddit, Telegram, Leonardo","download, generate, analyze, organize, merge, upscale",DirectoryOrganizer,1,9,True,False,12.279296875,380
+discography-grid-html.py,Gallery Generation,<!DOCTYPE html>,,"generate, merge, gallery",,0,0,False,False,5.04296875,171
+discography-html.py,Gallery Generation,<!DOCTYPE html>,,"generate, merge, gallery",,0,0,False,False,5.037109375,171
+discography.py,YouTube Automation,AlchemyAPI Discography Merger,"YouTube, Suno","generate, analyze, organize, merge, convert",DiscographyMerger,1,13,True,False,12.623046875,341
+displayhook.py,General Utility,Checking to make sure that output is displayed,,convert,,0,7,False,False,3.6748046875,126
+documents.py,Gallery Generation,Script to create a CSV backup of ~/documents directory in the same format as ~/clean,,"generate, analyze, gallery",,0,4,False,False,5.8154296875,176
+domination-engine.py,AI Content Generation,🚀 SEO Domination Engine,"OpenAI, Anthropic","upload, generate, analyze, organize, gallery",SEODominationEngine,1,6,False,False,25.509765625,798
+down.py,CSV Processing,No docstring,,download,,0,0,False,False,1.373046875,46
+download-1.py,YouTube Automation,Advanced Content Analyzer - Consolidated Analysis Script,"OpenAI, YouTube","download, generate, analyze, merge",AdvancedContentAnalyzer,1,9,True,True,10.720703125,272
+download-2.py,Audio Transcription,AlchemyAPI Advanced Demo Generator,Whisper,"download, transcribe, generate, analyze, convert",AdvancedDemoGenerator,1,20,True,False,22.234375,553
+download-3.py,YouTube Automation,Simple HTML Documentation Generator,"OpenAI, YouTube, Whisper","download, transcribe, generate, analyze, organize, merge, convert, gallery",SimpleDocsGenerator,1,11,True,False,33.78125,1141
+download-4.py,Audio Transcription,Advanced Sort and Deduplication Tool,"Whisper, Suno","download, transcribe, generate, analyze, organize, merge, convert, gallery",AdvancedSortAndDedupe,1,14,True,False,20.3095703125,562
+download-data.py,AI Tool,No docstring,OpenAI,download,,0,2,False,False,1.7216796875,50
+download-files.py,General Utility,mp3_to_wav_Conversion function.,,"download, analyze",,0,3,False,False,3.65625,122
+download-simple.py,General Utility,No docstring,,"upload, download",,0,3,False,False,2.9736328125,98
+download.py,CSV Processing,download_and_convert_to_png function.,,"download, convert",,0,1,False,False,1.50390625,56
+download_vid.py,Image Processing,Downloads video from Pexels with the according video ID,,"download, generate, analyze, organize, merge, convert, upscale",bcolors,1,17,False,False,15.9228515625,445
+downloader-progress.py,General Utility,Fetches top bestselling blueprints from Printify,,"download, convert",,0,2,True,True,2.626953125,98
+downloadr.py,General Utility,This template is written by @Nuzzo235,,"upload, download",,0,0,False,False,3.9580078125,153
+downloads-index-builder.py,Gallery Generation,Steven's Downloads Archive - Index Generator,,"download, generate, organize, merge, gallery",,0,4,True,False,11.1572265625,333
+downloads.py,AI Content Generation,Downloads Directory Organizer & Consolidator,"Anthropic, Suno, Leonardo","download, generate, analyze, organize, merge, gallery",DownloadsOrganizer,1,11,True,False,21.1552734375,611
+downs.py,CSV Processing,download_and_convert_to_png function.,,"download, convert",,0,1,False,False,1.50390625,56
+drive-compare.py,File Management,Compare CSV analysis results from both drives,,"generate, analyze, organize, merge",,0,6,True,False,8.611328125,279
+dthumb.py,YouTube Automation,Load all .env files from ~/.env.d directory,"YouTube, ElevenLabs","upload, download",,0,2,False,True,2.7041015625,88
+dualdomainstrategy-v1.py,Instagram Automation,Dual-Domain Strategy Implementation System,"OpenAI, Instagram, YouTube, Discord","upload, generate, analyze, organize",DualDomainStrategy,1,12,True,False,36.7900390625,879
+dummies.py,Data Analysis,No docstring,,,,0,33,False,False,13.0224609375,442
+dupes.py,Gallery Generation,Check if a given path matches any of the exclusion patterns.,,"generate, gallery",,0,5,False,False,5.595703125,177
+duplicate-cleaner.py,File Management,Duplicate Cleaner - Remove duplicate files and consolidate naming,,"analyze, organize, merge",DuplicateCleaner,1,8,True,False,9.697265625,280
+dynamic.py,General Utility,One of the really important features of |jedi| is to have an option to,,"generate, analyze",,0,8,False,False,7.865234375,221
+ecommerce-payments-deep.py,Instagram Automation,Deep Content-Aware File Renamer,"OpenAI, Instagram, YouTube, Reddit, Telegram, AWS","upload, download, transcribe, generate, analyze, organize, merge, convert, upscale, gallery",DeepContentRenamer,1,8,True,False,17.91015625,539
+ecosystem-insights.py,Instagram Automation,Python Ecosystem Insights,"OpenAI, Instagram, YouTube, Suno","upload, download, transcribe, analyze, organize, merge, convert",,0,1,False,False,9.494140625,289
+ecosystem-master.py,Instagram Automation,Python Ecosystem Master Mapper,"OpenAI, Anthropic, Instagram, YouTube, Whisper, Suno","upload, download, transcribe, generate, analyze, organize, merge, convert, upscale",EcosystemMasterMapper,1,12,True,False,27.4326171875,785
+edit.py,AI Content Generation,"An filesystem editor tool that allows the agent to view, create, and edit files.",Anthropic,generate,"EditTool20250124, EditTool20250429, EditTool20250728, EditTool20241022",4,17,False,False,22.4228515625,566
+editorhooks.py,General Utility,'editor' hooks for common editors that work well with ipython,,analyze,,0,12,False,False,4.017578125,138
+elevenlabs.py,General Utility,__init__ function.,ElevenLabs,generate,elevenlabs,1,3,False,False,1.2626953125,55
+eliminate.py,Instagram Automation,Eliminate Archive Directories,"Instagram, YouTube, Reddit, Telegram","download, transcribe, generate, analyze, organize, convert",ArchiveEliminator,1,5,True,False,8.765625,283
+emotional.py,AI Content Generation,AlchemyAPI Emotional Quiz Generator,OpenAI,"upload, generate, analyze",EmotionalQuizGenerator,1,4,True,True,8.681640625,268
+empty.py,CSV Processing,Tests dtype specification during parsing,,analyze,,0,9,False,False,5.1318359375,179
+encoding.py,CSV Processing,Tests encoding functionality during parsing,Leonardo,"generate, analyze",,0,16,False,False,10.6943359375,337
+environment.py,Data Analysis,No docstring,,,,0,0,False,False,0.451171875,20
+etree.py,General Utility,No docstring,,analyze,"Root, Doctype, FragmentRoot, FragmentWrapper, TreeWalker",5,23,False,False,6.380859375,227
+etsy-image-metadata.py,AI Content Generation,Analyze image metadata using OpenAI API with retry logic,OpenAI,"generate, analyze, merge",,0,2,False,True,3.30859375,113
+etsy-sort.py,File Management,organize_etsy_csv function.,,"generate, organize",,0,1,False,False,2.74609375,83
+evaluate.py,AI Content Generation,Function.,OpenAI,"upload, generate, analyze",,0,7,False,False,9.2021484375,262
+evaluation.py,AI Content Generation,MCP Server Evaluation Harness,Anthropic,"generate, analyze",,0,4,False,False,13.009765625,429
+events.py,General Utility,Infrastructure for registering and firing callbacks on application events.,,upload,EventManager,1,10,False,False,5.279296875,175
+excel-intelligent-organizer.py,File Management,Intelligent Excel File Organizer,,"generate, analyze, organize",ExcelIntelligentOrganizer,1,14,True,False,23.310546875,646
+exceptions.py,General Utility,Base exception of ``fastjsonschema`` library.,,,"JsonSchemaException, JsonSchemaValueException, JsonSchemaDefinitionException",3,3,False,False,1.572265625,50
+excolors.py,File Management,Color schemes for exception handling code in IPython.,,organize,,0,1,False,False,5.056640625,162
+execute-excel-organization.py,File Management,Execute Excel Organization - Non-interactive version,,"generate, analyze, organize",,0,1,True,False,2.26953125,75
+execute_archive_cleanup_merge.py,File Management,🧹 EXECUTE ARCHIVE CLEANUP & MERGE,,"generate, analyze, organize, merge","Colors, ArchiveCleanupMerge",2,11,True,False,21.9892578125,562
+execute_dedup_rename.py,File Management,Execute Comprehensive Deduplication & Rename,,"generate, organize",,0,2,True,False,4.833984375,156
+export-ai-conversations.py,AI Content Generation,Universal Conversation Exporter,"OpenAI, Anthropic, Suno","download, generate, analyze, gallery",UniversalConversationExporter,1,22,True,False,29.3447265625,820
+export-warehouse.py,General Utility,No docstring,,upload,,0,5,True,False,3.0322265625,102
+extract-files.py,CSV Processing,"Parses a Markdown file to extract trends, designs, and tags into a structured table.",,"download, analyze, convert",,0,1,False,False,1.7216796875,62
+extract-songs.py,Gallery Generation,prompt_for_files function.,Suno,"analyze, gallery",,0,4,True,False,4.3359375,136
+extract-suno-html.py,Gallery Generation,?? SUNO HTML BATCH EXTRACTOR,Suno,"upload, generate, analyze, organize, gallery",,0,5,True,False,9.6201171875,294
+extract-to-audio.py,General Utility,No docstring,,"download, generate, analyze",ExtractNews,1,3,False,False,2.08203125,52
+extract-video-reader.py,Instagram Automation,No docstring,Instagram,"upload, analyze",,0,0,False,False,2.7880859375,96
+extract.py,AI Tool,get_full_annotation_field_id function.,Anthropic,"organize, gallery",,0,5,False,False,6.6513671875,179
+extract_archived_content.py,Gallery Generation,🔍 EXTRACT & PRESERVE ARCHIVED CONTENT,Suno,"download, generate, analyze, organize, gallery","Colors, ArchivedContentExtractor",2,12,True,False,21.341796875,515
+extract_topic.py,General Utility,No docstring,,"download, generate, analyze",ExtractNews,1,3,False,False,2.109375,56
+fancyimg.py,AI Content Generation,generate_filename_with_gpt function.,OpenAI,"generate, organize",,0,2,False,True,3.30078125,105
+fancyname.py,AI Content Generation,generate_creative_filename function.,OpenAI,"generate, analyze, organize",,0,3,True,True,3.734375,126
+fetcher.py,General Utility,__init__ function.,,download,NEWS,1,2,False,False,0.9853515625,35
+ffmpeg-help.py,Telegram Bot,No docstring,Telegram,"upload, generate, analyze",,0,0,False,False,4.8798828125,151
+ffmpeg-robot.py,Telegram Bot,No docstring,Telegram,"upload, download, generate, analyze",,0,0,False,False,9.3740234375,263
+ffmpeg.py,File Management,ffmpeg_install_windows function.,,"download, analyze, organize",,0,4,False,False,5.390625,154
+ffmpegdl.py,File Management,__init__ function.,,"download, organize",FFmpegDL,1,10,False,False,3.072265625,107
+file-io.py,General Utility,No docstring,,,JsonFileManager,1,2,False,False,0.9560546875,32
+file-uploader.py,General Utility,.'\\   /`.,,"upload, generate",,0,6,False,False,3.556640625,159
+files-csv.py,Audio Transcription,No docstring,,"transcribe, analyze, gallery",,0,4,True,False,3.095703125,105
+fill.py,General Utility,No docstring,,generate,,0,4,False,False,4.865234375,118
+filter-blacklist-hashtag.py,Instagram Automation,instabot filters out the media with your set blacklist hashtags,Instagram,,,0,0,False,False,0.64453125,27
+filter-private-profiles.py,Instagram Automation,instabot filtering private users example,Instagram,,,0,0,False,False,0.4365234375,19
+filtercreator.py,General Utility,No docstring,,generate,"Filter, FilterCreationWindow",2,5,False,False,5.7294921875,163
+final-root-organizer.py,YouTube Automation,Final Root Directory Organizer,YouTube,"generate, analyze, organize, merge, gallery",FinalRootOrganizer,1,9,True,False,9.6318359375,283
+final_cleanup_extras.py,File Management,🧹 FINAL CLEANUP - Remove Extra Duplicates & Temp Files,,"analyze, organize","Colors, FinalCleanupExtras",2,10,True,False,15.5498046875,404
+final_comprehensive_scan.py,Instagram Automation,Final Comprehensive Scan - Uses ALL tools available,"Instagram, YouTube, Leonardo","generate, analyze, organize",FinalComprehensiveScan,1,7,False,False,9.5029296875,286
+final_consolidation.py,File Management,🎵 FINAL CONSOLIDATION - Download Missing + Remove Redundant,Suno,"download, generate, analyze, organize, merge","Colors, FinalConsolidation",2,10,True,True,19.1572265625,462
+final_consolidator.py,File Management,🎯 FINAL PYTHON ECOSYSTEM CONSOLIDATOR,,"generate, analyze, organize, merge","Colors, FinalConsolidator",2,8,True,False,10.48046875,302
+finder.py,General Utility,Comprehensive Duplicate File Detection Script,,"generate, analyze",,0,3,False,False,5.4658203125,163
+finetune-unsloth.py,Data Merging,Below is an instruction that describes a task. Write a response that appropriately completes the request.,,"generate, analyze, merge, convert",,0,7,False,False,13.0791015625,401
+fix_bare_except.py,File Management,🔧 BARE EXCEPT FIXER,,"generate, analyze, organize","Colors, BareExceptFixer",2,9,True,False,14.3447265625,424
+fix_transcript_names.py,File Management,📝 FIX TRANSCRIPT NAMES,,"generate, analyze, organize","Colors, TranscriptNameFixer",2,12,True,False,16.4169921875,409
+fixer.py,File Management,format_with_black function.,,"analyze, organize",,0,3,False,False,1.6337890625,62
+flatten_all_album_structure.py,File Management,🎵 FLATTEN ALL ALBUM STRUCTURES,,"analyze, organize","Colors, FlattenAlbumStructure",2,7,True,False,8.4052734375,239
+float.py,CSV Processing,Tests that work on both the Python and C engines but do not have a,,analyze,,0,4,False,False,2.572265625,78
+fluid-document-sweep.py,AI Content Generation,Fluid Document Sweep - Find Interesting Python Scripts and Utilities,"OpenAI, Anthropic","upload, download, generate, analyze, organize, merge, convert, gallery","ScriptInfo, FluidDocumentSweeper",2,14,True,False,20.669921875,659
+folder.py,General Utility,image_to_pdf function.,,convert,,0,2,False,False,1.1845703125,42
+follow-last-user.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.857421875,33
+follow-requests.py,Instagram Automation,No docstring,Instagram,analyze,,0,0,False,False,0.7236328125,25
+follow-user-followers.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.7880859375,33
+follow-user-following.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.62890625,27
+follow-users-from.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.8310546875,33
+follow-users.py,Instagram Automation,instabot example,Instagram,"upload, analyze",,0,0,False,False,0.677734375,28
+followers.py,Instagram Automation,instabot example,Instagram,"download, analyze",,0,0,False,False,2.3935546875,91
+formdata.py,General Utility,Helper class for form body generation.,,analyze,FormData,1,7,False,False,5.9619140625,172
+fundamental-analysis.py,AI Tool,build_fundamental_agent function.,OpenAI,,,0,1,False,False,1.1572265625,37
+gallery-city-logic.py,Image Processing,City gallery logic implementation for City 16-9 Gallery Generator,,"generate, analyze, convert, upscale, gallery",CityGalleryLogic,1,5,False,False,8.208984375,214
+gallery-init-remote.py,Gallery Generation,Configures the argument parser,,"generate, analyze, gallery",,0,6,True,False,9.658203125,298
+gallery-logic.py,Gallery Generation,Extracts the base URL (URL without query parameters) and the photo name from a Onedrive photo URL,,"generate, analyze, gallery",GoogleGalleryLogic,1,3,False,False,3.6572265625,102
+gallery.py,Gallery Generation,Enhanced Gallery System - Merging simplegallery and city-16-9 features,,"generate, analyze, merge, convert, gallery",EnhancedGalleryBuilder,1,15,True,False,13.7861328125,394
+gdrive.py,CSV Processing,convert_to_colab function.,,convert,,0,1,False,False,2.1943359375,83
+generate-emotional-audio.py,AI Content Generation,AlchemyAPI Creative TTS Generator,"OpenAI, Whisper, Leonardo","upload, transcribe, generate",CreativeTTSGenerator,1,11,True,True,19.419921875,531
+generate-text-overlay.py,Reddit Automation,Draw multiline text over given image,Reddit,"upload, generate, analyze",,0,2,False,False,3.09765625,101
+generate.py,CSV Processing,No docstring,,generate,,0,0,False,False,0.53515625,20
+generatetexts-1.py,AI Content Generation,Load all .env files from ~/.env.d directory,OpenAI,generate,,0,2,False,True,1.3369140625,48
+generatetexts.py,AI Content Generation,get_facts function.,OpenAI,generate,,0,1,False,False,0.6357421875,27
+generation.py,General Utility,Download an image with retries.,Leonardo,"download, generate, analyze",,0,3,False,False,5.0634765625,152
+genshi.py,Gallery Generation,__iter__ function.,,"convert, gallery",TreeWalker,1,2,False,False,2.4091796875,94
+get-threads.py,Reddit Automation,Returns a list of threads from the AskReddit subreddit.,Reddit,,,0,1,False,True,1.646484375,59
+get_file.py,Image Processing,No docstring,,"analyze, organize, upscale",,0,6,True,False,4.654296875,147
+get_gal.py,General Utility,No docstring,,,Spotify,1,10,False,False,4.9970703125,153
+get_hashtags_from.py,Instagram Automation,No docstring,Instagram,"generate, organize",,0,1,False,False,1.8701171875,83
+get_simple.py,General Utility,Wraps a file (e.g. sys.stdout) and redirects writes to a console.,,,FileProxy,1,6,False,False,1.744140625,63
+getattr.py,General Utility,A static version of getattr.,,"download, generate",,0,8,False,False,3.7646484375,121
+getipython.py,General Utility,Simple function to call to get the current InteractiveShell instance,,,,0,1,False,False,0.89453125,25
+giphy-download.py,Image Processing,Automated Image Upscaler,,"download, generate, analyze, upscale",,0,9,True,False,9.6064453125,306
+giphy_downloader.py,Audio Transcription,Load configuration file,Whisper,"download, transcribe, generate, analyze, organize",,0,6,False,False,7.29296875,203
+github_repo_audit.py,Gallery Generation,github_repo_audit.py,,"download, generate, analyze, organize, gallery",,0,14,True,True,12.51953125,403
+gmupload.py,General Utility,__init__ function.,,"upload, download",GoolgeMusicUploader,1,5,False,False,3.1640625,109
+goapi.py,General Utility,No docstring,,"upload, analyze",,0,0,False,True,1.2568359375,41
+good-usage.py,General Utility,This template is written by @jeremycjang,,"upload, generate",,0,0,False,False,5.064453125,155
+groq-cli.py,General Utility,Simple Groq CLI for terminal usage,,"generate, analyze",,0,3,True,False,3.5576171875,125
+gtts-text-to-speech.py,Reddit Automation,__init__ function.,Reddit,upload,GTTS,1,3,False,False,0.5703125,30
+gui-apps-get.py,General Utility,No docstring,,"generate, analyze",App,1,5,False,False,2.3525390625,100
+handle.py,Instagram Automation,Handle Availability Checker for Dual-Domain Strategy,"Instagram, YouTube",,HandleAvailabilityChecker,1,4,False,False,3.6015625,103
+handlers.py,General Utility,Tests for input handlers.,,"upload, convert","CallableIndexable, Autocallable",2,5,False,False,3.3759765625,112
+hardcoded.py,AI Tool,Automated API Key Fixer,"OpenAI, Anthropic, ElevenLabs, Stability",,,0,5,True,True,7.7939453125,260
+harvester.py,General Utility,find_proxies function.,,,,0,1,False,False,1.0478515625,43
+helpers.py,Gallery Generation,Initializes a new gallery and reads the data from the gallery.json file,,"generate, gallery",,0,3,False,False,2.5400390625,76
+html-keep.py,Gallery Generation,HTML Content Analyzer,,"generate, analyze, organize, gallery",HTMLContentAnalyzer,1,13,True,False,18.9150390625,519
+html.py,Gallery Generation,csv_to_html function.,Leonardo,"generate, convert, gallery",,0,1,False,False,3.4345703125,125
+html_dom_tree.py,Instagram Automation,All methods must return media_ids that can be,Instagram,"upload, generate, organize, convert, gallery",,0,40,False,False,14.169921875,508
+ident.py,AI Content Generation,Prepare a batch request to OpenAI for suggesting appropriate titles for scripts.,OpenAI,"generate, analyze",,0,3,False,True,6.3798828125,206
+identify_user_scripts.py,Instagram Automation,🔍 USER SCRIPT IDENTIFIER,"OpenAI, Anthropic, Instagram, YouTube, Telegram, Discord, ElevenLabs, Leonardo","upload, download, generate, analyze, organize","Colors, UserScriptIdentifier",2,8,True,False,16.0419921875,511
+image-1.py,General Utility,remove_background function.,,"upload, download, analyze",,0,3,False,False,2.91796875,92
+image-9mb-up.py,Image Processing,No docstring,,"analyze, upscale",,0,8,True,False,5.4990234375,174
+image-aws_sqs_queue.py,AI Content Generation,No docstring,OpenAI,"generate, analyze, organize, convert, upscale",,0,7,True,True,7.126953125,223
+image-create.py,General Utility,"takes a string of text, an author, and a name that the file should be",,generate,ImageCreator,1,3,False,False,3.279296875,99
+image-downloadr_api.py,Image Processing,Convert an image to JPEG format with specified DPI.,Leonardo,"upload, download, generate, analyze, convert, upscale",,0,6,False,True,4.845703125,155
+image-downloadr_batch.py,General Utility,Download an image with retries.,Leonardo,"download, generate, analyze",,0,3,False,False,5.0712890625,152
+image-enrichment.py,AI Content Generation,Load all .env files from ~/.env.d directory,OpenAI,"generate, analyze, upscale",,0,4,False,True,3.3017578125,117
+image-generater.py,Reddit Automation,generate function.,Reddit,"upload, generate, analyze, upscale, gallery",,0,1,False,False,4.12890625,146
+image-get_batch.py,Image Processing,No docstring,,"analyze, upscale",,0,7,True,False,6.4365234375,194
+image-img-prompt.py,CSV Processing,No docstring,,"generate, analyze",,0,9,False,False,6.4052734375,207
+image-metadata-gpt4o.py,AI Content Generation,Calls GPT-4o Vision API to analyze the image at image_path.,OpenAI,"generate, analyze",,0,5,True,True,7.7607421875,252
+image-pics.py,Gallery Generation,No docstring,,"generate, gallery",,0,9,False,False,6.5869140625,226
+image-reader.py,AI Content Generation,Calls GPT-4o Vision API to analyze the image at image_path.,OpenAI,"generate, analyze",,0,6,True,True,8.6240234375,283
+image-resize-aspect-ratios.py,Image Processing,No docstring,,"analyze, upscale",,0,11,True,False,5.9384765625,212
+image-resize.py,Image Processing,No docstring,,"analyze, upscale",,0,7,True,False,6.5224609375,204
+image-search.py,Gallery Generation,get_soup function.,,"analyze, gallery",,0,2,False,False,2.7236328125,99
+image-taggy.py,CSV Processing,No docstring,AWS,"upload, analyze",,0,5,False,True,5.4677734375,167
+image-ultimate.py,Image Processing,Ultimate Image Processor V2,,"upload, generate, analyze, convert, upscale","ProcessingMode, ImageConfig, ImageProcessor",3,14,True,False,25.4599609375,594
+image-uploadr.py,Instagram Automation,Based in @jeremycjang and @boldestfortune,Instagram,"upload, generate",,0,0,False,False,6.525390625,238
+images-individual.py,General Utility,scan_directory function.,,,,0,2,True,False,1.115234375,44
+img2img.py,Image Processing,convert_and_upscale_images function.,,"convert, upscale",,0,2,True,False,2.19921875,75
+imgconvert.py,Image Processing,convert_and_upscale_images function.,,"generate, convert, upscale",,0,2,True,False,1.9716796875,70
+imgmp.py,General Utility,get_cover_images function.,,"analyze, convert",,0,3,False,False,2.171875,74
+imgupscale.py,Image Processing,Merged Content Analysis Tool,,"generate, analyze, organize, merge, convert, upscale",,0,2,True,False,3.5126953125,95
+imove.py,File Management,No docstring,,organize,,0,0,False,False,1.1552734375,34
+implement.py,Gallery Generation,Implement Smart Organization System,,"generate, organize, gallery",SmartOrganizationImplementer,1,7,True,False,13.5224609375,343
+import-clean-conversations.py,File Management,Deepseek Importer v3,,"generate, analyze, organize",,0,9,True,False,6.5654296875,134
+indent.py,General Utility,Decorator for allowing to use method as normal method or with,,,Indent,1,5,False,False,0.900390625,31
+inference.py,Image Processing,No docstring,,"analyze, convert, upscale",,0,5,False,False,5.263671875,141
+infinity-feedliker.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.6083984375,30
+infinity-hashtags-follower.py,Instagram Automation,instabot example,Instagram,"upload, analyze",,0,0,False,False,0.76171875,33
+infinity-hashtags-liker.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.7060546875,32
+init.py,Gallery Generation,Configures the argument parser,,"generate, analyze, gallery",,0,6,True,False,9.662109375,296
+init2.py,Gallery Generation,Configures the argument parser,,"generate, analyze, gallery",,0,6,True,False,9.69921875,299
+instabot-api-prepare.py,Instagram Automation,Returns login and password stored in `secret.txt`.,Instagram,generate,,0,5,False,False,3.56640625,106
+instabot-bot-youtube-user-id.py,Instagram Automation,"if login function is run threaded, for example in scheduled job,",Instagram,"upload, download, generate, organize, convert",Bot,1,153,False,False,32.5673828125,1043
+instabot-devices.py,General Utility,No docstring,,,,0,0,False,False,3.4462890625,123
+instagram-botComment.py,Instagram Automation,Created in 12/CONSTANT_2019,Instagram,"upload, generate",,0,5,False,False,7.2509765625,242
+instagram-build.py,Instagram Automation,### {name},"OpenAI, Instagram, YouTube, Reddit, Whisper, Leonardo","upload, download, transcribe, generate, organize, convert, upscale, gallery",,0,6,True,False,4.7802734375,92
+instagram-direct-send-photo.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.55078125,24
+instagram-download-1.py,Gallery Generation,doesnt_exist function.,,"upload, download, gallery",,0,1,False,False,2.7080078125,99
+instagram-download-photos.py,Instagram Automation,instabot example,Instagram,"download, analyze",,0,0,False,False,0.6767578125,28
+instagram-download-user-videos.py,Instagram Automation,Download a user videos:,Instagram,"download, analyze",,0,0,False,False,1.2509765625,49
+instagram-download-your-photos.py,Instagram Automation,instabot example,Instagram,download,,0,0,False,False,0.2685546875,19
+instagram-download.py,Instagram Automation,Content-Aware Etsy Collection Organizer,Instagram,"download, generate, analyze, organize, gallery",ContentAwareOrganizer,1,10,True,False,17.2607421875,507
+instagram-models.py,General Utility,Models used when interacting with the database interface.,,"generate, analyze, convert","RawEntity, Entity, TemporalType, StatementType, TemporalEvent",5,4,False,False,3.021484375,106
+instagram-openai-download.py,AI Content Generation,Load all .env files from ~/.env.d directory,OpenAI,"upload, download, generate, analyze",,0,3,False,True,3.3125,105
+instagram-parse.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,2.962890625,94
+instagram-processor.py,CSV Processing,convert_to_colab function.,,"analyze, convert",,0,1,False,False,2.19140625,87
+instagram-repost-photo.py,Instagram Automation,instabot example,Instagram,"upload, download",,0,3,False,False,1.50390625,60
+instagram-save-users-followers.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.76171875,30
+instagram-script_simple.py,Data Merging,"For module attributes like __file__, __str__ and so on.",,"generate, analyze, merge","_ModuleAttributeName, SubModuleDictMixin, ModuleMixin, ModuleValue",4,21,False,False,7.9423828125,233
+instagram-setup.py,General Utility,PrNdOwN setup file.,,analyze,"BuildBin, Build",2,9,False,False,4.5380859375,198
+instagram-upload-story-photo.py,Instagram Automation,No docstring,Instagram,"upload, analyze",,0,0,False,False,0.58203125,20
+instagram-upload.py,General Utility,No docstring,,upload,,0,0,False,False,0.484375,24
+instagram.py,General Utility,No docstring,,,IsattyTest,1,8,False,False,1.748046875,56
+installations.py,CSV Processing,run_command function.,,analyze,,0,1,False,False,1.3974609375,52
+instareport-libs-attack.py,Instagram Automation,random_str function.,Instagram,"upload, analyze, gallery",,0,3,False,False,15.630859375,415
+instareport-libs-utils.py,General Utility,print_success function.,,analyze,,0,5,False,False,1.884765625,82
+intelligent-merger.py,File Management,🔀 INTELLIGENT MERGE TOOL,,"generate, analyze, organize, merge","Colors, Emojis, IntelligentMergeTool",3,12,True,False,30.9580078125,755
+intelligent-organization.py,Gallery Generation,Intelligent Organization System - Core Analyzer,,"download, generate, analyze, merge, gallery","FileAnalysis, ProjectAnalysis, IntelligentAnalyzer, PythonASTAnalyzer",4,40,True,False,37.6953125,1064
+intelligent-renamer.py,Instagram Automation,Python Intelligent Renamer - Flat Structure,"OpenAI, Anthropic, Instagram, YouTube, Whisper, Suno","upload, download, transcribe, generate, analyze, organize, merge, convert, upscale",FlatIntelligentRenamer,1,11,True,False,23.6005859375,669
+intelligent_code_orchestrator.py,AI Content Generation,🧠 INTELLIGENT CODE ORCHESTRATOR,"OpenAI, Anthropic, AWS","generate, analyze, merge",IntelligentCodeOrchestrator,1,9,False,True,18.19140625,469
+intelligent_dedup.py,File Management,🧹 INTELLIGENT DUPLICATE REMOVER,,"generate, analyze, organize, merge","Colors, Emojis, IntelligentDeduplicator",3,12,True,False,23.1455078125,681
+intelligent_renamer-1.py,Instagram Automation,🏷️ INTELLIGENT CONTENT-AWARE RENAMING TOOL,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Telegram, Discord, Whisper, ElevenLabs, Leonardo","upload, download, transcribe, generate, analyze, organize, merge, convert, upscale","Colors, Emojis, IntelligentRenamer",3,18,True,True,39.3466796875,955
+intelligent_renamer.py,Instagram Automation,🏷️ INTELLIGENT CONTENT-AWARE RENAMER,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Whisper, Leonardo","upload, download, transcribe, generate, analyze, organize, merge, convert","Colors, Emojis, IntelligentRenamer",3,8,True,False,20.7421875,606
+interact.py,Instagram Automation,instabot example,Instagram,analyze,,0,1,False,False,1.4794921875,59
+ipython.py,Gallery Generation,test_publishes function.,,"upload, gallery",TestTableSchemaRepr,1,5,False,False,3.2216796875,99
+issue.py,General Utility,A performance benchmark using the example from issue #CONSTANT_232.,,,,0,0,False,False,0.5263671875,26
+kaleidoscope.py,General Utility,Kaleidoscope Effect - Create mirror/rotation effects.,,"generate, convert",,0,3,False,False,6.3291015625,214
+kartoon.py,General Utility,# Characters: Adrien is a guy with blond hair. Vincent is a guy with black hair.,Stability,generate,,0,0,False,False,1.6806640625,49
+kernelapp.py,File Management,An application to launch a kernel by name in a local subprocess.,,"generate, analyze, organize",KernelApp,1,7,False,False,2.91796875,96
+launcher.py,General Utility,Utilities for launching kernels,,"generate, analyze",,0,1,False,False,6.3720703125,192
+leodown.py,General Utility,No docstring,Leonardo,"download, analyze",,0,0,False,False,1.466796875,60
+leoimg.py,General Utility,download_images function.,,download,,0,1,False,False,1.3974609375,48
+leonardo-convert.py,Image Processing,Load all .env files from ~/.env.d directory,Leonardo,"upload, generate, analyze, convert, upscale",,0,8,False,True,7.0517578125,225
+leonardo-download-1.py,Image Processing,Load all .env files from ~/.env.d directory,Leonardo,"upload, download, generate, analyze, convert, upscale",,0,8,False,True,7.0166015625,223
+leonardo-download.py,CSV Processing,Save image and motion MP4 URLs to CSV.,Leonardo,"download, generate, analyze",,0,2,False,False,2.6171875,94
+leonardo-process.py,CSV Processing,No docstring,Leonardo,"generate, analyze",,0,0,False,False,1.65234375,60
+leonardo.py,Image Processing,leonardo_motion_cli.py,Leonardo,"upload, download, generate, analyze, upscale",,0,4,True,False,8.8408203125,264
+leoup.py,Image Processing,No docstring,Leonardo,"upload, generate, upscale",,0,0,False,False,1.900390625,81
+lexica.py,General Utility,get_image function.,,"download, analyze",,0,1,False,False,1.10546875,37
+like-follow.py,Instagram Automation,instabot example,Instagram,analyze,,0,3,False,False,1.337890625,55
+like-hashtags-from.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.79296875,33
+like-hashtags.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.6259765625,27
+like-location-feed.py,Instagram Automation,No docstring,Instagram,analyze,,0,0,False,False,0.5986328125,20
+like-user-followers.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.6416015625,27
+like-user-following.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.642578125,27
+like-users-from.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.8740234375,34
+like-users.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.693359375,28
+like-your-last.py,Instagram Automation,instabot example,Instagram,analyze,,0,2,False,False,0.9580078125,41
+list.py,CSV Processing,Tests that work on both the Python and C engines but do not have a,,analyze,,0,4,False,False,2.3505859375,100
+logic.py,Gallery Generation,test_get_gallery_logic function.,,gallery,GalleryLogicTestCase,1,2,False,False,2.4208984375,67
+login.py,YouTube Automation,Login module,YouTube,"organize, convert",,0,3,False,False,2.001953125,59
+loop-upscale.py,Image Processing,No docstring,Leonardo,"upload, generate, upscale",,0,0,False,True,2.67578125,89
+loop.py,AI Content Generation,Agentic sampling loop that calls the Claude API and local implementation of anthropic-defined computer use tools.,Anthropic,"download, generate, analyze, convert",APIProvider,1,5,False,False,12.791015625,326
+lyrics-storyboards.py,AI Content Generation,transcribe_audio function.,"OpenAI, Whisper","transcribe, generate, analyze",,0,2,False,True,2.3720703125,81
+macro.py,General Utility,Support for interactive macros in IPython,,,Macro,1,5,False,False,1.81640625,61
+makecompilation-v1.py,General Utility,2. Compile video out of clips,,"download, generate",,0,4,False,False,1.9423828125,77
+manage-repo.py,Gallery Generation,Enhanced GitHub Repository Manager,AWS,"upload, download, generate, analyze, organize, merge, convert, gallery",GitHubRepoManager,1,17,True,True,47.0234375,1707
+markdown.py,Gallery Generation,Markdown to PDF Converter,,"generate, analyze, convert, gallery",,0,2,True,False,6.7646484375,229
+market-research-platform.py,Telegram Bot,🔍 AI Market Research Platform,"OpenAI, Anthropic, Telegram, ElevenLabs, Stability, Supabase, Pinecone","upload, generate, analyze, convert",MarketResearchPlatform,1,6,False,False,23.1162109375,736
+massive.py,General Utility,This template is written by @loopypanda,,upload,,0,0,False,False,2.056640625,58
+master-rename-utility.py,Instagram Automation,Master Rename Utility - Advanced Python File Renaming System,"OpenAI, Instagram, YouTube, Reddit, Telegram, Discord, Whisper, AWS","upload, download, transcribe, generate, analyze, organize, merge, convert, upscale, gallery",MasterRenamer,1,21,True,True,29.1298828125,886
+master_comprehensive_analyzer.py,Instagram Automation,MASTER COMPREHENSIVE ANALYZER,"Anthropic, Instagram, YouTube, Leonardo","generate, analyze, organize",MasterAnalyzer,1,6,False,True,6.7421875,213
+media-catalog.py,File Management,Helper functions for media catalog CSV cleanup and reporting.,,"analyze, organize",,0,5,False,False,1.92578125,67
+media-processing-audio.py,AI Content Generation,Convert seconds into the format MM:SS.,"OpenAI, Whisper","transcribe, generate, analyze, merge, convert",,0,4,False,True,6.8935546875,165
+media.py,Image Processing,Rotates an image according to it's Orientation EXIF Tag,,"generate, analyze, convert, upscale, gallery",,0,12,False,False,8.2998046875,270
+merge-1.py,Data Merging,merge_pdfs function.,,merge,,0,1,False,False,0.546875,24
+merge-csv.py,File Management,🎯 ULTIMATE FOLDER CLEANUP - Final Pass,Suno,"generate, analyze, organize, merge","Colors, UltimateFolderCleanup",2,10,True,False,9.080078125,241
+merge-suno-csv.py,File Management,?? SUNO CSV COMPARATOR & MERGER,Suno,"upload, download, generate, analyze, organize, merge",,0,5,True,False,10.3525390625,313
+merge_moonlight_and_misc.py,File Management,🌙 MERGE MOONLIGHT FOLDERS & ORGANIZE MISCELLANEOUS,Suno,"analyze, organize, merge","Colors, MoonlightMiscMerger",2,9,True,False,9.833984375,269
+merge_other_content_albums.py,Gallery Generation,🔀 MERGE OTHER_CONTENT/ALBUMS INTO NOCTURNE,Suno,"analyze, organize, merge, gallery","Colors, MergeOtherContentAlbums",2,6,True,False,5.1005859375,159
+merged-content.py,Gallery Generation,Merged Content Analysis Tool,,"generate, analyze, organize, merge, gallery",,0,0,False,False,1.7236328125,53
+message-users.py,Instagram Automation,instabot example,Instagram,"download, analyze, convert",,0,0,False,False,2.888671875,93
+meta.py,YouTube Automation,No docstring,YouTube,upload,,0,0,False,False,1.25390625,49
+metadata.py,Image Processing,__init__ function.,,"upload, upscale",AudioMetadata,1,5,False,False,2.8828125,89
+migration-plan.py,YouTube Automation,Analyze current structure and show what will be migrated where,"YouTube, Reddit","download, transcribe, analyze, organize, convert",,0,5,True,False,7.7744140625,224
+misc-display.py,Gallery Generation,Public API for display tools in IPython.,,gallery,,0,0,False,False,1.091796875,44
+misc-gtts.py,Reddit Automation,__init__ function.,Reddit,upload,GTTS,1,3,False,False,0.5712890625,31
+misc-info.py,General Utility,PrNdOwN module that holds package information.,AWS,"upload, download",,0,0,False,False,1.7568359375,43
+misc-merge.py,Data Merging,create_toc_pdf function.,AWS,"upload, generate, merge",,0,3,False,False,1.9130859375,77
+misc-midj.py,General Utility,No docstring,,download,,0,0,False,False,0.6904296875,31
+misc-play.py,General Utility,No docstring,,,,0,0,False,False,0.04296875,2
+misc-prompts.py,General Utility,basic_prompt function.,,analyze,,0,2,False,False,2.4111328125,65
+misc-pyttsx.py,General Utility,__init__ function.,,,pyttsx,1,3,False,False,1.33984375,52
+misc-resize.py,Image Processing,No docstring,,upscale,,0,0,False,False,0.625,48
+mixer.py,General Utility,🎚️ Normalize audio segment to a target dBFS level.,,,,0,2,False,False,0.666015625,25
+mklabels.py,General Utility,webencodings.mklabels,,generate,,0,2,False,False,1.3564453125,68
+model-evaluation-evaluate.py,AI Content Generation,Function.,OpenAI,"upload, generate, analyze",,0,7,False,False,8.8642578125,231
+model-evaluation-sagemaker.py,AI Tool,run_evaluation_on_sagemaker function.,"OpenAI, AWS","analyze, convert",,0,1,False,False,2.033203125,68
+model-finetuning-sagemaker.py,General Utility,No docstring,AWS,"generate, convert",,0,1,False,False,2.49609375,74
+model.py,AI Tool,🔍 Choose the best available OpenAI model for TTS.,"OpenAI, Suno",,,0,3,False,False,1.3818359375,51
+models.py,General Utility,Definition of the FFDNet model and its custom layers,,upload,"UpSampleFeatures, IntermediateDnCNN, FFDNet",3,6,False,False,4.0634765625,100
+morph.py,Image Processing,Morph Animation - Transform between different emojis or shapes.,,"generate, convert, upscale",,0,3,False,False,11.6689453125,352
+move-date.py,File Management,No docstring,,"generate, organize, convert",,0,0,False,False,1.05859375,35
+move-improvements.py,File Management,🎯 MASTER ANALYSIS RUNNER,,"generate, analyze, organize, merge","Colors, MasterRunner",2,5,True,False,10.1826171875,292
+move.py,File Management,Generate CSV log of file moves from reorganization analysis,,"generate, organize",,0,1,False,False,2.2109375,78
+mp3_batch_timestamper.py,AI Content Generation,Function.,"OpenAI, Whisper","transcribe, generate, analyze",,0,7,False,True,8.6875,209
+mp4s.py,YouTube Automation,format_timestamp function.,"OpenAI, YouTube, Whisper","transcribe, generate, analyze, merge",,0,4,False,True,6.1142578125,144
+multi.py,AI Content Generation,"Multi-API TTS Generator for ""As a Man Thinketh""","OpenAI, Anthropic, ElevenLabs, AWS","generate, analyze, convert",MultiAPITTSGenerator,1,15,True,False,28.7314453125,627
+multi_depth_folder_analyzer.py,File Management,🔍 MULTI-DEPTH FOLDER ANALYZER & CONSOLIDATOR,,"analyze, organize, merge","Colors, MultiDepthFolderAnalyzer",2,12,True,False,16.333984375,420
+music-catalog.py,CSV Processing,get_matching_files function.,,generate,,0,1,False,False,2.2587890625,74
+mydesgin.py,CSV Processing,No docstring,,generate,,0,0,False,False,0.9990234375,36
+mydesign-download.py,CSV Processing,sanitize_title function.,,"download, generate, analyze",,0,1,False,False,2.7705078125,83
+mydesigner.py,CSV Processing,ensure_directories function.,,"download, analyze",,0,5,True,False,3.5009765625,122
+myinfo.py,General Utility,No docstring,Leonardo,download,,0,0,False,False,0.599609375,26
+named.py,AI Content Generation,Function.,OpenAI,"generate, analyze, organize, convert, upscale",,0,7,True,True,7.201171875,228
+nanobanana.py,AI Content Generation,NanoBanana API Prompt Analyzer,"OpenAI, Discord, Suno","generate, analyze, gallery",NanoBananaPromptAnalyzer,1,22,True,False,21.4951171875,635
+nativetypes.py,General Utility,Return a native Python type from the list of compiled nodes. If,,"upload, generate, analyze","NativeCodeGenerator, NativeEnvironment, NativeTemplate",3,7,False,False,4.1982421875,133
+nested.py,General Utility,Validating highly nested schemas shouldn't cause exponential time blowups.,,,,0,1,False,False,1.9443359375,57
+newsletter-empire.py,Telegram Bot,📰 AI-Powered Newsletter Empire,"OpenAI, Anthropic, Telegram, ElevenLabs, Leonardo, Stability, Supabase, Pinecone","upload, generate, analyze",NewsletterEmpire,1,1,False,False,10.46875,344
+onedrive-gallery-logic.py,Gallery Generation,Extracts the base URL (URL without query parameters) and the photo name from a Onedrive photo URL,,"generate, analyze, gallery",OnedriveGalleryLogic,1,3,False,False,3.767578125,107
+openai-content-creation-nocturne.py,AI Content Generation,Merged Content Analysis Tool,OpenAI,"upload, generate, organize, merge",,0,0,False,True,1.5068359375,63
+openai-download.py,YouTube Automation,Python Script Map Generator,"YouTube, Whisper","download, transcribe, generate, analyze, organize, convert",ScriptMapper,1,9,True,False,11.1298828125,259
+openai-generate.py,AI Content Generation,build_editor_agent function.,OpenAI,generate,MemoEditorInput,1,2,False,False,1.490234375,49
+openai-image-generater.py,AI Content Generation,generate_filename_with_gpt function.,OpenAI,"generate, organize",,0,2,False,True,3.37109375,107
+openai-media-processing-image.py,AI Content Generation,Load all .env files from ~/.env.d directory,"OpenAI, Stability","generate, analyze",,0,2,False,True,3.2412109375,117
+openai-missingapikeyerror.py,AI Tool,Environment loading helpers for analyze scripts.,OpenAI,analyze,MissingAPIKeyError,1,3,False,True,2.31640625,85
+openai-setup.py,AI Transcription,Test script to verify the transcription analyzer setup,"OpenAI, Whisper","transcribe, analyze",,0,5,True,True,4.548828125,169
+openai-text-to-speech.py,AI Content Generation,generate_speech_with_curl function.,OpenAI,"generate, analyze",,0,2,True,False,1.45703125,52
+openai-transcribe-audio.py,AI Content Generation,transcribe_audio function.,"OpenAI, Whisper","transcribe, generate, analyze",,0,4,False,True,4.6103515625,136
+openai.py,AI Content Generation,Simple OpenAI CLI for terminal usage,OpenAI,"generate, analyze",,0,2,True,False,2.92578125,101
+optimizer.py,General Utility,The optimizer tries to constant fold expressions and modify the AST,,convert,Optimizer,1,3,False,False,1.68359375,53
+optional.py,Data Analysis,test_import_optional function.,,generate,,0,5,False,False,3.287109375,110
+organize-directory.py,Gallery Generation,Directory Organizer,,"generate, analyze, organize, gallery",DirectoryOrganizer,1,6,True,False,12.912109375,330
+organize-files.py,Gallery Generation,💾 SAVE EVERYTHING BEFORE CLEANUP,,"generate, organize, merge, gallery","Colors, ComprehensivePreservationSystem",2,10,True,False,21.7734375,541
+organize.py,Gallery Generation,AI Outputs Hub - Auto-Organize Dry Run,,"generate, analyze, organize, gallery",AutoOrganizeDryRun,1,5,False,False,12.4072265625,349
+organizer.py,File Management,sort_images function.,,"generate, analyze, organize, convert",,0,1,False,False,2.5517578125,73
+origin-date.py,CSV Processing,get_creation_date function.,,"generate, analyze",,0,5,False,False,4.2568359375,149
+oshelper.py,General Utility,No docstring,,generate,,0,17,False,False,3.17578125,125
+other.py,Gallery Generation,Function.,,"generate, gallery",,0,7,False,False,7.421875,242
+other_simple.py,Gallery Generation,Function.,,"generate, gallery",,0,7,False,False,7.587890625,251
+output.py,Data Merging,No docstring,,merge,,0,0,False,False,0.861328125,32
+page.py,Gallery Generation,Page Maker v3 — a lean static generator with good defaults.,,"upload, generate, analyze, organize, convert, gallery",Page,1,17,True,False,13.740234375,308
+pager.py,General Utility,Base class for a pager.,,,"Pager, SystemPager",2,3,False,False,0.8974609375,41
+pandas_get_numeric.py,File Management,Is the cache stale for the given resource?,,"generate, organize","ResourceCache, ResourceBase, Resource, ResourceContainer, ResourceFinder",6,34,False,False,10.3818359375,347
+pandas_interchange_column.py,File Management,"A container for style information, used by :class:`~rich.console.Console`.",,"analyze, organize","Theme, ThemeStackError, ThemeStack",3,7,False,False,3.771484375,121
+parse.py,Gallery Generation,Extracts the base URL (URL without query parameters) and the photo name from a Onedrive photo URL,,"generate, analyze, gallery",GoogleGalleryLogic,1,3,False,False,3.658203125,103
+parse_api.py,AI Content Generation,Function.,"OpenAI, Whisper","transcribe, generate, analyze",,0,7,False,True,9.5126953125,229
+parse_main.py,Gallery Generation,This module contains provisional support for SOCKS proxies from within,,"generate, analyze, gallery","SOCKSConnection, SOCKSHTTPSConnection, SOCKSHTTPConnectionPool, SOCKSHTTPSConnectionPool, SOCKSProxyManager",5,3,False,False,6.9296875,216
+parse_simple.py,Instagram Automation,No docstring,Instagram,"upload, analyze",,0,0,False,False,2.9228515625,101
+payload.py,General Utility,Payload registry.,,analyze,"LookupError, Order, payload_type, PayloadRegistry, Payload",15,26,False,False,13.1474609375,426
+payloadpage.py,General Utility,A payload based version of page.,,,,0,2,False,False,1.404296875,56
+pdf2html.py,Gallery Generation,extract_images_from_pdf function.,,"generate, gallery",,0,3,True,False,2.11328125,65
+pdf2img.py,General Utility,No docstring,,convert,,0,0,False,False,0.6298828125,28
+pdfcsv.py,CSV Processing,No docstring,,,,0,0,False,False,0.15234375,7
+performance.py,Audio Transcription,Performance Optimization Script,Whisper,"download, transcribe, generate, organize, merge, gallery",PerformanceOptimizer,1,10,True,False,9.232421875,274
+periodic.py,AI Content Generation,Periodic Quality Monitor,Anthropic,"generate, analyze, merge","QualityMetrics, QualityTrend, PeriodicQualityMonitor",3,15,True,False,27.3974609375,756
+pickleshare.py,File Management,PickleShare - a small 'shelve' like datastore with concurrency support,,"generate, analyze, organize","PickleShareDB, PickleShareLink",2,22,True,False,9.83203125,360
+pip_build_environment.py,General Utility,No docstring,,"download, generate",,0,19,False,False,9.029296875,302
+pip_install_command.py,Gallery Generation,"If the filepath already exists, append _1, _2, ... until a unique filename is found.",,"upload, download, generate, gallery",,0,8,True,False,8.576171875,303
+pip_installer_bootstrap.py,Gallery Generation,Install setuptools only if absent and not excluded.,"Suno, AWS","generate, analyze, organize, gallery",,0,7,True,False,2583.3369140625,33356
+pipeline.py,AI Content Generation,Shared audio transcription + analysis pipeline helpers.,"OpenAI, Whisper","transcribe, generate, analyze",,0,5,False,False,3.05859375,101
+playing.py,File Management,This template is written by @boldestfortune,,"upload, organize",,0,0,False,False,4.0478515625,152
+playlist.py,YouTube Automation,No docstring,YouTube,"download, generate, analyze",,0,10,False,False,6.7314453125,215
+podcast-studio.py,Telegram Bot,🎙️ AI Podcast Studio,"OpenAI, Telegram, ElevenLabs, Stability","upload, transcribe, generate, analyze",PodcastStudio,1,10,True,True,13.986328125,426
+polly.py,Gallery Generation,__init__ function.,AWS,"generate, gallery",AWSPolly,1,3,False,False,2.6123046875,93
+posttextparser.py,General Utility,posttextparser function.,,"upload, download, analyze",,0,1,False,False,0.888671875,38
+prepare_missing_song_folders.py,Audio Transcription,📂 PREPARE FOLDERS FOR MISSING SONGS,"Whisper, Suno","download, transcribe, generate, analyze, organize, merge, convert","Colors, MissingSongFolderPrep",2,9,True,False,15.8203125,410
+preservation-renamer.py,Instagram Automation,Python Preservation Renamer,"Instagram, YouTube","generate, analyze, organize",PreservationRenamer,1,11,True,False,18.013671875,509
+printify-organize.py,Image Processing,get_dominant_color function.,,"analyze, organize, upscale",,0,7,True,False,7.291015625,239
+process-audio.py,Gallery Generation,Gemini Storybook Downloader (macOS-friendly),,"download, analyze, gallery",DownloadRecord,1,5,False,False,12.439453125,407
+process-csv.py,Data Merging,📊 ANALYSIS EXPORT TO CSV,,"generate, analyze, merge","Colors, AnalysisExporter",2,7,True,False,10.34375,327
+process-json.py,File Management,This script is intended for use as a GYP_GENERATOR. It takes as input (by way of,,"generate, analyze, organize, merge, convert","Target, Config, TargetCalculator",3,30,False,False,31.072265625,797
+process-proc-2.py,General Utility,QuantumForge CLI - Where Order Meets Chaos,,analyze,,0,2,False,False,0.8330078125,31
+process-proc_api.py,Instagram Automation,,"Instagram, Telegram",analyze,,0,9,True,True,18.9658203125,487
+process-proc_simple.py,General Utility,No docstring,,"download, generate, analyze",ExtractNews,1,3,False,False,2.1083984375,55
+process-remix.py,AI Content Generation,No docstring,"OpenAI, Whisper","transcribe, generate, analyze",,0,9,False,True,8.9365234375,255
+process.py,AI Content Generation,Convert seconds into MM:SS format.,"OpenAI, Whisper","transcribe, generate, analyze, convert",,0,5,False,True,6.9091796875,195
+processing-categories.py,CSV Processing,scan_directory function.,,"analyze, convert",,0,3,True,False,2.2744140625,87
+processing-csv-docs_simple.py,Gallery Generation,No docstring,,"generate, analyze, gallery",,0,7,False,False,6.5791015625,210
+processing-docs.py,Gallery Generation,"Recursively walks through each directory in 'directories', excluding paths",,"generate, analyze, convert, gallery",,0,7,False,False,7.09765625,220
+processing-doubles.py,Gallery Generation,Check if a given path matches any of the exclusion patterns.,,"generate, analyze, gallery",,0,4,False,False,4.87109375,155
+processing-execute.py,File Management,Execute Smart Organization Plan,,"generate, analyze, organize",OrganizationExecutor,1,8,True,False,12.501953125,334
+processing-fdupes.py,CSV Processing,No docstring,,analyze,,0,0,False,False,0.53515625,20
+processing-imove.py,CSV Processing,No docstring,,"download, analyze",,0,0,False,False,1.1767578125,35
+processing-json.py,General Utility,download gif from giphy by giphy id,,"download, analyze",,0,3,False,False,2.0517578125,96
+processing-pandas-docs.py,Data Merging,"Reads multiple CSV files from specified paths, concatenates them, and",,"analyze, merge",,0,1,False,False,2.455078125,73
+processing-pandas-json.py,File Management,No docstring,,"generate, analyze, organize, merge, convert",,0,0,False,False,2.3818359375,78
+processing-pandas.py,CSV Processing,No docstring,,"download, generate, analyze",,0,0,False,False,2.4296875,72
+processing.py,Gallery Generation,Check if a given path matches any of the exclusion patterns.,,"download, generate, analyze, gallery",,0,4,False,False,6.2724609375,198
+processor-transcript.py,AI Content Generation,Main entry point for the Transcription Analyzer example usage,OpenAI,"generate, analyze, convert",,0,8,True,True,7.5458984375,245
+processor.py,Gallery Generation,No docstring,,"generate, analyze, gallery",,0,9,False,False,7.48046875,235
+processr.py,CSV Processing,No docstring,Leonardo,"generate, analyze",,0,0,False,False,1.65234375,60
+product-image.py,Data Merging,No docstring,,"download, merge, convert",,0,0,False,False,1.2822265625,47
+project.py,AI Content Generation,AvaTarArTs Project Manager,OpenAI,"generate, analyze, organize, convert",AvaTarArTsProjectManager,1,9,True,False,15.1875,493
+protocols.py,File Management,typing.Protocol classes for jsonschema interfaces.,,"generate, organize",Validator,1,7,False,False,6.990234375,224
+pulse.py,General Utility,Pulse Animation - Scale objects rhythmically for emphasis.,,generate,,0,3,False,False,9.2001953125,296
+py3compat.py,General Utility,Compatibility tricks for Python 3. Mainly to do with unicode.,,,,0,7,False,False,1.55859375,63
+pydescribe.py,AI Content Generation,Extracts top-level functions and classes from the script content.,OpenAI,"generate, analyze, merge",,0,4,False,False,3.384765625,108
+pyinstaller.py,File Management,A crude *bit of everything* smoke test to verify PyInstaller compatibility.,,organize,,0,0,False,False,1.142578125,33
+pyorganize.py,AI Content Generation,Extracts top-level functions and classes from the script content.,OpenAI,"generate, analyze, organize",,0,3,False,False,2.412109375,81
+pytables.py,Data Analysis,test_pytables_raises function.,,,,0,1,False,False,0.3779296875,17
+python-aggressive-cleanup.py,YouTube Automation,Python Aggressive Cleanup System,YouTube,"generate, analyze, organize, gallery",AggressiveCleanupSystem,1,11,True,False,20.1064453125,584
+python-cleanup-execute.py,File Management,Python Directory Cleanup - Auto Execution,,"generate, analyze, organize",,0,5,True,False,10.318359375,298
+python-documentation.py,Gallery Generation,Python API Documentation Generator,,"upload, generate, gallery",APIDocumentationGenerator,1,15,True,False,15.8369140625,473
+python-filename-cleanup.py,File Management,Python Filename Cleanup System,,"generate, analyze, organize, convert",FilenameCleanupSystem,1,9,True,False,16.8203125,464
+python-intelligent-rename.py,Instagram Automation,Intelligent Python File Renamer - Execution Script,"OpenAI, Instagram, YouTube, Leonardo","upload, download, transcribe, generate, analyze, organize, merge, convert, upscale, gallery",,0,1,False,False,94.0947265625,2600
+python-lint-complexity.py,File Management,format_with_black function.,,"analyze, organize",,0,3,False,False,1.6337890625,62
+python-namer.py,AI Content Generation,Prepare a batch request to OpenAI for suggesting appropriate titles for scripts.,OpenAI,"generate, analyze",,0,3,False,True,5.154296875,173
+pythoncat.py,AI Content Generation,get_openai_category function.,OpenAI,generate,,0,5,False,False,3.3330078125,108
+pythoncatorize.py,AI Content Generation,get_openai_category function.,OpenAI,"generate, organize",,0,4,False,False,2.251953125,81
+quant-agent.py,AI Tool,build_quant_agent function.,OpenAI,,,0,1,False,False,1.1337890625,36
+quantum.py,General Utility,__init__ function.,,"analyze, convert",QuantumMediaProcessor,1,3,False,False,1.4169921875,39
+quantumforgelabs.py,YouTube Automation,"<svg xmlns=""http://www.w3.org/CONSTANT_2000/svg"" viewBox=""0 0 CONSTANT_640 640"" role=""img"" aria-label=""QuantumForgeLabs logo"">","OpenAI, YouTube, Discord, Whisper","upload, transcribe, generate, analyze, merge, convert, gallery",,0,0,False,False,15.162109375,363
+query.py,AI Content Generation,generate function.,OpenAI,generate,QueryExpansion,1,1,False,False,1.6513671875,56
+queue-script.py,YouTube Automation,No docstring,"YouTube, AWS","upload, analyze","Youtubeentity, Playlistlistener",2,5,False,False,3.455078125,104
+quickstart.py,General Utility,Activity flow,,upload,,0,0,False,False,1.0,38
+quiz.py,CSV Processing,generate_trivia_quiz function.,,generate,,0,1,False,False,1.3310546875,45
+re-size.py,Image Processing,No docstring,,"analyze, organize, upscale",,0,6,True,False,5.4443359375,157
+rebuild.py,File Management,Rebuild the internal timezone info in dateutil/zoneinfo/zoneinfo*tar*,,"analyze, organize",,0,3,False,False,2.3447265625,77
+recalc.py,General Utility,Excel Formula Recalculation Script,,analyze,,0,3,True,False,6.5849609375,207
+recovery.py,CSV Processing,Recovery Analyzer - Comprehensive analysis of Python backup locations,,"generate, analyze",RecoveryAnalyzer,1,9,True,False,8.1123046875,232
+reddit-download.py,Reddit Automation,generate function.,Reddit,"upload, download, generate, analyze, upscale, gallery",,0,1,False,False,4.14453125,149
+reddit-scrape.py,Reddit Automation,url: the link of the reddit post to scrape comments/title from,Reddit,"upload, download, generate, analyze, organize",RedditScrape,1,2,False,False,2.8486328125,78
+reddit.py,Reddit Automation,comment_html function.,Reddit,gallery,,0,2,False,False,1.7978515625,69
+refresolver-v1.py,Gallery Generation,JSON Schema URI resolution scopes and dereferencing,,"download, analyze, gallery",RefResolver,1,11,False,False,5.548828125,187
+remove-duplicates.py,File Management,Advanced Duplicate Remover - Multiple detection methods,,"analyze, organize",AdvancedDuplicateRemover,1,12,True,False,15.369140625,403
+remove_redundant_prefixes.py,Instagram Automation,Remove Redundant Folder Name Prefixes,"Instagram, YouTube","analyze, organize",RedundantPrefixRemover,1,5,True,False,4.5888671875,147
+rename.py,Telegram Bot,No docstring,Telegram,"upload, download, generate, analyze, organize, convert, upscale, gallery",,0,0,False,False,4.97265625,133
+rename_by_purpose.py,Instagram Automation,Rename by Purpose - What does the script DO?,"OpenAI, Anthropic, Instagram, YouTube, Whisper, ElevenLabs, Leonardo, Stability","upload, download, transcribe, generate, analyze, organize, convert",PurposeRenamer,1,4,False,False,6.4794921875,175
+renamer.py,Instagram Automation,Simple Python Renamer for ~/Documents/python,"OpenAI, Instagram, YouTube, Whisper","upload, download, transcribe, generate, analyze, organize, merge, convert, upscale",SimplePythonRenamer,1,14,True,False,16.6103515625,485
+render_text.py,General Utility,Exception base class for prompt related errors.,,"analyze, convert","PromptError, InvalidResponse, PromptBase, Prompt, IntPrompt",7,18,False,False,12.251953125,402
+reorganize.py,Instagram Automation,Reorganize to Exact Structure,"Instagram, YouTube, Reddit, Telegram","download, generate, analyze, organize, convert, upscale, gallery",ExactStructureReorganizer,1,6,True,False,14.9443359375,411
+reorganize_by_service.py,Instagram Automation,Reorganize by SERVICE instead of FILE TYPE,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Telegram, Whisper, Leonardo, Stability","transcribe, analyze, organize",ServiceReorganizer,1,3,False,False,6.7265625,194
+rephrase.py,AI Content Generation,__init__ function.,OpenAI,generate,Rephrase,1,3,False,False,1.54296875,56
+replace.py,File Management,Apply text replacements to PowerPoint presentation.,,"generate, analyze, organize",,0,8,True,False,13.4140625,386
+reportbot.py,Instagram Automation,getOptions function.,Instagram,"analyze, gallery",,0,1,False,False,2.1865234375,109
+request.py,General Utility,Shortcuts for generating request headers.,,,,0,3,False,False,3.9033203125,138
+requirements.py,Instagram Automation,Intelligent Requirements Generator,"OpenAI, Anthropic, Instagram, YouTube, Whisper, Pinecone","transcribe, generate, analyze, organize, convert, gallery",,0,6,True,False,8.49609375,325
+research-assistant.py,AI Content Generation,🧠 AI Research Assistant with Memory,"OpenAI, Anthropic","upload, generate, analyze",ResearchAssistant,1,12,True,True,12.607421875,418
+reset_following.py,Instagram Automation,This is a account reset tool.,Instagram,generate,Task,1,3,False,False,2.3212890625,93
+resize.py,AI Content Generation,Sanitize the filename to ensure:,OpenAI,"generate, analyze, organize, convert, upscale",,0,6,True,True,8.609375,278
+resizer.py,Image Processing,setup_logging function.,,"analyze, upscale",,0,4,True,False,4.6650390625,145
+resolution.py,Data Analysis,test_dti_resolution function.,,,,0,1,False,False,0.806640625,34
+resource-manager.py,General Utility,__init__ function.,AWS,,ResourceManager,1,3,False,False,1.62109375,48
+response.py,General Utility,Checks whether a given file-like object is closed.,,analyze,,0,3,False,False,3.427734375,108
+restarter.py,General Utility,A basic kernel monitor with autorestarting.,,analyze,KernelRestarter,1,8,False,False,5.7890625,169
+retrieve-docs.py,General Utility,No docstring,,"upload, generate, analyze",ContextRetriever,1,5,False,False,4.115234375,117
+revenue-engine.py,Reddit Automation,💰 AI Revenue Engine,"OpenAI, Anthropic, Reddit, Telegram, Discord","upload, generate, analyze, merge",RevenueEngine,1,11,False,False,27.79296875,867
+riddle.py,AI Content Generation,Function.,OpenAI,"download, generate",,0,3,False,False,2.8603515625,102
+robust.py,Gallery Generation,Robust File Processor,,"generate, analyze, organize, merge, convert, gallery",RobustFileProcessor,1,24,False,False,35.794921875,923
+root-scripts.py,Instagram Automation,Organize Root Python Scripts by Content,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Telegram","download, analyze, organize, convert, upscale",RootScriptOrganizer,1,4,True,False,6.6162109375,215
+run-all-renamers.py,AI Tool,Master Runner for All Rename Utilities,OpenAI,"analyze, organize",RenameRunner,1,6,True,True,8.52734375,289
+safeduplicatecleanup-v1.py,File Management,Safe Duplicate Cleanup Script,,"generate, analyze, organize",SafeDuplicateCleanup,1,8,True,False,7.46875,213
+sample-config.py,YouTube Automation,No docstring,"YouTube, Telegram","upload, download, analyze",Config,1,0,False,False,2.138671875,60
+save-ai-outputs.py,Gallery Generation,AI Outputs Hub - Integration Script,,"generate, gallery",,0,6,False,False,4.837890625,167
+save-exit.py,AI Tool,Auto-save conversation on exit keywords,Anthropic,analyze,,0,3,True,False,3.0791015625,112
+save-unfollowers-into.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.8779296875,38
+save-users-following.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.76171875,30
+savify.py,YouTube Automation,Main module for Savify.,YouTube,"upload, download, generate, analyze, organize",Savify,1,7,False,False,12.7421875,396
+scancsv.py,CSV Processing,scan_directory function.,,download,,0,1,False,False,1.15234375,46
+scanpython.py,AI Content Generation,get_script_description function.,OpenAI,"generate, analyze",,0,2,False,False,1.830078125,64
+scanpythons.py,AI Content Generation,Extracts top-level functions and classes from the script content.,OpenAI,"generate, analyze, merge",,0,3,False,False,2.29296875,78
+scheme.py,Gallery Generation,For types associated with installation schemes.,,gallery,Scheme,1,1,False,False,0.7197265625,31
+scrape-suno-api.py,Gallery Generation,?? SUNO AI SCRAPER - Complete CSV Exporter,Suno,"upload, download, generate, analyze, organize, gallery",SunoScraper,1,10,True,False,9.7724609375,293
+scrape.py,Reddit Automation,Method to remove punctuation and numbers from a string,Reddit,"download, analyze",,0,3,False,False,2.4208984375,83
+scraper.py,Reddit Automation,download_vid function.,Reddit,"upload, download",,0,2,False,False,1.3330078125,53
+scraping-download-intelligent.py,Instagram Automation,Intelligent Content-Aware File Renamer,"Instagram, YouTube, Telegram, Discord","upload, download, generate, analyze, organize, convert",IntelligentFileRenamer,1,7,True,True,11.9140625,339
+scraping-download-news_api_fetcher.py,Image Processing,No docstring,,"download, analyze, upscale",,0,11,True,False,5.884765625,199
+scraping-download-scrape.py,Reddit Automation,No docstring,Reddit,"download, analyze, gallery",,0,0,False,False,0.4296875,17
+screenshot-generate.py,Telegram Bot,No docstring,Telegram,"upload, download, generate, analyze, gallery",,0,0,False,False,4.0234375,116
+script_simple.py,General Utility,No docstring,,"upload, download",,0,3,False,False,2.9814453125,99
+scripts.py,File Management,A class to copy or create scripts from source scripts or callable,,"upload, download, generate, analyze, organize, convert",ScriptMaker,1,18,False,False,18.060546875,445
+scriptwrapper.py,General Utility,No docstring,AWS,"upload, generate, analyze","TikTokVideo, ClipWrapper, ScriptWrapper",3,23,False,False,7.96484375,279
+scripty.py,AI Content Generation,scripty_tts_unified_v2.py,"OpenAI, Whisper, Suno","upload, transcribe, generate, analyze, organize, merge",,0,23,True,True,16.5341796875,512
+search-claude-conversations.py,AI Tool,Search conversations filtered by date range,Anthropic,"organize, gallery",,0,4,True,False,5.7412109375,197
+search.py,AI Tool,Alfred Script Filter for Claude Code Conversations - Enhanced Version,Anthropic,"analyze, organize, gallery",,0,10,True,False,11.0205078125,360
+second-pass-migration.py,Instagram Automation,Analyze remaining Python files and directories for second migration pass,"OpenAI, Instagram, YouTube, Reddit, Telegram, Leonardo","upload, download, transcribe, generate, analyze, organize, convert, upscale, gallery",,0,4,True,False,24.2353515625,569
+secret.py,YouTube Automation,No docstring,YouTube,,,0,0,False,True,0.4638671875,20
+services-gallery.py,Gallery Generation,Configures the argument parser,AWS,"upload, generate, analyze, gallery",,0,2,True,False,3.046875,109
+services-s3bucket.py,General Utility,audio_down function.,AWS,"download, generate",,0,3,False,False,1.7744140625,71
+services.py,General Utility,audio_down function.,AWS,"download, generate",,0,3,False,False,1.7744140625,71
+setters.py,General Utility,Commonly used hooks for on_setattr.,,convert,,0,5,False,False,1.404296875,76
+settings.py,General Utility,generateConfigFile function.,,"generate, analyze",,0,2,False,False,3.416015625,116
+setup.py,Instagram Automation,Social Media Automation Setup Script,"Instagram, Discord","upload, generate, analyze",SocialMediaAutomationSetup,1,12,True,True,21.435546875,769
+setup_browser.py,Gallery Generation,No docstring,,"upload, gallery",,0,0,False,False,1.45703125,47
+setup_legacy.py,YouTube Automation,Upload videos to Youtube.,YouTube,upload,,0,0,False,False,1.1708984375,34
+setup_simple.py,Gallery Generation,Setup script for City 16-9 Gallery Generator,,gallery,,0,0,False,False,1.744140625,56
+setuptools.py,General Utility,exec(compile(''',,generate,,0,5,False,False,4.41796875,150
+sheets.py,Image Processing,Google Sheets helpers using gspread.,,upscale,,0,6,False,False,3.578125,114
+shorts-code.py,YouTube Automation,format_timestamp function.,"OpenAI, YouTube, Whisper","transcribe, generate, analyze, merge",,0,4,False,True,5.255859375,137
+simple-effective.py,General Utility,This template is written by @zackvega,,upload,,0,0,False,False,1.86328125,74
+simple-interaction-good.py,General Utility,This template is written by @Tachenz,,upload,,0,0,False,False,2.166015625,75
+simple-photo-gallery.py,Gallery Generation,Get the creation date of the file.,,"generate, organize, gallery",,0,6,False,False,3.4794921875,121
+simple.py,Reddit Automation,No docstring,Reddit,,,0,0,False,False,0.1865234375,6
+simple_flat_organizer.py,Instagram Automation,Simple Flat Category Organizer,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Telegram, Whisper, Suno, Leonardo","download, transcribe, generate, analyze, organize, merge, upscale",SimpleFlatOrganizer,1,7,True,False,8.8193359375,285
+simple_smart_renamer.py,Instagram Automation,"Simple Smart Renamer - NO AI, Just Logic!","OpenAI, Anthropic, Instagram, YouTube, Reddit, Telegram, ElevenLabs, Leonardo, Stability","analyze, organize, convert",SimpleSmartRenamer,1,5,False,False,5.779296875,178
+simplify-organizer.py,Gallery Generation,Simplify File Organizer,,"upload, download, generate, analyze, organize, convert, gallery",SimplifyOrganizer,1,11,True,False,17.6943359375,514
+simplify.py,Instagram Automation,Simplify File Organizer - Execution Script,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Suno, Leonardo","upload, download, transcribe, generate, analyze, organize, merge, convert, upscale, gallery",,0,1,False,True,500.955078125,112
+singleton.py,General Utility,__call__ function.,,,Singleton,1,1,False,False,0.267578125,11
+skip-8below.py,Image Processing,get_closest_aspect_ratio function.,,"analyze, organize, upscale",,0,5,True,False,4.9931640625,169
+skip-image-fixer.py,Image Processing,No docstring,,"generate, analyze, upscale",,0,8,True,False,5.966796875,173
+skiprows.py,CSV Processing,Tests that skipped rows are properly handled during,,analyze,,0,14,False,False,9.5498046875,344
+slide.py,General Utility,Slide Animation - Slide elements in from edges with overshoot/bounce.,,generate,,0,2,False,False,9.5087890625,303
+smart-dedup.py,File Management,🧹 SMART DEDUPLICATION TOOL,,"generate, analyze, organize","Colors, Emojis, SmartDeduplicator",3,12,True,False,18.4970703125,493
+smart-organizer.py,Gallery Generation,Smart File Organizer,,"generate, analyze, organize, gallery",SmartOrganizer,1,10,True,False,15.669921875,449
+smart.py,Instagram Automation,Smart Organization Plan Generator,"Anthropic, Instagram, YouTube","download, generate, analyze, organize, gallery",SmartOrganizationPlanner,1,14,True,False,18.1298828125,510
+smart_archive_backups.py,File Management,Smart Archive Deduplicator,,"generate, analyze, organize, merge",,0,4,True,False,9.8310546875,296
+smart_conservative_renamer.py,Instagram Automation,🎯 SMART CONSERVATIVE RENAMER,"OpenAI, Instagram, YouTube, Reddit, Whisper, Leonardo","upload, download, transcribe, generate, analyze, organize, merge","Colors, SmartConservativeRenamer",2,12,False,False,17.19921875,451
+smart_content_renamer_v2.py,YouTube Automation,🏷️ SMART CONTENT-AWARE RENAMER V2,"YouTube, Whisper","download, transcribe, generate, analyze, organize, merge","Colors, SmartRenamer",2,11,True,False,15.6728515625,461
+smart_local_renamer.py,Instagram Automation,Smart Local Renamer - NO AI HALLUCINATIONS!,"OpenAI, Anthropic, Instagram, YouTube, Reddit, Telegram, ElevenLabs, Leonardo, Stability, AWS","generate, analyze, organize, convert",SmartLocalRenamer,1,6,True,False,7.9814453125,236
+smart_rename_versions.py,File Management,Smart Version Renaming,,"upload, generate, analyze, organize",,0,4,True,False,4.873046875,179
+snoopbanner.py,Gallery Generation,[cyan],,"download, analyze, gallery",,0,9,False,False,24.015625,428
+snoopplugins.py,Gallery Generation,Плагины Snoop Project/Черновик,,"analyze, gallery",,0,12,False,False,22.73828125,564
+social-platforms-instagram-botError.py,Instagram Automation,Created in 10/CONSTANT_2020,Instagram,"upload, generate",,0,18,False,False,21.3291015625,732
+social-platforms-instagram-config.py,YouTube Automation,Important Notes:,YouTube,"upload, download, generate, analyze, convert","config_reader, parser_args, download",3,38,False,False,49.6533203125,1541
+social-platforms-instagram-scraper.py,Instagram Automation,var fDialog = document.querySelector('{secici}');,Instagram,"download, convert",Instagram,1,115,False,False,117.0859375,2917
+social-platforms-instagram.py,AI Content Generation,Configuration settings for the Transcription Analyzer,"OpenAI, Whisper","transcribe, generate, analyze",,0,0,False,False,0.9736328125,34
+society6-upload.py,General Utility,No docstring,,"upload, analyze",,0,0,False,False,1.2939453125,41
+software.py,File Management,Context-Efficient Software Architect Agent,,"generate, analyze, organize",SoftwareArchitectAgent,1,9,True,False,14.8740234375,399
+song-process.py,AI Content Generation,Convert seconds into MM:SS format.,"OpenAI, Whisper","transcribe, generate, analyze, convert",,0,5,False,True,7.244140625,204
+sora-sora-storyboard.py,CSV Processing,Prompt the user to input the directory where MP3 files are stored.,,generate,,0,3,False,False,4.4853515625,126
+sort.py,Instagram Automation,Final Intelligent Sort,"OpenAI, Anthropic, Instagram, Reddit","download, generate, analyze, organize, gallery",FinalIntelligentSorter,1,6,True,False,13.642578125,399
+sorts.py,Gallery Generation,Check if a given path matches any of the exclusion patterns.,,"download, generate, analyze, organize, convert, gallery",,0,8,False,False,9.1923828125,300
+sound.py,General Utility,No docstring,,,,0,0,False,False,0.0478515625,4
+speak.py,AI Content Generation,No docstring,"OpenAI, Whisper",generate,,0,2,True,False,1.677734375,54
+speech.py,AI Content Generation,generate_speech function.,OpenAI,"generate, analyze",,0,1,False,False,1.21875,42
+speek.py,AI Content Generation,No docstring,OpenAI,generate,,0,0,False,False,0.3125,15
+split-chunks.py,CSV Processing,split_csv function.,,,,0,2,False,False,1.5615234375,47
+split.py,Gallery Generation,split_html_file function.,,"generate, gallery",,0,1,False,False,1.611328125,54
+splt.py,Gallery Generation,No docstring,,"generate, analyze, gallery",,0,0,False,False,1.4501953125,52
+sqs-queue-handler.py,General Utility,__init__ function.,AWS,,Awsqueue,1,3,False,False,1.0771484375,38
+stability-format.py,Gallery Generation,Format-Optimized Medium Article Automation,"Stability, AWS","upload, generate, analyze, organize, merge, convert, gallery",FormatOptimizedAutomation,1,24,True,False,47.1533203125,1112
+stability-medium.py,Gallery Generation,Medium Article Automation Maker,"Stability, AWS","upload, generate, analyze, merge, convert, gallery",MediumArticleAutomation,1,26,True,False,43.8076171875,1079
+stability.py,General Utility,text_to_image function.,Stability,"generate, analyze, convert",,0,2,False,False,5.4599609375,105
+start-with.py,AI Content Generation,Merged Content Analysis Tool,OpenAI,"generate, organize, merge",,0,0,False,False,0.654296875,22
+state.py,Instagram Automation,__init__ function.,Instagram,,BotState,1,2,False,False,1.6162109375,73
+static.py,General Utility,No docstring,,,,0,0,False,False,0.154296875,9
+sticker-download.py,Telegram Bot,No docstring,Telegram,"upload, download, analyze, gallery",,0,0,False,False,3.7509765625,112
+stories-downloader.py,Instagram Automation,No docstring,Instagram,"download, analyze",,0,0,False,False,0.5400390625,19
+story-section.py,AI Content Generation,Merged Content Analysis Tool,"OpenAI, Whisper","transcribe, generate, analyze, organize, merge",,0,4,False,True,6.78125,167
+story-trans.py,AI Content Generation,Convert seconds into the format MM:SS.,"OpenAI, Whisper","transcribe, generate, analyze, merge, convert",,0,4,False,True,6.7666015625,160
+story.py,Instagram Automation,download_stories function.,Instagram,"upload, download",,0,3,False,False,2.3291015625,70
+storykeytrans.py,AI Content Generation,Convert seconds into the format MM:SS.,"OpenAI, Whisper","transcribe, generate, analyze, merge, convert",,0,4,False,True,6.77734375,155
+streamlabs-polly.py,General Utility,__init__ function.,,"upload, convert",StreamlabsPolly,1,3,False,False,2.07421875,80
+structures.py,General Utility,requests.structures,,,"CaseInsensitiveDict, LookupDict",2,14,False,False,2.8408203125,97
+stylish-unfollow-tips.py,General Utility,This template is written by @Nocturnal-2,,upload,,0,0,False,False,4.451171875,138
+subcomponents.py,General Utility,A benchmark which tries to compare the possible slow subparts of validation.,,generate,,0,2,False,False,1.166015625,48
+subject.py,General Utility,Subject-aware reframing using face/pose detection for intelligent cropping,,"generate, analyze","SubjectTracker, MotionTracker",2,8,False,False,7.0849609375,208
+subreddit.py,Reddit Automation,Returns a list of threads from the AskReddit subreddit.,Reddit,"upload, analyze, organize",,0,1,False,False,7.068359375,184
+subredditsentiment-apps.py,Reddit Automation,No docstring,Reddit,convert,,0,0,False,True,2.2421875,82
+subtitle.py,Image Processing,No docstring,,upscale,,0,0,False,False,0.2822265625,9
+sufflecsv.py,CSV Processing,shuffle_csv function.,,download,,0,1,False,False,0.8720703125,36
+suno-card-html.py,Gallery Generation,<!DOCTYPE html>,,"generate, convert, gallery",,0,0,False,False,4.4619140625,143
+suno-generator.py,CSV Processing,get_matching_files function.,Suno,generate,,0,1,False,False,2.234375,74
+suno-html-scraper.py,Gallery Generation,prompt_for_files function.,Suno,"download, analyze, gallery",,0,4,True,False,3.130859375,104
+suno-music-catalog.py,CSV Processing,get_matching_files function.,Suno,generate,,0,1,False,False,2.234375,74
+super-simple-setting.py,General Utility,This template is written by @Edhim,,upload,,0,0,False,False,1.5,66
+super_flatten.py,File Management,Super Aggressive Flattener,,"generate, analyze, organize",SuperFlattener,1,7,True,False,8.3203125,266
+support.py,Instagram Automation,test_extract_urls function.,Instagram,,TestBotSupport,1,4,False,False,2.0751953125,75
+synthesize.py,File Management,As a Man Thinketh - Text to Speech System (Real Content),"ElevenLabs, Stability, AWS","upload, download, generate, analyze, organize, merge, convert","TTSProvider, ElevenLabsTTS, AssemblyAITTS, DeepgramTTS, AsAManThinkethTTS",5,17,True,True,53.7529296875,474
+sysinfo.py,General Utility,Utilities for getting information about IPython and the system it's running in.,,analyze,,0,5,False,False,4.185546875,147
+system-monitor.py,Telegram Bot,🔍 AI System Health Monitor,"OpenAI, Telegram, ElevenLabs","upload, generate, analyze",AISystemMonitor,1,11,True,True,8.4384765625,257
+system.py,AI Content Generation,Setup Periodic Quality Monitoring,Anthropic,"generate, analyze",,0,2,False,False,8.564453125,264
+targeted-v1.py,File Management,Targeted cleanup: Fix obvious issues,,"analyze, organize, merge",,0,2,True,False,4.4375,149
+tehsites-complete.py,Image Processing,Complete File Merge and Deduplication Script,,"download, generate, analyze, organize, merge, upscale, gallery",CompleteFileProcessor,1,10,True,False,11.703125,291
+telegraph-download-images.py,Gallery Generation,---===( Telegraph Image Downloader v1.2.1 от ARTEZON )===---,,"download, analyze, organize, gallery",,0,5,True,False,16.0234375,426
+temp-file-manager.py,File Management,"This module contains classes - NamedFileInTemporaryDirectory, TemporaryWorkingDirectory.",,"generate, organize","NamedFileInTemporaryDirectory, TemporaryWorkingDirectory",2,6,False,False,1.8203125,58
+template.py,Gallery Generation,"<div class=""job-listing"">",,"upload, download, generate, gallery",,0,1,False,False,4.791015625,169
+testfonts-v1.py,Image Processing,create_text_slide function.,,"generate, upscale",,0,4,False,False,2.984375,117
+testjoin-v1.py,Data Analysis,test_append_join_nondatetimeindex function.,,convert,TestJoin,1,4,False,False,1.5673828125,55
+textgenerator-1.py,AI Content Generation,clean_response function.,OpenAI,generate,,0,2,False,True,1.357421875,56
+textgenerator.py,AI Content Generation,clean_response function.,OpenAI,generate,,0,2,False,True,1.35546875,54
+texttospeech-v1.py,General Utility,__init__ function.,,"upload, generate",TextToSpeech,1,3,False,False,1.3408203125,45
+thinketh_content_renamer.py,Gallery Generation,As-a-Man-Thinketh Content-Aware Renamer,,"upload, generate, analyze, organize, gallery",ThinkethContentRenamer,1,10,True,False,12.4345703125,303
+thinketh_content_renamer_from_seo-optimizer.py,Gallery Generation,As-a-Man-Thinketh Content-Aware Renamer,,"upload, generate, analyze, organize, gallery",ThinkethContentRenamer,1,10,True,False,12.4345703125,303
+thinketh_duplicate_cleanup.py,File Management,As-a-Man-Thinketh Duplicate Cleanup,,"analyze, organize",ThinkethDuplicateCleanup,1,6,True,False,6.0615234375,164
+thinketh_tts_adaptive.py,AI Content Generation,🎧 Adaptive Emotional Audiobook Generator (Cheerful Guide Style) 🎧,OpenAI,"upload, generate, analyze, merge",,0,6,True,True,4.0927734375,127
+thinketh_tts_asmr.py,AI Content Generation,"ASMR whisper edition with cheerful-guide affect,","OpenAI, Whisper","upload, transcribe, generate, merge",,0,5,True,True,3.1025390625,106
+thinketh_tts_main.py,AI Content Generation,thinketh_tts.py,OpenAI,"download, generate, analyze, merge",,0,7,True,True,4.75390625,166
+thinketh_tts_scripty.py,AI Content Generation,Cinematic hybrid edition:,OpenAI,"upload, generate, analyze, merge",,0,6,True,True,4.591796875,151
+thinketh_tts_universal.py,AI Content Generation,Return best available OpenAI model for TTS.,"OpenAI, Suno","upload, generate, analyze",,0,5,True,True,3.65234375,118
+thumbnail.py,YouTube Automation,Load all .env files from ~/.env.d directory,"YouTube, ElevenLabs","upload, download",,0,2,False,True,2.6650390625,86
+thumbs.py,General Utility,export_thumbnail function.,,analyze,,0,1,False,False,0.4140625,24
+to-html-gallery.py,Gallery Generation,csv_to_html function.,,gallery,,0,1,False,False,2.3466796875,91
+tocpdf.py,General Utility,create_toc_pdf function.,AWS,"upload, generate",,0,1,False,False,0.662109375,29
+tools.py,AI Content Generation,get_openai_category function.,OpenAI,"generate, organize",,0,4,False,False,2.2412109375,80
+track.py,General Utility,Wraps a try-except-assign statement.,,upload,Track,1,5,False,False,3.615234375,113
+transcribe-analyze-local.py,Audio Transcription,analyze_mp3_open_source.py,Whisper,"upload, transcribe, generate, analyze",,0,12,True,True,8.337890625,241
+transcribe.py,Audio Transcription,transcribe_audio function.,Whisper,"transcribe, analyze",,0,4,True,False,1.5498046875,61
+transcriber.py,AI Content Generation,Advanced Transcriber - Consolidated Transcription Script,"OpenAI, Whisper","transcribe, generate, analyze, organize, merge, convert",AdvancedTranscriber,1,9,True,True,8.8349609375,269
+transcript-prompts.py,AI Content Generation,transcribe_audio function.,"OpenAI, Whisper","transcribe, generate, analyze",,0,4,False,True,5.28515625,151
+transcript.py,AI Content Generation,No docstring,"OpenAI, Whisper","transcribe, generate, analyze, organize",,0,16,True,False,10.478515625,282
+transcription.py,AI Content Generation,Audio/Video Transcription and Analysis Tool,"OpenAI, Whisper","transcribe, generate, analyze, organize, merge, convert",TranscriptionAnalyzer,1,11,True,True,17.44921875,468
+translation.py,YouTube Automation,"Hi Bro, This Is Telegrams Yet Another Sassiest Downloader com Renamer Bot Hit /help to know how to use me","YouTube, Telegram","upload, download, generate, analyze, organize, convert",Translation,1,0,False,False,7.451171875,112
+twitch-download.py,General Utility,request function.,,download,,0,5,False,False,1.2919921875,52
+twitch-exceptions.py,General Utility,General error class for TwitchTube.,,,"TwitchTubeError, InvalidCategory, VideoPathAlreadyExists, NoClipsFound",4,0,False,False,0.353515625,15
+typedefs.py,General Utility,No docstring,,,,0,0,False,False,1.4365234375,55
+typography.py,General Utility,"Typography System - Professional text rendering with outlines, shadows, and effects.",,"generate, convert",,0,8,False,False,10.869140625,372
+ufunc.py,Data Analysis,add3 function.,,,,0,14,False,False,10.33203125,310
+ultra.py,YouTube Automation,Ultra Advanced Content-Aware File Analysis System,"OpenAI, Anthropic, YouTube, Stability, AWS","upload, download, generate, analyze, organize, convert, gallery","ContentComplexity, ProjectMaturity, TechnicalDebt, ContentInsights, SemanticVector",8,65,True,False,82.8349609375,1868
+unarchive.py,Instagram Automation,instabot example,Instagram,,,0,0,False,False,0.2626953125,19
+undo-move.py,General Utility,Move files back to their original locations.,,,,0,1,False,False,1.0576171875,38
+undo_collection_and_merge.py,Data Merging,🔄 UNDO COLLECTION FIX & MERGE INTO NOCTURNE,,"analyze, merge","Colors, UndoAndMergeCollection",2,7,True,False,7.2080078125,194
+unfollow-everyone.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.5283203125,24
+unfollow-followers.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.537109375,24
+unified_workflow_poc.py,AI Content Generation,Unified Workflow Engine - Proof of Concept,"OpenAI, Whisper","transcribe, generate, analyze, organize, merge, convert, upscale, gallery","WorkflowConfig, Component, WorkflowEngine, MediaDetector, WhisperTranscriber",11,17,True,False,19.146484375,577
+universe4.py,Image Processing,No docstring,Leonardo,"upload, generate, analyze, upscale",,0,0,False,True,3.546875,111
+unlike-users.py,Instagram Automation,instabot example,Instagram,analyze,,0,0,False,False,0.6171875,27
+unused.py,General Utility,An unused schema registry should not cause slower validation.,,generate,,0,0,False,False,0.935546875,36
+upload-content.py,YouTube Automation,\,YouTube,"upload, generate, analyze",BeatSaberPreset,1,4,False,False,3.6513671875,124
+upload-manager.py,General Utility,GitHub Upload Manager,,"upload, download, generate, analyze",GitHubUploadManager,1,13,True,False,15.54296875,519
+upload-products.py,CSV Processing,No docstring,,"upload, generate, convert",,0,0,False,False,3.689453125,96
+upload.py,Gallery Generation,"Class deriving from the HTTPServer, defining new properties",,"upload, generate, analyze, gallery","SimplePhotoGalleryHTTPServer, SimplePhotoGalleryHTTPRequestHandler, NetlifyUploader",3,13,False,False,8.3330078125,256
+upload_api.py,AI Content Generation,Function.,OpenAI,"upload, generate, analyze",,0,5,False,False,5.4287109375,137
+upload_simple.py,Instagram Automation,No docstring,Instagram,"upload, analyze",,0,0,False,False,2.99609375,105
+uploader.py,Gallery Generation,"Class deriving from the HTTPServer, defining new properties",,"upload, generate, analyze, gallery","SimplePhotoGalleryHTTPServer, SimplePhotoGalleryHTTPRequestHandler, NetlifyUploader",3,13,False,True,8.5625,270
+upscale-and-upload.py,Image Processing,No docstring,,"upload, generate, convert, upscale",,0,0,False,False,3.0361328125,97
+upscale-images.py,Image Processing,convert_and_upscale_images function.,,"generate, convert, upscale",,0,2,True,False,1.96875,67
+upscale-sips.py,Image Processing,No docstring,,"generate, upscale, gallery",,0,8,False,False,7.119140625,230
+upscale.py,AI Content Generation,Move Improvements Back Script,Anthropic,"transcribe, generate, analyze, merge, upscale",ImprovementMover,1,11,True,False,12.236328125,340
+upscalecreateimages.py,AI Content Generation,Load all .env files from ~/.env.d directory,"OpenAI, Stability","upload, generate, upscale",,0,4,False,True,5.197265625,163
+upscaled.py,Image Processing,Convert an image to JPEG format with specified DPI.,Leonardo,"upload, generate, analyze, convert, upscale",,0,7,False,True,6.494140625,213
+upscaler.py,Image Processing,No docstring,,"generate, analyze, upscale",,0,8,True,False,5.9658203125,172
+upwork.py,Data Merging,extract_job_id_from_url function.,,"download, analyze, merge",,0,1,False,False,8.3701171875,246
+usecols.py,CSV Processing,Tests the usecols functionality during parsing,,analyze,,0,27,False,False,17.80078125,579
+user.py,Data Analysis,load_excel function.,,download,,0,2,False,False,0.80078125,36
+util-json-handler.py,CSV Processing,No docstring,,"download, generate, convert",,0,0,False,False,2.2412109375,72
+utilities-async.py,AI Content Generation,AS A MAN THINKETH By James Allen,"OpenAI, Whisper, AWS","generate, analyze, convert",,0,0,False,False,44.1728515625,152
+utilities-misc.py,Reddit Automation,This function takes a reddit object and returns the post id,Reddit,upload,,0,1,False,False,0.283203125,13
+utilities-upscale-images.py,Image Processing,convert_and_upscale_images function.,,"generate, analyze, convert, upscale",,0,2,True,False,3.3056640625,94
+utils-1.py,General Utility,+----------------------------+--------+,,,,0,11,False,False,4.564453125,183
+utils.py,General Utility,Gets the current date and returns the date as a string.,,generate,,0,11,False,False,3.5078125,122
+utils_simple.py,General Utility,Shared utilities for the multi-agent investment workflow.,,analyze,FileSpanExporter,1,6,False,False,3.556640625,118
+validate-json-reader.py,AI Content Generation,API Key Manager - Interactive Script for Managing Environment Variables,"OpenAI, Anthropic, ElevenLabs, Suno, Leonardo, Stability, AWS, Supabase, Pinecone","generate, analyze, convert","Colors, APIKeyManager",2,16,True,True,27.85546875,747
+validate-settings.py,General Utility,get_check_value function.,,,,0,6,False,False,5.6416015625,176
+vanceai-remove-background.py,General Utility,remove_background function.,,"upload, download, analyze",,0,3,False,False,2.908203125,94
+verbose-transcriber.py,YouTube Automation,format_timestamp function.,"OpenAI, YouTube, Whisper","transcribe, generate, analyze, merge",,0,4,False,True,6.1142578125,144
+verbose.py,File Management,Tests that work on both the Python and C engines but do not have a,,"analyze, organize",,0,2,False,False,2.3623046875,87
+verify-connection.py,AI Tool,Run a simple command (like 'who') to verify an SSH connection.,OpenAI,,,0,2,False,True,1.9521484375,69
+verify.py,AI Tool,Setup Verification Script,"OpenAI, Anthropic",gallery,Colors,1,8,True,True,7.9970703125,258
+verify_and_sort_missing_songs.py,File Management,🔍 VERIFY & SORT MISSING SONGS,Suno,"download, generate, analyze, organize, merge","Colors, MissingSongVerifier",2,13,True,False,16.548828125,404
+video-clip-editor.py,General Utility,No docstring,,generate,Clip,1,0,False,False,0.3876953125,23
+vision.py,AI Content Generation,generate_description function.,OpenAI,generate,,0,1,False,False,1.9072265625,66
+visual.py,General Utility,"Visual Effects - Particles, motion blur, impacts, and other effects for GIFs.",,"generate, convert","Particle, ParticleSystem",2,21,False,False,15.0205078125,555
+voice.py,General Utility,Checks if the response is a ratelimit response.,,"upload, convert",,0,3,False,False,3.0322265625,111
+voices.py,Reddit Automation,Saves Text to MP3 files.,Reddit,generate,,0,1,False,False,1.26171875,36
+webm.py,General Utility,Converts all .webm files in the specified directory to .mp3 format.,,"analyze, convert",,0,1,False,False,1.5595703125,53
+welcome-message.py,Instagram Automation,instabot example,Instagram,analyze,,0,2,True,False,2.3798828125,90
+whisper-transcript.py,AI Content Generation,Split the video into smaller segments.,"OpenAI, Whisper","transcribe, generate, analyze, organize, merge",,0,6,False,True,7.69921875,201
+whisper.py,Instagram Automation,No docstring,"Instagram, YouTube, Whisper","upload, transcribe, generate, analyze, organize, merge, convert",,0,0,False,False,1.67578125,71
+whispertext-combine.py,Instagram Automation,No docstring,"Instagram, YouTube, Whisper","upload, transcribe, generate, organize, merge",,0,0,False,False,2.0400390625,82
+whispertext.py,Instagram Automation,No docstring,"Instagram, YouTube, Whisper","upload, transcribe, generate, organize, merge",,0,0,False,False,2.0458984375,82
+whitelist.py,Instagram Automation,instabot example,Instagram,generate,,0,0,False,False,0.9921875,38
+wiggle.py,Image Processing,"Wiggle Animation - Smooth, organic wobbling and jiggling motions.",,"generate, convert, upscale",,0,2,False,False,10.31640625,313
+word-validate-changes.py,AI Content Generation,Validator for tracked changes in Word documents.,Anthropic,"generate, analyze, convert",RedliningValidator,1,6,False,False,11.029296875,282
+workspace-audit.py,AI Content Generation,Comprehensive Analysis of Claude Directory,Anthropic,"download, generate, analyze, organize, merge",,0,8,True,False,13.5576171875,434
+ygpt-utils-textgenerator.py,AI Content Generation,clean_response function.,OpenAI,generate,,0,2,False,True,1.3564453125,55
+youtube-VIEWBOT.py,YouTube Automation,{Color.CYAN},"YouTube, AWS","download, generate",Color,1,1,False,False,15.7626953125,285
+youtube-adjust-image.py,Image Processing,adjust_image_size function.,,"analyze, organize, convert, upscale",,0,3,True,False,5.794921875,159
+youtube-analyze-files.py,General Utility,env_wizard.py — Interactive .env builder with sections & per-entry save,,"generate, analyze",,0,12,True,False,8.669921875,245
+youtube-analyze-youtube.py,General Utility,No docstring,,analyze,,0,0,False,False,0.599609375,27
+youtube-artname.py,Instagram Automation,Created in 07/CONSTANT_2020,Instagram,generate,,0,1,False,False,0.4296875,23
+youtube-audio-downloadr.py,YouTube Automation,No docstring,YouTube,"download, generate, analyze",,0,10,False,False,6.3994140625,171
+youtube-authentication.py,YouTube Automation,Tests OAuth authentication with YouTube.,YouTube,upload,,0,1,False,False,0.6826171875,26
+youtube-awsqueue.py,General Utility,__init__ function.,AWS,,Awsqueue,1,3,False,False,1.0771484375,38
+youtube-background.py,YouTube Automation,get_start_and_end_times function.,YouTube,download,,0,3,False,False,1.7666015625,56
+youtube-bash-tool.py,General Utility,bash_tool function.,,generate,,0,1,False,False,2.205078125,74
+youtube-bot-1.py,YouTube Automation,fetch function.,YouTube,"download, upscale",,0,4,False,False,5.291015625,190
+youtube-browser.py,YouTube Automation,publish function.,YouTube,"upload, analyze",,0,1,False,False,2.3486328125,79
+youtube-bulk-upload.py,YouTube Automation,No docstring,YouTube,"upload, analyze",,0,4,False,False,1.1279296875,46
+youtube-button.py,YouTube Automation,No docstring,"YouTube, Telegram","upload, download, generate, analyze, convert, upscale, gallery",,0,0,False,False,15.451171875,389
+youtube-client.py,General Utility,No docstring,Leonardo,"upload, generate",,0,0,False,False,1.4208984375,36
+youtube-compile-image.py,CSV Processing,compile_image_info function.,,,,0,1,False,False,1.3505859375,43
+youtube-configure-opik.py,General Utility,configure_opik function.,,,,0,1,False,False,1.064453125,35
+youtube-content-maker.py,AI Content Generation,clean_response function.,OpenAI,generate,,0,2,False,True,1.0849609375,46
+youtube-convert-video.py,Telegram Bot,No docstring,Telegram,"upload, download, generate, analyze, convert, upscale, gallery",,0,0,False,False,5.08984375,136
+youtube-copy-files.py,File Management,copy_files_with_logging function.,,"generate, analyze, organize",,0,1,False,False,2.384765625,62
+youtube-cover.py,General Utility,get_cover_images function.,,"analyze, convert",,0,3,False,False,2.177734375,74
+youtube-create-fade.py,Data Merging,"Fade Animation - Fade in, fade out, and crossfade effects.",,"generate, merge, convert",,0,4,False,False,10.2900390625,335
+youtube-create-flip.py,Image Processing,Flip Animation - 3D-style card flip and rotation effects.,,"generate, convert, upscale",,0,3,False,False,9.7392578125,306
+youtube-create-news-videos.py,Instagram Automation,__init__ function.,Instagram,"generate, analyze",MultiLogger,1,5,False,False,7.8427734375,203
+youtube-create-spin.py,General Utility,Spin Animation - Rotate objects continuously or with variation.,,"generate, convert",,0,2,False,False,9.41015625,282
+youtube-create-thumbnail.py,General Utility,create_thumbnail function.,,generate,,0,3,False,False,1.7861328125,67
+youtube-create-video.py,Image Processing,select_images_based_on_analysis function.,,"generate, analyze, upscale",,0,2,False,False,2.9091796875,106
+youtube-create-zoom.py,General Utility,Zoom Animation - Scale objects dramatically for emphasis.,,"generate, convert",,0,3,False,False,10.5048828125,337
+youtube-createvideo-v1.py,General Utility,add_captions function.,,generate,,0,1,False,False,1.853515625,57
+youtube-cumsum.py,Data Analysis,This is the {method} method.,,,,0,8,False,False,1.4521484375,87
+youtube-dlimage.py,Instagram Automation,DLimage function.,"Instagram, Reddit","upload, download, generate, organize, convert, upscale",,0,1,False,False,2.90625,119
+youtube-download-thumbnail.py,YouTube Automation,download_thumbnail function.,YouTube,download,,0,1,False,False,1.6103515625,54
+youtube-download-video.py,General Utility,This script downloads videos from pexels.com. Uses this to get videos background,,download,,0,1,False,False,0.783203125,30
+youtube-download.py,YouTube Automation,get_authenticated_service function.,YouTube,download,,0,1,False,False,0.9765625,37
+youtube-downloadr-api.py,General Utility,Low-level helpers for the SecureTransport bindings.,,"download, generate",,0,13,False,False,13.6474609375,399
+youtube-downloadupload.py,YouTube Automation,__init__ function.,"YouTube, AWS","upload, download",Downloadupload,1,6,False,False,4.2626953125,129
+youtube-downloadvideos-v1.py,General Utility,1. Download daily trending TikTok clips,,download,,0,1,False,False,0.8525390625,32
+youtube-evil.py,General Utility,Module with bad __all__,,,,0,2,False,False,0.25,23
+youtube-generate-content.py,AI Content Generation,generate_content function.,"OpenAI, Stability","generate, analyze",,0,1,False,True,2.7802734375,105
+youtube-generate-trivia.py,CSV Processing,generate_trivia_quiz function.,,generate,,0,1,False,False,1.3330078125,47
+youtube-generate.py,Reddit Automation,generate function.,Reddit,"upload, generate, analyze, upscale, gallery",,0,1,False,False,4.12890625,146
+youtube-generateAudio.py,CSV Processing,No docstring,,"download, generate",,0,2,True,False,2.1328125,72
+youtube-generater.py,General Utility,create_endpoint function.,AWS,generate,,0,1,False,False,1.6005859375,48
+youtube-get-creation.py,Gallery Generation,No docstring,,"generate, gallery",,0,9,False,False,7.5205078125,243
+youtube-glut-display.py,General Utility,GLUT Input hook for interactive use with prompt_toolkit,,"generate, analyze",,0,5,False,False,4.982421875,158
+youtube-help.py,Instagram Automation,help_msg function.,"Instagram, Telegram",,,0,1,False,False,2.810546875,89
+youtube-inputhook.py,General Utility,Wrapper around the eventloop that gives some time to the Tkinter GUI to process,,"generate, analyze",,0,4,False,False,3.59765625,95
+youtube-instareport-instareport-youtube.py,Instagram Automation,help_msg function.,"Instagram, Telegram",,,0,1,False,False,2.8095703125,89
+youtube-instareport-libs-proxy.py,YouTube Automation,find_proxies function.,"YouTube, Telegram","download, generate, convert",,0,1,False,False,6.6064453125,163
+youtube-isin.py,Data Analysis,test_isin_nan function.,,,,0,7,False,False,3.6416015625,117
+youtube-keys.py,File Management,__init__ function.,,organize,Trie,1,7,False,False,1.966796875,81
+youtube-load-ipython.py,General Utility,Useless IPython extension to test installing and loading extensions.,,,,0,2,False,False,0.353515625,18
+youtube-load.py,AI Content Generation,Load all .env files from ~/.env.d directory,OpenAI,"generate, analyze, upscale",,0,4,False,True,3.29296875,114
+youtube-main.py,YouTube Automation,{Color.CYAN},"YouTube, AWS","download, generate",Color,1,1,False,False,15.78125,288
+youtube-management-upload-youtube.py,General Utility,No docstring,,upload,,0,0,False,False,0.0498046875,4
+youtube-media-processing-audio.py,YouTube Automation,No docstring,YouTube,"download, generate, analyze",,0,0,False,False,0.8662109375,34
+youtube-media-processing-video-2025-vid.py,CSV Processing,No docstring,,"generate, analyze",,0,9,False,False,7.0361328125,225
+youtube-media-processing-video-extract_simple.py,AI Content Generation,ULTIMATE Media Analysis Pipeline - Multi-API Edition,"OpenAI, Anthropic, Whisper","upload, download, transcribe, generate, analyze, organize","LargeFileHandler, UltimateMediaAnalyzer",2,27,True,True,24.66015625,660
+youtube-media-processing-video-render_simple.py,Image Processing,Returns a blurred (radius=2 pixels) version of the image,,"analyze, organize, merge, upscale",,0,2,False,False,1.5,56
+youtube-models.py,General Utility,No docstring,AWS,"upload, download","TrackInfo, Payload, UploadResult, DownloadResult",4,7,False,False,1.6708984375,66
+youtube-motion-upload.py,General Utility,No docstring,Leonardo,"upload, generate",,0,0,False,False,1.7587890625,65
+youtube-newupload-v1.py,YouTube Automation,Authenticates and returns the YouTube Data API service.,YouTube,upload,,0,2,False,False,2.92578125,100
+youtube-notify.py,General Utility,__init__ function.,,upload,Iftttnotify,1,2,False,False,1.03125,40
+youtube-openai-ygpt-utils-videogenerator.py,Image Processing,No docstring,,"generate, upscale",VideoGenerator,1,9,False,False,3.306640625,105
+youtube-pexels_video_downloader.py,Gallery Generation,No docstring,,"download, generate, gallery",,0,7,False,False,7.2724609375,229
+youtube-playlist-simple.py,YouTube Automation,No docstring,YouTube,generate,,0,0,False,False,1.02734375,38
+youtube-print-logo.py,General Utility,[[black-bright-background]][[yellow]] ██▓ [[yellow]]███▄    █  [[yellow]] ██████ [[yellow]]▄▄▄█████▓ [[yellow]]▄▄▄         [[yellow]] ██▀███  [[yellow,,,,0,1,False,False,2.5068359375,31
+youtube-process-video.py,General Utility,Extracts text from the given video file using OCR and saves the text to an output file.,,analyze,,0,2,False,False,2.3359375,68
+youtube-python_repo_inspector.py,YouTube Automation,"<article style=""border:1px solid #ddd;border-radius:12px;padding:12px;margin:10px 0;"">","OpenAI, Anthropic, YouTube, Whisper, AWS","upload, transcribe, analyze, organize, convert, gallery",,0,3,False,False,4.9794921875,156
+youtube-read.py,Data Analysis,Valid extensions for reading Excel files with xlrd.,,,,0,5,False,False,2.1435546875,85
+youtube-reddit-download.py,Reddit Automation,No docstring,Reddit,"upload, download",,0,0,False,False,0.7099609375,22
+youtube-reddit-video-maker.py,Reddit Automation,main function.,Reddit,,,0,1,True,False,0.638671875,35
+youtube-remove.py,General Utility,remove_old_files function.,,"download, generate",,0,2,True,False,2.4521484375,102
+youtube-request.py,General Utility,request function.,,,,0,5,False,False,1.2919921875,52
+youtube-rotate-image.py,Image Processing,Rotates an image according to it's Orientation EXIF Tag,,"generate, analyze, convert, upscale, gallery",,0,12,False,False,8.1201171875,265
+youtube-sanitize-title.py,CSV Processing,sanitize_title function.,,"download, analyze",,0,1,False,False,1.8583984375,61
+youtube-scrape-youtube-channel.py,YouTube Automation,No docstring,YouTube,"download, analyze",,0,0,False,False,1.6025390625,57
+youtube-scraping-download.py,Gallery Generation,get_soup function.,,"download, analyze, gallery",,0,2,False,False,2.7236328125,99
+youtube-social-platforms-youtube-yt-simple.py,Data Analysis,Patched ``BZ2File`` and ``LZMAFile`` to handle pickle protocol 5.,,convert,"BZ2File, LZMAFile",2,3,False,False,1.927734375,77
+youtube-social-platforms-youtube.py,YouTube Automation,No docstring,YouTube,,,0,0,False,False,0.4697265625,11
+youtube-sphinx-source-youtube.py,Gallery Generation,No docstring,,gallery,,0,0,False,False,0.9619140625,40
+youtube-title-case.py,AI Content Generation,Skill Initializer - Creates a new skill from template,Anthropic,"generate, analyze, organize, merge, convert, gallery",,0,3,True,False,10.74609375,309
+youtube-tool.py,General Utility,__init__ function.,,"generate, analyze",App,1,1,False,False,1.4326171875,58
+youtube-trivial.py,General Utility,Some simple tests for the plugin while running scripts.,,,,0,4,False,False,0.703125,44
+youtube-types.py,YouTube Automation,No docstring,YouTube,,"Type, Platform, Format, Quality",4,0,False,False,0.486328125,34
+youtube-upload-file.py,AI Content Generation,No docstring,OpenAI,"upload, generate, analyze",,0,5,False,True,6.9990234375,124
+youtube-upload-video.py,YouTube Automation,🎬 AI Video Studio,"OpenAI, YouTube, Telegram, ElevenLabs, Stability","upload, download, transcribe, generate, analyze",VideoStudio,1,9,True,True,19.955078125,606
+youtube-upload.py,General Utility,_wait_for_processing function.,,"upload, generate, analyze, convert",,0,7,False,False,7.8740234375,238
+youtube-upload_api.py,YouTube Automation,initialize_upload function.,YouTube,"upload, generate",,0,3,False,False,4.802734375,147
+youtube-uploader.py,Image Processing,create_thumbnails function.,,"upload, generate, upscale",,0,2,False,False,1.5986328125,59
+youtube-video-downloadr-api.py,YouTube Automation,Authenticates and returns the YouTube Data API service.,YouTube,"upload, download",,0,2,False,False,2.9072265625,99
+youtube-video-downloadr-csv-batch.py,YouTube Automation,Load all .env files from ~/.env.d directory,"YouTube, ElevenLabs","upload, download",,0,2,False,True,2.6630859375,86
+youtube-video-downloadr.py,YouTube Automation,Authenticates and returns the YouTube Data API service.,YouTube,"upload, download",,0,2,False,False,3.236328125,97
+youtube-videoedit.py,Data Merging,__init__ function.,,"upload, generate, merge",VideoEditor,1,3,False,False,2.5068359375,77
+youtube-videos.py,Reddit Automation,Checks if the chosen post has already been generated,Reddit,"upload, generate",,0,2,False,False,2.1298828125,64
+youtube-web-scraping-download-main.py.py,YouTube Automation,No docstring,YouTube,"download, generate, analyze, organize, gallery",,0,3,False,False,6.9345703125,223
+youtube-yplaylist.py,YouTube Automation,No docstring,YouTube,,,0,0,False,False,1.0009765625,38
+youtube-ytcsv.py,YouTube Automation,No docstring,YouTube,"download, generate",,0,0,False,False,0.875,34
+youtube-ytdownloadthumb.py,YouTube Automation,Load all .env files from ~/.env.d directory,"YouTube, ElevenLabs","upload, download",,0,2,False,True,2.6494140625,84
+youtube-ytube-simple.py,YouTube Automation,No docstring,YouTube,upload,,0,0,False,True,2.52734375,82
+youtube-ytube.py,YouTube Automation,No docstring,YouTube,upload,,0,0,False,True,2.52734375,82
+youtube-ytubedlthumbs.py,YouTube Automation,Load all .env files from ~/.env.d directory,"YouTube, ElevenLabs","upload, download",,0,2,False,True,2.6865234375,86
+ytdl-audiodownload.py,YouTube Automation,__init__ function.,YouTube,"upload, download, generate, analyze, convert",AudioDownload,1,3,False,False,2.2216796875,73
+ytdl-audiometadata.py,Image Processing,__init__ function.,,"upload, upscale",AudioMetadata,1,5,False,False,2.8828125,89
+ytdl-listen.py,General Utility,No docstring,,,,0,4,False,False,2.2060546875,85
+ytdlconfiguration.py,YouTube Automation,__init__ function.,YouTube,"upload, download, analyze",Ytdlconfiguration,1,3,False,False,3.3798828125,89

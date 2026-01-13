@@ -1,0 +1,916 @@
+{
+  "timestamp": "2026-01-12T20:48:39.500870",
+  "total_groups": 50,
+  "comparisons": [
+    {
+      "hash": "59e8ba90b3b51e723bd67d36c6e2b301",
+      "signature": "configure_story(self, upload_id, photo)",
+      "similarity": 1.0,
+      "num_occurrences": 3,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/download_file_from_file-organizer.py",
+          "line": 72,
+          "source_length": 833
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/script-simple.py",
+          "line": 79,
+          "source_length": 833
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/download-simple.py",
+          "line": 78,
+          "source_length": 833
+        }
+      ]
+    },
+    {
+      "hash": "6df42244df48094b40e2966ef0f213be",
+      "signature": "extract_functions_and_classes(content)",
+      "similarity": 1.0,
+      "num_occurrences": 3,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/pyorganize.py",
+          "line": 15,
+          "source_length": 449
+        },
+        {
+          "file": "/Users/steven/pythons/pyorganizerr.py",
+          "line": 13,
+          "source_length": 449
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/extract-python-structure.py",
+          "line": 21,
+          "source_length": 449
+        }
+      ]
+    },
+    {
+      "hash": "03762c4d5d45eb1053642a7c5884643c",
+      "signature": "get_script_description(content)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/pyorganize.py",
+          "line": 28,
+          "source_length": 633
+        },
+        {
+          "file": "/Users/steven/pythons/pyorganizerr.py",
+          "line": 26,
+          "source_length": 633
+        }
+      ]
+    },
+    {
+      "hash": "0ebb5b531aed416a05ef3eb566dc65f9",
+      "signature": "categorize_scripts(directory)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/pyorganize.py",
+          "line": 48,
+          "source_length": 635
+        },
+        {
+          "file": "/Users/steven/pythons/pyorganizerr.py",
+          "line": 46,
+          "source_length": 635
+        }
+      ]
+    },
+    {
+      "hash": "66877b618957fc4b76c1ae8ac7b773bc",
+      "signature": "follow_users_from_hashtag_file()",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/hash_subtitle_from_file-organizer.py",
+          "line": 67,
+          "source_length": 114
+        },
+        {
+          "file": "/Users/steven/pythons/tools/AUTOMATION_BOTS/ultimate.py",
+          "line": 71,
+          "source_length": 114
+        }
+      ]
+    },
+    {
+      "hash": "c77a8f35164dac16ba04f966860f79d3",
+      "signature": "comment_hashtag()",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/hash_subtitle_from_file-organizer.py",
+          "line": 71,
+          "source_length": 158
+        },
+        {
+          "file": "/Users/steven/pythons/tools/AUTOMATION_BOTS/ultimate.py",
+          "line": 75,
+          "source_length": 158
+        }
+      ]
+    },
+    {
+      "hash": "b445212ef942041caef6a0a9f6240d35",
+      "signature": "upload_pictures()",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/hash_subtitle_from_file-organizer.py",
+          "line": 77,
+          "source_length": 1398
+        },
+        {
+          "file": "/Users/steven/pythons/tools/AUTOMATION_BOTS/ultimate.py",
+          "line": 81,
+          "source_length": 1398
+        }
+      ]
+    },
+    {
+      "hash": "434dfb412f85dbfc9fed0cd5020e4683",
+      "signature": "normalize_name(name)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/organize_music_library_merged.py",
+          "line": 19,
+          "source_length": 94
+        },
+        {
+          "file": "/Users/steven/pythons/organize_music_library 2.py",
+          "line": 7,
+          "source_length": 94
+        }
+      ]
+    },
+    {
+      "hash": "c5ed3649d4a147d0d627ceb9da178819",
+      "signature": "move_file(src, dest)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/organize_music_library_merged.py",
+          "line": 22,
+          "source_length": 248
+        },
+        {
+          "file": "/Users/steven/pythons/organize_music_library 2.py",
+          "line": 10,
+          "source_length": 248
+        }
+      ]
+    },
+    {
+      "hash": "79484a43d952b0bf66fb8e1e4ae20f24",
+      "signature": "organize_music_library()",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/organize_music_library_merged.py",
+          "line": 30,
+          "source_length": 1126
+        },
+        {
+          "file": "/Users/steven/pythons/organize_music_library 2.py",
+          "line": 18,
+          "source_length": 1126
+        }
+      ]
+    },
+    {
+      "hash": "3c4c8a534f85eb41b0bdc79c3a3cec19",
+      "signature": "download_image(url, path)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/download_json_from_file-organizer.py",
+          "line": 30,
+          "source_length": 567
+        },
+        {
+          "file": "/Users/steven/pythons/process_leonardo_from_file-organizer.py",
+          "line": 28,
+          "source_length": 567
+        }
+      ]
+    },
+    {
+      "hash": "111a9932c4697244ebbcd9736acf487f",
+      "signature": "save_metadata_to_file(metadata, index)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/download_json_from_file-organizer.py",
+          "line": 46,
+          "source_length": 343
+        },
+        {
+          "file": "/Users/steven/pythons/process_leonardo_from_file-organizer.py",
+          "line": 44,
+          "source_length": 343
+        }
+      ]
+    },
+    {
+      "hash": "eb5b887f471a712319fb58828725fb1e",
+      "signature": "lxml_trace(data, html)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 80,
+          "source_length": 817
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 81,
+          "source_length": 817
+        }
+      ]
+    },
+    {
+      "hash": "b7cb55c6a32995d3a82ea2adeea59dca",
+      "signature": "AnnouncingParser._p(self, s)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 110,
+          "source_length": 114
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 111,
+          "source_length": 114
+        }
+      ]
+    },
+    {
+      "hash": "8df2eb034f023d4645e2301a7b904eb6",
+      "signature": "AnnouncingParser.handle_starttag(self, name, attrs)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 117,
+          "source_length": 118
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 118,
+          "source_length": 118
+        }
+      ]
+    },
+    {
+      "hash": "7ca50a5debc9249397a285b54c918cfb",
+      "signature": "AnnouncingParser.handle_endtag(self, name)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 121,
+          "source_length": 146
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 122,
+          "source_length": 146
+        }
+      ]
+    },
+    {
+      "hash": "11654c55f2f9fee8140b597ed0a31733",
+      "signature": "AnnouncingParser.handle_data(self, data)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 128,
+          "source_length": 109
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 129,
+          "source_length": 109
+        }
+      ]
+    },
+    {
+      "hash": "d787b419dcb4ba9c06dd5f3e89a81e28",
+      "signature": "AnnouncingParser.handle_charref(self, name)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 132,
+          "source_length": 151
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 133,
+          "source_length": 151
+        }
+      ]
+    },
+    {
+      "hash": "a78db2b157c9bbc6f2fb45ca39e7b1d1",
+      "signature": "AnnouncingParser.handle_entityref(self, name)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 139,
+          "source_length": 115
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 140,
+          "source_length": 115
+        }
+      ]
+    },
+    {
+      "hash": "e58f854e13effc5d5f836ffcbf60de32",
+      "signature": "AnnouncingParser.handle_comment(self, data)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 143,
+          "source_length": 109
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 144,
+          "source_length": 109
+        }
+      ]
+    },
+    {
+      "hash": "07e0115985148cf0952e03e67ccc4b6b",
+      "signature": "AnnouncingParser.handle_decl(self, data)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 148,
+          "source_length": 68
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 149,
+          "source_length": 68
+        }
+      ]
+    },
+    {
+      "hash": "d01122b6e5af9e79aee7e86de74e6ed3",
+      "signature": "AnnouncingParser.unknown_decl(self, data)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 151,
+          "source_length": 77
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 152,
+          "source_length": 77
+        }
+      ]
+    },
+    {
+      "hash": "2965578be5d23d4c9e8a0b991b451b79",
+      "signature": "AnnouncingParser.handle_pi(self, data)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 154,
+          "source_length": 65
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 155,
+          "source_length": 65
+        }
+      ]
+    },
+    {
+      "hash": "36b3ff7ec40d60d6f3790bdf7b59b8ab",
+      "signature": "htmlparser_trace(data)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 158,
+          "source_length": 289
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 159,
+          "source_length": 289
+        }
+      ]
+    },
+    {
+      "hash": "4214e6abcf93c2d9fa9fc7cbc8f66470",
+      "signature": "profile(num_elements, parser)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/diagnose.py",
+          "line": 245,
+          "source_length": 566
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/diagnose.py",
+          "line": 246,
+          "source_length": 566
+        }
+      ]
+    },
+    {
+      "hash": "7599111d0e0d65b036190b55f4b8b9b7",
+      "signature": "DocsReorganizer.generate_appendices(self)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/docs-reorganizer.py",
+          "line": 329,
+          "source_length": 96
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/docs-reorganizer.py",
+          "line": 254,
+          "source_length": 96
+        }
+      ]
+    },
+    {
+      "hash": "a7191a5943d79d744908f3ee9c1a5473",
+      "signature": "SimpleDocsGenerator.create_css(self)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/html-docs-generator.py",
+          "line": 57,
+          "source_length": 134
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/html-docs-generator.py",
+          "line": 62,
+          "source_length": 134
+        }
+      ]
+    },
+    {
+      "hash": "4205477919e00b554012f86dab313845",
+      "signature": "SimpleDocsGenerator.create_javascript(self)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/html-docs-generator.py",
+          "line": 336,
+          "source_length": 158
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/html-docs-generator.py",
+          "line": 341,
+          "source_length": 158
+        }
+      ]
+    },
+    {
+      "hash": "fdf69cafeab3122e1455d170b16f75e3",
+      "signature": "SimpleDocsGenerator.create_index_html(self, script_data)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/html-docs-generator.py",
+          "line": 444,
+          "source_length": 190
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/html-docs-generator.py",
+          "line": 449,
+          "source_length": 190
+        }
+      ]
+    },
+    {
+      "hash": "f328e095a12e03b73efd51e5230c6385",
+      "signature": "SimpleDocsGenerator.create_category_pages(self, script_data)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/html-docs-generator.py",
+          "line": 671,
+          "source_length": 3812
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/html-docs-generator.py",
+          "line": 675,
+          "source_length": 3812
+        }
+      ]
+    },
+    {
+      "hash": "cf13e1910beefff0d29cd8a8550480b8",
+      "signature": "SimpleDocsGenerator.create_tutorial_pages(self)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/html-docs-generator.py",
+          "line": 862,
+          "source_length": 298
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/html-docs-generator.py",
+          "line": 866,
+          "source_length": 298
+        }
+      ]
+    },
+    {
+      "hash": "7901b81c358db475760ab392bfe76421",
+      "signature": "SimpleDocsGenerator.create_readme(self)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/html-docs-generator.py",
+          "line": 1009,
+          "source_length": 188
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/html-docs-generator.py",
+          "line": 1013,
+          "source_length": 188
+        }
+      ]
+    },
+    {
+      "hash": "af4a1231797912b9c7f92c9f2230a9ef",
+      "signature": "SimpleDocsGenerator.generate_documentation(self)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/html-docs-generator.py",
+          "line": 1094,
+          "source_length": 1150
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/html-docs-generator.py",
+          "line": 1098,
+          "source_length": 1150
+        }
+      ]
+    },
+    {
+      "hash": "ddf2eb359b0df0b58c98e2c6b97a1977",
+      "signature": "main()",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/documentation/html-docs-generator.py",
+          "line": 1129,
+          "source_length": 116
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/html-docs-generator.py",
+          "line": 1133,
+          "source_length": 116
+        }
+      ]
+    },
+    {
+      "hash": "8ae90b35408d1ac4d8e85d5f90f650dc",
+      "signature": "extract_docstring(content)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/instagram-bulk-renamer.py",
+          "line": 45,
+          "source_length": 193
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/instagram-bulk-renamer.py",
+          "line": 47,
+          "source_length": 193
+        }
+      ]
+    },
+    {
+      "hash": "9ddf2048acd6be0be783bf663a2df0b5",
+      "signature": "AggressiveRenamer._generate_content_based_name(self, content, original_name)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/instagram-aggressive-renamer.py",
+          "line": 171,
+          "source_length": 1546
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/instagram-aggressive-renamer.py",
+          "line": 173,
+          "source_length": 1546
+        }
+      ]
+    },
+    {
+      "hash": "b5ef4394915f73f72022d8adb95ec1b7",
+      "signature": "AggressiveRenamer.create_csv_backup(self, output_file)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/instagram-aggressive-renamer.py",
+          "line": 269,
+          "source_length": 727
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/instagram-aggressive-renamer.py",
+          "line": 273,
+          "source_length": 727
+        }
+      ]
+    },
+    {
+      "hash": "658b251a76df9ca6ae853ca8e5f44c96",
+      "signature": "AggressiveRenamer.generate_execution_script(self, renaming_plan, output_file)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/instagram-aggressive-renamer.py",
+          "line": 291,
+          "source_length": 234
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/instagram-aggressive-renamer.py",
+          "line": 295,
+          "source_length": 234
+        }
+      ]
+    },
+    {
+      "hash": "1ab9a353aab958e672c6047079ef9eaf",
+      "signature": "DirectoryOrganizer.__init__(self, target_dir)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/instagram-directory-organizer.py",
+          "line": 12,
+          "source_length": 2166
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/instagram-directory-organizer.py",
+          "line": 16,
+          "source_length": 2166
+        }
+      ]
+    },
+    {
+      "hash": "19dc75bbd8931f78dd08b383d4a7f40e",
+      "signature": "DirectoryOrganizer.categorize_folder(self, folder_name)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/instagram-directory-organizer.py",
+          "line": 100,
+          "source_length": 1973
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/instagram-directory-organizer.py",
+          "line": 104,
+          "source_length": 1973
+        }
+      ]
+    },
+    {
+      "hash": "9112c33db748c445b238bbe953491e21",
+      "signature": "DirectoryOrganizer.get_clean_name(self, folder_name)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/instagram-directory-organizer.py",
+          "line": 159,
+          "source_length": 415
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/instagram-directory-organizer.py",
+          "line": 163,
+          "source_length": 415
+        }
+      ]
+    },
+    {
+      "hash": "12ac6824dd90a707d83f62f70d38f909",
+      "signature": "DirectoryOrganizer.generate_report(self, plan, stats, dry_run)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/instagram-directory-organizer.py",
+          "line": 304,
+          "source_length": 1315
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/instagram-directory-organizer.py",
+          "line": 308,
+          "source_length": 1315
+        }
+      ]
+    },
+    {
+      "hash": "6a29ef76e247acc26be74f8a68c57fb8",
+      "signature": "analyze_current_structure()",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/analyze-file-migration.py",
+          "line": 7,
+          "source_length": 2560
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/plan-file-migration.py",
+          "line": 11,
+          "source_length": 2560
+        }
+      ]
+    },
+    {
+      "hash": "7c8d56382edbf20712a81c15a9112fed",
+      "signature": "show_benefits()",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/analyze-file-migration.py",
+          "line": 149,
+          "source_length": 635
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/plan-file-migration.py",
+          "line": 153,
+          "source_length": 635
+        }
+      ]
+    },
+    {
+      "hash": "16c1b672d05eb0dfb861979935f64b03",
+      "signature": "SimplePythonRenamer.is_badly_named(self, filename)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/python-script-renamer.py",
+          "line": 84,
+          "source_length": 264
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/python-script-renamer.py",
+          "line": 87,
+          "source_length": 264
+        }
+      ]
+    },
+    {
+      "hash": "4555f07961408bee0c0f9d8f64e74927",
+      "signature": "SimplePythonRenamer.analyze_file_content(self, filepath)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/python-script-renamer.py",
+          "line": 91,
+          "source_length": 2231
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/python-script-renamer.py",
+          "line": 94,
+          "source_length": 2231
+        }
+      ]
+    },
+    {
+      "hash": "16d5d7c911ba09cc4c4e7ed53c86f68b",
+      "signature": "SimplePythonRenamer._detect_file_operations(self, content)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/python-script-renamer.py",
+          "line": 150,
+          "source_length": 763
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/python-script-renamer.py",
+          "line": 153,
+          "source_length": 763
+        }
+      ]
+    },
+    {
+      "hash": "046f73abfbf4e4774f531b6a00ac1e45",
+      "signature": "SimplePythonRenamer._detect_api_services(self, content)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/python-script-renamer.py",
+          "line": 170,
+          "source_length": 783
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/python-script-renamer.py",
+          "line": 173,
+          "source_length": 783
+        }
+      ]
+    },
+    {
+      "hash": "11797d352db772d92dafdfe450e24501",
+      "signature": "SimplePythonRenamer.suggest_simple_name(self, filepath, analysis)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/python-script-renamer.py",
+          "line": 190,
+          "source_length": 1864
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/python-script-renamer.py",
+          "line": 193,
+          "source_length": 1864
+        }
+      ]
+    },
+    {
+      "hash": "abde01c433cb03e1dac764bc6c3b14f2",
+      "signature": "SimplePythonRenamer._extract_action(self, analysis)",
+      "similarity": 1.0,
+      "num_occurrences": 2,
+      "files": [
+        {
+          "file": "/Users/steven/pythons/file_organization/python-script-renamer.py",
+          "line": 249,
+          "source_length": 916
+        },
+        {
+          "file": "/Users/steven/pythons/vibrant-chaplygin/pyt/python-script-renamer.py",
+          "line": 252,
+          "source_length": 916
+        }
+      ]
+    }
+  ]
+}

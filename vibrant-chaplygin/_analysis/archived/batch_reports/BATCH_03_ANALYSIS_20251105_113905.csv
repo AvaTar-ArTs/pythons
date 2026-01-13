@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+check.py,[Anthropic Claude],,KEEP,
+check_file.py,[No docstring found],check-file.py,RENAME,Fix underscore to hyphen
+checkpoint.py,Instabot Checkpoint methods.,instagram-checkpoint.py,RENAME,Add Instagram prefix
+classify.py,[OpenAI integration],,KEEP,
+claude-anthropic-download.py,Enhanced Content-Aware Chat Analysis Organizer v2.0,,KEEP,
+claude-chief.py,🤖 Personal AI Chief of Staff,,KEEP,
+claude-code-review-system.py,💻 Intelligent Code Review & Documentation System,,KEEP,
+claude-deep.py,Deep Code Analysis - Advanced Content-Aware System,,KEEP,
+claude.py,Web search server tool for the agent framework.,,KEEP,
+clean_flatten_names.py,Clean and Fix Flattened Filenames,clean-flatten-names.py,RENAME,Fix underscore to hyphen
+clean_folder_names_no_vols.py,📂 CLEAN FOLDER NAMES - Remove Vol Numbers,clean-folder-names-no-vols.py,RENAME,Fix underscore to hyphen
+cleanup-messy-names.py,🔧 Fix Timestamped Files - Clean Up Messy Filenames,,DELETE,One-time script or backup
+cli-config-manager.py,AI CLI Configuration Manager,,KEEP,
+cli.py,Simple Claude CLI for terminal usage,,KEEP,
+client-v1.py,[No docstring found],,KEEP,Already well-named
+clipEditor.py,[No docstring found],clip-editor.py,RENAME,Fix CamelCase
+clips-1.py,[No docstring found],,KEEP,
+cloud-services-aws-streamlit.py,"Entrypoint for streamlit, see https://docs.streamlit.io/",,KEEP,
+cloud-services-delete.py,[No docstring found],,KEEP,
+cloud-services-sagemaker.py,[No docstring found],,KEEP,
+code-apply-improvements.py,Codebase Improvement Implementer,,KEEP,
+codebase.py,AvaTarArTs Suite - Codebase Analyzer,,KEEP,
+collect-stats.py,instabot example,instagram-collect-stats.py,RENAME,Add Instagram prefix
+combiner.py,[Instagram automation],instagram-combiner.py,RENAME,Add Instagram prefix
+comic-strip-generator.py,[No docstring found],,KEEP,
+compare-content.py,Descriptor data structure.,,KEEP,
+compare-files.py,[No docstring found],,KEEP,
+compare_versions.py,Version Comparison Tool,compare-versions.py,RENAME,Fix underscore to hyphen
+compile.py,[No docstring found],,KEEP,
+comprehensive_dedup_rename.py,Comprehensive Deduplication & Rename,comprehensive-dedup-rename.py,RENAME,Fix underscore to hyphen
+comprehensive_folder_consolidation.py,🎵 COMPREHENSIVE FOLDER CONSOLIDATION,comprehensive-folder-consolidation.py,RENAME,Fix underscore to hyphen
+comprehensive_music_content_scan.py,🎵 COMPREHENSIVE MUSIC CONTENT SCANNER,comprehensive-music-content-scan.py,RENAME,Fix underscore to hyphen
+comprehensive_transcript_search.py,🔍 COMPREHENSIVE TRANSCRIPT & LYRICS SEARCH,comprehensive-transcript-search.py,RENAME,Fix underscore to hyphen
+comprehensive_verifier.py,Comprehensive Structure Verifier,comprehensive-verifier.py,RENAME,Fix underscore to hyphen
+computer.py,[Anthropic Claude],,KEEP,
+confcli.py,[No docstring found],,KEEP,
+config.py,[No docstring found],,LIBRARY,Library/framework code - config.py
+config.py.py,[YouTube automation],,LIBRARY,Library/framework code - config.py
+consolidate-python-ecosystem.py,[No docstring found],,KEEP,
+consolidate_versions.py,Script Version Consolidator,consolidate-versions.py,RENAME,Fix underscore to hyphen
+consolidation.py,Final File Consolidation Script,,KEEP,
+constants.py,[YouTube automation],,LIBRARY,Library/framework code - constants.py
+contacts.py,[No docstring found],,KEEP,
+content-aware-analyzer.py,Detailed Comparison Report Generator,,KEEP,
+content-aware.py,Content-Aware File Deduplication and Organization System,,KEEP,
+content-creation-leonardo.py,[Leonardo AI],leonardo-content-creation-leonardo.py,RENAME,Add Leonardo prefix
+content-creation-nocturne.py,[No docstring found],,KEEP,
+content-creation-suno.py,Scrape Suno-like grid HTML into CSV.,suno-content-creation-suno.py,RENAME,Add Suno prefix
+content-factory.py,🎨 AI Content Factory,leonardo-content-factory.py,RENAME,Add Leonardo prefix
+content_aware_organizer.py,[Instagram automation],content-aware-organizer.py,RENAME,Fix underscore to hyphen

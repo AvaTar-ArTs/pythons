@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+defaults.py,[No docstring found],,KEEP,
+delete-endpoint.py,[No docstring found],,KEEP,
+delete-posts.py,instabot example,instagram-delete-posts.py,RENAME,Add Instagram prefix
+delete.py,[No docstring found],,KEEP,
+denoiser.py,Denoise an image with the FFDNet denoising method,,KEEP,
+deploy-sagemaker.py,"In Amazon SageMaker and other AWS services, Application Auto Scaling allows you to automatically scale resources in and out based on configurable poli",,KEEP,
+development-apps-input.py,[No docstring found],,KEEP,
+development-frameworks-python.py,Enhanced Python Directory Metadata Analyzer,,KEEP,
+development-gui-apps-hooks.py,Hooks for IPython.,,KEEP,
+development-process-proc.py,[No docstring found],,KEEP,
+development-utils-jsonutil.py,Utilities to manipulate JSON objects.,,KEEP,
+devops.py,Context-Efficient DevOps Engineer Agent,,KEEP,
+diagnose.py,"Diagnostic functions, mainly for use when doing tech support.",,KEEP,
+direct.py,[No docstring found],,KEEP,
+directory-organizer.py,Directory Organizer - Intelligently organize all folders,instagram-directory-organizer.py,RENAME,Add Instagram prefix
+discography-grid-html.py,[No docstring found],,KEEP,
+discography-html.py,[No docstring found],,KEEP,
+discography.py,AlchemyAPI Discography Merger,suno-discography.py,RENAME,Add Suno prefix
+displayhook.py,[No docstring found],,LIBRARY,Library/framework code - displayhook.py
+documents.py,Script to create a CSV backup of ~/documents directory in the same format as ~/clean,,KEEP,
+domination-engine.py,🚀 SEO Domination Engine,,KEEP,
+downloads-index-builder.py,Steven's Downloads Archive - Index Generator,,KEEP,
+downloads-organizer-dedup.py,Downloads Directory Organizer & Consolidator,,KEEP,
+drive-compare.py,Compare CSV analysis results from both drives,,KEEP,
+dualdomainstrategy-v1.py,Dual-Domain Strategy Implementation System,,KEEP,Already well-named
+duplicate-cleaner.py,Duplicate Cleaner - Remove duplicate files and consolidate naming,,KEEP,
+ecosystem-insights.py,Python Ecosystem Insights,instagram-ecosystem-insights.py,RENAME,Add Instagram prefix
+ecosystem-master.py,Python Ecosystem Master Mapper,instagram-ecosystem-master.py,RENAME,Add Instagram prefix
+edit.py,[Anthropic Claude],,KEEP,
+editorhooks.py,'editor' hooks for common editors that work well with ipython,,KEEP,
+elevenlabs.py,[No docstring found],,KEEP,
+eliminate.py,Eliminate Archive Directories,instagram-eliminate.py,RENAME,Add Instagram prefix
+emoji-morph-animation.py,Morph Animation - Transform between different emojis or shapes.,,KEEP,
+emotional.py,AlchemyAPI Emotional Quiz Generator,,KEEP,
+encoding.py,Tests encoding functionality during parsing,,LIBRARY,Library/framework code - encoding.py
+etree.py,[No docstring found],,KEEP,
+etsy-image-metadata.py,[OpenAI integration],,KEEP,
+etsy-printify-download-csv.py,[No docstring found],,KEEP,
+etsy-product-images.py,[No docstring found],,KEEP,
+etsy-sort.py,[No docstring found],,KEEP,
+evaluate.py,[OpenAI integration],,KEEP,
+evaluation.py,MCP Server Evaluation Harness,,KEEP,
+events.py,Infrastructure for registering and firing callbacks on application events.,,LIBRARY,Library/framework code - events.py
+excolors.py,Color schemes for exception handling code in IPython.,,KEEP,
+execute-deduplication.py,Execute Comprehensive Deduplication & Rename,,KEEP,
+execute-excel-organization.py,Execute Excel Organization - Non-interactive version,,KEEP,
+execute-organization-plan.py,Execute Smart Organization Plan,,KEEP,
+execute_archive_cleanup_merge.py,🧹 EXECUTE ARCHIVE CLEANUP & MERGE,,DELETE,One-time script or backup
+export-ai-conversations.py,Universal Conversation Exporter,,KEEP,
+export-analysis-to-csv.py,[No docstring found],,KEEP,

@@ -1,0 +1,11 @@
+moviepy==1.0.3
+numpy==1.26.4
+openai==1.14.3
+pandas==2.2.1
+pinecone-client
+python-dotenv==1.0.1
+python-slugify==8.0.4
+pytube==15.0.0
+streamlit==1.32.2
+streamlit_chat==0.1.1
+whisper==1.1.10

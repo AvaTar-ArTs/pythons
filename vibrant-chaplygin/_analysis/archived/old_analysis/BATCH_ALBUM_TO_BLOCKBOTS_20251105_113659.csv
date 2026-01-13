@@ -1,0 +1,16 @@
+action,original,new,reason
+rename,album.py,suno-album-file-organizer.py,Content-aware rename
+rename,albums.py,suno-albums-folder-organizer.py,Content-aware rename
+rename,analyze.py,instagram-archive-media.py,Content-aware rename
+rename,analyzer.py,openai-song-lyrics-analyzer.py,Content-aware rename
+rename,approve.py,instagram-approve-message-requests.py,Content-aware rename
+rename,apps.py,gdrive-link-converter.py,Content-aware rename
+rename,apps-render.py,video-generator-pyqt-app.py,Content-aware rename
+rename,audio-app.py,reddit-tts-video-maker.py,Content-aware rename
+rename,audio-sub.py,assemblyai-audio-transcriber.py,Content-aware rename
+rename,autofill.py,openai-csv-metadata-filler.py,Content-aware rename
+rename,batch-1.py,openai-batch-image-seo-pipeline.py,Content-aware rename
+rename,batch.py,photo-gallery-batch-generator.py,Content-aware rename
+rename,black-white.py,instagram-blacklist-timeline-liker.py,Content-aware rename
+move_to_library,autocall.py,_library/autocall.py,IPython library file
+delete,batch.py.bak.py,,Backup file cleanup

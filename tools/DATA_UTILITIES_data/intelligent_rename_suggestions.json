@@ -1,0 +1,1466 @@
+[
+  {
+    "current_path": "/Users/steven/Documents/python/video-processing/mp4-transcript copy_1.py",
+    "current_name": "mp4-transcript copy_1.py",
+    "suggested_name": "processor_config.py",
+    "reason": "Content suggests: the, and, segments",
+    "classes": [],
+    "main_imports": [
+      "openai",
+      "os",
+      "subprocess",
+      "dotenv",
+      "sys"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/video-processing/analyze-mp4s copy_1.py",
+    "current_name": "analyze-mp4s copy_1.py",
+    "suggested_name": "config_analyzer.py",
+    "reason": "Content suggests: the, and, audio",
+    "classes": [],
+    "main_imports": [
+      "logging",
+      "os",
+      "openai",
+      "dotenv",
+      "termcolor"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/Instagram-Bot/approve_thread_requests_2_1 1.py",
+    "current_name": "approve_thread_requests_2_1 1.py",
+    "suggested_name": "bot_cli.py",
+    "reason": "Content suggests: bot, parser, import",
+    "classes": [],
+    "main_imports": [
+      "argparse",
+      "os",
+      "sys",
+      "instabot"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/Instagram-Bot/overrides_1 1.py",
+    "current_name": "overrides_1 1.py",
+    "suggested_name": "validator.py",
+    "reason": "Content suggests: the, dispatcher, implementation",
+    "classes": [],
+    "main_imports": [
+      "collections",
+      "functools",
+      "numpy._core._multiarray_umath",
+      "numpy._utils",
+      "numpy._utils._inspect"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-resizer/universe4 2.py",
+    "current_name": "universe4 2.py",
+    "suggested_name": "scraper_image.py",
+    "reason": "Content suggests: url, response, image",
+    "classes": [],
+    "main_imports": [
+      "json",
+      "os",
+      "time",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-resizer/resize_oct25_1_1 1.py",
+    "current_name": "resize_oct25_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: def, image, data",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-resizer/8mb_1_1 1.py",
+    "current_name": "8mb_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, def, data",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-resizer/audiometadata_3_1 1.py",
+    "current_name": "audiometadata_3_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: self, import, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/general-scripts/art_4_1 1.py",
+    "current_name": "art_4_1 1.py",
+    "suggested_name": "generator.py",
+    "reason": "Content suggests: timesleep, art, from",
+    "classes": [],
+    "main_imports": [
+      "time",
+      "pyfiglet"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/general-scripts/300dpi_1 1.py",
+    "current_name": "300dpi_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, dpi, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/general-scripts/orn-up_1_1 1.py",
+    "current_name": "orn-up_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: def, output_path, image",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/general-scripts/8mb_1_1 1.py",
+    "current_name": "8mb_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, def, data",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/general-scripts/up-down_1_1 1.py",
+    "current_name": "up-down_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: kb_size, size, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/general-scripts/9mb_1_1 1.py",
+    "current_name": "9mb_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, upscale, directory",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/fancyimg copy_1_1.py",
+    "current_name": "fancyimg copy_1_1.py",
+    "suggested_name": "config_generator.py",
+    "reason": "Content suggests: file, prompt, image_path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "openai",
+      "csv",
+      "dotenv"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/converts copy.py",
+    "current_name": "converts copy.py",
+    "suggested_name": "processor_cli.py",
+    "reason": "Content suggests: the, path, directory",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/art_4_1 1.py",
+    "current_name": "art_4_1 1.py",
+    "suggested_name": "generator.py",
+    "reason": "Content suggests: timesleep, art, from",
+    "classes": [],
+    "main_imports": [
+      "time",
+      "pyfiglet"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/fancy 1.py",
+    "current_name": "fancy 1.py",
+    "suggested_name": "config_generator.py",
+    "reason": "Content suggests: the, file, path",
+    "classes": [],
+    "main_imports": [
+      "csv",
+      "os",
+      "datetime",
+      "dotenv",
+      "openai"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/filenamer 1.py",
+    "current_name": "filenamer 1.py",
+    "suggested_name": "config_analyzer.py",
+    "reason": "Content suggests: logging, row, import",
+    "classes": [],
+    "main_imports": [
+      "json",
+      "logging",
+      "os",
+      "pathlib",
+      "pandas"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/upscale-dl 2.py",
+    "current_name": "upscale-dl 2.py",
+    "suggested_name": "scraper_image.py",
+    "reason": "Content suggests: response, url, filename",
+    "classes": [],
+    "main_imports": [
+      "json",
+      "os",
+      "time",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/custom_thumbnail 1.py",
+    "current_name": "custom_thumbnail 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: update, import, download_location",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/converts copy_1_1.py",
+    "current_name": "converts copy_1_1.py",
+    "suggested_name": "processor_cli.py",
+    "reason": "Content suggests: the, path, directory",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/sort copy_2.py",
+    "current_name": "sort copy_2.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, file, path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "shutil",
+      "datetime",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/sort copy.py",
+    "current_name": "sort copy.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, file, path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "shutil",
+      "datetime",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/fancyimg 1.py",
+    "current_name": "fancyimg 1.py",
+    "suggested_name": "config_generator.py",
+    "reason": "Content suggests: file, prompt, image_path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "openai",
+      "csv",
+      "dotenv"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/leonardo_script copy.py",
+    "current_name": "leonardo_script copy.py",
+    "suggested_name": "processor_scraper.py",
+    "reason": "Content suggests: response, json, image",
+    "classes": [],
+    "main_imports": [
+      "json",
+      "os",
+      "sys",
+      "time",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai-image-generator/deprecation_1_1 1.py",
+    "current_name": "deprecation_1_1 1.py",
+    "suggested_name": "pip_deprecation_warning.py",
+    "reason": "Content suggests: none, pip, the",
+    "classes": [
+      "PipDeprecationWarning"
+    ],
+    "main_imports": [
+      "__future__",
+      "logging",
+      "warnings",
+      "typing",
+      "pip._vendor.packaging.version"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-converter/img-img-upscale (1)_1_1 1.py",
+    "current_name": "img-img-upscale (1)_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: def, data, cls",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-converter/img2img copy.py",
+    "current_name": "img2img copy.py",
+    "suggested_name": "processor_cli.py",
+    "reason": "Content suggests: path, source_directory, filename",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-converter/convert-loop2 2.py",
+    "current_name": "convert-loop2 2.py",
+    "suggested_name": "scraper_processor.py",
+    "reason": "Content suggests: image, response, url",
+    "classes": [],
+    "main_imports": [
+      "csv",
+      "json",
+      "os",
+      "time",
+      "datetime"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-converter/img-img-upscale_1_1 1.py",
+    "current_name": "img-img-upscale_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: def, data, cls",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/upscaler/loop-upscale copy.py",
+    "current_name": "loop-upscale copy.py",
+    "suggested_name": "scraper_image.py",
+    "reason": "Content suggests: url, response, json",
+    "classes": [],
+    "main_imports": [
+      "json",
+      "os",
+      "time",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/upscaler/imgupscale copy_1.py",
+    "current_name": "imgupscale copy_1.py",
+    "suggested_name": "processor_cli.py",
+    "reason": "Content suggests: the, and, path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/upscaler/upscale copy 2_1.py",
+    "current_name": "upscale copy 2_1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, image, temp_path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/upscaler/upscale 2 copy_1_1.py",
+    "current_name": "upscale 2 copy_1_1.py",
+    "suggested_name": "scraper_image.py",
+    "reason": "Content suggests: url, response, json",
+    "classes": [],
+    "main_imports": [
+      "json",
+      "os",
+      "time",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-development/UploadCompilation_1_1 1.py",
+    "current_name": "UploadCompilation_1_1 1.py",
+    "suggested_name": "youtube.py",
+    "reason": "Content suggests: def, import, data",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-development/shorts_analyzer 1.py",
+    "current_name": "shorts_analyzer 1.py",
+    "suggested_name": "audio.py",
+    "reason": "Content suggests: the, and, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-development/filenamer 1.py",
+    "current_name": "filenamer 1.py",
+    "suggested_name": "config_analyzer.py",
+    "reason": "Content suggests: logging, row, import",
+    "classes": [],
+    "main_imports": [
+      "json",
+      "logging",
+      "os",
+      "pathlib",
+      "pandas"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-development/Quiz22sec (1)_1_1 1.py",
+    "current_name": "Quiz22sec (1)_1_1 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: def, the, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-development/NewUpload_20250607131212 2.py",
+    "current_name": "NewUpload_20250607131212 2.py",
+    "suggested_name": "youtube_video.py",
+    "reason": "Content suggests: youtube, import, data",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-development/googleapi-upload_3_1 1.py",
+    "current_name": "googleapi-upload_3_1 1.py",
+    "suggested_name": "video_youtube.py",
+    "reason": "Content suggests: def, video, error",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-development/Quiz22s_1_1 1.py",
+    "current_name": "Quiz22s_1_1 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: the, def, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/backup-tool/misc_1 1.py",
+    "current_name": "misc_1 1.py",
+    "suggested_name": "generator_config.py",
+    "reason": "Content suggests: str, return, path",
+    "classes": [
+      "StreamWrapper",
+      "HiddenText",
+      "ConfiguredBuildBackendHookCaller"
+    ],
+    "main_imports": [
+      "__future__",
+      "errno",
+      "getpass",
+      "hashlib",
+      "logging"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/experiments/sort copy.py",
+    "current_name": "sort copy.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, file, path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "shutil",
+      "datetime",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/experiments/img2img copy.py",
+    "current_name": "img2img copy.py",
+    "suggested_name": "processor_cli.py",
+    "reason": "Content suggests: path, source_directory, filename",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/tests/test_formats_2 1.py",
+    "current_name": "test_formats_2 1.py",
+    "suggested_name": "test_test_repr_base.py",
+    "reason": "Content suggests: drepr, days, assert",
+    "classes": [
+      "TestReprBase"
+    ],
+    "main_imports": [
+      "pytest",
+      "pandas"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-automation/youtube2_4_1 1.py",
+    "current_name": "youtube2_4_1 1.py",
+    "suggested_name": "video_youtube.py",
+    "reason": "Content suggests: video, import, videos",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-automation/custom_thumbnail 1.py",
+    "current_name": "custom_thumbnail 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: update, import, download_location",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-automation/youtube 3_1 1.py",
+    "current_name": "youtube 3_1 1.py",
+    "suggested_name": "youtube_video.py",
+    "reason": "Content suggests: youtube, def, the",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/batch-processor/batch copy_1_1.py",
+    "current_name": "batch copy_1_1.py",
+    "suggested_name": "processor.py",
+    "reason": "Content suggests: the, for, title",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "openai"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/batch-processor/batch copy.py",
+    "current_name": "batch copy.py",
+    "suggested_name": "processor.py",
+    "reason": "Content suggests: the, for, title",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "openai"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/text-to-speech/trek 2.py",
+    "current_name": "trek 2.py",
+    "suggested_name": "generator_scraper.py",
+    "reason": "Content suggests: speech, api_key, output_folder",
+    "classes": [],
+    "main_imports": [
+      "csv",
+      "os",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/text-to-speech/trek 3.py",
+    "current_name": "trek 3.py",
+    "suggested_name": "generator_scraper.py",
+    "reason": "Content suggests: speech, api_key, output_folder",
+    "classes": [],
+    "main_imports": [
+      "csv",
+      "os",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/text-to-speech/trek 3 2.py",
+    "current_name": "trek 3 2.py",
+    "suggested_name": "generator_scraper.py",
+    "reason": "Content suggests: speech, api_key, output_folder",
+    "classes": [],
+    "main_imports": [
+      "csv",
+      "os",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/video-converter/transcribe 1.py",
+    "current_name": "transcribe 1.py",
+    "suggested_name": "processor_cli.py",
+    "reason": "Content suggests: path, output_dir, source_directory",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "sys",
+      "ffmpeg",
+      "whisper"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/utilities/batch copy.py",
+    "current_name": "batch copy.py",
+    "suggested_name": "processor.py",
+    "reason": "Content suggests: the, for, title",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "openai"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-client/egg_link_3 1.py",
+    "current_name": "egg_link_3 1.py",
+    "suggested_name": "config.py",
+    "reason": "Content suggests: for, user_site, raw_name",
+    "classes": [],
+    "main_imports": [
+      "__future__",
+      "os",
+      "re",
+      "sys",
+      "pip._internal.locations"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-client/api_2_1 1.py",
+    "current_name": "api_2_1 1.py",
+    "suggested_name": "api_2.py",
+    "reason": "Content suggests: from, pandas, import",
+    "classes": [],
+    "main_imports": [
+      "pandas._libs.tslibs.parsing",
+      "pandas.tseries",
+      "pandas.tseries.frequencies"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-client/ai-deep-analyzer copy.py",
+    "current_name": "ai-deep-analyzer copy.py",
+    "suggested_name": "analyzer_cli.py",
+    "reason": "Content suggests: report, analysis, append",
+    "classes": [
+      "AIDeepAnalyzer"
+    ],
+    "main_imports": [
+      "os",
+      "sys",
+      "re",
+      "json",
+      "collections"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-client/mercurial_4_1 1.py",
+    "current_name": "mercurial_4_1 1.py",
+    "suggested_name": "config_processor.py",
+    "reason": "Content suggests: str, return, location",
+    "classes": [
+      "Mercurial"
+    ],
+    "main_imports": [
+      "__future__",
+      "configparser",
+      "logging",
+      "os",
+      "pip._internal.exceptions"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-client/analyze 2.py",
+    "current_name": "analyze 2.py",
+    "suggested_name": "processor_api.py",
+    "reason": "Content suggests: the, docs_directory, print",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "subprocess",
+      "openai"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-client/utils_2_1 1.py",
+    "current_name": "utils_2_1 1.py",
+    "suggested_name": "config_bot.py",
+    "reason": "Content suggests: self, logger, endpoint",
+    "classes": [
+      "ResourceManager"
+    ],
+    "main_imports": [
+      "loguru",
+      "llm_engineering.settings",
+      "boto3",
+      "botocore.exceptions"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-client/chat_base_2_1 1.py",
+    "current_name": "chat_base_2_1 1.py",
+    "suggested_name": "config.py",
+    "reason": "Content suggests: import, from, logging",
+    "classes": [],
+    "main_imports": [
+      "logging",
+      "os",
+      "translation",
+      "pyrogram",
+      "chatbase"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/api-client/bazaar_3_1 1.py",
+    "current_name": "bazaar_3_1 1.py",
+    "suggested_name": "processor_downloader.py",
+    "reason": "Content suggests: url, str, bzr",
+    "classes": [
+      "Bazaar"
+    ],
+    "main_imports": [
+      "__future__",
+      "logging",
+      "pip._internal.utils.misc",
+      "pip._internal.utils.subprocess",
+      "pip._internal.utils.urls"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/gallery-generator/onedrive_gallery_logic 2.py",
+    "current_name": "onedrive_gallery_logic 2.py",
+    "suggested_name": "scraper_generator.py",
+    "reason": "Content suggests: the, photo, time",
+    "classes": [
+      "OnedriveGalleryLogic"
+    ],
+    "main_imports": [
+      "time",
+      "pkg_resources",
+      "simplegallery.common",
+      "simplegallery.media",
+      "selenium"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/300dpi_1 1.py",
+    "current_name": "300dpi_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, dpi, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/scrape_1 1.py",
+    "current_name": "scrape_1 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: def, any, error",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/orn-up_1_1 1.py",
+    "current_name": "orn-up_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: def, output_path, image",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/main 2.py",
+    "current_name": "main 2.py",
+    "suggested_name": "generator_cli.py",
+    "reason": "Content suggests: csv, generate_speech, question",
+    "classes": [],
+    "main_imports": [
+      "csv",
+      "generate_speech"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/bot_support 1.py",
+    "current_name": "bot_support 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: def, any, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/Quiz22sec (1)_1_1 1.py",
+    "current_name": "Quiz22sec (1)_1_1 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: def, the, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/response_1 1.py",
+    "current_name": "response_1 1.py",
+    "suggested_name": "deflate_decoder_gzip_decoder_state.py",
+    "reason": "Content suggests: self, the, return",
+    "classes": [
+      "DeflateDecoder",
+      "GzipDecoderState",
+      "GzipDecoder",
+      "MultiDecoder",
+      "HTTPResponse",
+      "BrotliDecoder"
+    ],
+    "main_imports": [
+      "__future__",
+      "io",
+      "logging",
+      "sys",
+      "warnings"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/upscale2_1_1 1.py",
+    "current_name": "upscale2_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, image, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/Quiz22s_1_1 1.py",
+    "current_name": "Quiz22s_1_1 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: the, def, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/9mb_1_1 1.py",
+    "current_name": "9mb_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, upscale, directory",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/csv-processor/upscale--_1_1 1.py",
+    "current_name": "upscale--_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, image, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/transcribe-analysis/analyze-mp4s copy_1.py",
+    "current_name": "analyze-mp4s copy_1.py",
+    "suggested_name": "config_analyzer.py",
+    "reason": "Content suggests: the, and, audio",
+    "classes": [],
+    "main_imports": [
+      "logging",
+      "os",
+      "openai",
+      "dotenv",
+      "termcolor"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/transcribe-analysis/final_video.py_02_1 1.py",
+    "current_name": "final_video.py_02_1 1.py",
+    "suggested_name": "video.py",
+    "reason": "Content suggests: the, video, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/social-media-automation/bot_support 1.py",
+    "current_name": "bot_support 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: def, any, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/data-analysis/overrides_1 1.py",
+    "current_name": "overrides_1 1.py",
+    "suggested_name": "validator.py",
+    "reason": "Content suggests: the, dispatcher, implementation",
+    "classes": [],
+    "main_imports": [
+      "collections",
+      "functools",
+      "numpy._core._multiarray_umath",
+      "numpy._utils",
+      "numpy._utils._inspect"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/file-organizer/freeze_1 2.py",
+    "current_name": "freeze_1 2.py",
+    "suggested_name": "generator_freeze_command.py",
+    "reason": "Content suggests: options, self, cmd_opts",
+    "classes": [
+      "FreezeCommand"
+    ],
+    "main_imports": [
+      "sys",
+      "optparse",
+      "pip._internal.cli",
+      "pip._internal.cli.base_command",
+      "pip._internal.cli.status_codes"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/downloader_4_1 1.py",
+    "current_name": "downloader_4_1 1.py",
+    "suggested_name": "config_validator.py",
+    "reason": "Content suggests: get_colors, download, none",
+    "classes": [
+      "config_reader",
+      "parser_args",
+      "download"
+    ],
+    "main_imports": [
+      "__future__",
+      "banner",
+      "os",
+      "sys",
+      "json"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/mp4-mp3-analyze2 copy_1.py",
+    "current_name": "mp4-mp3-analyze2 copy_1.py",
+    "suggested_name": "processor_config.py",
+    "reason": "Content suggests: path, logging, file_path",
+    "classes": [],
+    "main_imports": [
+      "logging",
+      "os",
+      "subprocess",
+      "sys",
+      "openai"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/imgmp4 copy.py",
+    "current_name": "imgmp4 copy.py",
+    "suggested_name": "processor_video.py",
+    "reason": "Content suggests: cover_image_directory, images, path",
+    "classes": [],
+    "main_imports": [
+      "glob",
+      "os",
+      "moviepy.editor",
+      "PIL",
+      "sys"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/UploadCompilation_1_1 1.py",
+    "current_name": "UploadCompilation_1_1 1.py",
+    "suggested_name": "youtube_1.py",
+    "reason": "Content suggests: def, import, data",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/shorts_analyzer 1.py",
+    "current_name": "shorts_analyzer 1.py",
+    "suggested_name": "audio.py",
+    "reason": "Content suggests: the, and, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/settings_1 1.py",
+    "current_name": "settings_1 1.py",
+    "suggested_name": "config_generator.py",
+    "reason": "Content suggests: config, set, auto_login",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "configparser",
+      "sys"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/upload_video_3_1 1.py",
+    "current_name": "upload_video_3_1 1.py",
+    "suggested_name": "youtube_1.py",
+    "reason": "Content suggests: the, def, import",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/autodownloaderUI_4_1 1.py",
+    "current_name": "autodownloaderUI_4_1 1.py",
+    "suggested_name": "downloader_processor.py",
+    "reason": "Content suggests: self, setenabled, false",
+    "classes": [
+      "PassiveDownloaderWindow"
+    ],
+    "main_imports": [
+      "PyQt5",
+      "PyQt5",
+      "filtercreator",
+      "PyQt5.QtCore",
+      "PyQt5"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/youtube2_4_1 1.py",
+    "current_name": "youtube2_4_1 1.py",
+    "suggested_name": "video_youtube.py",
+    "reason": "Content suggests: video, import, videos",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/mp4-transcript copy_1.py",
+    "current_name": "mp4-transcript copy_1.py",
+    "suggested_name": "processor_config.py",
+    "reason": "Content suggests: the, and, segments",
+    "classes": [],
+    "main_imports": [
+      "openai",
+      "os",
+      "subprocess",
+      "dotenv",
+      "sys"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/scriptwrapper_1 1.py",
+    "current_name": "scriptwrapper_1 1.py",
+    "suggested_name": "processor_generator.py",
+    "reason": "Content suggests: self, rawscript, scriptmap",
+    "classes": [
+      "TikTokVideo",
+      "ClipWrapper",
+      "ScriptWrapper"
+    ],
+    "main_imports": [
+      "subprocess",
+      "os",
+      "math",
+      "datetime",
+      "pickle"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/youtube 2.py",
+    "current_name": "youtube 2.py",
+    "suggested_name": "api_youtube.py",
+    "reason": "Content suggests: the, youtube, video",
+    "classes": [],
+    "main_imports": [
+      "csv",
+      "google_auth_oauthlib.flow",
+      "googleapiclient.discovery",
+      "googleapiclient.http"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/mp3-csv 4.py",
+    "current_name": "mp3-csv 4.py",
+    "suggested_name": "audio.py",
+    "reason": "Content suggests: for, logger, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/story-key-trans copy.py",
+    "current_name": "story-key-trans copy.py",
+    "suggested_name": "processor_config.py",
+    "reason": "Content suggests: the, and, path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "subprocess",
+      "openai",
+      "dotenv"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/instagram_2_1 1.py",
+    "current_name": "instagram_2_1 1.py",
+    "suggested_name": "scraper_config.py",
+    "reason": "Content suggests: self, configgetir, base_warnings",
+    "classes": [
+      "Instagram"
+    ],
+    "main_imports": [
+      "builtins",
+      "selenium",
+      "selenium.webdriver.common.keys",
+      "selenium.webdriver.firefox.options",
+      "time"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/api_photo_1 1.py",
+    "current_name": "api_photo_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: img, size, fname",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/youtube 4.py",
+    "current_name": "youtube 4.py",
+    "suggested_name": "scraper_cli.py",
+    "reason": "Content suggests: driver, video, import",
+    "classes": [],
+    "main_imports": [
+      "argparse",
+      "logging",
+      "argparse",
+      "datetime",
+      "login"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/vidGen_2 1.py",
+    "current_name": "vidGen_2 1.py",
+    "suggested_name": "video_2.py",
+    "reason": "Content suggests: import, settings, path",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/NewUpload_20250607131212 2.py",
+    "current_name": "NewUpload_20250607131212 2.py",
+    "suggested_name": "youtube_video.py",
+    "reason": "Content suggests: youtube, import, data",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/googleapi-upload_3_1 1.py",
+    "current_name": "googleapi-upload_3_1 1.py",
+    "suggested_name": "video_youtube.py",
+    "reason": "Content suggests: def, video, error",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/youtube 3_1 1.py",
+    "current_name": "youtube 3_1 1.py",
+    "suggested_name": "youtube_video.py",
+    "reason": "Content suggests: youtube, def, the",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/ai-config-simple copy.py",
+    "current_name": "ai-config-simple copy.py",
+    "suggested_name": "config_api.py",
+    "reason": "Content suggests: service, print, key",
+    "classes": [
+      "SimpleAIConfig"
+    ],
+    "main_imports": [
+      "os",
+      "json",
+      "webbrowser",
+      "time"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/CreateVideo_3 1.py",
+    "current_name": "CreateVideo_3 1.py",
+    "suggested_name": "video_audio.py",
+    "reason": "Content suggests: import, video, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/YouTubeBot 3.py",
+    "current_name": "YouTubeBot 3.py",
+    "suggested_name": "scraper_downloader.py",
+    "reason": "Content suggests: size, window, master",
+    "classes": [],
+    "main_imports": [
+      "time",
+      "tkinter",
+      "tkinter.ttk",
+      "pyautogui",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/YTubeDLthumbs copy_1.py",
+    "current_name": "YTubeDLthumbs copy_1.py",
+    "suggested_name": "scraper_api.py",
+    "reason": "Content suggests: snippet, response, title",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "pandas",
+      "requests",
+      "googleapiclient.discovery"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/up-down_1_1 1.py",
+    "current_name": "up-down_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: kb_size, size, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/untitled.py",
+    "current_name": "untitled.py",
+    "suggested_name": "processor_config.py",
+    "reason": "Content suggests: the, and, path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "subprocess",
+      "openai",
+      "dotenv"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/batch_upload_3_1 1.py",
+    "current_name": "batch_upload_3_1 1.py",
+    "suggested_name": "youtube_1.py",
+    "reason": "Content suggests: def, error, any",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/youtube-downloader/YouTubeBot 2.py",
+    "current_name": "YouTubeBot 2.py",
+    "suggested_name": "scraper_downloader.py",
+    "reason": "Content suggests: size, window, master",
+    "classes": [],
+    "main_imports": [
+      "time",
+      "tkinter",
+      "tkinter.ttk",
+      "pyautogui",
+      "PIL"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/automation/batch_upload_3_1 1.py",
+    "current_name": "batch_upload_3_1 1.py",
+    "suggested_name": "youtube.py",
+    "reason": "Content suggests: def, error, any",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai_tools/trek 3.py",
+    "current_name": "trek 3.py",
+    "suggested_name": "generator_scraper.py",
+    "reason": "Content suggests: speech, api_key, output_folder",
+    "classes": [],
+    "main_imports": [
+      "csv",
+      "os",
+      "requests"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai_tools/transcribe 1.py",
+    "current_name": "transcribe 1.py",
+    "suggested_name": "processor_cli.py",
+    "reason": "Content suggests: path, output_dir, source_directory",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "sys",
+      "ffmpeg",
+      "whisper"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/ai_tools/fancyimg 1.py",
+    "current_name": "fancyimg 1.py",
+    "suggested_name": "config_generator.py",
+    "reason": "Content suggests: file, prompt, image_path",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "openai",
+      "csv",
+      "dotenv"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/audio-processing/mp3-csv 4.py",
+    "current_name": "mp3-csv 4.py",
+    "suggested_name": "audio.py",
+    "reason": "Content suggests: for, logger, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-processing/imgmp4 copy.py",
+    "current_name": "imgmp4 copy.py",
+    "suggested_name": "processor_video.py",
+    "reason": "Content suggests: cover_image_directory, images, path",
+    "classes": [],
+    "main_imports": [
+      "glob",
+      "os",
+      "moviepy.editor",
+      "PIL",
+      "sys"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-processing/upscale2_1_1 1.py",
+    "current_name": "upscale2_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, image, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/image-processing/upscale--_1_1 1.py",
+    "current_name": "upscale--_1_1 1.py",
+    "suggested_name": "image.py",
+    "reason": "Content suggests: the, image, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/gui-app/convert 3.py",
+    "current_name": "convert 3.py",
+    "suggested_name": "processor.py",
+    "reason": "Content suggests: python_code, file, content",
+    "classes": [],
+    "main_imports": [
+      "os",
+      "re"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/gui-app/editable_legacy_2_1 1.py",
+    "current_name": "editable_legacy_2_1 1.py",
+    "suggested_name": "generator_processor.py",
+    "reason": "Content suggests: import, from, str",
+    "classes": [],
+    "main_imports": [
+      "__future__",
+      "logging",
+      "collections.abc",
+      "pip._internal.build_env",
+      "pip._internal.utils.logging"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/archive-utility/utils_2 2.py",
+    "current_name": "utils_2 2.py",
+    "suggested_name": "config_validator.py",
+    "reason": "Content suggests: return, the, value",
+    "classes": [],
+    "main_imports": [
+      "codecs",
+      "contextlib",
+      "io",
+      "os",
+      "re"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/archive-utility/hash_2_1 1.py",
+    "current_name": "hash_2_1 1.py",
+    "suggested_name": "hash_command.py",
+    "reason": "Content suggests: algorithm, import, hash",
+    "classes": [
+      "HashCommand"
+    ],
+    "main_imports": [
+      "hashlib",
+      "logging",
+      "sys",
+      "optparse",
+      "pip._internal.cli.base_command"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/utility/completion_1_1 1.py",
+    "current_name": "completion_1_1 1.py",
+    "suggested_name": "completion_command.py",
+    "reason": "Content suggests: shell, comp_words, completion",
+    "classes": [
+      "CompletionCommand"
+    ],
+    "main_imports": [
+      "sys",
+      "textwrap",
+      "optparse",
+      "pip._internal.cli.base_command",
+      "pip._internal.cli.status_codes"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/utility/tts_2_1 1.py",
+    "current_name": "tts_2_1 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: str, title, def",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/utility/common_1_1 1.py",
+    "current_name": "common_1_1 1.py",
+    "suggested_name": "test.py",
+    "reason": "Content suggests: store, import, tables",
+    "classes": [],
+    "main_imports": [
+      "collections.abc",
+      "contextlib",
+      "pathlib",
+      "tempfile",
+      "pytest"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/utility/bot_direct_1 1.py",
+    "current_name": "bot_direct_1 1.py",
+    "suggested_name": "text.py",
+    "reason": "Content suggests: self, user_ids, text",
+    "classes": [],
+    "main_imports": []
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/utility/ai-cli-toolkit 2.py",
+    "current_name": "ai-cli-toolkit 2.py",
+    "suggested_name": "cli_scraper.py",
+    "reason": "Content suggests: message, args, model",
+    "classes": [
+      "AICLIToolkit"
+    ],
+    "main_imports": [
+      "os",
+      "sys",
+      "argparse",
+      "json",
+      "typing"
+    ]
+  },
+  {
+    "current_path": "/Users/steven/Documents/python/archive/code/analyze 1.py",
+    "current_name": "analyze 1.py",
+    "suggested_name": "analyzer_processor.py",
+    "reason": "Content suggests: the, path, for",
+    "classes": [],
+    "main_imports": [
+      "logging",
+      "os",
+      "sys",
+      "time",
+      "concurrent.futures"
+    ]
+  }
+]

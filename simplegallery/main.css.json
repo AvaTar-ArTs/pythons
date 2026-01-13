@@ -1,0 +1,26 @@
+{
+    "sourceFile": "data/public/css/main.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1733333447018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733333828229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n   bottom: 20px;\n }\n \n #jumpBtn {\n-  bottom: 60px;\n+  bottom: 20px;\n }\n \n #myBtn:hover, #jumpBtn:hover {\n   background-color: #555;\n"
+                },
+                {
+                    "date": 1733333914128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,13 +56,13 @@\n   border-radius: 4px;\n }\n \n #myBtn {\n-  bottom: 20px;\n+  bottom: 60px;\n }\n \n #jumpBtn {\n-  bottom: 20px;\n+  bottom: 60px;\n }\n \n #myBtn:hover, #jumpBtn:hover {\n   background-color: #555;\n"
+                }
+            ],
+            "date": 1733333447018,
+            "name": "Commit-0",
+            "content": "/* General styles */\na {\n  text-decoration: none;\n}\n\nimg {\n  pointer-events: none;\n}\n\nimg:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: transparent;\n  pointer-events: all;\n}\n\n/* Black nav white hover link */\n.navbar {\n  background-color: #000;\n  border-bottom: 1px solid #333;\n}\n\n.navbar-brand {\n  color: #fff;\n}\n\n.nav-link {\n  color: #fff;\n  font-weight: 600;\n}\n\n.nav-link:hover {\n  color: #fff;\n  background-color: #333;\n  border-radius: 4px;\n}\n\n/* Back to top and jump down buttons */\n#myBtn, #jumpBtn {\n  display: none;\n  position: fixed;\n  right: 30px;\n  z-index: 99;\n  font-size: 16px;\n  border: none;\n  outline: none;\n  background-color: black;\n  color: rgb(255, 0, 0);\n  cursor: pointer;\n  padding: 10px;\n  border-radius: 4px;\n}\n\n#myBtn {\n  bottom: 20px;\n}\n\n#jumpBtn {\n  bottom: 60px;\n}\n\n#myBtn:hover, #jumpBtn:hover {\n  background-color: #555;\n}\n\n/* Body styles */\nbody {\n  background-color: #202020;\n  font-family: 'Oswald', sans-serif;\n  color: #fff;\n  text-shadow: 2px 2px 2px #000;\n}\n\n/* Gallery styles */\n.gallery {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.gallery > a, .gallery::after {\n  flex-basis: var(--w);\n}\n\n.gallery > a {\n  margin: 0.25rem;\n  flex-grow: calc(var(--w) / var(--h) * 100);\n  width: calc(var(--w) * 1px);\n}\n\n.gallery::after {\n  --w: 2;\n  --h: 1;\n  content: '';\n  flex-grow: 1000000;\n}\n\n.gallery > a > img {\n  display: block;\n  width: 100%;\n}\n\n/* Header styles */\n.header-image {\n  height: 400px;\n  color: #000000;\n  padding: 0px;\n}\n\n.header-info {\n  background-color: rgba(0, 0, 0, 0.5);\n  width: 100%;\n  height: 100%;\n  padding-top: 100px;\n  text-align: center;\n}\n\n.header-info-details h1 {\n  font-size: 56px;\n}\n\n.header-info-details {\n  border-top: 1px solid #eee;\n  width: 80%;\n  margin: 50px auto 0px;\n  padding-top: 50px;\n  font-size: 20px;\n}\n\n/* Gallery section styles */\n.gallery-section h2 {\n  text-align: center;\n  margin-top: 30px;\n}\n\n.gallery-section h2 a {\n  visibility: hidden;\n  color: #aaaaaa;\n}\n\n.gallery-section h2 a:hover {\n  color: #0056b3;\n}\n\n.gallery-section:hover h2 a {\n  visibility: visible;\n}\n\n.gallery-section h2 a svg {\n  height: 1.2rem;\n}\n\n.gallery-section p {\n  width: 70%;\n  margin: 0px auto 20px;\n}\n\n/* Caption date styles */\n.caption-date {\n  font-size: 15px;\n  font-weight: normal;\n  margin-top: 3px;\n  margin-bottom: 0px;\n}\n\n/* Center the footer content */\nfooter {\n  text-align: center;\n  margin-top: 30px;\n}\n\nfooter a {\n  text-decoration: none;\n  color: #ffffff;\n}\n\nfooter a:hover {\n  color: #aaaaaa;\n}"
+        }
+    ]
+}

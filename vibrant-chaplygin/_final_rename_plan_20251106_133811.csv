@@ -1,0 +1,399 @@
+current_name,suggested_name,action,category,description,suggestion_reason,apis_used,lines,original_issue
+AI_ORCHESTRATOR_ULTIMATE.py,generate.py,RENAME,AI Tools,🚀 ULTIMATE AI ORCHESTRATOR - Multi-Model Intelligent System,Analyzed from code: generate ,"OpenAI, Anthropic, Gemini, Groq",514,ALL_CAPS naming - should use lowercase
+UNIFIED_CONTENT_ORCHESTRATOR.py,generate.py,RENAME,AI Tools,🎭 UNIFIED CONTENT ORCHESTRATOR,Analyzed from code: generate ,"OpenAI, Anthropic, Groq",711,ALL_CAPS naming - should use lowercase
+analyze-json-writer.py,generate.py,RENAME,AI Tools,Complete Cleanup Orchestrator,Analyzed from code: generate ,Streamlit,202,Generic 'analyze-' prefix doesn't say what it analyzes
+extract-news-to-audio.py,generate.py,RENAME,Audio Generation,No description found,Analyzed from code: generate ,None,54,Missing documentation - unclear purpose
+extract-to-audio.py,generate.py,RENAME,Audio Generation,No description found,Analyzed from code: generate ,None,51,Missing documentation - unclear purpose
+gemini-storybook-audio.py,download.py,RENAME,Audio Generation,Gemini Storybook Downloader (macOS-friendly),Analyzed from code: download ,"Streamlit, Playwright",406,API name prefix but unclear what it does
+gmupload.py,upload.py,RENAME,Audio Generation,This is used for uploading downloaded track to google play music,Analyzed from code: upload ,Streamlit,108,ALL_CAPS naming - should use lowercase
+instagram-whisper.py,json-to-csv.py,RENAME,Audio Generation,No description found,Analyzed from code: convert ,"Streamlit, Pandas",70,Missing documentation - unclear purpose
+mp3-batch-timestamp.py,analyze.py,RENAME,Audio Generation,No description found,Analyzed from code: analyze ,OpenAI,207,Missing documentation - unclear purpose
+multi.py,openai-tts-generate.py,RENAME,Audio Generation,"Multi-API TTS Generator for ""As a Man Thinketh""",Analyzed from code: generate ,"OpenAI, Anthropic, Groq, Streamlit",626,ALL_CAPS naming - should use lowercase
+openai-text-to-speech.py,generate-audio.py,RENAME,Audio Generation,"generate_speech_with_curl function. curl_command = [ ""curl"", ""https://api.openai.com/v1/audio/speech"", ""-H"", f""Authorization: Bearer {api_key}"", ""-H"",",Analyzed from code: generate ,OpenAI,51,API name prefix but unclear what it does
+reddit-tts-video-maker.py,reddit-download.py,RENAME,Audio Generation,No description found,Analyzed from code: download reddit,Streamlit,150,Missing documentation - unclear purpose
+scripty.py,generate.py,RENAME,Audio Generation,scripty_tts_unified_v2.py,Analyzed from code: generate ,"OpenAI, pydub, Requests",511,ALL_CAPS naming - should use lowercase
+services.py,generate-audio.py,RENAME,Audio Generation,"audio_down function. str_get_current_date = get_current_date() s3.download_file( s3_name, str_get_current_date + ""/"" + audio_book_topic + ""."" + aws_fi",Analyzed from code: generate ,None,70,ALL_CAPS naming - should use lowercase
+speech.py,openai-tts-generate-audio.py,RENAME,Audio Generation,"generate_speech function. response = client.audio.speech.create( model=""tts-1"", voice=""shimmer"", input=text, ssml=True  # Enable SSML processing ) res",Analyzed from code: generate ,OpenAI,41,ALL_CAPS naming - should use lowercase
+synthesize.py,generate.py,RENAME,Audio Generation,As a Man Thinketh - Text to Speech System (Real Content),Analyzed from code: generate ,"ElevenLabs, AssemblyAI, Deepgram, Streamlit, Requests",474,ALL_CAPS naming - should use lowercase
+texttospeech-v1.py,audio.py,RENAME,Audio Generation,"__init__ function. self.audio_path = ""../audio/"" self.create_dir()  # Creates the directory to hold audio if not already specified def create_dir(self",Analyzed from code: None ,None,44,Has version number - consolidate versions
+thinketh-tts-universal.py,openai-tts.py,RENAME,Audio Generation,No description found,Analyzed from code: None ,"OpenAI, pydub, Requests",117,Missing documentation - unclear purpose
+voices.py,files.py,RENAME,Audio Generation,Saves Text to MP3 files. Args: reddit_obj : The reddit object you received from the reddit API in the askreddit.py file.,Analyzed from code: None ,None,35,ALL_CAPS naming - should use lowercase
+webm.py,convert-files.py,RENAME,Audio Generation,Converts all .webm files in the specified directory to .mp3 format. Args: directory_path (str): The path to the directory containing .webm files.,Analyzed from code: convert ,None,52,ALL_CAPS naming - should use lowercase
+analyze-code-complexity.py,generate.py,RENAME,Code Analysis,No description found,Analyzed from code: generate ,Streamlit,520,Generic 'analyze-' prefix doesn't say what it analyzes
+analyze-files-comprehensive.py,generate.py,RENAME,Code Analysis,MASTER COMPREHENSIVE ANALYZER,Analyzed from code: generate ,None,212,Generic 'analyze-' prefix doesn't say what it analyzes
+analyze-writer.py,generate.py,RENAME,Code Analysis,Simple Quality Monitor,Analyzed from code: generate ,None,645,Generic 'analyze-' prefix doesn't say what it analyzes
+codebase.py,generate.py,RENAME,Code Analysis,AvaTarArTs Suite - Codebase Analyzer,Analyzed from code: generate ,None,205,ALL_CAPS naming - should use lowercase
+conversation.py,generate.py,RENAME,Code Analysis,"Claude Code Conversation Exporter Exports conversation transcripts to text, HTML, and markdown formats Default: text (.txt) and HTML (.html)",Analyzed from code: generate ,None,368,ALL_CAPS naming - should use lowercase
+formdata.py,generate.py,RENAME,Code Analysis,Helper class for form body generation. Supports multipart/form-data and application/x-www-form-urlencoded.,Analyzed from code: generate ,None,171,ALL_CAPS naming - should use lowercase
+gdrive.py,convert-files.py,RENAME,Code Analysis,"convert_to_colab function. # Read the content of the specified file with open(file_path, ""r"") as file: python_code = file.read() # Install necessary l",Analyzed from code: convert ,"Streamlit, TensorFlow",82,ALL_CAPS naming - should use lowercase
+intelligent-code-analyzer.py,generate.py,RENAME,Code Analysis,Deep Code Analysis - Advanced Content-Aware System,Analyzed from code: generate ,"Streamlit, TensorFlow",798,Name says 'analyzer' but description doesn't match
+intelligent-renamer-1.py,generate-files.py,RENAME,Code Analysis,🏷️ INTELLIGENT CONTENT-AWARE RENAMING TOOL =========================================== AI-Powered Deep Analysis and Smart File Renaming System Feature,Analyzed from code: generate ,"OpenAI, Anthropic, Gemini, ElevenLabs, Streamlit",1017,Has version number - consolidate versions
+periodic.py,generate.py,RENAME,Code Analysis,Periodic Quality Monitor,Analyzed from code: generate ,None,755,ALL_CAPS naming - should use lowercase
+search.py,generate.py,RENAME,Code Analysis,Alfred Script Filter for Claude Code Conversations - Enhanced Version,Analyzed from code: generate ,None,359,ALL_CAPS naming - should use lowercase
+shorts-code.py,analyze.py,RENAME,Code Analysis,No description found,Analyzed from code: analyze ,OpenAI,136,Missing documentation - unclear purpose
+system.py,generate.py,RENAME,Code Analysis,Setup Periodic Quality Monitoring,Analyzed from code: generate ,None,263,ALL_CAPS naming - should use lowercase
+PROMPT_CSV_ANALYZER_ULTIMATE.py,generate.py,RENAME,Data Processing,🎵 PROMPT & CSV ANALYZER ULTIMATE,Analyzed from code: generate ,"Streamlit, Pandas",566,ALL_CAPS naming - should use lowercase
+backupcsv.py,generate.py,RENAME,Data Processing,No description found,Analyzed from code: generate ,Pandas,65,ALL_CAPS naming - should use lowercase
+convert-conversations-to-csv.py,json-to-csv.py,RENAME,Data Processing,No description found,Analyzed from code: convert ,"Streamlit, Pandas",77,Missing documentation - unclear purpose
+convert.py,convert-files.py,RENAME,Data Processing,Advanced File Processor - Consolidated Processing Script,Analyzed from code: convert ,OpenAI,406,ALL_CAPS naming - should use lowercase
+converters.py,convert.py,RENAME,Data Processing,Commonly useful converters.,Analyzed from code: convert ,None,142,ALL_CAPS naming - should use lowercase
+csv-file-lister.py,analyze.py,RENAME,Data Processing,No description found,Analyzed from code: analyze ,None,105,Missing documentation - unclear purpose
+dallecsv.py,generate.py,RENAME,Data Processing,No description found,Analyzed from code: generate ,None,47,ALL_CAPS naming - should use lowercase
+development-process-proc.py,generate.py,RENAME,Data Processing,No description found,Analyzed from code: generate ,PIL,167,Missing documentation - unclear purpose
+fixer.py,analyze-files.py,RENAME,Data Processing,"format_with_black function. try: subprocess.run([""black"", filepath], check=True) logger.info(f""Formatted {filepath} with black."") except subprocess.Ca",Analyzed from code: analyze ,None,61,ALL_CAPS naming - should use lowercase
+leonardo-convert-json-writer.py,upload.py,RENAME,Data Processing,No description found,Analyzed from code: upload ,"PIL, Requests",223,Missing documentation - unclear purpose
+leonardo-convert-loop2.py,upload.py,RENAME,Data Processing,No description found,Analyzed from code: upload ,"PIL, Requests",202,Missing documentation - unclear purpose
+leonardo-process.py,generate.py,RENAME,Data Processing,No description found,Analyzed from code: generate ,None,59,Missing documentation - unclear purpose
+mydesign-download.py,files.py,RENAME,Data Processing,"sanitize_title function. return title.replace("" "", ""_"").replace(""/"", ""_"").replace(""|"", """").replace("","", """") # Read the original CSV file csv_file = Pa",Analyzed from code: None ,"Pandas, Requests",82,Name says 'download' but description doesn't match
+openai-csv-metadata-filler.py,generate.py,RENAME,Data Processing,No description found,Analyzed from code: generate ,OpenAI,125,API name prefix but unclear what it does
+openai-wikipedia-data-downloader.py,download.py,RENAME,Data Processing,No description found,Analyzed from code: download ,"OpenAI, Pandas, NumPy",49,Name says 'download' but description doesn't match
+process-json.py,generate.py,RENAME,Data Processing,This script is intended for use as a GYP_GENERATOR. It takes as input (by way of,Analyzed from code: generate ,Streamlit,796,Generic 'process-' prefix doesn't describe processing
+process-remix.py,analyze.py,RENAME,Data Processing,No description found,Analyzed from code: analyze ,OpenAI,254,Generic 'process-' prefix doesn't describe processing
+processor.py,generate.py,RENAME,Data Processing,No description found,Analyzed from code: generate ,None,234,ALL_CAPS naming - should use lowercase
+quiz.py,generate-files.py,RENAME,Data Processing,generate_trivia_quiz function. # Read the CSV file into a pandas DataFrame df = pd.read_csv(csv_path) # Iterate over each row in the DataFrame for ind,Analyzed from code: generate ,Pandas,44,ALL_CAPS naming - should use lowercase
+robust.py,generate-files.py,RENAME,Data Processing,Robust File Processor,Analyzed from code: generate ,None,923,ALL_CAPS naming - should use lowercase
+scancsv.py,files.py,RENAME,Data Processing,"scan_directory function. for root, _, files in os.walk(directory): for file in files: if file.lower().endswith(file_types):",Analyzed from code: None ,None,45,ALL_CAPS naming - should use lowercase
+scripts.py,xml-assembly-manifest.py,RENAME,Data Processing,"<?xml version=""1.0"" encoding=""UTF-8"" standalone=""yes""?> <assembly xmlns=""urn:schemas-microsoft-com:asm.v1"" manifestVersion=""1.0""> <assemblyIdentity ve",XML assembly manifest file,None,444,ALL_CAPS naming - should use lowercase
+snoopplugins.py,snoop-plugins.py,RENAME,Data Processing,Плагины Snoop Project/Черновик from pathlib import Path import ipaddress import json import locale import os import platform import re import random i,Snoop Project plugins,"Streamlit, Requests",563,ALL_CAPS naming - should use lowercase
+song-process.py,convert.py,RENAME,Data Processing,No description found,Analyzed from code: convert ,OpenAI,203,Missing documentation - unclear purpose
+sufflecsv.py,shuffle-csv-rows.py,RENAME,Data Processing,shuffle_csv function. # Download the CSV data from the URL response = requests.get(url) response.raise_for_status()  # Check for errors csv_data = res,Shuffles CSV rows,Requests,35,ALL_CAPS naming - should use lowercase
+track.py,spotify-track-handler.py,RENAME,Data Processing,"Wraps a try-except-assign statement. try: setattr(self, name, getter()) except KeyError: setattr(self, name, default) def __init__(self, spotify_data,",Handles Spotify track data,None,112,ALL_CAPS naming - should use lowercase
+util-json-handler.py,json-to-csv.py,RENAME,Data Processing,No description found,Analyzed from code: convert ,Streamlit,71,Missing documentation - unclear purpose
+ADVANCED_SYSTEMS_CATALOG.py,generate.py,RENAME,Documentation,🏗️ ADVANCED SYSTEMS CATALOG,Analyzed from code: generate ,FastAPI,561,ALL_CAPS naming - should use lowercase
+create_sphinx_docs.py,generate.py,RENAME,Documentation,📚 SPHINX DOCUMENTATION GENERATOR,Analyzed from code: generate ,None,681,ALL_CAPS naming - should use lowercase
+process-csv-docs.py,generate.py,RENAME,Documentation,No description found,Analyzed from code: generate ,None,209,Generic 'process-' prefix doesn't describe processing
+retrieve-docs.py,generate.py,RENAME,Documentation,No description found,Analyzed from code: generate ,None,116,Missing documentation - unclear purpose
+analyze-file-migration.py,convert.py,RENAME,File Organization,Analyze current structure and show what will be migrated where,Analyzed from code: convert ,None,223,Generic 'analyze-' prefix doesn't say what it analyzes
+categorizer.py,gpt-file-categorizer.py,RENAME,File Organization,No description found,Categorizes files using GPT,OpenAI,107,ALL_CAPS naming - should use lowercase
+chat-export-analyzer.py,generate.py,RENAME,File Organization,Content-Aware Chat Analysis Organizer,Analyzed from code: generate ,None,773,Name says 'analyzer' but description doesn't match
+documents.py,backup-documents-csv.py,RENAME,File Organization,Script to create a CSV backup of ~/documents directory in the same format as ~/clean,Backs up documents to CSV,None,175,ALL_CAPS naming - should use lowercase
+implement.py,smart-file-organizer.py,RENAME,File Organization,Implement Smart Organization System,Smart file organization system,Streamlit,342,ALL_CAPS naming - should use lowercase
+instagram-download.py,generate.py,RENAME,File Organization,Content-Aware Etsy Collection Organizer,Analyzed from code: generate ,None,506,Name says 'download' but description doesn't match
+organize-printify-products.py,organize.py,RENAME,File Organization,No description found,Analyzed from code: organize ,"PIL, NumPy",238,Missing documentation - unclear purpose
+organize.py,ai-output-organizer.py,RENAME,File Organization,AI Outputs Hub - Auto-Organize Dry Run,Organizes AI outputs,None,348,ALL_CAPS naming - should use lowercase
+project_consolidator.py,generate.py,RENAME,File Organization,Project Consolidator - Organize and consolidate Python/JS projects,Analyzed from code: generate ,None,268,ALL_CAPS naming - should use lowercase
+pyorganize.py,analyze.py,RENAME,File Organization,Extracts top-level functions and classes from the script content.,Analyzed from code: analyze ,OpenAI,80,ALL_CAPS naming - should use lowercase
+rename.py,image-batch-renamer.py,RENAME,File Organization,No description found,Batch renames images,PIL,132,ALL_CAPS naming - should use lowercase
+renamer.py,python-script-renamer.py,RENAME,File Organization,Simple Python Renamer for ~/Documents/python,Renames Python scripts,Streamlit,484,ALL_CAPS naming - should use lowercase
+scrape.py,reddit-content-scraper.py,RENAME,File Organization,"Method to remove punctuation and numbers from a string return re.sub(r""[^\sa-zA-Z0-9]"", """", string_to_clean).lower().strip() def read_subreddit_list()",Scrapes Reddit content,Streamlit,82,ALL_CAPS naming - should use lowercase
+scraping-download-intelligent.py,generate-files.py,RENAME,File Organization,Intelligent Content-Aware File Renamer,Analyzed from code: generate ,Streamlit,338,Name says 'download' but description doesn't match
+smart-content-renamer-v2.py,generate.py,RENAME,File Organization,🏷️ SMART CONTENT-AWARE RENAMER V2,Analyzed from code: generate ,None,460,Has version number - consolidate versions
+smart-content-renamer-v3.py,generate.py,RENAME,File Organization,?? SMART CONTENT-AWARE RENAMER V3,Analyzed from code: generate ,"HuggingFace, Streamlit",891,Has version number - consolidate versions
+smart.py,smart-organization-planner.py,RENAME,File Organization,Smart Organization Plan Generator,Plans smart organization,Streamlit,509,ALL_CAPS naming - should use lowercase
+sorts.py,image-file-sorter.py,RENAME,File Organization,Check if a given path matches any of the exclusion patterns. Parameters: path (str): The path to check. patterns (list): A list of regex patterns for ,Sorts image files,"PIL, Pandas",299,ALL_CAPS naming - should use lowercase
+test-v3.py,generate.py,RENAME,File Organization,Quick test of V3 renamer functionality,Analyzed from code: generate ,None,39,Has version number - consolidate versions
+textgenerator.py,gpt-text-generator.py,RENAME,File Organization,clean_response function.,Generates text with GPT,OpenAI,53,ALL_CAPS naming - should use lowercase
+translation.py,telegram-downloader-bot.py,RENAME,File Organization,"Hi Bro, This Is Telegrams Yet Another Sassiest Downloader com Renamer Bot Hit /help to know how to use me © @RedbullFed",Telegram file downloader bot,None,111,ALL_CAPS naming - should use lowercase
+workspace_optimizer.py,generate.py,RENAME,File Organization,Workspace Optimizer - Clean up archived projects and optimize storage,Analyzed from code: generate ,None,399,ALL_CAPS naming - should use lowercase
+PSDImage.py,image-to-image.py,RENAME,Image Analysis,PSD Image module.,Analyzed from code: convert ,"PIL, NumPy",747,ALL_CAPS naming - should use lowercase
+analyze-metadata.py,analyze-images.py,RENAME,Image Analysis,Shared helpers for GPT-based image metadata enrichment.,Analyzed from code: analyze ,PIL,201,Generic 'analyze-' prefix doesn't say what it analyzes
+aws-sqs-image-queue.py,generate.py,RENAME,Image Analysis,No description found,Analyzed from code: generate ,"PIL, Streamlit",222,Missing documentation - unclear purpose
+batch-image.py,analyze.py,RENAME,Image Analysis,No description found,Analyzed from code: analyze ,"OpenAI, PIL, Streamlit",443,Missing documentation - unclear purpose
+bubblespider_scraper.py,images.py,RENAME,Image Analysis,"extract_amazon_urls_to_csv function. # Regular expressions for matching the URLs product_url_pattern = re.compile(r""https:\/\/www\.amazon\.com\/dp\/[A",Analyzed from code: None ,None,44,ALL_CAPS naming - should use lowercase
+compile.py,compile-image-catalog-csv.py,RENAME,Image Analysis,"compile_image_info function. with open( master_csv_file_path, mode=""w"", newline="""", encoding=""utf-8"" ) as master_file: master_writer = csv.writer(mast",Compiles image catalog to CSV,Streamlit,42,ALL_CAPS naming - should use lowercase
+converts.py,convert-upscale-images.py,RENAME,Image Analysis,"convert_and_upscale_images function. # Create the destination directory if it doesn't exist os.makedirs(destination_directory, exist_ok=True) for file",Converts and upscales images,"PIL, Streamlit",77,ALL_CAPS naming - should use lowercase
+convertupscale.py,image-format-upscaler.py,RENAME,Image Analysis,"convert_and_upscale_images function. # Create the destination directory if it doesn't exist os.makedirs(destination_directory, exist_ok=True) for file",Converts format and upscales,"PIL, Streamlit",67,ALL_CAPS naming - should use lowercase
+createimages.py,dalle-image-generator.py,RENAME,Image Analysis,No description found,Generates images with DALL-E,"OpenAI, PIL, Pandas, Requests",183,ALL_CAPS naming - should use lowercase
+csvsort.py,download-sort-images-csv.py,RENAME,Image Analysis,"Create a safe filename from a title. return """".join([c if c.isalnum() else ""_"" for c in title]) def download_image(url, path):",Downloads and sorts images from CSV,"Pandas, Requests",63,ALL_CAPS naming - should use lowercase
+dalle-image-downloader.py,download.py,RENAME,Image Analysis,No description found,Analyzed from code: download ,"PIL, Requests",55,Name says 'download' but description doesn't match
+denoiser.py,ffdnet-image-denoiser.py,RENAME,Image Analysis,Denoise an image with the FFDNet denoising method,Denoises images with FFDNet,"NumPy, PyTorch",126,ALL_CAPS naming - should use lowercase
+etsy-image-metadata.py,analyze.py,RENAME,Image Analysis,No description found,Analyzed from code: analyze ,"OpenAI, Pandas",112,Missing documentation - unclear purpose
+giphy-download.py,images.py,RENAME,Image Analysis,Automated Image Upscaler,Analyzed from code: None ,Streamlit,305,Name says 'download' but description doesn't match
+image-add-text-overlay.py,generate.py,RENAME,Image Analysis,No description found,Analyzed from code: generate ,PIL,65,Missing documentation - unclear purpose
+image-generate-pics.py,generate.py,RENAME,Image Analysis,No description found,Analyzed from code: generate ,PIL,225,Missing documentation - unclear purpose
+image-generator-generic.py,generate.py,RENAME,Image Analysis,No description found,Analyzed from code: generate ,"Streamlit, Requests, Beautiful Soup, Selenium",145,Missing documentation - unclear purpose
+instagram-download-photos.py,instagram.py,RENAME,Image Analysis,instabot example,Analyzed from code: None instagram,None,27,Name says 'download' but description doesn't match
+instagram-download-your-photos.py,instagram.py,RENAME,Image Analysis,instabot example,Analyzed from code: None instagram,None,18,Name says 'download' but description doesn't match
+instagram-image-uploader.py,generate.py,RENAME,Image Analysis,Based in @jeremycjang and @boldestfortune,Analyzed from code: generate ,None,237,Name says 'upload' but description doesn't match
+instagram-upload-story-photo.py,instagram.py,RENAME,Image Analysis,No description found,Analyzed from code: None instagram,None,19,Name says 'upload' but description doesn't match
+leonardo-process-images.py,generate.py,RENAME,Image Analysis,No description found,Analyzed from code: generate ,None,59,Missing documentation - unclear purpose
+leonardo-upload-image.py,upload.py,RENAME,Image Analysis,No description found,Analyzed from code: upload ,"PIL, Requests",154,Name says 'upload' but description doesn't match
+lexica.py,lexica-image-downloader.py,RENAME,Image Analysis,"get_image function. if settings.download_enabled: if not os.path.exists(file_path): safe_query = urllib.parse.quote(sentence.strip()) lexica_url = f""h",Downloads images from Lexica.art,Requests,36,ALL_CAPS naming - should use lowercase
+mydesigner.py,image-processor-pipeline.py,RENAME,Image Analysis,"ensure_directories function. output_dir = os.path.join(base_dir, ""processed_images"") os.makedirs(output_dir, exist_ok=True) return output_dir # Functi",Processes images pipeline,"Streamlit, Pandas, Requests",121,ALL_CAPS naming - should use lowercase
+nativetypes.py,jinja-native-types.py,RENAME,Image Analysis,"Return a native Python type from the list of compiled nodes. If the result is a single node, its value is returned. Otherwise, the nodes are concatena",Jinja2 native type handling,Streamlit,132,ALL_CAPS naming - should use lowercase
+openai-batch-image-seo-pipeline.py,analyze.py,RENAME,Image Analysis,No description found,Analyzed from code: analyze ,"OpenAI, PIL, Streamlit",443,API name prefix but unclear what it does
+openai-gpt4o-image-metadata.py,analyze.py,RENAME,Image Analysis,No description found,Analyzed from code: analyze ,"OpenAI, PIL",241,API name prefix but unclear what it does
+openai-image-enrichment.py,analyze-files.py,RENAME,Image Analysis,"Load all .env files from ~/.env.d directory env_d_path = Path.home() / "".env.d"" if env_d_path.exists(): for env_file in env_d_path.glob(""*.env""): with",Analyzed from code: analyze ,"PIL, Requests",116,API name prefix but unclear what it does
+openai-image-generater.py,generate.py,RENAME,Image Analysis,No description found,Analyzed from code: generate ,OpenAI,106,API name prefix but unclear what it does
+openai-media-processing-image.py,generate-files.py,RENAME,Image Analysis,"Load all .env files from ~/.env.d directory env_d_path = Path.home() / "".env.d"" if env_d_path.exists(): for env_file in env_d_path.glob(""*.env""): with",Analyzed from code: generate ,"OpenAI, PIL, Pandas, Requests",116,API name prefix but unclear what it does
+openai-vision-image-reader.py,analyze.py,RENAME,Image Analysis,No description found,Analyzed from code: analyze ,"OpenAI, PIL",282,API name prefix but unclear what it does
+organize-images-by-year.py,convert.py,RENAME,Image Analysis,No description found,Analyzed from code: convert ,None,34,Missing documentation - unclear purpose
+organizer.py,sort-images-by-type.py,RENAME,Image Analysis,"sort_images function. # Create the target directory if it doesn't exist os.makedirs(target_dir, exist_ok=True) # Supported image formats extensions = ",Sorts images by file type,PIL,72,ALL_CAPS naming - should use lowercase
+parse.py,onedrive-photo-parser.py,RENAME,Image Analysis,Extracts the base URL (URL without query parameters) and the photo name from a Onedrive photo URL :param photo_url: photo URL :return: base URL and ph,Parses OneDrive photo URLs,Selenium,102,ALL_CAPS naming - should use lowercase
+product-image.py,convert.py,RENAME,Image Analysis,No description found,Analyzed from code: convert ,Requests,46,Missing documentation - unclear purpose
+setuptools.py,setuptools-bootstrap.py,RENAME,Image Analysis,exec(compile(,Setuptools bootstrap script,Streamlit,149,ALL_CAPS naming - should use lowercase
+skip-image-fixer.py,generate.py,RENAME,Image Analysis,No description found,Analyzed from code: generate ,PIL,172,Missing documentation - unclear purpose
+telegraph-download-images.py,download.py,RENAME,Image Analysis,No description found,Analyzed from code: download ,"Streamlit, Requests, Beautiful Soup",425,Name says 'download' but description doesn't match
+testfonts-v1.py,images.py,RENAME,Image Analysis,create_text_slide function. # Create and save a text slide based on the Slide object that is passed assert type(slide) == Slide if slide.customBg: ima,Analyzed from code: None ,PIL,116,Has version number - consolidate versions
+tiktok-compile-videos-v1.py,shuffle-video.py,RENAME,Image Analysis,2. Compile video out of clips,Analyzed from code: shuffle ,None,76,Has version number - consolidate versions
+upscalecreateimages.py,generate-upscale-images.py,RENAME,Image Analysis,"Load all .env files from ~/.env.d directory env_d_path = Path.home() / "".env.d"" if env_d_path.exists(): for env_file in env_d_path.glob(""*.env""): with",Generates and upscales images,"OpenAI, PIL, Pandas, Requests",162,ALL_CAPS naming - should use lowercase
+analyze-prompt.py,generate-images.py,RENAME,Image Generation,"Generate detailed, descriptive image prompts from a timestamped transcript.",Analyzed from code: generate ,None,152,Generic 'analyze-' prefix doesn't say what it analyzes
+cover.py,dalle-typography-cover.py,RENAME,Image Generation,"generate_cover_image_with_dalle function. prompt = f""lets create a series of typography cover image for '{file_name}' in the Font and style and contex",Generates typography covers with DALL-E,"OpenAI, PIL, Requests",61,ALL_CAPS naming - should use lowercase
+image-extract-prompt-metadata.py,generate.py,RENAME,Image Generation,No description found,Analyzed from code: generate ,PIL,206,Missing documentation - unclear purpose
+vision.py,gpt-vision-image-describer.py,RENAME,Image Generation,"generate_description function. response = client.chat.completions.create( model=""gpt-4-vision-preview"", messages=[ { ""role"": ""user"", ""content"": [ { ""t",Describes images with GPT Vision,OpenAI,65,ALL_CAPS naming - should use lowercase
+ask-reddit.py,reddit-check.py,RENAME,Social Media,No description found,Analyzed from code: check reddit,None,212,Missing documentation - unclear purpose
+askreddit-loop-1.py,reddit-check.py,RENAME,Social Media,"random_title_msg function. return ""Subscribe or I'll end humanity.""",Analyzed from code: check reddit,None,152,Has version number - consolidate versions
+askredditbot.py,reddit-auto-poster.py,RENAME,Social Media,No description found,Posts to Reddit automatically,None,9,ALL_CAPS naming - should use lowercase
+instagram-bot-library.py,instagram-download.py,RENAME,Social Media,No description found,Analyzed from code: download instagram,Streamlit,975,Missing documentation - unclear purpose
+instagram-instabot-bot-youtube-user-id.py,instagram-download.py,RENAME,Social Media,No description found,Analyzed from code: download instagram,Streamlit,1042,Missing documentation - unclear purpose
+instagram-like-location-feed.py,instagram.py,RENAME,Social Media,No description found,Analyzed from code: None instagram,None,19,Missing documentation - unclear purpose
+instagram-openai-download.py,generate-files.py,RENAME,Social Media,"Load all .env files from ~/.env.d directory env_d_path = Path.home() / "".env.d"" if env_d_path.exists(): for env_file in env_d_path.glob(""*.env""): with",Analyzed from code: generate ,"OpenAI, Requests",104,Name says 'download' but description doesn't match
+instagram-stories-downloader.py,instagram.py,RENAME,Social Media,No description found,Analyzed from code: None instagram,None,18,Name says 'download' but description doesn't match
+instagram.py,instagram-bot-core.py,RENAME,Social Media,No description found,Core Instagram bot module,None,55,ALL_CAPS naming - should use lowercase
+leonardo-instagram-build.py,generate.py,RENAME,Social Media,No description found,Analyzed from code: generate ,None,91,Missing documentation - unclear purpose
+reddit-download.py,generate.py,RENAME,Social Media,No description found,Analyzed from code: generate ,"Streamlit, Requests, Beautiful Soup, Selenium",148,Name says 'download' but description doesn't match
+reddit.py,reddit-comment-formatter.py,RENAME,Social Media,"comment_html function. str = ( ""<!DOCTYPE html><html><head>"" ""<style>body {background-color: rgb(26, 26, 27);color: white;font-family: BentonSans, san",Formats Reddit comments to HTML,"Streamlit, Pandas",68,ALL_CAPS naming - should use lowercase
+subreddit.py,reddit-sort.py,RENAME,Social Media,Returns a list of threads from the AskReddit subreddit.,Analyzed from code: sort reddit,None,183,ALL_CAPS naming - should use lowercase
+subredditsentiment-apps.py,reddit-convert.py,RENAME,Social Media,No description found,Analyzed from code: convert reddit,None,81,Missing documentation - unclear purpose
+AI_SETUP_VERIFICATION.py,generate.py,RENAME,Utilities,AI Services Setup Verification Tool,Analyzed from code: generate ,None,189,ALL_CAPS naming - should use lowercase
+COMPLETE_MEDIA_PROMPT_ANALYZER.py,generate.py,RENAME,Utilities,🎬 COMPLETE MEDIA & PROMPT ANALYZER,Analyzed from code: generate ,"PIL, Streamlit, Pandas",712,ALL_CAPS naming - should use lowercase
+DEEP_CONTENT_ANALYZER_ULTIMATE.py,generate.py,RENAME,Utilities,🧠 DEEP CONTENT ANALYZER ULTIMATE,Analyzed from code: generate ,"OpenAI, Anthropic, ElevenLabs, Streamlit",865,ALL_CAPS naming - should use lowercase
+INTELLIGENT_WORKFLOW_BUILDER.py,generate.py,RENAME,Utilities,🔮 INTELLIGENT WORKFLOW BUILDER =============================== Analyzes your 748+ Python scripts and creates optimized AI-powered workflows Features: ,Analyzed from code: generate ,"OpenAI, Anthropic, ElevenLabs, Streamlit",505,ALL_CAPS naming - should use lowercase
+PROMPT_HUNTER_ULTIMATE.py,generate.py,RENAME,Utilities,🔎 PROMPT HUNTER ULTIMATE,Analyzed from code: generate ,None,521,ALL_CAPS naming - should use lowercase
+SMART_AUTOMATION_DISCOVERY.py,generate.py,RENAME,Utilities,🎯 SMART AUTOMATION DISCOVERY ENGINE,Analyzed from code: generate ,"OpenAI, Anthropic, Streamlit",545,ALL_CAPS naming - should use lowercase
+_RefreshThread.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,410,ALL_CAPS naming - should use lowercase
+advanced_script_finder.py,generate.py,RENAME,Utilities,Advanced Script Finder - Find the best Python scripts to inspire improvements,Analyzed from code: generate ,"Gemini, ElevenLabs, HuggingFace, PIL, Streamlit, FastAPI, Pandas, Requests",330,ALL_CAPS naming - should use lowercase
+analyze-all-scripts.py,generate.py,RENAME,Utilities,Comprehensive Script Analyzer,Analyzed from code: generate ,"Gemini, ElevenLabs, AssemblyAI, Deepgram, HuggingFace, PIL, Streamlit, FastAPI, Pandas, NumPy, PyTorch, TensorFlow, Whisper, pydub, Requests, Beautiful Soup, Selenium, Playwright",330,Generic 'analyze-' prefix doesn't say what it analyzes
+analyze-file-versions.py,generate.py,RENAME,Utilities,Script Version Analyzer,Analyzed from code: generate ,None,236,Generic 'analyze-' prefix doesn't say what it analyzes
+analyze-reader.py,analyze.py,RENAME,Utilities,No description found,Analyzed from code: analyze ,"OpenAI, PIL",333,Generic 'analyze-' prefix doesn't say what it analyzes
+api-key-inventory-v2.py,generate.py,RENAME,Utilities,🔑 API KEY INVENTORY V2,Analyzed from code: generate ,"ElevenLabs, AssemblyAI, Deepgram",285,Has version number - consolidate versions
+breakdown.py,analyze-files.py,RENAME,Utilities,"get_script_description function. with open(file_path, ""r"") as file: script_content = file.read() # OpenAI API call to get the script description respo",Analyzed from code: analyze ,OpenAI,64,ALL_CAPS naming - should use lowercase
+check-file.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,None,84,Missing documentation - unclear purpose
+check.py,analyze.py,RENAME,Utilities,No description found,Analyzed from code: analyze ,None,74,ALL_CAPS naming - should use lowercase
+classify.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"OpenAI, Streamlit",195,ALL_CAPS naming - should use lowercase
+client-v1.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,Requests,264,Has version number - consolidate versions
+clips-1.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"PIL, NumPy, pydub",179,Has version number - consolidate versions
+computer.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,Anthropic,407,ALL_CAPS naming - should use lowercase
+confcli.py,files.py,RENAME,Utilities,remove_old_files function. # Delete temporary file that may still exist if the program was # interrupted during the editing of the clips try: if os.pa,Analyzed from code: None ,None,101,ALL_CAPS naming - should use lowercase
+consolidation.py,generate-files.py,RENAME,Utilities,Final File Consolidation Script,Analyzed from code: generate ,Streamlit,429,ALL_CAPS naming - should use lowercase
+content-aware-analyzer.py,generate.py,RENAME,Utilities,Detailed Comparison Report Generator,Analyzed from code: generate ,None,423,Name says 'analyzer' but description doesn't match
+conversion.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,Streamlit,211,ALL_CAPS naming - should use lowercase
+custom-thumbnail.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"PIL, NumPy",155,Missing documentation - unclear purpose
+dalle-prompt.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"OpenAI, PIL, Requests",120,Missing documentation - unclear purpose
+deep.py,generate.py,RENAME,Utilities,Deep Analyzer with Content-Awareness,Analyzed from code: generate ,None,385,ALL_CAPS naming - should use lowercase
+deep_folder_analyzer.py,convert.py,RENAME,Utilities,Deep Folder Analyzer - Comprehensive directory analysis tool,Analyzed from code: convert ,None,352,ALL_CAPS naming - should use lowercase
+defaults.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,46,ALL_CAPS naming - should use lowercase
+development-apps-input.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,285,Missing documentation - unclear purpose
+devops.py,generate.py,RENAME,Utilities,Context-Efficient DevOps Engineer Agent,Analyzed from code: generate ,None,478,ALL_CAPS naming - should use lowercase
+diagnose.py,generate.py,RENAME,Utilities,"Diagnostic functions, mainly for use when doing tech support.",Analyzed from code: generate ,Beautiful Soup,263,ALL_CAPS naming - should use lowercase
+direct.py,convert.py,RENAME,Utilities,:param self: bot :param text: text of message :param user_ids: list of user_ids for creating group or one user_id for send to one person :param thread,Analyzed from code: convert ,None,246,ALL_CAPS naming - should use lowercase
+dualdomainstrategy-v1.py,generate.py,RENAME,Utilities,Dual-Domain Strategy Implementation System,Analyzed from code: generate ,"Streamlit, Requests",878,Has version number - consolidate versions
+edit.py,generate-files.py,RENAME,Utilities,"An filesystem editor tool that allows the agent to view, create, and edit files. The tool parameters are defined by Anthropic and are not editable.",Analyzed from code: generate ,Streamlit,565,ALL_CAPS naming - should use lowercase
+elevenlabs.py,elevenlabs-generate.py,RENAME,Utilities,__init__ function. self.max_chars = CONSTANT_2500 self.voices = voices,Analyzed from code: generate ,ElevenLabs,54,ALL_CAPS naming - should use lowercase
+emotional.py,generate.py,RENAME,Utilities,AlchemyAPI Emotional Quiz Generator,Analyzed from code: generate ,"OpenAI, pydub, Requests",267,ALL_CAPS naming - should use lowercase
+evaluate.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"OpenAI, Streamlit",261,ALL_CAPS naming - should use lowercase
+extract-topic-from-text.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,55,Missing documentation - unclear purpose
+extract.py,sort.py,RENAME,Utilities,"get_full_annotation_field_id function. components = [] while annotation: field_name = annotation.get(""/T"") if field_name: components.append(field_name",Analyzed from code: sort ,Streamlit,178,ALL_CAPS naming - should use lowercase
+fancyimg.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,OpenAI,104,ALL_CAPS naming - should use lowercase
+fancyname.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"OpenAI, Streamlit",125,ALL_CAPS naming - should use lowercase
+ffmpeg-help.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,150,Missing documentation - unclear purpose
+ffmpeg-robot.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,None,262,Missing documentation - unclear purpose
+file-uploader.py,shuffle.py,RENAME,Utilities,No description found,Analyzed from code: shuffle ,None,158,Name says 'upload' but description doesn't match
+fill-utility.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,117,Missing documentation - unclear purpose
+finder.py,generate-files.py,RENAME,Utilities,Comprehensive Duplicate File Detection Script,Analyzed from code: generate ,None,162,ALL_CAPS naming - should use lowercase
+finetune-unsloth.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"HuggingFace, Streamlit, PyTorch",400,Missing documentation - unclear purpose
+generatetexts-1.py,files.py,RENAME,Utilities,"Load all .env files from ~/.env.d directory env_d_path = Path.home() / "".env.d"" if env_d_path.exists(): for env_file in env_d_path.glob(""*.env""): with",Analyzed from code: None ,OpenAI,47,Has version number - consolidate versions
+genshi.py,convert.py,RENAME,Utilities,__iter__ function. # Buffer the events so we can pass in the following one previous = None for event in self.tree: if previous is not None: for token ,Analyzed from code: convert ,None,93,ALL_CAPS naming - should use lowercase
+get-hashtags-from.py,instagram-generate.py,RENAME,Utilities,No description found,Analyzed from code: generate instagram,None,82,Missing documentation - unclear purpose
+giphy-downloader.py,whisper-files.py,RENAME,Utilities,"Load configuration file with open(config_file, ""r"", encoding=""utf-8"") as f: return yaml.safe_load(f) def get_media_files(config):",Analyzed from code: None ,Whisper,202,Name says 'download' but description doesn't match
+gui-apps-downloader.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,99,Name says 'download' but description doesn't match
+instabot-api-prepare.py,check.py,RENAME,Utilities,No description found,Analyzed from code: check ,None,105,Missing documentation - unclear purpose
+leonardo-avatar-download.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,None,124,Name says 'download' but description doesn't match
+leonardo-content-creation-leonardo.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,Requests,93,Missing documentation - unclear purpose
+leonardo-cyberpunk-hacker-generator.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,Requests,115,Missing documentation - unclear purpose
+leonardo-download-1.py,upload-files.py,RENAME,Utilities,"Load all .env files from ~/.env.d directory env_d_path = Path.home() / "".env.d"" if env_d_path.exists(): for env_file in env_d_path.glob(""*.env""): with",Analyzed from code: upload ,"PIL, Requests",222,Has version number - consolidate versions
+leonardo-download-batch.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,Requests,151,Name says 'download' but description doesn't match
+leonardo-download.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,Requests,93,Name says 'download' but description doesn't match
+leonardo-generation.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,Requests,151,Missing documentation - unclear purpose
+leonardo-leodown.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,Requests,59,Missing documentation - unclear purpose
+leonardo-myinfo.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,Requests,25,Missing documentation - unclear purpose
+leonardo-ssh-avatararts-downloader.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,None,121,Name says 'download' but description doesn't match
+leonardo-upscaled.py,upload.py,RENAME,Utilities,No description found,Analyzed from code: upload ,"PIL, Requests",212,Missing documentation - unclear purpose
+leonardo.py,download.py,RENAME,Utilities,leonardo_motion_cli.py,Analyzed from code: download ,"Streamlit, Requests",263,ALL_CAPS naming - should use lowercase
+loop.py,convert.py,RENAME,Utilities,Agentic sampling loop that calls the Claude API and local implementation of anthropic-defined computer use tools.,Analyzed from code: convert ,"Anthropic, Streamlit",325,ALL_CAPS naming - should use lowercase
+lyrics-storyboards.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,OpenAI,80,Missing documentation - unclear purpose
+model-evaluation-evaluate.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"OpenAI, Streamlit",230,Missing documentation - unclear purpose
+named.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"PIL, Streamlit",227,ALL_CAPS naming - should use lowercase
+openai-content-creation-nocturne.py,generate.py,RENAME,Utilities,Merged Content Analysis Tool,Analyzed from code: generate ,"OpenAI, Groq",62,API name prefix but unclear what it does
+openai-download.py,generate.py,RENAME,Utilities,Python Script Map Generator,Analyzed from code: generate ,Streamlit,258,API name prefix but unclear what it does
+openai-generate.py,generate.py,RENAME,Utilities,"build_editor_agent function. tool_retry_instructions = load_prompt(""tool_retry_prompt.md"") editor_prompt = load_prompt(""editor_base.md"") return Agent(",Analyzed from code: generate ,None,48,API name prefix but unclear what it does
+openai-missingapikeyerror.py,analyze.py,RENAME,Utilities,Environment loading helpers for analyze scripts.,Analyzed from code: analyze ,OpenAI,84,API name prefix but unclear what it does
+page.py,generate.py,RENAME,Utilities,Page Maker v3 — a lean static generator with good defaults.,Analyzed from code: generate ,Streamlit,307,ALL_CAPS naming - should use lowercase
+parse-api.py,analyze.py,RENAME,Utilities,No description found,Analyzed from code: analyze ,OpenAI,228,Missing documentation - unclear purpose
+parse-simple.py,instagram-shuffle.py,RENAME,Utilities,No description found,Analyzed from code: shuffle instagram,Streamlit,100,Missing documentation - unclear purpose
+pdf2img.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,None,27,Missing documentation - unclear purpose
+performance.py,generate.py,RENAME,Utilities,Performance Optimization Script,Analyzed from code: generate ,Streamlit,273,ALL_CAPS naming - should use lowercase
+pip-installer-bootstrap.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,33355,Missing documentation - unclear purpose
+playlist.py,spotify-download.py,RENAME,Utilities,No description found,Analyzed from code: download spotify,Streamlit,214,ALL_CAPS naming - should use lowercase
+printify-blueprint-downloader.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,Requests,97,Name says 'download' but description doesn't match
+project.py,generate.py,RENAME,Utilities,AvaTarArTs Project Manager,Analyzed from code: generate ,Streamlit,492,ALL_CAPS naming - should use lowercase
+pydescribe.py,analyze.py,RENAME,Utilities,Extracts top-level functions and classes from the script content.,Analyzed from code: analyze ,OpenAI,107,ALL_CAPS naming - should use lowercase
+pyinstaller.py,check.py,RENAME,Utilities,A crude *bit of everything* smoke test to verify PyInstaller compatibility.,Analyzed from code: check ,NumPy,32,ALL_CAPS naming - should use lowercase
+quantum.py,convert.py,RENAME,Utilities,__init__ function. self.chaos_factor = chaos_factor,Analyzed from code: convert ,"PIL, NumPy",38,ALL_CAPS naming - should use lowercase
+quantumforgelabs.py,generate.py,RENAME,Utilities,"<svg xmlns=""http://www.w3.org/CONSTANT_2000/svg"" viewBox=""0 0 CONSTANT_640 640"" role=""img"" aria-label=""QuantumForgeLabs logo""> <defs> <linearGradient ",Analyzed from code: generate ,PIL,362,ALL_CAPS naming - should use lowercase
+query.py,generate.py,RENAME,Utilities,"generate function. assert ( expand_to_n > 0 ), f""'expand_to_n' should be greater than 0. Got {expand_to_n}."" if self._mock: return [query for _ in ran",Analyzed from code: generate ,OpenAI,55,ALL_CAPS naming - should use lowercase
+re-size.py,check.py,RENAME,Utilities,No description found,Analyzed from code: check ,"PIL, Streamlit",156,Missing documentation - unclear purpose
+rebuild.py,files.py,RENAME,Utilities,Rebuild the internal timezone info in dateutil/zoneinfo/zoneinfo*tar* filename is the timezone tarball from ``ftp.iana.org/tz``.,Analyzed from code: None ,None,76,ALL_CAPS naming - should use lowercase
+recovery.py,analyze.py,RENAME,Utilities,Recovery Analyzer - Comprehensive analysis of Python backup locations,Analyzed from code: analyze ,None,231,ALL_CAPS naming - should use lowercase
+replace.py,generate.py,RENAME,Utilities,Apply text replacements to PowerPoint presentation.,Analyzed from code: generate ,None,385,ALL_CAPS naming - should use lowercase
+resize.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"OpenAI, PIL, Streamlit",277,ALL_CAPS naming - should use lowercase
+resizer.py,files.py,RENAME,Utilities,setup_logging function. level = logging.DEBUG if verbose else logging.INFO handlers = [logging.StreamHandler()] if log_file: handlers.append(logging.F,Analyzed from code: None ,PIL,144,ALL_CAPS naming - should use lowercase
+riddle.py,generate.py,RENAME,Utilities,"Function. prompt_text = ""Generate a sphinx riddle with a question, an answer, a correct response message, and an incorrect response message."" messages",Analyzed from code: generate ,OpenAI,101,ALL_CAPS naming - should use lowercase
+savify.py,youtube-download.py,RENAME,Utilities,Main module for Savify.,Analyzed from code: download youtube,Requests,395,ALL_CAPS naming - should use lowercase
+scan_volumes.py,generate.py,RENAME,Utilities,Scan External Volumes - Find Python scripts on external drives,Analyzed from code: generate ,"Gemini, ElevenLabs, HuggingFace, PIL, Streamlit, FastAPI, Pandas, NumPy, PyTorch, TensorFlow, Requests",294,ALL_CAPS naming - should use lowercase
+scanpython.py,analyze-files.py,RENAME,Utilities,"get_script_description function. with open(file_path, ""r"") as file: script_content = file.read() # OpenAI API call to get the script description respo",Analyzed from code: analyze ,OpenAI,63,ALL_CAPS naming - should use lowercase
+scanpythons.py,analyze.py,RENAME,Utilities,Extracts top-level functions and classes from the script content.,Analyzed from code: analyze ,OpenAI,77,ALL_CAPS naming - should use lowercase
+screenshot-generate.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,115,Missing documentation - unclear purpose
+script-simple.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,None,98,Missing documentation - unclear purpose
+setters.py,convert.py,RENAME,Utilities,Commonly used hooks for on_setattr.,Analyzed from code: convert ,None,75,ALL_CAPS naming - should use lowercase
+simplify.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,"OpenAI, Streamlit",111,ALL_CAPS naming - should use lowercase
+software.py,generate.py,RENAME,Utilities,Context-Efficient Software Architect Agent,Analyzed from code: generate ,Streamlit,398,ALL_CAPS naming - should use lowercase
+speak.py,openai-tts-generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,53,ALL_CAPS naming - should use lowercase
+speek.py,openai-tts.py,RENAME,Utilities,No description found,Analyzed from code: None ,OpenAI,14,ALL_CAPS naming - should use lowercase
+split.py,files.py,RENAME,Utilities,"split_html_file function. # Ensure the file exists if not os.path.isfile(file_path): logger.info(f""File '{file_path}' not found."") return # Create out",Analyzed from code: None ,None,53,ALL_CAPS naming - should use lowercase
+stability.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,PIL,104,ALL_CAPS naming - should use lowercase
+sticker-download.py,download.py,RENAME,Utilities,No description found,Analyzed from code: download ,None,111,Name says 'download' but description doesn't match
+story-trans.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,OpenAI,159,Missing documentation - unclear purpose
+storykeytrans.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,OpenAI,154,ALL_CAPS naming - should use lowercase
+streamlabs-polly.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,Requests,79,Missing documentation - unclear purpose
+subject.py,generate.py,RENAME,Utilities,Subject-aware reframing using face/pose detection for intelligent cropping,Analyzed from code: generate ,NumPy,207,ALL_CAPS naming - should use lowercase
+template.py,generate.py,RENAME,Utilities,"<div class=""job-listing""> <div class=""job-header""> <div class=""job-title""> <a href=""{apply_url}"" target=""_blank"">{job_title}</a> </div> <div class=""jo",Analyzed from code: generate ,None,168,ALL_CAPS naming - should use lowercase
+testjoin-v1.py,convert.py,RENAME,Utilities,"test_append_join_nondatetimeindex function. rng = timedelta_range(""1 days"", periods=10) idx = Index([""a"", ""b"", ""c"", ""d""]) result = rng.append(idx) ass",Analyzed from code: convert ,"Pandas, NumPy",54,Has version number - consolidate versions
+textgenerator-1.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,OpenAI,55,Has version number - consolidate versions
+thumbnail.py,files.py,RENAME,Utilities,"Load all .env files from ~/.env.d directory env_d_path = Path.home() / "".env.d"" if env_d_path.exists(): for env_file in env_d_path.glob(""*.env""): with",Analyzed from code: None ,"Streamlit, Pandas, Requests",85,ALL_CAPS naming - should use lowercase
+ts_python_bridge.py,generate.py,RENAME,Utilities,🌉 TypeScript-Python Content Awareness Bridge ============================================== Bridges your TypeScript deepContentAwareness.ts system wit,Analyzed from code: generate ,"OpenAI, NumPy",293,ALL_CAPS naming - should use lowercase
+typography.py,convert.py,RENAME,Utilities,"Typography System - Professional text rendering with outlines, shadows, and effects.",Analyzed from code: convert ,PIL,371,ALL_CAPS naming - should use lowercase
+ultra.py,generate-files.py,RENAME,Utilities,Ultra Advanced Content-Aware File Analysis System,Analyzed from code: generate ,"HuggingFace, Streamlit, Pandas, NumPy, PyTorch, TensorFlow",1868,ALL_CAPS naming - should use lowercase
+upload-products.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,"Pandas, Requests",95,Name says 'upload' but description doesn't match
+upload-simple.py,instagram-shuffle.py,RENAME,Utilities,No description found,Analyzed from code: shuffle instagram,Streamlit,104,Name says 'upload' but description doesn't match
+uploader.py,upload.py,RENAME,Utilities,No description found,Analyzed from code: upload ,"Pandas, Requests",269,ALL_CAPS naming - should use lowercase
+upscale-and-upload.py,convert.py,RENAME,Utilities,No description found,Analyzed from code: convert ,"Pandas, Requests",96,Name says 'upload' but description doesn't match
+upscale-sips.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,PIL,229,Missing documentation - unclear purpose
+upscale.py,generate.py,RENAME,Utilities,Move Improvements Back Script,Analyzed from code: generate ,None,339,ALL_CAPS naming - should use lowercase
+upscaler.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,PIL,171,ALL_CAPS naming - should use lowercase
+upwork.py,scrape.py,RENAME,Utilities,No description found,Analyzed from code: scrape ,"Pandas, Playwright",245,ALL_CAPS naming - should use lowercase
+user.py,check-files.py,RENAME,Utilities,"load_excel function. try: df = pd.read_excel(file_path) logger.info(""Excel file loaded successfully."") return df except Exception as e: logger.info(f""",Analyzed from code: check ,Pandas,35,ALL_CAPS naming - should use lowercase
+utils-1.py,check.py,RENAME,Utilities,No description found,Analyzed from code: check ,None,182,Has version number - consolidate versions
+verify-connection.py,check.py,RENAME,Utilities,No description found,Analyzed from code: check ,None,68,Missing documentation - unclear purpose
+visual.py,convert.py,RENAME,Utilities,"Visual Effects - Particles, motion blur, impacts, and other effects for GIFs.",Analyzed from code: convert ,"PIL, NumPy",554,ALL_CAPS naming - should use lowercase
+voice.py,convert.py,RENAME,Utilities,"Checks if the response is a ratelimit response. If it is, it sleeps for the time specified in the response.",Analyzed from code: convert ,None,110,ALL_CAPS naming - should use lowercase
+walk-directories-recursive.py,generate.py,RENAME,Utilities,No description found,Analyzed from code: generate ,None,219,Missing documentation - unclear purpose
+wiggle.py,convert.py,RENAME,Utilities,"Wiggle Animation - Smooth, organic wobbling and jiggling motions.",Analyzed from code: convert ,PIL,312,ALL_CAPS naming - should use lowercase
+instagram-extract-video-reader.py,instagram-shuffle.py,RENAME,Video Processing,No description found,Analyzed from code: shuffle instagram,Streamlit,95,Missing documentation - unclear purpose
+pexels-video-downloader.py,download.py,RENAME,Video Processing,No description found,Analyzed from code: download ,"Streamlit, Requests",444,Name says 'download' but description doesn't match
+thumbs.py,video.py,RENAME,Video Processing,"export_thumbnail function. cmd = [ ""ffmpeg"", ""-y"", ""-i"", video_path, ""-vf"", ""thumbnail,scale=CONSTANT_1080:-2"", ""-frames:v"", ""1"", out_png, ] subproces",Analyzed from code: None ,None,23,ALL_CAPS naming - should use lowercase
+video_compressor.py,generate-video.py,RENAME,Video Processing,Video Compressor - Compress large videos to save space,Analyzed from code: generate ,None,226,ALL_CAPS naming - should use lowercase
+crawl.py,check.py,RENAME,Web Scraping,"get_check_value function. def check(value, checks, name): def get_check_value(key, default_result):",Analyzed from code: check ,None,170,ALL_CAPS naming - should use lowercase
+instagram-social-platforms-instagram-scraper.py,json-to-json.py,RENAME,Web Scraping,No description found,Analyzed from code: convert ,"Streamlit, Requests, Selenium",2916,Missing documentation - unclear purpose
+scraper.py,reddit-download.py,RENAME,Web Scraping,"download_vid function. download = Downloader(url, max_q=True) download.path = directory download.download() logger.info(os.listdir(directory))",Analyzed from code: download reddit,None,52,ALL_CAPS naming - should use lowercase
+aws-polly-tts.py,aws-polly-tts.py,KEEP,Audio Generation,No description found,Already has descriptive name,None,92,Missing documentation - unclear purpose
+instagram-whispertext-combine.py,instagram-whispertext-combine.py,REVIEW,Audio Generation,No description found,Needs manual analysis,"Streamlit, Pandas",81,Missing documentation - unclear purpose
+instagram-whispertext.py,instagram-whispertext.py,REVIEW,Audio Generation,No description found,Needs manual analysis,"Streamlit, Pandas",81,Missing documentation - unclear purpose
+excolors.py,excolors.py,REVIEW,Code Analysis,Color schemes for exception handling code in IPython.,Needs manual analysis,None,161,ALL_CAPS naming - should use lowercase
+hardcoded.py,hardcoded.py,REVIEW,Code Analysis,Automated API Key Fixer,Needs manual analysis,"OpenAI, ElevenLabs",259,ALL_CAPS naming - should use lowercase
+indent.py,indent.py,REVIEW,Code Analysis,Decorator for allowing to use method as normal method or with context manager for auto-indenting code blocks.,Needs manual analysis,None,30,ALL_CAPS naming - should use lowercase
+optimizer.py,optimizer.py,REVIEW,Code Analysis,The optimizer tries to constant fold expressions and modify the AST,Needs manual analysis,Streamlit,52,ALL_CAPS naming - should use lowercase
+pickleshare.py,pickleshare.py,REVIEW,Code Analysis,PickleShare - a small 'shelve' like datastore with concurrency support,Needs manual analysis,Streamlit,359,ALL_CAPS naming - should use lowercase
+resolution.py,resolution.py,REVIEW,Code Analysis,"test_dti_resolution function. tz = tz_naive_fixture if freq == ""YE"" and not IS64 and isinstance(tz, tzlocal): request.applymarker( pytest.mark.xfail(r",Needs manual analysis,Streamlit,33,ALL_CAPS naming - should use lowercase
+brand.py,brand.py,REVIEW,Data Processing,"load function. with open(path, ""r"", encoding=""utf-8"") as f: data = json.load(f) return BrandTemplate( **{k: v for k, v in data.items() if k in BrandTe",Needs manual analysis,None,27,ALL_CAPS naming - should use lowercase
+csv-extract-webm-files.py,csv-extract-webm-files.py,REVIEW,Data Processing,No description found,Needs manual analysis,Pandas,28,Missing documentation - unclear purpose
+csvmerge.py,csvmerge.py,REVIEW,Data Processing,No description found,Needs manual analysis,Pandas,73,ALL_CAPS naming - should use lowercase
+database.py,database.py,REVIEW,Data Processing,No description found,Needs manual analysis,None,303,ALL_CAPS naming - should use lowercase
+etsy-printify-download-csv.py,etsy-printify-download-csv.py,REVIEW,Data Processing,No description found,Needs manual analysis,Requests,45,Name says 'download' but description doesn't match
+export-data-warehouse.py,export-data-warehouse.py,REVIEW,Data Processing,No description found,Needs manual analysis,None,101,Missing documentation - unclear purpose
+firebase-api-processor.py,firebase-api-processor.py,REVIEW,Data Processing,No description found,Needs manual analysis,Requests,486,Missing documentation - unclear purpose
+installations.py,installations.py,REVIEW,Data Processing,"run_command function. try: result = subprocess.check_output(command, shell=True, universal_newlines=True) return result.strip().split(Path(""\n"")) exce",Needs manual analysis,None,51,ALL_CAPS naming - should use lowercase
+pdfcsv.py,pdfcsv.py,REVIEW,Data Processing,No description found,Needs manual analysis,None,6,ALL_CAPS naming - should use lowercase
+process-imove-backups.py,process-imove-backups.py,REVIEW,Data Processing,No description found,Needs manual analysis,None,34,Generic 'process-' prefix doesn't describe processing
+refresolver-v1.py,refresolver-v1.py,REVIEW,Data Processing,JSON Schema URI resolution scopes and dereferencing,Needs manual analysis,None,186,Has version number - consolidate versions
+csv-print-on-demand-catalog.py,csv-print-on-demand-catalog.py,REVIEW,Documentation,No description found,Needs manual analysis,None,35,Missing documentation - unclear purpose
+PROCESS_BATCH_RENAMES.py,PROCESS_BATCH_RENAMES.py,REVIEW,File Organization,Batch Rename Processor,Needs manual analysis,Streamlit,186,ALL_CAPS naming - should use lowercase
+pytables.py,pytables.py,REVIEW,File Organization,"test_pytables_raises function. df = pd.DataFrame({""A"": [1, 2]}) with pytest.raises(ImportError, match=""tables""): with tm.ensure_clean(""foo.h5"") as pat",Needs manual analysis,"Streamlit, Pandas",16,ALL_CAPS naming - should use lowercase
+targeted-v1.py,targeted-v1.py,REVIEW,File Organization,Targeted cleanup: Fix obvious issues,Needs manual analysis,Streamlit,148,Has version number - consolidate versions
+etsy-product-images.py,etsy-product-images.py,REVIEW,Image Analysis,No description found,Needs manual analysis,"Pandas, Requests",71,Missing documentation - unclear purpose
+image-batch-downloader.py,image-batch-downloader.py,REVIEW,Image Analysis,No description found,Needs manual analysis,"PIL, Streamlit",193,Name says 'download' but description doesn't match
+image-optimize-9mb-threshold.py,image-optimize-9mb-threshold.py,REVIEW,Image Analysis,No description found,Needs manual analysis,PIL,173,Missing documentation - unclear purpose
+image-resize-aspect-ratios.py,image-resize-aspect-ratios.py,REVIEW,Image Analysis,No description found,Needs manual analysis,PIL,211,Missing documentation - unclear purpose
+image-resize.py,image-resize.py,REVIEW,Image Analysis,No description found,Needs manual analysis,"PIL, Streamlit",203,Missing documentation - unclear purpose
+image-taggy.py,image-taggy.py,REVIEW,Image Analysis,No description found,Needs manual analysis,"PIL, Requests",166,Missing documentation - unclear purpose
+instagram-combiner.py,instagram-combiner.py,REVIEW,Social Media,No description found,Needs manual analysis,"Streamlit, Pandas",80,Missing documentation - unclear purpose
+instagram-download-1.py,instagram-download-1.py,REVIEW,Social Media,No description found,Needs manual analysis,Selenium,98,Has version number - consolidate versions
+instagram-upload.py,instagram-upload.py,REVIEW,Social Media,No description found,Needs manual analysis,None,23,Name says 'upload' but description doesn't match
+backlinker.py,backlinker.py,REVIEW,Utilities,_ ____             _    _ _       _ | |  _ \           | |  | (_)     | | _   _ _ __| | |_) | __ _  ___| | _| |_ _ __ | | _____ _ __ | | | | '__| |  _,Needs manual analysis,Requests,49,ALL_CAPS naming - should use lowercase
+batch-info.py,batch-info.py,REVIEW,Utilities,No description found,Needs manual analysis,OpenAI,175,Missing documentation - unclear purpose
+bookmarks.py,bookmarks.py,REVIEW,Utilities,add_bookmarks function. reader = PdfReader(output_path) writer = PdfWriter() for page in reader.pages: writer.add_page(page) for item in toc_items: ti,Needs manual analysis,None,29,ALL_CAPS naming - should use lowercase
+calculator.py,calculator.py,REVIEW,Utilities,Simple calculator tool for basic math operations.,Needs manual analysis,None,55,ALL_CAPS naming - should use lowercase
+chatgpt.py,chatgpt.py,REVIEW,Utilities,ChatGPT Agent - A simple conversational AI agent using OpenAI's API,Needs manual analysis,OpenAI,189,ALL_CAPS naming - should use lowercase
+chatprompt.py,chatprompt.py,REVIEW,Utilities,Shared helpers for chat-based OpenAI interactions.,Needs manual analysis,None,55,ALL_CAPS naming - should use lowercase
+check-1.py,check-1.py,REVIEW,Utilities,No description found,Needs manual analysis,None,18,Has version number - consolidate versions
+cli.py,cli.py,REVIEW,Utilities,Simple Claude CLI for terminal usage,Needs manual analysis,Anthropic,102,ALL_CAPS naming - should use lowercase
+clip-editor.py,clip-editor.py,REVIEW,Utilities,No description found,Needs manual analysis,"PIL, Streamlit",224,Missing documentation - unclear purpose
+contacts.py,contacts.py,REVIEW,Utilities,No description found,Needs manual analysis,PIL,63,ALL_CAPS naming - should use lowercase
+createdb.py,createdb.py,REVIEW,Utilities,No description found,Needs manual analysis,None,5,ALL_CAPS naming - should use lowercase
+delete.py,delete.py,REVIEW,Utilities,"delete_media function. self.small_delay() media = self.get_media_info(media_id) media = media[0] if isinstance(media, list) else media if self.api.del",Needs manual analysis,None,44,ALL_CAPS naming - should use lowercase
+editorhooks.py,editorhooks.py,REVIEW,Utilities,'editor' hooks for common editors that work well with ipython,Needs manual analysis,Streamlit,137,ALL_CAPS naming - should use lowercase
+etree.py,etree.py,REVIEW,Utilities,No description found,Needs manual analysis,None,226,ALL_CAPS naming - should use lowercase
+evaluation.py,evaluation.py,REVIEW,Utilities,MCP Server Evaluation Harness,Needs manual analysis,Anthropic,428,ALL_CAPS naming - should use lowercase
+find-duplicates-fdupes.py,find-duplicates-fdupes.py,REVIEW,Utilities,No description found,Needs manual analysis,None,19,Missing documentation - unclear purpose
+generatetexts.py,generatetexts.py,REVIEW,Utilities,"get_facts function. response = client.completions.create( model=""text-davinci-003"", prompt=""Create three tik-tok like plain text for curious facts abo",Needs manual analysis,OpenAI,26,ALL_CAPS naming - should use lowercase
+get-file.py,get-file.py,REVIEW,Utilities,No description found,Needs manual analysis,"PIL, Streamlit",146,Missing documentation - unclear purpose
+getattr.py,getattr.py,REVIEW,Utilities,A static version of getattr.,Needs manual analysis,None,120,ALL_CAPS naming - should use lowercase
+goapi-midjourney-imagine.py,goapi-midjourney-imagine.py,REVIEW,Utilities,No description found,Needs manual analysis,Requests,40,Missing documentation - unclear purpose
+ident.py,ident.py,REVIEW,Utilities,No description found,Needs manual analysis,OpenAI,205,ALL_CAPS naming - should use lowercase
+imove.py,imove.py,REVIEW,Utilities,No description found,Needs manual analysis,None,33,ALL_CAPS naming - should use lowercase
+instabot-devices.py,instabot-devices.py,REVIEW,Utilities,No description found,Needs manual analysis,None,122,Missing documentation - unclear purpose
+instareport-libs-attack.py,instareport-libs-attack.py,REVIEW,Utilities,No description found,Needs manual analysis,None,414,Missing documentation - unclear purpose
+launcher.py,launcher.py,REVIEW,Utilities,Utilities for launching kernels,Needs manual analysis,None,191,ALL_CAPS naming - should use lowercase
+leonardo-leoup.py,leonardo-leoup.py,REVIEW,Utilities,No description found,Needs manual analysis,Requests,80,Missing documentation - unclear purpose
+leonardo-loop-upscale.py,leonardo-loop-upscale.py,REVIEW,Utilities,No description found,Needs manual analysis,Requests,88,Missing documentation - unclear purpose
+leonardo-universe4.py,leonardo-universe4.py,REVIEW,Utilities,No description found,Needs manual analysis,Requests,110,Missing documentation - unclear purpose
+macro.py,macro.py,REVIEW,Utilities,Support for interactive macros in IPython,Needs manual analysis,None,60,ALL_CAPS naming - should use lowercase
+massive.py,massive.py,REVIEW,Utilities,This template is written by @loopypanda,Needs manual analysis,None,57,ALL_CAPS naming - should use lowercase
+media-player.py,media-player.py,REVIEW,Utilities,No description found,Needs manual analysis,None,1,Missing documentation - unclear purpose
+midjourney-tool.py,midjourney-tool.py,REVIEW,Utilities,No description found,Needs manual analysis,None,30,Missing documentation - unclear purpose
+model-finetuning-sagemaker.py,model-finetuning-sagemaker.py,REVIEW,Utilities,No description found,Needs manual analysis,"HuggingFace, Streamlit",73,Missing documentation - unclear purpose
+nested.py,nested.py,REVIEW,Utilities,Validating highly nested schemas shouldn't cause exponential time blowups.,Needs manual analysis,None,56,ALL_CAPS naming - should use lowercase
+openai-script.py,openai-script.py,REVIEW,Utilities,Simple OpenAI CLI for terminal usage,Needs manual analysis,OpenAI,100,API name prefix but unclear what it does
+optional.py,optional.py,REVIEW,Utilities,"test_import_optional function. match = ""Missing .*notapackage.* pip .* conda .* notapackage"" with pytest.raises(ImportError, match=match) as exc_info:",Needs manual analysis,"Streamlit, Pandas",109,ALL_CAPS naming - should use lowercase
+oshelper.py,oshelper.py,REVIEW,Utilities,OS helper,Needs manual analysis,None,124,ALL_CAPS naming - should use lowercase
+output.py,output.py,REVIEW,Utilities,No description found,Needs manual analysis,Pandas,31,ALL_CAPS naming - should use lowercase
+pager.py,pager.py,REVIEW,Utilities,"Base class for a pager. @abstractmethod def show(self, content: str) -> None:",Needs manual analysis,None,40,ALL_CAPS naming - should use lowercase
+pip-build-environment.py,pip-build-environment.py,REVIEW,Utilities,No description found,Needs manual analysis,None,301,Missing documentation - unclear purpose
+pulse.py,pulse.py,REVIEW,Utilities,Pulse Animation - Scale objects rhythmically for emphasis.,Needs manual analysis,PIL,295,ALL_CAPS naming - should use lowercase
+python-namer.py,python-namer.py,REVIEW,Utilities,No description found,Needs manual analysis,OpenAI,172,Missing documentation - unclear purpose
+pythoncat.py,pythoncat.py,REVIEW,Utilities,No description found,Needs manual analysis,OpenAI,107,ALL_CAPS naming - should use lowercase
+pythoncatorize.py,pythoncatorize.py,REVIEW,Utilities,"get_openai_category function. try: response = client.chat.completions.create( model=""gpt-3.5-turbo"",",Needs manual analysis,OpenAI,80,ALL_CAPS naming - should use lowercase
+quickstart.py,quickstart.py,REVIEW,Utilities,"Activity flow # general settings session.set_dont_include([""friend1"", ""friend2"", ""friend3""])",Needs manual analysis,None,37,ALL_CAPS naming - should use lowercase
+recalc.py,recalc.py,REVIEW,Utilities,Excel Formula Recalculation Script,Needs manual analysis,None,206,ALL_CAPS naming - should use lowercase
+rephrase.py,rephrase.py,REVIEW,Utilities,__init__ function. self.content = content,Needs manual analysis,OpenAI,55,ALL_CAPS naming - should use lowercase
+restarter.py,restarter.py,REVIEW,Utilities,A basic kernel monitor with autorestarting.,Needs manual analysis,None,168,ALL_CAPS naming - should use lowercase
+scheme.py,scheme.py,REVIEW,Utilities,For types associated with installation schemes.,Needs manual analysis,None,30,ALL_CAPS naming - should use lowercase
+scriptwrapper.py,scriptwrapper.py,REVIEW,Utilities,No description found,Needs manual analysis,None,278,ALL_CAPS naming - should use lowercase
+secret.py,secret.py,REVIEW,Utilities,No description found,Needs manual analysis,None,19,ALL_CAPS naming - should use lowercase
+setup-browser.py,setup-browser.py,REVIEW,Utilities,No description found,Needs manual analysis,None,46,Missing documentation - unclear purpose
+sheets.py,sheets.py,REVIEW,Utilities,Google Sheets helpers using gspread.,Needs manual analysis,None,113,ALL_CAPS naming - should use lowercase
+simple.py,simple.py,REVIEW,Utilities,No description found,Needs manual analysis,None,5,ALL_CAPS naming - should use lowercase
+singleton.py,singleton.py,REVIEW,Utilities,"__call__ function. if cls not in cls._instances: cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs) return cls._instances[cls]",Needs manual analysis,None,10,ALL_CAPS naming - should use lowercase
+skip-8below.py,skip-8below.py,REVIEW,Utilities,No description found,Needs manual analysis,"PIL, Streamlit",168,Missing documentation - unclear purpose
+skiprows.py,skiprows.py,REVIEW,Utilities,Tests that skipped rows are properly handled during parsing for all of the parsers defined in parsers.py,Needs manual analysis,"Streamlit, Pandas, NumPy",343,ALL_CAPS naming - should use lowercase
+slide.py,slide.py,REVIEW,Utilities,Slide Animation - Slide elements in from edges with overshoot/bounce.,Needs manual analysis,PIL,302,ALL_CAPS naming - should use lowercase
+snoopbanner.py,snoopbanner.py,REVIEW,Utilities,No description found,Needs manual analysis,None,427,ALL_CAPS naming - should use lowercase
+society6-upload.py,society6-upload.py,REVIEW,Utilities,No description found,Needs manual analysis,Selenium,40,Name says 'upload' but description doesn't match
+sound.py,sound.py,REVIEW,Utilities,No description found,Needs manual analysis,None,3,ALL_CAPS naming - should use lowercase
+splt.py,splt.py,REVIEW,Utilities,No description found,Needs manual analysis,Beautiful Soup,51,ALL_CAPS naming - should use lowercase
+static.py,static.py,REVIEW,Utilities,No description found,Needs manual analysis,None,8,ALL_CAPS naming - should use lowercase
+subcomponents.py,subcomponents.py,REVIEW,Utilities,A benchmark which tries to compare the possible slow subparts of validation.,Needs manual analysis,None,47,ALL_CAPS naming - should use lowercase
+subtitle.py,subtitle.py,REVIEW,Utilities,No description found,Needs manual analysis,None,8,ALL_CAPS naming - should use lowercase
+sysinfo.py,sysinfo.py,REVIEW,Utilities,Utilities for getting information about IPython and the system it's running in.,Needs manual analysis,None,146,ALL_CAPS naming - should use lowercase
+tocpdf.py,tocpdf.py,REVIEW,Utilities,"create_toc_pdf function. c = canvas.Canvas(output_path, pagesize=letter) width, height = letter c.setFont(""Helvetica"", 12) y_position = height - 40 fo",Needs manual analysis,None,28,ALL_CAPS naming - should use lowercase
+tools.py,tools.py,REVIEW,Utilities,"get_openai_category function. try: response = client.chat.completions.create( model=""gpt-3.5-turbo"",",Generic single-word name - read file to rename properly,OpenAI,79,ALL_CAPS naming - should use lowercase
+twitch-download.py,twitch-download.py,REVIEW,Utilities,"request function. return requests.get( ""https://api.twitch.tv/"" + endpoint, headers=headers, params=params )",Needs manual analysis,Requests,51,Name says 'download' but description doesn't match
+ufunc.py,ufunc.py,REVIEW,Utilities,No description found,Needs manual analysis,"Streamlit, Pandas, NumPy",309,ALL_CAPS naming - should use lowercase
+unused.py,unused.py,REVIEW,Utilities,An unused schema registry should not cause slower validation.,Needs manual analysis,None,35,ALL_CAPS naming - should use lowercase
+upload.py,upload.py,REVIEW,Utilities,"Class deriving from the HTTPServer, defining new properties",Needs manual analysis,"Pandas, Requests",255,ALL_CAPS naming - should use lowercase
+usecols.py,usecols.py,REVIEW,Utilities,Tests the usecols functionality during parsing for all of the parsers defined in parsers.py,Needs manual analysis,"Streamlit, Pandas, NumPy",578,ALL_CAPS naming - should use lowercase
+verbose.py,verbose.py,REVIEW,Utilities,Tests that work on both the Python and C engines but do not have a,Needs manual analysis,"Streamlit, Pandas",86,ALL_CAPS naming - should use lowercase
+verify.py,verify.py,REVIEW,Utilities,Setup Verification Script ======================== Verifies that all automation and API packages are properly installed and accessible in the global P,Needs manual analysis,None,258,ALL_CAPS naming - should use lowercase
+video-clip-editor.py,video-clip-editor.py,REVIEW,Video Processing,No description found,Needs manual analysis,None,22,Missing documentation - unclear purpose
+scraping-download-news-api-fetcher.py,scraping-download-news-api-fetcher.py,REVIEW,Web Scraping,No description found,Needs manual analysis,PIL,198,Name says 'download' but description doesn't match
+scraping-download-scrape.py,scraping-download-scrape.py,REVIEW,Web Scraping,No description found,Needs manual analysis,"Requests, Beautiful Soup",16,Name says 'download' but description doesn't match

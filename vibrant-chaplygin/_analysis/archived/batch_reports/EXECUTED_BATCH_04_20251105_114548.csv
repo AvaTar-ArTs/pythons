@@ -1,0 +1,10 @@
+action,original,new,status
+RENAME,convert-json-writer.py,leonardo-convert-json-writer.py,completed
+RENAME,convert-loop.py,leonardo-convert-loop.py,completed
+RENAME,convert-loop2.py,leonardo-convert-loop2.py,completed
+RENAME,create_reorganization_plan.py,create-reorganization-plan.py,completed
+RENAME,cross_directory_merger.py,cross-directory-merger.py,completed
+RENAME,deep_content_cross_reference.py,deep-content-cross-reference.py,completed
+RENAME,deep_music_directory_analyzer.py,deep-music-directory-analyzer.py,completed
+RENAME,deepgram_test.py,deepgram-test.py,completed
+LIBRARY,decorator.py,_library/decorator.py,completed

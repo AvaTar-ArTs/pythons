@@ -1,0 +1,926 @@
+filename,category,purpose,services,classes,functions_count,size_kb
+15day.py,General,[Inferred from filename: 15day],,,1,1.7822265625
+15days.py,General,[Inferred from filename: 15days],,,1,1.74609375
+2leomotion.py,General,[Inferred from filename: 2leomotion],leonardo,,0,3.5078125
+2mentest.py,General,[Inferred from filename: 2mentest],,,2,1.3408203125
+AskReddit.py,Social Media,[Inferred from filename: AskReddit],"youtube, reddit",,7,8.1953125
+CLEANUP_SUNO_TOOLS.py,Music,CLEANUP SUNO_TOOLS FOLDER,,SunoToolsCleanup,2,4.474609375
+DEEP_CONTENT_ANALYSIS.py,General,DEEP CONTENT-AWARE ANALYSIS,"openai, anthropic, elevenlabs, leonardo, instagram, youtube, reddit, telegram, stability",DeepContentAnalyzer,7,9.5234375
+Multi-Modal.py,General,ULTIMATE Media Analysis Pipeline - Multi-API Edition,"openai, anthropic","LargeFileHandler, UltimateMediaAnalyzer",27,24.5576171875
+MultiThread.py,General,[Inferred from filename: MultiThread],,,2,3.626953125
+PSDImage.py,Media Processing,PSD Image module.,,PSDImage,46,22.919921875
+STANDARD_ENV_LOADER.py,General,STANDARD ENV LOADER FOR ~/.env.d/,,,0,0.3369140625
+SendNotification.py,General,4. Send tweet when video is published,,,2,0.6943359375
+WhisperTranscriber.py,General,[Inferred from filename: WhisperTranscriber],openai,,6,7.349609375
+adaptive-content-awareness.py,General,Adaptive Content-Aware Analysis System,stability,"ContextDetector, AdaptiveStrategy, DynamicInsights, AdaptiveAnalyzer",23,25.5439453125
+add_text.py,General,[Inferred from filename: add_text],,,2,1.736328125
+adown.py,General,[Inferred from filename: adown],leonardo,,3,2.83984375
+advanced_content_pipeline.py,General,🚀 ADVANCED CONTENT GENERATION PIPELINE,"openai, anthropic, elevenlabs, leonardo, instagram, stability",AdvancedContentPipeline,6,13.384765625
+against.py,General,[Inferred from filename: against],,"SingleMindedRequestHandler, H11RequestHandler",5,4.05859375
+agent.py,General,[Inferred from filename: agent],openai,GrokAgent,2,2.376953125
+aggressive-filename-cleaner.py,File Management,Aggressive Filename Cleaner - Fix the filename insanity,,AggressiveFilenameCleaner,6,10.22265625
+aggressive-renamer.py,File Management,Python Aggressive Renamer,"openai, anthropic, instagram, youtube",AggressiveRenamer,10,14.966796875
+ai-conversation-exports.py,General,File Organization Script for AI Export Tools,anthropic,,3,7.421875
+ai-stability-code.py,AI/ML,[Inferred from filename: ai-stability-code],stability,"Insight, FileContext, AnalysisResult, ContextAnalyzer, InsightGenerator",22,37.73828125
+ai_deep_analyzer.py,General,[Inferred from filename: ai_deep_analyzer],"openai, anthropic, telegram","Colors, Emojis, AICodeAnalyzer, VectorEmbeddingAnalyzer, ArchitecturalPatternDetector",18,19.390625
+album-sorting.py,General,[Inferred from filename: album-sorting],,,4,4.8779296875
+album.py,General,[Inferred from filename: album],,,1,3.0126953125
+albums.py,General,[Inferred from filename: albums],,,1,2.56640625
+alchemy-quiz.py,General,AlchemyAPI MP3 Generator,openai,,4,4.9462890625
+alias.py,General,System command aliases.,,"AliasError, InvalidAliasError, Alias, AliasManager",15,9.5830078125
+alphabet.py,General,[Inferred from filename: alphabet],,,1,4.3837890625
+analyze-code-complexity.py,General,[Inferred from filename: analyze-code-complexity],,AdvancedPythonAnalyzer,13,17.8984375
+analyze-file-migration.py,File Management,Analyze current structure and show what will be migrated where,"youtube, reddit",,5,7.9072265625
+analyze-files-comprehensive.py,File Management,MASTER COMPREHENSIVE ANALYZER,"anthropic, leonardo, instagram, youtube",MasterAnalyzer,6,6.896484375
+analyze-folder-reader.py,File Management,pyrepo_doc_organizer.py,"openai, anthropic, instagram, youtube, tiktok",ModuleInfo,13,14.6474609375
+analyze-json-writer.py,Data Processing,Complete Cleanup Orchestrator,,CleanupOrchestrator,7,6.5673828125
+analyze-metadata.py,Data Processing,Shared helpers for GPT-based image metadata enrichment.,openai,,6,6.1298828125
+analyze-mp3-transcript-prompts.py,General,[Inferred from filename: analyze-mp3-transcript-prompts],openai,,16,10.7421875
+analyze-prompt.py,General,"Generate detailed, descriptive image prompts from a timestamped transcript.",,,6,6.3271484375
+analyze-reader.py,General,[Inferred from filename: analyze-reader],openai,,4,11.0908203125
+analyze-shorts-info_code.py,General,[Inferred from filename: analyze-shorts-info_code],openai,,4,6.37890625
+analyze-transcript.py,General,Main entry point for the Transcription Analyzer example usage,openai,,8,7.677734375
+analyze-writer.py,General,Simple Quality Monitor,anthropic,"QualityMetrics, SimpleQualityMonitor",12,23.89453125
+analyze.py,General,instabot example,,,1,0.7666015625
+analyze_and_transcribe_missing.py,General,🔍 ANALYZE & TRANSCRIBE MISSING CONTENT,,"Colors, AnalyzeAndTranscribe",8,11.4697265625
+analyze_versions.py,General,Script Version Analyzer,,,3,7.5712890625
+analyzer.py,General,[Inferred from filename: analyzer],openai,,1,1.400390625
+anthropic-download.py,AI/ML,Content-Aware Chat Analysis Organizer,anthropic,ContentAwareAnalyzer,24,29.0498046875
+api.py,General,[Inferred from filename: api],leonardo,,7,4.919921875
+api_key_inventory.py,General,🔑 API KEY INVENTORY SCANNER,"openai, anthropic, elevenlabs, leonardo, instagram, youtube, reddit, telegram, tiktok, midjourney, stability","Colors, APIKeyInventory",10,13.765625
+api_key_inventory_v2.py,General,🔑 API KEY INVENTORY V2,"openai, anthropic, elevenlabs, leonardo, instagram, youtube, reddit, telegram, tiktok, midjourney, stability","Colors, APIKeyInventoryV2",10,11.3623046875
+application-query-expanison.py,General,[Inferred from filename: application-query-expanison],openai,QueryExpansion,1,1.65234375
+application-self-query.py,General,[Inferred from filename: application-self-query],openai,SelfQuery,1,1.55078125
+apply-improvements.py,General,GitHub Repository Improvement Script,,,2,4.7294921875
+approve.py,General,instabot example,,,0,0.5419921875
+apps-render.py,General,[Inferred from filename: apps-render],,App,1,1.4326171875
+apps.py,General,[Inferred from filename: apps],,,1,1.0458984375
+archive-reader.py,General,Comprehensive Merge and Consolidation Tool,openai,ComprehensiveMerger,14,21.5791015625
+ascii-python.py,General,[Inferred from filename: ascii-python],,PythonAnalyzer,8,8.43359375
+askreddit-loop-1.py,Social Media,[Inferred from filename: askreddit-loop-1],"youtube, reddit",,4,5.2294921875
+askredditbot.py,Social Media,[Inferred from filename: askredditbot],reddit,,0,0.1328125
+audio-analyzer.py,Media Processing,[Inferred from filename: audio-analyzer],openai,,4,4.6357421875
+audio-app.py,Media Processing,[Inferred from filename: audio-app],reddit,ttsvibelounge,8,4.4912109375
+audio-normalize.py,Media Processing,[Inferred from filename: audio-normalize],,,2,0.6767578125
+audio-sub.py,Media Processing,This script is used to generate a transcript from an audio file using AssemblyAI api.,,,6,2.6474609375
+audio-thinketh.py,Media Processing,Cinematic hybrid edition:,openai,,6,4.759765625
+audio-transcription-pipeline.py,Media Processing,Shared audio transcription + analysis pipeline helpers.,openai,,5,3.05859375
+audio.py,Media Processing,[Inferred from filename: audio],openai,,4,1.66015625
+audiobook-producer.py,Media Processing,OpenAI TTS Audiobook Producer,openai,OpenAITTSProducer,7,15.5673828125
+autocall.py,General,Autocall capabilities for IPython.core.,,"IPyAutocall, ExitAutocall, ZMQExitAutocall",4,1.9306640625
+autofill.py,General,[Inferred from filename: autofill],openai,,2,3.837890625
+automated-fixer.py,General,[Inferred from filename: automated-fixer],,AutomatedFixer,6,6.5654296875
+automation-playwright-screenshot.py,General,[Inferred from filename: automation-playwright-screenshot],reddit,,1,1.939453125
+automation-selenium-content.py,General,🌟 Content Generator - Quantum Creative Alchemist,"openai, youtube",ContentGenerator,9,19.77734375
+autonomous-content-agency.py,General,🎬 Autonomous Content Agency,"openai, anthropic, elevenlabs, leonardo, telegram",ContentAgency,13,25.5966796875
+avatar-download.py,General,[Inferred from filename: avatar-download],leonardo,,3,2.9052734375
+avatararts-flatten.py,General,Final Flattening Script - Move ALL files to root and remove ALL directories,,,4,7.0595703125
+aws-polly-tts.py,Text-to-Speech,[Inferred from filename: aws-polly-tts],aws-polly,AWSPolly,3,2.6123046875
+aws-sqs-image-queue.py,Media Processing,[Inferred from filename: aws-sqs-image-queue],openai,,7,7.1640625
+backlinker.py,General,[Inferred from filename: backlinker],,,0,1.5634765625
+backup-avatararts-system.py,General,Comprehensive Backup System for AvaTarArTs Projects,"openai, leonardo",AvaTarArTsBackupSystem,7,17.904296875
+backup-installations.py,General,[Inferred from filename: backup-installations],,,1,1.3671875
+backupcsv.py,Data Processing,[Inferred from filename: backupcsv],,,2,2.1279296875
+base-classes.py,General,Robust Documents Analyzer,,RobustDocumentsAnalyzer,17,16.943359375
+base-gallery-logic.py,General,[Inferred from filename: base-gallery-logic],,BaseGalleryLogic,4,1.8916015625
+basic-follow-unfollow.py,General,This template is written by @cormo1990,,,0,3.2626953125
+basics.py,General,MIT License,,,7,8.8251953125
+batch-1.py,General,[Inferred from filename: batch-1],"openai, tiktok",,9,16.8974609375
+batch-folder-writer.py,File Management,[Inferred from filename: batch-folder-writer],,,2,2.3251953125
+batch-image.py,Media Processing,[Inferred from filename: batch-image],"openai, tiktok",,9,16.8974609375
+batch-info.py,General,[Inferred from filename: batch-info],openai,,3,5.310546875
+batch-processor.py,Data Processing,[Inferred from filename: batch-processor],youtube,,3,1.8857421875
+batch.py,General,Enhanced Batch Gallery Generator for Simple Photo Gallery,,,11,24.81640625
+batch.py.bak.py,General,[Inferred from filename: batch.py.bak],openai,,3,5.154296875
+batch_transcript_finder.py,General,🔍 BATCH TRANSCRIPT FINDER,,"Colors, BatchTranscriptFinder",5,4.12109375
+black-white.py,General,instabot example,,,0,0.9638671875
+block-bots.py,General,instabot example,,,0,0.8916015625
+bookmarks.py,General,[Inferred from filename: bookmarks],,,1,0.708984375
+bot-library.py,General,[Inferred from filename: bot-library],instagram,Bot,153,32.861328125
+botInstagram.py,Social Media,[Inferred from filename: botInstagram],,,0,1.357421875
+botLike.py,General,[Inferred from filename: botLike],instagram,,4,5.9462890625
+bot_photo.py,General,[Inferred from filename: bot_photo],instagram,,4,3.9345703125
+brand-builder.py,General,🎨 Multi-Modal Brand Builder,"openai, anthropic, elevenlabs, leonardo, stability",BrandBuilder,2,9.591796875
+brand.py,General,[Inferred from filename: brand],,BrandTemplate,1,0.7021484375
+breakdown.py,General,[Inferred from filename: breakdown],openai,,2,1.83203125
+bubblespider-amazon-scraper.py,General,[Inferred from filename: bubblespider-amazon-scraper],,,1,1.33203125
+build.py,General,[Inferred from filename: build],,,3,5.6201171875
+bulk-renamer.py,File Management,Intelligent Bulk File Renamer,"openai, instagram, youtube, reddit, tiktok",,8,8.1474609375
+business-intelligence.py,General,📊 AI Business Intelligence Platform,"openai, anthropic, elevenlabs, telegram",BusinessIntelligence,4,8.7509765625
+button.py,General,[Inferred from filename: button],youtube,,0,12.779296875
+buttons.py,General,[Inferred from filename: buttons],youtube,,0,4.6591796875
+cache.py,General,[Inferred from filename: cache],,BotCache,2,0.4052734375
+calculator.py,General,Simple calculator tool for basic math operations.,,,1,1.5224609375
+capture.py,General,Tests for IPython.utils.capture,,,9,5.2080078125
+catalog-to-csv.py,Data Processing,analyze_images_to_csv.py,openai,,5,5.2744140625
+categorizer.py,General,[Inferred from filename: categorizer],openai,,5,3.3330078125
+category-readme-generator.py,General,Intelligent Category README Generator,"instagram, youtube",,4,6.4638671875
+chat-base.py,General,[Inferred from filename: chat-base],telegram,,1,0.6171875
+chatgpt-conversation-exporter.py,AI/ML,ChatGPT Conversation Exporter,openai,ChatGPTConversationExporter,11,17.9873046875
+chatgpt.py,AI/ML,ChatGPT Agent - A simple conversational AI agent using OpenAI's API,openai,ChatGPTAgent,7,6.7666015625
+chatprompt.py,General,Shared helpers for chat-based OpenAI interactions.,openai,ChatPrompt,2,1.439453125
+check-1.py,General,[Inferred from filename: check-1],anthropic,,0,0.4296875
+check-modules.py,General,[Inferred from filename: check-modules],,,1,1.4072265625
+check-quality.py,General,Check Current Quality Status,,,0,3.5517578125
+check.py,General,[Inferred from filename: check],anthropic,RectAndField,2,3.1298828125
+check_file.py,File Management,[Inferred from filename: check_file],,FFmpegDL,10,2.7197265625
+checkpoint.py,General,Instabot Checkpoint methods.,,Checkpoint,6,2.1884765625
+classify.py,General,[Inferred from filename: classify],openai,,4,6.2373046875
+claude-anthropic-download.py,AI/ML,Enhanced Content-Aware Chat Analysis Organizer v2.0,anthropic,EnhancedContentAnalyzerV2,28,49.1396484375
+claude-chief.py,AI/ML,🤖 Personal AI Chief of Staff,"openai, anthropic, elevenlabs, telegram, stability","Task, Meeting, ChiefOfStaff",9,30.638671875
+claude-code-review-system.py,AI/ML,💻 Intelligent Code Review & Documentation System,"openai, anthropic, telegram",CodeReviewSystem,3,10.83984375
+claude-deep.py,AI/ML,Deep Code Analysis - Advanced Content-Aware System,"openai, anthropic",DeepCodeAnalyzer,11,28.267578125
+claude.py,AI/ML,Web search server tool for the agent framework.,anthropic,WebSearchServerTool,1,1.1513671875
+clean_flatten_names.py,General,Clean and Fix Flattened Filenames,,CleanFlattenNames,5,4.197265625
+clean_folder_names_no_vols.py,File Management,📂 CLEAN FOLDER NAMES - Remove Vol Numbers,,"Colors, CleanFolderNames",8,11.2421875
+cleanup-messy-names.py,General,🔧 Fix Timestamped Files - Clean Up Messy Filenames,,TimestampedFileFixer,11,13.91796875
+cli-config-manager.py,General,AI CLI Configuration Manager,"openai, elevenlabs, leonardo, stability","APIService, AIConfigManager",20,30.3115234375
+cli.py,General,Simple Claude CLI for terminal usage,anthropic,,2,3.0048828125
+client-v1.py,General,[Inferred from filename: client-v1],,,9,7.9091796875
+clipEditor.py,General,[Inferred from filename: clipEditor],,Slide,9,7.240234375
+clips-1.py,General,[Inferred from filename: clips-1],,,15,4.7421875
+cloud-services-aws-streamlit.py,General,"Entrypoint for streamlit, see https://docs.streamlit.io/",anthropic,"ModelConfig, Sender",14,19.1904296875
+cloud-services-delete.py,General,[Inferred from filename: cloud-services-delete],,,1,2.3681640625
+cloud-services-sagemaker.py,General,[Inferred from filename: cloud-services-sagemaker],,"SagemakerHuggingfaceStrategy, DeploymentService",5,7.5810546875
+code-apply-improvements.py,General,Codebase Improvement Implementer,anthropic,"ImprovementResult, CodeImprovementImplementer",22,16.8701171875
+codebase.py,General,AvaTarArTs Suite - Codebase Analyzer,,CodebaseAnalyzer,8,7.537109375
+collect-stats.py,General,instabot example,,,0,0.7705078125
+combiner.py,General,[Inferred from filename: combiner],"openai, instagram, youtube",,0,2.0498046875
+comic-strip-generator.py,General,[Inferred from filename: comic-strip-generator],stability,,0,1.6806640625
+compare-content.py,General,Descriptor data structure.,,"_DescriptorMixin, Descriptor, ObjectArray, List, Property",49,18.33984375
+compare-files.py,File Management,[Inferred from filename: compare-files],,FilesGalleryLogic,5,5.796875
+compare_versions.py,General,Version Comparison Tool,youtube,,4,5.791015625
+compile.py,General,[Inferred from filename: compile],,,1,1.3505859375
+comprehensive_dedup_rename.py,File Management,Comprehensive Deduplication & Rename,,,3,5.7001953125
+comprehensive_folder_consolidation.py,File Management,🎵 COMPREHENSIVE FOLDER CONSOLIDATION,,"Colors, ComprehensiveFolderConsolidation",13,15.5927734375
+comprehensive_music_content_scan.py,Music,🎵 COMPREHENSIVE MUSIC CONTENT SCANNER,,"Colors, ComprehensiveMusicContentScanner",12,26.0712890625
+comprehensive_transcript_search.py,General,🔍 COMPREHENSIVE TRANSCRIPT & LYRICS SEARCH,,"Colors, ComprehensiveTranscriptSearch",8,7.9755859375
+comprehensive_verifier.py,General,Comprehensive Structure Verifier,,ComprehensiveVerifier,8,8.0830078125
+computer.py,General,[Inferred from filename: computer],anthropic,"Resolution, ScalingSource, ComputerToolOptions, BaseComputerTool, ComputerTool20241022",7,14.3857421875
+confcli.py,General,[Inferred from filename: confcli],,,2,2.4521484375
+config.py,General,[Inferred from filename: config],,,1,1.0478515625
+config.py.py,General,[Inferred from filename: config.py],youtube,,0,3.0546875
+consolidate-python-ecosystem.py,General,[Inferred from filename: consolidate-python-ecosystem],,"Colors, FinalConsolidator",8,10.8828125
+consolidate_versions.py,General,Script Version Consolidator,,,2,4.189453125
+consolidation.py,General,Final File Consolidation Script,,FinalConsolidator,10,18.044921875
+constants.py,General,[Inferred from filename: constants],youtube,,0,2.38671875
+contacts.py,General,[Inferred from filename: contacts],,,1,1.95703125
+content-aware-analyzer.py,General,Detailed Comparison Report Generator,,,4,15.5712890625
+content-aware.py,General,Content-Aware File Deduplication and Organization System,,ContentAwareDeduplicator,11,11.1416015625
+content-creation-leonardo.py,AI/ML,[Inferred from filename: content-creation-leonardo],leonardo,,2,2.6171875
+content-creation-nocturne.py,General,[Inferred from filename: content-creation-nocturne],,,3,2.33984375
+content-creation-suno.py,Music,Scrape Suno-like grid HTML into CSV.,,,6,4.296875
+content-factory.py,General,🎨 AI Content Factory,"leonardo, stability",ContentFactory,10,11.9208984375
+content_aware_organizer.py,File Management,[Inferred from filename: content_aware_organizer],"openai, anthropic, instagram, reddit, tiktok","Colors, Emojis, FolderNode, ContentAwareAnalyzer, ParentFolderStructureAnalyzer",19,23.353515625
+conversation.py,General,[Inferred from filename: conversation],anthropic,ConversationExporter,7,12.1259765625
+conversion.py,General,[Inferred from filename: conversion],,,8,7.5048828125
+convert-aiff-to-mp3.py,General,Convert AIFF files to MP3 format,,,2,1.7900390625
+convert-conversations-to-csv.py,Data Processing,[Inferred from filename: convert-conversations-to-csv],,,0,2.3916015625
+convert-json-writer.py,Data Processing,[Inferred from filename: convert-json-writer],leonardo,,7,6.8515625
+convert-loop.py,General,[Inferred from filename: convert-loop],leonardo,,6,5.6025390625
+convert-loop2.py,General,[Inferred from filename: convert-loop2],leonardo,,5,6.2255859375
+convert-markdown-to-pdf.py,General,Markdown to PDF Converter,,,2,6.7900390625
+convert-mp4-transcribe.py,General,[Inferred from filename: convert-mp4-transcribe],openai,,5,1.814453125
+convert-video-segments.py,Media Processing,[Inferred from filename: convert-video-segments],openai,,5,1.86328125
+convert.py,General,Advanced File Processor - Consolidated Processing Script,openai,AdvancedFileProcessor,9,13.197265625
+converters.py,General,Commonly useful converters.,,,6,3.53515625
+converts.py,General,[Inferred from filename: converts],,,2,2.513671875
+convertupscale.py,General,[Inferred from filename: convertupscale],,,2,1.9697265625
+cover.py,General,[Inferred from filename: cover],openai,,3,1.7177734375
+crawl.py,General,[Inferred from filename: crawl],,,6,5.9013671875
+create-audiobook.py,Media Processing,[Inferred from filename: create-audiobook],,,1,1.3203125
+create-files.py,File Management,[Inferred from filename: create-files],,,4,3.7001953125
+create-gallery.py,General,[Inferred from filename: create-gallery],,,1,4.326171875
+create-strip.py,General,[Inferred from filename: create-strip],,,2,1.3984375
+create_reorganization_plan.py,General,[Inferred from filename: create_reorganization_plan],,"Colors, ReorganizationPlanner",6,12.9384765625
+createdb.py,General,[Inferred from filename: createdb],,,0,0.1455078125
+createimages.py,Media Processing,[Inferred from filename: createimages],"openai, stability",,4,6.2197265625
+cross_directory_merger.py,General,[Inferred from filename: cross_directory_merger],"openai, leonardo, instagram, youtube","Colors, CrossDirectoryMerger",9,16.9013671875
+csv-extract-webm-files.py,Data Processing,[Inferred from filename: csv-extract-webm-files],,,0,0.76953125
+csv-file-lister.py,Data Processing,[Inferred from filename: csv-file-lister],,,4,3.109375
+csv-media-catalog-helper.py,Media Processing,Helper functions for media catalog CSV cleanup and reporting.,,,5,1.92578125
+csv-print-on-demand-catalog.py,Data Processing,[Inferred from filename: csv-print-on-demand-catalog],,,0,0.9990234375
+csvmerge.py,Data Processing,[Inferred from filename: csvmerge],,,0,2.064453125
+csvsort.py,Data Processing,[Inferred from filename: csvsort],,,2,1.8232421875
+custom-thumbnail.py,General,[Inferred from filename: custom-thumbnail],,,0,5.5419921875
+customer-complaint-classifier.py,General,[Inferred from filename: customer-complaint-classifier],,,2,2.4111328125
+cutout-process.py,Data Processing,[Inferred from filename: cutout-process],,,2,2.619140625
+dalle-prompt.py,General,[Inferred from filename: dalle-prompt],"openai, youtube",,3,3.41796875
+dallecsv.py,Data Processing,[Inferred from filename: dallecsv],openai,,0,1.0791015625
+database-clients-extract.py,Data Processing,Automated Conversation Archive System,,ConversationArchiver,16,15.4296875
+database.py,Data Processing,[Inferred from filename: database],tiktok,,19,9.0361328125
+decorator.py,General,"Decorators are not really values, however we need some wrappers to improve",,Decoratee,4,1.177734375
+deduplicate-files-intelligent.py,File Management,[Inferred from filename: deduplicate-files-intelligent],,"Colors, Emojis, IntelligentDeduplicator",12,23.564453125
+deep-code.py,General,[Inferred from filename: deep-code],"openai, anthropic, telegram","Colors, Emojis, AICodeAnalyzer, VectorEmbeddingAnalyzer, ArchitecturalPatternDetector",23,29.576171875
+deep-content.py,General,AI-Powered Deep Analyzer with Content-Awareness,anthropic,"AIAnalysisResult, AIDeepAnalyzer",11,18.240234375
+deep-level.py,General,Deep 6-Level Simplifier,,Deep6LevelSimplifier,11,20.0126953125
+deep.py,General,Deep Analyzer with Content-Awareness,,"AnalysisResult, DeepAnalyzer",10,13.9384765625
+deep_content_cross_reference.py,General,📚 DEEP CONTENT CROSS-REFERENCE SCANNER,,"Colors, DeepContentCrossReference",11,22.6513671875
+deep_music_directory_analyzer.py,Music,🎵 DEEP MUSIC DIRECTORY ANALYZER & MERGER,,"Colors, DeepMusicDirectoryAnalyzer",13,25.77734375
+deepgram-updated.py,General,Updated Deepgram Live Transcription Test,,,2,3.2109375
+deepgram_test.py,General,[Inferred from filename: deepgram_test],,,3,2.32421875
+defaults.py,General,[Inferred from filename: defaults],,,0,1.21484375
+delete-endpoint.py,General,[Inferred from filename: delete-endpoint],,,1,2.3681640625
+delete-posts.py,General,instabot example,,,0,0.568359375
+delete.py,General,[Inferred from filename: delete],,,3,1.2197265625
+denoiser.py,General,Denoise an image with the FFDNet denoising method,,FFDNetDenoiser,3,4.052734375
+deploy-sagemaker.py,General,"In Amazon SageMaker and other AWS services, Application Auto Scaling allows you to automatically sca",,"IAutoScalingClient, ScalingPolicyStrategy, TargetTrackingScalingPolicy, ScalableTarget, AutoscalingSagemakerEndpoint",14,7.724609375
+development-apps-input.py,General,[Inferred from filename: development-apps-input],,,6,7.849609375
+development-frameworks-python.py,General,Enhanced Python Directory Metadata Analyzer,,,4,10.1259765625
+development-gui-apps-hooks.py,General,Hooks for IPython.,,CommandChainDispatcher,10,5.4609375
+development-process-proc.py,Data Processing,[Inferred from filename: development-process-proc],tiktok,,3,5.4736328125
+development-utils-jsonutil.py,Data Processing,Utilities to manipulate JSON objects.,,,7,5.931640625
+devops.py,General,Context-Efficient DevOps Engineer Agent,,DevOpsEngineerAgent,11,17.0947265625
+diagnose.py,General,"Diagnostic functions, mainly for use when doing tech support.",,AnnouncingParser,18,7.53515625
+direct.py,General,[Inferred from filename: direct],,,10,7.6455078125
+directory-organizer.py,File Management,Directory Organizer - Intelligently organize all folders,"leonardo, instagram, youtube, reddit, telegram, tiktok",DirectoryOrganizer,9,12.3271484375
+discography-grid-html.py,General,[Inferred from filename: discography-grid-html],,,0,5.04296875
+discography-html.py,General,[Inferred from filename: discography-html],,,0,5.037109375
+discography.py,General,AlchemyAPI Discography Merger,youtube,DiscographyMerger,13,12.6787109375
+displayhook.py,General,[Inferred from filename: displayhook],,,7,3.6748046875
+documents.py,General,Script to create a CSV backup of ~/documents directory in the same format as ~/clean,,,4,5.8154296875
+domination-engine.py,General,🚀 SEO Domination Engine,"openai, anthropic",SEODominationEngine,6,25.544921875
+down.py,General,[Inferred from filename: down],,,0,1.373046875
+download-1.py,General,Advanced Content Analyzer - Consolidated Analysis Script,"openai, youtube",AdvancedContentAnalyzer,9,10.720703125
+download-2.py,General,AlchemyAPI Advanced Demo Generator,openai,AdvancedDemoGenerator,20,22.29296875
+download-3.py,General,Simple HTML Documentation Generator,"openai, youtube",SimpleDocsGenerator,11,33.9404296875
+download-4.py,General,Advanced Sort and Deduplication Tool,openai,AdvancedSortAndDedupe,14,20.376953125
+download-data.py,Data Processing,[Inferred from filename: download-data],openai,,2,1.7216796875
+download-etsy-product-images.py,Media Processing,[Inferred from filename: download-etsy-product-images],,,0,2.4296875
+download-files.py,File Management,[Inferred from filename: download-files],,,3,3.65625
+download-gemini-storybook-audio.py,Media Processing,Gemini Storybook Downloader (macOS-friendly),,DownloadRecord,5,12.439453125
+download-giphy-gifs.py,General,[Inferred from filename: download-giphy-gifs],,,3,2.0517578125
+download.py,General,[Inferred from filename: download],,,1,1.50390625
+download_vid.py,General,[Inferred from filename: download_vid],,bcolors,17,15.9228515625
+downloader-progress.py,General,[Inferred from filename: downloader-progress],,,2,2.6572265625
+downloadr.py,General,This template is written by @Nuzzo235,,,0,3.9580078125
+downloads-index-builder.py,General,Steven's Downloads Archive - Index Generator,,,4,11.2373046875
+downloads.py,General,Downloads Directory Organizer & Consolidator,"anthropic, leonardo, midjourney",DownloadsOrganizer,11,21.1552734375
+downs.py,General,[Inferred from filename: downs],,,1,1.50390625
+drive-compare.py,General,Compare CSV analysis results from both drives,,,6,8.611328125
+dthumb.py,General,[Inferred from filename: dthumb],"elevenlabs, youtube",,2,2.7041015625
+dualdomainstrategy-v1.py,General,Dual-Domain Strategy Implementation System,"openai, instagram, youtube, tiktok, midjourney, stability",DualDomainStrategy,12,36.8603515625
+dummies.py,General,[Inferred from filename: dummies],,,33,13.0224609375
+dupes.py,General,[Inferred from filename: dupes],,,5,5.595703125
+duplicate-cleaner.py,General,Duplicate Cleaner - Remove duplicate files and consolidate naming,,DuplicateCleaner,8,9.7392578125
+dynamic.py,General,One of the really important features of |jedi| is to have an option to,,,8,7.865234375
+ecommerce-payments-deep.py,General,Deep Content-Aware File Renamer,"openai, instagram, youtube, reddit, telegram",DeepContentRenamer,8,17.9326171875
+ecosystem-insights.py,General,Python Ecosystem Insights,"openai, instagram, youtube",,1,9.5419921875
+ecosystem-master.py,General,Python Ecosystem Master Mapper,"openai, anthropic, instagram, youtube, tiktok",EcosystemMasterMapper,12,27.509765625
+edit.py,General,[Inferred from filename: edit],anthropic,"EditTool20250124, EditTool20250429, EditTool20250728, EditTool20241022",17,22.4228515625
+editorhooks.py,General,'editor' hooks for common editors that work well with ipython,,,12,4.017578125
+elevenlabs.py,AI/ML,[Inferred from filename: elevenlabs],elevenlabs,elevenlabs,3,1.2626953125
+eliminate.py,General,Eliminate Archive Directories,"instagram, youtube, reddit, telegram, tiktok",ArchiveEliminator,5,8.796875
+emoji-morph-animation.py,General,Morph Animation - Transform between different emojis or shapes.,,,3,11.681640625
+emotional.py,General,AlchemyAPI Emotional Quiz Generator,openai,EmotionalQuizGenerator,4,8.7255859375
+encoding.py,General,Tests encoding functionality during parsing,leonardo,,16,10.71875
+etree.py,General,[Inferred from filename: etree],,"Root, Doctype, FragmentRoot, FragmentWrapper, TreeWalker",23,6.380859375
+etsy-image-metadata.py,Media Processing,[Inferred from filename: etsy-image-metadata],openai,,2,3.30859375
+etsy-sort.py,General,[Inferred from filename: etsy-sort],,,1,2.74609375
+evaluate.py,General,[Inferred from filename: evaluate],openai,,7,9.2021484375
+evaluation.py,General,MCP Server Evaluation Harness,anthropic,,4,13.029296875
+events.py,General,Infrastructure for registering and firing callbacks on application events.,,EventManager,10,5.279296875
+excolors.py,General,Color schemes for exception handling code in IPython.,,,1,5.056640625
+execute-deduplication.py,General,Execute Comprehensive Deduplication & Rename,,,2,4.833984375
+execute-excel-organization.py,General,Execute Excel Organization - Non-interactive version,,,1,2.2939453125
+execute-organization-plan.py,General,Execute Smart Organization Plan,,OrganizationExecutor,8,12.58203125
+execute_archive_cleanup_merge.py,General,🧹 EXECUTE ARCHIVE CLEANUP & MERGE,,"Colors, ArchiveCleanupMerge",11,22.4423828125
+export-ai-conversations.py,General,Universal Conversation Exporter,"openai, anthropic",UniversalConversationExporter,22,29.4033203125
+export-analysis-to-csv.py,Data Processing,[Inferred from filename: export-analysis-to-csv],,"Colors, AnalysisExporter",7,10.7236328125
+export-data-warehouse.py,Data Processing,[Inferred from filename: export-data-warehouse],,,5,3.0322265625
+extract-files.py,File Management,[Inferred from filename: extract-files],,,1,1.7216796875
+extract-news-to-audio.py,Media Processing,[Inferred from filename: extract-news-to-audio],,ExtractNews,3,2.1083984375
+extract-songs.py,Music,[Inferred from filename: extract-songs],,,4,4.3359375
+extract-suno-html.py,Music,?? SUNO HTML BATCH EXTRACTOR,,,5,9.6201171875
+extract-to-audio.py,Media Processing,[Inferred from filename: extract-to-audio],,ExtractNews,3,2.08203125
+extract-topic-from-text.py,General,[Inferred from filename: extract-topic-from-text],,ExtractNews,3,2.109375
+extract-video-reader.py,Media Processing,[Inferred from filename: extract-video-reader],,,0,2.7880859375
+extract.py,General,[Inferred from filename: extract],anthropic,,5,6.6513671875
+extract_archived_content.py,General,🔍 EXTRACT & PRESERVE ARCHIVED CONTENT,,"Colors, ArchivedContentExtractor",12,21.78125
+fancyimg.py,Media Processing,[Inferred from filename: fancyimg],openai,,2,3.30078125
+fancyname.py,General,[Inferred from filename: fancyname],openai,,3,3.734375
+ffmpeg-downloader.py,General,[Inferred from filename: ffmpeg-downloader],,FFmpegDL,10,3.072265625
+ffmpeg-help.py,General,[Inferred from filename: ffmpeg-help],telegram,,0,4.8798828125
+ffmpeg-installer.py,General,[Inferred from filename: ffmpeg-installer],,,4,5.390625
+ffmpeg-robot.py,General,[Inferred from filename: ffmpeg-robot],,,0,9.3740234375
+file-uploader.py,File Management,[Inferred from filename: file-uploader],,,6,3.556640625
+fill-utility.py,General,[Inferred from filename: fill-utility],,,4,4.865234375
+filter-blacklist-hashtag.py,General,instabot filters out the media with your set blacklist hashtags,,,0,0.64453125
+filter-private-profiles.py,File Management,instabot filtering private users example,,,0,0.4365234375
+final_cleanup_extras.py,General,🧹 FINAL CLEANUP - Remove Extra Duplicates & Temp Files,,"Colors, FinalCleanupExtras",10,15.9697265625
+final_consolidation.py,General,🎵 FINAL CONSOLIDATION - Download Missing + Remove Redundant,,"Colors, FinalConsolidation",10,19.6337890625
+find-duplicates-fdupes.py,General,[Inferred from filename: find-duplicates-fdupes],,,0,0.53515625
+find-duplicates-md5.py,General,[Inferred from filename: find-duplicates-md5],,,4,6.2724609375
+finder.py,General,Comprehensive Duplicate File Detection Script,,,3,5.4921875
+finetune-unsloth.py,General,[Inferred from filename: finetune-unsloth],,,7,13.0791015625
+firebase-api-processor.py,Data Processing,[Inferred from filename: firebase-api-processor],"instagram, telegram",,9,18.9658203125
+fix-bare-except-statements.py,General,[Inferred from filename: fix-bare-except-statements],,"Colors, BareExceptFixer",9,14.75
+fix_transcript_names.py,General,📝 FIX TRANSCRIPT NAMES,,"Colors, TranscriptNameFixer",12,16.8330078125
+fixer.py,General,[Inferred from filename: fixer],,,3,1.6337890625
+flatten_all_album_structure.py,General,🎵 FLATTEN ALL ALBUM STRUCTURES,,"Colors, FlattenAlbumStructure",7,8.767578125
+fluid-document-sweep.py,General,Fluid Document Sweep - Find Interesting Python Scripts and Utilities,"openai, anthropic","ScriptInfo, FluidDocumentSweeper",14,20.7109375
+follow-last-user.py,General,instabot example,,,0,0.857421875
+follow-requests.py,General,[Inferred from filename: follow-requests],,,0,0.7236328125
+follow-user-followers.py,General,instabot example,,,0,0.7880859375
+follow-user-following.py,General,instabot example,,,0,0.62890625
+follow-users-from.py,General,instabot example,,,0,0.8310546875
+follow-users.py,General,instabot example,,,0,0.677734375
+followers.py,General,instabot example,,,0,2.3935546875
+formdata.py,Data Processing,[Inferred from filename: formdata],,FormData,7,5.9619140625
+fundamental-analysis.py,General,[Inferred from filename: fundamental-analysis],openai,,1,1.1572265625
+gallery-merge-system.py,General,Enhanced Gallery System - Merging simplegallery and city-16-9 features,,EnhancedGalleryBuilder,15,13.8115234375
+gallery-url-parser.py,General,[Inferred from filename: gallery-url-parser],,GoogleGalleryLogic,3,3.6572265625
+gdrive.py,General,[Inferred from filename: gdrive],,,1,2.1943359375
+generate-emotional-audio.py,Media Processing,AlchemyAPI Creative TTS Generator,"openai, leonardo",CreativeTTSGenerator,11,19.4970703125
+generate-file-move-log.py,File Management,Generate CSV log of file moves from reorganization analysis,,,1,2.2177734375
+generate-text-overlay.py,General,[Inferred from filename: generate-text-overlay],reddit,,2,3.09765625
+generatetexts-1.py,General,[Inferred from filename: generatetexts-1],openai,,2,1.3369140625
+generatetexts.py,General,[Inferred from filename: generatetexts],openai,,1,0.6357421875
+generation.py,General,[Inferred from filename: generation],leonardo,,3,5.0634765625
+genshi.py,General,[Inferred from filename: genshi],,TreeWalker,2,2.4091796875
+get-threads.py,General,[Inferred from filename: get-threads],reddit,,1,1.646484375
+get_file.py,File Management,[Inferred from filename: get_file],,,6,4.6875
+get_hashtags_from.py,General,[Inferred from filename: get_hashtags_from],,,1,1.8701171875
+get_simple.py,General,[Inferred from filename: get_simple],,FileProxy,6,1.744140625
+getattr.py,General,A static version of getattr.,,,8,3.7646484375
+getipython.py,General,Simple function to call to get the current InteractiveShell instance,,,1,0.89453125
+giphy-download.py,General,Automated Image Upscaler,,,9,9.6552734375
+giphy_downloader.py,General,[Inferred from filename: giphy_downloader],openai,,6,7.29296875
+github_repo_audit.py,General,github_repo_audit.py,,,14,12.5986328125
+gmupload.py,General,This is used for uploading downloaded track to google play music,,GoolgeMusicUploader,5,3.1640625
+goapi-midjourney-imagine.py,AI/ML,[Inferred from filename: goapi-midjourney-imagine],,,0,1.2587890625
+good-usage.py,General,This template is written by @jeremycjang,,,0,5.064453125
+groq-cli.py,General,Simple Groq CLI for terminal usage,,,3,3.5947265625
+gtts-text-to-speech.py,Text-to-Speech,[Inferred from filename: gtts-text-to-speech],reddit,GTTS,3,0.5703125
+gui-apps-downloader.py,General,[Inferred from filename: gui-apps-downloader],,App,5,2.3525390625
+handlers.py,General,Tests for input handlers.,,"CallableIndexable, Autocallable",5,3.3759765625
+hardcoded.py,General,Automated API Key Fixer,"openai, anthropic, elevenlabs, stability",,5,7.7939453125
+html-keep.py,General,HTML Content Analyzer,,HTMLContentAnalyzer,13,18.9658203125
+html.py,General,[Inferred from filename: html],leonardo,,1,3.4306640625
+ident.py,General,[Inferred from filename: ident],openai,,3,6.3798828125
+identify-leonardo-user-scripts.py,AI/ML,[Inferred from filename: identify-leonardo-user-scripts],"openai, anthropic, elevenlabs, leonardo, instagram, youtube, telegram, tiktok","Colors, UserScriptIdentifier",8,16.4462890625
+image-batch-downloader.py,Media Processing,[Inferred from filename: image-batch-downloader],,,7,6.4921875
+image-convert-upscale.py,Media Processing,[Inferred from filename: image-convert-upscale],,,2,1.9716796875
+image-extract-prompt-metadata.py,Media Processing,[Inferred from filename: image-extract-prompt-metadata],,,9,6.4052734375
+image-generate-pics.py,Media Processing,[Inferred from filename: image-generate-pics],,,9,6.5869140625
+image-generator-generic.py,Media Processing,[Inferred from filename: image-generator-generic],reddit,,1,4.12890625
+image-get-cover-images.py,Media Processing,[Inferred from filename: image-get-cover-images],,,3,2.171875
+image-kaleidoscope-effect.py,Media Processing,Kaleidoscope Effect - Create mirror/rotation effects.,,,3,6.3291015625
+image-optimize-9mb-threshold.py,Media Processing,[Inferred from filename: image-optimize-9mb-threshold],,,8,5.5244140625
+image-resize-aspect-ratios.py,Media Processing,[Inferred from filename: image-resize-aspect-ratios],,,11,6.0068359375
+image-resize.py,Media Processing,[Inferred from filename: image-resize],,,7,6.578125
+image-scan-directory.py,Media Processing,[Inferred from filename: image-scan-directory],,,2,1.115234375
+image-search.py,Media Processing,[Inferred from filename: image-search],,,2,2.7236328125
+image-taggy.py,Media Processing,[Inferred from filename: image-taggy],,,5,5.4912109375
+image-to-image-converter.py,Media Processing,[Inferred from filename: image-to-image-converter],,,2,2.19921875
+image-to-pdf.py,Media Processing,[Inferred from filename: image-to-pdf],,,2,1.1845703125
+image-ultimate.py,Media Processing,Ultimate Image Processor V2,,"ProcessingMode, ImageConfig, ImageProcessor",14,25.4599609375
+image-upscale-batch.py,Media Processing,Merged Content Analysis Tool,,,2,3.5126953125
+imove.py,General,[Inferred from filename: imove],,,0,1.1552734375
+implement.py,General,Implement Smart Organization System,,SmartOrganizationImplementer,7,13.5302734375
+import-clean-conversations.py,General,Deepseek Importer v3,,,9,6.5712890625
+indent.py,General,[Inferred from filename: indent],,Indent,5,0.900390625
+infinity-feedliker.py,General,instabot example,,,0,0.6083984375
+infinity-hashtags-follower.py,General,instabot example,,,0,0.76171875
+infinity-hashtags-liker.py,General,instabot example,,,0,0.7060546875
+instabot-api-prepare.py,General,[Inferred from filename: instabot-api-prepare],instagram,,5,3.56640625
+instabot-bot-youtube-user-id.py,Social Media,[Inferred from filename: instabot-bot-youtube-user-id],instagram,Bot,153,32.5673828125
+instabot-devices.py,General,[Inferred from filename: instabot-devices],,,0,3.4462890625
+instagram-botComment.py,Social Media,[Inferred from filename: instagram-botComment],instagram,,5,7.2509765625
+instagram-build.py,Social Media,[Inferred from filename: instagram-build],"openai, leonardo, instagram, youtube, reddit, tiktok",,6,4.7880859375
+instagram-direct-send-photo.py,Social Media,instabot example,,,0,0.55078125
+instagram-dom-tree.py,Social Media,All methods must return media_ids that can be,instagram,,40,14.169921875
+instagram-download-1.py,Social Media,[Inferred from filename: instagram-download-1],,,1,2.7080078125
+instagram-download-photos.py,Social Media,instabot example,,,0,0.6767578125
+instagram-download-user-videos.py,Social Media,Download a user videos:,,,0,1.2509765625
+instagram-download-your-photos.py,Social Media,instabot example,,,0,0.2685546875
+instagram-download.py,Social Media,Content-Aware Etsy Collection Organizer,"instagram, tiktok",ContentAwareOrganizer,10,17.2685546875
+instagram-handle-checker.py,Social Media,Handle Availability Checker for Dual-Domain Strategy,"instagram, youtube, tiktok",HandleAvailabilityChecker,4,3.6015625
+instagram-image-uploader.py,Social Media,Based in @jeremycjang and @boldestfortune,instagram,,0,6.5712890625
+instagram-models.py,Social Media,Models used when interacting with the database interface.,,"RawEntity, Entity, TemporalType, StatementType, TemporalEvent",4,3.021484375
+instagram-openai-download.py,AI/ML,[Inferred from filename: instagram-openai-download],openai,,3,3.3125
+instagram-parse.py,Social Media,instabot example,,,0,2.962890625
+instagram-processor.py,Social Media,[Inferred from filename: instagram-processor],,,1,2.19140625
+instagram-repost-photo.py,Social Media,instabot example,,,3,1.50390625
+instagram-save-users-followers.py,Social Media,instabot example,,,0,0.76171875
+instagram-script_simple.py,Social Media,[Inferred from filename: instagram-script_simple],,"_ModuleAttributeName, SubModuleDictMixin, ModuleMixin, ModuleValue",21,7.9423828125
+instagram-setup.py,Social Media,PrNdOwN setup file.,,"BuildBin, Build",9,4.5380859375
+instagram-upload-story-photo.py,Social Media,[Inferred from filename: instagram-upload-story-photo],,,0,0.58203125
+instagram-upload.py,Social Media,[Inferred from filename: instagram-upload],,,0,0.484375
+instagram.py,Social Media,[Inferred from filename: instagram],,IsattyTest,8,1.748046875
+installations.py,General,[Inferred from filename: installations],,,1,1.3974609375
+instareport-libs-attack.py,General,[Inferred from filename: instareport-libs-attack],instagram,,3,15.6328125
+instareport-libs-utils.py,General,[Inferred from filename: instareport-libs-utils],,,5,1.884765625
+intelligent_code_orchestrator.py,General,🧠 INTELLIGENT CODE ORCHESTRATOR,"openai, anthropic",IntelligentCodeOrchestrator,9,18.2109375
+intelligent_renamer-1.py,File Management,[Inferred from filename: intelligent_renamer-1],"openai, anthropic, elevenlabs, leonardo, instagram, youtube, reddit, telegram, tiktok, stability","Colors, Emojis, IntelligentRenamer",18,39.8037109375
+interact.py,General,instabot example,,,1,1.4794921875
+ipython.py,General,[Inferred from filename: ipython],,TestTableSchemaRepr,5,3.2216796875
+launcher.py,General,Utilities for launching kernels,,,1,6.3720703125
+leodown.py,General,[Inferred from filename: leodown],leonardo,,0,1.466796875
+leonardo-convert.py,AI/ML,[Inferred from filename: leonardo-convert],leonardo,,8,7.0517578125
+leonardo-download-1.py,AI/ML,[Inferred from filename: leonardo-download-1],leonardo,,8,7.0166015625
+leonardo-download-batch.py,AI/ML,[Inferred from filename: leonardo-download-batch],leonardo,,3,5.0712890625
+leonardo-download.py,AI/ML,[Inferred from filename: leonardo-download],leonardo,,2,2.6171875
+leonardo-process.py,AI/ML,[Inferred from filename: leonardo-process],leonardo,,0,1.65234375
+leonardo-upload-image.py,AI/ML,[Inferred from filename: leonardo-upload-image],leonardo,,6,4.845703125
+leonardo.py,AI/ML,leonardo_motion_cli.py,leonardo,,4,8.8623046875
+leoup.py,General,[Inferred from filename: leoup],leonardo,,0,1.900390625
+lexica.py,General,[Inferred from filename: lexica],,,1,1.10546875
+like-follow.py,General,instabot example,,,3,1.337890625
+like-hashtags-from.py,General,instabot example,,,0,0.79296875
+like-hashtags.py,General,instabot example,,,0,0.6259765625
+like-location-feed.py,General,[Inferred from filename: like-location-feed],,,0,0.5986328125
+like-user-followers.py,General,instabot example,,,0,0.6416015625
+like-user-following.py,General,instabot example,,,0,0.642578125
+like-users-from.py,General,instabot example,,,0,0.8740234375
+like-users.py,General,instabot example,,,0,0.693359375
+like-your-last.py,General,instabot example,,,2,0.9580078125
+loop-upscale.py,General,[Inferred from filename: loop-upscale],leonardo,,0,2.67578125
+loop.py,General,Agentic sampling loop that calls the Claude API and local implementation of anthropic-defined comput,anthropic,APIProvider,5,12.791015625
+lyrics-storyboards.py,General,[Inferred from filename: lyrics-storyboards],openai,,2,2.3720703125
+macro.py,General,Support for interactive macros in IPython,,Macro,5,1.81640625
+manage-repo.py,General,Enhanced GitHub Repository Manager,,GitHubRepoManager,17,47.33203125
+market-research-platform.py,General,🔍 AI Market Research Platform,"openai, anthropic, elevenlabs, telegram, stability",MarketResearchPlatform,6,23.75390625
+massive.py,General,This template is written by @loopypanda,,,0,2.056640625
+media-player.py,Media Processing,[Inferred from filename: media-player],,,0,0.04296875
+media-processing-audio.py,Media Processing,[Inferred from filename: media-processing-audio],openai,,4,6.8935546875
+merge-csv.py,Data Processing,🎯 ULTIMATE FOLDER CLEANUP - Final Pass,,"Colors, UltimateFolderCleanup",10,9.4521484375
+merge-doc-csvs.py,Data Processing,[Inferred from filename: merge-doc-csvs],,,1,2.455078125
+merge-files-intelligent.py,File Management,[Inferred from filename: merge-files-intelligent],,"Colors, Emojis, IntelligentMergeTool",12,31.3955078125
+merge-suno-csv.py,Music,?? SUNO CSV COMPARATOR & MERGER,,,5,10.3525390625
+merge_moonlight_and_misc.py,General,🌙 MERGE MOONLIGHT FOLDERS & ORGANIZE MISCELLANEOUS,,"Colors, MoonlightMiscMerger",9,10.2412109375
+merge_other_content_albums.py,General,🔀 MERGE OTHER_CONTENT/ALBUMS INTO NOCTURNE,,"Colors, MergeOtherContentAlbums",6,5.4521484375
+message-users.py,General,instabot example,,,0,2.888671875
+midjourney-tool.py,AI/ML,[Inferred from filename: midjourney-tool],midjourney,,0,0.6904296875
+misc-gtts.py,Text-to-Speech,[Inferred from filename: misc-gtts],reddit,GTTS,3,0.5712890625
+model-evaluation-evaluate.py,General,[Inferred from filename: model-evaluation-evaluate],openai,,7,8.8642578125
+model-evaluation-sagemaker.py,General,[Inferred from filename: model-evaluation-sagemaker],openai,,1,2.033203125
+model-finetuning-sagemaker.py,General,[Inferred from filename: model-finetuning-sagemaker],,,1,2.49609375
+model.py,General,[Inferred from filename: model],openai,,3,1.419921875
+models.py,General,Definition of the FFDNet model and its custom layers,,"UpSampleFeatures, IntermediateDnCNN, FFDNet",6,4.0634765625
+move-improvements.py,General,[Inferred from filename: move-improvements],,"Colors, MasterRunner",5,10.5986328125
+mp3-batch-timestamp.py,General,[Inferred from filename: mp3-batch-timestamp],openai,,7,8.7451171875
+multi.py,General,"Multi-API TTS Generator for ""As a Man Thinketh""","openai, anthropic, elevenlabs",MultiAPITTSGenerator,15,28.86328125
+multi_depth_folder_analyzer.py,File Management,🔍 MULTI-DEPTH FOLDER ANALYZER & CONSOLIDATOR,,"Colors, MultiDepthFolderAnalyzer",12,16.7431640625
+music-catalog.py,Music,[Inferred from filename: music-catalog],,,1,2.2587890625
+mydesign-download.py,General,[Inferred from filename: mydesign-download],,,1,2.7705078125
+mydesigner.py,General,[Inferred from filename: mydesigner],,,5,3.5146484375
+myinfo.py,General,[Inferred from filename: myinfo],leonardo,,0,0.599609375
+named.py,General,[Inferred from filename: named],openai,,7,7.23828125
+nativetypes.py,General,[Inferred from filename: nativetypes],,"NativeCodeGenerator, NativeEnvironment, NativeTemplate",7,4.1982421875
+nested.py,General,Validating highly nested schemas shouldn't cause exponential time blowups.,,,1,1.9443359375
+newsletter-empire.py,General,📰 AI-Powered Newsletter Empire,"openai, anthropic, elevenlabs, leonardo, telegram, stability",NewsletterEmpire,1,10.5107421875
+numpy-array-examples.py,General,[Inferred from filename: numpy-array-examples],,,0,0.625
+onedrive-gallery-logic.py,General,[Inferred from filename: onedrive-gallery-logic],,OnedriveGalleryLogic,3,3.767578125
+openai-content-creation-nocturne.py,AI/ML,Merged Content Analysis Tool,openai,,0,1.5068359375
+openai-download.py,AI/ML,Python Script Map Generator,"openai, youtube",ScriptMapper,9,11.1748046875
+openai-generate.py,AI/ML,[Inferred from filename: openai-generate],openai,MemoEditorInput,2,1.490234375
+openai-gpt4o-image-metadata.py,AI/ML,[Inferred from filename: openai-gpt4o-image-metadata],openai,,5,7.77734375
+openai-image-enrichment.py,AI/ML,[Inferred from filename: openai-image-enrichment],openai,,4,3.3037109375
+openai-image-generater.py,AI/ML,[Inferred from filename: openai-image-generater],openai,,2,3.37109375
+openai-media-processing-image.py,AI/ML,[Inferred from filename: openai-media-processing-image],"openai, stability",,2,3.2412109375
+openai-missingapikeyerror.py,AI/ML,Environment loading helpers for analyze scripts.,openai,MissingAPIKeyError,3,2.31640625
+openai-setup.py,AI/ML,Test script to verify the transcription analyzer setup,openai,,5,4.59375
+openai-text-to-speech.py,AI/ML,[Inferred from filename: openai-text-to-speech],openai,,2,1.45703125
+openai-transcribe-audio.py,AI/ML,[Inferred from filename: openai-transcribe-audio],openai,,4,4.6103515625
+openai-vision-image-reader.py,AI/ML,[Inferred from filename: openai-vision-image-reader],openai,,6,8.6240234375
+openai.py,AI/ML,Simple OpenAI CLI for terminal usage,openai,,2,2.953125
+optimizer.py,General,The optimizer tries to constant fold expressions and modify the AST,,Optimizer,3,1.68359375
+optional.py,General,[Inferred from filename: optional],,,5,3.287109375
+organize-directory.py,File Management,Directory Organizer,,DirectoryOrganizer,6,12.958984375
+organize-excel-files.py,File Management,Intelligent Excel File Organizer,,ExcelIntelligentOrganizer,14,23.3623046875
+organize-files-intelligent.py,File Management,Intelligent Organization System - Core Analyzer,,"FileAnalysis, ProjectAnalysis, IntelligentAnalyzer, PythonASTAnalyzer",40,37.6953125
+organize-files.py,File Management,💾 SAVE EVERYTHING BEFORE CLEANUP,,"Colors, ComprehensivePreservationSystem",10,22.2158203125
+organize-images-by-year.py,Media Processing,[Inferred from filename: organize-images-by-year],,,0,1.05859375
+organize-printify-products.py,File Management,[Inferred from filename: organize-printify-products],tiktok,,7,7.3388671875
+organize-youtube-root.py,Social Media,Final Root Directory Organizer,youtube,FinalRootOrganizer,9,9.7763671875
+organize.py,File Management,AI Outputs Hub - Auto-Organize Dry Run,,AutoOrganizeDryRun,5,12.484375
+organizer.py,File Management,[Inferred from filename: organizer],,,1,2.5517578125
+origin-date.py,General,[Inferred from filename: origin-date],,,5,4.2568359375
+oshelper.py,General,OS helper,,,17,3.17578125
+other_simple.py,General,[Inferred from filename: other_simple],,,7,7.587890625
+output.py,General,[Inferred from filename: output],,,0,0.861328125
+page.py,General,Page Maker v3 — a lean static generator with good defaults.,,Page,17,13.744140625
+pager.py,General,[Inferred from filename: pager],,"Pager, SystemPager",3,0.8984375
+parse-reddit-post.py,Social Media,[Inferred from filename: parse-reddit-post],,,1,0.888671875
+parse.py,General,[Inferred from filename: parse],,GoogleGalleryLogic,3,3.658203125
+parse_api.py,General,[Inferred from filename: parse_api],openai,,7,9.5703125
+parse_main.py,General,This module contains provisional support for SOCKS proxies from within,,"SOCKSConnection, SOCKSHTTPSConnection, SOCKSHTTPConnectionPool, SOCKSHTTPSConnectionPool, SOCKSProxyManager",3,6.9296875
+parse_simple.py,General,[Inferred from filename: parse_simple],,,0,2.9228515625
+payload.py,General,[Inferred from filename: payload],,"LookupError, Order, payload_type, PayloadRegistry, Payload",26,13.1474609375
+payloadpage.py,General,A payload based version of page.,,,2,1.404296875
+pdf-merge-with-toc.py,General,[Inferred from filename: pdf-merge-with-toc],,,3,1.9130859375
+pdf-merge.py,General,[Inferred from filename: pdf-merge],,,1,0.546875
+pdf2html.py,General,[Inferred from filename: pdf2html],,,3,2.11328125
+pdf2img.py,Media Processing,[Inferred from filename: pdf2img],,,0,0.6298828125
+pdfcsv.py,Data Processing,[Inferred from filename: pdfcsv],,,0,0.15234375
+performance.py,General,Performance Optimization Script,openai,PerformanceOptimizer,10,9.2646484375
+periodic.py,General,Periodic Quality Monitor,anthropic,"QualityMetrics, QualityTrend, PeriodicQualityMonitor",15,27.3974609375
+pickleshare.py,General,PickleShare - a small 'shelve' like datastore with concurrency support,,"PickleShareDB, PickleShareLink",22,9.83203125
+pip_build_environment.py,General,[Inferred from filename: pip_build_environment],tiktok,,19,9.029296875
+pip_install_command.py,General,[Inferred from filename: pip_install_command],,,8,8.576171875
+pip_installer_bootstrap.py,General,[Inferred from filename: pip_installer_bootstrap],,,7,2583.3369140625
+playlist.py,Music,[Inferred from filename: playlist],youtube,,10,6.7314453125
+podcast-studio.py,General,🎙️ AI Podcast Studio,"openai, elevenlabs, telegram, stability",PodcastStudio,10,14.091796875
+prepare_missing_song_folders.py,Music,📂 PREPARE FOLDERS FOR MISSING SONGS,openai,"Colors, MissingSongFolderPrep",9,16.2802734375
+preservation-renamer.py,File Management,Python Preservation Renamer,"instagram, youtube",PreservationRenamer,11,18.1162109375
+process-csv-docs.py,Data Processing,[Inferred from filename: process-csv-docs],,,7,6.5791015625
+process-images.py,Media Processing,[Inferred from filename: process-images],leonardo,,0,1.65234375
+process-imove-backups.py,Data Processing,[Inferred from filename: process-imove-backups],,,0,1.1767578125
+process-json.py,Data Processing,This script is intended for use as a GYP_GENERATOR. It takes as input (by way of,,"Target, Config, TargetCalculator",30,31.072265625
+process-remix.py,Data Processing,[Inferred from filename: process-remix],openai,,9,8.9638671875
+processor.py,Data Processing,[Inferred from filename: processor],,,9,7.48046875
+product-image.py,Media Processing,[Inferred from filename: product-image],,,0,1.2822265625
+project.py,General,AvaTarArTs Project Manager,openai,AvaTarArTsProjectManager,9,15.287109375
+protocols.py,General,typing.Protocol classes for jsonschema interfaces.,,Validator,7,6.990234375
+pulse.py,General,Pulse Animation - Scale objects rhythmically for emphasis.,,,3,9.2216796875
+py3compat.py,General,Compatibility tricks for Python 3. Mainly to do with unicode.,,,7,1.55859375
+pydescribe.py,General,[Inferred from filename: pydescribe],openai,,4,3.384765625
+pyinstaller.py,General,A crude *bit of everything* smoke test to verify PyInstaller compatibility.,,,0,1.142578125
+pyorganize.py,File Management,[Inferred from filename: pyorganize],openai,,3,2.412109375
+pytables.py,General,[Inferred from filename: pytables],,,1,0.3779296875
+python-aggressive-cleanup.py,General,Python Aggressive Cleanup System,youtube,AggressiveCleanupSystem,11,20.2021484375
+python-cleanup-execute.py,General,Python Directory Cleanup - Auto Execution,,,5,10.3515625
+python-documentation.py,General,Python API Documentation Generator,,APIDocumentationGenerator,15,15.853515625
+python-filename-cleanup.py,File Management,Python Filename Cleanup System,,FilenameCleanupSystem,9,16.89453125
+python-intelligent-rename.py,File Management,Intelligent Python File Renamer - Execution Script,"openai, leonardo, instagram, youtube",,1,94.1181640625
+python-lint-complexity.py,General,[Inferred from filename: python-lint-complexity],,,3,1.6337890625
+python-namer.py,General,[Inferred from filename: python-namer],openai,,3,5.154296875
+pythoncat.py,General,[Inferred from filename: pythoncat],openai,,5,3.3330078125
+pythoncatorize.py,General,[Inferred from filename: pythoncatorize],openai,,4,2.251953125
+pyttsx3-tts.py,Text-to-Speech,[Inferred from filename: pyttsx3-tts],,pyttsx,3,1.33984375
+quant-agent.py,General,[Inferred from filename: quant-agent],openai,,1,1.1337890625
+quantum.py,General,[Inferred from filename: quantum],,QuantumMediaProcessor,3,1.4169921875
+quantumforge-cli.py,General,[Inferred from filename: quantumforge-cli],,,2,0.8349609375
+quantumforgelabs.py,General,[Inferred from filename: quantumforgelabs],"openai, youtube",,0,15.212890625
+query.py,General,[Inferred from filename: query],openai,QueryExpansion,1,1.6513671875
+queue-script.py,General,Listens to playlist for new tracks,youtube,"Youtubeentity, Playlistlistener",5,3.455078125
+quickstart.py,General,[Inferred from filename: quickstart],,,0,1.0
+quiz.py,General,[Inferred from filename: quiz],,,1,1.3310546875
+quote-image-generator.py,Media Processing,[Inferred from filename: quote-image-generator],,ImageCreator,3,3.279296875
+re-size.py,General,[Inferred from filename: re-size],,,6,5.4775390625
+rebuild.py,General,[Inferred from filename: rebuild],,,3,2.3447265625
+recalc.py,General,Excel Formula Recalculation Script,,,3,6.5849609375
+recovery.py,General,Recovery Analyzer - Comprehensive analysis of Python backup locations,,RecoveryAnalyzer,9,8.16796875
+reddit-download.py,Social Media,[Inferred from filename: reddit-download],reddit,,1,4.14453125
+reddit-scrape.py,Social Media,[Inferred from filename: reddit-scrape],reddit,RedditScrape,2,2.8486328125
+reddit.py,Social Media,[Inferred from filename: reddit],reddit,,2,1.7978515625
+refresolver-v1.py,General,JSON Schema URI resolution scopes and dereferencing,,RefResolver,11,5.548828125
+remove-background.py,General,[Inferred from filename: remove-background],,,3,2.91796875
+remove-duplicate-files.py,File Management,[Inferred from filename: remove-duplicate-files],,,4,4.87109375
+remove-duplicates.py,General,Advanced Duplicate Remover - Multiple detection methods,,AdvancedDuplicateRemover,12,15.4423828125
+remove_redundant_prefixes.py,General,Remove Redundant Folder Name Prefixes,"instagram, youtube",RedundantPrefixRemover,5,4.6103515625
+rename-files-utility.py,File Management,Master Rename Utility - Advanced Python File Renaming System,"openai, instagram, youtube, reddit, telegram",MasterRenamer,21,29.1826171875
+rename-suno-files.py,Music,Python Intelligent Renamer - Flat Structure,"openai, anthropic, instagram, youtube, tiktok",FlatIntelligentRenamer,11,23.6826171875
+rename.py,File Management,[Inferred from filename: rename],,,0,4.97265625
+rename_by_purpose.py,File Management,Rename by Purpose - What does the script DO?,"openai, anthropic, elevenlabs, leonardo, instagram, youtube, stability",PurposeRenamer,4,6.484375
+renamer.py,File Management,Simple Python Renamer for ~/Documents/python,"openai, instagram, youtube",SimplePythonRenamer,14,16.642578125
+render_text.py,General,[Inferred from filename: render_text],,"PromptError, InvalidResponse, PromptBase, Prompt, IntPrompt",18,12.251953125
+reorganize.py,File Management,Reorganize to Exact Structure,"instagram, youtube, reddit, telegram, midjourney, stability",ExactStructureReorganizer,6,15.1455078125
+reorganize_by_service.py,File Management,Reorganize by SERVICE instead of FILE TYPE,"openai, anthropic, leonardo, instagram, youtube, reddit, telegram, tiktok, midjourney, stability",ServiceReorganizer,3,6.7587890625
+rephrase.py,General,[Inferred from filename: rephrase],openai,Rephrase,3,1.54296875
+replace.py,General,Apply text replacements to PowerPoint presentation.,,,8,13.416015625
+reportbot.py,General,[Inferred from filename: reportbot],instagram,,1,2.1865234375
+request.py,General,[Inferred from filename: request],,,3,3.9033203125
+requirements.py,General,Intelligent Requirements Generator,"openai, anthropic, youtube",,6,8.5234375
+research-assistant.py,General,🧠 AI Research Assistant with Memory,"openai, anthropic",ResearchAssistant,12,12.6708984375
+reset_following.py,General,This is a account reset tool.,,Task,3,2.3212890625
+resize.py,General,[Inferred from filename: resize],openai,,6,8.646484375
+resizer.py,General,[Inferred from filename: resizer],,,4,4.6650390625
+resolution.py,General,[Inferred from filename: resolution],,,1,0.806640625
+resource-cache.py,General,[Inferred from filename: resource-cache],,"ResourceCache, ResourceBase, Resource, ResourceContainer, ResourceFinder",34,10.3818359375
+resource-manager.py,General,[Inferred from filename: resource-manager],,ResourceManager,3,1.62109375
+response.py,General,[Inferred from filename: response],,,3,3.427734375
+restarter.py,General,A basic kernel monitor with autorestarting.,,KernelRestarter,8,5.7890625
+retrieve-docs.py,General,[Inferred from filename: retrieve-docs],,ContextRetriever,5,4.115234375
+revenue-engine.py,General,💰 AI Revenue Engine,"openai, anthropic, reddit, telegram",RevenueEngine,11,27.86328125
+rich-theme.py,General,[Inferred from filename: rich-theme],,"Theme, ThemeStackError, ThemeStack",7,3.771484375
+riddle.py,General,[Inferred from filename: riddle],openai,,3,2.8603515625
+robust.py,General,Robust File Processor,,RobustFileProcessor,24,35.935546875
+root-scripts.py,General,Organize Root Python Scripts by Content,"openai, anthropic, instagram, youtube, reddit, telegram, tiktok",RootScriptOrganizer,4,6.62890625
+run-all-renamers.py,File Management,Master Runner for All Rename Utilities,openai,RenameRunner,6,8.5712890625
+safeduplicatecleanup-v1.py,General,Safe Duplicate Cleanup Script,,SafeDuplicateCleanup,8,7.5244140625
+sample-config.py,General,[Inferred from filename: sample-config],"youtube, telegram",Config,0,2.138671875
+save-ai-outputs.py,General,AI Outputs Hub - Integration Script,,,6,4.859375
+save-exit.py,General,Auto-save conversation on exit keywords,anthropic,,3,3.0859375
+save-unfollowers-into.py,General,instabot example,,,0,0.8779296875
+save-users-following.py,General,instabot example,,,0,0.76171875
+savify.py,General,Main module for Savify.,youtube,Savify,7,12.7421875
+scan-and-categorize-files.py,File Management,[Inferred from filename: scan-and-categorize-files],,,3,2.2744140625
+scan-leonardo-comprehensive.py,AI/ML,Final Comprehensive Scan - Uses ALL tools available,"leonardo, instagram, youtube",FinalComprehensiveScan,7,9.63671875
+scancsv.py,Data Processing,[Inferred from filename: scancsv],,,1,1.15234375
+scanpython.py,General,[Inferred from filename: scanpython],openai,,2,1.830078125
+scanpythons.py,General,[Inferred from filename: scanpythons],openai,,3,2.29296875
+scheme.py,General,For types associated with installation schemes.,,Scheme,1,0.7197265625
+scrape-suno-api.py,Music,?? SUNO AI SCRAPER - Complete CSV Exporter,,SunoScraper,10,9.7724609375
+scrape.py,General,[Inferred from filename: scrape],reddit,,3,2.4208984375
+scraper.py,General,[Inferred from filename: scraper],reddit,,2,1.3330078125
+scraping-download-intelligent.py,General,Intelligent Content-Aware File Renamer,"instagram, youtube, telegram",IntelligentFileRenamer,7,11.9462890625
+scraping-download-news_api_fetcher.py,General,[Inferred from filename: scraping-download-news_api_fetcher],,,11,5.953125
+scraping-download-scrape.py,General,[Inferred from filename: scraping-download-scrape],reddit,,0,0.4296875
+screenshot-generate.py,General,[Inferred from filename: screenshot-generate],,,0,4.0244140625
+script_simple.py,General,[Inferred from filename: script_simple],,,3,2.9814453125
+scripts.py,General,[Inferred from filename: scripts],,ScriptMaker,18,18.0634765625
+scriptwrapper.py,General,[Inferred from filename: scriptwrapper],tiktok,"TikTokVideo, ClipWrapper, ScriptWrapper",23,7.96484375
+scripty.py,General,scripty_tts_unified_v2.py,openai,,23,16.576171875
+search-claude-conversations.py,AI/ML,Search conversations filtered by date range,anthropic,,4,5.7431640625
+search.py,General,Alfred Script Filter for Claude Code Conversations - Enhanced Version,anthropic,,10,11.0302734375
+second-pass-migration.py,General,Analyze remaining Python files and directories for second migration pass,"openai, leonardo, instagram, youtube, reddit, telegram, tiktok",,4,24.3447265625
+secret.py,General,[Inferred from filename: secret],youtube,,0,0.4638671875
+selenium-cookie-login.py,General,[Inferred from filename: selenium-cookie-login],youtube,,3,2.001953125
+services-gallery.py,General,[Inferred from filename: services-gallery],,,2,3.046875
+services-s3bucket.py,General,[Inferred from filename: services-s3bucket],,,3,1.7744140625
+services.py,General,[Inferred from filename: services],,,3,1.7744140625
+setters.py,General,Commonly used hooks for on_setattr.,,,5,1.404296875
+settings.py,General,[Inferred from filename: settings],,,2,3.416015625
+setup.py,General,Social Media Automation Setup Script,instagram,SocialMediaAutomationSetup,12,21.529296875
+setup_browser.py,General,[Inferred from filename: setup_browser],,,0,1.45703125
+setup_legacy.py,General,Upload videos to Youtube.,youtube,,0,1.1708984375
+setup_simple.py,General,Setup script for City 16-9 Gallery Generator,,,0,1.759765625
+setuptools.py,General,[Inferred from filename: setuptools],,,5,4.41796875
+sheets.py,General,Google Sheets helpers using gspread.,,,6,3.578125
+shorts-code.py,General,[Inferred from filename: shorts-code],"openai, youtube",,4,5.255859375
+simple-effective.py,General,This template is written by @zackvega,,,0,1.86328125
+simple-image-display.py,Media Processing,[Inferred from filename: simple-image-display],,,7,7.421875
+simple-interaction-good.py,General,This template is written by @Tachenz,,,0,2.166015625
+simple-photo-gallery.py,General,[Inferred from filename: simple-photo-gallery],,,6,3.4794921875
+simple.py,General,[Inferred from filename: simple],reddit,,0,0.1865234375
+simple_flat_organizer.py,File Management,Simple Flat Category Organizer,"openai, anthropic, leonardo, instagram, youtube, reddit, telegram, tiktok",SimpleFlatOrganizer,7,8.8447265625
+simple_smart_renamer.py,File Management,"Simple Smart Renamer - NO AI, Just Logic!","openai, anthropic, elevenlabs, leonardo, instagram, youtube, reddit, telegram, tiktok, midjourney, stability",SimpleSmartRenamer,5,5.802734375
+simplify-organizer.py,File Management,Simplify File Organizer,,SimplifyOrganizer,11,17.787109375
+simplify.py,General,[Inferred from filename: simplify],"openai, anthropic, leonardo, instagram, youtube, reddit, tiktok, midjourney, stability",,1,501.0439453125
+singleton.py,General,[Inferred from filename: singleton],,Singleton,1,0.267578125
+skip-8below.py,General,[Inferred from filename: skip-8below],,,5,5.03125
+skip-image-fixer.py,Media Processing,[Inferred from filename: skip-image-fixer],,,8,6.087890625
+skiprows.py,General,[Inferred from filename: skiprows],,,14,9.5498046875
+slide.py,General,Slide Animation - Slide elements in from edges with overshoot/bounce.,,,2,9.5322265625
+smart-dedup.py,General,[Inferred from filename: smart-dedup],,"Colors, Emojis, SmartDeduplicator",12,18.9287109375
+smart-organizer.py,File Management,Smart File Organizer,,SmartOrganizer,10,15.7626953125
+smart.py,General,Smart Organization Plan Generator,"anthropic, instagram, youtube, tiktok",SmartOrganizationPlanner,14,18.1875
+smart_archive_backups.py,General,Smart Archive Deduplicator,,,4,9.8310546875
+smart_conservative_renamer.py,File Management,[Inferred from filename: smart_conservative_renamer],"openai, leonardo, instagram, youtube, reddit","Colors, SmartConservativeRenamer",12,17.544921875
+smart_content_renamer_v2.py,File Management,🏷️ SMART CONTENT-AWARE RENAMER V2,"openai, youtube","Colors, SmartRenamer",11,16.072265625
+smart_content_renamer_v3.py,File Management,?? SMART CONTENT-AWARE RENAMER V3,"openai, anthropic, youtube, telegram","Colors, FileAnalysis, CodeAnalyzer, NameGenerator, SmartRenamerV3",21,32.4794921875
+smart_local_renamer.py,File Management,Smart Local Renamer - NO AI HALLUCINATIONS!,"openai, anthropic, elevenlabs, leonardo, instagram, youtube, reddit, telegram, tiktok, midjourney, stability",SmartLocalRenamer,6,8.005859375
+smart_rename_versions.py,File Management,Smart Version Renaming,,,4,4.873046875
+snoopbanner.py,General,[Inferred from filename: snoopbanner],,,9,33.1806640625
+snoopplugins.py,General,[Inferred from filename: snoopplugins],,,12,24.9443359375
+social-platforms-instagram-botError.py,Social Media,[Inferred from filename: social-platforms-instagram-botError],instagram,,18,21.3310546875
+social-platforms-instagram-config.py,Social Media,Important Notes:,youtube,"config_reader, parser_args, download",38,49.6533203125
+social-platforms-instagram-scraper.py,Social Media,[Inferred from filename: social-platforms-instagram-scraper],instagram,Instagram,115,117.109375
+social-platforms-instagram.py,Social Media,Configuration settings for the Transcription Analyzer,openai,,0,0.9736328125
+society6-upload.py,General,[Inferred from filename: society6-upload],,,0,1.2939453125
+software.py,General,Context-Efficient Software Architect Agent,,SoftwareArchitectAgent,9,14.9541015625
+song-process.py,Music,[Inferred from filename: song-process],openai,,5,7.2685546875
+sora-sora-storyboard.py,General,[Inferred from filename: sora-sora-storyboard],,,3,4.509765625
+sort.py,General,Final Intelligent Sort,"openai, anthropic, instagram, reddit",FinalIntelligentSorter,6,13.73828125
+sorts.py,General,[Inferred from filename: sorts],,,8,9.1923828125
+sound.py,General,[Inferred from filename: sound],,,0,0.0478515625
+speak.py,General,[Inferred from filename: speak],openai,,2,1.677734375
+speech.py,General,[Inferred from filename: speech],openai,,1,1.21875
+speek.py,General,[Inferred from filename: speek],openai,,0,0.3125
+split-chunks.py,General,[Inferred from filename: split-chunks],,,2,1.5615234375
+split.py,General,[Inferred from filename: split],,,1,1.611328125
+splt.py,General,[Inferred from filename: splt],,,0,1.4501953125
+sqs-queue-handler.py,General,[Inferred from filename: sqs-queue-handler],,Awsqueue,3,1.0771484375
+stability-format.py,AI/ML,Format-Optimized Medium Article Automation,stability,FormatOptimizedAutomation,24,47.2783203125
+stability-medium.py,AI/ML,Medium Article Automation Maker,stability,MediumArticleAutomation,26,43.9228515625
+stability.py,AI/ML,[Inferred from filename: stability],stability,,2,5.4599609375
+start-with.py,General,Merged Content Analysis Tool,openai,,0,0.654296875
+state.py,General,[Inferred from filename: state],,BotState,2,1.6162109375
+static.py,General,[Inferred from filename: static],,,0,0.154296875
+sticker-download.py,General,[Inferred from filename: sticker-download],,,0,3.7509765625
+stories-downloader.py,General,[Inferred from filename: stories-downloader],,,0,0.5400390625
+story-section.py,General,Merged Content Analysis Tool,openai,,4,6.783203125
+story-trans.py,General,[Inferred from filename: story-trans],openai,,4,6.7666015625
+story.py,General,[Inferred from filename: story],instagram,,3,2.3291015625
+storykeytrans.py,General,[Inferred from filename: storykeytrans],openai,,4,6.77734375
+streamlabs-polly.py,Text-to-Speech,[Inferred from filename: streamlabs-polly],,StreamlabsPolly,3,2.07421875
+structures.py,General,requests.structures,,"CaseInsensitiveDict, LookupDict",14,2.8408203125
+stylish-unfollow-tips.py,General,This template is written by @Nocturnal-2,,,0,4.451171875
+subcomponents.py,General,A benchmark which tries to compare the possible slow subparts of validation.,,,2,1.166015625
+subject.py,General,Subject-aware reframing using face/pose detection for intelligent cropping,,"SubjectTracker, MotionTracker",8,7.0849609375
+subreddit.py,Social Media,[Inferred from filename: subreddit],reddit,,1,7.068359375
+subredditsentiment-apps.py,Social Media,[Inferred from filename: subredditsentiment-apps],reddit,,0,2.2421875
+subtitle.py,General,[Inferred from filename: subtitle],,,0,0.2822265625
+sufflecsv.py,Data Processing,[Inferred from filename: sufflecsv],,,1,0.8720703125
+suno-card-html.py,Music,[Inferred from filename: suno-card-html],,,0,4.4755859375
+suno-generator.py,Music,[Inferred from filename: suno-generator],,,1,2.234375
+suno-html-scraper.py,Music,[Inferred from filename: suno-html-scraper],,,4,3.130859375
+suno-html-splitter.py,Music,Merged Content Analysis Tool,,,0,1.7236328125
+suno-music-catalog.py,Music,[Inferred from filename: suno-music-catalog],,,1,2.234375
+suno-prompt-analyzer.py,Music,NanoBanana API Prompt Analyzer,"openai, midjourney, stability",NanoBananaPromptAnalyzer,22,21.5419921875
+super-simple-setting.py,General,This template is written by @Edhim,,,0,1.5
+super_flatten.py,General,Super Aggressive Flattener,,SuperFlattener,7,8.3447265625
+support.py,General,[Inferred from filename: support],,TestBotSupport,4,2.1044921875
+synthesize.py,General,As a Man Thinketh - Text to Speech System (Real Content),"elevenlabs, stability","TTSProvider, ElevenLabsTTS, AssemblyAITTS, DeepgramTTS, AsAManThinkethTTS",17,53.783203125
+sysinfo.py,General,Utilities for getting information about IPython and the system it's running in.,,,5,4.185546875
+system-monitor.py,General,🔍 AI System Health Monitor,"openai, elevenlabs, telegram",AISystemMonitor,11,8.5458984375
+system.py,General,Setup Periodic Quality Monitoring,anthropic,,2,8.6904296875
+targeted-v1.py,General,Targeted cleanup: Fix obvious issues,,,2,4.4521484375
+tehsites-complete.py,General,Complete File Merge and Deduplication Script,,CompleteFileProcessor,10,11.705078125
+telegraph-download-images.py,Media Processing,[Inferred from filename: telegraph-download-images],,,5,17.9931640625
+temp-file-manager.py,File Management,"This module contains classes - NamedFileInTemporaryDirectory, TemporaryWorkingDirectory.",,"NamedFileInTemporaryDirectory, TemporaryWorkingDirectory",6,1.8203125
+template-code.py,General,This template is written by @boldestfortune,,,0,4.05078125
+template.py,General,[Inferred from filename: template],,,1,4.791015625
+test_v3.py,General,Quick test of V3 renamer functionality,,,0,1.1591796875
+testfonts-v1.py,General,[Inferred from filename: testfonts-v1],,,4,2.984375
+testjoin-v1.py,General,[Inferred from filename: testjoin-v1],,TestJoin,4,1.5673828125
+textgenerator-1.py,General,[Inferred from filename: textgenerator-1],openai,,2,1.357421875
+textgenerator.py,General,[Inferred from filename: textgenerator],openai,,2,1.35546875
+texttospeech-v1.py,General,[Inferred from filename: texttospeech-v1],,TextToSpeech,3,1.3408203125
+thinketh_content_renamer.py,File Management,As-a-Man-Thinketh Content-Aware Renamer,,ThinkethContentRenamer,10,12.4833984375
+thinketh_content_renamer_from_seo-optimizer.py,File Management,As-a-Man-Thinketh Content-Aware Renamer,,ThinkethContentRenamer,10,12.4833984375
+thinketh_duplicate_cleanup.py,General,As-a-Man-Thinketh Duplicate Cleanup,,ThinkethDuplicateCleanup,6,6.1142578125
+thinketh_tts_adaptive.py,Text-to-Speech,🎧 Adaptive Emotional Audiobook Generator (Cheerful Guide Style) 🎧,openai,,6,4.1474609375
+thinketh_tts_asmr.py,Text-to-Speech,"ASMR whisper edition with cheerful-guide affect,",openai,,5,3.1162109375
+thinketh_tts_main.py,Text-to-Speech,thinketh_tts.py,openai,,7,4.7822265625
+thinketh_tts_scripty.py,Text-to-Speech,Cinematic hybrid edition:,openai,,6,4.61328125
+thinketh_tts_transcription.py,Text-to-Speech,[Inferred from filename: thinketh_tts_transcription],openai,,0,9.369140625
+thinketh_tts_universal.py,Text-to-Speech,[Inferred from filename: thinketh_tts_universal],openai,,5,3.67578125
+thumbnail.py,General,[Inferred from filename: thumbnail],"elevenlabs, youtube",,2,2.6650390625
+thumbs.py,General,[Inferred from filename: thumbs],,,1,0.4140625
+tiktok-compile-videos-v1.py,Social Media,2. Compile video out of clips,tiktok,,4,1.9423828125
+time-format-utils.py,General,[Inferred from filename: time-format-utils],openai,,5,6.931640625
+to-html-gallery.py,General,[Inferred from filename: to-html-gallery],,,1,2.3466796875
+tocpdf.py,General,[Inferred from filename: tocpdf],,,1,0.662109375
+tools.py,General,[Inferred from filename: tools],openai,,4,2.2412109375
+track.py,General,[Inferred from filename: track],,Track,5,3.615234375
+transcribe-analyze-local.py,General,analyze_mp3_open_source.py,openai,,12,8.341796875
+transcribe.py,General,[Inferred from filename: transcribe],openai,,4,1.5498046875
+transcriber.py,General,Advanced Transcriber - Consolidated Transcription Script,openai,AdvancedTranscriber,9,8.8349609375
+transcript-prompts.py,General,[Inferred from filename: transcript-prompts],openai,,4,5.28515625
+transcript.py,General,[Inferred from filename: transcript],openai,,16,10.5185546875
+transcription.py,General,Audio/Video Transcription and Analysis Tool,openai,TranscriptionAnalyzer,11,17.453125
+translation.py,General,[Inferred from filename: translation],"youtube, telegram",Translation,0,7.5966796875
+twitch-download.py,General,[Inferred from filename: twitch-download],,,5,1.2919921875
+twitch-exceptions.py,General,[Inferred from filename: twitch-exceptions],,"TwitchTubeError, InvalidCategory, VideoPathAlreadyExists, NoClipsFound",0,0.353515625
+typedefs.py,General,[Inferred from filename: typedefs],,,0,1.4365234375
+typography.py,General,"Typography System - Professional text rendering with outlines, shadows, and effects.",,,8,10.869140625
+ufunc.py,General,[Inferred from filename: ufunc],,,14,10.33203125
+ultra.py,General,Ultra Advanced Content-Aware File Analysis System,"openai, anthropic, youtube, midjourney, stability","ContentComplexity, ProjectMaturity, TechnicalDebt, ContentInsights, SemanticVector",65,82.8798828125
+unarchive.py,General,instabot example,,,0,0.2626953125
+undo-move.py,General,[Inferred from filename: undo-move],,,1,1.0576171875
+undo_collection_and_merge.py,General,🔄 UNDO COLLECTION FIX & MERGE INTO NOCTURNE,,"Colors, UndoAndMergeCollection",7,7.5732421875
+unfollow-everyone.py,General,instabot example,,,0,0.5283203125
+unfollow-followers.py,General,instabot example,,,0,0.537109375
+unified_workflow_poc.py,General,Unified Workflow Engine - Proof of Concept,openai,"WorkflowConfig, Component, WorkflowEngine, MediaDetector, WhisperTranscriber",17,19.18359375
+universe4.py,General,[Inferred from filename: universe4],leonardo,,0,3.546875
+unlike-users.py,General,instabot example,,,0,0.6171875
+unused.py,General,An unused schema registry should not cause slower validation.,,,0,0.935546875
+upload-content.py,General,[Inferred from filename: upload-content],youtube,BeatSaberPreset,4,3.654296875
+upload-manager.py,General,GitHub Upload Manager,,GitHubUploadManager,13,15.6689453125
+upload-products.py,General,[Inferred from filename: upload-products],,,0,3.689453125
+upload.py,General,[Inferred from filename: upload],,"SimplePhotoGalleryHTTPServer, SimplePhotoGalleryHTTPRequestHandler, NetlifyUploader",13,8.3330078125
+upload_api.py,General,[Inferred from filename: upload_api],openai,,5,5.4287109375
+upload_simple.py,General,[Inferred from filename: upload_simple],,,0,2.99609375
+uploader.py,General,[Inferred from filename: uploader],,"SimplePhotoGalleryHTTPServer, SimplePhotoGalleryHTTPRequestHandler, NetlifyUploader",13,8.5625
+upscale-and-upload.py,General,[Inferred from filename: upscale-and-upload],,,0,3.0361328125
+upscale-images.py,Media Processing,[Inferred from filename: upscale-images],,,2,1.96875
+upscale-sips.py,General,[Inferred from filename: upscale-sips],,,8,7.119140625
+upscale.py,General,Move Improvements Back Script,anthropic,ImprovementMover,11,12.236328125
+upscalecreateimages.py,Media Processing,[Inferred from filename: upscalecreateimages],"openai, stability",,4,5.197265625
+upscaled.py,General,[Inferred from filename: upscaled],leonardo,,7,6.494140625
+upscaler.py,General,[Inferred from filename: upscaler],,,8,6.0869140625
+upwork.py,General,[Inferred from filename: upwork],,,1,8.3701171875
+usecols.py,General,[Inferred from filename: usecols],,,27,17.80078125
+user.py,General,[Inferred from filename: user],,,2,0.80078125
+util-json-handler.py,Data Processing,[Inferred from filename: util-json-handler],,,0,2.2412109375
+utilities-async.py,General,[Inferred from filename: utilities-async],openai,,0,44.1962890625
+utilities-misc.py,General,[Inferred from filename: utilities-misc],reddit,,1,0.283203125
+utilities-upscale-images.py,Media Processing,[Inferred from filename: utilities-upscale-images],,,2,3.3056640625
+utils-1.py,General,[Inferred from filename: utils-1],,,11,5.625
+utils.py,General,[Inferred from filename: utils],,,11,3.5078125
+utils_simple.py,General,[Inferred from filename: utils_simple],,FileSpanExporter,6,3.55859375
+validate-json-reader.py,Data Processing,[Inferred from filename: validate-json-reader],"openai, anthropic, elevenlabs, leonardo, stability","Colors, APIKeyManager",16,27.892578125
+validate-settings.py,General,[Inferred from filename: validate-settings],,,6,5.6416015625
+vanceai-remove-background.py,General,[Inferred from filename: vanceai-remove-background],,,3,2.908203125
+verbose-transcriber.py,General,[Inferred from filename: verbose-transcriber],"openai, youtube",,4,6.1142578125
+verbose.py,General,Tests that work on both the Python and C engines but do not have a,,,2,2.3623046875
+verify-connection.py,General,[Inferred from filename: verify-connection],openai,,2,1.9521484375
+verify.py,General,[Inferred from filename: verify],"openai, anthropic",Colors,8,8.0615234375
+verify_and_sort_missing_songs.py,Music,🔍 VERIFY & SORT MISSING SONGS,,"Colors, MissingSongVerifier",13,16.9658203125
+video-clip-editor.py,Media Processing,[Inferred from filename: video-clip-editor],,Clip,0,0.3876953125
+vision.py,General,[Inferred from filename: vision],openai,,1,1.9072265625
+visual.py,General,"Visual Effects - Particles, motion blur, impacts, and other effects for GIFs.",,"Particle, ParticleSystem",21,15.0205078125
+voice.py,General,[Inferred from filename: voice],,,3,3.0498046875
+voices.py,General,[Inferred from filename: voices],reddit,,1,1.2646484375
+walk-directories-recursive.py,General,[Inferred from filename: walk-directories-recursive],,,7,7.099609375
+webm.py,General,[Inferred from filename: webm],,,1,1.5595703125
+welcome-message.py,General,instabot example,,,2,2.3798828125
+whisper-transcript.py,General,[Inferred from filename: whisper-transcript],openai,,6,7.701171875
+whisper.py,General,[Inferred from filename: whisper],"openai, instagram, youtube",,0,1.67578125
+whispertext-combine.py,General,[Inferred from filename: whispertext-combine],"openai, instagram, youtube",,0,2.0537109375
+whispertext.py,General,[Inferred from filename: whispertext],"openai, instagram, youtube",,0,2.0595703125
+whitelist.py,General,instabot example,,,0,0.9921875
+wiggle.py,General,"Wiggle Animation - Smooth, organic wobbling and jiggling motions.",,,2,10.3310546875
+word-validate-changes.py,General,Validator for tracked changes in Word documents.,anthropic,RedliningValidator,6,11.029296875
+workspace-audit.py,General,Comprehensive Analysis of Claude Directory,anthropic,,8,13.6630859375
+ygpt-utils-textgenerator.py,AI/ML,[Inferred from filename: ygpt-utils-textgenerator],openai,,2,1.3564453125
+youtube-VIEWBOT.py,Social Media,[Inferred from filename: youtube-VIEWBOT],youtube,Color,1,15.7626953125
+youtube-adjust-image.py,Social Media,[Inferred from filename: youtube-adjust-image],,,3,5.8115234375
+youtube-analyze-files.py,Social Media,env_wizard.py — Interactive .env builder with sections & per-entry save,,,12,8.744140625
+youtube-analyze-youtube.py,Social Media,[Inferred from filename: youtube-analyze-youtube],,,0,0.599609375
+youtube-artname.py,Social Media,Created in 07/CONSTANT_2020,instagram,,1,0.4296875
+youtube-audio-downloadr.py,Social Media,[Inferred from filename: youtube-audio-downloadr],youtube,,10,6.3994140625
+youtube-authentication.py,Social Media,[Inferred from filename: youtube-authentication],youtube,,1,0.6865234375
+youtube-awsqueue.py,Social Media,[Inferred from filename: youtube-awsqueue],,Awsqueue,3,1.0771484375
+youtube-background.py,Social Media,[Inferred from filename: youtube-background],youtube,,3,1.7822265625
+youtube-bash-tool.py,Social Media,[Inferred from filename: youtube-bash-tool],,,1,2.205078125
+youtube-bot-1.py,Social Media,[Inferred from filename: youtube-bot-1],youtube,,4,5.291015625
+youtube-browser.py,Social Media,[Inferred from filename: youtube-browser],youtube,,1,2.3486328125
+youtube-bulk-upload.py,Social Media,[Inferred from filename: youtube-bulk-upload],youtube,,4,1.1279296875
+youtube-button.py,Social Media,[Inferred from filename: youtube-button],youtube,,0,15.453125
+youtube-client.py,Social Media,[Inferred from filename: youtube-client],leonardo,,0,1.4208984375
+youtube-compile-image.py,Social Media,[Inferred from filename: youtube-compile-image],,,1,1.3505859375
+youtube-configure-opik.py,Social Media,[Inferred from filename: youtube-configure-opik],,,1,1.064453125
+youtube-content-maker.py,Social Media,[Inferred from filename: youtube-content-maker],openai,,2,1.0849609375
+youtube-convert-video.py,Social Media,[Inferred from filename: youtube-convert-video],,,0,5.08984375
+youtube-copy-files.py,Social Media,[Inferred from filename: youtube-copy-files],,,1,2.384765625
+youtube-cover.py,Social Media,[Inferred from filename: youtube-cover],,,3,2.177734375
+youtube-create-fade.py,Social Media,"Fade Animation - Fade in, fade out, and crossfade effects.",,,4,10.302734375
+youtube-create-flip.py,Social Media,Flip Animation - 3D-style card flip and rotation effects.,,,3,9.7509765625
+youtube-create-news-videos.py,Social Media,[Inferred from filename: youtube-create-news-videos],instagram,MultiLogger,5,7.8427734375
+youtube-create-spin.py,Social Media,Spin Animation - Rotate objects continuously or with variation.,,,2,9.421875
+youtube-create-thumbnail.py,Social Media,[Inferred from filename: youtube-create-thumbnail],,,3,1.7861328125
+youtube-create-video.py,Social Media,[Inferred from filename: youtube-create-video],,,2,2.9091796875
+youtube-create-zoom.py,Social Media,Zoom Animation - Scale objects dramatically for emphasis.,,,3,10.5224609375
+youtube-createvideo-v1.py,Social Media,[Inferred from filename: youtube-createvideo-v1],,,1,1.853515625
+youtube-cumsum.py,Social Media,[Inferred from filename: youtube-cumsum],,,8,1.4521484375
+youtube-dlimage.py,Social Media,[Inferred from filename: youtube-dlimage],"instagram, reddit",,1,2.90625
+youtube-download-thumbnail.py,Social Media,[Inferred from filename: youtube-download-thumbnail],youtube,,1,1.6103515625
+youtube-download-video.py,Social Media,This script downloads videos from pexels.com. Uses this to get videos background,,,1,0.783203125
+youtube-download.py,Social Media,[Inferred from filename: youtube-download],youtube,,1,0.9765625
+youtube-downloadr-api.py,Social Media,Low-level helpers for the SecureTransport bindings.,,,13,13.6474609375
+youtube-downloadupload.py,Social Media,Ytdl,youtube,Downloadupload,6,4.2626953125
+youtube-downloadvideos-v1.py,Social Media,1. Download daily trending TikTok clips,tiktok,,1,0.8525390625
+youtube-evil.py,Social Media,Module with bad __all__,,,2,0.25
+youtube-generate-content.py,Social Media,[Inferred from filename: youtube-generate-content],"openai, stability",,1,2.7802734375
+youtube-generate-trivia.py,Social Media,[Inferred from filename: youtube-generate-trivia],,,1,1.3330078125
+youtube-generate.py,Social Media,[Inferred from filename: youtube-generate],reddit,,1,4.12890625
+youtube-generateAudio.py,Social Media,[Inferred from filename: youtube-generateAudio],,,2,2.1328125
+youtube-generater.py,Social Media,[Inferred from filename: youtube-generater],,,1,1.6005859375
+youtube-get-creation.py,Social Media,[Inferred from filename: youtube-get-creation],,,9,7.5205078125
+youtube-glut-display.py,Social Media,[Inferred from filename: youtube-glut-display],,,5,4.982421875
+youtube-help.py,Social Media,[Inferred from filename: youtube-help],"instagram, telegram",,1,2.849609375
+youtube-inputhook.py,Social Media,Wrapper around the eventloop that gives some time to the Tkinter GUI to process,,,4,3.59765625
+youtube-instareport-instareport-youtube.py,Social Media,[Inferred from filename: youtube-instareport-instareport-youtube],"instagram, telegram",,1,2.8486328125
+youtube-instareport-libs-proxy.py,Social Media,[Inferred from filename: youtube-instareport-libs-proxy],"youtube, telegram",,1,6.6064453125
+youtube-isin.py,Social Media,[Inferred from filename: youtube-isin],,,7,3.6416015625
+youtube-keys.py,Social Media,[Inferred from filename: youtube-keys],,Trie,7,1.966796875
+youtube-load-ipython.py,Social Media,Useless IPython extension to test installing and loading extensions.,,,2,0.353515625
+youtube-load.py,Social Media,[Inferred from filename: youtube-load],openai,,4,3.294921875
+youtube-main.py,Social Media,[Inferred from filename: youtube-main],youtube,Color,1,15.78125
+youtube-management-upload-youtube.py,Social Media,[Inferred from filename: youtube-management-upload-youtube],,,0,0.0498046875
+youtube-media-processing-audio.py,Social Media,[Inferred from filename: youtube-media-processing-audio],youtube,,0,0.8662109375
+youtube-media-processing-video-2025-vid.py,Social Media,[Inferred from filename: youtube-media-processing-video-2025-vid],,,9,7.0361328125
+youtube-media-processing-video-extract_simple.py,Social Media,ULTIMATE Media Analysis Pipeline - Multi-API Edition,"openai, anthropic","LargeFileHandler, UltimateMediaAnalyzer",27,24.66796875
+youtube-media-processing-video-render_simple.py,Social Media,[Inferred from filename: youtube-media-processing-video-render_simple],tiktok,,2,1.5
+youtube-metadata.py,Social Media,[Inferred from filename: youtube-metadata],youtube,,0,1.25390625
+youtube-models.py,Social Media,Models used in the application,,"TrackInfo, Payload, UploadResult, DownloadResult",7,1.6708984375
+youtube-motion-upload.py,Social Media,[Inferred from filename: youtube-motion-upload],leonardo,,0,1.7587890625
+youtube-newupload-v1.py,Social Media,[Inferred from filename: youtube-newupload-v1],youtube,,2,2.927734375
+youtube-notify.py,Social Media,Responsible for sending a notification,,Iftttnotify,2,1.03125
+youtube-openai-ygpt-utils-videogenerator.py,AI/ML,[Inferred from filename: youtube-openai-ygpt-utils-videogenerator],,VideoGenerator,9,3.306640625
+youtube-pexels_video_downloader.py,Social Media,[Inferred from filename: youtube-pexels_video_downloader],,,7,7.2724609375
+youtube-playlist-simple.py,Social Media,[Inferred from filename: youtube-playlist-simple],youtube,,0,1.02734375
+youtube-print-logo.py,Social Media,[Inferred from filename: youtube-print-logo],,,1,3.4306640625
+youtube-process-video.py,Social Media,[Inferred from filename: youtube-process-video],,,2,2.3359375
+youtube-python_repo_inspector.py,Social Media,[Inferred from filename: youtube-python_repo_inspector],"openai, anthropic, instagram, youtube, tiktok",,3,4.9892578125
+youtube-read.py,Social Media,[Inferred from filename: youtube-read],,,5,2.1435546875
+youtube-reddit-download.py,Social Media,[Inferred from filename: youtube-reddit-download],reddit,,0,0.712890625
+youtube-reddit-video-maker.py,Social Media,[Inferred from filename: youtube-reddit-video-maker],reddit,,1,0.638671875
+youtube-remove.py,Social Media,[Inferred from filename: youtube-remove],,,2,2.4521484375
+youtube-request.py,Social Media,[Inferred from filename: youtube-request],,,5,1.2919921875
+youtube-rotate-image.py,Social Media,[Inferred from filename: youtube-rotate-image],,,12,8.1201171875
+youtube-sanitize-title.py,Social Media,[Inferred from filename: youtube-sanitize-title],,,1,1.8583984375
+youtube-scrape-youtube-channel.py,Social Media,[Inferred from filename: youtube-scrape-youtube-channel],youtube,,0,1.6025390625
+youtube-scraping-download.py,Social Media,[Inferred from filename: youtube-scraping-download],,,2,2.7236328125
+youtube-social-platforms-youtube-yt-simple.py,Social Media,Patched ``BZ2File`` and ``LZMAFile`` to handle pickle protocol 5.,,"BZ2File, LZMAFile",3,1.927734375
+youtube-social-platforms-youtube.py,Social Media,[Inferred from filename: youtube-social-platforms-youtube],youtube,,0,0.4697265625
+youtube-sphinx-source-youtube.py,Social Media,[Inferred from filename: youtube-sphinx-source-youtube],,,0,0.9619140625
+youtube-title-case.py,Social Media,Skill Initializer - Creates a new skill from template,anthropic,,3,10.8115234375
+youtube-tool.py,Social Media,[Inferred from filename: youtube-tool],,App,1,1.4326171875
+youtube-trivial.py,Social Media,Some simple tests for the plugin while running scripts.,,,4,0.703125
+youtube-types.py,Social Media,[Inferred from filename: youtube-types],youtube,"Type, Platform, Format, Quality",0,0.486328125
+youtube-upload-file.py,Social Media,[Inferred from filename: youtube-upload-file],openai,,5,6.9990234375
+youtube-upload-video.py,Social Media,🎬 AI Video Studio,"openai, elevenlabs, youtube, telegram, stability",VideoStudio,9,20.083984375
+youtube-upload.py,Social Media,[Inferred from filename: youtube-upload],,,7,7.8740234375
+youtube-upload_api.py,Social Media,[Inferred from filename: youtube-upload_api],youtube,,3,4.806640625
+youtube-uploader.py,Social Media,[Inferred from filename: youtube-uploader],,,2,1.5986328125
+youtube-video-downloadr-api.py,Social Media,[Inferred from filename: youtube-video-downloadr-api],youtube,,2,2.9072265625
+youtube-video-downloadr-csv-batch.py,Social Media,[Inferred from filename: youtube-video-downloadr-csv-batch],"elevenlabs, youtube",,2,2.6630859375
+youtube-video-downloadr.py,Social Media,[Inferred from filename: youtube-video-downloadr],youtube,,2,3.24609375
+youtube-videoedit.py,Social Media,[Inferred from filename: youtube-videoedit],,VideoEditor,3,2.5068359375
+youtube-videos.py,Social Media,[Inferred from filename: youtube-videos],reddit,,2,2.1298828125
+youtube-web-scraping-download-main.py.py,Social Media,[Inferred from filename: youtube-web-scraping-download-main.py],youtube,,3,6.9345703125
+youtube-yplaylist.py,Social Media,[Inferred from filename: youtube-yplaylist],youtube,,0,1.0009765625
+youtube-ytcsv.py,Social Media,[Inferred from filename: youtube-ytcsv],youtube,,0,0.875
+youtube-ytdownloadthumb.py,Social Media,[Inferred from filename: youtube-ytdownloadthumb],"elevenlabs, youtube",,2,2.6494140625
+youtube-ytube-simple.py,Social Media,[Inferred from filename: youtube-ytube-simple],youtube,,0,2.52734375
+youtube-ytube.py,Social Media,[Inferred from filename: youtube-ytube],youtube,,0,2.52734375
+youtube-ytubedlthumbs.py,Social Media,[Inferred from filename: youtube-ytubedlthumbs],"elevenlabs, youtube",,2,2.6865234375
+ytdl-audiodownload.py,Media Processing,This is used for downloading a youtube video as mp3,youtube,AudioDownload,3,2.2216796875
+ytdl-audiometadata.py,Media Processing,[Inferred from filename: ytdl-audiometadata],,AudioMetadata,5,2.8828125
+ytdl-listen.py,General,[Inferred from filename: ytdl-listen],,,4,2.2060546875
+ytdlconfiguration.py,General,Config,youtube,Ytdlconfiguration,3,3.3798828125

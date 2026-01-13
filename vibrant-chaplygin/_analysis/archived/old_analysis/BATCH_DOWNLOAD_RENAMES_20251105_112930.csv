@@ -1,0 +1,19 @@
+action,original,new,reason
+rename,down.py,etsy-printify-download-csv.py,Content-aware rename
+rename,download_vid.py,pexels-video-downloader.py,Content-aware rename
+rename,download-1.py,openai-content-analyzer.py,Content-aware rename
+rename,download-2.py,alchemyapi-audio-demo-generator.py,Content-aware rename
+rename,download-3.py,html-docs-generator.py,Content-aware rename
+rename,download-4.py,music-sort-dedup.py,Content-aware rename
+rename,download-data.py,openai-wikipedia-data-downloader.py,Content-aware rename
+rename,download-files.py,speech-transcription-mp3-wav.py,Content-aware rename
+rename,download.py,dalle-image-downloader.py,Content-aware rename
+rename,downloadr.py,instagram-bot-template.py,Content-aware rename
+rename,downloads.py,downloads-organizer-dedup.py,Content-aware rename
+rename,downloader-progress.py,printify-blueprint-downloader.py,Content-aware rename
+rename,dthumb.py,youtube-thumbnail-downloader.py,Content-aware rename
+rename,ecommerce-payments-deep.py,deep-content-renamer.py,Content-aware rename
+rename,dupes.py,file-dedup-scanner.py,Content-aware rename
+move_to_library,dummies.py,_library/dummies.py,External library file
+move_to_library,dynamic.py,_library/dynamic.py,External library file
+delete,downs.py,,Duplicate file

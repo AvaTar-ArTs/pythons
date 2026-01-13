@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+export-data-warehouse.py,[No docstring found],,KEEP,
+extract-files.py,[No docstring found],,KEEP,
+extract-news-to-audio.py,[No docstring found],,KEEP,
+extract-songs.py,[Suno music],suno-extract-songs.py,RENAME,Add Suno prefix
+extract-suno-html.py,?? SUNO HTML BATCH EXTRACTOR,suno-extract-suno-html.py,RENAME,Add Suno prefix
+extract-to-audio.py,[No docstring found],,KEEP,
+extract-topic-from-text.py,[No docstring found],,KEEP,
+extract-video-reader.py,[Instagram automation],instagram-extract-video-reader.py,RENAME,Add Instagram prefix
+extract.py,[Anthropic Claude],,KEEP,
+extract_archived_content.py,🔍 EXTRACT & PRESERVE ARCHIVED CONTENT,extract-archived-content.py,RENAME,Fix underscore to hyphen
+fancyimg.py,[OpenAI integration],,KEEP,
+fancyname.py,[OpenAI integration],,KEEP,
+ffmpeg-downloader.py,[No docstring found],,KEEP,
+ffmpeg-help.py,[No docstring found],,KEEP,
+ffmpeg-installer.py,[No docstring found],,KEEP,
+ffmpeg-robot.py,[No docstring found],,KEEP,
+file-dedup-scanner.py,[No docstring found],,KEEP,
+file-uploader.py,[No docstring found],,KEEP,
+fill-utility.py,[No docstring found],,KEEP,
+filter-blacklist-hashtag.py,instabot filters out the media with your set blacklist hashtags,instagram-filter-blacklist-hashtag.py,RENAME,Add Instagram prefix
+filter-private-profiles.py,instabot filtering private users example,instagram-filter-private-profiles.py,RENAME,Add Instagram prefix
+final_cleanup_extras.py,🧹 FINAL CLEANUP - Remove Extra Duplicates & Temp Files,,DELETE,One-time script or backup
+final_consolidation.py,🎵 FINAL CONSOLIDATION - Download Missing + Remove Redundant,,DELETE,One-time script or backup
+find-duplicates-fdupes.py,[No docstring found],,KEEP,
+find-duplicates-md5.py,[No docstring found],,KEEP,
+finder.py,Comprehensive Duplicate File Detection Script,,KEEP,
+finetune-unsloth.py,[No docstring found],,KEEP,
+firebase-api-processor.py,[Instagram automation],,KEEP,
+fix-bare-except-statements.py,[No docstring found],,KEEP,
+fix_transcript_names.py,📝 FIX TRANSCRIPT NAMES,fix-transcript-names.py,RENAME,Fix underscore to hyphen
+fixer.py,[No docstring found],,KEEP,
+flatten_all_album_structure.py,🎵 FLATTEN ALL ALBUM STRUCTURES,flatten-all-album-structure.py,RENAME,Fix underscore to hyphen
+fluid-document-sweep.py,Fluid Document Sweep - Find Interesting Python Scripts and Utilities,,KEEP,
+follow-last-user.py,instabot example,instagram-follow-last-user.py,RENAME,Add Instagram prefix
+follow-requests.py,[Instagram automation],,LIBRARY,Library/framework code - request
+follow-user-followers.py,instabot example,instagram-follow-user-followers.py,RENAME,Add Instagram prefix
+follow-user-following.py,instabot example,instagram-follow-user-following.py,RENAME,Add Instagram prefix
+follow-users-from.py,instabot example,instagram-follow-users-from.py,RENAME,Add Instagram prefix
+follow-users.py,instabot example,instagram-follow-users.py,RENAME,Add Instagram prefix
+followers.py,instabot example,instagram-followers.py,RENAME,Add Instagram prefix
+formdata.py,[No docstring found],,KEEP,
+fundamental-analysis.py,[OpenAI integration],,KEEP,
+gallery-merge-system.py,Enhanced Gallery System - Merging simplegallery and city-16-9 features,,KEEP,
+gallery-url-parser.py,[No docstring found],,KEEP,
+gdrive-link-converter.py,[No docstring found],,KEEP,
+gdrive.py,[No docstring found],,KEEP,
+gemini-storybook-audio.py,Gemini Storybook Downloader (macOS-friendly),,KEEP,
+generate-emotional-audio.py,AlchemyAPI Creative TTS Generator,,KEEP,Already well-named
+generate-file-move-log.py,Generate CSV log of file moves from reorganization analysis,,KEEP,
+generate-text-overlay.py,[Reddit automation],,KEEP,Already well-named

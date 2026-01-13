@@ -1,0 +1,200 @@
+🔍 SCANNING ALL .env FILES
+================================================================================[0m
+
+Found 18 .env file(s)
+
+[96mScanning: MASTER_CONSOLIDATED.env[0m
+  Found 123 keys
+
+[96mScanning: art-vision.env[0m
+  Found 10 keys
+
+[96mScanning: audio-music.env[0m
+  Found 9 keys
+
+[96mScanning: automation-agents.env[0m
+  Found 7 keys
+
+[96mScanning: cloud-infrastructure.env[0m
+  Found 3 keys
+
+[96mScanning: documents.env[0m
+  Found 2 keys
+
+[96mScanning: enhanced-video-generator.env[0m
+  Found 36 keys
+
+[96mScanning: gemini.env[0m
+  Found 1 keys
+
+[96mScanning: github.env[0m
+  Found 1 keys
+
+[96mScanning: llm-apis.env[0m
+  Found 12 keys
+
+[96mScanning: monitoring.env[0m
+  Found 3 keys
+
+[96mScanning: n8n-database.env[0m
+  Found 3 keys
+
+[96mScanning: n8n.env[0m
+  Found 0 keys
+
+[96mScanning: notifications.env[0m
+  Found 5 keys
+
+[96mScanning: other-tools.env[0m
+  Found 6 keys
+
+[96mScanning: seo-analytics.env[0m
+  Found 3 keys
+
+[96mScanning: storage.env[0m
+  Found 7 keys
+
+[96mScanning: vector-memory.env[0m
+  Found 5 keys
+
+[92m✅ Total unique keys found: 226[0m
+
+
+[96m[1m================================================================================
+📋 KEYS BY CATEGORY
+================================================================================[0m
+
+[1m☁️ Cloud/Storage[0m (16/16 active)
+  [92m✅ Active (9 chars)[0m AWS_REGION
+  [92m✅ Active (40 chars)[0m CLOUDFLARE_ACCOUNT_ID
+  [92m✅ Active (40 chars)[0m CLOUDFLARE_R2_ACCESS_KEY_ID
+  [92m✅ Active (10 chars)[0m CLOUDFLARE_R2_BUCKET
+  [92m✅ Active (64 chars)[0m CLOUDFLARE_R2_SECRET_ACCESS_KEY
+  [92m✅ Active (208 chars)[0m SUPABASE_ANON_KEY
+  [92m✅ Active (41 chars)[0m SUPABASE_SERVICE_ROLE_KEY
+  [92m✅ Active (83 chars)[0m SUPABASE_URL
+  [92m✅ Active (9 chars)[0m export AWS_REGION
+  [92m✅ Active (40 chars)[0m export CLOUDFLARE_ACCOUNT_ID
+  [92m✅ Active (40 chars)[0m export CLOUDFLARE_R2_ACCESS_KEY_ID
+  [92m✅ Active (10 chars)[0m export CLOUDFLARE_R2_BUCKET
+  [92m✅ Active (64 chars)[0m export CLOUDFLARE_R2_SECRET_ACCESS_KEY
+  [92m✅ Active (208 chars)[0m export SUPABASE_ANON_KEY
+  [92m✅ Active (41 chars)[0m export SUPABASE_SERVICE_ROLE_KEY
+  [92m✅ Active (84 chars)[0m export SUPABASE_URL
+
+[1m⚙️ Automation/Tools[0m (14/22 active)
+  [93m⚙️ Config (4 chars)[0m ENABLE_PERFORMANCE_MONITORING
+  [93m❌ Empty[0m ERROR_REPORTING_WEBHOOK
+  [92m✅ Active (36 chars)[0m MAKE_API_KEY
+  [92m✅ Active (21 chars)[0m N8N_WEBHOOK_URL
+  [92m✅ Active (50 chars)[0m NOTION_TOKEN
+  [92m✅ Active (32 chars)[0m ZAPIER_API_KEY
+  [93m⚙️ Config (4 chars)[0m export ENABLE_PERFORMANCE_MONITORING
+  [93m❌ Empty[0m export ERROR_REPORTING_WEBHOOK
+  [92m✅ Active (36 chars)[0m export MAKE_API_KEY
+  [92m✅ Active (30 chars)[0m export N8N_CONFIG_FILES
+  [92m✅ Active (64 chars)[0m export N8N_ENCRYPTION_KEY
+  [92m✅ Active (9 chars)[0m export N8N_HOST
+  [92m✅ Active (26 chars)[0m export N8N_LOG_FILE
+  [93m⚙️ Config (4 chars)[0m export N8N_LOG_LEVEL
+  [93m⚙️ Config (4 chars)[0m export N8N_LOG_OUTPUT
+  [93m⚙️ Config (4 chars)[0m export N8N_PORT
+  [93m⚙️ Config (4 chars)[0m export N8N_PROTOCOL
+  [92m✅ Active (18 chars)[0m export N8N_USER_FOLDER
+  [92m✅ Active (21 chars)[0m export N8N_WEBHOOK_URL
+  [92m✅ Active (50 chars)[0m export NOTION_TOKEN
+  [92m✅ Active (21 chars)[0m export WEBHOOK_URL
+  [92m✅ Active (32 chars)[0m export ZAPIER_API_KEY
+
+[1m🎨 Image/Video Generation[0m (14/14 active)
+  [92m✅ Active (69 chars)[0m FAL_API_KEY
+  [92m✅ Active (36 chars)[0m LEONARDO_API_KEY
+  [92m✅ Active (37 chars)[0m LEONARDO_BASE_URL
+  [92m✅ Active (49 chars)[0m PREFERRED_IMAGE_TO_VIDEO_MODEL
+  [92m✅ Active (40 chars)[0m REPLICATE_API_KEY
+  [92m✅ Active (132 chars)[0m RUNWAY_API_KEY
+  [92m✅ Active (51 chars)[0m STABILITY_API_KEY
+  [92m✅ Active (69 chars)[0m export FAL_API_KEY
+  [92m✅ Active (36 chars)[0m export LEONARDO_API_KEY
+  [92m✅ Active (37 chars)[0m export LEONARDO_BASE_URL
+  [92m✅ Active (49 chars)[0m export PREFERRED_IMAGE_TO_VIDEO_MODEL
+  [92m✅ Active (40 chars)[0m export REPLICATE_API_KEY
+  [92m✅ Active (132 chars)[0m export RUNWAY_API_KEY
+  [92m✅ Active (51 chars)[0m export STABILITY_API_KEY
+
+[1m🎵 Audio/Music[0m (8/8 active)
+  [92m✅ Active (32 chars)[0m ASSEMBLYAI_API_KEY
+  [92m✅ Active (40 chars)[0m DEEPGRAM_API_KEY
+  [92m✅ Active (64 chars)[0m ELEVENLABS_API_KEY
+  [92m✅ Active (1020 chars)[0m SUNO_COOKIE
+  [92m✅ Active (32 chars)[0m export ASSEMBLYAI_API_KEY
+  [92m✅ Active (40 chars)[0m export DEEPGRAM_API_KEY
+  [92m✅ Active (64 chars)[0m export ELEVENLABS_API_KEY
+  [92m✅ Active (1020 chars)[0m export SUNO_COOKIE
+
+[1m💻 Development[0m (1/1 active)
+  [92m✅ Active (93 chars)[0m GITHUB_TOKEN
+
+[1m📊 Analytics/SEO[0m (2/2 active)
+  [92m✅ Active (22 chars)[0m GOOGLE_ANALYTICS_API_SECRET
+  [92m✅ Active (22 chars)[0m export GOOGLE_ANALYTICS_API_SECRET
+
+[1m📦 Other/Config[0m (79/119 active)
+  [92m✅ Active (32 chars)[0m ADOBE_PDF_SERVICES_CLIENT_ID
+  [92m✅ Active (36 chars)[0m ADOBE_PDF_SERVICES_CLIENT_SECRET
+  [92m✅ Active (24 chars)[0m BETTERUPTIME_API_KEY
+  [93m⚙️ Config (2 chars)[0m CACHE_TTL_HOURS
+  [93m⚙️ Config (2 chars)[0m DEFAULT_VIDEO_DURATION
+  [93m⚙️ Config (2 chars)[0m DEFAULT_VIDEO_FPS
+  [93m⚙️ Config (4 chars)[0m DEFAULT_VIDEO_QUALITY
+  [93m⚙️ Config (4 chars)[0m DEFAULT_VIDEO_RESOLUTION
+  [92m✅ Active (217 chars)[0m DESCRIPT_API_KEY
+  [92m✅ Active (44 chars)[0m E2B_API_KEY
+  [93m⚙️ Config (4 chars)[0m ENABLE_CACHING
+  [93m⚙️ Config (4 chars)[0m ENABLE_CINEMATOGRAPHY_ANALYSIS
+  [93m⚙️ Config (4 chars)[0m ENABLE_COMPLEXITY_ASSESSMENT
+  [93m⚙️ Config (4 chars)[0m ENABLE_CONTENT_ANALYSIS
+  [93m⚙️ Config (4 chars)[0m ENABLE_DETAILED_LOGGING
+  [93m⚙️ Config (4 chars)[0m ENABLE_ERROR_REPORTING
+  [93m⚙️ Config (4 chars)[0m ENABLE_STYLE_DETECTION
+  [92m✅ Active (53 chars)[0m GOOGLE_CLIENT_SECRET
+  [92m✅ Active (79 chars)[0m HEYGEN_API_KEY
+  [92m✅ Active (19 chars)[0m IMAGGA_API_KEY
+  [92m✅ Active (32 chars)[0m IMAGGA_API_SECRET
+  [92m✅ Active (51 chars)[0m LANGSMITH_API_KEY
+  [92m✅ Active (52 chars)[0m LLAMAINDEX_API_KEY
+  [93m⚙️ Config (4 chars)[0m LOG_LEVEL
+  [93m⚙️ Config (4 chars)[0m MAX_CACHE_SIZE_MB
+  [93m⚙️ Config (1 chars)[0m MAX_CONCURRENT_GENERATIONS
+  [93m⚙️ Config (1 chars)[0m MAX_RETRY_ATTEMPTS
+  [93m⚙️ Config (2 chars)[0m MAX_VIDEO_DURATION
+  [93m⚙️ Config (3 chars)[0m MAX_VIDEO_SIZE_MB
+  [92m✅ Active (43 chars)[0m MEM0_API_KEY
+  [93m⚙️ Config (2 chars)[0m METRICS_RETENTION_DAYS
+  [92m✅ Active (40 chars)[0m MURF_API_KEY
+  [92m✅ Active (39 chars)[0m NANOBANANA_API_KEY
+  [92m✅ Active (28 chars)[0m NANOBANANA_BASE_URL
+  [92m✅ Active (32 chars)[0m NEWSAPI_KEY
+  [92m✅ Active (113 chars)[0m OPENROUTER_API_KEY
+  [92m✅ Active (24 chars)[0m PDFAI_API_KEY
+  [92m✅ Active (49 chars)[0m PREFERRED_TEXT_TO_VIDEO_MODEL
+  [92m✅ Active (24 chars)[0m REMOVEBG_API_KEY
+  [92m✅ Active (24 chars)[0m RESEMBLE_API_KEY
+  [93m⚙️ Config (4 chars)[0m RETRY_DELAY_MS
+  [92m✅ Active (93 chars)[0m REVAI_API_KEY
+  [92m✅ Active (80 chars)[0m SCRAPINGBEE_API_KEY
+  [92m✅ Active (25 chars)[0m SCRAPINGBOT_API_KEY
+  [92m✅ Active (71 chars)[0m SENTRY_DSN
+  [92m✅ Active (10 chars)[0m SENTRY_ENVIRONMENT
+  [92m✅ Active (20 chars)[0m SERPAPI_KEY
+  [92m✅ Active (85 chars)[0m SLITE_API_KEY
+  [92m✅ Active (164 chars)[0m SORAI_API_KEY
+  [92m✅ Active (99 chars)[0m STABLE_VIDEO_DIFFUSION_API_KEY
+  [92m✅ Active (34 chars)[0m TWILIO_ACCOUNT_SID
+  [92m✅ Active (32 chars)[0m TWILIO_AUTH_TOKEN
+  [92m✅ Active (12 chars)[0m TWILIO_PHONE_NUMBER
+  [92m✅ Active (980 chars)[0m UDIO_API_KEY
+  [92m✅ Active (30 chars)[0m UNSTRUCTURED_API_KEY
+  [92m✅ Active (32 chars)[0m VANCEAI_API_KEY
+  [92m✅ Active (264 chars)[0m ZEP_API_KEY
+  [92m✅ Active (32 chars)[0m export ADOBE_PDF_SERVICES_CLIENT_ID

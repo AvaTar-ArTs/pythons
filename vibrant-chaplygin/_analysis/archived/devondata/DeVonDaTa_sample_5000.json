@@ -1,0 +1,2317 @@
+{
+  "sample": [
+    {
+      "path": "/Volumes/DeVonDaTa/compare_inventories.py",
+      "name": "compare_inventories.py",
+      "hash": "6eadfa7c8ea0aaec6f6c48fb78eeaee4",
+      "size": 5243,
+      "parent": "/Volumes/DeVonDaTa"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/ai-frontend/fullstack-ai-app/ai-frontend/node_modules/flatted/python/flatted.py",
+      "name": "flatted.py",
+      "hash": "b7b21f8c786835425a8a7b00aa881be9",
+      "size": 3860,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/ai-frontend/fullstack-ai-app/ai-frontend/node_modules/flatted/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/ai-frontend/fullstack-ai-app/backend/main.py",
+      "name": "main.py",
+      "hash": "a14dfb53f66a985eb710bbb3b8fbdf2d",
+      "size": 733,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/ai-frontend/fullstack-ai-app/backend"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/vance.py",
+      "name": "vance.py",
+      "hash": "86707bc0978cb82d0cadca57d0a05f34",
+      "size": 4323,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/mp3.py",
+      "name": "mp3.py",
+      "hash": "fdf469b68adfd7f16c822386b76d4084",
+      "size": 1472,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale-.py",
+      "name": "upscale-.py",
+      "hash": "2bf7706b3e41511fae506d7858de5a26",
+      "size": 1131,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/motion-upload.py",
+      "name": "motion-upload.py",
+      "hash": "7a8fbc42143dea6e5502e46c97716479",
+      "size": 1689,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/imgmp4.py",
+      "name": "imgmp4.py",
+      "hash": "daf146531b27c5387acd49d20c599816",
+      "size": 2080,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale 3.py",
+      "name": "upscale 3.py",
+      "hash": "18311cf1a80f24e0d9f7346e4e81128a",
+      "size": 1131,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale.py",
+      "name": "upscale.py",
+      "hash": "ec6e06710101131b3188317141d62c65",
+      "size": 2087,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale copy.py",
+      "name": "upscale copy.py",
+      "hash": "a83b03b569e33b56593799813a2fef70",
+      "size": 2087,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/img2img.py",
+      "name": "img2img.py",
+      "hash": "cfac4791edaa506b1b7649030932c43b",
+      "size": 1762,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/web-png-upscale.py",
+      "name": "web-png-upscale.py",
+      "hash": "03f23b8c18e5cab60326598a5a01ed8b",
+      "size": 2005,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/imgconvert.py",
+      "name": "imgconvert.py",
+      "hash": "af87c7262500a0789c69608ad02697ed",
+      "size": 1789,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/motion-upload copy.py",
+      "name": "motion-upload copy.py",
+      "hash": "6ca733778977a9d80ee7171c347e5981",
+      "size": 1689,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/transcribe-mp3.py",
+      "name": "transcribe-mp3.py",
+      "hash": "c1d972fb51b84312965fe322d22cc0fd",
+      "size": 1340,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/web-png-upscale copy.py",
+      "name": "web-png-upscale copy.py",
+      "hash": "bd1761007b3864ec470f4d99d8f296f8",
+      "size": 1789,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/img-img-upscale.py",
+      "name": "img-img-upscale.py",
+      "hash": "a185bc3ecb1b2580e7f19775fe8c002a",
+      "size": 1603,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/motion-upload 2.py",
+      "name": "motion-upload 2.py",
+      "hash": "2de9c7ef15f2e0e5d4865d15b3014593",
+      "size": 1689,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale3.py",
+      "name": "upscale3.py",
+      "hash": "bf31b926a564a111472de4ea3a42ce75",
+      "size": 1131,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/simple-photo-gallery/setup.py",
+      "name": "setup.py",
+      "hash": "d0da9c9ed9b48bc020fb5f64c49b273d",
+      "size": 1462,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/simple-photo-gallery"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine/over3.py",
+      "name": "over3.py",
+      "hash": "337ba1c3e0f7a7ab80cd1d2c071ae9c8",
+      "size": 1747,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine/cover.py",
+      "name": "cover.py",
+      "hash": "bd8780de5a9f876b9ee65e39d832039d",
+      "size": 1594,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine/imgmp4.py",
+      "name": "imgmp4.py",
+      "hash": "0f8c9d416726cf096b79c98cc2fc5ffb",
+      "size": 1968,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine/cover2.py",
+      "name": "cover2.py",
+      "hash": "1821bbb4ee5d3a9d256cd80300e63314",
+      "size": 1593,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docks.py",
+      "name": "docks.py",
+      "hash": "85bbd9792802623061058a89714bb9f0",
+      "size": 3063,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/config.py",
+      "name": "config.py",
+      "hash": "75690021e854cd965b1b32202cb19bef",
+      "size": 47,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/organize_csv.py",
+      "name": "organize_csv.py",
+      "hash": "36ed36a0bab77433c351ffcbb9ace1e9",
+      "size": 4585,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/organize.py",
+      "name": "organize.py",
+      "hash": "acb6dfa6a4f128b4ba015827a98d5597",
+      "size": 1119,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/resize-skip-8below.py",
+      "name": "resize-skip-8below.py",
+      "hash": "1cb78206c38df0f594943a4520d4b958",
+      "size": 4408,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docs.py",
+      "name": "docs.py",
+      "hash": "744ec0f878e73d14ee5e6a07ab836d81",
+      "size": 6506,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/other.py",
+      "name": "other.py",
+      "hash": "adc3916a01bd4fa21457ab56eed0a2e0",
+      "size": 7418,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/all.py",
+      "name": "all.py",
+      "hash": "75d4dfc2e5f6811580104fddbb3fee4e",
+      "size": 6409,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docs4.py",
+      "name": "docs4.py",
+      "hash": "f1c7c7b1a9bb1b5b1ada001504b3c7c1",
+      "size": 2272,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/img.py",
+      "name": "img.py",
+      "hash": "3b44fbbdeb680754ca53f19e92908191",
+      "size": 6407,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/vids.py",
+      "name": "vids.py",
+      "hash": "795a80046d577f26c6d163e1a074106b",
+      "size": 7348,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docs3.py",
+      "name": "docs3.py",
+      "hash": "13deca59ae2ff2b6b2ea87555a574bea",
+      "size": 4879,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/scan.py",
+      "name": "scan.py",
+      "hash": "44f13c341b1e848aeb39c0be53528f54",
+      "size": 2983,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docs2.py",
+      "name": "docs2.py",
+      "hash": "22010f872dc1db49a6e0c21904089237",
+      "size": 7172,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/audio.py",
+      "name": "audio.py",
+      "hash": "082ab32bbe5da5b4c65d1e3088f2cae9",
+      "size": 7359,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/organizer.py",
+      "name": "organizer.py",
+      "hash": "3a1b653398591d828f45ea88e03e0c2c",
+      "size": 1488,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/clean-csv/docs4.py",
+      "name": "docs4.py",
+      "hash": "f1c7c7b1a9bb1b5b1ada001504b3c7c1",
+      "size": 2272,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/clean-csv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Movies/Project2025/Quiz/quiz-mp3/trek3.py",
+      "name": "trek3.py",
+      "hash": "46fe58fcc93ae2197d64962ef9b13bee",
+      "size": 2565,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Movies/Project2025/Quiz/quiz-mp3"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Movies/Project2025/Quiz/quiz-mp3/mp22.py",
+      "name": "mp22.py",
+      "hash": "4aee1abcd79215933d1d383b60ab5150",
+      "size": 4114,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Movies/Project2025/Quiz/quiz-mp3"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/templates/script-command.template.py",
+      "name": "script-command.template.py",
+      "hash": "8a28855289e9db63b3db477d9476eafa",
+      "size": 806,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/templates"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/what-day-is.py",
+      "name": "what-day-is.py",
+      "hash": "552a685aa96cbb8dd9f5537352486cf5",
+      "size": 583,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/create-gif-from-video.py",
+      "name": "create-gif-from-video.py",
+      "hash": "1dc9f8665e7f2f05e27d8bcc5411be28",
+      "size": 3859,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/markdown-to-telegram.py",
+      "name": "markdown-to-telegram.py",
+      "hash": "5921a21274fc5b751c0485da9b4fb2ba",
+      "size": 3818,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/titlecase.py",
+      "name": "titlecase.py",
+      "hash": "f85c86d63afb74358c670f87c01eaa89",
+      "size": 4744,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/kebabcase.py",
+      "name": "kebabcase.py",
+      "hash": "8c8718bf4a0bbcd8ce46887888008bcf",
+      "size": 1092,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/snakecase.py",
+      "name": "snakecase.py",
+      "hash": "4c32c6ad4b1fa35c9c819f1c82dd561a",
+      "size": 1155,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/uppercase.py",
+      "name": "uppercase.py",
+      "hash": "59e79a0831a2b2352a618040a40f3248",
+      "size": 1054,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/lowercase.py",
+      "name": "lowercase.py",
+      "hash": "7b929b8c34a7beb70c623376df64b47c",
+      "size": 1051,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/camelcase.py",
+      "name": "camelcase.py",
+      "hash": "a3804dc20e3f72df328eeb0e34272164",
+      "size": 4801,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/samsungshortcuts.py",
+      "name": "samsungshortcuts.py",
+      "hash": "92ea1386cb6f61092505d71c1b775f72",
+      "size": 218,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/turn-off.template.py",
+      "name": "turn-off.template.py",
+      "hash": "1a6f1c51bf9cea938d7376e7d1f35822",
+      "size": 1143,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/samsunghelper.py",
+      "name": "samsunghelper.py",
+      "hash": "060ab52bb4f0583cbda7cba615706699",
+      "size": 4275,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/turn-on.template.py",
+      "name": "turn-on.template.py",
+      "hash": "e486ec2307aa36abadd90cbef56fbb31",
+      "size": 970,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/samsungexceptions.py",
+      "name": "samsungexceptions.py",
+      "hash": "4edfc6a5cc6cec1bb8a74c4dc8811791",
+      "size": 226,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/math/latex-calculator.py",
+      "name": "latex-calculator.py",
+      "hash": "791534219d94459406e106126c6ce6fd",
+      "size": 718,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/math"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/dashboard/crypto-portfolio.py",
+      "name": "crypto-portfolio.py",
+      "hash": "8387ef667196bcf50d07e01bfd0b1c8c",
+      "size": 1206,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/dashboard"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/dashboard/nextdns-status-check.py",
+      "name": "nextdns-status-check.py",
+      "hash": "076ea554992bbfec8f5f66fb8eef0f3d",
+      "size": 1160,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/dashboard"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system/rename-videos-pictures.py",
+      "name": "rename-videos-pictures.py",
+      "hash": "231cafc27b36f06d9ae07e562b45e5d2",
+      "size": 5221,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system/save-image-from-clipboard.py",
+      "name": "save-image-from-clipboard.py",
+      "hash": "6090bd0cab562598e515b424da5cff07",
+      "size": 1011,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system/update-scripts-command.template.py",
+      "name": "update-scripts-command.template.py",
+      "hash": "cbb1be708bae65fc6078ed5fa6af9870",
+      "size": 4530,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/genpasswd.py",
+      "name": "genpasswd.py",
+      "hash": "850f6aeb913eaed3bec14a9479daba08",
+      "size": 2485,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlab-mergerequests.template.py",
+      "name": "gitlab-mergerequests.template.py",
+      "hash": "83bffd9f0ffe0861143f5cd52d4990ff",
+      "size": 1601,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlabconfig.py",
+      "name": "gitlabconfig.py",
+      "hash": "64e9c070f29bcf597d51a87717a8fb48",
+      "size": 391,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlab-todos.template.py",
+      "name": "gitlab-todos.template.py",
+      "hash": "8525b1a09ed8b299d94e1a3515446fcf",
+      "size": 1342,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlabhelper.py",
+      "name": "gitlabhelper.py",
+      "hash": "58822cdb90c15c893675a23e5c2d1c7e",
+      "size": 976,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlab-issues.template.py",
+      "name": "gitlab-issues.template.py",
+      "hash": "ef53abb487174e2b0fd40491d9ddf6c8",
+      "size": 1273,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/sentry/sentry-unresolved-issues.template.py",
+      "name": "sentry-unresolved-issues.template.py",
+      "hash": "f8ed71d212f28b1f57efe589b79c9e96",
+      "size": 2085,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/sentry"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/sentry/sentry-unresolved-issues-by-project.template.py",
+      "name": "sentry-unresolved-issues-by-project.template.py",
+      "hash": "fa2a3fde84ae419eaa5512a7dfb53afa",
+      "size": 3038,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/sentry"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/communication/share-secret-doppler.py",
+      "name": "share-secret-doppler.py",
+      "hash": "572c59afec919c07aa9ad1c8f934450a",
+      "size": 2069,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/communication"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/wikipedia/wikipedia-search.py",
+      "name": "wikipedia-search.py",
+      "hash": "85e70b8fedca40608ca329785747164d",
+      "size": 1992,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/wikipedia"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/playground/open-new-view-playground.py",
+      "name": "open-new-view-playground.py",
+      "hash": "6a52e4468a7956453fa5c0d5abcd0d78",
+      "size": 1558,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/playground"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/playground/open-new-playground.py",
+      "name": "open-new-playground.py",
+      "hash": "ef412767d31a99aef22f2123fef66f46",
+      "size": 1545,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/playground"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/mail/copy-captcha-from-mail.py",
+      "name": "copy-captcha-from-mail.py",
+      "hash": "847be7662841b33cfa10bee92f462dee",
+      "size": 3055,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/mail"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/translate-shell/translate-shell-language-pair.py",
+      "name": "translate-shell-language-pair.py",
+      "hash": "74fc65fddc81972d1a939f1c683c7078",
+      "size": 3584,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/translate-shell"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/trello/create-trello-card.template.py",
+      "name": "create-trello-card.template.py",
+      "hash": "2b85d7a4abbb3820deb5c258dee01253",
+      "size": 1832,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/trello"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip/quip.py",
+      "name": "quip.py",
+      "hash": "f199d470015cba3b75b5a7b3a2eed6af",
+      "size": 32696,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip/quip-new.template.py",
+      "name": "quip-new.template.py",
+      "hash": "e8733bd8533a279d10320b4bff89a409",
+      "size": 996,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip/quip_utils.py",
+      "name": "quip_utils.py",
+      "hash": "e276ddd022a158cd585c51a7c537fd11",
+      "size": 7109,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip/set-up-quip-commands.py",
+      "name": "set-up-quip-commands.py",
+      "hash": "713891e497c091ea9649444f1ffd8623",
+      "size": 1928,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/setup.py",
+      "name": "setup.py",
+      "hash": "0b7a29ad7a1bb94702a48ea353447ad0",
+      "size": 856,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/dist/youtube_extract-1.4.0.py",
+      "name": "youtube_extract-1.4.0.py",
+      "hash": "9d723d7fd2ee23ecef70a5d7828b6208",
+      "size": 8149,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/dist"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests/conftest.py",
+      "name": "conftest.py",
+      "hash": "b7924eb05353096aa1d3bc28f64957fd",
+      "size": 2052,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests/test_ydl.py",
+      "name": "test_ydl.py",
+      "hash": "41b39e09d78f4e1e9de30a753e6d5a33",
+      "size": 144,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests/test_main.py",
+      "name": "test_main.py",
+      "hash": "8a72d7f90db61a43dd282d55c9b4894a",
+      "size": 1968,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/my_uploads.py",
+      "name": "my_uploads.py",
+      "hash": "6f5fe982c107681da6be26fffa7400ff",
+      "size": 3322,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/list_streams.py",
+      "name": "list_streams.py",
+      "hash": "e60851e92275514c381ac912110f69c9",
+      "size": 2333,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/create_reporting_job.py",
+      "name": "create_reporting_job.py",
+      "hash": "481b01c537a52b79c7dbaccd5c31fade",
+      "size": 5618,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/list_broadcasts.py",
+      "name": "list_broadcasts.py",
+      "hash": "81e9883c3673b0aeb37997c8772266ba",
+      "size": 2708,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/channel_localizations.py",
+      "name": "channel_localizations.py",
+      "hash": "f011194f615686153152d8a87717ba71",
+      "size": 7061,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/set_watermark.py",
+      "name": "set_watermark.py",
+      "hash": "4c62cdf7f1d9b3bfa1723115800ef7e2",
+      "size": 4282,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/channel_bulletin.py",
+      "name": "channel_bulletin.py",
+      "hash": "bce468af7f00f70c7a21c9ae2d5d9da2",
+      "size": 3846,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/yt_analytics_v2.py",
+      "name": "yt_analytics_v2.py",
+      "hash": "5a99b2db454185639ee9116612fabf26",
+      "size": 1284,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/add_subscription.py",
+      "name": "add_subscription.py",
+      "hash": "8bb2086303eee4e3db7540cf95846a5d",
+      "size": 2593,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/video_localizations.py",
+      "name": "video_localizations.py",
+      "hash": "5d80a8c15154811305ac81eb7d121211",
+      "size": 7309,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/upload_thumbnail.py",
+      "name": "upload_thumbnail.py",
+      "hash": "fe4d976c9c0a1b4780cfaf34475c1158",
+      "size": 3437,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/retrieve_reports.py",
+      "name": "retrieve_reports.py",
+      "hash": "9423c5c0a69c1c5ebb482fcd0f1e81b4",
+      "size": 7259,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/add_featured_video.py",
+      "name": "add_featured_video.py",
+      "hash": "28d3f1519f02d618d60672e571d101e5",
+      "size": 3893,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/add_channel_section.py",
+      "name": "add_channel_section.py",
+      "hash": "0d9af455cf4d81bacb99c9c1f0e1c8ef",
+      "size": 4154,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/geolocation_search.py",
+      "name": "geolocation_search.py",
+      "hash": "3ad2f02a3adcebbc6b851eb22116028e",
+      "size": 2625,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/unset_watermark.py",
+      "name": "unset_watermark.py",
+      "hash": "70f1b5e751611d6dcff0299f8c48379f",
+      "size": 3092,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/upload_banner.py",
+      "name": "upload_banner.py",
+      "hash": "f1b39a268a52ea799163b01b07c3f17b",
+      "size": 5932,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/upload_video.py",
+      "name": "upload_video.py",
+      "hash": "7419460f338ca044fafcc0dcafee0b9e",
+      "size": 5687,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/comment_threads.py",
+      "name": "comment_threads.py",
+      "hash": "4271ba43a6b8c0f1ccbf4c83b0997266",
+      "size": 6213,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/search.py",
+      "name": "search.py",
+      "hash": "008ad681c89110cf4ad1beac06fdf736",
+      "size": 2435,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/captions.py",
+      "name": "captions.py",
+      "hash": "d397226a82d9e6c4340a5ac630f39838",
+      "size": 7890,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/like_video.py",
+      "name": "like_video.py",
+      "hash": "41be9fb13cc968bbf198f9f6cb4b9d10",
+      "size": 2545,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/create_broadcast.py",
+      "name": "create_broadcast.py",
+      "hash": "1d0a2e6e0065757cf3081e02dd3e8cc8",
+      "size": 5103,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/playlist_updates.py",
+      "name": "playlist_updates.py",
+      "hash": "5f574be137da43adbe73e7fc109e4fb5",
+      "size": 2610,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/comment_handling.py",
+      "name": "comment_handling.py",
+      "hash": "11294f44120950cf245040554b1d7daa",
+      "size": 6831,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/channel_section_localizations.py",
+      "name": "channel_section_localizations.py",
+      "hash": "d0198ac7014a944839f9dc15b9240b37",
+      "size": 9128,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/playlist_localizations.py",
+      "name": "playlist_localizations.py",
+      "hash": "d88ccebdb68d319a99cde588d433e571",
+      "size": 7228,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/yt_analytics_report.py",
+      "name": "yt_analytics_report.py",
+      "hash": "30d8896aaa264909546423f50a03b14b",
+      "size": 6879,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/shuffle_channel_sections.py",
+      "name": "shuffle_channel_sections.py",
+      "hash": "edfdbb702a80e29ec473afddc830065f",
+      "size": 2551,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/quickstart.py",
+      "name": "quickstart.py",
+      "hash": "574036d0d2b1e53923245cdecee61a19",
+      "size": 1643,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/update_video.py",
+      "name": "update_video.py",
+      "hash": "ce1317cc968ed38e2b26ee4a560e2b7d",
+      "size": 4443,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/quickstart_web.py",
+      "name": "quickstart_web.py",
+      "hash": "4645cbe0b76094b55146b86027696f80",
+      "size": 3769,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python_appengine/user_uploads/main.py",
+      "name": "main.py",
+      "hash": "0c6e3a77d6195948b29d9492ec0288fc",
+      "size": 3972,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python_appengine/user_uploads"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python_appengine/search/main.py",
+      "name": "main.py",
+      "hash": "874d6118c975d51b6fb1c0166fe26c86",
+      "size": 2358,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python_appengine/search"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/medium-article-generator/agent.py",
+      "name": "agent.py",
+      "hash": "9a0d58f1d17cf1f63b87a9687f61611b",
+      "size": 450,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/medium-article-generator"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/medium-article-generator/app.py",
+      "name": "app.py",
+      "hash": "7424a728ab8b450388f01dc3395ff4be",
+      "size": 1949,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/medium-article-generator"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests/conftest.py",
+      "name": "conftest.py",
+      "hash": "b7924eb05353096aa1d3bc28f64957fd",
+      "size": 2052,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests/test_ydl.py",
+      "name": "test_ydl.py",
+      "hash": "41b39e09d78f4e1e9de30a753e6d5a33",
+      "size": 144,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests/test_main.py",
+      "name": "test_main.py",
+      "hash": "8a72d7f90db61a43dd282d55c9b4894a",
+      "size": 1968,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi/cookies.py",
+      "name": "cookies.py",
+      "hash": "64a07bf1fda451500e7ce4ef3d87f78e",
+      "size": 2060,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi/igfi.py",
+      "name": "igfi.py",
+      "hash": "27845fc9dfe475e8316e9a2f2d54efc1",
+      "size": 28623,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi/tests/IGFItest.py",
+      "name": "IGFItest.py",
+      "hash": "e5a46914a9d085f0abfd7a51f4c59373",
+      "size": 3139,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Cookies.py",
+      "name": "Cookies.py",
+      "hash": "c83e5a3a930e8f4c9a10729b4a54594f",
+      "size": 2403,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/User.py",
+      "name": "User.py",
+      "hash": "9b61b865d45182294f0ccefdd1378905",
+      "size": 582,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Upload.py",
+      "name": "Upload.py",
+      "hash": "af642c728ce4a6c4d793a540a9462cd2",
+      "size": 6953,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/IO.py",
+      "name": "IO.py",
+      "hash": "820d63f8579044b83fc78037ff584413",
+      "size": 1967,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Browser.py",
+      "name": "Browser.py",
+      "hash": "3001274db4b242c8c7e69b1720543b5c",
+      "size": 785,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/setup.py",
+      "name": "setup.py",
+      "hash": "1180b3fdac8d50218e480f5afeb12334",
+      "size": 266,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Bot.py",
+      "name": "Bot.py",
+      "hash": "a231348c29cc70f7d3cd2741603293a5",
+      "size": 5343,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/utils.py",
+      "name": "utils.py",
+      "hash": "60ae8d5419e4e9779a2af92881e7a762",
+      "size": 102,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/TaskScheduler.py",
+      "name": "TaskScheduler.py",
+      "hash": "dbeb0a045db54fd088210569468795cb",
+      "size": 2023,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/main.py",
+      "name": "main.py",
+      "hash": "b327fd3f13c96cda89217193352d6098",
+      "size": 1998,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/TiktokBot.py",
+      "name": "TiktokBot.py",
+      "hash": "75f239375bd5d9a278b034fe9205ee23",
+      "size": 802,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Video.py",
+      "name": "Video.py",
+      "hash": "959a0c5f41ee7da75d6a50a56d1f5556",
+      "size": 5415,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/main.py",
+      "name": "main.py",
+      "hash": "1b6ed9997e3fa77cf08c066e906491df",
+      "size": 297,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Cookies.py",
+      "name": "Cookies.py",
+      "hash": "dd5637f5d046b1803add71868166e3a2",
+      "size": 2783,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Task.py",
+      "name": "Task.py",
+      "hash": "0a75d539a87dbe140ea9ed4fb13108b7",
+      "size": 265,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/IO.py",
+      "name": "IO.py",
+      "hash": "d40d0d0acc3b9e57a7f0b0ed28bcc64d",
+      "size": 6166,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Uploader.py",
+      "name": "Uploader.py",
+      "hash": "650e6426937cfb0bd1e52250ebf472dd",
+      "size": 1348,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/__init__.py",
+      "name": "__init__.py",
+      "hash": "4820a37ef9f8837867960e6bef3ca14e",
+      "size": 2,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/TaskManager.py",
+      "name": "TaskManager.py",
+      "hash": "5a687b0830d7e62e0e84c3f53f944852",
+      "size": 778,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/WebBot.py",
+      "name": "WebBot.py",
+      "hash": "f5074c4ec09cce2eb1da06401530fd15",
+      "size": 5502,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Browser.py",
+      "name": "Browser.py",
+      "hash": "0eb2c2f92861ae1ee70f363b9defea86",
+      "size": 1776,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/VideoManager.py",
+      "name": "VideoManager.py",
+      "hash": "be19955b188a8650864cfe8da5780cab",
+      "size": 391,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Scheduler.py",
+      "name": "Scheduler.py",
+      "hash": "3a7e17d41bc3956b07d55063f62baec1",
+      "size": 159,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/TiktokBot.py",
+      "name": "TiktokBot.py",
+      "hash": "84308b70a04ecb5db9ad1b0eb375eb0c",
+      "size": 2102,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Video.py",
+      "name": "Video.py",
+      "hash": "1295c149e3c3bd915831d4fd045550cf",
+      "size": 6091,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/StudioFlow/StudioFlow.py",
+      "name": "StudioFlow.py",
+      "hash": "8b03f7b0a08356ccee35cfd550aadf02",
+      "size": 7180,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/StudioFlow"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/Youtube-Video-Uploader-Automation/node_modules/flatted/python/flatted.py",
+      "name": "flatted.py",
+      "hash": "b7b21f8c786835425a8a7b00aa881be9",
+      "size": 3860,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/Youtube-Video-Uploader-Automation/node_modules/flatted/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/xbot-ai-master/src/main/python/trends_api.py",
+      "name": "trends_api.py",
+      "hash": "5fb3c76f1a3175a49351a8e27e91475f",
+      "size": 1104,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/xbot-ai-master/src/main/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/chat-gpt-video-maker-main/node_modules/flatted/python/flatted.py",
+      "name": "flatted.py",
+      "hash": "b7b21f8c786835425a8a7b00aa881be9",
+      "size": 3860,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/chat-gpt-video-maker-main/node_modules/flatted/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/apify/suno/node_modules/flatted/python/flatted.py",
+      "name": "flatted.py",
+      "hash": "b7b21f8c786835425a8a7b00aa881be9",
+      "size": 3860,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/apify/suno/node_modules/flatted/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text/whisper.py",
+      "name": "whisper.py",
+      "hash": "268e2f7c2048c93d7ff920e54e0dcc3e",
+      "size": 1384,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text/whisper2.py",
+      "name": "whisper2.py",
+      "hash": "26dd355c0e813a3b36bc45edf2630eab",
+      "size": 1577,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text/combiner.py",
+      "name": "combiner.py",
+      "hash": "4fa82a5466100d40a20035440170171c",
+      "size": 1965,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text/content-new.py",
+      "name": "content-new.py",
+      "hash": "b1329a6abf1a94b10c007c4bfc740024",
+      "size": 2349,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text"
+    }
+  ],
+  "duplicates": [],
+  "unique": [
+    {
+      "path": "/Volumes/DeVonDaTa/compare_inventories.py",
+      "name": "compare_inventories.py",
+      "hash": "6eadfa7c8ea0aaec6f6c48fb78eeaee4",
+      "size": 5243,
+      "parent": "/Volumes/DeVonDaTa"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/ai-frontend/fullstack-ai-app/ai-frontend/node_modules/flatted/python/flatted.py",
+      "name": "flatted.py",
+      "hash": "b7b21f8c786835425a8a7b00aa881be9",
+      "size": 3860,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/ai-frontend/fullstack-ai-app/ai-frontend/node_modules/flatted/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/ai-frontend/fullstack-ai-app/backend/main.py",
+      "name": "main.py",
+      "hash": "a14dfb53f66a985eb710bbb3b8fbdf2d",
+      "size": 733,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/ai-frontend/fullstack-ai-app/backend"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/vance.py",
+      "name": "vance.py",
+      "hash": "86707bc0978cb82d0cadca57d0a05f34",
+      "size": 4323,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/mp3.py",
+      "name": "mp3.py",
+      "hash": "fdf469b68adfd7f16c822386b76d4084",
+      "size": 1472,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale-.py",
+      "name": "upscale-.py",
+      "hash": "2bf7706b3e41511fae506d7858de5a26",
+      "size": 1131,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/motion-upload.py",
+      "name": "motion-upload.py",
+      "hash": "7a8fbc42143dea6e5502e46c97716479",
+      "size": 1689,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/imgmp4.py",
+      "name": "imgmp4.py",
+      "hash": "daf146531b27c5387acd49d20c599816",
+      "size": 2080,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale 3.py",
+      "name": "upscale 3.py",
+      "hash": "18311cf1a80f24e0d9f7346e4e81128a",
+      "size": 1131,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale.py",
+      "name": "upscale.py",
+      "hash": "ec6e06710101131b3188317141d62c65",
+      "size": 2087,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale copy.py",
+      "name": "upscale copy.py",
+      "hash": "a83b03b569e33b56593799813a2fef70",
+      "size": 2087,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/img2img.py",
+      "name": "img2img.py",
+      "hash": "cfac4791edaa506b1b7649030932c43b",
+      "size": 1762,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/web-png-upscale.py",
+      "name": "web-png-upscale.py",
+      "hash": "03f23b8c18e5cab60326598a5a01ed8b",
+      "size": 2005,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/imgconvert.py",
+      "name": "imgconvert.py",
+      "hash": "af87c7262500a0789c69608ad02697ed",
+      "size": 1789,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/motion-upload copy.py",
+      "name": "motion-upload copy.py",
+      "hash": "6ca733778977a9d80ee7171c347e5981",
+      "size": 1689,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/transcribe-mp3.py",
+      "name": "transcribe-mp3.py",
+      "hash": "c1d972fb51b84312965fe322d22cc0fd",
+      "size": 1340,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/web-png-upscale copy.py",
+      "name": "web-png-upscale copy.py",
+      "hash": "bd1761007b3864ec470f4d99d8f296f8",
+      "size": 1789,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/img-img-upscale.py",
+      "name": "img-img-upscale.py",
+      "hash": "a185bc3ecb1b2580e7f19775fe8c002a",
+      "size": 1603,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/motion-upload 2.py",
+      "name": "motion-upload 2.py",
+      "hash": "2de9c7ef15f2e0e5d4865d15b3014593",
+      "size": 1689,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale/upscale3.py",
+      "name": "upscale3.py",
+      "hash": "bf31b926a564a111472de4ea3a42ce75",
+      "size": 1131,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/upscale"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/simple-photo-gallery/setup.py",
+      "name": "setup.py",
+      "hash": "d0da9c9ed9b48bc020fb5f64c49b273d",
+      "size": 1462,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/TrashyCd/simple-photo-gallery"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine/over3.py",
+      "name": "over3.py",
+      "hash": "337ba1c3e0f7a7ab80cd1d2c071ae9c8",
+      "size": 1747,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine/cover.py",
+      "name": "cover.py",
+      "hash": "bd8780de5a9f876b9ee65e39d832039d",
+      "size": 1594,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine/imgmp4.py",
+      "name": "imgmp4.py",
+      "hash": "0f8c9d416726cf096b79c98cc2fc5ffb",
+      "size": 1968,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine/cover2.py",
+      "name": "cover2.py",
+      "hash": "1821bbb4ee5d3a9d256cd80300e63314",
+      "size": 1593,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Music/mine"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docks.py",
+      "name": "docks.py",
+      "hash": "85bbd9792802623061058a89714bb9f0",
+      "size": 3063,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/config.py",
+      "name": "config.py",
+      "hash": "75690021e854cd965b1b32202cb19bef",
+      "size": 47,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/organize_csv.py",
+      "name": "organize_csv.py",
+      "hash": "36ed36a0bab77433c351ffcbb9ace1e9",
+      "size": 4585,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/organize.py",
+      "name": "organize.py",
+      "hash": "acb6dfa6a4f128b4ba015827a98d5597",
+      "size": 1119,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/resize-skip-8below.py",
+      "name": "resize-skip-8below.py",
+      "hash": "1cb78206c38df0f594943a4520d4b958",
+      "size": 4408,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docs.py",
+      "name": "docs.py",
+      "hash": "744ec0f878e73d14ee5e6a07ab836d81",
+      "size": 6506,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/other.py",
+      "name": "other.py",
+      "hash": "adc3916a01bd4fa21457ab56eed0a2e0",
+      "size": 7418,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/all.py",
+      "name": "all.py",
+      "hash": "75d4dfc2e5f6811580104fddbb3fee4e",
+      "size": 6409,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docs4.py",
+      "name": "docs4.py",
+      "hash": "f1c7c7b1a9bb1b5b1ada001504b3c7c1",
+      "size": 2272,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/img.py",
+      "name": "img.py",
+      "hash": "3b44fbbdeb680754ca53f19e92908191",
+      "size": 6407,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/vids.py",
+      "name": "vids.py",
+      "hash": "795a80046d577f26c6d163e1a074106b",
+      "size": 7348,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docs3.py",
+      "name": "docs3.py",
+      "hash": "13deca59ae2ff2b6b2ea87555a574bea",
+      "size": 4879,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/scan.py",
+      "name": "scan.py",
+      "hash": "44f13c341b1e848aeb39c0be53528f54",
+      "size": 2983,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/docs2.py",
+      "name": "docs2.py",
+      "hash": "22010f872dc1db49a6e0c21904089237",
+      "size": 7172,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/audio.py",
+      "name": "audio.py",
+      "hash": "082ab32bbe5da5b4c65d1e3088f2cae9",
+      "size": 7359,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/organizer.py",
+      "name": "organizer.py",
+      "hash": "3a1b653398591d828f45ea88e03e0c2c",
+      "size": 1488,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/clean-csv/docs4.py",
+      "name": "docs4.py",
+      "hash": "f1c7c7b1a9bb1b5b1ada001504b3c7c1",
+      "size": 2272,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/clean/clean-csv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Movies/Project2025/Quiz/quiz-mp3/trek3.py",
+      "name": "trek3.py",
+      "hash": "46fe58fcc93ae2197d64962ef9b13bee",
+      "size": 2565,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Movies/Project2025/Quiz/quiz-mp3"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Movies/Project2025/Quiz/quiz-mp3/mp22.py",
+      "name": "mp22.py",
+      "hash": "4aee1abcd79215933d1d383b60ab5150",
+      "size": 4114,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Movies/Project2025/Quiz/quiz-mp3"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/templates/script-command.template.py",
+      "name": "script-command.template.py",
+      "hash": "8a28855289e9db63b3db477d9476eafa",
+      "size": 806,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/templates"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/what-day-is.py",
+      "name": "what-day-is.py",
+      "hash": "552a685aa96cbb8dd9f5537352486cf5",
+      "size": 583,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/create-gif-from-video.py",
+      "name": "create-gif-from-video.py",
+      "hash": "1dc9f8665e7f2f05e27d8bcc5411be28",
+      "size": 3859,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/markdown-to-telegram.py",
+      "name": "markdown-to-telegram.py",
+      "hash": "5921a21274fc5b751c0485da9b4fb2ba",
+      "size": 3818,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/titlecase.py",
+      "name": "titlecase.py",
+      "hash": "f85c86d63afb74358c670f87c01eaa89",
+      "size": 4744,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/kebabcase.py",
+      "name": "kebabcase.py",
+      "hash": "8c8718bf4a0bbcd8ce46887888008bcf",
+      "size": 1092,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/snakecase.py",
+      "name": "snakecase.py",
+      "hash": "4c32c6ad4b1fa35c9c819f1c82dd561a",
+      "size": 1155,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/uppercase.py",
+      "name": "uppercase.py",
+      "hash": "59e79a0831a2b2352a618040a40f3248",
+      "size": 1054,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/lowercase.py",
+      "name": "lowercase.py",
+      "hash": "7b929b8c34a7beb70c623376df64b47c",
+      "size": 1051,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case/camelcase.py",
+      "name": "camelcase.py",
+      "hash": "a3804dc20e3f72df328eeb0e34272164",
+      "size": 4801,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/conversions/change-case"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/samsungshortcuts.py",
+      "name": "samsungshortcuts.py",
+      "hash": "92ea1386cb6f61092505d71c1b775f72",
+      "size": 218,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/turn-off.template.py",
+      "name": "turn-off.template.py",
+      "hash": "1a6f1c51bf9cea938d7376e7d1f35822",
+      "size": 1143,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/samsunghelper.py",
+      "name": "samsunghelper.py",
+      "hash": "060ab52bb4f0583cbda7cba615706699",
+      "size": 4275,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/turn-on.template.py",
+      "name": "turn-on.template.py",
+      "hash": "e486ec2307aa36abadd90cbef56fbb31",
+      "size": 970,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv/samsungexceptions.py",
+      "name": "samsungexceptions.py",
+      "hash": "4edfc6a5cc6cec1bb8a74c4dc8811791",
+      "size": 226,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/remote-control/samsung-tv"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/math/latex-calculator.py",
+      "name": "latex-calculator.py",
+      "hash": "791534219d94459406e106126c6ce6fd",
+      "size": 718,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/math"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/dashboard/crypto-portfolio.py",
+      "name": "crypto-portfolio.py",
+      "hash": "8387ef667196bcf50d07e01bfd0b1c8c",
+      "size": 1206,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/dashboard"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/dashboard/nextdns-status-check.py",
+      "name": "nextdns-status-check.py",
+      "hash": "076ea554992bbfec8f5f66fb8eef0f3d",
+      "size": 1160,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/dashboard"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system/rename-videos-pictures.py",
+      "name": "rename-videos-pictures.py",
+      "hash": "231cafc27b36f06d9ae07e562b45e5d2",
+      "size": 5221,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system/save-image-from-clipboard.py",
+      "name": "save-image-from-clipboard.py",
+      "hash": "6090bd0cab562598e515b424da5cff07",
+      "size": 1011,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system/update-scripts-command.template.py",
+      "name": "update-scripts-command.template.py",
+      "hash": "cbb1be708bae65fc6078ed5fa6af9870",
+      "size": 4530,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/system"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/genpasswd.py",
+      "name": "genpasswd.py",
+      "hash": "850f6aeb913eaed3bec14a9479daba08",
+      "size": 2485,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlab-mergerequests.template.py",
+      "name": "gitlab-mergerequests.template.py",
+      "hash": "83bffd9f0ffe0861143f5cd52d4990ff",
+      "size": 1601,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlabconfig.py",
+      "name": "gitlabconfig.py",
+      "hash": "64e9c070f29bcf597d51a87717a8fb48",
+      "size": 391,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlab-todos.template.py",
+      "name": "gitlab-todos.template.py",
+      "hash": "8525b1a09ed8b299d94e1a3515446fcf",
+      "size": 1342,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlabhelper.py",
+      "name": "gitlabhelper.py",
+      "hash": "58822cdb90c15c893675a23e5c2d1c7e",
+      "size": 976,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab/gitlab-issues.template.py",
+      "name": "gitlab-issues.template.py",
+      "hash": "ef53abb487174e2b0fd40491d9ddf6c8",
+      "size": 1273,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/gitlab"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/sentry/sentry-unresolved-issues.template.py",
+      "name": "sentry-unresolved-issues.template.py",
+      "hash": "f8ed71d212f28b1f57efe589b79c9e96",
+      "size": 2085,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/sentry"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/sentry/sentry-unresolved-issues-by-project.template.py",
+      "name": "sentry-unresolved-issues-by-project.template.py",
+      "hash": "fa2a3fde84ae419eaa5512a7dfb53afa",
+      "size": 3038,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/developer-utils/sentry"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/communication/share-secret-doppler.py",
+      "name": "share-secret-doppler.py",
+      "hash": "572c59afec919c07aa9ad1c8f934450a",
+      "size": 2069,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/communication"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/wikipedia/wikipedia-search.py",
+      "name": "wikipedia-search.py",
+      "hash": "85e70b8fedca40608ca329785747164d",
+      "size": 1992,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/wikipedia"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/playground/open-new-view-playground.py",
+      "name": "open-new-view-playground.py",
+      "hash": "6a52e4468a7956453fa5c0d5abcd0d78",
+      "size": 1558,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/playground"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/playground/open-new-playground.py",
+      "name": "open-new-playground.py",
+      "hash": "ef412767d31a99aef22f2123fef66f46",
+      "size": 1545,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/playground"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/mail/copy-captcha-from-mail.py",
+      "name": "copy-captcha-from-mail.py",
+      "hash": "847be7662841b33cfa10bee92f462dee",
+      "size": 3055,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/mail"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/translate-shell/translate-shell-language-pair.py",
+      "name": "translate-shell-language-pair.py",
+      "hash": "74fc65fddc81972d1a939f1c683c7078",
+      "size": 3584,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/translate-shell"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/trello/create-trello-card.template.py",
+      "name": "create-trello-card.template.py",
+      "hash": "2b85d7a4abbb3820deb5c258dee01253",
+      "size": 1832,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/trello"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip/quip.py",
+      "name": "quip.py",
+      "hash": "f199d470015cba3b75b5a7b3a2eed6af",
+      "size": 32696,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip/quip-new.template.py",
+      "name": "quip-new.template.py",
+      "hash": "e8733bd8533a279d10320b4bff89a409",
+      "size": 996,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip/quip_utils.py",
+      "name": "quip_utils.py",
+      "hash": "e276ddd022a158cd585c51a7c537fd11",
+      "size": 7109,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip/set-up-quip-commands.py",
+      "name": "set-up-quip-commands.py",
+      "hash": "713891e497c091ea9649444f1ffd8623",
+      "size": 1928,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/deepseek-api/script-commands/commands/apps/quip"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/setup.py",
+      "name": "setup.py",
+      "hash": "0b7a29ad7a1bb94702a48ea353447ad0",
+      "size": 856,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/dist/youtube_extract-1.4.0.py",
+      "name": "youtube_extract-1.4.0.py",
+      "hash": "9d723d7fd2ee23ecef70a5d7828b6208",
+      "size": 8149,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/dist"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests/conftest.py",
+      "name": "conftest.py",
+      "hash": "b7924eb05353096aa1d3bc28f64957fd",
+      "size": 2052,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests/test_ydl.py",
+      "name": "test_ydl.py",
+      "hash": "41b39e09d78f4e1e9de30a753e6d5a33",
+      "size": 144,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests/test_main.py",
+      "name": "test_main.py",
+      "hash": "8a72d7f90db61a43dd282d55c9b4894a",
+      "size": 1968,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/yt-extract/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/my_uploads.py",
+      "name": "my_uploads.py",
+      "hash": "6f5fe982c107681da6be26fffa7400ff",
+      "size": 3322,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/list_streams.py",
+      "name": "list_streams.py",
+      "hash": "e60851e92275514c381ac912110f69c9",
+      "size": 2333,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/create_reporting_job.py",
+      "name": "create_reporting_job.py",
+      "hash": "481b01c537a52b79c7dbaccd5c31fade",
+      "size": 5618,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/list_broadcasts.py",
+      "name": "list_broadcasts.py",
+      "hash": "81e9883c3673b0aeb37997c8772266ba",
+      "size": 2708,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/channel_localizations.py",
+      "name": "channel_localizations.py",
+      "hash": "f011194f615686153152d8a87717ba71",
+      "size": 7061,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/set_watermark.py",
+      "name": "set_watermark.py",
+      "hash": "4c62cdf7f1d9b3bfa1723115800ef7e2",
+      "size": 4282,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/channel_bulletin.py",
+      "name": "channel_bulletin.py",
+      "hash": "bce468af7f00f70c7a21c9ae2d5d9da2",
+      "size": 3846,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/yt_analytics_v2.py",
+      "name": "yt_analytics_v2.py",
+      "hash": "5a99b2db454185639ee9116612fabf26",
+      "size": 1284,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/add_subscription.py",
+      "name": "add_subscription.py",
+      "hash": "8bb2086303eee4e3db7540cf95846a5d",
+      "size": 2593,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/video_localizations.py",
+      "name": "video_localizations.py",
+      "hash": "5d80a8c15154811305ac81eb7d121211",
+      "size": 7309,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/upload_thumbnail.py",
+      "name": "upload_thumbnail.py",
+      "hash": "fe4d976c9c0a1b4780cfaf34475c1158",
+      "size": 3437,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/retrieve_reports.py",
+      "name": "retrieve_reports.py",
+      "hash": "9423c5c0a69c1c5ebb482fcd0f1e81b4",
+      "size": 7259,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/add_featured_video.py",
+      "name": "add_featured_video.py",
+      "hash": "28d3f1519f02d618d60672e571d101e5",
+      "size": 3893,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/add_channel_section.py",
+      "name": "add_channel_section.py",
+      "hash": "0d9af455cf4d81bacb99c9c1f0e1c8ef",
+      "size": 4154,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/geolocation_search.py",
+      "name": "geolocation_search.py",
+      "hash": "3ad2f02a3adcebbc6b851eb22116028e",
+      "size": 2625,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/unset_watermark.py",
+      "name": "unset_watermark.py",
+      "hash": "70f1b5e751611d6dcff0299f8c48379f",
+      "size": 3092,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/upload_banner.py",
+      "name": "upload_banner.py",
+      "hash": "f1b39a268a52ea799163b01b07c3f17b",
+      "size": 5932,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/upload_video.py",
+      "name": "upload_video.py",
+      "hash": "7419460f338ca044fafcc0dcafee0b9e",
+      "size": 5687,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/comment_threads.py",
+      "name": "comment_threads.py",
+      "hash": "4271ba43a6b8c0f1ccbf4c83b0997266",
+      "size": 6213,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/search.py",
+      "name": "search.py",
+      "hash": "008ad681c89110cf4ad1beac06fdf736",
+      "size": 2435,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/captions.py",
+      "name": "captions.py",
+      "hash": "d397226a82d9e6c4340a5ac630f39838",
+      "size": 7890,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/like_video.py",
+      "name": "like_video.py",
+      "hash": "41be9fb13cc968bbf198f9f6cb4b9d10",
+      "size": 2545,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/create_broadcast.py",
+      "name": "create_broadcast.py",
+      "hash": "1d0a2e6e0065757cf3081e02dd3e8cc8",
+      "size": 5103,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/playlist_updates.py",
+      "name": "playlist_updates.py",
+      "hash": "5f574be137da43adbe73e7fc109e4fb5",
+      "size": 2610,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/comment_handling.py",
+      "name": "comment_handling.py",
+      "hash": "11294f44120950cf245040554b1d7daa",
+      "size": 6831,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/channel_section_localizations.py",
+      "name": "channel_section_localizations.py",
+      "hash": "d0198ac7014a944839f9dc15b9240b37",
+      "size": 9128,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/playlist_localizations.py",
+      "name": "playlist_localizations.py",
+      "hash": "d88ccebdb68d319a99cde588d433e571",
+      "size": 7228,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/yt_analytics_report.py",
+      "name": "yt_analytics_report.py",
+      "hash": "30d8896aaa264909546423f50a03b14b",
+      "size": 6879,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/shuffle_channel_sections.py",
+      "name": "shuffle_channel_sections.py",
+      "hash": "edfdbb702a80e29ec473afddc830065f",
+      "size": 2551,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/quickstart.py",
+      "name": "quickstart.py",
+      "hash": "574036d0d2b1e53923245cdecee61a19",
+      "size": 1643,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/update_video.py",
+      "name": "update_video.py",
+      "hash": "ce1317cc968ed38e2b26ee4a560e2b7d",
+      "size": 4443,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python/quickstart_web.py",
+      "name": "quickstart_web.py",
+      "hash": "4645cbe0b76094b55146b86027696f80",
+      "size": 3769,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python_appengine/user_uploads/main.py",
+      "name": "main.py",
+      "hash": "0c6e3a77d6195948b29d9492ec0288fc",
+      "size": 3972,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python_appengine/user_uploads"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python_appengine/search/main.py",
+      "name": "main.py",
+      "hash": "874d6118c975d51b6fb1c0166fe26c86",
+      "size": 2358,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/api-samples/python_appengine/search"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/medium-article-generator/agent.py",
+      "name": "agent.py",
+      "hash": "9a0d58f1d17cf1f63b87a9687f61611b",
+      "size": 450,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/medium-article-generator"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/medium-article-generator/app.py",
+      "name": "app.py",
+      "hash": "7424a728ab8b450388f01dc3395ff4be",
+      "size": 1949,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/medium-article-generator"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests/conftest.py",
+      "name": "conftest.py",
+      "hash": "b7924eb05353096aa1d3bc28f64957fd",
+      "size": 2052,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests/test_ydl.py",
+      "name": "test_ydl.py",
+      "hash": "41b39e09d78f4e1e9de30a753e6d5a33",
+      "size": 144,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests/test_main.py",
+      "name": "test_main.py",
+      "hash": "8a72d7f90db61a43dd282d55c9b4894a",
+      "size": 1968,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/youtube_extract/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi/cookies.py",
+      "name": "cookies.py",
+      "hash": "64a07bf1fda451500e7ce4ef3d87f78e",
+      "size": 2060,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi/igfi.py",
+      "name": "igfi.py",
+      "hash": "27845fc9dfe475e8316e9a2f2d54efc1",
+      "size": 28623,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi/tests/IGFItest.py",
+      "name": "IGFItest.py",
+      "hash": "e5a46914a9d085f0abfd7a51f4c59373",
+      "size": 3139,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/igfi/tests"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Cookies.py",
+      "name": "Cookies.py",
+      "hash": "c83e5a3a930e8f4c9a10729b4a54594f",
+      "size": 2403,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/User.py",
+      "name": "User.py",
+      "hash": "9b61b865d45182294f0ccefdd1378905",
+      "size": 582,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Upload.py",
+      "name": "Upload.py",
+      "hash": "af642c728ce4a6c4d793a540a9462cd2",
+      "size": 6953,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/IO.py",
+      "name": "IO.py",
+      "hash": "820d63f8579044b83fc78037ff584413",
+      "size": 1967,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Browser.py",
+      "name": "Browser.py",
+      "hash": "3001274db4b242c8c7e69b1720543b5c",
+      "size": 785,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/setup.py",
+      "name": "setup.py",
+      "hash": "1180b3fdac8d50218e480f5afeb12334",
+      "size": 266,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Bot.py",
+      "name": "Bot.py",
+      "hash": "a231348c29cc70f7d3cd2741603293a5",
+      "size": 5343,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/utils.py",
+      "name": "utils.py",
+      "hash": "60ae8d5419e4e9779a2af92881e7a762",
+      "size": 102,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/TaskScheduler.py",
+      "name": "TaskScheduler.py",
+      "hash": "dbeb0a045db54fd088210569468795cb",
+      "size": 2023,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/main.py",
+      "name": "main.py",
+      "hash": "b327fd3f13c96cda89217193352d6098",
+      "size": 1998,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/TiktokBot.py",
+      "name": "TiktokBot.py",
+      "hash": "75f239375bd5d9a278b034fe9205ee23",
+      "size": 802,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/Video.py",
+      "name": "Video.py",
+      "hash": "959a0c5f41ee7da75d6a50a56d1f5556",
+      "size": 5415,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/main.py",
+      "name": "main.py",
+      "hash": "1b6ed9997e3fa77cf08c066e906491df",
+      "size": 297,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Cookies.py",
+      "name": "Cookies.py",
+      "hash": "dd5637f5d046b1803add71868166e3a2",
+      "size": 2783,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Task.py",
+      "name": "Task.py",
+      "hash": "0a75d539a87dbe140ea9ed4fb13108b7",
+      "size": 265,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/IO.py",
+      "name": "IO.py",
+      "hash": "d40d0d0acc3b9e57a7f0b0ed28bcc64d",
+      "size": 6166,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Uploader.py",
+      "name": "Uploader.py",
+      "hash": "650e6426937cfb0bd1e52250ebf472dd",
+      "size": 1348,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/__init__.py",
+      "name": "__init__.py",
+      "hash": "4820a37ef9f8837867960e6bef3ca14e",
+      "size": 2,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/TaskManager.py",
+      "name": "TaskManager.py",
+      "hash": "5a687b0830d7e62e0e84c3f53f944852",
+      "size": 778,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/WebBot.py",
+      "name": "WebBot.py",
+      "hash": "f5074c4ec09cce2eb1da06401530fd15",
+      "size": 5502,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Browser.py",
+      "name": "Browser.py",
+      "hash": "0eb2c2f92861ae1ee70f363b9defea86",
+      "size": 1776,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/VideoManager.py",
+      "name": "VideoManager.py",
+      "hash": "be19955b188a8650864cfe8da5780cab",
+      "size": 391,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Scheduler.py",
+      "name": "Scheduler.py",
+      "hash": "3a7e17d41bc3956b07d55063f62baec1",
+      "size": 159,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/TiktokBot.py",
+      "name": "TiktokBot.py",
+      "hash": "84308b70a04ecb5db9ad1b0eb375eb0c",
+      "size": 2102,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader/Video.py",
+      "name": "Video.py",
+      "hash": "1295c149e3c3bd915831d4fd045550cf",
+      "size": 6091,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/TiktokAutoUploader/v2/tiktok_uploader"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/StudioFlow/StudioFlow.py",
+      "name": "StudioFlow.py",
+      "hash": "8b03f7b0a08356ccee35cfd550aadf02",
+      "size": 7180,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/StudioFlow"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/Youtube-Video-Uploader-Automation/node_modules/flatted/python/flatted.py",
+      "name": "flatted.py",
+      "hash": "b7b21f8c786835425a8a7b00aa881be9",
+      "size": 3860,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/Youtube-Video-Uploader-Automation/node_modules/flatted/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/xbot-ai-master/src/main/python/trends_api.py",
+      "name": "trends_api.py",
+      "hash": "5fb3c76f1a3175a49351a8e27e91475f",
+      "size": 1104,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/xbot-ai-master/src/main/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/chat-gpt-video-maker-main/node_modules/flatted/python/flatted.py",
+      "name": "flatted.py",
+      "hash": "b7b21f8c786835425a8a7b00aa881be9",
+      "size": 3860,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/GitHub/chat-gpt-video-maker-main/node_modules/flatted/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/apify/suno/node_modules/flatted/python/flatted.py",
+      "name": "flatted.py",
+      "hash": "b7b21f8c786835425a8a7b00aa881be9",
+      "size": 3860,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/apify/suno/node_modules/flatted/python"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text/whisper.py",
+      "name": "whisper.py",
+      "hash": "268e2f7c2048c93d7ff920e54e0dcc3e",
+      "size": 1384,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text/whisper2.py",
+      "name": "whisper2.py",
+      "hash": "26dd355c0e813a3b36bc45edf2630eab",
+      "size": 1577,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text/combiner.py",
+      "name": "combiner.py",
+      "hash": "4fa82a5466100d40a20035440170171c",
+      "size": 1965,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text"
+    },
+    {
+      "path": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text/content-new.py",
+      "name": "content-new.py",
+      "hash": "b1329a6abf1a94b10c007c4bfc740024",
+      "size": 2349,
+      "parent": "/Volumes/DeVonDaTa/Archived_Projects/Backup_Data/Backups/Documents/Whisper-Text"
+    }
+  ]
+}

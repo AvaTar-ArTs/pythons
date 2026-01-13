@@ -1,0 +1,17 @@
+action,original,new,status
+RENAME,infinity-feedliker.py,instagram-infinity-feedliker.py,completed
+RENAME,infinity-hashtags-follower.py,instagram-infinity-hashtags-follower.py,completed
+RENAME,infinity-hashtags-liker.py,instagram-infinity-hashtags-liker.py,completed
+RENAME,instabot-bot-youtube-user-id.py,instagram-instabot-bot-youtube-user-id.py,completed
+RENAME,instagram-botComment.py,instagram-bot-comment.py,completed
+RENAME,instagram-build.py,leonardo-instagram-build.py,completed
+RENAME,instagram-script_simple.py,instagram-script-simple.py,completed
+RENAME,intelligent_code_orchestrator.py,intelligent-code-orchestrator.py,completed
+RENAME,intelligent_renamer-1.py,intelligent-renamer-1.py,completed
+RENAME,interact.py,instagram-interact.py,completed
+RENAME,leodown.py,leonardo-leodown.py,completed
+LIBRARY,instagram-approve-message-requests.py,_library/instagram-approve-message-requests.py,completed
+LIBRARY,instagram-models.py,_library/instagram-models.py,completed
+LIBRARY,instagram-setup.py,_library/instagram-setup.py,completed
+LIBRARY,instareport-libs-utils.py,_library/instareport-libs-utils.py,completed
+LIBRARY,ipython.py,_library/ipython.py,completed

@@ -1,0 +1,30 @@
+{
+  "file": "/Users/steven/Documents/python/AI_CONTENT/content_creation/conversation_exporter.py",
+  "context": {
+    "language": "python",
+    "frameworks": [],
+    "purpose": "documentation",
+    "complexity": {
+      "total_lines": 358,
+      "code_lines": 301,
+      "blank_lines": 57,
+      "functions": 7,
+      "classes": 1,
+      "imports": 6,
+      "comments": 38,
+      "todos": 0
+    },
+    "size": 12132,
+    "filepath": "/Users/steven/Documents/python/AI_CONTENT/content_creation/conversation_exporter.py"
+  },
+  "strategy": "deep",
+  "insights": [],
+  "summary": {
+    "total": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "types": {}
+  }
+}

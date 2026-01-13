@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+conversation.py,[Anthropic Claude],,KEEP,
+conversion.py,[No docstring found],,KEEP,
+convert-aiff-to-mp3.py,Convert AIFF files to MP3 format,,KEEP,
+convert-conversations-to-csv.py,[No docstring found],,KEEP,
+convert-json-writer.py,[Leonardo AI],leonardo-convert-json-writer.py,RENAME,Add Leonardo prefix
+convert-loop.py,[Leonardo AI],leonardo-convert-loop.py,RENAME,Add Leonardo prefix
+convert-loop2.py,[Leonardo AI],leonardo-convert-loop2.py,RENAME,Add Leonardo prefix
+convert-markdown-to-pdf.py,Markdown to PDF Converter,,KEEP,
+convert-mp4-transcribe.py,[No docstring found],,KEEP,
+convert-video-segments.py,[No docstring found],,KEEP,
+convert.py,Advanced File Processor - Consolidated Processing Script,,NEEDS_REVIEW,Too generic - needs specific context
+converters.py,Commonly useful converters.,,KEEP,
+converts.py,[No docstring found],,KEEP,
+convertupscale.py,[No docstring found],,KEEP,
+cover.py,[OpenAI integration],,KEEP,
+crawl.py,[No docstring found],,KEEP,
+create-audiobook.py,[No docstring found],,KEEP,
+create-files.py,[No docstring found],,KEEP,
+create-gallery.py,[No docstring found],,KEEP,
+create-strip.py,[No docstring found],,KEEP,
+create_reorganization_plan.py,[No docstring found],create-reorganization-plan.py,RENAME,Fix underscore to hyphen
+createdb.py,[No docstring found],,KEEP,
+createimages.py,[OpenAI integration],,KEEP,
+cross_directory_merger.py,[Instagram automation],cross-directory-merger.py,RENAME,Fix underscore to hyphen
+csv-extract-webm-files.py,[No docstring found],,KEEP,
+csv-file-lister.py,[No docstring found],,KEEP,
+csv-image-file-mover.py,[No docstring found],,KEEP,
+csv-media-catalog-helper.py,Helper functions for media catalog CSV cleanup and reporting.,,KEEP,
+csv-print-on-demand-catalog.py,[No docstring found],,KEEP,
+csvmerge.py,[No docstring found],,KEEP,
+csvsort.py,[No docstring found],,KEEP,
+custom-thumbnail.py,[No docstring found],,KEEP,
+customer-complaint-classifier.py,[No docstring found],,KEEP,
+cutout-process.py,[No docstring found],,KEEP,
+dalle-image-downloader.py,[No docstring found],,KEEP,
+dalle-prompt.py,[OpenAI integration],,KEEP,
+dallecsv.py,[No docstring found],,KEEP,
+database-clients-extract.py,Automated Conversation Archive System,,KEEP,
+database.py,[No docstring found],,KEEP,
+decorator.py,"Decorators are not really values, however we need some wrappers to improve",,LIBRARY,Library/framework code - decorator.py
+deduplicate-files-intelligent.py,[No docstring found],,KEEP,
+deep-code.py,[OpenAI integration],,KEEP,
+deep-content-renamer.py,Deep Content-Aware File Renamer,,KEEP,
+deep-content.py,AI-Powered Deep Analyzer with Content-Awareness,,KEEP,
+deep-level.py,Deep 6-Level Simplifier,,KEEP,
+deep.py,Deep Analyzer with Content-Awareness,,KEEP,
+deep_content_cross_reference.py,📚 DEEP CONTENT CROSS-REFERENCE SCANNER,deep-content-cross-reference.py,RENAME,Fix underscore to hyphen
+deep_music_directory_analyzer.py,🎵 DEEP MUSIC DIRECTORY ANALYZER & MERGER,deep-music-directory-analyzer.py,RENAME,Fix underscore to hyphen
+deepgram-updated.py,Updated Deepgram Live Transcription Test,,KEEP,
+deepgram_test.py,[No docstring found],deepgram-test.py,RENAME,Fix underscore to hyphen

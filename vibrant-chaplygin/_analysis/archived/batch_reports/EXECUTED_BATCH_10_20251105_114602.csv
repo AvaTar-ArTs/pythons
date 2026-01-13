@@ -1,0 +1,8 @@
+action,original,new,status
+RENAME,other_simple.py,other-simple.py,completed
+RENAME,parse_api.py,parse-api.py,completed
+RENAME,parse_main.py,parse-main.py,completed
+RENAME,parse_simple.py,parse-simple.py,completed
+LIBRARY,openai-setup.py,_library/openai-setup.py,completed
+LIBRARY,payload.py,_library/payload.py,completed
+LIBRARY,payloadpage.py,_library/payloadpage.py,completed

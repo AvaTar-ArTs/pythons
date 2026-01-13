@@ -1,0 +1,510 @@
+{
+  "timestamp": "2025-10-17T02:09:01.723543",
+  "username_strategies": [
+    {
+      "keyword": "mojo_dojo_house",
+      "username_variations": [
+        "MojodojohouseMasters",
+        "MojodojohouseDesigns",
+        "MojodojohousePrints",
+        "MojodojohouseArt",
+        "MojodojohouseCo",
+        "MojodojohouseHaven"
+      ],
+      "searches": 1340,
+      "competition": "low",
+      "trend": "barbie_core",
+      "seo_score": 80
+    },
+    {
+      "keyword": "electricity_kills",
+      "username_variations": [
+        "ElectricitykillsMasters",
+        "ElectricitykillsDesigns",
+        "ElectricitykillsPrints",
+        "ElectricitykillsArt",
+        "ElectricitykillsCo",
+        "ElectricitykillsHaven"
+      ],
+      "searches": 824,
+      "competition": "low",
+      "trend": "dark_humor",
+      "seo_score": 71
+    },
+    {
+      "keyword": "detectorists_tshirts",
+      "username_variations": [
+        "DetectoriststshirtsMasters",
+        "DetectoriststshirtsDesigns",
+        "DetectoriststshirtsPrints",
+        "DetectoriststshirtsArt",
+        "DetectoriststshirtsCo",
+        "DetectoriststshirtsHaven"
+      ],
+      "searches": 1522,
+      "competition": "low",
+      "trend": "british_tv",
+      "seo_score": 80
+    },
+    {
+      "keyword": "my_boat_doesnt_run_on_thanks",
+      "username_variations": [
+        "MyboatdoesntrunonthanksMasters",
+        "MyboatdoesntrunonthanksDesigns",
+        "MyboatdoesntrunonthanksPrints",
+        "MyboatdoesntrunonthanksArt",
+        "MyboatdoesntrunonthanksCo",
+        "MyboatdoesntrunonthanksHaven"
+      ],
+      "searches": 690,
+      "competition": "low",
+      "trend": "sarcasm",
+      "seo_score": 64
+    },
+    {
+      "keyword": "tater_tot_cat",
+      "username_variations": [
+        "TatertotcatMasters",
+        "TatertotcatDesigns",
+        "TatertotcatPrints",
+        "TatertotcatArt",
+        "TatertotcatCo",
+        "TatertotcatHaven"
+      ],
+      "searches": 1132,
+      "competition": "low",
+      "trend": "cute_animals",
+      "seo_score": 80
+    },
+    {
+      "keyword": "lancashire_heeler",
+      "username_variations": [
+        "LancashireheelerMasters",
+        "LancashireheelerDesigns",
+        "LancashireheelerPrints",
+        "LancashireheelerArt",
+        "LancashireheelerCo",
+        "LancashireheelerHaven"
+      ],
+      "searches": 962,
+      "competition": "low",
+      "trend": "dog_breeds",
+      "seo_score": 78
+    },
+    {
+      "keyword": "a_book_a_day_keeps_reality_away",
+      "username_variations": [
+        "AbookadaykeepsrealityawayMasters",
+        "AbookadaykeepsrealityawayDesigns",
+        "AbookadaykeepsrealityawayPrints",
+        "AbookadaykeepsrealityawayArt",
+        "AbookadaykeepsrealityawayCo",
+        "AbookadaykeepsrealityawayHaven"
+      ],
+      "searches": 1159,
+      "competition": "low",
+      "trend": "book_lovers",
+      "seo_score": 80
+    },
+    {
+      "keyword": "mrballen",
+      "username_variations": [
+        "MrballenMasters",
+        "MrballenDesigns",
+        "MrballenPrints",
+        "MrballenArt",
+        "MrballenCo",
+        "MrballenHaven"
+      ],
+      "searches": 414,
+      "competition": "low",
+      "trend": "mystery",
+      "seo_score": 50
+    },
+    {
+      "keyword": "hank_and_trash_truck",
+      "username_variations": [
+        "HankandtrashtruckMasters",
+        "HankandtrashtruckDesigns",
+        "HankandtrashtruckPrints",
+        "HankandtrashtruckArt",
+        "HankandtrashtruckCo",
+        "HankandtrashtruckHaven"
+      ],
+      "searches": 312,
+      "competition": "low",
+      "trend": "kids_tv",
+      "seo_score": 45
+    },
+    {
+      "keyword": "hot_august_nights",
+      "username_variations": [
+        "HotaugustnightsMasters",
+        "HotaugustnightsDesigns",
+        "HotaugustnightsPrints",
+        "HotaugustnightsArt",
+        "HotaugustnightsCo",
+        "HotaugustnightsHaven"
+      ],
+      "searches": 234,
+      "competition": "low",
+      "trend": "seasonal",
+      "seo_score": 41
+    },
+    {
+      "keyword": "my_happy_marriage",
+      "username_variations": [
+        "MyhappymarriageMasters",
+        "MyhappymarriageDesigns",
+        "MyhappymarriagePrints",
+        "MyhappymarriageArt",
+        "MyhappymarriageCo",
+        "MyhappymarriageHaven"
+      ],
+      "searches": 625,
+      "competition": "low",
+      "trend": "anime_romance",
+      "seo_score": 61
+    },
+    {
+      "keyword": "richard_osman",
+      "username_variations": [
+        "RichardosmanMasters",
+        "RichardosmanDesigns",
+        "RichardosmanPrints",
+        "RichardosmanArt",
+        "RichardosmanCo",
+        "RichardosmanHaven"
+      ],
+      "searches": 450,
+      "competition": "low",
+      "trend": "mystery_books",
+      "seo_score": 52
+    },
+    {
+      "keyword": "5th_gear_luffy_stickers",
+      "username_variations": [
+        "5ThgearluffystickersMasters",
+        "5ThgearluffystickersDesigns",
+        "5ThgearluffystickersPrints",
+        "5ThgearluffystickersArt",
+        "5ThgearluffystickersCo",
+        "5ThgearluffystickersHaven"
+      ],
+      "searches": 380,
+      "competition": "low",
+      "trend": "anime_automotive",
+      "seo_score": 49
+    }
+  ],
+  "design_prompts": [
+    {
+      "title": "Elon Musk: Social Security Scandals & Legal Battles",
+      "category": "tech_legal",
+      "prompt": "\n            Design a striking typography cover image with the text 'Elon Musk: Social Security Scandals & Legal Battles' prominently displayed. \n            The typography should exude a modern, tech-inspired aesthetic, featuring sleek, futuristic fonts intertwined with subtle elements \n            like circuit patterns and legal motifs (e.g., gavel, scales of justice). \n            \n            Incorporate a color scheme of deep blues and metallic silvers to convey professionalism and gravity. \n            The background should be a dark gradient with faint imagery of Social Security cards and legal documents, \n            symbolizing the intertwining themes of technology and legal scrutiny. \n            \n            Ensure the composition balances the boldness of the text with the subtlety of the background elements, \n            creating an image that is both engaging and informative.\n            \n            Design Tips:\n            \u2022 Typography: Choose a font that reflects a tech-savvy and authoritative tone. Consider using a sans-serif typeface with clean lines and a slight futuristic flair.\n            \u2022 Color Palette: Deep blues and metallic silvers can evoke a sense of trust and modernity. Use gradients to add depth and dimension to the background.\n            \u2022 Imagery: Subtly integrate elements like circuit patterns to represent technology, and legal symbols such as a gavel or scales to signify the legal challenges.\n            \u2022 Composition: Center the text prominently, with background elements providing context without distraction. Use layering effects to create a sense of depth.\n            ",
+      "target_keywords": [
+        "elon musk",
+        "social security",
+        "legal battles",
+        "tech scandals"
+      ],
+      "product_types": [
+        "posters",
+        "stickers",
+        "t-shirts",
+        "mugs"
+      ]
+    },
+    {
+      "title": "Mojo Dojo Casa House - Barbie Core Aesthetic",
+      "category": "pop_culture",
+      "prompt": "\n            Create a vibrant, Barbie-core inspired design featuring the iconic \"Mojo Dojo Casa House\" text in bold, \n            playful typography. The design should capture the essence of Ken's dream house with a perfect blend of \n            masculine and feminine aesthetics.\n            \n            Use a color palette of hot pink, electric blue, and metallic gold accents. The background should feature \n            geometric patterns reminiscent of 80s interior design, with subtle neon lighting effects and retro-futuristic \n            elements. Include small decorative elements like disco balls, palm trees, and geometric shapes.\n            \n            The typography should be bold and confident, using a mix of sans-serif and display fonts that evoke \n            both luxury and playfulness. Add subtle gradients and shadow effects to make the text pop against the \n            vibrant background.\n            \n            Design Tips:\n            \u2022 Typography: Use bold, confident fonts with a mix of serif and sans-serif elements\n            \u2022 Color Palette: Hot pink (#FF1493), electric blue (#00BFFF), metallic gold (#FFD700)\n            \u2022 Imagery: Geometric patterns, disco elements, retro-futuristic shapes\n            \u2022 Composition: Center-focused with balanced negative space\n            ",
+      "target_keywords": [
+        "mojo dojo casa house",
+        "barbie",
+        "ken",
+        "barbie core",
+        "retro"
+      ],
+      "product_types": [
+        "posters",
+        "t-shirts",
+        "stickers",
+        "phone cases",
+        "mugs"
+      ]
+    },
+    {
+      "title": "My Boat Doesn't Run on Thanks - Sarcasm Design",
+      "category": "dark_humor",
+      "prompt": "\n            Design a minimalist yet impactful typography piece featuring the text \"My Boat Doesn't Run on Thanks\" \n            in a clean, modern sans-serif font. The design should convey dry wit and sarcasm through subtle visual cues.\n            \n            Use a monochromatic color scheme with black text on a white or light gray background, with a single \n            accent color (perhaps a muted red or dark blue) for emphasis. The layout should be clean and uncluttered, \n            with the text as the primary focus.\n            \n            Add subtle nautical elements like a simple line drawing of a boat or anchor, but keep them minimal and \n            not distracting from the text. The overall aesthetic should be sophisticated yet approachable.\n            \n            Design Tips:\n            \u2022 Typography: Clean, modern sans-serif with good spacing\n            \u2022 Color Palette: Black, white, with one accent color\n            \u2022 Imagery: Minimal nautical elements (boat, anchor)\n            \u2022 Composition: Clean, centered layout with emphasis on readability\n            ",
+      "target_keywords": [
+        "my boat doesn't run on thanks",
+        "sarcasm",
+        "dark humor",
+        "minimalist"
+      ],
+      "product_types": [
+        "t-shirts",
+        "stickers",
+        "mugs",
+        "posters"
+      ]
+    }
+  ],
+  "trending_designs": [
+    {
+      "keyword": "detectorists_tshirts",
+      "title": "Detectorists Tshirts",
+      "searches": 1522,
+      "competition": "low",
+      "trend": "british_tv",
+      "design_concept": "Modern, clean design with trending elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "accent color"
+      ],
+      "typography_style": "Modern sans-serif"
+    },
+    {
+      "keyword": "pee_wee",
+      "title": "Pee Wee",
+      "searches": 1348,
+      "competition": "medium",
+      "trend": "nostalgia",
+      "design_concept": "Vintage-inspired design with sepia tones and retro typography",
+      "target_products": [
+        "posters",
+        "t-shirts",
+        "mugs",
+        "notebooks"
+      ],
+      "color_scheme": [
+        "sepia",
+        "vintage pastels",
+        "faded colors"
+      ],
+      "typography_style": "Handwritten script or vintage serif"
+    },
+    {
+      "keyword": "mojo_dojo_house",
+      "title": "Mojo Dojo House",
+      "searches": 1340,
+      "competition": "low",
+      "trend": "barbie_core",
+      "design_concept": "Vibrant, playful design with pink/blue color scheme and retro-futuristic elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "phone cases",
+        "mugs",
+        "posters"
+      ],
+      "color_scheme": [
+        "hot pink",
+        "electric blue",
+        "metallic gold"
+      ],
+      "typography_style": "Bold, playful sans-serif with retro elements"
+    },
+    {
+      "keyword": "a_book_a_day_keeps_reality_away",
+      "title": "A Book A Day Keeps Reality Away",
+      "searches": 1159,
+      "competition": "low",
+      "trend": "book_lovers",
+      "design_concept": "Modern, clean design with trending elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "accent color"
+      ],
+      "typography_style": "Modern sans-serif"
+    },
+    {
+      "keyword": "tater_tot_cat",
+      "title": "Tater Tot Cat",
+      "searches": 1132,
+      "competition": "low",
+      "trend": "cute_animals",
+      "design_concept": "Modern, clean design with trending elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "accent color"
+      ],
+      "typography_style": "Modern sans-serif"
+    },
+    {
+      "keyword": "lancashire_heeler",
+      "title": "Lancashire Heeler",
+      "searches": 962,
+      "competition": "low",
+      "trend": "dog_breeds",
+      "design_concept": "Modern, clean design with trending elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "accent color"
+      ],
+      "typography_style": "Modern sans-serif"
+    },
+    {
+      "keyword": "xena",
+      "title": "Xena",
+      "searches": 954,
+      "competition": "medium",
+      "trend": "90s_tv",
+      "design_concept": "Modern, clean design with trending elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "accent color"
+      ],
+      "typography_style": "Modern sans-serif"
+    },
+    {
+      "keyword": "electricity_kills",
+      "title": "Electricity Kills",
+      "searches": 824,
+      "competition": "low",
+      "trend": "dark_humor",
+      "design_concept": "Minimalist typography with subtle dark humor elements and monochromatic palette",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "mugs",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "muted red"
+      ],
+      "typography_style": "Clean, modern sans-serif"
+    },
+    {
+      "keyword": "my_boat_doesnt_run_on_thanks",
+      "title": "My Boat Doesnt Run On Thanks",
+      "searches": 690,
+      "competition": "low",
+      "trend": "sarcasm",
+      "design_concept": "Modern, clean design with trending elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "accent color"
+      ],
+      "typography_style": "Modern sans-serif"
+    },
+    {
+      "keyword": "cool_iron_on_patches",
+      "title": "Cool Iron On Patches",
+      "searches": 658,
+      "competition": "medium",
+      "trend": "crafting",
+      "design_concept": "Modern, clean design with trending elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "accent color"
+      ],
+      "typography_style": "Modern sans-serif"
+    },
+    {
+      "keyword": "im_just_ken",
+      "title": "Im Just Ken",
+      "searches": 625,
+      "competition": "high",
+      "trend": "barbie_movie",
+      "design_concept": "Modern, clean design with trending elements",
+      "target_products": [
+        "t-shirts",
+        "stickers",
+        "posters"
+      ],
+      "color_scheme": [
+        "black",
+        "white",
+        "accent color"
+      ],
+      "typography_style": "Modern sans-serif"
+    },
+    {
+      "keyword": "my_happy_marriage",
+      "title": "My Happy Marriage",
+      "searches": 625,
+      "competition": "low",
+      "trend": "anime_romance",
+      "design_concept": "Soft, romantic design with pastel colors and elegant typography",
+      "target_products": [
+        "stickers",
+        "phone cases",
+        "notebooks",
+        "posters"
+      ],
+      "color_scheme": [
+        "soft pink",
+        "lavender",
+        "cream"
+      ],
+      "typography_style": "Elegant serif or soft sans-serif"
+    }
+  ],
+  "recommendations": {
+    "immediate_actions": [
+      "Focus on low-competition, high-search keywords (mojo_dojo_house, electricity_kills)",
+      "Create 5-10 designs per trending keyword for maximum coverage",
+      "Use consistent branding across all designs",
+      "Test different product types for each design category"
+    ],
+    "content_strategy": [
+      "Create design series around popular themes (Barbie core, dark humor, nostalgia)",
+      "Develop seasonal designs for trending events",
+      "Cross-promote designs across different product types",
+      "Use trending hashtags and tags for maximum visibility"
+    ],
+    "technical_optimization": [
+      "Optimize file sizes for different product types",
+      "Create high-resolution versions for large products",
+      "Test different color variations for A/B testing",
+      "Monitor performance and adjust strategy based on sales data"
+    ]
+  }
+}

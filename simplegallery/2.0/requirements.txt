@@ -1,0 +1,22 @@
+# SimpleGallery 2.0 Requirements
+
+# Core Dependencies
+jinja2>=3.0.0
+Pillow>=9.0.0
+opencv-python>=4.5.0
+selenium>=4.0.0,<5.0.0
+requests>=2.28.0
+setuptools>=65.0.0  # For pkg_resources
+
+# Enhanced Features (Optional)
+# Uncomment to enable AI features:
+# torch>=2.0.0
+# torchvision>=0.15.0
+# clip-by-openai  # Install from: pip install git+https://github.com/openai/CLIP.git
+# pytesseract>=0.3.10
+
+# Development Dependencies (Optional)
+# pytest>=7.0.0
+# black>=22.0.0
+# flake8>=5.0.0
+

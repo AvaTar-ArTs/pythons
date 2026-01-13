@@ -1,0 +1,15 @@
+action,original,new,status
+RENAME,super_flatten.py,super-flatten.py,completed
+RENAME,test_v3.py,test-v3.py,completed
+RENAME,thinketh_content_renamer.py,thinketh-content-renamer.py,completed
+RENAME,thinketh_content_renamer_from_seo-optimizer.py,thinketh-content-renamer-from-seo-optimizer.py,completed
+RENAME,thinketh_tts_adaptive.py,thinketh-tts-adaptive.py,completed
+RENAME,thinketh_tts_asmr.py,thinketh-tts-asmr.py,completed
+RENAME,thinketh_tts_main.py,thinketh-tts-main.py,completed
+RENAME,thinketh_tts_scripty.py,thinketh-tts-scripty.py,completed
+RENAME,thinketh_tts_transcription.py,thinketh-tts-transcription.py,completed
+RENAME,thinketh_tts_universal.py,thinketh-tts-universal.py,completed
+LIBRARY,support.py,_library/support.py,completed
+LIBRARY,time-format-utils.py,_library/time-format-utils.py,completed
+LIBRARY,typedefs.py,_library/typedefs.py,completed
+DELETE,thinketh_duplicate_cleanup.py,,completed

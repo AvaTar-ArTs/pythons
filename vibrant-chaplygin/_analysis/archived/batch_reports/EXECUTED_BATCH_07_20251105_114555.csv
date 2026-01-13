@@ -1,0 +1,9 @@
+action,original,new,status
+RENAME,generation.py,leonardo-generation.py,completed
+RENAME,get_file.py,get-file.py,completed
+RENAME,get_hashtags_from.py,get-hashtags-from.py,completed
+RENAME,get_simple.py,get-simple.py,completed
+RENAME,giphy_downloader.py,giphy-downloader.py,completed
+RENAME,github_repo_audit.py,github-repo-audit.py,completed
+LIBRARY,getipython.py,_library/getipython.py,completed
+LIBRARY,handlers.py,_library/handlers.py,completed

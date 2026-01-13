@@ -1,0 +1,4055 @@
+[
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/mp3-csv 2.py",
+    "name": "mp3-csv 2.py",
+    "hash": "3db17f8ff437470fd2e80debf844597b",
+    "size": 9796,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/mp4-mp3-analyze_20250531041622.py",
+    "name": "mp4-mp3-analyze_20250531041622.py",
+    "hash": "82720efd3b072c998dc3b500aae6abaf",
+    "size": 11199,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/createimages.py",
+    "name": "createimages.py",
+    "hash": "be56811a5aa841778dff6156dcfcbc8f",
+    "size": 12563,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/transcribe.py",
+    "name": "transcribe.py",
+    "hash": "ef519f9f966201d50d11dacae9a49b9b",
+    "size": 4809,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/help_Nekmo_ffmpeg.py",
+    "name": "help_Nekmo_ffmpeg.py",
+    "hash": "1d33703ce03cc4593b2e3f38a52a4958",
+    "size": 10369,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/sub.py",
+    "name": "sub.py",
+    "hash": "f717d07b52ed56ab76cc4e17f5b49b08",
+    "size": 10305,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/trans.py",
+    "name": "trans.py",
+    "hash": "abd80a58766624a97417a914d332d1cc",
+    "size": 6084,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/analyze-shorts-1.py",
+    "name": "analyze-shorts-1.py",
+    "hash": "8e3c506d8b39830415d5e07ab0b53f5d",
+    "size": 10411,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/python-analyze-html.py",
+    "name": "python-analyze-html.py",
+    "hash": "ab844a804ba9337db143dcea25fe99ed",
+    "size": 10203,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/quiz-20.py",
+    "name": "quiz-20.py",
+    "hash": "34117462aa8b0d5a300d7823cdebeba6",
+    "size": 10003,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/conda_consolidator.py",
+    "name": "conda_consolidator.py",
+    "hash": "71b1e50b22ea763d970ca27471eeb5ec",
+    "size": 26079,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/scan.py",
+    "name": "scan.py",
+    "hash": "a23f6efa8ccd87b7d7244ca5f7553d8b",
+    "size": 7886,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/analyze11.py",
+    "name": "analyze11.py",
+    "hash": "cfa8a4962fce568016eae1a7110773bc",
+    "size": 14885,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/cover2.py",
+    "name": "cover2.py",
+    "hash": "3fa3b475997ecda17eeeb8aaa4851b4b",
+    "size": 7768,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/generate_speech 2 2.py",
+    "name": "generate_speech 2 2.py",
+    "hash": "ce3f9a9be3718b960b45fc8ccd897598",
+    "size": 5739,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/audio_chunker.py",
+    "name": "audio_chunker.py",
+    "hash": "a7063166315df9e963e03be16a095a14",
+    "size": 12261,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/pydoc-analyze.py",
+    "name": "pydoc-analyze.py",
+    "hash": "1d91a662a1903171a991e290b23d9014",
+    "size": 9041,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/start-with-openai.py",
+    "name": "start-with-openai.py",
+    "hash": "f270499dc24a9b4c89affbc92af9ed42",
+    "size": 4652,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/captions.py",
+    "name": "captions.py",
+    "hash": "48904417af9983e4423dc0f0302f177d",
+    "size": 6616,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/mp3-trans-storytime.py",
+    "name": "mp3-trans-storytime.py",
+    "hash": "e882cf91d93afa8fe7fb7d4ca7bd48ed",
+    "size": 9803,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/elevenlabs.py",
+    "name": "elevenlabs.py",
+    "hash": "42a7b2bcf12ac31d71b3d24625b4d94e",
+    "size": 6956,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/batch_image_seo_pipeline_20250530222615.py",
+    "name": "batch_image_seo_pipeline_20250530222615.py",
+    "hash": "9088b3fcceed2e7a293f7ee179d0e181",
+    "size": 9246,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/evaluate.py",
+    "name": "evaluate.py",
+    "hash": "bc2ab19e0be4f98a2dc0c2b3c1b37801",
+    "size": 14072,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/transcribe (1).py",
+    "name": "transcribe (1).py",
+    "hash": "cf3d1ed7ac25b25ca837b36d6c6bd12b",
+    "size": 6984,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/transcribe-mp3.py",
+    "name": "transcribe-mp3.py",
+    "hash": "1326f679abb0b89de839cf0ffd079080",
+    "size": 6602,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/batch_image_seo_pipeline_20250530221306.py",
+    "name": "batch_image_seo_pipeline_20250530221306.py",
+    "hash": "f573b36b97a1b8c15ccba056dafd1829",
+    "size": 24122,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/SpeechReco.py",
+    "name": "SpeechReco.py",
+    "hash": "48589910d84869e646e8beb4165bdcc5",
+    "size": 8936,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/cover2 2.py",
+    "name": "cover2 2.py",
+    "hash": "79c629ead8b57d5dd38ca90ee1087308",
+    "size": 7768,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/convert-webm-mp3.py",
+    "name": "convert-webm-mp3.py",
+    "hash": "6df3f445bf395a5bbd4c51714df104d8",
+    "size": 5287,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/fancyimg (1) 1.py",
+    "name": "fancyimg (1) 1.py",
+    "hash": "bd2fd55d511173375a1e1be95c58820f",
+    "size": 7543,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/trek 3 2.py",
+    "name": "trek 3 2.py",
+    "hash": "63473ceb6c2d7f64a47d38764c509ce0",
+    "size": 8595,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/media_processor.py",
+    "name": "media_processor.py",
+    "hash": "2e85fdd9dd804f4eaf7c1d4a8a41e062",
+    "size": 11617,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/ana-trans.py",
+    "name": "ana-trans.py",
+    "hash": "ee2a3c4d923aea4a7776effa39b70c88",
+    "size": 13712,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/song-process-remix.py",
+    "name": "song-process-remix.py",
+    "hash": "851ae56eb3593908d5797360487d4448",
+    "size": 14160,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/audiototext.py",
+    "name": "audiototext.py",
+    "hash": "abe1366f7c4fca5c09b1afbf7b28d8eb",
+    "size": 32907,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/Quiz22sec.py",
+    "name": "Quiz22sec.py",
+    "hash": "0905a94b3053afbaf89013fb1284433e",
+    "size": 9728,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/speech.py",
+    "name": "speech.py",
+    "hash": "cd0f2ab3493a12604e2066cb56cb9d7b",
+    "size": 5445,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/analyze_remaining.py",
+    "name": "analyze_remaining.py",
+    "hash": "cc2e7f67400d65b7e3e4943da09c0049",
+    "size": 32429,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/Multi-Modal.py",
+    "name": "Multi-Modal.py",
+    "hash": "51a8e3318f372a2169edcbeb3aedff26",
+    "size": 33250,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/engine_wrapper.py",
+    "name": "engine_wrapper.py",
+    "hash": "610170c2d47604d73293bb23eb3565fc",
+    "size": 14277,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/mp3-csv.py",
+    "name": "mp3-csv.py",
+    "hash": "3db17f8ff437470fd2e80debf844597b",
+    "size": 9796,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/import os.py",
+    "name": "import os.py",
+    "hash": "52ee58a4d03ab236d476a80c692016e6",
+    "size": 8305,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/pyrepo_doc_organizer.py",
+    "name": "pyrepo_doc_organizer.py",
+    "hash": "23c3d02eea2aced0bfca592d778c3b1c",
+    "size": 21101,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/reddit.py",
+    "name": "reddit.py",
+    "hash": "e2adb91b6150e80771afc96e1263321e",
+    "size": 6928,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/enhanced_image_pipeline.py",
+    "name": "enhanced_image_pipeline.py",
+    "hash": "ec595ac6dd4b76169e69f0fb8155ba3f",
+    "size": 58925,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/organize_avatararts.py",
+    "name": "organize_avatararts.py",
+    "hash": "aa80babb82feb8eb2cec5d186f7e1ecb",
+    "size": 6846,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/video_analyzer.py",
+    "name": "video_analyzer.py",
+    "hash": "e3252adc03d79c174bbbfecf074f414a",
+    "size": 11129,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/mp4-mp3-analyze.py",
+    "name": "mp4-mp3-analyze.py",
+    "hash": "cc637f463a39631ad3136449846acf5f",
+    "size": 11169,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/analyze-shorts.py",
+    "name": "analyze-shorts.py",
+    "hash": "78076ea458541c11d53e739b3e0dcb62",
+    "size": 10310,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/info.py",
+    "name": "info.py",
+    "hash": "35c54551b48bd029c2437fec786dd6c8",
+    "size": 13713,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/batch_image_seo_pipeline_20250530220526.py",
+    "name": "batch_image_seo_pipeline_20250530220526.py",
+    "hash": "40edf7adc72b5fe21aa983ca6cc3261a",
+    "size": 23594,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/main (1).py",
+    "name": "main (1).py",
+    "hash": "3018d7e7c72a994529a4297aeb0a9470",
+    "size": 4706,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/mp4-mp3-analyze_20250531070353.py",
+    "name": "mp4-mp3-analyze_20250531070353.py",
+    "hash": "cc637f463a39631ad3136449846acf5f",
+    "size": 11169,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/quiz-time.py",
+    "name": "quiz-time.py",
+    "hash": "76d2713ebf15a562be0a34356cfc4fe6",
+    "size": 10732,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/named.py",
+    "name": "named.py",
+    "hash": "d1fc6962a46923df9cd4a9708fca61fc",
+    "size": 11827,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/mp4tomp3.py",
+    "name": "mp4tomp3.py",
+    "hash": "3ad8c07b833cccc1213fb4d2ba687fd7",
+    "size": 7360,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/media-trans-analyze.py",
+    "name": "media-trans-analyze.py",
+    "hash": "35c54551b48bd029c2437fec786dd6c8",
+    "size": 13713,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/untitled.py",
+    "name": "untitled.py",
+    "hash": "c8fe115caee4ca617d04922d64d34e72",
+    "size": 11358,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/migrate_remaining_fixed.py",
+    "name": "migrate_remaining_fixed.py",
+    "hash": "fce504e6f38c0dc971f07cfe77438738",
+    "size": 21842,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/batch_image_seo_pipeline.py",
+    "name": "batch_image_seo_pipeline.py",
+    "hash": "8af6bd20ea18b3f0c3e2d014461b2e7a",
+    "size": 23911,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/analyzer-prompt.py",
+    "name": "analyzer-prompt.py",
+    "hash": "dcd97107eb4e1c60e9268c888bc1ed0b",
+    "size": 11948,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/batch_image_seo_pipeline_20250530222614.py",
+    "name": "batch_image_seo_pipeline_20250530222614.py",
+    "hash": "9088b3fcceed2e7a293f7ee179d0e181",
+    "size": 9246,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/gpt4.py",
+    "name": "gpt4.py",
+    "hash": "a2ba7b58614e5c2952e05fbd084f6e57",
+    "size": 8732,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/sora.py",
+    "name": "sora.py",
+    "hash": "aac6ab468ab8dc7144b892179648fb1b",
+    "size": 4627,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/speak (1).py",
+    "name": "speak (1).py",
+    "hash": "e9bd233bd6ea0f534b91e9767f5379e9",
+    "size": 6383,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/yt-dalle-prompt.py",
+    "name": "yt-dalle-prompt.py",
+    "hash": "346e894402a5b3230c95158c73ccc860",
+    "size": 9070,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/QuizPrompts.py",
+    "name": "QuizPrompts.py",
+    "hash": "59231eff630d1553032a0b8821e58d4e",
+    "size": 9786,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/batch_image_seo_pipeline_20250530221257.py",
+    "name": "batch_image_seo_pipeline_20250530221257.py",
+    "hash": "3845fd519285417804494a6e3a4682c3",
+    "size": 24345,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/main 2 2.py",
+    "name": "main 2 2.py",
+    "hash": "48de083f7ce49c6584fe74904bc5d871",
+    "size": 4668,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/analyze-prompt1.py",
+    "name": "analyze-prompt1.py",
+    "hash": "a1cbe5a8bdfd0978503a6837d8734bdb",
+    "size": 7750,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription/analyze-prompt (1).py",
+    "name": "analyze-prompt (1).py",
+    "hash": "f2b304da20d63e8ce0d49d975f03fd78",
+    "size": 9609,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/transcription"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/image-gpt.py",
+    "name": "image-gpt.py",
+    "hash": "edaa59d2cdd33130084877404e27f71b",
+    "size": 6453,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/testing2.py",
+    "name": "testing2.py",
+    "hash": "80341b389a0226d1892f9771b24e7825",
+    "size": 12067,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/pydescribe.py",
+    "name": "pydescribe.py",
+    "hash": "1d37e320caae1412e4077d4bfe81037f",
+    "size": 8383,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/batch copy.py",
+    "name": "batch copy.py",
+    "hash": "cd1820341c886480a37b1f70c760fe6d",
+    "size": 7552,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/song--analyze-keys.py",
+    "name": "song--analyze-keys.py",
+    "hash": "a8a6caaa5238cefba71d2074a9cca5b8",
+    "size": 5663,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/batch_image_seo_pipeline_20250530221254.py",
+    "name": "batch_image_seo_pipeline_20250530221254.py",
+    "hash": "298b66a38d3cb00cfbf8bb6fbd09a1f0",
+    "size": 5192,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/whispertext-combine.py",
+    "name": "whispertext-combine.py",
+    "hash": "622568fb55807e879767c52fecc9a0da",
+    "size": 6375,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/testing3.py",
+    "name": "testing3.py",
+    "hash": "0f3a061c76eedd8e0df07e90c7792fd9",
+    "size": 13610,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/breakdown.py",
+    "name": "breakdown.py",
+    "hash": "0cc541a696d856bbe646a9c13ebd91ee",
+    "size": 6275,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/pyorganize.py",
+    "name": "pyorganize.py",
+    "hash": "889488b1f3cef460cfef5baa8bd01476",
+    "size": 7179,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/fancy 1.py",
+    "name": "fancy 1.py",
+    "hash": "88b646287c15383e4dc9eec78cd36fe4",
+    "size": 9178,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/fancyname.py",
+    "name": "fancyname.py",
+    "hash": "2896784a116d8ed7cfa2771468779cb4",
+    "size": 8292,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/emport_prompts.py",
+    "name": "emport_prompts.py",
+    "hash": "bb51edd5257bf656c4b2b7f1af6c0977",
+    "size": 8585,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/batch-info.py",
+    "name": "batch-info.py",
+    "hash": "443c7aa8350c4ad07334b48f0b03e3bb",
+    "size": 9630,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/vision.py",
+    "name": "vision.py",
+    "hash": "0831a0b36daf5d56cb6db7b437e210e2",
+    "size": 6467,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/rename.py",
+    "name": "rename.py",
+    "hash": "5ea11c515b3df1cc109aad0b72d8e954",
+    "size": 8053,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/better.py",
+    "name": "better.py",
+    "hash": "7557306e89beedd8a4771dd0f19ac3af",
+    "size": 4848,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/finaltry.py",
+    "name": "finaltry.py",
+    "hash": "beb368370f4aadadb0222f330ddc9a2f",
+    "size": 10831,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/openai_local.py",
+    "name": "openai_local.py",
+    "hash": "47a60af97daa6b67fd6e6698767faef6",
+    "size": 9500,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/filenamer 1.py",
+    "name": "filenamer 1.py",
+    "hash": "c982f2dde84241aba77ab9049786895b",
+    "size": 7326,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/riddle.py",
+    "name": "riddle.py",
+    "hash": "adeff5bff4dbe112f36e1f0f29bd8ab0",
+    "size": 7806,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/classify.py",
+    "name": "classify.py",
+    "hash": "b793836b90010694daf37963fface1df",
+    "size": 10906,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/emport_prompts_20250530225121.py",
+    "name": "emport_prompts_20250530225121.py",
+    "hash": "bb51edd5257bf656c4b2b7f1af6c0977",
+    "size": 8585,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/batch.py",
+    "name": "batch.py",
+    "hash": "ab214c116b2d8b9d1d8c9684e4df7408",
+    "size": 9507,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/pydescriber.py",
+    "name": "pydescriber.py",
+    "hash": "1d37e320caae1412e4077d4bfe81037f",
+    "size": 8383,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/__init__.py",
+    "name": "__init__.py",
+    "hash": "23a3750bba76362b71eb646b4e38ac1f",
+    "size": 4624,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/scanpythons.py",
+    "name": "scanpythons.py",
+    "hash": "4e3d01ac5623abbcd612ef5a9324d3e3",
+    "size": 6960,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/enhance_img_csv.py",
+    "name": "enhance_img_csv.py",
+    "hash": "c57c6066678afd562f4240cdb1a4f22c",
+    "size": 16612,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/analyze_img_csv 1.py",
+    "name": "analyze_img_csv 1.py",
+    "hash": "e0c6c187cb8d22eb7e7540671488fc34",
+    "size": 13210,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/self_query.py",
+    "name": "self_query.py",
+    "hash": "0a4e35431b71868480fdb866ebf6f370",
+    "size": 6555,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/autofill.py",
+    "name": "autofill.py",
+    "hash": "c8d0dc81cf5380a70fabf28bb04befcf",
+    "size": 8309,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/autofill_20250530225752.py",
+    "name": "autofill_20250530225752.py",
+    "hash": "c8d0dc81cf5380a70fabf28bb04befcf",
+    "size": 8309,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/filenamer.py",
+    "name": "filenamer.py",
+    "hash": "c982f2dde84241aba77ab9049786895b",
+    "size": 7326,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/fancy.py",
+    "name": "fancy.py",
+    "hash": "88b646287c15383e4dc9eec78cd36fe4",
+    "size": 9178,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/fancyimg copy.py",
+    "name": "fancyimg copy.py",
+    "hash": "f78730c9799610bcdbb8025c35b8a674",
+    "size": 7495,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/whisper.py",
+    "name": "whisper.py",
+    "hash": "b44dca7d58c66f85ee27637a44670581",
+    "size": 6889,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/ident.py",
+    "name": "ident.py",
+    "hash": "663c425fbbc97952d6b4dccb2dc353d9",
+    "size": 10613,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/groq.py",
+    "name": "groq.py",
+    "hash": "c3e97db331089125d0b7299298d330c4",
+    "size": 5471,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/sagemaker.py",
+    "name": "sagemaker.py",
+    "hash": "ec903405954ee81e65d842f8c3526544",
+    "size": 6018,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/narrative_gen.py",
+    "name": "narrative_gen.py",
+    "hash": "18bf521c2d368c5a7b6ba612a21fa912",
+    "size": 10845,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/my_openai_utils.py",
+    "name": "my_openai_utils.py",
+    "hash": "47a60af97daa6b67fd6e6698767faef6",
+    "size": 9500,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/fancyname 1.py",
+    "name": "fancyname 1.py",
+    "hash": "2896784a116d8ed7cfa2771468779cb4",
+    "size": 8292,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/whisper2.py",
+    "name": "whisper2.py",
+    "hash": "6812b27366a71a963b363bc940a86870",
+    "size": 7093,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/pyorganizerr.py",
+    "name": "pyorganizerr.py",
+    "hash": "889488b1f3cef460cfef5baa8bd01476",
+    "size": 7179,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/textgenerator.py",
+    "name": "textgenerator.py",
+    "hash": "ecc17cfa00d1ed68e2bb3647125f2bdc",
+    "size": 5904,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/combiner.py",
+    "name": "combiner.py",
+    "hash": "42c21b53d793c99a56eaf74eb6346eb3",
+    "size": 6372,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/overlay_theme_engines (3).py",
+    "name": "overlay_theme_engines (3).py",
+    "hash": "5fb4187266921d46b0dc9da038003457",
+    "size": 7316,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/verify_connections2.py",
+    "name": "verify_connections2.py",
+    "hash": "5c78b44f4b24a4be887d58d4e5b6985a",
+    "size": 5907,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/whisper-combiner.py",
+    "name": "whisper-combiner.py",
+    "hash": "cbfc9ed436ced32146d96842324eebc6",
+    "size": 6402,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/fancyimg 1.py",
+    "name": "fancyimg 1.py",
+    "hash": "0074d542d98699974662b085880ccd7f",
+    "size": 7579,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/fancyimg.py",
+    "name": "fancyimg.py",
+    "hash": "5b9c1f4e0bfb8cc0925e124302e99de6",
+    "size": 7503,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/openai_client.py",
+    "name": "openai_client.py",
+    "hash": "65ff05bca541f5f902f8d65455add0e5",
+    "size": 4457,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/fancyimg copy 1.py",
+    "name": "fancyimg copy 1.py",
+    "hash": "f78730c9799610bcdbb8025c35b8a674",
+    "size": 7495,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/batch_img_seo_pipeline.py",
+    "name": "batch_img_seo_pipeline.py",
+    "hash": "cd19dfe3344806f7dd8da80c7d11ed1f",
+    "size": 13294,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/query_expanison.py",
+    "name": "query_expanison.py",
+    "hash": "82327f83d34d3c51c6d2df9bf10c3f78",
+    "size": 6673,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/batch.py.bak.py",
+    "name": "batch.py.bak.py",
+    "hash": "ab214c116b2d8b9d1d8c9684e4df7408",
+    "size": 9507,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/content-new.py",
+    "name": "content-new.py",
+    "hash": "f345cda605aed43e19d00b49cf9c85c6",
+    "size": 6962,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/analyze_img_csv.py",
+    "name": "analyze_img_csv.py",
+    "hash": "e0c6c187cb8d22eb7e7540671488fc34",
+    "size": 13210,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/openai-Utilize DALL-E 3 for image creation.py",
+    "name": "openai-Utilize DALL-E 3 for image creation.py",
+    "hash": "47a60af97daa6b67fd6e6698767faef6",
+    "size": 9500,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/category.py",
+    "name": "category.py",
+    "hash": "92564817e25e9ee108e9bd1274c61731",
+    "size": 10402,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/rephrase.py",
+    "name": "rephrase.py",
+    "hash": "82103593faba8549e826b1ae75c792fb",
+    "size": 6995,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/scanpython.py",
+    "name": "scanpython.py",
+    "hash": "1a267460e89af56c1cebbe0f1be7a13f",
+    "size": 6287,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis/verify_connections.py",
+    "name": "verify_connections.py",
+    "hash": "5c78b44f4b24a4be887d58d4e5b6985a",
+    "size": 5907,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/content_analysis"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/generate_songs_csv.py_consolidated/generate_songs_csv.py_02.py",
+    "name": "generate_songs_csv.py_02.py",
+    "hash": "c1df0a32e595841d520fcf19d5a9eee3",
+    "size": 6699,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/generate_songs_csv.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/generate_songs_csv.py_consolidated/generate_songs_csv.py.py",
+    "name": "generate_songs_csv.py.py",
+    "hash": "fc5d8849a44062c3cd5bcfbf6d3f79ff",
+    "size": 5742,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/generate_songs_csv.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/autofixer.py",
+    "name": "autofixer.py",
+    "hash": "85f70bbb4942605b8ff208e2139cc602",
+    "size": 10262,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/try.py",
+    "name": "try.py",
+    "hash": "e615d3574ad426f2c9d1eb41ca1e0158",
+    "size": 9443,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/quiz-tts.py",
+    "name": "quiz-tts.py",
+    "hash": "2e173a1e2b420cdfd768063de813db94",
+    "size": 5515,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/csv-output.py",
+    "name": "csv-output.py",
+    "hash": "f62ab4f21d0af0497613942ab9fa0aef",
+    "size": 5192,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/vance.py",
+    "name": "vance.py",
+    "hash": "37df387c5757b7a5827ddeeebeccc48b",
+    "size": 9836,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/outs.py",
+    "name": "outs.py",
+    "hash": "7edfb78035ecde865b1dcba3c03de72f",
+    "size": 5299,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/bot_support.py",
+    "name": "bot_support.py",
+    "hash": "31a7b3b34939737c40ad7e0e8fb2da3f",
+    "size": 9470,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/convert 3.py",
+    "name": "convert 3.py",
+    "hash": "305274f5af4ffd2ddc0f8ba008d31584",
+    "size": 6293,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/mask.py",
+    "name": "mask.py",
+    "hash": "e15a3ee3d1a562f0b005eeb20c2d0769",
+    "size": 7405,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/process_csv.py",
+    "name": "process_csv.py",
+    "hash": "52a112f4b9e2f3add52ea6ae81e670b1",
+    "size": 4693,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/img-resizer.py",
+    "name": "img-resizer.py",
+    "hash": "918c8adc96882bfc7209da6e4aee3c3a",
+    "size": 8937,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/album_sorter.py",
+    "name": "album_sorter.py",
+    "hash": "4ae0a66d99ee6f5bb12ac1fa46932979",
+    "size": 7485,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/fixer.py",
+    "name": "fixer.py",
+    "hash": "f7e9d99f084da30e66e7eaaa79bf935a",
+    "size": 5807,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/resize-img.py",
+    "name": "resize-img.py",
+    "hash": "78f75b61255ac31e0c2a8d9df1708a9c",
+    "size": 11905,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/re-size.py",
+    "name": "re-size.py",
+    "hash": "3c9ba1d223085b19453cacf2001df06c",
+    "size": 10073,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/noted.py",
+    "name": "noted.py",
+    "hash": "7cb57445e8b2b5de69b4dd6126098326",
+    "size": 5885,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/create_csv_from_json.py",
+    "name": "create_csv_from_json.py",
+    "hash": "61db05d7667abc3fa527f4e17ce19878",
+    "size": 6737,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/expand_prompts_by_style.py",
+    "name": "expand_prompts_by_style.py",
+    "hash": "652ba02c8feeceb11cec7c053ef00c9c",
+    "size": 6319,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/process_leonardo_20250102110033.py",
+    "name": "process_leonardo_20250102110033.py",
+    "hash": "62af1c7d8856674a4e0e5a1b75f8751c",
+    "size": 6739,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/quiz.py",
+    "name": "quiz.py",
+    "hash": "9fa0cc1f46852978fb47d093c4bd7681",
+    "size": 5545,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/yplaylist.py",
+    "name": "yplaylist.py",
+    "hash": "44b28aa3146ee2e5c8de16d6240e622a",
+    "size": 5434,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/custom_thumbnail.py",
+    "name": "custom_thumbnail.py",
+    "hash": "77ab998d7a2e1288e2d336e83b26b356",
+    "size": 11015,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/upscalerr.py",
+    "name": "upscalerr.py",
+    "hash": "c7e23745e631d03541425075162c3edf",
+    "size": 11577,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/generate_song_csv.py",
+    "name": "generate_song_csv.py",
+    "hash": "4ac5f166f72bf669b163e08c4436a09f",
+    "size": 8284,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/txt-csv.py",
+    "name": "txt-csv.py",
+    "hash": "8dbd4ebb2521219a4313f8b4e51ab919",
+    "size": 5742,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/gthumb.py",
+    "name": "gthumb.py",
+    "hash": "8f06fdbc124dbee6127bd8133cd4e3aa",
+    "size": 51995,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/ai_methods.py",
+    "name": "ai_methods.py",
+    "hash": "2ad253b48deae1728ef64e504f6174e4",
+    "size": 7440,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/generate-info 1.py",
+    "name": "generate-info 1.py",
+    "hash": "8ad9174b9a6220f2111abd46073f8d65",
+    "size": 8359,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/organize_csv.py",
+    "name": "organize_csv.py",
+    "hash": "edd92a92acac6e1283a5b7f5492c6491",
+    "size": 9127,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/suno-song-info.py",
+    "name": "suno-song-info.py",
+    "hash": "ea7ab599d685d56653af5bc9892ba9b1",
+    "size": 4962,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/YTubeDLthumbs (1).py",
+    "name": "YTubeDLthumbs (1).py",
+    "hash": "06ee413a6d39eb52bce3a292c215f317",
+    "size": 8684,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/suno-extract-song.py",
+    "name": "suno-extract-song.py",
+    "hash": "1c4c79efb823f25191d101d673c7ff0f",
+    "size": 9471,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/gen-songs.py",
+    "name": "gen-songs.py",
+    "hash": "fc5d8849a44062c3cd5bcfbf6d3f79ff",
+    "size": 5742,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/check.py",
+    "name": "check.py",
+    "hash": "df9aa7954530fb138b8323203c940810",
+    "size": 7290,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/netlify_uploader.py",
+    "name": "netlify_uploader.py",
+    "hash": "3c2d76b8ce2a5593916baef813754885",
+    "size": 19437,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/csvmerge.py",
+    "name": "csvmerge.py",
+    "hash": "d14394a339da5966b562ce042478b32e",
+    "size": 6425,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/euckrprober.py",
+    "name": "euckrprober.py",
+    "hash": "3dab73aa35ed13fcfbe8e7735f2d2d9f",
+    "size": 7664,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/upload.py",
+    "name": "upload.py",
+    "hash": "929554ddb8526814168fd6f1a9dce030",
+    "size": 9460,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/process_leonardo_20250102110137.py",
+    "name": "process_leonardo_20250102110137.py",
+    "hash": "c515786624594291fa735557b76d9d19",
+    "size": 6759,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/div.py",
+    "name": "div.py",
+    "hash": "4359b556367dba887010b6289bc4e80c",
+    "size": 5786,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/idt.py",
+    "name": "idt.py",
+    "hash": "093a9d98fc7d758804c11444b84d6649",
+    "size": 6510,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/dbl.py",
+    "name": "dbl.py",
+    "hash": "6c6c70a8b3b7b7ad0d213f8baff78613",
+    "size": 11991,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/resize-skip-8below.py",
+    "name": "resize-skip-8below.py",
+    "hash": "ea979fd53a066c5ccb26b1e5eff58665",
+    "size": 9363,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/deepseek_python_20250530205148.py",
+    "name": "deepseek_python_20250530205148.py",
+    "hash": "00ad9d0dc92e72884a01e6bf61572d08",
+    "size": 25084,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/mydesigner.py",
+    "name": "mydesigner.py",
+    "hash": "1f67d7a3a90dfb35833d94d6f16f9f9a",
+    "size": 9323,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/etsy-csv-sort.py",
+    "name": "etsy-csv-sort.py",
+    "hash": "f3f24fb010157b981c3b056725cba414",
+    "size": 6852,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/sjisprober.py",
+    "name": "sjisprober.py",
+    "hash": "57da0c28546a3534aefd07ce59e5b399",
+    "size": 10765,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/csv-download.py",
+    "name": "csv-download.py",
+    "hash": "73f7bf3cdb20444d11ccd7b551992559",
+    "size": 7181,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/cp949prober.py",
+    "name": "cp949prober.py",
+    "hash": "50ba18d5be4d69f4d5d663aa47738899",
+    "size": 7771,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/yt-thumbnail-dl.py",
+    "name": "yt-thumbnail-dl.py",
+    "hash": "2e82233385e6f2fdbc4374234ac2b4de",
+    "size": 8653,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/ythumb.py",
+    "name": "ythumb.py",
+    "hash": "b40c74745a141cfc09d9076adc0b5663",
+    "size": 8305,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/cleanup2.py",
+    "name": "cleanup2.py",
+    "hash": "25b9e6e3db5eac29aff4c09ac35dfe0c",
+    "size": 9565,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/expand_prompts_by_style_20250530223233.py",
+    "name": "expand_prompts_by_style_20250530223233.py",
+    "hash": "652ba02c8feeceb11cec7c053ef00c9c",
+    "size": 6319,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/convert.py",
+    "name": "convert.py",
+    "hash": "305274f5af4ffd2ddc0f8ba008d31584",
+    "size": 6293,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/resize-skip-8below2.py",
+    "name": "resize-skip-8below2.py",
+    "hash": "5ba6adbf7d58dd157947e2a2a07c0b6e",
+    "size": 9404,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/quantum_media_processor.py",
+    "name": "quantum_media_processor.py",
+    "hash": "1426f4b8651a0bc96e44bca5296aa6fe",
+    "size": 6734,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/resize-skip-8below-og.py",
+    "name": "resize-skip-8below-og.py",
+    "hash": "ea979fd53a066c5ccb26b1e5eff58665",
+    "size": 9363,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/resize-skip-image-fixer.py",
+    "name": "resize-skip-image-fixer.py",
+    "hash": "c7e23745e631d03541425075162c3edf",
+    "size": 11577,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/deepseek_python-copy.py",
+    "name": "deepseek_python-copy.py",
+    "hash": "2cd4d276477c93b239eacd391b441bc7",
+    "size": 25765,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/mydesign-csv-download.py",
+    "name": "mydesign-csv-download.py",
+    "hash": "9f2a30e997ab9f3e2641d6142817afd3",
+    "size": 9087,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/printify_matcher.py",
+    "name": "printify_matcher.py",
+    "hash": "4ada8ad4d8494b60dc7ae8ede81bce1a",
+    "size": 11484,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/ascii-python.py",
+    "name": "ascii-python.py",
+    "hash": "ffeeeb76f79e3ca20c8d652465d64688",
+    "size": 14369,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/doubles.py",
+    "name": "doubles.py",
+    "hash": "26ecc53eaf2bf9ca698f0b1cfa85ecda",
+    "size": 10533,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/diag_20250530223533.py",
+    "name": "diag_20250530223533.py",
+    "hash": "40e097fce1ca77239d8d69742f87ecab",
+    "size": 7679,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/csvsort.py",
+    "name": "csvsort.py",
+    "hash": "95134d30d9fb73aa3b99d4543e2036ec",
+    "size": 7490,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/resize-skip-8below3.py",
+    "name": "resize-skip-8below3.py",
+    "hash": "6341ee455ab1e7c9f0dcbbe586447ee4",
+    "size": 11706,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/deepseek_python.py",
+    "name": "deepseek_python.py",
+    "hash": "c88e36bf8a74520136e1d62415861a6c",
+    "size": 25675,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/tts.py",
+    "name": "tts.py",
+    "hash": "58d29aacb79b128650392a555ddef8ea",
+    "size": 10437,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/mp4-mp4.py",
+    "name": "mp4-mp4.py",
+    "hash": "6c88e4edcba263bf0a2d541a18ba13b9",
+    "size": 6799,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/suno-csv-card-html-seo1.py",
+    "name": "suno-csv-card-html-seo1.py",
+    "hash": "d729dc49c895e5c6b88715115c21b633",
+    "size": 9815,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/analyze 6.py",
+    "name": "analyze 6.py",
+    "hash": "6072f718a87980fe27f9ebaf85c414cb",
+    "size": 6838,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/dthumb.py",
+    "name": "dthumb.py",
+    "hash": "7cb809610201791623a65b24ef51cd7c",
+    "size": 8651,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/extract_topic.py",
+    "name": "extract_topic.py",
+    "hash": "b41305f6637e096cff4b1c007f3ba21f",
+    "size": 7021,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/sort-tik-etsy-best-seller.py",
+    "name": "sort-tik-etsy-best-seller.py",
+    "hash": "ebf1b4c34ed59a69719325cac36526ea",
+    "size": 6753,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/cleanup.py",
+    "name": "cleanup.py",
+    "hash": "f566337c60700b613164589c8870fa9b",
+    "size": 8388,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/etsycsv.py",
+    "name": "etsycsv.py",
+    "hash": "ac4639090732d051100397d4017430ed",
+    "size": 5326,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/docs4.py",
+    "name": "docs4.py",
+    "hash": "73dc9ea51640d849f40ec211b698044d",
+    "size": 6290,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/bubblespider-amazon-scraper.py",
+    "name": "bubblespider-amazon-scraper.py",
+    "hash": "c57b94db3c465911bd6644892cad5428",
+    "size": 5790,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/gb2312prober.py",
+    "name": "gb2312prober.py",
+    "hash": "ccc18b439b037b254f9b88f9e6c0391d",
+    "size": 7670,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/process_leonardo_20250102110148.py",
+    "name": "process_leonardo_20250102110148.py",
+    "hash": "62af1c7d8856674a4e0e5a1b75f8751c",
+    "size": 6739,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/printify-organize.py",
+    "name": "printify-organize.py",
+    "hash": "396c5c45d1d45258284cec5d6914d746",
+    "size": 12264,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/csvr.py",
+    "name": "csvr.py",
+    "hash": "c95ec925eb0787b5a431438d771d20bf",
+    "size": 8086,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/YTubeDLthumbs.py",
+    "name": "YTubeDLthumbs.py",
+    "hash": "856ef2d66d0377dd81b672700bec40bb",
+    "size": 8685,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/300dpi.py",
+    "name": "300dpi.py",
+    "hash": "3e5ce376811cc8c20911ed60a20b81f0",
+    "size": 7060,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/bak.py",
+    "name": "bak.py",
+    "hash": "984f71e483ae7d7a01546dca453c4259",
+    "size": 9291,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/mbcharsetprober.py",
+    "name": "mbcharsetprober.py",
+    "hash": "10725098c366320ddbd5328f96cbba11",
+    "size": 9678,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/uploadimages.py",
+    "name": "uploadimages.py",
+    "hash": "5c28c9b7c6cfcfdf5b920934a078cd80",
+    "size": 9792,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/download_etsy_images.py",
+    "name": "download_etsy_images.py",
+    "hash": "c98722d07ba831155839a7ee49125206",
+    "size": 8454,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/yplaylist 2.py",
+    "name": "yplaylist 2.py",
+    "hash": "44b28aa3146ee2e5c8de16d6240e622a",
+    "size": 5434,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/suno-csv-card-html-seo2.py",
+    "name": "suno-csv-card-html-seo2.py",
+    "hash": "6f96ac428a91a747a99b3e5292f586c3",
+    "size": 8394,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/suno-csv-card-html-seo.py",
+    "name": "suno-csv-card-html-seo.py",
+    "hash": "caf6a9ce68e3d96fa4e8f06962b4d759",
+    "size": 10035,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/docs3.py",
+    "name": "docs3.py",
+    "hash": "89b6e472ebe1b3ca9b0ae6a75a46fea0",
+    "size": 9253,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/resize.py",
+    "name": "resize.py",
+    "hash": "9dfd5df90044e717362f91a646473f77",
+    "size": 11803,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/euctwprober.py",
+    "name": "euctwprober.py",
+    "hash": "5f80d2dc07ba1513468307c96aca64f4",
+    "size": 7664,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/suno.py",
+    "name": "suno.py",
+    "hash": "1b78a3825876a7538be57ab5807d5d21",
+    "size": 6083,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/printful.py",
+    "name": "printful.py",
+    "hash": "ec434db6fbedf78aa9d67be39cce3d32",
+    "size": 10176,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/file_analyzer.py",
+    "name": "file_analyzer.py",
+    "hash": "873ecbc82f46136638173b12efacfd5c",
+    "size": 9093,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/video-ocr.py",
+    "name": "video-ocr.py",
+    "hash": "d3b33d9a1ab1dbcc305247886d24c468",
+    "size": 7713,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/batch-img.py",
+    "name": "batch-img.py",
+    "hash": "c67061342230fbc405c4e42d7bf699f1",
+    "size": 7614,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/YTdownloadthumb copy.py",
+    "name": "YTdownloadthumb copy.py",
+    "hash": "7cb809610201791623a65b24ef51cd7c",
+    "size": 8651,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/YTdownloadthumb.py",
+    "name": "YTdownloadthumb.py",
+    "hash": "1790e24c9c6588dad92c7e3a3fb93fd8",
+    "size": 8650,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/taggy.py",
+    "name": "taggy.py",
+    "hash": "ab074a1c2ca4233791e467ce4d809051",
+    "size": 11431,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/diag.py",
+    "name": "diag.py",
+    "hash": "40e097fce1ca77239d8d69742f87ecab",
+    "size": 7679,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/yt-upload.py",
+    "name": "yt-upload.py",
+    "hash": "ce3595159c90ad9b02d3099147af5806",
+    "size": 7183,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/suno 1.py",
+    "name": "suno 1.py",
+    "hash": "1b78a3825876a7538be57ab5807d5d21",
+    "size": 6083,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/taggy 1.py",
+    "name": "taggy 1.py",
+    "hash": "ab074a1c2ca4233791e467ce4d809051",
+    "size": 11431,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/gdrive.py",
+    "name": "gdrive.py",
+    "hash": "99e1ea73c5c007da2de7b101394700e9",
+    "size": 6414,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/csv.py",
+    "name": "csv.py",
+    "hash": "b3481672c65ef75a1c2c8a3aa5f44c44",
+    "size": 4918,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/text.py",
+    "name": "text.py",
+    "hash": "660c1c528613d1341b17bf552711eb05",
+    "size": 7707,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/dthumb2.py",
+    "name": "dthumb2.py",
+    "hash": "a9955cfac4ba947d846e83a288951e9c",
+    "size": 8683,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/upscaleuploadimages.py",
+    "name": "upscaleuploadimages.py",
+    "hash": "6368f83590ab755835698e74024fa037",
+    "size": 8807,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/YTubeDLthumbs copy 2.py",
+    "name": "YTubeDLthumbs copy 2.py",
+    "hash": "a9955cfac4ba947d846e83a288951e9c",
+    "size": 8683,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/YTdownloadthumb copy 2.py",
+    "name": "YTdownloadthumb copy 2.py",
+    "hash": "7cb809610201791623a65b24ef51cd7c",
+    "size": 8651,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/upscaler.py",
+    "name": "upscaler.py",
+    "hash": "c7e23745e631d03541425075162c3edf",
+    "size": 11577,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/2mentest.py",
+    "name": "2mentest.py",
+    "hash": "2fc7faef9b07422c5e62763904b27280",
+    "size": 6175,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/ythumb copy.py",
+    "name": "ythumb copy.py",
+    "hash": "e098bd71509a135d07a8838ba876be04",
+    "size": 8311,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/song-info.py",
+    "name": "song-info.py",
+    "hash": "ea7ab599d685d56653af5bc9892ba9b1",
+    "size": 4962,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/extract_webm_paths.py",
+    "name": "extract_webm_paths.py",
+    "hash": "4f3ffbf406c240a38021b0db19c05e56",
+    "size": 4790,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/htmlouts.py",
+    "name": "htmlouts.py",
+    "hash": "d6383f13de01bb18ca10f83333367eb2",
+    "size": 8904,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/sorty.py",
+    "name": "sorty.py",
+    "hash": "ebf1b4c34ed59a69719325cac36526ea",
+    "size": 6753,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/deepseek_python_20250608130553.py",
+    "name": "deepseek_python_20250608130553.py",
+    "hash": "2cd4d276477c93b239eacd391b441bc7",
+    "size": 25765,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/9mb-up.py",
+    "name": "9mb-up.py",
+    "hash": "bda6d17c04204ec939777a29899258be",
+    "size": 10897,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/autodownloaderUI.py",
+    "name": "autodownloaderUI.py",
+    "hash": "c3ee9fabe7109f7930e18283738c8e2e",
+    "size": 24643,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/quick_demo.py",
+    "name": "quick_demo.py",
+    "hash": "fe89de49f49dc79dad986212c0e2ad3e",
+    "size": 10371,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/1500-cutout-orn-process.py",
+    "name": "1500-cutout-orn-process.py",
+    "hash": "e15a3ee3d1a562f0b005eeb20c2d0769",
+    "size": 7405,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/xlsx.py",
+    "name": "xlsx.py",
+    "hash": "577b237327629c3dac23994c6ea90a5c",
+    "size": 8119,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/process.py",
+    "name": "process.py",
+    "hash": "c14d57b947998c9e9c497ab4db0e01de",
+    "size": 7871,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/mamba_reset.py",
+    "name": "mamba_reset.py",
+    "hash": "651af65440efc13c1360a8eaa6d14d93",
+    "size": 23629,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/yt-playlist.py",
+    "name": "yt-playlist.py",
+    "hash": "2ec22c92bd865b954549614b2036f513",
+    "size": 5435,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/bubblespider_scraper.py",
+    "name": "bubblespider_scraper.py",
+    "hash": "dfb448b9695a269bc5ed05522de4f4da",
+    "size": 5787,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/miniforge-reset.py",
+    "name": "miniforge-reset.py",
+    "hash": "651af65440efc13c1360a8eaa6d14d93",
+    "size": 23629,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/eucjpprober.py",
+    "name": "eucjpprober.py",
+    "hash": "f73a21877313886a54f58174b63026d8",
+    "size": 10728,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/magickbg.py",
+    "name": "magickbg.py",
+    "hash": "92f547ad53dbf06b3b75602876b2d50c",
+    "size": 6415,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/idt copy.py",
+    "name": "idt copy.py",
+    "hash": "093a9d98fc7d758804c11444b84d6649",
+    "size": 6510,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/generate_song_csv (1).py",
+    "name": "generate_song_csv (1).py",
+    "hash": "724a455b1de27b65821c66abf1e9960e",
+    "size": 8359,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/multi_platform_product_recommender.py",
+    "name": "multi_platform_product_recommender.py",
+    "hash": "f976901301a36dcb77a43d17f4b6351a",
+    "size": 14849,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/generate-info.py",
+    "name": "generate-info.py",
+    "hash": "8ad9174b9a6220f2111abd46073f8d65",
+    "size": 8359,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/myd-csv-download.py",
+    "name": "myd-csv-download.py",
+    "hash": "1f67d7a3a90dfb35833d94d6f16f9f9a",
+    "size": 9323,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/deepseek_python_20250608130226.py",
+    "name": "deepseek_python_20250608130226.py",
+    "hash": "00ad9d0dc92e72884a01e6bf61572d08",
+    "size": 25084,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/big5prober.py",
+    "name": "big5prober.py",
+    "hash": "a5ad47976c5bfd0ae2aa113757d491b9",
+    "size": 7674,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/sort-suno-regx.py",
+    "name": "sort-suno-regx.py",
+    "hash": "1b78a3825876a7538be57ab5807d5d21",
+    "size": 6083,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/pods2.py",
+    "name": "pods2.py",
+    "hash": "c82132581ff6683406a6bc269e3cc4dd",
+    "size": 8878,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/similar.py",
+    "name": "similar.py",
+    "hash": "90ff95da7854de9f0d1473104fecf2c5",
+    "size": 5128,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/subject_tracker (1).py",
+    "name": "subject_tracker (1).py",
+    "hash": "e45ecb16d0562dac551466bf8d18909f",
+    "size": 14307,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/johabprober.py",
+    "name": "johabprober.py",
+    "hash": "a127153f57f64c15dc30043d435a838d",
+    "size": 7663,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/my_csv_tools.py",
+    "name": "my_csv_tools.py",
+    "hash": "b3481672c65ef75a1c2c8a3aa5f44c44",
+    "size": 4918,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/GmailBot.py",
+    "name": "GmailBot.py",
+    "hash": "c3f131aabfbc0af9635433196a75af7d",
+    "size": 49347,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/finetune.py",
+    "name": "finetune.py",
+    "hash": "2456a0d4a841709d01f6533b104494cb",
+    "size": 17068,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/download_yt-videos.py",
+    "name": "download_yt-videos.py",
+    "hash": "681919416871d3b609177306d9c5f6c9",
+    "size": 5638,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/csv2.py",
+    "name": "csv2.py",
+    "hash": "c5ad09ab16cbb0ccbd9042201f2b55b1",
+    "size": 8039,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/create_csv_from_json-leonardo.py",
+    "name": "create_csv_from_json-leonardo.py",
+    "hash": "cbd7c2e81d9a6b1144a625bc4c4a2b15",
+    "size": 6722,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/organize_files.py",
+    "name": "organize_files.py",
+    "hash": "99221a538baa7ce455007f4342a54f7f",
+    "size": 10994,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/backupcsv.py",
+    "name": "backupcsv.py",
+    "hash": "544abe926dbbd872692273e9f0d3937e",
+    "size": 4995,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/re.py",
+    "name": "re.py",
+    "hash": "c95ec925eb0787b5a431438d771d20bf",
+    "size": 8086,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/YTubeDLthumbs copy.py",
+    "name": "YTubeDLthumbs copy.py",
+    "hash": "a9955cfac4ba947d846e83a288951e9c",
+    "size": 8683,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/test_environment.py",
+    "name": "test_environment.py",
+    "hash": "dfb6cde79af2c800daa2ed1300c4b7a5",
+    "size": 3129,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/dblsort.py",
+    "name": "dblsort.py",
+    "hash": "e8835141306f8f8a8dcc8fce03bccfde",
+    "size": 5511,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/ClipHandler.py",
+    "name": "ClipHandler.py",
+    "hash": "60f90df7f5fda5158f678ddb062faaa9",
+    "size": 15239,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/reportbot.py",
+    "name": "reportbot.py",
+    "hash": "aebe5963e1f2370327ea49779dd4b459",
+    "size": 10326,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/organizer.py",
+    "name": "organizer.py",
+    "hash": "c20092bb6352cdf2839380d609c9d46d",
+    "size": 6161,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/winterm.py",
+    "name": "winterm.py",
+    "hash": "b004b9d322f2698d6048d9efc1c7aa6b",
+    "size": 13595,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/sorts.py",
+    "name": "sorts.py",
+    "hash": "8df2eedc9eb5195ac3fb13fe808e6651",
+    "size": 15476,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/check-python.py",
+    "name": "check-python.py",
+    "hash": "5c9720dd3b1e109cbd550c03a6623fb2",
+    "size": 6539,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/unpacking.py",
+    "name": "unpacking.py",
+    "hash": "fe3bb69209f3c67fff35542943911fad",
+    "size": 14073,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/autofix.py",
+    "name": "autofix.py",
+    "hash": "67ba6dcf0b608fd317bd92002898ba23",
+    "size": 9455,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/merger.py",
+    "name": "merger.py",
+    "hash": "3e275ee48aa809d202b8066c5cb26b0c",
+    "size": 5129,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/csv_from_json2.py",
+    "name": "csv_from_json2.py",
+    "hash": "5309de01e86508516986bb170ad24430",
+    "size": 6784,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing/pods.py",
+    "name": "pods.py",
+    "hash": "ea87610721ac5c3f97c429c5bc7c5701",
+    "size": 8858,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/data_processing"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyze.py_consolidated/analyze.py.py",
+    "name": "analyze.py.py",
+    "hash": "cf3d1ed7ac25b25ca837b36d6c6bd12b",
+    "size": 6984,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyze.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyze.py_consolidated/analyze.py_02.py",
+    "name": "analyze.py_02.py",
+    "hash": "6058d96d9afb9bd1469a3b90e7090fd8",
+    "size": 5662,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyze.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyzer.py_consolidated/analyzer.py_02.py",
+    "name": "analyzer.py_02.py",
+    "hash": "ee6a319b12a1e89c24b2b49245247de4",
+    "size": 5672,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyzer.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyzer.py_consolidated/analyzer.py.py",
+    "name": "analyzer.py.py",
+    "hash": "d3b91dcde186f908000a74e4c06d9197",
+    "size": 8061,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyzer.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyzer.py_consolidated/analyzer.py_03.py",
+    "name": "analyzer.py_03.py",
+    "hash": "ab3aa2484c9ffb2dd3427cb2641cea32",
+    "size": 39763,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/analyzer.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/main.py_consolidated/main.py_03.py",
+    "name": "main.py_03.py",
+    "hash": "17838e8d8431559223f59fb1008d7edd",
+    "size": 5615,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/main.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/main.py_consolidated/main.py.py",
+    "name": "main.py.py",
+    "hash": "3b291b6e9b88eb9d7d5a747194229a09",
+    "size": 4638,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/main.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/main.py_consolidated/main.py_02.py",
+    "name": "main.py_02.py",
+    "hash": "d8d4606b9b2ac94d7201d982d7f2053e",
+    "size": 7834,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/main.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/final_video.py_consolidated/final_video.py.py",
+    "name": "final_video.py.py",
+    "hash": "af36a2ee3388e952842c55fe9b3c3c9d",
+    "size": 7981,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/final_video.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/final_video.py_consolidated/final_video.py_02.py",
+    "name": "final_video.py_02.py",
+    "hash": "cca90ee16d8f18014096926b4abd5307",
+    "size": 7738,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/final_video.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/config.py_consolidated/config.py.py",
+    "name": "config.py.py",
+    "hash": "4ae127a6e1f4f6d3d0fdc6aa6943da63",
+    "size": 5876,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/config.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/config.py_consolidated/config.py_03.py",
+    "name": "config.py_03.py",
+    "hash": "594524c808d0259a1a3189d585228829",
+    "size": 5633,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/config.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/config.py_consolidated/config.py_02.py",
+    "name": "config.py_02.py",
+    "hash": "928e022053efdae6f43c7fdb8fa57c96",
+    "size": 4841,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/config.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/settings.py_consolidated/settings.py_02.py",
+    "name": "settings.py_02.py",
+    "hash": "7786c23449801f0a25547bca9133ec46",
+    "size": 7521,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/settings.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/settings.py_consolidated/settings.py.py",
+    "name": "settings.py.py",
+    "hash": "aeca5b7b94734c7c2460c0e67e428271",
+    "size": 8843,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/settings.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/setup.py_consolidated/setup.py.py",
+    "name": "setup.py.py",
+    "hash": "0a99d23d7a1f2e8450cc4f7fd6e26cf1",
+    "size": 8220,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/setup.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/setup.py_consolidated/setup.py_02.py",
+    "name": "setup.py_02.py",
+    "hash": "9f77eff8cbfda6caaacd0748d21e1072",
+    "size": 5102,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/setup.py_consolidated"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/categorize_html.py",
+    "name": "categorize_html.py",
+    "hash": "35b034744cc65d86b4def58da2572bed",
+    "size": 8481,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/test_google_gallery_logic.py",
+    "name": "test_google_gallery_logic.py",
+    "hash": "810152395afee187db37a3b209e3bdbc",
+    "size": 5461,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/testFonts.py",
+    "name": "testFonts.py",
+    "hash": "944767ab6289a3a4f0f61d520cd3a88d",
+    "size": 9849,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/VideoEdit.py",
+    "name": "VideoEdit.py",
+    "hash": "a78451cbad5023f3847903a258cca643",
+    "size": 8604,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/show.py",
+    "name": "show.py",
+    "hash": "52f696717c25a07c58fbabb751ae1cfa",
+    "size": 11070,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/run.py",
+    "name": "run.py",
+    "hash": "8697875314a429fcc027c828d43c7bc5",
+    "size": 7643,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/onedrive_gallery_logic 2.py",
+    "name": "onedrive_gallery_logic 2.py",
+    "hash": "b6c5a35826c8e1ea6bf64b66d1e8c3ac",
+    "size": 11836,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/media.py",
+    "name": "media.py",
+    "hash": "327eaf31dd2aea4c5ac40e814135f968",
+    "size": 16961,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/MetadataHandler.py",
+    "name": "MetadataHandler.py",
+    "hash": "cda8e5ba22daa821ee7ebaeba326ac67",
+    "size": 16773,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/impo.py",
+    "name": "impo.py",
+    "hash": "808d94121bb420c838f1f72f7da3ab8b",
+    "size": 8676,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/process_leonardo_20250102104751.py",
+    "name": "process_leonardo_20250102104751.py",
+    "hash": "5584e77d3c915a2b6e0943f247e986bf",
+    "size": 5979,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/polly_main.py",
+    "name": "polly_main.py",
+    "hash": "7a9d2a84c6661e5ce48ec71595bffb33",
+    "size": 7411,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/alphabet-html-gall.py",
+    "name": "alphabet-html-gall.py",
+    "hash": "7938e78f65c117ee937f07a92a1f98d1",
+    "size": 8852,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/contacts.py",
+    "name": "contacts.py",
+    "hash": "18abf08e9b274e71138cb5255487a8f7",
+    "size": 8041,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/gallery_init_20241204123524.py",
+    "name": "gallery_init_20241204123524.py",
+    "hash": "3649f3f0ef8d12b77c05a34ef1cbcaca",
+    "size": 16229,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/mklabels.py",
+    "name": "mklabels.py",
+    "hash": "a4549112047b6209c5e335d2a5c9065e",
+    "size": 5879,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/playlist_20221230180403.py",
+    "name": "playlist_20221230180403.py",
+    "hash": "1bdf76d72176db59f1232a8fe101ac5f",
+    "size": 12202,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/videogenerator.py",
+    "name": "videogenerator.py",
+    "hash": "c3f30fc4ac1f1b3a4be8b120d4095866",
+    "size": 12564,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/metadata.py",
+    "name": "metadata.py",
+    "hash": "16fee238ca253fa86a374d2ede0073c7",
+    "size": 5795,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/batch_upload.py",
+    "name": "batch_upload.py",
+    "hash": "856ecf0022d1af575ffb4a24afd736c5",
+    "size": 7443,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/gallery_init_20241204123444.py",
+    "name": "gallery_init_20241204123444.py",
+    "hash": "53dd47fed89084d5df1ba019cf315abf",
+    "size": 16225,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/analyzer 1.py",
+    "name": "analyzer 1.py",
+    "hash": "e3e71c8d9e3c0ba364c1755dfc80b75a",
+    "size": 40069,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/metadata_editable.py",
+    "name": "metadata_editable.py",
+    "hash": "e04e3cc295a70f136e06c239474da0de",
+    "size": 5834,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/generate_album_pages.py",
+    "name": "generate_album_pages.py",
+    "hash": "98beaac86af518f082ce1bbfe8282f25",
+    "size": 6787,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/sort.py",
+    "name": "sort.py",
+    "hash": "f129954cd66684cc9e9e73c707ccfcc9",
+    "size": 11688,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/lazy 2.py",
+    "name": "lazy 2.py",
+    "hash": "e10698eae66f907ff4636628efe1d346",
+    "size": 12107,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/base_gallery_logic.py",
+    "name": "base_gallery_logic.py",
+    "hash": "6fc955eb0004e64409637adcefa259e9",
+    "size": 10011,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/oshelper.py",
+    "name": "oshelper.py",
+    "hash": "acda416cf15c83ba31ba713c8e0cbf6a",
+    "size": 9679,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/process_leonardo_20250102110149.py",
+    "name": "process_leonardo_20250102110149.py",
+    "hash": "5584e77d3c915a2b6e0943f247e986bf",
+    "size": 5979,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/clipEditor.py",
+    "name": "clipEditor.py",
+    "hash": "b4e42cd982d89b90edfc868522fb42e6",
+    "size": 14644,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/conf.py",
+    "name": "conf.py",
+    "hash": "ab2c6c92af9a60454ef5c8a25fd1855f",
+    "size": 9333,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/database.py",
+    "name": "database.py",
+    "hash": "a85d120f53c6f31c6eeb0b0e4036736d",
+    "size": 11249,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/client.py",
+    "name": "client.py",
+    "hash": "6cd928f798638f8d976c97308e3294d7",
+    "size": 15956,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/process_leonardo.py",
+    "name": "process_leonardo.py",
+    "hash": "447fcdf0387a715a8d057d0ef68e32cc",
+    "size": 10511,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/toc-merge.py",
+    "name": "toc-merge.py",
+    "hash": "a5c4a2f2d954c12ca1585dbd49434a55",
+    "size": 8377,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/keywords.py",
+    "name": "keywords.py",
+    "hash": "e75df8237f4fe10ab7e9445f97b30a0b",
+    "size": 5804,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/prompt_templates.py",
+    "name": "prompt_templates.py",
+    "hash": "2cdf4658bd392cb93cc21306456c1fe1",
+    "size": 8927,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/backup-clone-move.py",
+    "name": "backup-clone-move.py",
+    "hash": "4ac9e0521fa8400a89f290b81311e19c",
+    "size": 4312,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/duplicate-appscript.py",
+    "name": "duplicate-appscript.py",
+    "hash": "52588eb4bcddd7d3b602c243ba214adb",
+    "size": 6989,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/retriever.py",
+    "name": "retriever.py",
+    "hash": "8678178cdc28f309369b9a8f87c9503e",
+    "size": 10163,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/2025-vid.py",
+    "name": "2025-vid.py",
+    "hash": "f5f24e63c2dfa3376e73c715f7ca051d",
+    "size": 12704,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/test_onedrive_gallery_logic.py",
+    "name": "test_onedrive_gallery_logic.py",
+    "hash": "6eb5e26782904fbda9f175541b765b33",
+    "size": 5222,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/thumbnail.py",
+    "name": "thumbnail.py",
+    "hash": "22bf942095b10ad01982e44d22bbc83b",
+    "size": 7982,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/pydoc.py",
+    "name": "pydoc.py",
+    "hash": "aa3559f833a6d7866a3158a793549ada",
+    "size": 4913,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/docs.py",
+    "name": "docs.py",
+    "hash": "31b666ae7a04fb16668eb84a649f5bcd",
+    "size": 11913,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/other.py",
+    "name": "other.py",
+    "hash": "14dfcbe0962f543573294429b0c721a0",
+    "size": 12775,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/archives.py",
+    "name": "archives.py",
+    "hash": "9d4c1c2f3e61936f581efcf8a2af7174",
+    "size": 6902,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/video_text_test.py",
+    "name": "video_text_test.py",
+    "hash": "4e651ab392a67738d424bd40ddf222af",
+    "size": 5168,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/playlist_20221230180809.py",
+    "name": "playlist_20221230180809.py",
+    "hash": "1bdf76d72176db59f1232a8fe101ac5f",
+    "size": 12202,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/process_leonardo_20250102110441.py",
+    "name": "process_leonardo_20250102110441.py",
+    "hash": "447fcdf0387a715a8d057d0ef68e32cc",
+    "size": 10511,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/generate_album_pages 2.py",
+    "name": "generate_album_pages 2.py",
+    "hash": "94c12b200e4bae7fbd1b93d8d840a6c8",
+    "size": 6715,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/gallery_init.py",
+    "name": "gallery_init.py",
+    "hash": "014c9dca34b5effab2cbd24bd3f24ffc",
+    "size": 16221,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/img.py",
+    "name": "img.py",
+    "hash": "c0d2b130b47ee8ff864223476d5c788a",
+    "size": 12449,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/process_leonardo_20250102110258.py",
+    "name": "process_leonardo_20250102110258.py",
+    "hash": "7d4b42b3b66656b3835a9144936ec05b",
+    "size": 10519,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/pics.py",
+    "name": "pics.py",
+    "hash": "9aab1bd97d80dced39d7ec6666078d93",
+    "size": 12007,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/generate_songs_csv 1.py",
+    "name": "generate_songs_csv 1.py",
+    "hash": "c1df0a32e595841d520fcf19d5a9eee3",
+    "size": 6699,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/voice.py",
+    "name": "voice.py",
+    "hash": "b0d604f12b3cdc0900875bb2fbf8ee58",
+    "size": 5636,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/command_context.py",
+    "name": "command_context.py",
+    "hash": "4d2b3a4845bc480d60cb95a02d2f1f24",
+    "size": 6096,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/jobs.py",
+    "name": "jobs.py",
+    "hash": "8cb4c5c9591a26870a48c55aa8015918",
+    "size": 16884,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/vids.py",
+    "name": "vids.py",
+    "hash": "f0bb2e41eded0f8b2d2a08233255385e",
+    "size": 13170,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/TextToSpeech.py",
+    "name": "TextToSpeech.py",
+    "hash": "3bd953002fcae2931d58c33eabb5bb95",
+    "size": 7520,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/img 2.py",
+    "name": "img 2.py",
+    "hash": "c0d2b130b47ee8ff864223476d5c788a",
+    "size": 12449,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/spinners.py",
+    "name": "spinners.py",
+    "hash": "7e275f7838fe224f9a1dec3991298cd7",
+    "size": 13066,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/autocompletion.py",
+    "name": "autocompletion.py",
+    "hash": "ef62840767b8230c64e96d5b68ad5c9d",
+    "size": 11520,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/contact-sheet.py",
+    "name": "contact-sheet.py",
+    "hash": "e4484f61ee3b8dd1adfb2dc358f4dff5",
+    "size": 7151,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/setuptools_build.py",
+    "name": "setuptools_build.py",
+    "hash": "3e0c52121c9e834daf43f36bedaafc21",
+    "size": 10276,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/pydoc_20250504224712.py",
+    "name": "pydoc_20250504224712.py",
+    "hash": "aa3559f833a6d7866a3158a793549ada",
+    "size": 4913,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/process_leonardo_20250102110442.py",
+    "name": "process_leonardo_20250102110442.py",
+    "hash": "447fcdf0387a715a8d057d0ef68e32cc",
+    "size": 10511,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/reranking.py",
+    "name": "reranking.py",
+    "hash": "54a0f9c8e8a53fcf75363709712bb141",
+    "size": 6272,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/generate_album_pages 1.py",
+    "name": "generate_album_pages 1.py",
+    "hash": "98beaac86af518f082ce1bbfe8282f25",
+    "size": 6787,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/google_gallery_logic.py",
+    "name": "google_gallery_logic.py",
+    "hash": "16a46e550f277553cfc191e9a626e783",
+    "size": 11205,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/MakeCompilation.py",
+    "name": "MakeCompilation.py",
+    "hash": "005cfad65f00f1b5b65105f8e46d9ade",
+    "size": 8580,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/playlist.py",
+    "name": "playlist.py",
+    "hash": "152e9576ec700012dff4291b03e2cd9d",
+    "size": 12229,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/conda_optimizer.py",
+    "name": "conda_optimizer.py",
+    "hash": "9ad1cfac710c31edc0255ccf00a4e3d9",
+    "size": 16226,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/lazy 1.py",
+    "name": "lazy 1.py",
+    "hash": "e10698eae66f907ff4636628efe1d346",
+    "size": 12107,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/generate_album-pages.py",
+    "name": "generate_album-pages.py",
+    "hash": "98beaac86af518f082ce1bbfe8282f25",
+    "size": 6787,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/regexopt.py",
+    "name": "regexopt.py",
+    "hash": "8234f4ca6e1740ab699958e8f45a7bee",
+    "size": 10556,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/api_login.py",
+    "name": "api_login.py",
+    "hash": "cc1c55c8536371f6df196f55e23766da",
+    "size": 28946,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/app.py",
+    "name": "app.py",
+    "hash": "09022837bec089d7c59b497f0fdcc83b",
+    "size": 12797,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/freeze.py",
+    "name": "freeze.py",
+    "hash": "311b7f3653d8134ce085f37de5381e13",
+    "size": 9065,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/sora-song.py",
+    "name": "sora-song.py",
+    "hash": "8dee8e2824471517eb2cc68a76f10eea",
+    "size": 9291,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/file_utils.py",
+    "name": "file_utils.py",
+    "hash": "ed026049bf217c5f427bb4f7936b15aa",
+    "size": 5615,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/img-origin-date.py",
+    "name": "img-origin-date.py",
+    "hash": "678ed286442feff2495b45c5c3c7325a",
+    "size": 9083,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/docs2.py",
+    "name": "docs2.py",
+    "hash": "bcda23be24d42cf63e4cc7430d921e94",
+    "size": 13700,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/audio.py",
+    "name": "audio.py",
+    "hash": "7efd88d509c4593eaedba100dc18b2bf",
+    "size": 12977,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/generate_prompts.py",
+    "name": "generate_prompts.py",
+    "hash": "19dcd83a70f33bd7c166c6a54d2994d1",
+    "size": 13988,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/input_handler.py",
+    "name": "input_handler.py",
+    "hash": "49cee23e51ad3cb61a82eb869a683a19",
+    "size": 12588,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/gallery_init_20241204123453.py",
+    "name": "gallery_init_20241204123453.py",
+    "hash": "4510e7b861e14a5c214e74709b922cdd",
+    "size": 16235,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/ansi.py",
+    "name": "ansi.py",
+    "hash": "6e88088edb9f17b4202639cf6f9c60d5",
+    "size": 9996,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/contact-sheet2.py",
+    "name": "contact-sheet2.py",
+    "hash": "808d94121bb420c838f1f72f7da3ab8b",
+    "size": 8676,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/website.py",
+    "name": "website.py",
+    "hash": "4125adddd408118936f995d94771e1f4",
+    "size": 14314,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/tocpdf.py",
+    "name": "tocpdf.py",
+    "hash": "5e8a30475675985c4854d3c1f426e830",
+    "size": 6458,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/progress_bars.py",
+    "name": "progress_bars.py",
+    "hash": "f313c66097b67ab720b06fd8d0804ba7",
+    "size": 7819,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/dallecsv.py",
+    "name": "dallecsv.py",
+    "hash": "e4a03a543f0a2839d5cab4eaeb2ea2c0",
+    "size": 5382,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/onedrive_gallery_logic.py",
+    "name": "onedrive_gallery_logic.py",
+    "hash": "323df17dfcb362c96989e76303346922",
+    "size": 11661,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/lazy.py",
+    "name": "lazy.py",
+    "hash": "e10698eae66f907ff4636628efe1d346",
+    "size": 12107,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/compatibility_tags.py",
+    "name": "compatibility_tags.py",
+    "hash": "66241c48c9f763c9a4028588ad468f05",
+    "size": 13007,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/test_file_gallery_logic.py",
+    "name": "test_file_gallery_logic.py",
+    "hash": "d4b17ed62e036a81b86841115dfc136e",
+    "size": 7733,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/files_gallery_logic.py",
+    "name": "files_gallery_logic.py",
+    "hash": "bf07d2e5983205be233133cce3172957",
+    "size": 12605,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/metadata_legacy.py",
+    "name": "metadata_legacy.py",
+    "hash": "680043a5d4eb2a8f718978bf166fd1b7",
+    "size": 6684,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/pipgen.py",
+    "name": "pipgen.py",
+    "hash": "c89eee670119e89546ec31a0b3636e5a",
+    "size": 4688,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/test_gallery_build.py",
+    "name": "test_gallery_build.py",
+    "hash": "7a5768aea922837db716ccf31633bdb2",
+    "size": 8795,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/gallery_init_20241204123258.py",
+    "name": "gallery_init_20241204123258.py",
+    "hash": "9b0f4174dea108492008ac8b6eac35a7",
+    "size": 16215,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/helpers.py",
+    "name": "helpers.py",
+    "hash": "8da5926edab7262560d92e06ee08aee9",
+    "size": 8849,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/csv-html-gen.py",
+    "name": "csv-html-gen.py",
+    "hash": "b048ff726c867814711e18a6482ae93f",
+    "size": 16363,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/job-template.py",
+    "name": "job-template.py",
+    "hash": "ac60a722f9dd8b45353979f7d852b528",
+    "size": 11977,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/alphabet.py",
+    "name": "alphabet.py",
+    "hash": "7938e78f65c117ee937f07a92a1f98d1",
+    "size": 8852,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/dupes.py",
+    "name": "dupes.py",
+    "hash": "26940dc1d3304204699b9f55b8639191",
+    "size": 11318,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/base.py",
+    "name": "base.py",
+    "hash": "e4af617bddb1ccfb49126945c43435dc",
+    "size": 7305,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/gallery_build.py",
+    "name": "gallery_build.py",
+    "hash": "17d47de38e3cfd5ed94b231f16e99f60",
+    "size": 10597,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/img (1).py",
+    "name": "img (1).py",
+    "hash": "c0d2b130b47ee8ff864223476d5c788a",
+    "size": 12449,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/gallery_init_20241204120021.py",
+    "name": "gallery_init_20241204120021.py",
+    "hash": "014c9dca34b5effab2cbd24bd3f24ffc",
+    "size": 16221,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/tag.py",
+    "name": "tag.py",
+    "hash": "7ae54ec1e1de5bc3eedf8d1931f7e2ab",
+    "size": 10926,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/glibc.py",
+    "name": "glibc.py",
+    "hash": "a2c60e15ee188730513137747e9e8cae",
+    "size": 7963,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/pydoc_20250506195920.py",
+    "name": "pydoc_20250506195920.py",
+    "hash": "0d544db001fc1eef1d65a408cfd3d86a",
+    "size": 4918,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/generate_album_html-pages.py",
+    "name": "generate_album_html-pages.py",
+    "hash": "e6f3c2eeadc45d47b9fa028c01351abe",
+    "size": 8495,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/build_tracker.py",
+    "name": "build_tracker.py",
+    "hash": "53339bc217794593c3fd0c65e0dcbfc6",
+    "size": 12387,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/filtercreator.py",
+    "name": "filtercreator.py",
+    "hash": "b89b17a490b744e3c97f547da81d80db",
+    "size": 12710,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/img-prompt.py",
+    "name": "img-prompt.py",
+    "hash": "1baac315510e2c8b0f20930a54184ad2",
+    "size": 12018,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/create_photo_grid.py",
+    "name": "create_photo_grid.py",
+    "hash": "c09239db37b08322225f88f1e381ed87",
+    "size": 8450,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation/ClipCompilationCreator.py",
+    "name": "ClipCompilationCreator.py",
+    "hash": "9864d79b7ea2f59e80d119615cf1a5bd",
+    "size": 12616,
+    "parent": "/Volumes/2T-Xx/Documents/01_core_ai_analysis/ai_generation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/05_audio_video/improved_audio_transcriber.py",
+    "name": "improved_audio_transcriber.py",
+    "hash": "827b38c7711df9db58b9450344338134",
+    "size": 25411,
+    "parent": "/Volumes/2T-Xx/Documents/05_audio_video"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/imgmove.py",
+    "name": "imgmove.py",
+    "hash": "5d666612db7969d3b3ee799c39d25f44",
+    "size": 6806,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/up-down-old.py",
+    "name": "up-down-old.py",
+    "hash": "e8f2acad6eb84b0325a13b68a80d3fbc",
+    "size": 9771,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/organize (1).py",
+    "name": "organize (1).py",
+    "hash": "1603fcaedaa5dbd4528745d071356dde",
+    "size": 5355,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/169-11.py",
+    "name": "169-11.py",
+    "hash": "e5ce9e34d342143a38284ff7f9c7a214",
+    "size": 6226,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/youtube_dl_button.py",
+    "name": "youtube_dl_button.py",
+    "hash": "9b02e1394382d9c0d040ada60af5dcba",
+    "size": 20790,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/leonardo_script 2.py",
+    "name": "leonardo_script 2.py",
+    "hash": "ec91560554701d573c78a8470a4c5859",
+    "size": 11851,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/midj--.py",
+    "name": "midj--.py",
+    "hash": "8a070e903123d8ee41b57ccbfc789667",
+    "size": 5115,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/convert-loop.py",
+    "name": "convert-loop.py",
+    "hash": "d3ae372c07a458322ad508288314c252",
+    "size": 11701,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/generate_album_html-pages_fixed 2.py",
+    "name": "generate_album_html-pages_fixed 2.py",
+    "hash": "a59cc76ba09d1be45e078364b8d8c451",
+    "size": 9160,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/remove.py",
+    "name": "remove.py",
+    "hash": "af8777870f7b391ab836cdfb06988588",
+    "size": 5303,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/organize_albums 6.py",
+    "name": "organize_albums 6.py",
+    "hash": "462efae5357c27162a12368972619d5c",
+    "size": 6724,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/mp3-mp4-coverimg.py",
+    "name": "mp3-mp4-coverimg.py",
+    "hash": "ddcc1a58a6bc7e9ae9a782a6acfe7e05",
+    "size": 6783,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/BeautifulSoup.py",
+    "name": "BeautifulSoup.py",
+    "hash": "62cc3c444ffc1651e80723f811bd0b20",
+    "size": 85984,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/imgconvert copy.py",
+    "name": "imgconvert copy.py",
+    "hash": "8362fe22d5dd55a0b29a2f82285f5b5e",
+    "size": 6874,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/imgg-test.py",
+    "name": "imgg-test.py",
+    "hash": "cf63aeeaa020c09ab82aa624b64d4d92",
+    "size": 6086,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/cb_buttons.py",
+    "name": "cb_buttons.py",
+    "hash": "510fba468e45bdc794b739cde2aaa338",
+    "size": 10526,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/get_gifs.py",
+    "name": "get_gifs.py",
+    "hash": "5ae1dba06551423d0467329ad361685e",
+    "size": 8537,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/leodown_20250102105149.py",
+    "name": "leodown_20250102105149.py",
+    "hash": "1079f7c2dc6ff14cfeb7bad71ae86b38",
+    "size": 7255,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/download_photos_by_hashtag.py",
+    "name": "download_photos_by_hashtag.py",
+    "hash": "7e680dceec11dc0a98fccde8ed1ea150",
+    "size": 5110,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/leodown_20250102111110.py",
+    "name": "leodown_20250102111110.py",
+    "hash": "95017cbb6a86c9859566cacbd815a224",
+    "size": 7253,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/loop-upscale copy 2.py",
+    "name": "loop-upscale copy 2.py",
+    "hash": "8749cffa4613abdae9462c59234e8db1",
+    "size": 8360,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/imgconvert_colab copy.py",
+    "name": "imgconvert_colab copy.py",
+    "hash": "8362fe22d5dd55a0b29a2f82285f5b5e",
+    "size": 6874,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/upscaled.py",
+    "name": "upscaled.py",
+    "hash": "7e473a3703534c696ac19d53bf4f3f8b",
+    "size": 13622,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools/save_urls_to_csv.py",
+    "name": "save_urls_to_csv.py",
+    "hash": "2188c39fbd73aaa4069ee161a27a887d",
+    "size": 8312,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/image_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/audio_tools/ffmpegdl.py",
+    "name": "ffmpegdl.py",
+    "hash": "f5800f1ef6e7c50e61c429d64c23e2ce",
+    "size": 10615,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/audio_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools/sponsoredlinks.py",
+    "name": "sponsoredlinks.py",
+    "hash": "67292eedfad16c88bbc855f601268660",
+    "size": 12895,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools/botStories.py",
+    "name": "botStories.py",
+    "hash": "ce629db1fc67f3fe03a306b13652b501",
+    "size": 10408,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools/NewUpload_20250607131212.py",
+    "name": "NewUpload_20250607131212.py",
+    "hash": "9452a8f90a5a6112d03d40358c6a26d4",
+    "size": 7564,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools/NewUpload_20250607131143.py",
+    "name": "NewUpload_20250607131143.py",
+    "hash": "d4b9b242e350c79c4d6fab9346820bbd",
+    "size": 8250,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools/ytube.py",
+    "name": "ytube.py",
+    "hash": "e568f0d26064a655e50e1efdc87540d3",
+    "size": 7654,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools/download_user_videos.py",
+    "name": "download_user_videos.py",
+    "hash": "13db26ec538070d61b6cb052a9f53249",
+    "size": 5658,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools/videos.py",
+    "name": "videos.py",
+    "hash": "81797f8bebed76c5054c4d866d6a006f",
+    "size": 6651,
+    "parent": "/Volumes/2T-Xx/Documents/02_media_processing/video_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/setup_periodic_monitoring.py",
+    "name": "setup_periodic_monitoring.py",
+    "hash": "50b714e2f3318ce615f36f45e0cb6b96",
+    "size": 8389,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/comprehensive_codebase_analyzer.py",
+    "name": "comprehensive_codebase_analyzer.py",
+    "hash": "ed00cabb2e3c7d8623489052d9d4d71a",
+    "size": 25190,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/quality_tools/batch_progress_monitor.py",
+    "name": "batch_progress_monitor.py",
+    "hash": "0f5386de790b45ba49c8071db50bc073",
+    "size": 18054,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/quality_tools"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/testing_framework/isatty_test.py",
+    "name": "isatty_test.py",
+    "hash": "53f8b365c6fc878ed7ca740c1d6d2dec",
+    "size": 8901,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/testing_framework"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/testing_framework/winterm_test.py",
+    "name": "winterm_test.py",
+    "hash": "494af012850d9e5f3ed74e70e3ac56c3",
+    "size": 8913,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/testing_framework"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities/config_20250329125101.py",
+    "name": "config_20250329125101.py",
+    "hash": "f46f71fbd299aeb93fd1b0ca73653d20",
+    "size": 4522,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities/__init__.py",
+    "name": "__init__.py",
+    "hash": "80929903a6728f22517a3efaab2f8351",
+    "size": 4488,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities/config 5.py",
+    "name": "config 5.py",
+    "hash": "f46f71fbd299aeb93fd1b0ca73653d20",
+    "size": 4522,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities/bot.py",
+    "name": "bot.py",
+    "hash": "600693891fc4cd92f240e478fe89474e",
+    "size": 8586,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities/plugin.py",
+    "name": "plugin.py",
+    "hash": "5c2f7985e504a14e4ca410552689cb4a",
+    "size": 7626,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities/base.py",
+    "name": "base.py",
+    "hash": "569192fdcc409b372982b9cbc42a3de5",
+    "size": 5240,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities/colors.py",
+    "name": "colors.py",
+    "hash": "973e9a202dba668d8325fffbc9dd8358",
+    "size": 11488,
+    "parent": "/Volumes/2T-Xx/Documents/06_development_tools/development_utilities"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/03_automation_platforms/api_integrations/like_timeline_feed.py",
+    "name": "like_timeline_feed.py",
+    "hash": "c327c110aa50e8d6811dd27add75c0ce",
+    "size": 4708,
+    "parent": "/Volumes/2T-Xx/Documents/03_automation_platforms/api_integrations"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/03_automation_platforms/api_integrations/like_and_follow_your_last_media_likers.py",
+    "name": "like_and_follow_your_last_media_likers.py",
+    "hash": "0005a5afaf87233a7d74b3f1f7ad5ad7",
+    "size": 6172,
+    "parent": "/Volumes/2T-Xx/Documents/03_automation_platforms/api_integrations"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/03_automation_platforms/api_integrations/save_unfollowers_into_file.py",
+    "name": "save_unfollowers_into_file.py",
+    "hash": "8ac1500a02c29f969fd4c68ef86d344a",
+    "size": 5293,
+    "parent": "/Volumes/2T-Xx/Documents/03_automation_platforms/api_integrations"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/03_automation_platforms/api_integrations/comment_hashtags.py",
+    "name": "comment_hashtags.py",
+    "hash": "35bc6afc1a011f85bab967472b6a0db5",
+    "size": 5211,
+    "parent": "/Volumes/2T-Xx/Documents/03_automation_platforms/api_integrations"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/03_automation_platforms/social_media_automation/scrape100.py",
+    "name": "scrape100.py",
+    "hash": "3216487d2b8b98cd83c9ea99851f162d",
+    "size": 6168,
+    "parent": "/Volumes/2T-Xx/Documents/03_automation_platforms/social_media_automation"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/05_data_management/file_organization/installation_report.py",
+    "name": "installation_report.py",
+    "hash": "75165a4a174fafb71f6dbb3282bd2c7e",
+    "size": 8640,
+    "parent": "/Volumes/2T-Xx/Documents/05_data_management/file_organization"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/00_shared_libraries/batch_quality_improver.py",
+    "name": "batch_quality_improver.py",
+    "hash": "acc2315203742345e15bfca4e316ef0b",
+    "size": 33902,
+    "parent": "/Volumes/2T-Xx/Documents/00_shared_libraries"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Documents/00_shared_libraries/coding_standards.py",
+    "name": "coding_standards.py",
+    "hash": "372eec5ee8c3ccbbe93a246d8c38c2db",
+    "size": 19116,
+    "parent": "/Volumes/2T-Xx/Documents/00_shared_libraries"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/tts-doc.py",
+    "name": "tts-doc.py",
+    "hash": "59c847674a1222720fda4bc5f078023f",
+    "size": 7712,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/content_aware_analyzer 4.py",
+    "name": "content_aware_analyzer 4.py",
+    "hash": "e0a3f6a4f22cbe586b04e87f2803b0c4",
+    "size": 28372,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/direct_content_analyzer 4.py",
+    "name": "direct_content_analyzer 4.py",
+    "hash": "2d57c7ca90e34c3bc6ade525d6081484",
+    "size": 26192,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/deep_read_organizer 3.py",
+    "name": "deep_read_organizer 3.py",
+    "hash": "5688cbc17d50ee83e65b62b5ab3b468b",
+    "size": 16244,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/deep_read_organizer 2.py",
+    "name": "deep_read_organizer 2.py",
+    "hash": "5688cbc17d50ee83e65b62b5ab3b468b",
+    "size": 16244,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/get-pip.py",
+    "name": "get-pip.py",
+    "hash": "0fe38e2d1c7bf50af3dbd286d12561cd",
+    "size": 2635856,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/PY_02_media_processing_image_tools_get-pip.py",
+    "name": "PY_02_media_processing_image_tools_get-pip.py",
+    "hash": "c7fb156b11e866c265d7f437bcd2503d",
+    "size": 2635834,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/fixed_chat_organizer 4.py",
+    "name": "fixed_chat_organizer 4.py",
+    "hash": "ee8a07818c09d77762d8af9a8a217e23",
+    "size": 23194,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/simple_deep_reader 3.py",
+    "name": "simple_deep_reader 3.py",
+    "hash": "7a8d8173a8f82e68a29c628af6126d76",
+    "size": 16150,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/batched_content_analyzer 4.py",
+    "name": "batched_content_analyzer 4.py",
+    "hash": "03609fb34b831bc69a8e69920836a923",
+    "size": 21124,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/comprehensive_chat_organizer 2.py",
+    "name": "comprehensive_chat_organizer 2.py",
+    "hash": "a1e7bd9cf8db20ea42f5124880f1bdfc",
+    "size": 22106,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/get-pip 2.py",
+    "name": "get-pip 2.py",
+    "hash": "0fe38e2d1c7bf50af3dbd286d12561cd",
+    "size": 2635856,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/enhanced_content_analyzer 4.py",
+    "name": "enhanced_content_analyzer 4.py",
+    "hash": "20da1f3c74cc70cd8207268b25aff332",
+    "size": 37559,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/enhanced_content_analyzer_v2.py",
+    "name": "enhanced_content_analyzer_v2.py",
+    "hash": "86dc1b611584c568588aec2c52a4f72e",
+    "size": 48689,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/file_analyzer 4.py",
+    "name": "file_analyzer 4.py",
+    "hash": "640847dc8b8fa58255b15418a2b98e4d",
+    "size": 14203,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/simple_deep_reader 2.py",
+    "name": "simple_deep_reader 2.py",
+    "hash": "7a8d8173a8f82e68a29c628af6126d76",
+    "size": 16150,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/comprehensive_chat_organizer 3.py",
+    "name": "comprehensive_chat_organizer 3.py",
+    "hash": "a1e7bd9cf8db20ea42f5124880f1bdfc",
+    "size": 22106,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/batched_content_analyzer 2.py",
+    "name": "batched_content_analyzer 2.py",
+    "hash": "03609fb34b831bc69a8e69920836a923",
+    "size": 21124,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/file_analyzer 3.py",
+    "name": "file_analyzer 3.py",
+    "hash": "640847dc8b8fa58255b15418a2b98e4d",
+    "size": 14203,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/content_aware_analyzer.py",
+    "name": "content_aware_analyzer.py",
+    "hash": "e0a3f6a4f22cbe586b04e87f2803b0c4",
+    "size": 28372,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/download_etsy_images.py",
+    "name": "download_etsy_images.py",
+    "hash": "49f8064cec4b642463dbecc99c24d23d",
+    "size": 2953,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/comprehensive_chat_organizer 4.py",
+    "name": "comprehensive_chat_organizer 4.py",
+    "hash": "a1e7bd9cf8db20ea42f5124880f1bdfc",
+    "size": 22106,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/direct_content_analyzer.py",
+    "name": "direct_content_analyzer.py",
+    "hash": "2d57c7ca90e34c3bc6ade525d6081484",
+    "size": 26192,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/enhanced_content_analyzer 3.py",
+    "name": "enhanced_content_analyzer 3.py",
+    "hash": "20da1f3c74cc70cd8207268b25aff332",
+    "size": 37559,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/enhanced_content_analyzer_v2 2.py",
+    "name": "enhanced_content_analyzer_v2 2.py",
+    "hash": "86dc1b611584c568588aec2c52a4f72e",
+    "size": 48689,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/file_analyzer.py",
+    "name": "file_analyzer.py",
+    "hash": "640847dc8b8fa58255b15418a2b98e4d",
+    "size": 14203,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/enhanced_content_analyzer 2.py",
+    "name": "enhanced_content_analyzer 2.py",
+    "hash": "20da1f3c74cc70cd8207268b25aff332",
+    "size": 37559,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/simple_deep_reader 4.py",
+    "name": "simple_deep_reader 4.py",
+    "hash": "7a8d8173a8f82e68a29c628af6126d76",
+    "size": 16150,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/batched_content_analyzer 3.py",
+    "name": "batched_content_analyzer 3.py",
+    "hash": "03609fb34b831bc69a8e69920836a923",
+    "size": 21124,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/file_analyzer 2.py",
+    "name": "file_analyzer 2.py",
+    "hash": "640847dc8b8fa58255b15418a2b98e4d",
+    "size": 14203,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/PY_01_core_ai_analysis_data_processing_download_etsy_images.py",
+    "name": "PY_01_core_ai_analysis_data_processing_download_etsy_images.py",
+    "hash": "49f8064cec4b642463dbecc99c24d23d",
+    "size": 2953,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/comprehensive_chat_organizer.py",
+    "name": "comprehensive_chat_organizer.py",
+    "hash": "a1e7bd9cf8db20ea42f5124880f1bdfc",
+    "size": 22106,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/enhanced_content_analyzer.py",
+    "name": "enhanced_content_analyzer.py",
+    "hash": "20da1f3c74cc70cd8207268b25aff332",
+    "size": 37559,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/fixed_chat_organizer.py",
+    "name": "fixed_chat_organizer.py",
+    "hash": "ee8a07818c09d77762d8af9a8a217e23",
+    "size": 23194,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/fixed_chat_organizer 3.py",
+    "name": "fixed_chat_organizer 3.py",
+    "hash": "ee8a07818c09d77762d8af9a8a217e23",
+    "size": 23194,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/deep_read_organizer.py",
+    "name": "deep_read_organizer.py",
+    "hash": "5688cbc17d50ee83e65b62b5ab3b468b",
+    "size": 16244,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/batched_content_analyzer.py",
+    "name": "batched_content_analyzer.py",
+    "hash": "03609fb34b831bc69a8e69920836a923",
+    "size": 21124,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/content_aware_analyzer 2.py",
+    "name": "content_aware_analyzer 2.py",
+    "hash": "e0a3f6a4f22cbe586b04e87f2803b0c4",
+    "size": 28372,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/direct_content_analyzer 2.py",
+    "name": "direct_content_analyzer 2.py",
+    "hash": "2d57c7ca90e34c3bc6ade525d6081484",
+    "size": 26192,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/enhanced_image_pipeline.py",
+    "name": "enhanced_image_pipeline.py",
+    "hash": "4357b1cbf6d3ed1a17986672188c5597",
+    "size": 51574,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/deep_read_organizer 4.py",
+    "name": "deep_read_organizer 4.py",
+    "hash": "5688cbc17d50ee83e65b62b5ab3b468b",
+    "size": 16244,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/direct_content_analyzer 3.py",
+    "name": "direct_content_analyzer 3.py",
+    "hash": "2d57c7ca90e34c3bc6ade525d6081484",
+    "size": 26192,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/PY_01_core_ai_analysis_transcription_tts-doc.py",
+    "name": "PY_01_core_ai_analysis_transcription_tts-doc.py",
+    "hash": "59c847674a1222720fda4bc5f078023f",
+    "size": 7712,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/simple_deep_reader.py",
+    "name": "simple_deep_reader.py",
+    "hash": "7a8d8173a8f82e68a29c628af6126d76",
+    "size": 16150,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/PY_01_core_ai_analysis_transcription_enhanced_image_pipeline.py",
+    "name": "PY_01_core_ai_analysis_transcription_enhanced_image_pipeline.py",
+    "hash": "4357b1cbf6d3ed1a17986672188c5597",
+    "size": 51574,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/fixed_chat_organizer 2.py",
+    "name": "fixed_chat_organizer 2.py",
+    "hash": "ee8a07818c09d77762d8af9a8a217e23",
+    "size": 23194,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/content_aware_analyzer 3.py",
+    "name": "content_aware_analyzer 3.py",
+    "hash": "e0a3f6a4f22cbe586b04e87f2803b0c4",
+    "size": 28372,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/enhanced_content_analyzer_v2.py",
+    "name": "enhanced_content_analyzer_v2.py",
+    "hash": "86dc1b611584c568588aec2c52a4f72e",
+    "size": 48689,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/content_aware_analyzer.py",
+    "name": "content_aware_analyzer.py",
+    "hash": "e0a3f6a4f22cbe586b04e87f2803b0c4",
+    "size": 28372,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/direct_content_analyzer.py",
+    "name": "direct_content_analyzer.py",
+    "hash": "2d57c7ca90e34c3bc6ade525d6081484",
+    "size": 26192,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/file_analyzer.py",
+    "name": "file_analyzer.py",
+    "hash": "640847dc8b8fa58255b15418a2b98e4d",
+    "size": 14203,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/comprehensive_chat_organizer.py",
+    "name": "comprehensive_chat_organizer.py",
+    "hash": "a1e7bd9cf8db20ea42f5124880f1bdfc",
+    "size": 22106,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/fixed_chat_organizer.py",
+    "name": "fixed_chat_organizer.py",
+    "hash": "ee8a07818c09d77762d8af9a8a217e23",
+    "size": 23194,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/deep_read_organizer.py",
+    "name": "deep_read_organizer.py",
+    "hash": "5688cbc17d50ee83e65b62b5ab3b468b",
+    "size": 16244,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/batched_content_analyzer.py",
+    "name": "batched_content_analyzer.py",
+    "hash": "03609fb34b831bc69a8e69920836a923",
+    "size": 21124,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/simple_deep_reader.py",
+    "name": "simple_deep_reader.py",
+    "hash": "7a8d8173a8f82e68a29c628af6126d76",
+    "size": 16150,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/content_aware_analyzer.py",
+    "name": "content_aware_analyzer.py",
+    "hash": "e0a3f6a4f22cbe586b04e87f2803b0c4",
+    "size": 28372,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/direct_content_analyzer.py",
+    "name": "direct_content_analyzer.py",
+    "hash": "2d57c7ca90e34c3bc6ade525d6081484",
+    "size": 26192,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/file_analyzer.py",
+    "name": "file_analyzer.py",
+    "hash": "640847dc8b8fa58255b15418a2b98e4d",
+    "size": 14203,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/comprehensive_chat_organizer.py",
+    "name": "comprehensive_chat_organizer.py",
+    "hash": "a1e7bd9cf8db20ea42f5124880f1bdfc",
+    "size": 22106,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/enhanced_content_analyzer.py",
+    "name": "enhanced_content_analyzer.py",
+    "hash": "20da1f3c74cc70cd8207268b25aff332",
+    "size": 37559,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/fixed_chat_organizer.py",
+    "name": "fixed_chat_organizer.py",
+    "hash": "ee8a07818c09d77762d8af9a8a217e23",
+    "size": 23194,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/deep_read_organizer.py",
+    "name": "deep_read_organizer.py",
+    "hash": "5688cbc17d50ee83e65b62b5ab3b468b",
+    "size": 16244,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/batched_content_analyzer.py",
+    "name": "batched_content_analyzer.py",
+    "hash": "03609fb34b831bc69a8e69920836a923",
+    "size": 21124,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/simple_deep_reader.py",
+    "name": "simple_deep_reader.py",
+    "hash": "7a8d8173a8f82e68a29c628af6126d76",
+    "size": 16150,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/content_aware_analyzer.py",
+    "name": "content_aware_analyzer.py",
+    "hash": "e0a3f6a4f22cbe586b04e87f2803b0c4",
+    "size": 28372,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/direct_content_analyzer.py",
+    "name": "direct_content_analyzer.py",
+    "hash": "2d57c7ca90e34c3bc6ade525d6081484",
+    "size": 26192,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/file_analyzer.py",
+    "name": "file_analyzer.py",
+    "hash": "640847dc8b8fa58255b15418a2b98e4d",
+    "size": 14203,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/comprehensive_chat_organizer.py",
+    "name": "comprehensive_chat_organizer.py",
+    "hash": "a1e7bd9cf8db20ea42f5124880f1bdfc",
+    "size": 22106,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/enhanced_content_analyzer.py",
+    "name": "enhanced_content_analyzer.py",
+    "hash": "20da1f3c74cc70cd8207268b25aff332",
+    "size": 37559,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/fixed_chat_organizer.py",
+    "name": "fixed_chat_organizer.py",
+    "hash": "ee8a07818c09d77762d8af9a8a217e23",
+    "size": 23194,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/deep_read_organizer.py",
+    "name": "deep_read_organizer.py",
+    "hash": "5688cbc17d50ee83e65b62b5ab3b468b",
+    "size": 16244,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/batched_content_analyzer.py",
+    "name": "batched_content_analyzer.py",
+    "hash": "03609fb34b831bc69a8e69920836a923",
+    "size": 21124,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python/simple_deep_reader.py",
+    "name": "simple_deep_reader.py",
+    "hash": "7a8d8173a8f82e68a29c628af6126d76",
+    "size": 16150,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/python"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/enhanced_content_analyzer_v2.py",
+    "name": "enhanced_content_analyzer_v2.py",
+    "hash": "86dc1b611584c568588aec2c52a4f72e",
+    "size": 48689,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/content_aware_analyzer.py",
+    "name": "content_aware_analyzer.py",
+    "hash": "e0a3f6a4f22cbe586b04e87f2803b0c4",
+    "size": 28372,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/direct_content_analyzer.py",
+    "name": "direct_content_analyzer.py",
+    "hash": "2d57c7ca90e34c3bc6ade525d6081484",
+    "size": 26192,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/file_analyzer.py",
+    "name": "file_analyzer.py",
+    "hash": "640847dc8b8fa58255b15418a2b98e4d",
+    "size": 14203,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/comprehensive_chat_organizer.py",
+    "name": "comprehensive_chat_organizer.py",
+    "hash": "a1e7bd9cf8db20ea42f5124880f1bdfc",
+    "size": 22106,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/enhanced_content_analyzer.py",
+    "name": "enhanced_content_analyzer.py",
+    "hash": "20da1f3c74cc70cd8207268b25aff332",
+    "size": 37559,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/fixed_chat_organizer.py",
+    "name": "fixed_chat_organizer.py",
+    "hash": "ee8a07818c09d77762d8af9a8a217e23",
+    "size": 23194,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/deep_read_organizer.py",
+    "name": "deep_read_organizer.py",
+    "hash": "5688cbc17d50ee83e65b62b5ab3b468b",
+    "size": 16244,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/batched_content_analyzer.py",
+    "name": "batched_content_analyzer.py",
+    "hash": "03609fb34b831bc69a8e69920836a923",
+    "size": 21124,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  },
+  {
+    "path": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview/simple_deep_reader.py",
+    "name": "simple_deep_reader.py",
+    "hash": "7a8d8173a8f82e68a29c628af6126d76",
+    "size": 16150,
+    "parent": "/Volumes/2T-Xx/Dr_Adu_GainesvillePFS_SEO_Project/Dr_Adu_GainesvillePFS_SEO_Project/01_Project_Management/01_Project_Overview"
+  }
+]

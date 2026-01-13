@@ -1,0 +1,9 @@
+streamlit
+streamlit_chat
+matplotlib
+plotly
+scipy
+pandas
+numpy
+pytube
+openai-whisper

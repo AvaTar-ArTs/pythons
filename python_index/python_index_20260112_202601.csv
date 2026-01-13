@@ -1,0 +1,4 @@
+filepath,filename,directory,relative_path,size_kb,line_count,has_transcript,has_analysis,transcript_path,analysis_path,status,needs_work
+/Users/steven/pythons/tools/devtools_development_utilities/config 3.py,config 3.py,/Users/steven/pythons/tools/devtools_development_utilities,tools/devtools_development_utilities/config 3.py,4.46,166,False,False,,,NEEDS_TRANSCRIPTION,True
+/Users/steven/pythons/tools/devtools_development_utilities/txt-csv (1).py,txt-csv (1).py,/Users/steven/pythons/tools/devtools_development_utilities,tools/devtools_development_utilities/txt-csv (1).py,5.31,192,False,False,,,NEEDS_TRANSCRIPTION,True
+/Users/steven/pythons/tools/social_media/Instagram Report Bot2.py,Instagram Report Bot2.py,/Users/steven/pythons/tools/social_media,tools/social_media/Instagram Report Bot2.py,6.43,274,False,False,,,NEEDS_TRANSCRIPTION,True

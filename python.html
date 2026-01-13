@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Alchemy Project Portfolio - AvatarArts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f8f9fa;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+        .intro {
+            font-size: 1.05em;
+            color: #333;
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+        .intro strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+        h2:first-of-type {
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        h4 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .toc {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px 30px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        .toc h2 {
+            font-size: 1.5em;
+            margin: 0 0 20px 0;
+            padding: 0;
+            border: none;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .toc > ul > li {
+            margin-bottom: 15px;
+        }
+        .toc ul ul {
+            padding-left: 25px;
+            margin-top: 8px;
+        }
+        .toc ul ul li {
+            margin-bottom: 6px;
+        }
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .project {
+            margin-bottom: 40px;
+        }
+        .project-name {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        .project-description {
+            margin-bottom: 12px;
+            color: #333;
+        }
+        .project-description strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        .tags {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .tags strong {
+            font-weight: 600;
+            color: #555;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #d63384;
+        }
+        pre {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            color: #333;
+        }
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>**AI Alchemy Project Portfolio**</h1>
+        <p class="subtitle">_Transforming chaos into creativity through coded rituals_</p>
+        
+        <div class="intro">
+            <p>This portfolio is a compendium of projects and scripts (our **"technical rituals"**) that merge automation with artistry. The catalog is organized for easy visual browsing and search, with each project summarized and tagged. From **AI-powered media pipelines** to **social media bots** and **creative generative tools**, each entry reflects a blend of technical skill and creative chaos. Use the **Table of Contents** below to navigate through these projects, and click on any entry to jump to its description.</p>
+        </div>
+        
+        <div class="toc">
+            <h2>**Table of Contents**</h2>
+            <ul>
+                <li><strong>Social Media Bots (Instagram, TikTok, Facebook)</strong>
+                    <ul>
+                        <li><a href="#get-instagram-from-file-organizer">get_instagram_from_file-organizer</a></li>
+                        <li><a href="#test-instagram-from-file-organizer">test_instagram_from_file-organizer</a></li>
+                    </ul>
+                </li>
+                <li><strong>E-commerce & Web Automation</strong>
+                    <ul>
+                        <li><a href="#etsy-focused-cleanup">etsy_focused_cleanup</a></li>
+                        <li><a href="#etsy-organizer">etsy_organizer</a></li>
+                        <li><a href="#printify-organize">printify-organize</a></li>
+                        <li><a href="#printify-organize-1">printify-organize_1</a></li>
+                    </ul>
+                </li>
+                <li><strong>Creative Tools & Generative AI</strong>
+                    <ul>
+                        <li><a href="#process-leonardo-from-file-organizer">process_leonardo_from_file-organizer</a></li>
+                    </ul>
+                </li>
+                <li><strong>Web & Gallery Generators</strong>
+                    <ul>
+                        <li><a href="#simplegallery">simplegallery</a></li>
+                    </ul>
+                </li>
+                <li><strong>Utility & File Management Scripts</strong>
+                    <ul>
+                        <li><a href="#aggressive-cleanup-execute">AGGRESSIVE_CLEANUP_EXECUTE</a></li>
+                        <li><a href="#aggressive-dedupe">AGGRESSIVE_DEDUPE</a></li>
+                        <li><a href="#cleanup-root-duplicates">CLEANUP_ROOT_DUPLICATES</a></li>
+                        <li><a href="#comprehensive-directory-cleanup">COMPREHENSIVE_DIRECTORY_CLEANUP</a></li>
+                        <li><a href="#complete-cleanup-orchestrator">Complete_Cleanup_Orchestrator</a></li>
+                        <li><a href="#final-polish-cleanup">FINAL_POLISH_CLEANUP</a></li>
+                        <li><a href="#remove-content-duplicates">REMOVE_CONTENT_DUPLICATES</a></li>
+                        <li><a href="#run-general-cleanup">Run_General_Cleanup</a></li>
+                        <li><a href="#run-python-cleanup">Run_Python_Cleanup</a></li>
+                        <li><a href="#structural-cleanup-master">STRUCTURAL_CLEANUP_MASTER</a></li>
+                        <li><a href="#targeted-cleanup">Targeted_Cleanup</a></li>
+                        <li><a href="#advanced-cleanup-analyzer">advanced-cleanup-analyzer</a></li>
+                        <li><a href="#aggressive-python-cleanup">aggressive-python-cleanup</a></li>
+                        <li><a href="#analyze-large-files">analyze_large_files</a></li>
+                        <li><a href="#auto-cleanup">auto_cleanup</a></li>
+                    </ul>
+                </li>
+                <li><strong>Miscellaneous & Experimental</strong>
+                    <ul>
+                        <li><a href="#content">CONTENT</a></li>
+                        <li><a href="#content-similarity-scanner">CONTENT_SIMILARITY_SCANNER</a></li>
+                        <li><a href="#deep-env-&-volumes-content-aware-analyzer">DEEP ENV & VOLUMES CONTENT-AWARE ANALYZER</a></li>
+                        <li><a href="#deep-scan-all-content">DEEP_SCAN_ALL_CONTENT</a></li>
+                        <li><a href="#fast-similarity-scanner">FAST_SIMILARITY_SCANNER</a></li>
+                        <li><a href="#find-duplicate-content">FIND_DUPLICATE_CONTENT</a></li>
+                        <li><a href="#fix-naming-issues">FIX_NAMING_ISSUES</a></li>
+                        <li><a href="#functional-duplicate-scanner">FUNCTIONAL_DUPLICATE_SCANNER</a></li>
+                        <li><a href="#intelligent-version-analyzer">INTELLIGENT_VERSION_ANALYZER</a></li>
+                        <li><a href="#media-processing">MEDIA_PROCESSING</a></li>
+                        <li><a href="#misc">MISC</a></li>
+                        <li><a href="#recursive-deep-scan">RECURSIVE_DEEP_SCAN</a></li>
+                        <li><a href="#seo-marketing">SEO_MARKETING</a></li>
+                        <li><a href="#smart-deduplicate">SMART_DEDUPLICATE</a></li>
+                        <li><a href="#ultra-aggressive-similarity">ULTRA_AGGRESSIVE_SIMILARITY</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <hr style="margin: 50px 0; border: none; border-top: 2px solid #e0e0e0;">
+
+        <h2>**Social Media Bots (Instagram, TikTok, Facebook)**</h2>
+
+        <div class="project" id="get-instagram-from-file-organizer">
+            <h3 class="project-name">**get_instagram_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, Social Media, Automation, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="test-instagram-from-file-organizer">
+            <h3 class="project-name">**test_instagram_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, Social Media, Automation, File Management, Automation</div>
+        </div>
+
+
+        <hr style="margin: 50px 0; border: none; border-top: 2px solid #e0e0e0;">
+
+        <h2>**E-commerce & Web Automation**</h2>
+
+        <div class="project" id="etsy-focused-cleanup">
+            <h3 class="project-name">**etsy_focused_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="etsy-organizer">
+            <h3 class="project-name">**etsy_organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="printify-organize">
+            <h3 class="project-name">**printify-organize**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="printify-organize-1">
+            <h3 class="project-name">**printify-organize_1**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+
+        <hr style="margin: 50px 0; border: none; border-top: 2px solid #e0e0e0;">
+
+        <h2>**Creative Tools & Generative AI**</h2>
+
+        <div class="project" id="process-leonardo-from-file-organizer">
+            <h3 class="project-name">**process_leonardo_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+
+        <hr style="margin: 50px 0; border: none; border-top: 2px solid #e0e0e0;">
+
+        <h2>**Web & Gallery Generators**</h2>
+
+        <div class="project" id="simplegallery">
+            <h3 class="project-name">**simplegallery**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>154 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, Web, HTML, Gallery</div>
+        </div>
+
+
+        <hr style="margin: 50px 0; border: none; border-top: 2px solid #e0e0e0;">
+
+        <h2>**Utility & File Management Scripts**</h2>
+
+        <div class="project" id="aggressive-cleanup-execute">
+            <h3 class="project-name">**AGGRESSIVE_CLEANUP_EXECUTE**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="aggressive-dedupe">
+            <h3 class="project-name">**AGGRESSIVE_DEDUPE**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="cleanup-root-duplicates">
+            <h3 class="project-name">**CLEANUP_ROOT_DUPLICATES**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="comprehensive-directory-cleanup">
+            <h3 class="project-name">**COMPREHENSIVE_DIRECTORY_CLEANUP**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="complete-cleanup-orchestrator">
+            <h3 class="project-name">**Complete_Cleanup_Orchestrator**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="final-polish-cleanup">
+            <h3 class="project-name">**FINAL_POLISH_CLEANUP**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="remove-content-duplicates">
+            <h3 class="project-name">**REMOVE_CONTENT_DUPLICATES**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="run-general-cleanup">
+            <h3 class="project-name">**Run_General_Cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="run-python-cleanup">
+            <h3 class="project-name">**Run_Python_Cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="structural-cleanup-master">
+            <h3 class="project-name">**STRUCTURAL_CLEANUP_MASTER**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="targeted-cleanup">
+            <h3 class="project-name">**Targeted_Cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="advanced-cleanup-analyzer">
+            <h3 class="project-name">**advanced-cleanup-analyzer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="aggressive-python-cleanup">
+            <h3 class="project-name">**aggressive-python-cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="analyze-large-files">
+            <h3 class="project-name">**analyze_large_files**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="auto-cleanup">
+            <h3 class="project-name">**auto_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="auto-organize-dry-run-from-seo-optimizer">
+            <h3 class="project-name">**auto_organize_dry_run_from_seo-optimizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="canva-dedup-compress-organize">
+            <h3 class="project-name">**canva_dedup_compress_organize**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="check-vid-from-file-organizer">
+            <h3 class="project-name">**check_vid_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanup2-from-03-utilities">
+            <h3 class="project-name">**cleanup2_from_03_utilities**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanup-backup-files">
+            <h3 class="project-name">**cleanup_backup_files**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanup-duplicates">
+            <h3 class="project-name">**cleanup_duplicates**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanup-duplicates-copy">
+            <h3 class="project-name">**cleanup_duplicates copy**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanup-exact-duplicates">
+            <h3 class="project-name">**cleanup_exact_duplicates**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanup-from-03-utilities">
+            <h3 class="project-name">**cleanup_from_03_utilities**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanup-large-files">
+            <h3 class="project-name">**cleanup_large_files**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanupd">
+            <h3 class="project-name">**cleanupd**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanups">
+            <h3 class="project-name">**cleanups**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="cleanups-1">
+            <h3 class="project-name">**cleanups_1**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="complete-final-cleanup">
+            <h3 class="project-name">**complete_final_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="convert-text-from-file-organizer">
+            <h3 class="project-name">**convert_text_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="convert-vid-from-file-organizer">
+            <h3 class="project-name">**convert_vid_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="dedupes-merge-diff-du">
+            <h3 class="project-name">**dedupes_merge_diff_du**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="deep-structure-cleanup">
+            <h3 class="project-name">**deep_structure_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="directory-merger-organizer">
+            <h3 class="project-name">**directory_merger_organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="download-file-from-file-organizer">
+            <h3 class="project-name">**download_file_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="download-json-from-file-organizer">
+            <h3 class="project-name">**download_json_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="download-vid-from-file-organizer">
+            <h3 class="project-name">**download_vid_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="entrypoints-from-file-organizer">
+            <h3 class="project-name">**entrypoints_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="execute-comprehensive-cleanup">
+            <h3 class="project-name">**execute_comprehensive_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="extract-vid-from-file-organizer">
+            <h3 class="project-name">**extract_vid_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="fetch-file-from-file-organizer">
+            <h3 class="project-name">**fetch_file_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="file-from-file-organizer">
+            <h3 class="project-name">**file_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="file-organization">
+            <h3 class="project-name">**file_organization**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>43 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="final-cleanup-summary-1">
+            <h3 class="project-name">**final_cleanup_summary_1**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="final-root-cleanup">
+            <h3 class="project-name">**final_root_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="find-duplicates-downloads">
+            <h3 class="project-name">**find_duplicates_downloads**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="gen-text-from-file-organizer">
+            <h3 class="project-name">**gen_text_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="get-vid-from-file-organizer">
+            <h3 class="project-name">**get_vid_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="hash-subtitle-from-file-organizer">
+            <h3 class="project-name">**hash_subtitle_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="home-cleanup">
+            <h3 class="project-name">**home_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="intelligent-script-reorganizer">
+            <h3 class="project-name">**intelligent_script_reorganizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="merge-analysis-results">
+            <h3 class="project-name">**merge_analysis_results**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="merge-and-cleanup">
+            <h3 class="project-name">**merge_and_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="merge-and-dedupe-directories">
+            <h3 class="project-name">**merge_and_dedupe_directories**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="merge-and-remove">
+            <h3 class="project-name">**merge_and_remove**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="merge-dirs">
+            <h3 class="project-name">**merge_dirs**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="merge-zips">
+            <h3 class="project-name">**merge_zips**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="multi-depth-scan-downloads">
+            <h3 class="project-name">**multi_depth_scan_downloads**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="organize-(1)">
+            <h3 class="project-name">**organize (1)**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-(1)-1">
+            <h3 class="project-name">**organize (1)_1**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize.py-02">
+            <h3 class="project-name">**organize.py_02**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-3">
+            <h3 class="project-name">**organize_3**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-4">
+            <h3 class="project-name">**organize_4**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-and-optimize">
+            <h3 class="project-name">**organize_and_optimize**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-by-category">
+            <h3 class="project-name">**organize_by_category**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-csv">
+            <h3 class="project-name">**organize_csv**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-experiments">
+            <h3 class="project-name">**organize_experiments**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-files">
+            <h3 class="project-name">**organize_files**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-files-from-utilities">
+            <h3 class="project-name">**organize_files_from_utilities**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-from-utilities">
+            <h3 class="project-name">**organize_from_utilities**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-html-files">
+            <h3 class="project-name">**organize_html_files**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-media">
+            <h3 class="project-name">**organize_media**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-music-library-2">
+            <h3 class="project-name">**organize_music_library 2**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-music-library-merged">
+            <h3 class="project-name">**organize_music_library_merged**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-plan-proposal">
+            <h3 class="project-name">**organize_plan_proposal**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organize-project2025-subdirs">
+            <h3 class="project-name">**organize_project2025_subdirs**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organizer-2">
+            <h3 class="project-name">**organizer_2**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="organizer-from-video-downloader">
+            <h3 class="project-name">**organizer_from_video-downloader**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="parse-vid-from-file-organizer">
+            <h3 class="project-name">**parse_vid_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="post-text-from-file-organizer">
+            <h3 class="project-name">**post_text_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="proc-vid-from-file-organizer">
+            <h3 class="project-name">**proc_vid_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="pyorganize">
+            <h3 class="project-name">**pyorganize**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="pyorganizerr">
+            <h3 class="project-name">**pyorganizerr**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="pyrepo-doc-organizer-from-file-utilities">
+            <h3 class="project-name">**pyrepo_doc_organizer_from_file-utilities**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="python-env-cleanup">
+            <h3 class="project-name">**python-env-cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="pythons-sort">
+            <h3 class="project-name">**pythons_sort**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="remove-duplicates">
+            <h3 class="project-name">**remove_duplicates**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="remove-duplicates-downloads">
+            <h3 class="project-name">**remove_duplicates_downloads**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="remove-merge-diff">
+            <h3 class="project-name">**remove_merge_diff**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="remove-source-directories">
+            <h3 class="project-name">**remove_source_directories**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="robust-sort-and-dedupe-merged">
+            <h3 class="project-name">**robust_sort_and_dedupe_merged**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="safe-duplicate-cleanup">
+            <h3 class="project-name">**safe_duplicate_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="send-text-from-file-organizer">
+            <h3 class="project-name">**send_text_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="simple-organize">
+            <h3 class="project-name">**simple_organize**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="smart-cleanup">
+            <h3 class="project-name">**smart_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="tehsites-deep-cleanup-from-ai-image-generator">
+            <h3 class="project-name">**tehSiTes_deep_cleanup_from_ai-image-generator**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, AI, OpenAI, Automation, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="tehsites-targeted-cleanup-from-file-utilities">
+            <h3 class="project-name">**tehSiTes_targeted_cleanup_from_file-utilities**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="tehsites-ultimate-cleanup">
+            <h3 class="project-name">**tehSiTes_ultimate_cleanup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="test-setup-from-file-organizer">
+            <h3 class="project-name">**test_setup_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, File Management, Automation</div>
+        </div>
+
+        <div class="project" id="test-transcribe-5-files">
+            <h3 class="project-name">**test_transcribe_5_files**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="vanceai-removebg-from-file-organizer">
+            <h3 class="project-name">**vanceai-removebg_from_file-organizer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, AI, OpenAI, Automation, File Management, Automation</div>
+        </div>
+
+
+        <hr style="margin: 50px 0; border: none; border-top: 2px solid #e0e0e0;">
+
+        <h2>**Miscellaneous & Experimental**</h2>
+
+        <div class="project" id="content">
+            <h3 class="project-name">**CONTENT**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>17 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="content-similarity-scanner">
+            <h3 class="project-name">**CONTENT_SIMILARITY_SCANNER**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="deep-env-&-volumes-content-aware-analyzer">
+            <h3 class="project-name">**DEEP ENV & VOLUMES CONTENT-AWARE ANALYZER**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="deep-scan-all-content">
+            <h3 class="project-name">**DEEP_SCAN_ALL_CONTENT**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="fast-similarity-scanner">
+            <h3 class="project-name">**FAST_SIMILARITY_SCANNER**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="find-duplicate-content">
+            <h3 class="project-name">**FIND_DUPLICATE_CONTENT**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="fix-naming-issues">
+            <h3 class="project-name">**FIX_NAMING_ISSUES**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="functional-duplicate-scanner">
+            <h3 class="project-name">**FUNCTIONAL_DUPLICATE_SCANNER**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="intelligent-version-analyzer">
+            <h3 class="project-name">**INTELLIGENT_VERSION_ANALYZER**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="media-processing">
+            <h3 class="project-name">**MEDIA_PROCESSING**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>408 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="misc">
+            <h3 class="project-name">**MISC**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>3 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="recursive-deep-scan">
+            <h3 class="project-name">**RECURSIVE_DEEP_SCAN**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="seo-marketing">
+            <h3 class="project-name">**SEO_MARKETING**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>18 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="smart-deduplicate">
+            <h3 class="project-name">**SMART_DEDUPLICATE**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="ultra-aggressive-similarity">
+            <h3 class="project-name">**ULTRA_AGGRESSIVE_SIMILARITY**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="websites">
+            <h3 class="project-name">**WEBSITES**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>78 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="analyze">
+            <h3 class="project-name">**analyze**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="analyze-custom-code">
+            <h3 class="project-name">**analyze_custom_code**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="analyze-exact-duplicates">
+            <h3 class="project-name">**analyze_exact_duplicates**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="analyze-for-miniforge-mamba">
+            <h3 class="project-name">**analyze_for_miniforge_mamba**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="analyze-tsv">
+            <h3 class="project-name">**analyze_tsv**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="analyzerr">
+            <h3 class="project-name">**analyzerr**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="avatararts">
+            <h3 class="project-name">**avatararts**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>3 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="avatararts-deployment">
+            <h3 class="project-name">**avatararts-deployment**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>1 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="axolotl-main">
+            <h3 class="project-name">**axolotl-main**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>13 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, AI, OpenAI, Automation</div>
+        </div>
+
+        <div class="project" id="batch-csv-analyzer">
+            <h3 class="project-name">**batch_csv_analyzer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="batch-dupe-content-analyzer">
+            <h3 class="project-name">**batch_dupe_content_analyzer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="cataloging">
+            <h3 class="project-name">**cataloging**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>8 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="categorize-root-scripts">
+            <h3 class="project-name">**categorize_root_scripts**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="check-empty">
+            <h3 class="project-name">**check_empty**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="combine-dirs-to-zip">
+            <h3 class="project-name">**combine_dirs_to_zip**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="combine-subdirs">
+            <h3 class="project-name">**combine_subdirs**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="compare-combine">
+            <h3 class="project-name">**compare_combine**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="compare-content-and-functions">
+            <h3 class="project-name">**compare_content_and_functions**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="compare-dirs">
+            <h3 class="project-name">**compare_dirs**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="compare-duplicates-detail">
+            <h3 class="project-name">**compare_duplicates_detail**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python, AI, OpenAI, Automation</div>
+        </div>
+
+        <div class="project" id="compare-zips">
+            <h3 class="project-name">**compare_zips**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="content-based-duplicate-analyzer">
+            <h3 class="project-name">**content_based_duplicate_analyzer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="create-python-portfolio">
+            <h3 class="project-name">**create_python_portfolio**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="create-pythons-list">
+            <h3 class="project-name">**create_pythons_list**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="csv-analyzer">
+            <h3 class="project-name">**csv_analyzer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="data">
+            <h3 class="project-name">**data**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>37 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="deep-home-scan">
+            <h3 class="project-name">**deep-home-scan**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="deepdive-analysis">
+            <h3 class="project-name">**deepdive_analysis**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="deepdive-content-analysis">
+            <h3 class="project-name">**deepdive_content_analysis**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="diagnose">
+            <h3 class="project-name">**diagnose**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="documentation">
+            <h3 class="project-name">**documentation**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>20 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="duplicate-removal-analyzer">
+            <h3 class="project-name">**duplicate_removal_analyzer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="ecosystem-analyzer">
+            <h3 class="project-name">**ecosystem_analyzer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="enhanced-duplicate-finder">
+            <h3 class="project-name">**enhanced_duplicate_finder**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="fast-content-analysis">
+            <h3 class="project-name">**fast_content_analysis**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="find-duplicate-scripts">
+            <h3 class="project-name">**find_duplicate_scripts**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="find-duplicates">
+            <h3 class="project-name">**find_duplicates**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="function-scanner">
+            <h3 class="project-name">**function_scanner**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="generate-inventory">
+            <h3 class="project-name">**generate_inventory**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="generate-removal-scripts">
+            <h3 class="project-name">**generate_removal_scripts**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="index-content-and-functions">
+            <h3 class="project-name">**index_content_and_functions**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="index-pythons-for-transcription">
+            <h3 class="project-name">**index_pythons_for_transcription**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="index-videos-for-transcription">
+            <h3 class="project-name">**index_videos_for_transcription**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="intelligent-deepdive-scanner">
+            <h3 class="project-name">**intelligent_deepdive_scanner**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="intelligent-duplicate-resolver">
+            <h3 class="project-name">**intelligent_duplicate_resolver**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="mp4-split-analyze-prompt">
+            <h3 class="project-name">**mp4-split-analyze-prompt**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="n8n-local">
+            <h3 class="project-name">**n8n-local**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>2 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="organization-scripts">
+            <h3 class="project-name">**organization_scripts**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>13 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="pdf-analyzer">
+            <h3 class="project-name">**pdf_analyzer**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="platforms">
+            <h3 class="project-name">**platforms**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>1 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="projects">
+            <h3 class="project-name">**projects**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>58 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="query-content-index">
+            <h3 class="project-name">**query_content_index**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="references">
+            <h3 class="project-name">**references**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>2 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="rescan-compare">
+            <h3 class="project-name">**rescan_compare**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="revenue-dashboard">
+            <h3 class="project-name">**revenue-dashboard**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>3 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="setup">
+            <h3 class="project-name">**setup**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="system-archive">
+            <h3 class="project-name">**system-archive**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>73 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="test-transcribe-5">
+            <h3 class="project-name">**test_transcribe_5**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="tools">
+            <h3 class="project-name">**tools**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>695 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+        <div class="project" id="vibrant-chaplygin">
+            <h3 class="project-name">**vibrant-chaplygin**</h3>
+            <div class="project-description">
+                <p>A **Python automation tool** that streamlines workflows and processes. Part of the AI Alchemy project portfolio, this script exemplifies the fusion of code and creativity to transform complex tasks into automated solutions.</p>
+                <p>This directory contains <strong>976 Python files</strong>, making it a comprehensive collection of related scripts and tools.</p>
+            </div>
+            <div class="tags"><strong>Tags:</strong> Python</div>
+        </div>
+
+
+        <div class="footer">
+            <p>Each project in this catalog is a testament to an overarching ethos: <strong>technology as creative empowerment</strong>. From automating tedious tasks to weaving AI into art, these scripts and tools form an ecosystem – an **"AI Alchemy" lab** – where code transfigures chaos into order and imagination into reality. Whether it's a social media spell, a data ritual, or an artistic incantation, this portfolio embodies a fusion of <strong>poetic automation</strong> and practical innovation, true to the unique creative-technical brand. Welcome to the hub of <strong>Chaos Automation</strong>, where every script is both a tool and a story.</p>
+            <p style="margin-top: 20px; text-align: right; color: #999;">Generated: January 12, 2026</p>
+        </div>
+    </div>
+</body>
+</html>

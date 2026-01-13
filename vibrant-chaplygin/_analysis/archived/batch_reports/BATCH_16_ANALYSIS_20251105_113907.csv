@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+unarchive.py,instabot example,instagram-unarchive.py,RENAME,Add Instagram prefix
+undo-move.py,[No docstring found],,KEEP,
+undo_collection_and_merge.py,🔄 UNDO COLLECTION FIX & MERGE INTO NOCTURNE,undo-collection-and-merge.py,RENAME,Fix underscore to hyphen
+unfollow-everyone.py,instabot example,instagram-unfollow-everyone.py,RENAME,Add Instagram prefix
+unfollow-followers.py,instabot example,instagram-unfollow-followers.py,RENAME,Add Instagram prefix
+unified_workflow_poc.py,Unified Workflow Engine - Proof of Concept,unified-workflow-poc.py,RENAME,Fix underscore to hyphen
+universe4.py,[Leonardo AI],leonardo-universe4.py,RENAME,Add Leonardo prefix
+unlike-users.py,instabot example,instagram-unlike-users.py,RENAME,Add Instagram prefix
+unused.py,An unused schema registry should not cause slower validation.,,KEEP,
+upload-content.py,[YouTube automation],,KEEP,
+upload-manager.py,GitHub Upload Manager,,KEEP,
+upload-products.py,[No docstring found],,KEEP,
+upload.py,[No docstring found],,NEEDS_REVIEW,Too generic - needs specific context
+upload_api.py,[OpenAI integration],upload-api.py,RENAME,Fix underscore to hyphen
+upload_simple.py,[Instagram automation],upload-simple.py,RENAME,Fix underscore to hyphen
+uploader.py,[No docstring found],,KEEP,
+upscale-and-upload.py,[No docstring found],,KEEP,
+upscale-images.py,[No docstring found],,KEEP,
+upscale-sips.py,[No docstring found],,KEEP,
+upscale.py,Move Improvements Back Script,,KEEP,
+upscalecreateimages.py,[OpenAI integration],,KEEP,
+upscaled.py,[Leonardo AI],leonardo-upscaled.py,RENAME,Add Leonardo prefix
+upscaler.py,[No docstring found],,KEEP,
+upwork.py,[No docstring found],,KEEP,
+usecols.py,[No docstring found],,KEEP,
+user.py,[No docstring found],,KEEP,
+util-json-handler.py,[No docstring found],,KEEP,
+utilities-async.py,[OpenAI integration],,KEEP,
+utilities-misc.py,[Reddit automation],,KEEP,
+utilities-upscale-images.py,[No docstring found],,KEEP,
+utils-1.py,[No docstring found],,KEEP,
+utils.py,[No docstring found],,LIBRARY,Library/framework code - utils.py
+utils_simple.py,[No docstring found],utils-simple.py,RENAME,Fix underscore to hyphen
+validate-json-reader.py,[OpenAI integration],,KEEP,
+validate-settings.py,[No docstring found],,LIBRARY,Library/framework code - settings.py
+vanceai-remove-background.py,[No docstring found],,KEEP,
+verbose-transcriber.py,[OpenAI integration],,KEEP,
+verbose.py,Tests that work on both the Python and C engines but do not have a,,KEEP,
+verify-connection.py,[OpenAI integration],,KEEP,
+verify.py,[OpenAI integration],,KEEP,
+verify_and_sort_missing_songs.py,🔍 VERIFY & SORT MISSING SONGS,verify-and-sort-missing-songs.py,RENAME,Fix underscore to hyphen
+video-clip-editor.py,[No docstring found],,KEEP,
+video-generator-pyqt-app.py,[No docstring found],,KEEP,
+vision.py,[OpenAI integration],,KEEP,
+visual.py,"Visual Effects - Particles, motion blur, impacts, and other effects for GIFs.",,KEEP,
+voice.py,[No docstring found],,KEEP,
+voices.py,[Reddit automation],,KEEP,
+walk-directories-recursive.py,[No docstring found],,KEEP,
+webm.py,[No docstring found],,KEEP,
+welcome-message.py,instabot example,instagram-welcome-message.py,RENAME,Add Instagram prefix

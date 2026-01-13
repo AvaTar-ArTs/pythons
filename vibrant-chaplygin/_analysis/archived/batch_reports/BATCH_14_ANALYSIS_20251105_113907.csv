@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+snoopbanner.py,[No docstring found],,KEEP,
+snoopplugins.py,[No docstring found],,KEEP,
+social-platforms-instagram-botError.py,[Instagram automation],social-platforms-instagram-bot-error.py,RENAME,Fix CamelCase
+social-platforms-instagram-config.py,Important Notes:,,LIBRARY,Library/framework code - config.py
+social-platforms-instagram-scraper.py,[Instagram automation],instagram-social-platforms-instagram-scraper.py,RENAME,Add Instagram prefix
+social-platforms-instagram.py,Configuration settings for the Transcription Analyzer,,KEEP,
+society6-upload.py,[No docstring found],,KEEP,
+software.py,Context-Efficient Software Architect Agent,,KEEP,
+song-process.py,[OpenAI integration],,KEEP,
+sora-sora-storyboard.py,[No docstring found],,KEEP,
+sort.py,Final Intelligent Sort,instagram-sort.py,RENAME,Add Instagram prefix
+sorts.py,[No docstring found],,KEEP,
+sound.py,[No docstring found],,KEEP,
+speak.py,[OpenAI integration],,KEEP,
+speech-transcription-mp3-wav.py,[No docstring found],,KEEP,
+speech.py,[OpenAI integration],,KEEP,
+speek.py,[OpenAI integration],,KEEP,
+split-chunks.py,[No docstring found],,KEEP,
+split.py,[No docstring found],,KEEP,
+splt.py,[No docstring found],,KEEP,
+sqs-queue-handler.py,[No docstring found],,KEEP,
+ssh-avatararts-downloader.py,[Leonardo AI],leonardo-ssh-avatararts-downloader.py,RENAME,Add Leonardo prefix
+stability-format.py,Format-Optimized Medium Article Automation,,KEEP,
+stability-medium.py,Medium Article Automation Maker,,KEEP,
+stability.py,[No docstring found],,KEEP,
+start-with.py,Merged Content Analysis Tool,,KEEP,
+state.py,[Instagram automation],instagram-state.py,RENAME,Add Instagram prefix
+static.py,[No docstring found],,KEEP,
+sticker-download.py,[No docstring found],,KEEP,
+stories-downloader.py,[Instagram automation],instagram-stories-downloader.py,RENAME,Add Instagram prefix
+story-section.py,Merged Content Analysis Tool,,KEEP,
+story-trans.py,[OpenAI integration],,KEEP,
+story.py,[Instagram automation],instagram-story.py,RENAME,Add Instagram prefix
+storykeytrans.py,[OpenAI integration],,KEEP,
+streamlabs-polly.py,[No docstring found],,KEEP,
+structures.py,requests.structures,,LIBRARY,Library/framework code - structures.py
+stylish-unfollow-tips.py,This template is written by @Nocturnal-2,,KEEP,
+subcomponents.py,A benchmark which tries to compare the possible slow subparts of validation.,,KEEP,
+subject.py,Subject-aware reframing using face/pose detection for intelligent cropping,,KEEP,
+subreddit.py,[Reddit automation],,KEEP,
+subredditsentiment-apps.py,[Reddit automation],,KEEP,
+subtitle.py,[No docstring found],,KEEP,
+sufflecsv.py,[No docstring found],,KEEP,
+suno-album-file-organizer.py,[No docstring found],,KEEP,Already well-named
+suno-albums-folder-organizer.py,[No docstring found],,KEEP,Already well-named
+suno-card-html.py,[No docstring found],,KEEP,Already well-named
+suno-generator.py,[Suno music],,KEEP,Already well-named
+suno-html-scraper.py,[Suno music],,KEEP,Already well-named
+suno-html-splitter.py,Merged Content Analysis Tool,,KEEP,Already well-named
+suno-music-catalog.py,[Suno music],,KEEP,Already well-named

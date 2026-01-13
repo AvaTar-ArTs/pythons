@@ -1,0 +1,87 @@
+{
+  "scan_info": {
+    "root_path": "/Users/steven/pythons",
+    "timestamp": "20251225_023925",
+    "max_depth": 10,
+    "max_depth_found": 10
+  },
+  "statistics": {
+    "total_files": 13670,
+    "total_folders": 802,
+    "total_size_gb": 0.5411045951768756,
+    "unique_extensions": 74,
+    "content_categories": {
+      "code": 11933,
+      "other": 1190,
+      "documentation": 158,
+      "project": 52,
+      "image": 88,
+      "config": 55,
+      "data": 107,
+      "archive": 12,
+      "video": 72,
+      "audio": 3
+    },
+    "folder_patterns": {
+      "simple": 8938,
+      "snake_case": 4732
+    }
+  },
+  "depth_summary": {
+    "0": {
+      "files": 412,
+      "folders": 33,
+      "size_mb": 95.08148002624512
+    },
+    "1": {
+      "files": 416,
+      "folders": 208,
+      "size_mb": 6.051870346069336
+    },
+    "2": {
+      "files": 1098,
+      "folders": 126,
+      "size_mb": 77.21841716766357
+    },
+    "3": {
+      "files": 3814,
+      "folders": 126,
+      "size_mb": 272.0755090713501
+    },
+    "4": {
+      "files": 7415,
+      "folders": 83,
+      "size_mb": 96.50328826904297
+    },
+    "5": {
+      "files": 158,
+      "folders": 85,
+      "size_mb": 0.2012157440185547
+    },
+    "6": {
+      "files": 139,
+      "folders": 83,
+      "size_mb": 1.3486051559448242
+    },
+    "7": {
+      "files": 154,
+      "folders": 41,
+      "size_mb": 5.533926010131836
+    },
+    "8": {
+      "files": 37,
+      "folders": 16,
+      "size_mb": 0.0332489013671875
+    },
+    "9": {
+      "files": 26,
+      "folders": 1,
+      "size_mb": 0.04336738586425781
+    },
+    "10": {
+      "files": 1,
+      "folders": 0,
+      "size_mb": 0.0001773834228515625
+    }
+  }
+}

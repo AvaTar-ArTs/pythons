@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Automation Arsenal - Search</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px 40px;
+            background: #f8f9fa;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label { color: #6c757d; margin-top: 5px; }
+        
+        .search-section { padding: 40px; }
+        
+        .search-input {
+            width: 100%;
+            padding: 20px;
+            font-size: 1.2em;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .filter-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+        
+        .script-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+        
+        .script-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+        }
+        
+        .script-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .script-filename {
+            font-family: 'Courier New', monospace;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            padding: 5px 12px;
+            background: #e7f3ff;
+            color: #0066cc;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        
+        .category-tag { background: #f0e5ff; color: #6610f2; }
+        .service-tag { background: #ffe5f0; color: #d63384; }
+        
+        .results-count {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #495057;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>?? Python Automation Arsenal</h1>
+            <p>Interactive Script Search - 395 Scripts Categorized</p>
+        </header>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number" id="total">395</div>
+                <div class="stat-label">Total Scripts</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="categories">14</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="showing">395</div>
+                <div class="stat-label">Showing</div>
+            </div>
+        </div>
+        
+        <div class="search-section">
+            <input 
+                type="text" 
+                class="search-input" 
+                id="search"
+                placeholder="?? Search by name, category, or service (e.g., 'instagram', 'leonardo', 'openai')..."
+            />
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label>?? Category</label>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>?? Service Type</label>
+                    <select id="serviceFilter">
+                        <option value="">All Services</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="leonardo">Leonardo AI</option>
+                        <option value="openai">OpenAI</option>
+                        <option value="claude">Claude</option>
+                        <option value="suno">Suno Music</option>
+                        <option value="youtube">YouTube</option>
+                        <option value="image">Image Processing</option>
+                        <option value="audio">Audio</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="results-count" id="count">Loading scripts...</div>
+            
+            <div id="results"></div>
+        </div>
+        
+        <footer>
+            <p><strong>Python Automation Arsenal</strong> ? 760+ Scripts ? November 2025</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Load scripts from external JSON file
+        let allScripts = [];
+        
+        fetch('scripts_data.json')
+            .then(r => r.json())
+            .then(data => {
+                allScripts = data;
+                init();
+            })
+            .catch(err => {
+                console.error('Error:', err);
+                document.getElementById('results').innerHTML = 
+                    '<p style="text-align:center;padding:40px;">?? Error loading scripts. Make sure scripts_data.json exists.</p>';
+            });
+        
+        function init() {
+            // Populate category filter
+            const categories = [...new Set(allScripts.map(s => s.category))].sort();
+            const catFilter = document.getElementById('categoryFilter');
+            categories.forEach(cat => {
+                const opt = document.createElement('option');
+                opt.value = cat;
+                opt.textContent = cat;
+                catFilter.appendChild(opt);
+            });
+            
+            // Set up event listeners
+            document.getElementById('search').addEventListener('input', filter);
+            document.getElementById('categoryFilter').addEventListener('change', filter);
+            document.getElementById('serviceFilter').addEventListener('change', filter);
+            
+            // Initial render
+            filter();
+        }
+        
+        function filter() {
+            const search = document.getElementById('search').value.toLowerCase();
+            const category = document.getElementById('categoryFilter').value;
+            const service = document.getElementById('serviceFilter').value;
+            
+            const filtered = allScripts.filter(s => {
+                if (search && !JSON.stringify(s).toLowerCase().includes(search)) return false;
+                if (category && s.category !== category) return false;
+                if (service && !s.filename.toLowerCase().includes(service)) return false;
+                return true;
+            });
+            
+            render(filtered);
+        }
+        
+        function render(scripts) {
+            document.getElementById('showing').textContent = scripts.length;
+            document.getElementById('count').textContent = 
+                `Showing ${scripts.length} of ${allScripts.length} scripts`;
+            
+            const html = scripts.map(s => `
+                <div class="script-card">
+                    <div class="script-title">${formatTitle(s.filename)}</div>
+                    <div class="script-filename">${s.filename}</div>
+                    <div class="tags">
+                        <span class="tag category-tag">?? ${s.category}</span>
+                        ${getServiceTags(s.filename)}
+                        <span class="tag">${s.size_kb} KB</span>
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('results').innerHTML = html || 
+                '<p style="text-align:center;padding:40px;">No scripts found. Try different filters.</p>';
+        }
+        
+        function formatTitle(filename) {
+            return filename.replace('.py', '').split('-').map(w => 
+                w.charAt(0).toUpperCase() + w.slice(1)
+            ).join(' ');
+        }
+        
+        function getServiceTags(filename) {
+            const services = {
+                'instagram': 'Instagram',
+                'leonardo': 'Leonardo AI',
+                'openai': 'OpenAI',
+                'claude': 'Claude',
+                'suno': 'Suno',
+                'youtube': 'YouTube',
+                'image': 'Image',
+                'audio': 'Audio'
+            };
+            
+            const tags = [];
+            for (const [key, label] of Object.entries(services)) {
+                if (filename.toLowerCase().includes(key)) {
+                    tags.push(`<span class="tag service-tag">?? ${label}</span>`);
+                }
+            }
+            return tags.join('');
+        }
+    </script>
+</body>
+</html>

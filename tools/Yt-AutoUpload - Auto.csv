@@ -1,0 +1,13 @@
+Title,Description,Tags,Category,Privacy Status,File Path,Thumbnail Path,Publish At
+Video Title 1,Description of Video 1,"tag1,tag2,tag3",25,public,/path/to/video1.mp4,/path/to/thumbnail1.jpg,2023-12-25T10:00:00Z
+Video Title 2,Description of Video 2,"tag1,tag2,tag3",25,unlisted,/path/to/video2.mp4,/path/to/thumbnail2.jpg,2023-12-26T11:00:00Z
+Video Title 3,Description of Video 3,"tag1,tag2,tag3",25,private,/path/to/video3.mp4,/path/to/thumbnail3.jpg,2023-12-27T12:00:00Z
+,,,25,,,,
+,,,25,,,,
+,,,25,,,,
+,,,25,,,,
+,,,25,,,,
+,,,25,,,,
+,,,25,,,,
+,,,25,,,,
+,,,25,,,,

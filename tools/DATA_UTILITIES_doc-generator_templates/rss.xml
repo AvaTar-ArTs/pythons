@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title }}</title>
+    <link>{{ site.site_url }}</link>
+    <description>{{ site.description }}</description>
+    {% for p in pages %}
+    <item>
+      <title>{{ p.title }}</title>
+      <link>{{ site.site_url }}/{{ p.slug }}.html</link>
+      <description><![CDATA[ {{ p.description }} ]]></description>
+      <pubDate>{{ p.updated|rfc822 or p.date|rfc822 }}</pubDate>
+      <guid>{{ site.site_url }}/{{ p.slug }}.html</guid>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

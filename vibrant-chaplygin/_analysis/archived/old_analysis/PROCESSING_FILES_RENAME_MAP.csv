@@ -1,0 +1,17 @@
+CURRENT_NAME,NEW_NAME,REASON
+process-proc_simple.py,extract-news-to-audio.py,ExtractNews class - extracts news and converts to audio
+process-proc-2.py,quantumforge-cli.py,QuantumForge CLI - image processing tool
+process-remix.py,process-remix.py,KEEP - descriptive enough
+process.py,file-utilities.py,Generic file utils (MD5, exclusion patterns)
+processing-categories.py,processing-categories.py,KEEP - descriptive
+processing-csv-docs_simple.py,process-csv-docs.py,Simplify name
+processing-docs.py,processing-docs.py,KEEP - descriptive
+processing-doubles.py,remove-duplicate-files.py,Processes/removes duplicates
+processing-execute.py,processing-execute.py,KEEP - execution processor
+processing-fdupes.py,find-duplicates-fdupes.py,Uses fdupes to find duplicates
+processing-imove.py,processing-imove.py,KEEP - iMove processor
+processing-json.py,download-giphy-gif.py,Downloads GIFs from Giphy
+processing-pandas-docs.py,process-docs-pandas.py,Document processing with pandas
+processing-pandas-json.py,process-json-pandas.py,JSON processing with pandas
+processing-pandas.py,process-data-pandas.py,Generic pandas data processing
+processing.py,file-utilities.py,File utility functions (already suggested above - duplicate?)

@@ -1,0 +1,4 @@
+original,new,action
+download-etsy-product-images.py,etsy-product-images.py,Remove download- prefix
+download-gemini-storybook-audio.py,gemini-storybook-audio.py,Remove download- prefix
+download-giphy-gifs.py,giphy-gifs.py,Remove download- prefix

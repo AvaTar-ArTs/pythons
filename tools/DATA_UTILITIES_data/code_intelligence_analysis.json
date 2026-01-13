@@ -1,0 +1,334 @@
+{
+  "metadata": {
+    "file_path": "/Users/steven/Documents/python/advanced_content_analyzer.py",
+    "file_size": 55645,
+    "line_count": 1158,
+    "analysis_timestamp": "2025-10-26T00:28:06.433994"
+  },
+  "architecture": {
+    "class_structure": [
+      {
+        "name": "AdvancedContentAnalyzer",
+        "methods": [
+          "__init__",
+          "load_csv_data",
+          "detect_file_encoding",
+          "read_file_content",
+          "analyze_file_content",
+          "_analyze_semantic_content",
+          "_analyze_project_context",
+          "_analyze_content_type",
+          "_extract_key_phrases",
+          "_analyze_relationships",
+          "_analyze_content_insights",
+          "_generate_intelligent_description",
+          "_calculate_organization_priority",
+          "_generate_destination_suggestion",
+          "_generate_restore_information",
+          "_create_basic_analysis",
+          "analyze_all_files",
+          "generate_intelligent_recommendations",
+          "save_deep_analysis_report",
+          "print_deep_analysis_summary"
+        ],
+        "method_count": 20,
+        "docstring": null,
+        "decorators": [],
+        "bases": []
+      }
+    ],
+    "method_count": 20,
+    "design_patterns": [
+      "Analysis Pattern",
+      "Generator Pattern"
+    ],
+    "complexity_indicators": [],
+    "dependencies": [
+      "os",
+      "csv",
+      "json",
+      "re",
+      "hashlib",
+      "pathlib",
+      "datetime",
+      "collections",
+      "mimetypes"
+    ],
+    "inheritance_hierarchy": []
+  },
+  "content_patterns": {
+    "data_structures": [
+      "defaultdict for dynamic categorization",
+      "Counter for frequency analysis",
+      "pathlib.Path for file handling"
+    ],
+    "pattern_definitions": {
+      "content_patterns": "Found extensive content pattern definitions"
+    },
+    "keyword_density": {
+      "analyze": 42,
+      "content": 203,
+      "file": 310,
+      "pattern": 52,
+      "semantic": 32,
+      "intelligent": 37,
+      "category": 45
+    },
+    "file_type_handling": [
+      ".toml",
+      ".project_patterns",
+      ".pkl",
+      ".pptx",
+      ".yaml",
+      ".png",
+      ".jpg",
+      ".writeheader",
+      ".join",
+      ".css",
+      ".items",
+      ".h5",
+      ".glob",
+      ".py",
+      "._extract_key_phrases",
+      ".getsize",
+      ".read",
+      ".r",
+      ".jpeg",
+      ".env",
+      ".zip",
+      ".most_common",
+      ".values",
+      ".analyze_file_content",
+      ".intelligent_recommendations",
+      ".guess_type",
+      ".hexdigest",
+      ".sort",
+      ".1f",
+      ".json",
+      ".path",
+      ".sh",
+      "._analyze_semantic_content",
+      ".exists",
+      "._create_basic_analysis",
+      ".findall",
+      ".DictReader",
+      ".generate_intelligent_recommendations",
+      ".tsx",
+      ".php",
+      ".analyze_all_files",
+      ".detect_file_encoding",
+      ".vue",
+      ".ini",
+      ".now",
+      "._calculate_organization_priority",
+      ".save_deep_analysis_report",
+      "._analyze_content_type",
+      ".count",
+      ".jsx",
+      ".ts",
+      ".bash",
+      "._analyze_content_insights",
+      "._generate_intelligent_description",
+      ".lower",
+      ".dump",
+      ".md5",
+      ".avi",
+      ".strftime",
+      ".strip",
+      ".html",
+      ".writerow",
+      ".sql",
+      "._generate_destination_suggestion",
+      ".cfg",
+      ".extend",
+      ".get",
+      ".encode",
+      ".js",
+      ".append",
+      ".split",
+      ".xlsx",
+      ".print_deep_analysis_summary",
+      ".csv",
+      ".conf",
+      ".seek",
+      ".pdf",
+      ".gif",
+      ".mov",
+      ".svg",
+      ".parquet",
+      ".replace",
+      ".title",
+      ".yml",
+      ".psd",
+      ".content_analysis",
+      ".mp4",
+      ".zsh",
+      ".rst",
+      ".stat",
+      "._generate_restore_information",
+      ".load_csv_data",
+      ".read_file_content",
+      "._analyze_relationships",
+      "._analyze_project_context",
+      ".docx",
+      ".st_mtime",
+      ".csv_file_path",
+      ".file_relationships",
+      ".txt",
+      ".ai",
+      ".semantic_categories",
+      ".md",
+      ".plot",
+      ".DictWriter",
+      ".content_patterns",
+      ".rstrip",
+      ".ipynb",
+      ".post",
+      ".files_data",
+      ".2f"
+    ],
+    "encoding_strategies": [
+      "Multiple encoding detection strategies"
+    ],
+    "error_handling_patterns": [
+      "try:",
+      "except:",
+      "Error"
+    ]
+  },
+  "use_cases": {
+    "primary_purpose": [
+      "File system analysis and organization",
+      "Deep content analysis and categorization",
+      "Semantic understanding and classification",
+      "AI-powered intelligent recommendations"
+    ],
+    "target_audience": [
+      "Content creators and portfolio managers",
+      "Automation engineers and DevOps",
+      "Data scientists and analysts",
+      "Web developers and designers"
+    ],
+    "scalability_indicators": [
+      "Configurable file processing limits",
+      "Progress tracking for long operations"
+    ],
+    "integration_points": [
+      "CSV data import/export",
+      "JSON data serialization",
+      "Cross-platform file system integration"
+    ],
+    "performance_considerations": [
+      "File size limits for memory management",
+      "Content hashing for duplicate detection",
+      "Strategic sampling for large files"
+    ],
+    "deployment_scenarios": []
+  },
+  "context_domain": {
+    "domain_expertise": [
+      "ai_ml",
+      "web_dev",
+      "data_science",
+      "automation",
+      "content_management"
+    ],
+    "business_logic": [
+      "Priority-based organization system",
+      "Intelligent recommendation engine",
+      "Data preservation and restoration logic",
+      "Backup and safety mechanisms"
+    ],
+    "technical_sophistication": [
+      "Semantic analysis capabilities",
+      "Advanced pattern recognition",
+      "Multi-encoding text processing",
+      "Content fingerprinting"
+    ],
+    "real_world_applications": [],
+    "data_flow": [],
+    "decision_making": []
+  },
+  "code_quality": {
+    "maintainability": [
+      "24 methods - good modularity",
+      "3 class(es) - focused responsibility"
+    ],
+    "readability": [
+      "Comprehensive docstrings present",
+      "User feedback and progress indicators",
+      "132 inline comments"
+    ],
+    "documentation": [
+      "21 docstring blocks"
+    ],
+    "error_handling": [
+      "4 try blocks, 1 except blocks"
+    ],
+    "performance": [
+      "Memory-conscious file processing"
+    ],
+    "security": [
+      "Path validation and sanitization",
+      "Safe encoding handling"
+    ],
+    "testability": []
+  },
+  "intelligent_insights": {
+    "strengths": [
+      "Comprehensive content pattern recognition system",
+      "Multi-layered analysis approach (semantic, project, content type)",
+      "Intelligent encoding detection and handling",
+      "Scalable architecture with configurable limits",
+      "Rich metadata generation and relationship mapping",
+      "User-friendly progress tracking and reporting",
+      "Robust error handling and graceful degradation",
+      "Cross-platform file system compatibility"
+    ],
+    "improvements": [
+      "Could benefit from async processing for large file sets",
+      "Pattern matching could use more sophisticated NLP techniques",
+      "Memory usage could be optimized with streaming for very large files",
+      "Could add caching for repeated analysis operations",
+      "Configuration could be externalized to YAML/JSON files",
+      "Could add unit tests for better reliability",
+      "Could implement plugin architecture for custom analyzers",
+      "Could add real-time monitoring and metrics collection"
+    ],
+    "architectural_decisions": [
+      "Single-responsibility class design with focused methods",
+      "Pattern-based categorization system for extensibility",
+      "Hierarchical organization with project and content type layers",
+      "Content sampling strategy for large file handling",
+      "Hash-based content fingerprinting for duplicate detection",
+      "CSV/JSON dual output format for different use cases",
+      "Progressive analysis with configurable depth limits"
+    ],
+    "design_philosophy": [
+      "Content-first approach - actual file content drives decisions",
+      "Intelligent automation with human oversight capabilities",
+      "Preservation of original context and restore capabilities",
+      "Scalable design that grows with user needs",
+      "Multi-domain expertise integration (AI, web, data, etc.)",
+      "User-centric reporting with actionable insights"
+    ],
+    "technical_innovations": [
+      "Multi-encoding text processing with fallback strategies",
+      "Semantic category scoring with weighted keyword analysis",
+      "Content quality assessment (complexity, maturity, debt)",
+      "Relationship mapping between files and projects",
+      "Intelligent destination suggestion based on multiple factors",
+      "Content-aware priority calculation with business logic",
+      "Strategic file sampling for large content analysis"
+    ],
+    "business_value": [
+      "Automates complex file organization tasks",
+      "Reduces manual effort in content management",
+      "Provides intelligent insights for decision making",
+      "Preserves data integrity with restore capabilities",
+      "Scales to handle large file collections",
+      "Supports multiple professional domains and use cases",
+      "Generates actionable reports for organization planning"
+    ]
+  }
+}

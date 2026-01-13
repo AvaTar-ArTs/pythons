@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Orchestrator Ultimate API &mdash; AI Automation Ecosystem 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AI Automation Ecosystem
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#verify-setup">Verify Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#your-first-automation">Your First Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Systems Overview:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../systems/overview.html">Systems Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../systems/overview.html#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systems/overview.html#system-components">System Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#ai-orchestrator-ultimate">1. AI Orchestrator Ultimate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#intelligent-workflow-builder">2. Intelligent Workflow Builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#smart-automation-discovery">3. Smart Automation Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#unified-content-orchestrator">4. Unified Content Orchestrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#deep-content-analyzer">5. Deep Content Analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#typescript-python-bridge">6. TypeScript-Python Bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#complete-media-prompt-analyzer">7. Complete Media Prompt Analyzer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guides/youtube_automation.html">YouTube Automation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#setup">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#load-environment">1. Load Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#initialize-orchestrator">2. Initialize Orchestrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#generate-video-content">3. Generate Video Content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ts_python_bridge.html">TypeScript-Python Bridge API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#key-features">Key Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#module-reference">Module Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ts_python_bridge.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ts_python_bridge.html#advanced-usage">Advanced Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AI Automation Ecosystem</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">AI Orchestrator Ultimate API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/ai_orchestrator_ultimate.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ai-orchestrator-ultimate-api">
+<h1>AI Orchestrator Ultimate API<a class="headerlink" href="#ai-orchestrator-ultimate-api" title="Link to this heading"></a></h1>
+<p>Intelligent routing across 12 AI models</p>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Task-specific model selection</p></li>
+<li><p>Multi-model consensus</p></li>
+<li><p>Cost optimization (60% savings)</p></li>
+<li><p>Quality vs speed prioritization</p></li>
+</ul>
+</section>
+<section id="module-AI_ORCHESTRATOR_ULTIMATE">
+<span id="module-reference"></span><h2>Module Reference<a class="headerlink" href="#module-AI_ORCHESTRATOR_ULTIMATE" title="Link to this heading"></a></h2>
+<section id="ultimate-ai-orchestrator-multi-model-intelligent-system">
+<h3>🚀 ULTIMATE AI ORCHESTRATOR - Multi-Model Intelligent System<a class="headerlink" href="#ultimate-ai-orchestrator-multi-model-intelligent-system" title="Link to this heading"></a></h3>
+<p>Leverages ALL 12 AI APIs intelligently based on their strengths:
+- OpenAI (GPT-5): General intelligence, code generation
+- Anthropic (Claude): Deep reasoning, long-context analysis
+- XAI (Grok): Real-time info, Twitter-aware responses
+- Groq: Ultra-fast inference for repetitive tasks
+- Gemini: Multimodal analysis, broad knowledge
+- Perplexity: Research and fact-checking
+- DeepSeek: Code understanding and generation
+- Mistral: European languages, privacy-focused
+- Cohere: Classification, embeddings
+- OpenRouter: Access to multiple models
+- Together AI: Open-source models
+- Cerebras: Fast inference at scale</p>
+<p>Features:
+- 🧠 Intelligent routing based on task type
+- 🔄 Multi-AI consensus for critical decisions
+- ⚡ Parallel processing for speed
+- 📊 Automatic quality scoring
+- 🎯 Task-specific model selection
+- 💾 Result caching and learning</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AI_ORCHESTRATOR_ULTIMATE.</span></span><span class="sig-name descname"><span class="pre">TaskType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#TaskType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
+<p>Types of tasks the orchestrator can handle</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.CODE_GENERATION">
+<span class="sig-name descname"><span class="pre">CODE_GENERATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'code_generation'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.CODE_GENERATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.CODE_ANALYSIS">
+<span class="sig-name descname"><span class="pre">CODE_ANALYSIS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'code_analysis'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.CODE_ANALYSIS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.LONG_CONTEXT">
+<span class="sig-name descname"><span class="pre">LONG_CONTEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'long_context'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.LONG_CONTEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.RESEARCH">
+<span class="sig-name descname"><span class="pre">RESEARCH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'research'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.RESEARCH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.FAST_INFERENCE">
+<span class="sig-name descname"><span class="pre">FAST_INFERENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fast_inference'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.FAST_INFERENCE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.MULTILINGUAL">
+<span class="sig-name descname"><span class="pre">MULTILINGUAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'multilingual'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.MULTILINGUAL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.CLASSIFICATION">
+<span class="sig-name descname"><span class="pre">CLASSIFICATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'classification'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.CLASSIFICATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.CREATIVE_WRITING">
+<span class="sig-name descname"><span class="pre">CREATIVE_WRITING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'creative_writing'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.CREATIVE_WRITING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.DATA_ANALYSIS">
+<span class="sig-name descname"><span class="pre">DATA_ANALYSIS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'data_analysis'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.DATA_ANALYSIS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.EMBEDDINGS">
+<span class="sig-name descname"><span class="pre">EMBEDDINGS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'embeddings'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.EMBEDDINGS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskType.REAL_TIME_INFO">
+<span class="sig-name descname"><span class="pre">REAL_TIME_INFO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'real_time_info'</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType.REAL_TIME_INFO" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AI_ORCHESTRATOR_ULTIMATE.</span></span><span class="sig-name descname"><span class="pre">AIModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strengths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType" title="AI_ORCHESTRATOR_ULTIMATE.TaskType"><span class="pre">TaskType</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost_per_1k_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality_score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Configuration for an AI model</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.client">
+<span class="sig-name descname"><span class="pre">client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.client" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.strengths">
+<span class="sig-name descname"><span class="pre">strengths</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType" title="AI_ORCHESTRATOR_ULTIMATE.TaskType"><span class="pre">TaskType</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.strengths" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.cost_per_1k_tokens">
+<span class="sig-name descname"><span class="pre">cost_per_1k_tokens</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.cost_per_1k_tokens" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.speed_score">
+<span class="sig-name descname"><span class="pre">speed_score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.speed_score" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.quality_score">
+<span class="sig-name descname"><span class="pre">quality_score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.quality_score" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.max_tokens">
+<span class="sig-name descname"><span class="pre">max_tokens</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.max_tokens" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.enabled">
+<span class="sig-name descname"><span class="pre">enabled</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.enabled" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIModel.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strengths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType" title="AI_ORCHESTRATOR_ULTIMATE.TaskType"><span class="pre">TaskType</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost_per_1k_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality_score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIModel.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AI_ORCHESTRATOR_ULTIMATE.</span></span><span class="sig-name descname"><span class="pre">TaskResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execution_time:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens_used:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata:</span> <span class="pre">~typing.Dict[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~typing.Any]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#TaskResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Result from an AI model</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult.model_name">
+<span class="sig-name descname"><span class="pre">model_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult.model_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult.response" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult.confidence">
+<span class="sig-name descname"><span class="pre">confidence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult.confidence" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult.execution_time">
+<span class="sig-name descname"><span class="pre">execution_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult.execution_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult.tokens_used">
+<span class="sig-name descname"><span class="pre">tokens_used</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult.tokens_used" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult.cost">
+<span class="sig-name descname"><span class="pre">cost</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult.cost" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult.metadata" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.TaskResult.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execution_time:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens_used:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata:</span> <span class="pre">~typing.Dict[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~typing.Any]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AI_ORCHESTRATOR_ULTIMATE.</span></span><span class="sig-name descname"><span class="pre">AIOrchestrator</span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>The Ultimate AI Orchestrator</p>
+<p>Intelligently routes tasks to the best AI model(s) based on:
+- Task type
+- Quality requirements
+- Speed requirements
+- Cost constraints
+- Multi-model consensus needs</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.select_best_model">
+<span class="sig-name descname"><span class="pre">select_best_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType" title="AI_ORCHESTRATOR_ULTIMATE.TaskType"><span class="pre">TaskType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'balanced'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.select_best_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.select_best_model" title="Link to this definition"></a></dt>
+<dd><p>Select the best AI model for a given task</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_type</strong> – The type of task to perform</p></li>
+<li><p><strong>priority</strong> – What to optimize for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Model key name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.query_model">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult" title="AI_ORCHESTRATOR_ULTIMATE.TaskResult"><span class="pre">TaskResult</span></a></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.query_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.query_model" title="Link to this definition"></a></dt>
+<dd><p>Query a specific AI model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.multi_model_consensus">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">multi_model_consensus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType" title="AI_ORCHESTRATOR_ULTIMATE.TaskType"><span class="pre">TaskType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_models</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.14)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult" title="AI_ORCHESTRATOR_ULTIMATE.TaskResult"><span class="pre">TaskResult</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.multi_model_consensus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.multi_model_consensus" title="Link to this definition"></a></dt>
+<dd><p>Get consensus from multiple AI models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> – The question/task</p></li>
+<li><p><strong>task_type</strong> – Type of task</p></li>
+<li><p><strong>num_models</strong> – Number of models to query</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Best response and all results</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.analyze_codebase">
+<span class="sig-name descname"><span class="pre">analyze_codebase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.analyze_codebase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.analyze_codebase" title="Link to this definition"></a></dt>
+<dd><p>Intelligent codebase analysis using multiple AIs</p>
+<p>Uses:
+- Claude for deep analysis
+- DeepSeek for code understanding
+- OpenAI for summary</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.generate_documentation">
+<span class="sig-name descname"><span class="pre">generate_documentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'comprehensive'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.generate_documentation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.generate_documentation" title="Link to this definition"></a></dt>
+<dd><p>Generate documentation using best model for the job</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.save_session_report">
+<span class="sig-name descname"><span class="pre">save_session_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ai_orchestrator_session.json'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.save_session_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.AIOrchestrator.save_session_report" title="Link to this definition"></a></dt>
+<dd><p>Save session report with all tasks</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AI_ORCHESTRATOR_ULTIMATE.main">
+<span class="sig-prename descclassname"><span class="pre">AI_ORCHESTRATOR_ULTIMATE.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AI_ORCHESTRATOR_ULTIMATE.main" title="Link to this definition"></a></dt>
+<dd><p>Demo of the AI Orchestrator</p>
+</dd></dl>
+
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AI_ORCHESTRATOR_ULTIMATE.</span></span><span class="sig-name descname"><span class="pre">AIOrchestrator</span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>The Ultimate AI Orchestrator</p>
+<p>Intelligently routes tasks to the best AI model(s) based on:
+- Task type
+- Quality requirements
+- Speed requirements
+- Cost constraints
+- Multi-model consensus needs</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">select_best_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType" title="AI_ORCHESTRATOR_ULTIMATE.TaskType"><span class="pre">TaskType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'balanced'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.select_best_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Select the best AI model for a given task</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_type</strong> – The type of task to perform</p></li>
+<li><p><strong>priority</strong> – What to optimize for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Model key name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult" title="AI_ORCHESTRATOR_ULTIMATE.TaskResult"><span class="pre">TaskResult</span></a></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.query_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Query a specific AI model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">multi_model_consensus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskType" title="AI_ORCHESTRATOR_ULTIMATE.TaskType"><span class="pre">TaskType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_models</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.14)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#AI_ORCHESTRATOR_ULTIMATE.TaskResult" title="AI_ORCHESTRATOR_ULTIMATE.TaskResult"><span class="pre">TaskResult</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.multi_model_consensus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Get consensus from multiple AI models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> – The question/task</p></li>
+<li><p><strong>task_type</strong> – Type of task</p></li>
+<li><p><strong>num_models</strong> – Number of models to query</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Best response and all results</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">analyze_codebase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.analyze_codebase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>Intelligent codebase analysis using multiple AIs</p>
+<p>Uses:
+- Claude for deep analysis
+- DeepSeek for code understanding
+- OpenAI for summary</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">generate_documentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'comprehensive'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.generate_documentation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Generate documentation using best model for the job</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">save_session_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ai_orchestrator_session.json'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/AI_ORCHESTRATOR_ULTIMATE.html#AIOrchestrator.save_session_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Save session report with all tasks</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="basic-usage">
+<h3>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">AI_ORCHESTRATOR_ULTIMATE</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Example usage here</span>
+</pre></div>
+</div>
+</section>
+<section id="advanced-usage">
+<h3>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Advanced example here</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h2>
+<p>Full API documentation with all methods and parameters.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Advanced AI Systems.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

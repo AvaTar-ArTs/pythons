@@ -1,0 +1,189 @@
+file,loads_env,uses_env_d,needs_fix,patterns
+ai-stability-code.py,YES,NO,YES,
+analyze-folder-reader.py,YES,NO,YES,os.getenv()
+backup-avatararts-system.py,YES,NO,YES,
+backupcsv.py,YES,NO,YES,
+button.py,YES,NO,YES,
+buttons.py,YES,NO,YES,
+chat-base.py,YES,NO,YES,
+cli-config-manager.py,YES,NO,YES,
+cli.py,YES,NO,YES,"os.getenv(), API_KEY ="
+cloud-services-aws-streamlit.py,YES,NO,YES,os.getenv()
+conversation.py,YES,NO,YES,
+custom-thumbnail.py,YES,NO,YES,
+devops.py,YES,NO,YES,
+documents.py,YES,NO,YES,
+dupes.py,YES,NO,YES,
+evaluate.py,YES,NO,YES,"os.environ[], API_KEY ="
+evaluation.py,YES,NO,YES,
+ffmpeg-robot.py,YES,NO,YES,
+files-csv.py,YES,NO,YES,
+finetune-unsloth.py,YES,NO,YES,os.environ[]
+gdrive.py,YES,NO,YES,
+groq-cli.py,YES,NO,YES,"os.getenv(), API_KEY ="
+image-pics.py,YES,NO,YES,
+instagram-processor.py,YES,NO,YES,
+kernelapp.py,YES,NO,YES,
+launcher.py,YES,NO,YES,
+model-evaluation-evaluate.py,YES,NO,YES,"os.environ[], API_KEY ="
+nativetypes.py,YES,NO,YES,
+openai.py,YES,NO,YES,"os.getenv(), API_KEY ="
+optimizer.py,YES,NO,YES,
+other.py,YES,NO,YES,
+other_simple.py,YES,NO,YES,
+pip_installer_bootstrap.py,YES,NO,YES,
+processing-csv-docs_simple.py,YES,NO,YES,
+processing-docs.py,YES,NO,YES,
+processing-doubles.py,YES,NO,YES,
+processing.py,YES,NO,YES,
+processor.py,YES,NO,YES,
+rename.py,YES,NO,YES,
+sample-config.py,YES,NO,YES,API_KEY =
+screenshot-generate.py,YES,NO,YES,
+scripts.py,YES,NO,YES,
+search-claude-conversations.py,YES,NO,YES,
+social-platforms-instagram-config.py,YES,NO,YES,
+sorts.py,YES,NO,YES,
+stability.py,YES,NO,YES,os.environ[]
+sticker-download.py,YES,NO,YES,
+transcript.py,YES,NO,YES,"os.getenv(), API_KEY ="
+upload_api.py,YES,NO,YES,os.environ[]
+upscale-sips.py,YES,NO,YES,
+youtube-analyze-files.py,YES,NO,YES,
+youtube-button.py,YES,NO,YES,
+youtube-configure-opik.py,YES,NO,YES,os.environ[]
+youtube-convert-video.py,YES,NO,YES,
+youtube-generater.py,YES,NO,YES,
+youtube-get-creation.py,YES,NO,YES,
+youtube-pexels_video_downloader.py,YES,NO,YES,
+2leomotion.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+FIX_ENV_IMPORTS.py,YES,YES,NO,"load_dotenv(), load_dotenv(.env), load_dotenv(path), ~/.env.d"
+Multi-Modal.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+STANDARD_ENV_LOADER.py,YES,YES,NO,"Path.home()/.env.d, ~/.env.d"
+advanced_content_pipeline.py,YES,YES,NO,"os.getenv(), Path.home()/.env.d, ~/.env.d"
+ai_deep_analyzer.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d"
+alchemy-quiz.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+analyze-mp3-transcript-prompts.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d, API_KEY ="
+analyze-reader.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d, API_KEY ="
+analyze-shorts-info_code.py,YES,YES,NO,~/.env.d
+analyzer.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+api.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+api_key_inventory.py,YES,YES,NO,"Path.home()/.env.d, ~/.env.d"
+api_key_inventory_v2.py,YES,YES,NO,Path.home()/.env.d
+audio-analyzer.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+audio-thinketh.py,YES,YES,NO,"load_dotenv(path), ~/.env.d"
+autofill.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d, API_KEY ="
+autonomous-content-agency.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+batch-1.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+batch-image.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+batch-info.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+batch.py.bak.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+chatgpt.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d, API_KEY ="
+classify.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+content-factory.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+convert-json-writer.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+convert-loop.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+convert-loop2.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+convert.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+createimages.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+dalle-prompt.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+deep-code.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d"
+deepgram-updated.py,YES,YES,NO,"os.getenv(), ~/.env.d, API_KEY ="
+deepgram_test.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d, API_KEY ="
+download-1.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+downloader-progress.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+dthumb.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+emotional.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+etsy-image-metadata.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+fancyimg.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+fancyname.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+final_consolidation.py,YES,YES,NO,Path.home()/.env.d
+generate-emotional-audio.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+generatetexts-1.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+get-threads.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+github_repo_audit.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+goapi.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d, API_KEY ="
+hardcoded.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d, API_KEY ="
+ident.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+image-aws_sqs_queue.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+image-downloadr_api.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+image-enrichment.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+image-metadata-gpt4o.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d, API_KEY ="
+image-reader.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d, API_KEY ="
+image-taggy.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d, API_KEY ="
+instagram-openai-download.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+intelligent_code_orchestrator.py,YES,YES,NO,"os.getenv(), Path.home()/.env.d"
+intelligent_renamer-1.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d"
+leonardo-convert.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+leonardo-download-1.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+loop-upscale.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+lyrics-storyboards.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+manage-repo.py,YES,YES,NO,API_KEY =
+master-rename-utility.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+master_comprehensive_analyzer.py,YES,YES,NO,~/.env.d
+media-processing-audio.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+mp3_batch_timestamper.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+mp4s.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+named.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+openai-content-creation-nocturne.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d, API_KEY ="
+openai-image-generater.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+openai-media-processing-image.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+openai-missingapikeyerror.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+openai-setup.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+openai-transcribe-audio.py,YES,YES,NO,~/.env.d
+parse_api.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+podcast-studio.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+process-proc_api.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+process-remix.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+process.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+processor-transcript.py,YES,YES,NO,"os.getenv(), Path.home()/.env.d, ~/.env.d, API_KEY ="
+python-namer.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+research-assistant.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+resize.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+run-all-renamers.py,YES,YES,NO,~/.env.d
+scraping-download-intelligent.py,YES,YES,NO,~/.env.d
+scripty.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+secret.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+setup.py,YES,YES,NO,"~/.env.d, API_KEY ="
+shorts-code.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+simplify.py,YES,YES,NO,~/.env.d
+song-process.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+story-section.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+story-trans.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+storykeytrans.py,YES,YES,NO,"load_dotenv(), ~/.env.d"
+subredditsentiment-apps.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+synthesize.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+system-monitor.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+textgenerator-1.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+textgenerator.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+thinketh_tts_adaptive.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+thinketh_tts_asmr.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+thinketh_tts_main.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+thinketh_tts_scripty.py,YES,YES,NO,"load_dotenv(path), ~/.env.d"
+thinketh_tts_universal.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+thumbnail.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+transcribe-analyze-local.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+transcriber.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+transcript-prompts.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+transcription.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+universe4.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+uploader.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+upscalecreateimages.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+upscaled.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+validate-json-reader.py,YES,YES,NO,~/.env.d
+verbose-transcriber.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+verify-connection.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+verify.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+whisper-transcript.py,YES,YES,NO,"load_dotenv(path), os.getenv(), ~/.env.d"
+ygpt-utils-textgenerator.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+youtube-content-maker.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+youtube-generate-content.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+youtube-load.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+youtube-media-processing-video-extract_simple.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+youtube-upload-file.py,YES,YES,NO,"load_dotenv(), os.environ[], os.getenv(), ~/.env.d"
+youtube-upload-video.py,YES,YES,NO,"os.getenv(), ~/.env.d"
+youtube-video-downloadr-csv-batch.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+youtube-ytdownloadthumb.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"
+youtube-ytube-simple.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+youtube-ytube.py,YES,YES,NO,"load_dotenv(), os.getenv(), ~/.env.d"
+youtube-ytubedlthumbs.py,YES,YES,NO,"os.environ[], os.getenv(), Path.home()/.env.d, ~/.env.d"

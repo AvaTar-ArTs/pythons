@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="DiScO">
+    <meta property="og:description" content="Default description of my gallery">
+    <meta property="og:image" content="/images/photos/02.jpg">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="DiScO">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="DiScO">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="data/public/css/photoswipe.css">
+    <link rel="stylesheet" href="data/public/css/default-skin.css">
+    <link rel="stylesheet" href="data/public/css/main.css">
+    <!-- Removed duplicate main.css link -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Λ∀ʌ†ʌʀ 🦄 ∆ʀ†s</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Go to top" style="display:none;">Top</button>
+    <button onclick="jumpDown()" id="jumpBtn" title="Down" aria-label="Down" style="display:none;">Jump Down</button>
+    <!-- Navigation menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="https://avatararts.org">Λ∀ʌ†ʌʀ 🦄 ∆ʀ†s</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://avatararts.org/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.avatararts.org/dalle.html">GaLLerY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/@iChoake/shorts">Shorts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/@iChoake">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://avatararts.org/form.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col gallery-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col gallery-section">
+                            <h2>DiScO</h2>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col gallery">
+                            <a href="images/photos/02.jpg" class="gallery-photo" data-index="0" data-type="image" data-gallery="0" data-width="3585" data-height="2017" data-date="" style="--w: 284; --h: 160">
+                                <img src="images/thumbnails/02.jpg" class="thumbnail rounded" alt="Gallery Photo" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END GALLERY DESCRIPTIONS -->
+
+                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="pswp__bg"></div>
+                    <div class="pswp__scroll-wrap">
+                        <div class="pswp__container">
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                        </div>
+                        <div class="pswp__ui pswp__ui--hidden">
+                            <div class="pswp__top-bar">
+                                <div class="pswp__counter"></div>
+                                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                                <button class="pswp__button pswp__button--share" title="Share"></button>
+                                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                                <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                        <div class="pswp__preloader__cut">
+                                            <div class="pswp__preloader__donut"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                <div class="pswp__share-tooltip"></div>
+                            </div>
+                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                            <div class="pswp__caption">
+                                <div class="pswp__caption__center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="container-fluid text-center">
+                    <p>
+                        <a rel="noreferrer" href="https://www.avatararts.org">Λ∀ʌ†ʌʀ 🦄 ∆ʀ†s</a>
+                    </p>
+                </footer>
+
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                <script src="js/photoswipe.min.js"></script>
+                <script src="js/photoswipe-ui-default.min.js"></script>
+                <script src="js/main.js"></script>
+                <script>
+                    // Get the button elements
+                    let myBtn = document.getElementById("myBtn");
+                    let jumpBtn = document.getElementById("jumpBtn");
+                    // When the user scrolls down 20px from the top of the document, show the buttons
+                    window.onscroll = function() {
+                        scrollFunction();
+                    };
+
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            myBtn.style.display = "block"; // Show "Top" button
+                            jumpBtn.style.display = "block"; // Show "Jump Down" button
+                        } else {
+                            myBtn.style.display = "none"; // Hide buttons if not scrolled down
+                            jumpBtn.style.display = "none";
+                        }
+                    }
+                    // Scroll to the top when the "Top" button is clicked
+                    function topFunction() {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        }); // Use smooth scroll
+                    }
+                    // Scroll down when the "Jump Down" button is clicked
+                    function jumpDown() {
+                        window.scrollBy({
+                            top: window.innerHeight,
+                            behavior: 'smooth'
+                        }); // Smooth scroll down one viewport
+                    }
+                </script>
+                <script>
+                    // Disable right click and save as
+                    document.addEventListener("contextmenu", function(event) {
+                        event.preventDefault();
+                    });
+                    document.addEventListener("keydown", function(event) {
+                        // Disable F12 (Inspect), Ctrl+Shift+I/C/J, and Ctrl+U
+                        if (
+                            event.keyCode === 123 ||
+                            (event.ctrlKey && event.shiftKey && [73, 67, 74].includes(event.keyCode)) ||
+                            (event.ctrlKey && event.keyCode === 85)
+                        ) {
+                            event.preventDefault();
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

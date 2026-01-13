@@ -1,0 +1,1142 @@
+{
+  "timestamp": "20251026_032817",
+  "total_directories": 250,
+  "total_loose_files": 208,
+  "classification": {
+    "excellent": [
+      [
+        "Automatic-Video-Generator-for-youtube",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "Drive-image-link-converter",
+        "Action-based: contains \"convert\""
+      ],
+      [
+        "Python-organize",
+        "Action-based: contains \"organize\""
+      ],
+      [
+        "RedditVideoMakerBot-master",
+        "Action-based: contains \"make\""
+      ],
+      [
+        "SEO-Link-Building-Rank-in-Google-with-EDU-and-GOV-Backlinks",
+        "Action-based: contains \"build\""
+      ],
+      [
+        "TikTok-Compilation-Video-Generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "Tiktok-Trending-Data-Scraper",
+        "Action-based: contains \"scrape\""
+      ],
+      [
+        "TwitchClipGenerator-main",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "TwitchCompilationCreator",
+        "Action-based: contains \"creator\""
+      ],
+      [
+        "ai-image-generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "ai-text-generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "analyzer_prompt-trans",
+        "Action-based: contains \"analyzer\""
+      ],
+      [
+        "api-csv-processor",
+        "Action-based: contains \"processor\""
+      ],
+      [
+        "audio-converter",
+        "Action-based: contains \"convert\""
+      ],
+      [
+        "audio-processing",
+        "Action-based: contains \"process\""
+      ],
+      [
+        "audio-transcriber",
+        "Action-based: contains \"transcribe\""
+      ],
+      [
+        "automation",
+        "Action-based: contains \"automation\""
+      ],
+      [
+        "automation_platforms",
+        "Action-based: contains \"automation\""
+      ],
+      [
+        "batch-processor",
+        "Action-based: contains \"processor\""
+      ],
+      [
+        "bot-automation",
+        "Action-based: contains \"automation\""
+      ],
+      [
+        "clean-organizer",
+        "Action-based: contains \"organizer\""
+      ],
+      [
+        "cross-stitch-pattern-maker",
+        "Action-based: contains \"make\""
+      ],
+      [
+        "csv-processor",
+        "Action-based: contains \"processor\""
+      ],
+      [
+        "data-analyzer",
+        "Action-based: contains \"analyzer\""
+      ],
+      [
+        "doc-generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "download-all-the-gifs",
+        "Action-based: contains \"download\""
+      ],
+      [
+        "file-downloader",
+        "Action-based: contains \"download\""
+      ],
+      [
+        "file-organizer",
+        "Action-based: contains \"organizer\""
+      ],
+      [
+        "gallery-generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "gemini_storybook_downloader",
+        "Action-based: contains \"download\""
+      ],
+      [
+        "html-generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "image-converter",
+        "Action-based: contains \"convert\""
+      ],
+      [
+        "image-processing",
+        "Action-based: contains \"process\""
+      ],
+      [
+        "instagram-follower-scraper",
+        "Action-based: contains \"scrape\""
+      ],
+      [
+        "json-processor",
+        "Action-based: contains \"processor\""
+      ],
+      [
+        "media_processing",
+        "Action-based: contains \"process\""
+      ],
+      [
+        "pdf-converter",
+        "Action-based: contains \"convert\""
+      ],
+      [
+        "photoshop-mockup-automation",
+        "Action-based: contains \"automation\""
+      ],
+      [
+        "react-editor",
+        "Action-based: contains \"editor\""
+      ],
+      [
+        "redditVideoGenerator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "reddit_video_maker",
+        "Action-based: contains \"make\""
+      ],
+      [
+        "scrape-youtube-channel-videos-url",
+        "Action-based: contains \"scrape\""
+      ],
+      [
+        "selenium-image-scraper",
+        "Action-based: contains \"scrape\""
+      ],
+      [
+        "social-media-automation",
+        "Action-based: contains \"automation\""
+      ],
+      [
+        "thumbnail-creator",
+        "Action-based: contains \"creator\""
+      ],
+      [
+        "thumbnail-generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "tiktok-generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "tiktok-video-downloader",
+        "Action-based: contains \"download\""
+      ],
+      [
+        "transcribe-analysis",
+        "Action-based: contains \"transcribe\""
+      ],
+      [
+        "transcription_analyzer",
+        "Action-based: contains \"analyzer\""
+      ],
+      [
+        "upscale-python",
+        "Action-based: contains \"upscale\""
+      ],
+      [
+        "upscaler",
+        "Action-based: contains \"upscaler\""
+      ],
+      [
+        "url-image-downloader",
+        "Action-based: contains \"download\""
+      ],
+      [
+        "video-converter",
+        "Action-based: contains \"convert\""
+      ],
+      [
+        "video-downloader",
+        "Action-based: contains \"download\""
+      ],
+      [
+        "video-editor",
+        "Action-based: contains \"editor\""
+      ],
+      [
+        "video-generator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "video-processing",
+        "Action-based: contains \"process\""
+      ],
+      [
+        "videoGenerator",
+        "Action-based: contains \"generator\""
+      ],
+      [
+        "vue-editor",
+        "Action-based: contains \"editor\""
+      ],
+      [
+        "web-scraper",
+        "Action-based: contains \"scrape\""
+      ],
+      [
+        "youtube-automation",
+        "Action-based: contains \"automation\""
+      ],
+      [
+        "youtube-downloader",
+        "Action-based: contains \"download\""
+      ],
+      [
+        "youtube_automation",
+        "Action-based: contains \"automation\""
+      ]
+    ],
+    "good": [
+      [
+        "Ai-cLi",
+        "Multi-part descriptive name"
+      ],
+      [
+        "As-a-Man-Thinketh",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Auto-YouTube",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Claude-Courses",
+        "Multi-part descriptive name"
+      ],
+      [
+        "FB-Script-Auto-Post-All-Group",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Instagram-Bot",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Instagram-Mass-report",
+        "Multi-part descriptive name"
+      ],
+      [
+        "LLM-Engineers-Handbook-main",
+        "Multi-part descriptive name"
+      ],
+      [
+        "LLM-engineer-handbook-main",
+        "Multi-part descriptive name"
+      ],
+      [
+        "POD-auto",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Python-and-OpenAI-main",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Redbubble-Auto-Uploader-stickers",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Reddit-Tiktok-Video-Bot",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Riddle-Game",
+        "Multi-part descriptive name"
+      ],
+      [
+        "TG-MegaBot",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Twitch-Best-Of",
+        "Multi-part descriptive name"
+      ],
+      [
+        "Twitch-TikTok-Youtube-Viewbot",
+        "Multi-part descriptive name"
+      ],
+      [
+        "__pycache__",
+        "Multi-part descriptive name"
+      ],
+      [
+        "_py_audit",
+        "Multi-part descriptive name"
+      ],
+      [
+        "_trash",
+        "Multi-part descriptive name"
+      ],
+      [
+        "ai-chatbot",
+        "Multi-part descriptive name"
+      ],
+      [
+        "ai-comic-factory",
+        "Multi-part descriptive name"
+      ],
+      [
+        "api-client",
+        "Multi-part descriptive name"
+      ],
+      [
+        "api-development",
+        "Multi-part descriptive name"
+      ],
+      [
+        "audio_video",
+        "Multi-part descriptive name"
+      ],
+      [
+        "cli-tool",
+        "Multi-part descriptive name"
+      ],
+      [
+        "code_browser",
+        "Multi-part descriptive name"
+      ],
+      [
+        "comparison_analysis",
+        "Multi-part descriptive name"
+      ],
+      [
+        "content-generation",
+        "Multi-part descriptive name"
+      ],
+      [
+        "content_creation",
+        "Multi-part descriptive name"
+      ],
+      [
+        "core_ai_analysis",
+        "Multi-part descriptive name"
+      ],
+      [
+        "data-analysis",
+        "Multi-part descriptive name"
+      ],
+      [
+        "data-extraction",
+        "Multi-part descriptive name"
+      ],
+      [
+        "data-extractor",
+        "Multi-part descriptive name"
+      ],
+      [
+        "data_analysis",
+        "Multi-part descriptive name"
+      ],
+      [
+        "data_management",
+        "Multi-part descriptive name"
+      ],
+      [
+        "database-tool",
+        "Multi-part descriptive name"
+      ],
+      [
+        "deepseek_to_pages_v3",
+        "Multi-part descriptive name"
+      ],
+      [
+        "dependency-manager",
+        "Multi-part descriptive name"
+      ],
+      [
+        "file-uploader",
+        "Multi-part descriptive name"
+      ],
+      [
+        "fiverr-scraping-api",
+        "Multi-part descriptive name"
+      ],
+      [
+        "functional_analysis",
+        "Multi-part descriptive name"
+      ],
+      [
+        "gdrive-url-extractor",
+        "Multi-part descriptive name"
+      ],
+      [
+        "github_repo",
+        "Multi-part descriptive name"
+      ],
+      [
+        "gui-app",
+        "Multi-part descriptive name"
+      ],
+      [
+        "html_portfolio",
+        "Multi-part descriptive name"
+      ],
+      [
+        "image-resizer",
+        "Multi-part descriptive name"
+      ],
+      [
+        "intelligent_articles",
+        "Multi-part descriptive name"
+      ],
+      [
+        "link-dest_-t_when_only_one_snapshot",
+        "Multi-part descriptive name"
+      ],
+      [
+        "llm-course-main",
+        "Multi-part descriptive name"
+      ],
+      [
+        "long_and_short_args",
+        "Multi-part descriptive name"
+      ],
+      [
+        "machine-learning",
+        "Multi-part descriptive name"
+      ],
+      [
+        "medium_articles",
+        "Multi-part descriptive name"
+      ],
+      [
+        "merged_portfolio",
+        "Multi-part descriptive name"
+      ],
+      [
+        "monitor-tool",
+        "Multi-part descriptive name"
+      ],
+      [
+        "native_cp_al",
+        "Multi-part descriptive name"
+      ],
+      [
+        "netlify-gallery-deployer",
+        "Multi-part descriptive name"
+      ],
+      [
+        "playlist-manager",
+        "Multi-part descriptive name"
+      ],
+      [
+        "podcast_to_video_v2",
+        "Multi-part descriptive name"
+      ],
+      [
+        "reddit-text-extract",
+        "Multi-part descriptive name"
+      ],
+      [
+        "reddit-to-instagram-bot",
+        "Multi-part descriptive name"
+      ],
+      [
+        "relative_delete_bugfix",
+        "Multi-part descriptive name"
+      ],
+      [
+        "remove-bg-cli",
+        "Multi-part descriptive name"
+      ],
+      [
+        "rsnapshot_meta",
+        "Multi-part descriptive name"
+      ],
+      [
+        "rsync-exitcode",
+        "Multi-part descriptive name"
+      ],
+      [
+        "rsync-macos-utility",
+        "Multi-part descriptive name"
+      ],
+      [
+        "seo-optimizer",
+        "Multi-part descriptive name"
+      ],
+      [
+        "shared_libraries",
+        "Multi-part descriptive name"
+      ],
+      [
+        "simplegallery-bin",
+        "Multi-part descriptive name"
+      ],
+      [
+        "snapshot_root_with_space",
+        "Multi-part descriptive name"
+      ],
+      [
+        "spicetify-themes",
+        "Multi-part descriptive name"
+      ],
+      [
+        "ssh_args",
+        "Multi-part descriptive name"
+      ],
+      [
+        "storyboarder_adaptive_setup",
+        "Multi-part descriptive name"
+      ],
+      [
+        "subtitle-handler",
+        "Multi-part descriptive name"
+      ],
+      [
+        "text-to-speech",
+        "Multi-part descriptive name"
+      ],
+      [
+        "tiktok-comment-liker",
+        "Multi-part descriptive name"
+      ],
+      [
+        "trashy-python",
+        "Multi-part descriptive name"
+      ],
+      [
+        "watermark-tool",
+        "Multi-part descriptive name"
+      ],
+      [
+        "web-development",
+        "Multi-part descriptive name"
+      ],
+      [
+        "web-scraping",
+        "Multi-part descriptive name"
+      ],
+      [
+        "web_scraping",
+        "Multi-part descriptive name"
+      ],
+      [
+        "youtube-python",
+        "Multi-part descriptive name"
+      ]
+    ],
+    "poor": [
+      [
+        "Assets",
+        "Single word, no clear action"
+      ],
+      [
+        "ISSUE_TEMPLATE",
+        "Contains generic term: temp"
+      ],
+      [
+        "InstaReport",
+        "Single word, no clear action"
+      ],
+      [
+        "InstagramReportBot",
+        "Single word, no clear action"
+      ],
+      [
+        "MDs",
+        "Single word, no clear action"
+      ],
+      [
+        "MIGRATION_BACKUP",
+        "Contains generic term: backup"
+      ],
+      [
+        "Nice-seemingly-macOS-backup-utility-based-on-rsync-called-grsyncx",
+        "Contains generic term: backup"
+      ],
+      [
+        "Portfolio",
+        "Single word, no clear action"
+      ],
+      [
+        "PrNdOwN",
+        "Single word, no clear action"
+      ],
+      [
+        "Resources",
+        "Single word, no clear action"
+      ],
+      [
+        "SpotifyMP3",
+        "Single word, no clear action"
+      ],
+      [
+        "Untitled",
+        "Single word, no clear action"
+      ],
+      [
+        "ai_creative_tools",
+        "Contains generic term: tools"
+      ],
+      [
+        "ai_tools",
+        "Contains generic term: tools"
+      ],
+      [
+        "apps",
+        "Contains generic term: apps"
+      ],
+      [
+        "archive",
+        "Contains generic term: archive"
+      ],
+      [
+        "archive-utility",
+        "Contains generic term: archive"
+      ],
+      [
+        "archived",
+        "Contains generic term: archive"
+      ],
+      [
+        "autoblog using the ChatGPT",
+        "Single word, no clear action"
+      ],
+      [
+        "backup-tool",
+        "Contains generic term: backup"
+      ],
+      [
+        "botty",
+        "Single word, no clear action"
+      ],
+      [
+        "clean",
+        "Single word, no clear action"
+      ],
+      [
+        "config",
+        "Single word, no clear action"
+      ],
+      [
+        "configuration",
+        "Single word, no clear action"
+      ],
+      [
+        "core_tools",
+        "Contains generic term: tools"
+      ],
+      [
+        "database",
+        "Single word, no clear action"
+      ],
+      [
+        "development_tools",
+        "Contains generic term: tools"
+      ],
+      [
+        "docs",
+        "Single word, no clear action"
+      ],
+      [
+        "documentation",
+        "Single word, no clear action"
+      ],
+      [
+        "examples",
+        "Contains generic term: examples"
+      ],
+      [
+        "experimental",
+        "Contains generic term: experimental"
+      ],
+      [
+        "experiments",
+        "Single word, no clear action"
+      ],
+      [
+        "fdupes",
+        "Single word, no clear action"
+      ],
+      [
+        "file-utilities",
+        "Contains generic term: utilities"
+      ],
+      [
+        "general-scripts",
+        "Contains generic term: scripts"
+      ],
+      [
+        "heads",
+        "Single word, no clear action"
+      ],
+      [
+        "htmlsve",
+        "Single word, no clear action"
+      ],
+      [
+        "info",
+        "Single word, no clear action"
+      ],
+      [
+        "installation",
+        "Single word, no clear action"
+      ],
+      [
+        "learning",
+        "Single word, no clear action"
+      ],
+      [
+        "libs",
+        "Single word, no clear action"
+      ],
+      [
+        "logs",
+        "Single word, no clear action"
+      ],
+      [
+        "mac",
+        "Single word, no clear action"
+      ],
+      [
+        "notebooks",
+        "Single word, no clear action"
+      ],
+      [
+        "pkg",
+        "Single word, no clear action"
+      ],
+      [
+        "plugins",
+        "Single word, no clear action"
+      ],
+      [
+        "quickstart_templates",
+        "Contains generic term: temp"
+      ],
+      [
+        "quiz329",
+        "Single word, no clear action"
+      ],
+      [
+        "redbubble.group",
+        "Single word, no clear action"
+      ],
+      [
+        "refs",
+        "Single word, no clear action"
+      ],
+      [
+        "remotes",
+        "Single word, no clear action"
+      ],
+      [
+        "riddle",
+        "Single word, no clear action"
+      ],
+      [
+        "rsync",
+        "Single word, no clear action"
+      ],
+      [
+        "run",
+        "Single word, no clear action"
+      ],
+      [
+        "savify",
+        "Single word, no clear action"
+      ],
+      [
+        "scheduler",
+        "Single word, no clear action"
+      ],
+      [
+        "simplegallery",
+        "Single word, no clear action"
+      ],
+      [
+        "snoop",
+        "Single word, no clear action"
+      ],
+      [
+        "spidy",
+        "Single word, no clear action"
+      ],
+      [
+        "src",
+        "Single word, no clear action"
+      ],
+      [
+        "tests",
+        "Contains generic term: test"
+      ],
+      [
+        "types",
+        "Single word, no clear action"
+      ],
+      [
+        "ultimate",
+        "Single word, no clear action"
+      ],
+      [
+        "uml",
+        "Single word, no clear action"
+      ],
+      [
+        "utilities",
+        "Contains generic term: utilities"
+      ],
+      [
+        "utility",
+        "Single word, no clear action"
+      ],
+      [
+        "utils",
+        "Contains generic term: utils"
+      ],
+      [
+        "voices",
+        "Single word, no clear action"
+      ],
+      [
+        "work",
+        "Single word, no clear action"
+      ]
+    ],
+    "terrible": [
+      [
+        "af",
+        "Single char or numeric directory"
+      ],
+      [
+        "b2",
+        "Single char or numeric directory"
+      ],
+      [
+        "b6",
+        "Single char or numeric directory"
+      ],
+      [
+        "b8",
+        "Single char or numeric directory"
+      ],
+      [
+        "ba",
+        "Single char or numeric directory"
+      ],
+      [
+        "bb",
+        "Single char or numeric directory"
+      ],
+      [
+        "bd",
+        "Single char or numeric directory"
+      ],
+      [
+        "bf",
+        "Single char or numeric directory"
+      ],
+      [
+        "c2",
+        "Single char or numeric directory"
+      ],
+      [
+        "c4",
+        "Single char or numeric directory"
+      ],
+      [
+        "c7",
+        "Single char or numeric directory"
+      ],
+      [
+        "c8",
+        "Single char or numeric directory"
+      ],
+      [
+        "cb",
+        "Single char or numeric directory"
+      ],
+      [
+        "d0",
+        "Single char or numeric directory"
+      ],
+      [
+        "d5",
+        "Single char or numeric directory"
+      ],
+      [
+        "d6",
+        "Single char or numeric directory"
+      ],
+      [
+        "d8",
+        "Single char or numeric directory"
+      ],
+      [
+        "dd",
+        "Single char or numeric directory"
+      ],
+      [
+        "e0",
+        "Single char or numeric directory"
+      ],
+      [
+        "e2",
+        "Single char or numeric directory"
+      ],
+      [
+        "e6",
+        "Single char or numeric directory"
+      ],
+      [
+        "e7",
+        "Single char or numeric directory"
+      ],
+      [
+        "e9",
+        "Single char or numeric directory"
+      ],
+      [
+        "ea",
+        "Single char or numeric directory"
+      ],
+      [
+        "f1",
+        "Single char or numeric directory"
+      ],
+      [
+        "f2",
+        "Single char or numeric directory"
+      ],
+      [
+        "f3",
+        "Single char or numeric directory"
+      ],
+      [
+        "f6",
+        "Single char or numeric directory"
+      ],
+      [
+        "f7",
+        "Single char or numeric directory"
+      ],
+      [
+        "f8",
+        "Single char or numeric directory"
+      ],
+      [
+        "f9",
+        "Single char or numeric directory"
+      ],
+      [
+        "fb",
+        "Single char or numeric directory"
+      ],
+      [
+        "fc",
+        "Single char or numeric directory"
+      ],
+      [
+        "fd",
+        "Single char or numeric directory"
+      ],
+      [
+        "fe",
+        "Single char or numeric directory"
+      ]
+    ]
+  },
+  "redundant_groups": {
+    "video-download": [
+      "youtube-downloader",
+      "video-downloader",
+      "tiktok-video-downloader",
+      "Auto-YouTube",
+      "youtube-python",
+      "scrape-youtube-channel-videos-url"
+    ],
+    "image-upscale": [
+      "upscaler",
+      "upscale-python"
+    ],
+    "video-generate": [
+      "video-generator",
+      "videoGenerator",
+      "Automatic-Video-Generator-for-youtube",
+      "reddit_video_maker",
+      "RedditVideoMakerBot-master",
+      "redditVideoGenerator",
+      "TikTok-Compilation-Video-Generator",
+      "tiktok-generator"
+    ],
+    "bot-social": [
+      "Instagram-Bot",
+      "instagram-follower-scraper",
+      "InstagramReportBot",
+      "InstaReport",
+      "Instagram-Mass-report",
+      "botty",
+      "FB-Script-Auto-Post-All-Group"
+    ],
+    "transcription": [
+      "transcribe-analysis",
+      "transcription_analyzer",
+      "audio-transcriber"
+    ],
+    "gallery": [
+      "gallery-generator",
+      "simplegallery",
+      "simplegallery-bin",
+      "netlify-gallery-deployer"
+    ],
+    "ai-text": [
+      "ai-text-generator",
+      "Python-and-OpenAI-main"
+    ],
+    "ai-image": [
+      "ai-image-generator",
+      "ai-comic-factory"
+    ],
+    "file-organize": [
+      "file-organizer",
+      "Python-organize",
+      "clean-organizer"
+    ],
+    "backup": [
+      "backup-tool",
+      "archive-utility"
+    ],
+    "thumbnail": [
+      "thumbnail-generator",
+      "thumbnail-creator"
+    ],
+    "web-scrape": [
+      "web-scraper",
+      "web-scraping",
+      "web_scraping",
+      "selenium-image-scraper",
+      "fiverr-scraping-api"
+    ],
+    "reddit": [
+      "reddit_video_maker",
+      "reddit-text-extract",
+      "Reddit-Tiktok-Video-Bot",
+      "reddit-to-instagram-bot"
+    ],
+    "redbubble": [
+      "Redbubble-Auto-Uploader-stickers",
+      "redbubble.group",
+      "POD-auto"
+    ],
+    "seo": [
+      "seo-optimizer",
+      "SEO-Link-Building-Rank-in-Google-with-EDU-and-GOV-Backlinks"
+    ]
+  },
+  "loose_files_by_type": {
+    ".py": 16,
+    ".csv": 29,
+    ".js": 3,
+    ".png": 12,
+    ".txt": 25,
+    ".json": 27,
+    ".seo_backup": 8,
+    ".md": 15,
+    ".zip": 15,
+    ".in": 2,
+    ".ipynb": 3,
+    ".log": 10,
+    ".css": 1,
+    "no-extension": 12,
+    ".yml": 1,
+    ".svg": 1,
+    ".ini": 1,
+    ".xml": 1,
+    ".html": 3,
+    ".mp3": 1,
+    ".bat": 1,
+    ".pl": 1,
+    ".toml": 2,
+    ".pdf": 2,
+    ".sample": 1,
+    ".am": 1,
+    ".URL": 1,
+    ".entitlements": 1,
+    ".pm": 1,
+    ".default": 1,
+    ". Gener": 1,
+    ".1": 1,
+    ".jsx": 1,
+    ".py-bak": 2,
+    ".sh": 2,
+    ".jpg": 1,
+    ".bak": 1,
+    ".plist": 1
+  }
+}

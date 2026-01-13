@@ -1,0 +1,17 @@
+project_category,file_count,total_size_mb,priority,recommended_actions
+claude_projects,287,107.29,high,Create 'Claude-Courses' folder structure; Separate course materials from general Claude content; Organize by course or tutorial topic
+data_analysis,2298,294.04,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+ai_content,190,562.45,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+youtube,110,4.68,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+notion_exports,32,19.14,medium,Create 'Notion-Exports' archive folder; Organize by export date or workspace; Consider cleaning up old exports
+python_projects,4358,1287.53,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+as_man_thinketh_project,33,0.34,medium,"Create dedicated 'As-a-Man-Thinketh' project folder; Organize by content type: audio, scripts, documentation; Keep related files together for easy project management"
+web_development,513,212.46,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+portfolio_work,484,537.45,high,Create 'Portfolio' folder with subcategories; Organize by project type or client; Keep showcase materials separate from work files
+obsidian_vault,119,84.1,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+documentation,162,1.89,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+general_files,564,172.07,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+social_media,24,0.05,medium,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+automation,167,0.41,high,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+as_man_thinketh,38,0.01,medium,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities
+obsidian,1,0.0,medium,Move to appropriate type-specific directory; Consider creating project-specific subfolders; Review for relevance and cleanup opportunities

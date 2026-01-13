@@ -1,0 +1,12 @@
+{
+  "suno_urls": [
+    "https://suno.com/playlist/07653cdf-8f72-430e-847f-9ab8ac05af40"
+  ],
+  "max_songs": 10,
+  "headless": true,
+  "dry_run": false,
+  "sheet_id": "YOUR_GOOGLE_SHEET_ID_HERE",
+  "worksheet": "Suno Data",
+  "write_mode": "append",
+  "unique_key": "songLink"
+}

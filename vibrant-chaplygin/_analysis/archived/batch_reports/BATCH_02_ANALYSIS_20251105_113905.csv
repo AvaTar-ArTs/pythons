@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+audiobook-producer.py,OpenAI TTS Audiobook Producer,,KEEP,
+automated-fixer.py,[No docstring found],,KEEP,
+automation-playwright-screenshot.py,[Reddit automation],,KEEP,
+automation-selenium-content.py,🌟 Content Generator - Quantum Creative Alchemist,,KEEP,
+autonomous-content-agency.py,🎬 Autonomous Content Agency,leonardo-autonomous-content-agency.py,RENAME,Add Leonardo prefix
+avatar-download.py,[Leonardo AI],leonardo-avatar-download.py,RENAME,Add Leonardo prefix
+avatararts-flatten.py,Final Flattening Script - Move ALL files to root and remove ALL directories,,KEEP,
+aws-polly-tts.py,[No docstring found],,KEEP,Already well-named
+aws-sqs-image-queue.py,[OpenAI integration],,KEEP,Already well-named
+backlinker.py,[No docstring found],,KEEP,
+backup-avatararts-system.py,Comprehensive Backup System for AvaTarArTs Projects,,KEEP,
+backup-installations.py,[No docstring found],,KEEP,
+backupcsv.py,[No docstring found],,KEEP,
+base-classes.py,Robust Documents Analyzer,,LIBRARY,Library/framework code - base-classes
+base-gallery-logic.py,[No docstring found],,LIBRARY,Library/framework code - base-gallery
+basic-follow-unfollow.py,This template is written by @cormo1990,,KEEP,
+basics.py,MIT License,,LIBRARY,Library/framework code - basics.py
+batch-folder-writer.py,[No docstring found],,KEEP,
+batch-image.py,[OpenAI integration],,KEEP,
+batch-info.py,[OpenAI integration],,KEEP,
+batch-processor.py,[YouTube automation],,KEEP,
+batch_transcript_finder.py,🔍 BATCH TRANSCRIPT FINDER,batch-transcript-finder.py,RENAME,Fix underscore to hyphen
+block-bots.py,instabot example,instagram-block-bots.py,RENAME,Add Instagram prefix
+bookmarks.py,[No docstring found],,KEEP,
+bot-library.py,[Instagram automation],instagram-bot-library.py,RENAME,Add Instagram prefix
+botInstagram.py,[No docstring found],bot-instagram.py,RENAME,Fix CamelCase
+botLike.py,[Instagram automation],bot-like.py,RENAME,Fix CamelCase
+bot_photo.py,[Instagram automation],bot-photo.py,RENAME,Fix underscore to hyphen
+brand-builder.py,🎨 Multi-Modal Brand Builder,leonardo-brand-builder.py,RENAME,Add Leonardo prefix
+brand.py,[No docstring found],,KEEP,
+breakdown.py,[OpenAI integration],,KEEP,
+bubblespider-amazon-scraper.py,[No docstring found],,KEEP,
+build.py,[No docstring found],,NEEDS_REVIEW,Too generic - needs specific context
+bulk-renamer.py,Intelligent Bulk File Renamer,instagram-bulk-renamer.py,RENAME,Add Instagram prefix
+business-intelligence.py,📊 AI Business Intelligence Platform,,KEEP,
+button.py,[YouTube automation],,LIBRARY,Library/framework code - button.py
+buttons.py,[YouTube automation],,LIBRARY,Library/framework code - buttons.py
+cache.py,[Instagram automation],,LIBRARY,Library/framework code - cache.py
+calculator.py,Simple calculator tool for basic math operations.,,KEEP,
+capture.py,Tests for IPython.utils.capture,,KEEP,
+catalog-to-csv.py,analyze_images_to_csv.py,,KEEP,
+categorizer.py,[OpenAI integration],,KEEP,
+category-readme-generator.py,Intelligent Category README Generator,,KEEP,
+chat-base.py,[No docstring found],,KEEP,
+chatgpt-conversation-exporter.py,ChatGPT Conversation Exporter,,KEEP,
+chatgpt.py,ChatGPT Agent - A simple conversational AI agent using OpenAI's API,,KEEP,
+chatprompt.py,Shared helpers for chat-based OpenAI interactions.,,KEEP,
+check-1.py,[Anthropic Claude],,KEEP,
+check-modules.py,[No docstring found],,KEEP,
+check-quality.py,Check Current Quality Status,,KEEP,

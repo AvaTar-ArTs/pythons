@@ -1,0 +1,37 @@
+current,new,should_rename,purpose,detected_type
+pickleshare.py,pickleshare.py,False,PickleShare - a small 'shelve' like datastore with concurrency support,unknown
+pip_build_environment.py,pip_build_environment.py,False,No docstring,unknown
+pip_install_command.py,pip_install_command.py,False,"If the filepath already exists, append _1, _2, ... until a unique filename is found.",unknown
+pip_installer_bootstrap.py,download-product-images.py,True,Install setuptools only if absent and not excluded.,"news, images, etsy"
+pipeline.py,audio-transcription-pipeline.py,True,Shared audio transcription + analysis pipeline helpers.,transcript
+playing.py,playing.py,False,This template is written by @boldestfortune,unknown
+playlist.py,playlist.py,False,No docstring,unknown
+podcast-studio.py,podcast-studio.py,False,🎙️ AI Podcast Studio,"news, transcript"
+polly.py,aws-polly-tts.py,True,__init__ function.,audio
+posttextparser.py,posttextparser.py,False,posttextparser function.,unknown
+prepare_missing_song_folders.py,prepare-missing-song-folders.py,True,📂 PREPARE FOLDERS FOR MISSING SONGS,"duplicates, images, transcript"
+preservation-renamer.py,find-duplicates.py,True,Python Preservation Renamer,"duplicates, images"
+printify-organize.py,organize-printify-products.py,True,get_dominant_color function.,"images, etsy"
+process-audio.py,find-duplicates.py,True,Gemini Storybook Downloader (macOS-friendly),"duplicates, images"
+process-csv.py,find-duplicates.py,True,📊 ANALYSIS EXPORT TO CSV,duplicates
+process-json.py,download-product-images.py,True,This script is intended for use as a GYP_GENERATOR. It takes as input (by way of,"images, etsy"
+process-proc_api.py,process-proc_api.py,False,,etsy
+process-proc_simple.py,extract-news-to-audio.py,True,No docstring,"news, audio, transcript"
+process-proc-2.py,quantumforge-cli.py,True,QuantumForge CLI - Where Order Meets Chaos,"images, quantum"
+process-remix.py,process-remix.py,False,No docstring,"etsy, transcript"
+process.py,process.py,False,Convert seconds into MM:SS format.,"etsy, transcript"
+processing-categories.py,processing-categories.py,False,scan_directory function.,images
+processing-csv-docs_simple.py,processing-csv-docs_simple.py,False,No docstring,unknown
+processing-docs.py,processing-docs.py,False,"Recursively walks through each directory in 'directories', excluding paths",images
+processing-doubles.py,remove-duplicate-files.py,True,Check if a given path matches any of the exclusion patterns.,duplicates
+processing-execute.py,execute-organization-plan.py,True,Execute Smart Organization Plan,unknown
+processing-fdupes.py,find-duplicates-fdupes.py,True,No docstring,duplicates
+processing-imove.py,processing-imove.py,False,No docstring,images
+processing-json.py,download-giphy-gifs.py,True,download gif from giphy by giphy id,giphy
+processing-pandas-docs.py,merge-doc-csvs.py,True,"Reads multiple CSV files from specified paths, concatenates them, and","csv_combine, duplicates"
+processing-pandas-json.py,convert-conversations-to-csv.py,True,No docstring,conversations
+processing-pandas.py,download-product-images.py,True,No docstring,"images, etsy"
+processing.py,find-duplicates.py,True,Check if a given path matches any of the exclusion patterns.,duplicates
+processor-transcript.py,analyze-transcript.py,True,Main entry point for the Transcription Analyzer example usage,transcript
+processor.py,processor.py,False,No docstring,unknown
+processr.py,process-images.py,True,No docstring,images

@@ -1,0 +1,11 @@
+action,original,new,status
+RENAME,delete-posts.py,instagram-delete-posts.py,completed
+RENAME,directory-organizer.py,instagram-directory-organizer.py,completed
+RENAME,discography.py,suno-discography.py,completed
+RENAME,ecosystem-insights.py,instagram-ecosystem-insights.py,completed
+RENAME,ecosystem-master.py,instagram-ecosystem-master.py,completed
+RENAME,eliminate.py,instagram-eliminate.py,completed
+LIBRARY,displayhook.py,_library/displayhook.py,completed
+LIBRARY,encoding.py,_library/encoding.py,completed
+LIBRARY,events.py,_library/events.py,completed
+DELETE,execute_archive_cleanup_merge.py,,completed

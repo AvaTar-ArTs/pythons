@@ -1,0 +1,86 @@
+name: Auto-publish
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.settings.platform }}
+    strategy:
+      matrix:
+        settings:
+          - platform: "macos-latest"
+            args: "--target x86_64-apple-darwin"
+          - platform: "macos-14"
+            args: "--target aarch64-apple-darwin"
+          - platform: "windows-latest"
+            args: "--target x86_64-pc-windows-msvc"
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install project and dependencies
+        run: pip install .
+
+      - name: Setup env vars with app name, version, architecture and operating system
+        run: python .github/set_github_vars.py
+
+      - name: Build Windows application with PyInstaller
+        if: startsWith(matrix.settings.platform, 'windows')
+        run: |
+          pyinstaller --noconfirm --onefile --windowed --icon=youtube_bulk_upload/logo.ico --add-data "youtube_bulk_upload/logo.ico:." --name="${{ env.APPNAMEWITHDETAILS }}" youtube_bulk_upload/gui.py
+
+      - name: Build MacOS application with PyInstaller
+        if: startsWith(matrix.settings.platform, 'macos')
+        run: |
+          pyinstaller --noconfirm --onefile --windowed --icon=youtube_bulk_upload/logo.png --add-data "youtube_bulk_upload/logo.png:." --name="${{ env.APPNAMEWITHDETAILS }}" youtube_bulk_upload/gui.py
+
+      # Install create-dmg (Only for macOS)
+      - name: Install create-dmg
+        if: startsWith(matrix.settings.platform, 'macos')
+        run: npm install -g create-dmg
+
+      # Set app version (Only for macOS)
+      - name: Set .app version in CFBundleShortVersionString
+        if: startsWith(matrix.settings.platform, 'macos')
+        run: plutil -replace CFBundleShortVersionString -string ${{ env.APPVERSION }} dist/*.app/Contents/Info.plist
+
+      - name: Create DMG
+        if: startsWith(matrix.settings.platform, 'macos')
+        run: create-dmg "dist/${{ env.APPNAMEWITHDETAILS }}.app" --dmg-title="${{ env.APPNAME }}" dist || true
+
+      - name: Remove duplicate version from DMG filename
+        if: startsWith(matrix.settings.platform, 'macos')
+        run: mv "dist/${{ env.APPNAMEWITHDETAILS }} ${{ env.APPVERSION }}.dmg" "dist/${{ env.APPNAMEWITHDETAILS }}.dmg"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APPNAMEWITHDETAILS }}
+          path: |
+            dist/${{ env.APPNAMEWITHDETAILS }}.exe
+            dist/${{ env.APPNAMEWITHDETAILS }}.dmg
+
+  # Auto-publish when version is increased
+  publish-pypi:
+    # Only publish on `main` branch
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions: # Don't forget permissions
+      contents: write
+
+    steps:
+      - uses: etils-actions/pypi-auto-publish@v1
+        with:
+          pypi-token: ${{ secrets.PYPI_API_TOKEN }}
+          gh-token: ${{ secrets.GITHUB_TOKEN }}
+          parse-changelog: false

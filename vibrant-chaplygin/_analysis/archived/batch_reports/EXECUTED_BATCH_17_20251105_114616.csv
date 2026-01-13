@@ -1,0 +1,5 @@
+action,original,new,status
+RENAME,whisper.py,instagram-whisper.py,completed
+RENAME,whispertext-combine.py,instagram-whispertext-combine.py,completed
+RENAME,whispertext.py,instagram-whispertext.py,completed
+RENAME,whitelist.py,instagram-whitelist.py,completed

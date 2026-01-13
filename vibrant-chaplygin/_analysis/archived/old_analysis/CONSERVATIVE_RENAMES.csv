@@ -1,0 +1,29 @@
+current,suggested,purpose,category,reason
+15day.py,ensure-the-directory-exists-if-not-create-it.py,"Ensure the directory exists. If not, create it.",CSV Processing,Bad filename pattern
+15days.py,ensure-the-directory-exists-if-not-create-it.py,"Ensure the directory exists. If not, create it.",CSV Processing,Bad filename pattern
+2leomotion.py,leonardo-image-processing.py,No docstring,Image Processing,Bad filename pattern
+2mentest.py,extractsitemapdata-function.py,extract_sitemap_data function.,General Utility,Bad filename pattern
+api.py,load-all-env-files-from-envd-directory.py,Load all .env files from ~/.env.d directory,Image Processing,Bad filename pattern
+askreddit-loop-1.py,randomtitlemsg-function.py,random_title_msg function.,YouTube Automation,Bad filename pattern
+cli.py,simple-claude-cli-for-terminal-usage.py,Simple Claude CLI for terminal usage,AI Content Generation,Bad filename pattern
+clips-1.py,gencommentimage-function.py,gen_comment_image function.,General Utility,Bad filename pattern
+download-1.py,advanced_content_analyzer.py,Advanced Content Analyzer - Consolidated Analysis Script,YouTube Automation,Bad filename pattern
+download-2.py,advanced_demo_generator.py,AlchemyAPI Advanced Demo Generator,Audio Transcription,Bad filename pattern
+download-3.py,simple_docs_generator.py,Simple HTML Documentation Generator,YouTube Automation,Bad filename pattern
+download-4.py,advanced_sort_and_dedupe.py,Advanced Sort and Deduplication Tool,Audio Transcription,Bad filename pattern
+generatetexts-1.py,load-all-env-files-from-envd-directory.py,Load all .env files from ~/.env.d directory,AI Content Generation,Bad filename pattern
+image-1.py,removebackground-function.py,remove_background function.,General Utility,Bad filename pattern
+instagram-download-1.py,doesntexist-function.py,doesnt_exist function.,Gallery Generation,Bad filename pattern
+intelligent_renamer-1.py,colors.py,🏷️ INTELLIGENT CONTENT-AWARE RENAMING TOOL,Instagram Automation,Bad filename pattern
+leonardo-download-1.py,load-all-env-files-from-envd-directory.py,Load all .env files from ~/.env.d directory,Image Processing,Bad filename pattern
+misc-display.py,public-api-for-display-tools-in-ipython.py,Public API for display tools in IPython.,Gallery Generation,Bad filename pattern
+misc-info.py,prndown-module-that-holds-package-information.py,PrNdOwN module that holds package information.,General Utility,Bad filename pattern
+misc-merge.py,createtocpdf-function.py,create_toc_pdf function.,Data Merging,Bad filename pattern
+misc-prompts.py,basicprompt-function.py,basic_prompt function.,General Utility,Bad filename pattern
+misc-pyttsx.py,pyttsx.py,__init__ function.,General Utility,Bad filename pattern
+process-proc-2.py,quantumforge-cli-where-order-meets-chaos.py,QuantumForge CLI - Where Order Meets Chaos,General Utility,Bad filename pattern
+scripts.py,script_maker.py,A class to copy or create scripts from source scripts or callable,File Management,Bad filename pattern
+scriptwrapper.py,tik_tok_video.py,No docstring,General Utility,Bad filename pattern
+scripty.py,scriptyttsunifiedv2py.py,scripty_tts_unified_v2.py,AI Content Generation,Bad filename pattern
+temp-file-manager.py,named_file_in_temporary_directory.py,"This module contains classes - NamedFileInTemporaryDirectory, TemporaryWorkingDirectory.",File Management,Bad filename pattern
+textgenerator-1.py,cleanresponse-function.py,clean_response function.,AI Content Generation,Bad filename pattern

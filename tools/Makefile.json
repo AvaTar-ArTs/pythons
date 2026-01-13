@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Makefile",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1759803561987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1759803568987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,15 @@\n 🎨 SHELL := /bin/bash\n \n ✨ setup:\n \t🔧 mamba env create -f env/environment.yml || mamba env update -f env/environment.yml\n+\t💡 @echo 'Run: mamba activate storyboard'\n+\t🔑 chmod +x scripts/storyboard_cli.py\n+\n+🚀 generate:\n+\t🔄 mamba activate storyboard && scripts/storyboard_cli.py generate $(name)\n+\n+🎬 render:\n setup:\n \tmamba env create -f env/environment.yml || mamba env update -f env/environment.yml\n \t@echo 'Run: mamba activate storyboard'\n \tchmod +x scripts/storyboard_cli.py\n"
+                }
+            ],
+            "date": 1759803561987,
+            "name": "Commit-0",
+            "content": "🎨 SHELL := /bin/bash\n\n✨ setup:\n\t🔧 mamba env create -f env/environment.yml || mamba env update -f env/environment.yml\nsetup:\n\tmamba env create -f env/environment.yml || mamba env update -f env/environment.yml\n\t@echo 'Run: mamba activate storyboard'\n\tchmod +x scripts/storyboard_cli.py\n\ngenerate:\n\tmamba activate storyboard && scripts/storyboard_cli.py generate $(name)\n\nrender:\n\tmamba activate storyboard && scripts/storyboard_cli.py render $(name) --duration $(dur) --bpm $(bpm) --sections $(sections) --tempo-map $(tempo)\n\nbuild:\n\tmamba activate storyboard && scripts/storyboard_cli.py build $(name) --duration $(dur)\n"
+        }
+    ]
+}

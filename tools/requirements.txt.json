@@ -1,0 +1,18 @@
+{
+    "sourceFile": "requirements.txt",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1757638938345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1757638938345,
+            "name": "Commit-0",
+            "content": "playwright>=1.45.0\nrequests>=2.32.0\nbeautifulsoup4>=4.12.3\nlxml>=5.2.1\n"
+        }
+    ]
+}

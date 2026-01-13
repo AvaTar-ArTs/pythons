@@ -1,0 +1,267 @@
+[
+  {
+    "name": "AGGRESSIVE_CLEANUP_EXECUTE.py",
+    "type": "python_file",
+    "path": "AGGRESSIVE_CLEANUP_EXECUTE.py"
+  },
+  {
+    "name": "AGGRESSIVE_DEDUPE.py",
+    "type": "python_file",
+    "path": "AGGRESSIVE_DEDUPE.py"
+  },
+  {
+    "name": "CLEANUP_ROOT_DUPLICATES.py",
+    "type": "python_file",
+    "path": "CLEANUP_ROOT_DUPLICATES.py"
+  },
+  {
+    "name": "COMPREHENSIVE_DIRECTORY_CLEANUP.py",
+    "type": "python_file",
+    "path": "COMPREHENSIVE_DIRECTORY_CLEANUP.py"
+  },
+  {
+    "name": "CONTENT",
+    "type": "directory",
+    "path": "CONTENT",
+    "py_file_count": 17
+  },
+  {
+    "name": "CONTENT_SIMILARITY_SCANNER.py",
+    "type": "python_file",
+    "path": "CONTENT_SIMILARITY_SCANNER.py"
+  },
+  {
+    "name": "Complete_Cleanup_Orchestrator.py",
+    "type": "python_file",
+    "path": "Complete_Cleanup_Orchestrator.py"
+  },
+  {
+    "name": "DEEP ENV & VOLUMES CONTENT-AWARE ANALYZER.py",
+    "type": "python_file",
+    "path": "DEEP ENV & VOLUMES CONTENT-AWARE ANALYZER.py"
+  },
+  {
+    "name": "DEEP_SCAN_ALL_CONTENT.py",
+    "type": "python_file",
+    "path": "DEEP_SCAN_ALL_CONTENT.py"
+  },
+  {
+    "name": "FAST_SIMILARITY_SCANNER.py",
+    "type": "python_file",
+    "path": "FAST_SIMILARITY_SCANNER.py"
+  },
+  {
+    "name": "FINAL_POLISH_CLEANUP.py",
+    "type": "python_file",
+    "path": "FINAL_POLISH_CLEANUP.py"
+  },
+  {
+    "name": "FIND_DUPLICATE_CONTENT.py",
+    "type": "python_file",
+    "path": "FIND_DUPLICATE_CONTENT.py"
+  },
+  {
+    "name": "FIX_NAMING_ISSUES.py",
+    "type": "python_file",
+    "path": "FIX_NAMING_ISSUES.py"
+  },
+  {
+    "name": "FUNCTIONAL_DUPLICATE_SCANNER.py",
+    "type": "python_file",
+    "path": "FUNCTIONAL_DUPLICATE_SCANNER.py"
+  },
+  {
+    "name": "INTELLIGENT_VERSION_ANALYZER.py",
+    "type": "python_file",
+    "path": "INTELLIGENT_VERSION_ANALYZER.py"
+  },
+  {
+    "name": "MEDIA_PROCESSING",
+    "type": "directory",
+    "path": "MEDIA_PROCESSING",
+    "py_file_count": 408
+  },
+  {
+    "name": "MISC",
+    "type": "directory",
+    "path": "MISC",
+    "py_file_count": 3
+  },
+  {
+    "name": "MarkD",
+    "type": "directory",
+    "path": "MarkD",
+    "py_file_count": 0
+  },
+  {
+    "name": "RECURSIVE_DEEP_SCAN.py",
+    "type": "python_file",
+    "path": "RECURSIVE_DEEP_SCAN.py"
+  },
+  {
+    "name": "REMOVE_CONTENT_DUPLICATES.py",
+    "type": "python_file",
+    "path": "REMOVE_CONTENT_DUPLICATES.py"
+  },
+  {
+    "name": "Run_General_Cleanup.py",
+    "type": "python_file",
+    "path": "Run_General_Cleanup.py"
+  },
+  {
+    "name": "Run_Python_Cleanup.py",
+    "type": "python_file",
+    "path": "Run_Python_Cleanup.py"
+  },
+  {
+    "name": "SEO_MARKETING",
+    "type": "directory",
+    "path": "SEO_MARKETING",
+    "py_file_count": 18
+  },
+  {
+    "name": "SMART_DEDUPLICATE.py",
+    "type": "python_file",
+    "path": "SMART_DEDUPLICATE.py"
+  },
+  {
+    "name": "STRUCTURAL_CLEANUP_MASTER.py",
+    "type": "python_file",
+    "path": "STRUCTURAL_CLEANUP_MASTER.py"
+  },
+  {
+    "name": "TG-MegaBot",
+    "type": "directory",
+    "path": "TG-MegaBot",
+    "py_file_count": 0
+  },
+  {
+    "name": "Targeted_Cleanup.py",
+    "type": "python_file",
+    "path": "Targeted_Cleanup.py"
+  },
+  {
+    "name": "ULTRA_AGGRESSIVE_SIMILARITY.py",
+    "type": "python_file",
+    "path": "ULTRA_AGGRESSIVE_SIMILARITY.py"
+  },
+  {
+    "name": "WEBSITES",
+    "type": "directory",
+    "path": "WEBSITES",
+    "py_file_count": 78
+  },
+  {
+    "name": "__pycache__",
+    "type": "directory",
+    "path": "__pycache__",
+    "py_file_count": 0
+  },
+  {
+    "name": "advanced-cleanup-analyzer.py",
+    "type": "python_file",
+    "path": "advanced-cleanup-analyzer.py"
+  },
+  {
+    "name": "aggressive-python-cleanup.py",
+    "type": "python_file",
+    "path": "aggressive-python-cleanup.py"
+  },
+  {
+    "name": "analyze.py",
+    "type": "python_file",
+    "path": "analyze.py"
+  },
+  {
+    "name": "analyze_custom_code.py",
+    "type": "python_file",
+    "path": "analyze_custom_code.py"
+  },
+  {
+    "name": "analyze_exact_duplicates.py",
+    "type": "python_file",
+    "path": "analyze_exact_duplicates.py"
+  },
+  {
+    "name": "analyze_for_miniforge_mamba.py",
+    "type": "python_file",
+    "path": "analyze_for_miniforge_mamba.py"
+  },
+  {
+    "name": "analyze_large_files.py",
+    "type": "python_file",
+    "path": "analyze_large_files.py"
+  },
+  {
+    "name": "analyze_tsv.py",
+    "type": "python_file",
+    "path": "analyze_tsv.py"
+  },
+  {
+    "name": "analyzerr.py",
+    "type": "python_file",
+    "path": "analyzerr.py"
+  },
+  {
+    "name": "audio_generation",
+    "type": "directory",
+    "path": "audio_generation",
+    "py_file_count": 0
+  },
+  {
+    "name": "audio_transcription",
+    "type": "directory",
+    "path": "audio_transcription",
+    "py_file_count": 0
+  },
+  {
+    "name": "auto_cleanup.py",
+    "type": "python_file",
+    "path": "auto_cleanup.py"
+  },
+  {
+    "name": "auto_organize_dry_run_from_seo-optimizer.py",
+    "type": "python_file",
+    "path": "auto_organize_dry_run_from_seo-optimizer.py"
+  },
+  {
+    "name": "avatararts",
+    "type": "directory",
+    "path": "avatararts",
+    "py_file_count": 3
+  },
+  {
+    "name": "avatararts-deployment",
+    "type": "directory",
+    "path": "avatararts-deployment",
+    "py_file_count": 1
+  },
+  {
+    "name": "axolotl-main",
+    "type": "directory",
+    "path": "axolotl-main",
+    "py_file_count": 13
+  },
+  {
+    "name": "batch_csv_analyzer.py",
+    "type": "python_file",
+    "path": "batch_csv_analyzer.py"
+  },
+  {
+    "name": "batch_dupe_content_analyzer.py",
+    "type": "python_file",
+    "path": "batch_dupe_content_analyzer.py"
+  },
+  {
+    "name": "botty",
+    "type": "directory",
+    "path": "botty",
+    "py_file_count": 0
+  },
+  {
+    "name": "busy-liskov",
+    "type": "directory",
+    "path": "busy-liskov",
+    "py_file_count": 0
+  }
+]

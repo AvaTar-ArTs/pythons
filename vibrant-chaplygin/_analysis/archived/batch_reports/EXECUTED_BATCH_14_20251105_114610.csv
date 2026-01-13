@@ -1,0 +1,10 @@
+action,original,new,status
+RENAME,social-platforms-instagram-botError.py,social-platforms-instagram-bot-error.py,completed
+RENAME,social-platforms-instagram-scraper.py,instagram-social-platforms-instagram-scraper.py,completed
+RENAME,sort.py,instagram-sort.py,completed
+RENAME,ssh-avatararts-downloader.py,leonardo-ssh-avatararts-downloader.py,completed
+RENAME,state.py,instagram-state.py,completed
+RENAME,stories-downloader.py,instagram-stories-downloader.py,completed
+RENAME,story.py,instagram-story.py,completed
+LIBRARY,social-platforms-instagram-config.py,_library/social-platforms-instagram-config.py,completed
+LIBRARY,structures.py,_library/structures.py,completed

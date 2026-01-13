@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+scraper.py,[Reddit automation],,KEEP,
+scraping-download-intelligent.py,Intelligent Content-Aware File Renamer,,KEEP,
+scraping-download-news_api_fetcher.py,[No docstring found],scraping-download-news-api-fetcher.py,RENAME,Fix underscore to hyphen
+scraping-download-scrape.py,[Reddit automation],,KEEP,
+screenshot-generate.py,[No docstring found],,KEEP,
+script_simple.py,[No docstring found],script-simple.py,RENAME,Fix underscore to hyphen
+scripts.py,[No docstring found],,KEEP,
+scriptwrapper.py,[No docstring found],,KEEP,
+scripty.py,scripty_tts_unified_v2.py,,KEEP,
+search-claude-conversations.py,Search conversations filtered by date range,,KEEP,
+search.py,Alfred Script Filter for Claude Code Conversations - Enhanced Version,,KEEP,
+second-pass-migration.py,Analyze remaining Python files and directories for second migration pass,,KEEP,
+secret.py,[YouTube automation],,KEEP,
+selenium-cookie-login.py,[YouTube automation],,KEEP,
+services-gallery.py,[No docstring found],,KEEP,
+services-s3bucket.py,[No docstring found],,KEEP,
+services.py,[No docstring found],,KEEP,
+setters.py,Commonly used hooks for on_setattr.,,KEEP,
+settings.py,[No docstring found],,LIBRARY,Library/framework code - settings.py
+setup.py,Social Media Automation Setup Script,,LIBRARY,Library/framework code - setup.py
+setup_browser.py,[No docstring found],setup-browser.py,RENAME,Fix underscore to hyphen
+setup_legacy.py,Upload videos to Youtube.,setup-legacy.py,RENAME,Fix underscore to hyphen
+setup_simple.py,Setup script for City 16-9 Gallery Generator,setup-simple.py,RENAME,Fix underscore to hyphen
+setuptools.py,[No docstring found],,KEEP,
+sheets.py,Google Sheets helpers using gspread.,,KEEP,
+shorts-code.py,[OpenAI integration],,KEEP,
+simple-effective.py,This template is written by @zackvega,,KEEP,
+simple-image-display.py,[No docstring found],,KEEP,
+simple-interaction-good.py,This template is written by @Tachenz,,KEEP,
+simple-photo-gallery.py,[No docstring found],,KEEP,
+simple.py,[Reddit automation],,KEEP,
+simple_flat_organizer.py,Simple Flat Category Organizer,simple-flat-organizer.py,RENAME,Fix underscore to hyphen
+simple_smart_renamer.py,"Simple Smart Renamer - NO AI, Just Logic!",simple-smart-renamer.py,RENAME,Fix underscore to hyphen
+simplify-organizer.py,Simplify File Organizer,,KEEP,
+simplify.py,[Instagram automation],,KEEP,
+singleton.py,[No docstring found],,KEEP,
+sitemap-random-product-extractor.py,[No docstring found],,KEEP,
+skip-8below.py,[No docstring found],,KEEP,
+skip-image-fixer.py,[No docstring found],,KEEP,
+skiprows.py,[No docstring found],,KEEP,
+slide.py,Slide Animation - Slide elements in from edges with overshoot/bounce.,,KEEP,
+smart-dedup.py,[No docstring found],,KEEP,
+smart-organizer.py,Smart File Organizer,,KEEP,
+smart.py,Smart Organization Plan Generator,,KEEP,
+smart_archive_backups.py,Smart Archive Deduplicator,smart-archive-backups.py,RENAME,Fix underscore to hyphen
+smart_conservative_renamer.py,[Instagram automation],smart-conservative-renamer.py,RENAME,Fix underscore to hyphen
+smart_content_renamer_v2.py,🏷️ SMART CONTENT-AWARE RENAMER V2,smart-content-renamer-v2.py,RENAME,Fix underscore to hyphen
+smart_content_renamer_v3.py,?? SMART CONTENT-AWARE RENAMER V3,smart-content-renamer-v3.py,RENAME,Fix underscore to hyphen
+smart_local_renamer.py,Smart Local Renamer - NO AI HALLUCINATIONS!,smart-local-renamer.py,RENAME,Fix underscore to hyphen
+smart_rename_versions.py,Smart Version Renaming,smart-rename-versions.py,RENAME,Fix underscore to hyphen

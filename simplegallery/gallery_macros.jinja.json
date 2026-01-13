@@ -1,0 +1,22 @@
+{
+    "sourceFile": "data/templates/gallery_macros.jinja",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1733333381246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733333422182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           <a name=\"section_{{ from }}\"></a>\n           {{ title }}\n           \n         </h2>\n-        <p>{{ description }}</p>\n+        <p></p>\n     </div>\n   </div>\n   {% if from is number %}\n     {{ gallery_images_index(from, to, images) }}\n"
+                }
+            ],
+            "date": 1733333381246,
+            "name": "Commit-0",
+            "content": "{% macro gallery_images_index(from, to, images) -%}\n\n<div class=\"row\">\n  <div class=\"col gallery\">\n    {% for i in range(from, to) %}\n      <a href=\"{{ images[i].src }}\"\n         class=\"gallery-photo\"\n         data-index=\"{{ i-from }}\"\n         data-type=\"{{ images[i].type }}\"\n         data-gallery=\"{{ from }}\"\n         data-width=\"{{ images[i].size[0] }}\"\n         data-height=\"{{ images[i].size[1] }}\"\n         data-date=\"{{ images[i].date }}\"\n         style=\"--w: {{ images[i].thumbnail_size[0] }}; --h: {{ images[i].thumbnail_size[1] }}\">\n         <img src=\"{{ images[i].thumbnail }}\" class=\"thumbnail rounded\" alt=\"{{ images[i].description }}\"/></a>\n    {% endfor %}\n  </div>\n</div>\n{%- endmacro %}\n\n\n\n{% macro gallery_images_string(from, to, images) -%}\n\n<div class=\"row\">\n  <div class=\"col gallery\">\n    {% set index = namespace(value=0) %}\n    {% set first_photo = namespace(value=-1) %}\n    {% for image in images %}\n      {% if image.name >= from and image.name <= to %}\n        {% if first_photo.value == -1 %}\n          {% set first_photo.value = loop.index %}\n        {% endif %}\n\n        <a href=\"{{ image.src }}\"\n           class=\"gallery-photo\"\n           data-index=\"{{ index.value }}\"\n           data-type=\"{{ image.type }}\"\n           data-gallery=\"{{ first_photo.value }}\"\n           data-width=\"{{ image.size[0] }}\"\n           data-height=\"{{ image.size[1] }}\"\n           data-date=\"{{ image.date }}\"\n           style=\"--w: {{ image.thumbnail_size[0] }}; --h: {{ image.thumbnail_size[1] }}\">\n           <img src=\"{{ image.thumbnail }}\" class=\"thumbnail rounded\" alt=\"{{ image.description }}\"/></a>\n\n           {% set index.value = index.value + 1 %}\n      {% endif %}\n    {% endfor %}\n  </div>\n</div>\n{%- endmacro %}\n\n\n{% macro section(from, to, title, description, images) -%}\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col gallery-section\">\n\n        <h2>\n          <a name=\"section_{{ from }}\"></a>\n          {{ title }}\n          \n        </h2>\n        <p>{{ description }}</p>\n    </div>\n  </div>\n  {% if from is number %}\n    {{ gallery_images_index(from, to, images) }}\n  {% else %}\n    {{ gallery_images_string(from, to, images) }}\n  {% endif %}\n</div>\n{%- endmacro %}\n"
+        }
+    ]
+}

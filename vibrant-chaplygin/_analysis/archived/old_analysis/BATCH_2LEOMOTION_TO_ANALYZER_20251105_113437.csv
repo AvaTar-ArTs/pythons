@@ -1,0 +1,14 @@
+action,original,new,reason
+rename,2leomotion.py,leonardo-cyberpunk-hacker-generator.py,Content-aware rename
+rename,2mentest.py,sitemap-random-product-extractor.py,Content-aware rename
+rename,15day.py,csv-image-file-mover.py,Content-aware rename
+rename,add_text.py,image-add-text-overlay.py,Content-aware rename
+rename,adown.py,ssh-avatararts-downloader.py,Content-aware rename
+rename,agent.py,grok-langchain-agent.py,Content-aware rename
+rename,alphabet.py,image-gallery-alphabetical.py,Content-aware rename
+rename,analyze_and_transcribe_missing.py,analyze-transcribe-missing-audio.py,Content-aware rename
+rename,analyze_versions.py,analyze-file-versions.py,Content-aware rename
+rename,analyze-shorts-info_code.py,analyze-youtube-shorts-info.py,Content-aware rename
+move_to_library,against.py,_library/against.py,External library file
+move_to_library,alias.py,_library/alias.py,External library file
+delete,15days.py,,Duplicate file

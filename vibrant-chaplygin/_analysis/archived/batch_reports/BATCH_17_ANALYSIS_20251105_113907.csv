@@ -1,0 +1,9 @@
+filename,purpose,suggested_name,action,notes
+whisper-transcript.py,[OpenAI integration],,KEEP,
+whisper.py,[Instagram automation],instagram-whisper.py,RENAME,Add Instagram prefix
+whispertext-combine.py,[Instagram automation],instagram-whispertext-combine.py,RENAME,Add Instagram prefix
+whispertext.py,[Instagram automation],instagram-whispertext.py,RENAME,Add Instagram prefix
+whitelist.py,instabot example,instagram-whitelist.py,RENAME,Add Instagram prefix
+wiggle.py,"Wiggle Animation - Smooth, organic wobbling and jiggling motions.",,KEEP,
+word-validate-changes.py,Validator for tracked changes in Word documents.,,KEEP,
+workspace-audit.py,Comprehensive Analysis of Claude Directory,,KEEP,

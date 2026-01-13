@@ -1,0 +1,37 @@
+CURRENT_NAME,NEW_NAME,WHAT_IT_DOES
+process-proc_simple.py,extract-news-to-audio.py,ExtractNews - converts news to audio
+process-proc-2.py,quantumforge-cli.py,QuantumForge CLI image processor
+process-audio.py,download-gemini-storybook-audio.py,Gemini storybook downloader
+process-remix.py,process-remix.py,KEEP
+process.py,time-format-utils.py,Time formatting utilities (MM:SS)
+processing-json.py,download-giphy-gifs.py,Downloads GIFs from Giphy
+processing-pandas-docs.py,merge-doc-csvs.py,Merges document CSVs
+processing-pandas-json.py,convert-conversations-to-csv.py,Converts chat JSONs to CSV
+processing-pandas.py,download-etsy-product-images.py,Downloads Etsy product images from CSV
+processing.py,find-duplicates-md5.py,MD5-based duplicate detection
+processing-doubles.py,remove-duplicate-files.py,Removes duplicate files
+processing-fdupes.py,find-duplicates-fdupes.py,Uses fdupes tool
+processing-execute.py,execute-organization-plan.py,Executes file organization
+processor-transcript.py,analyze-transcript.py,Transcript analyzer
+processr.py,process-images.py,Image processor
+polly.py,aws-polly-tts.py,AWS Polly text-to-speech
+printify-organize.py,organize-printify-products.py,Organizes Printify products
+pipeline.py,audio-transcription-pipeline.py,Audio transcription pipeline
+processor.py,KEEP,Generic processor
+process-csv.py,KEEP,Generic CSV processor
+process-json.py,KEEP,JSON processor (GYP)
+pickleshare.py,KEEP,PickleShare library
+pip_build_environment.py,KEEP,Pip build env
+pip_install_command.py,KEEP,Pip install
+pip_installer_bootstrap.py,KEEP,Pip bootstrap
+playing.py,KEEP,Template file
+playlist.py,KEEP,Playlist handler
+podcast-studio.py,KEEP,Already good name
+posttextparser.py,KEEP,Post text parser
+prepare_missing_song_folders.py,KEEP,Already descriptive
+preservation-renamer.py,KEEP,Already descriptive
+process-proc_api.py,KEEP,API processor
+processing-categories.py,KEEP,Already descriptive
+processing-csv-docs_simple.py,process-csv-docs.py,Simplify name
+processing-docs.py,KEEP,Document processor
+processing-imove.py,KEEP,iMove processor

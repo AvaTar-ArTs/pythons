@@ -1,0 +1,3801 @@
+{
+  "content_analysis": {
+    "animal_legs_tests.csv": {
+      "file_name": "animal_legs_tests.csv",
+      "file_path": "/Users/steven/Documents/claude/claude-courses-master/prompt_evaluations/05_prompt_foo_code_graded_animals/animal_legs_tests.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 588,
+      "content_hash": "a38bdb6027ae8185",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "test_file",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Test file or specification | General project file",
+      "organization_priority": 0,
+      "suggested_destination": "~/Documents/CsV/Tests/Experimental",
+      "restore_information": {
+        "original_path": "claude/claude-courses-master/prompt_evaluations/05_prompt_foo_code_graded_animals/animal_legs_tests.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "dataset.csv": {
+      "file_name": "dataset.csv",
+      "file_path": "/Users/steven/Documents/claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 1825,
+      "content_hash": "5889ab8985c6fd0f",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "data_analysis",
+        "portfolio_work",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "portfolio_projects",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Portfolio or showcase project material | Data analysis or research | Portfolio or professional work",
+      "organization_priority": 21,
+      "suggested_destination": "~/Documents/CsV/Portfolio/Data/Data-Analysis/Experimental",
+      "restore_information": {
+        "original_path": "claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+        "restore_instructions": "Part of portfolio projects project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv": {
+      "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 1.1,
+      "content_length": 1150793,
+      "content_hash": "bc376bfcad09b3da",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "markdown_documentation",
+      "key_phrases": [],
+      "relationships": [
+        "url_leonardo.ai",
+        "url_leonardo.ai",
+        "url_images.pexels.com",
+        "url_images.pexels.com",
+        "url_aiavatararts.com",
+        "versioned_file"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+      "organization_priority": 65,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "tools 15936221d8b28192b15fd6e595cc9b14.csv": {
+      "file_name": "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.01,
+      "content_length": 5290,
+      "content_hash": "05c0e3d16f6a0f8e",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content"
+      ],
+      "project_context": "youtube_content",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "https"
+      ],
+      "relationships": [
+        "url_stablediffusionweb.com",
+        "url_speech.microsoft.com",
+        "url_tome.app",
+        "url_palette.fm",
+        "url_pfpmaker.com"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+      "organization_priority": 33,
+      "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+        "restore_instructions": "Part of youtube content project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "more products (7) 15936221d8b281f2bf81e3799b598c7d.csv": {
+      "file_name": "more products (7) 15936221d8b281f2bf81e3799b598c7d.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/more products (7) 15936221d8b281f2bf81e3799b598c7d.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 193,
+      "content_hash": "d31909d4ddc3c742",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "web_development"
+      ],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "https"
+      ],
+      "relationships": [
+        "url_notionplates.gumroad.com",
+        "url_notionplates.gumroad.com"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file | Web development project | Contains: https",
+      "organization_priority": 8,
+      "suggested_destination": "~/Documents/CsV/Data/Web-Development/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/more products (7) 15936221d8b281f2bf81e3799b598c7d.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "categories 15936221d8b281e9b6e6d5c1cda931be.csv": {
+      "file_name": "categories 15936221d8b281e9b6e6d5c1cda931be.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/categories 15936221d8b281e9b6e6d5c1cda931be.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 41,
+      "content_hash": "847546f1f375b27a",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "media_content"
+      ],
+      "project_context": "general",
+      "content_type": "general_content",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | General content file | General project file | Media or creative content",
+      "organization_priority": 0,
+      "suggested_destination": "~/Documents/CsV/Media/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/categories 15936221d8b281e9b6e6d5c1cda931be.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "tools 15936221d8b28161bbbdf01d87ac6b55.csv": {
+      "file_name": "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.01,
+      "content_length": 5290,
+      "content_hash": "43a3345fc93c9283",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content"
+      ],
+      "project_context": "youtube_content",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "https"
+      ],
+      "relationships": [
+        "url_stablediffusionweb.com",
+        "url_speech.microsoft.com",
+        "url_pfpmaker.com",
+        "url_tome.app",
+        "url_www.voicemod.net"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+      "organization_priority": 33,
+      "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+        "restore_instructions": "Part of youtube content project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv": {
+      "file_name": "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+      "file_path": "/Users/steven/Documents/Notion/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 773,
+      "content_hash": "641e70dbde176100",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "data_analysis",
+        "automation_scripts",
+        "media_content"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "python"
+      ],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Data analysis or research | Contains: python",
+      "organization_priority": 28,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Untitled 15436221d8b28116b57ccd9db2d8a9a6.csv": {
+      "file_name": "Untitled 15436221d8b28116b57ccd9db2d8a9a6.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Untitled 15436221d8b28116b57ccd9db2d8a9a6.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 28,
+      "content_hash": "c83012bb574cd836",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "backup_file",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Backup or archived file | General project file",
+      "organization_priority": 0,
+      "suggested_destination": "~/Documents/CsV/Backups/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Untitled 15436221d8b28116b57ccd9db2d8a9a6.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv": {
+      "file_name": "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2088,
+      "content_hash": "f5b61c5989034847",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "data_analysis",
+        "portfolio_work",
+        "automation_scripts",
+        "media_content"
+      ],
+      "project_context": "youtube_content",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Data analysis or research",
+      "organization_priority": 25,
+      "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+        "restore_instructions": "Part of youtube content project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Quick Links eb8a14dfb5a04b01bc20ce67a500addb.csv": {
+      "file_name": "Quick Links eb8a14dfb5a04b01bc20ce67a500addb.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Content Planner fdfa7ac7379a4c5cbe7ae8077e2217d2/Quick Links eb8a14dfb5a04b01bc20ce67a500addb.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 397,
+      "content_hash": "6cf01b30d962a1bb",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "youtube_content",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material",
+      "organization_priority": 0,
+      "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Content Planner fdfa7ac7379a4c5cbe7ae8077e2217d2/Quick Links eb8a14dfb5a04b01bc20ce67a500addb.csv",
+        "restore_instructions": "Part of youtube content project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv": {
+      "file_name": "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "file_path": "/Users/steven/Documents/Notion/OS Pages 190172d3915b4f54b350e17e2ca81e51/DALL-E 3 Gallery 0951b223b6b54cd686ec462b9af6adcc/DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2810,
+      "content_hash": "3b56b11ce099a293",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "automation_scripts",
+        "media_content"
+      ],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "https",
+        "openai",
+        "trim",
+        "width"
+      ],
+      "relationships": [
+        "url_images.openai.com",
+        "url_images.openai.com",
+        "url_images.openai.com",
+        "url_images.openai.com",
+        "url_images.openai.com"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file | AI/ML related content | Web development project | Contains: https, openai, trim",
+      "organization_priority": 25,
+      "suggested_destination": "~/Documents/CsV/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/OS Pages 190172d3915b4f54b350e17e2ca81e51/DALL-E 3 Gallery 0951b223b6b54cd686ec462b9af6adcc/DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv": {
+      "file_name": "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+      "file_path": "/Users/steven/Documents/Notion/AI Tools ba636b6280eb470486deef7cf3017aa1/Database 819a17c2afae4f5f8a9b91fee6ac810e/DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2229,
+      "content_hash": "cc5ab6c0761b080f",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "automation_scripts",
+        "media_content"
+      ],
+      "project_context": "youtube_content",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "https",
+        "via",
+        "fpr",
+        "ref",
+        "source",
+        "utm_campaign",
+        "utm_medium"
+      ],
+      "relationships": [
+        "url_app.photoai.me",
+        "url_rytr.me",
+        "url_www.deepbrain.io",
+        "url_speakai.co",
+        "url_podcastle.ai"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https, via, fpr",
+      "organization_priority": 33,
+      "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/AI Tools ba636b6280eb470486deef7cf3017aa1/Database 819a17c2afae4f5f8a9b91fee6ac810e/DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+        "restore_instructions": "Part of youtube content project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "rootkey.csv": {
+      "file_name": "rootkey.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/rootkey.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 95,
+      "content_hash": "0e64715bfa896019",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "general_content",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | General content file | General project file",
+      "organization_priority": 0,
+      "suggested_destination": "~/Documents/CsV/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/rootkey.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Intro AI Course Plan.csv": {
+      "file_name": "Intro AI Course Plan.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 0,
+      "content_hash": "unreadable",
+      "mime_type": "unknown",
+      "semantic_categories": [
+        "unreadable"
+      ],
+      "project_context": "unknown",
+      "content_type": "unreadable",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "File could not be read for analysis",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/Other/Unreadable/",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv",
+        "restore_instructions": "File could not be analyzed - restore with caution",
+        "backup_recommended": true
+      },
+      "content_insights": {
+        "code_complexity": "unknown",
+        "documentation_quality": "unknown",
+        "project_maturity": "unknown",
+        "technical_debt": "unknown"
+      }
+    },
+    "ichoake_accessKeys.csv": {
+      "file_name": "ichoake_accessKeys.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/ichoake_accessKeys.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 95,
+      "content_hash": "fb627d217ab1cf17",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "general_content",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | General content file | General project file",
+      "organization_priority": 0,
+      "suggested_destination": "~/Documents/CsV/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/ichoake_accessKeys.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "vidIQ CSV export for I've Had It 2025-05-10.csv": {
+      "file_name": "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 4107,
+      "content_hash": "5026b50c3436af25",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "web_development",
+        "portfolio_work",
+        "automation_scripts"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "https"
+      ],
+      "relationships": [
+        "url_linktr.ee",
+        "url_www.youtube.com",
+        "url_linktr.ee",
+        "url_www.youtube.com",
+        "url_linktr.ee",
+        "versioned_file"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | Web development project | Portfolio or professional work | Contains: https",
+      "organization_priority": 37,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/Web-Development/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/vidIQ CSV export for I've Had It 2025-05-10.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv": {
+      "file_name": "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.02,
+      "content_length": 16443,
+      "content_hash": "a22ee1ec5e3642c8",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+      "organization_priority": 47,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv": {
+      "file_name": "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 4.15,
+      "content_length": 2095704,
+      "content_hash": "35ad405293385ab9",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "markdown_documentation",
+      "key_phrases": [],
+      "relationships": [
+        "references_http://www.incamayanaztec.com/index.html",
+        "url_www.worldhistory.org",
+        "url_www.ancient.eu",
+        "url_www.ancient.eu",
+        "url_www.youtube.com",
+        "url_twitter.com",
+        "versioned_file"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project | Some technical debt present",
+      "organization_priority": 65,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "medium"
+      }
+    },
+    "Quiz 3-29 f8fdbd4051f8413a813b950dfdf2b497.csv": {
+      "file_name": "Quiz 3-29 f8fdbd4051f8413a813b950dfdf2b497.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Quiz 3-29 f8fdbd4051f8413a813b950dfdf2b497.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 80,
+      "content_hash": "8ea8106fab4a01be",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "general_content",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | General content file | General project file",
+      "organization_priority": 0,
+      "suggested_destination": "~/Documents/CsV/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Quiz 3-29 f8fdbd4051f8413a813b950dfdf2b497.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv": {
+      "file_name": "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "file_path": "/Users/steven/Documents/Notion/OS Pages 190172d3915b4f54b350e17e2ca81e51/GPTs 228f4e54b03f405aa2fcb234a102456c/GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2427,
+      "content_hash": "85f6d85768e599c1",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "openai",
+        "https",
+        "i'll help turn your wildest dreams into die-cut stickers, shipped right to your door.",
+        "gpt"
+      ],
+      "relationships": [
+        "url_chat.openai.com",
+        "url_chat.openai.com",
+        "url_chat.openai.com",
+        "url_chat.openai.com",
+        "url_chat.openai.com"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project | Contains: openai, https, i'll help turn your wildest dreams into die-cut stickers, shipped right to your door.",
+      "organization_priority": 37,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/OS Pages 190172d3915b4f54b350e17e2ca81e51/GPTs 228f4e54b03f405aa2fcb234a102456c/GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 7.csv": {
+      "file_name": "Table 7.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 7.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 4692,
+      "content_hash": "d97dafbac193b4d7",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 7.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 6.csv": {
+      "file_name": "Table 6.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 6.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3828,
+      "content_hash": "cbeed3de1be1a829",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 6.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 4.csv": {
+      "file_name": "Table 4.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 4.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 1450,
+      "content_hash": "69ab64edaeb478e7",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 4.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 5.csv": {
+      "file_name": "Table 5.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 5.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2368,
+      "content_hash": "833839c7bf217071",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 5.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 1.csv": {
+      "file_name": "Table 1.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 1.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2504,
+      "content_hash": "85d7d5728cf9ad04",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 1.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 2.csv": {
+      "file_name": "Table 2.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 2.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 1846,
+      "content_hash": "ff01b2e27a9bdc28",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 2.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 3.csv": {
+      "file_name": "Table 3.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 3.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 1896,
+      "content_hash": "adcd73a5ad705dc4",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 3.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 19.csv": {
+      "file_name": "Table 19.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 19.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3060,
+      "content_hash": "1fb01fe88cb2a4e5",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 19.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 18.csv": {
+      "file_name": "Table 18.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 18.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3192,
+      "content_hash": "a26333a7e5e49f09",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "documentation"
+      ],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file | Documentation or guides",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 18.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 22.csv": {
+      "file_name": "Table 22.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 22.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 1206,
+      "content_hash": "94238bba3b5ad637",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 22.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 20.csv": {
+      "file_name": "Table 20.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 20.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3440,
+      "content_hash": "adfc801ff538dfd4",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 20.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 21.csv": {
+      "file_name": "Table 21.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 21.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3132,
+      "content_hash": "8557a7143d091637",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 21.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 10.csv": {
+      "file_name": "Table 10.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 10.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2944,
+      "content_hash": "c0fe5996fbdb7895",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 10.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 11.csv": {
+      "file_name": "Table 11.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 11.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3552,
+      "content_hash": "9b43c350efccec4f",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 11.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 13.csv": {
+      "file_name": "Table 13.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 13.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3868,
+      "content_hash": "45d78a51b30325fc",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 13.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 12.csv": {
+      "file_name": "Table 12.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 12.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2806,
+      "content_hash": "fd67d78fed522ab1",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "documentation"
+      ],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file | Documentation or guides",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 12.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 16.csv": {
+      "file_name": "Table 16.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 16.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2444,
+      "content_hash": "46409018532d63fe",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "documentation"
+      ],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file | Documentation or guides",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 16.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 17.csv": {
+      "file_name": "Table 17.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 17.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 2906,
+      "content_hash": "d53d6b80f58ad5aa",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "documentation"
+      ],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file | Documentation or guides",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 17.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 15.csv": {
+      "file_name": "Table 15.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 15.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3188,
+      "content_hash": "5d2550e1b5d70a6e",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 15.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 14.csv": {
+      "file_name": "Table 14.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 14.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3126,
+      "content_hash": "d1b4e0f830a5635b",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 14.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 8.csv": {
+      "file_name": "Table 8.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 8.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3906,
+      "content_hash": "75780e452537f20b",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 8.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Table 9.csv": {
+      "file_name": "Table 9.csv",
+      "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 9.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 3154,
+      "content_hash": "7c0bb61e88a43eaf",
+      "mime_type": "text/csv",
+      "semantic_categories": [],
+      "project_context": "general",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file",
+      "organization_priority": 1,
+      "suggested_destination": "~/Documents/CsV/Data/Experimental",
+      "restore_information": {
+        "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv/Table 9.csv",
+        "restore_instructions": "Standard file - can be restored to any appropriate location",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Untitled 15036221d8b280a6a687d00887bcde01.csv": {
+      "file_name": "Untitled 15036221d8b280a6a687d00887bcde01.csv",
+      "file_path": "/Users/steven/Documents/Notion/LeoNardo 15036221d8b280ec91cfd065d34925cb/Untitled 15036221d8b280a6a687d00887bcde01.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 297,
+      "content_hash": "c2a7b6ea9448d2cd",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "documentation"
+      ],
+      "project_context": "youtube_content",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | Documentation or guides",
+      "organization_priority": 0,
+      "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/Experimental",
+      "restore_information": {
+        "original_path": "Notion/LeoNardo 15036221d8b280ec91cfd065d34925cb/Untitled 15036221d8b280a6a687d00887bcde01.csv",
+        "restore_instructions": "Part of youtube content project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv": {
+      "file_name": "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/MyDesigns 15136221d8b2807599d9c367138d35cc/Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.04,
+      "content_length": 37808,
+      "content_hash": "8744881a0e0fb947",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "youtube_content",
+      "content_type": "markdown_documentation",
+      "key_phrases": [],
+      "relationships": [
+        "versioned_file"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | YouTube content or video-related material | AI/ML related content | Data analysis or research",
+      "organization_priority": 37,
+      "suggested_destination": "~/Documents/CsV/YouTube-Content/Documentation/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/MyDesigns 15136221d8b2807599d9c367138d35cc/Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+        "restore_instructions": "Part of youtube content project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv": {
+      "file_name": "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "file_path": "/Users/steven/Documents/Notion/Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.01,
+      "content_length": 15264,
+      "content_hash": "d04cbc9fbf6be88b",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+      "organization_priority": 47,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv": {
+      "file_name": "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "file_path": "/Users/steven/Documents/Notion/DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 1.1,
+      "content_length": 1151493,
+      "content_hash": "c789330b504a0d76",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "markdown_documentation",
+      "key_phrases": [],
+      "relationships": [
+        "url_leonardo.ai",
+        "url_leonardo.ai",
+        "url_images.pexels.com",
+        "url_images.pexels.com",
+        "url_aiavatararts.com",
+        "versioned_file"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+      "organization_priority": 65,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv": {
+      "file_name": "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "file_path": "/Users/steven/Documents/Notion/Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.01,
+      "content_length": 15231,
+      "content_hash": "1582d7af8de87507",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content",
+        "configuration"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+      "organization_priority": 47,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv": {
+      "file_name": "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv",
+      "file_path": "/Users/steven/Documents/Notion/Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.01,
+      "content_length": 9957,
+      "content_hash": "9fd870a9772b05a8",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "ai_ml",
+        "web_development",
+        "data_analysis",
+        "portfolio_work",
+        "documentation",
+        "automation_scripts",
+        "media_content"
+      ],
+      "project_context": "as_man_thinketh",
+      "content_type": "structured_data",
+      "key_phrases": [],
+      "relationships": [],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+      "organization_priority": 45,
+      "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+      "restore_information": {
+        "original_path": "Notion/Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv",
+        "restore_instructions": "Part of as man thinketh project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    },
+    "Directory 15936221d8b281ccaf09d4e6c7916f88.csv": {
+      "file_name": "Directory 15936221d8b281ccaf09d4e6c7916f88.csv",
+      "file_path": "/Users/steven/Documents/Notion/TDD (Beta Version) 15936221d8b280bea63aed48ea536adb/Directory 15936221d8b281ccaf09d4e6c7916f88.csv",
+      "file_extension": ".csv",
+      "file_size_mb": 0.0,
+      "content_length": 1622,
+      "content_hash": "92c286a33d1cadf3",
+      "mime_type": "text/csv",
+      "semantic_categories": [
+        "web_development",
+        "documentation",
+        "automation_scripts",
+        "media_content"
+      ],
+      "project_context": "youtube_content",
+      "content_type": "structured_data",
+      "key_phrases": [
+        "https",
+        "inspiration, type & lettering"
+      ],
+      "relationships": [
+        "url_www.nomadstudio.com",
+        "url_www.aiga.org",
+        "url_benditomockup.com",
+        "url_blazetype.eu",
+        "url_www.underconsideration.com"
+      ],
+      "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | Web development project | Documentation or guides | Contains: https, inspiration, type & lettering",
+      "organization_priority": 17,
+      "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/Web-Development/Experimental",
+      "restore_information": {
+        "original_path": "Notion/TDD (Beta Version) 15936221d8b280bea63aed48ea536adb/Directory 15936221d8b281ccaf09d4e6c7916f88.csv",
+        "restore_instructions": "Part of youtube content project",
+        "backup_recommended": false
+      },
+      "content_insights": {
+        "code_complexity": "low",
+        "documentation_quality": "low",
+        "project_maturity": "low",
+        "technical_debt": "low"
+      }
+    }
+  },
+  "semantic_categories": {
+    "data_analysis": [
+      "dataset.csv",
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+      "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+      "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv"
+    ],
+    "portfolio_work": [
+      "dataset.csv",
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+      "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv"
+    ],
+    "media_content": [
+      "dataset.csv",
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "categories 15936221d8b281e9b6e6d5c1cda931be.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+      "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+      "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv",
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ],
+    "configuration": [
+      "dataset.csv",
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv"
+    ],
+    "ai_ml": [
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+      "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+      "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv"
+    ],
+    "web_development": [
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "more products (7) 15936221d8b281f2bf81e3799b598c7d.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+      "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv",
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ],
+    "documentation": [
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "Table 18.csv",
+      "Table 12.csv",
+      "Table 16.csv",
+      "Table 17.csv",
+      "Untitled 15036221d8b280a6a687d00887bcde01.csv",
+      "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv",
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ],
+    "automation_scripts": [
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+      "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+      "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv",
+      "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "Prompt Library AI for Instagram 15936221d8b28049bf07faeb53ff572d.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "Prompt Library AI for Instagram 15936221d8b28045a20bcc42b884ed8d.csv",
+      "Prompts 3d7f55f1c5ac4d52af74a322b93f871b.csv",
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ],
+    "unreadable": [
+      "Intro AI Course Plan.csv"
+    ]
+  },
+  "file_relationships": {
+    "url_leonardo.ai": [
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv"
+    ],
+    "url_images.pexels.com": [
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv"
+    ],
+    "url_aiavatararts.com": [
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv"
+    ],
+    "versioned_file": [
+      "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+      "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "Untitled 15136221d8b280f69eb4e2cba22a8a02.csv",
+      "DigiTaL DiVe 15236221d8b2808aa697d88175ddfe35.csv"
+    ],
+    "url_stablediffusionweb.com": [
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv"
+    ],
+    "url_speech.microsoft.com": [
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv"
+    ],
+    "url_tome.app": [
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv"
+    ],
+    "url_palette.fm": [
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv"
+    ],
+    "url_pfpmaker.com": [
+      "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv"
+    ],
+    "url_notionplates.gumroad.com": [
+      "more products (7) 15936221d8b281f2bf81e3799b598c7d.csv",
+      "more products (7) 15936221d8b281f2bf81e3799b598c7d.csv"
+    ],
+    "url_www.voicemod.net": [
+      "tools 15936221d8b28161bbbdf01d87ac6b55.csv"
+    ],
+    "url_images.openai.com": [
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+      "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv"
+    ],
+    "url_app.photoai.me": [
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv"
+    ],
+    "url_rytr.me": [
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv"
+    ],
+    "url_www.deepbrain.io": [
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv"
+    ],
+    "url_speakai.co": [
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv"
+    ],
+    "url_podcastle.ai": [
+      "DB_FeaturedAITools 3bce05e1eb624c489f357292c69a240c.csv"
+    ],
+    "url_linktr.ee": [
+      "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "vidIQ CSV export for I've Had It 2025-05-10.csv"
+    ],
+    "url_www.youtube.com": [
+      "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "vidIQ CSV export for I've Had It 2025-05-10.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv"
+    ],
+    "references_http://www.incamayanaztec.com/index.html": [
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv"
+    ],
+    "url_www.worldhistory.org": [
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv"
+    ],
+    "url_www.ancient.eu": [
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv"
+    ],
+    "url_twitter.com": [
+      "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv"
+    ],
+    "url_chat.openai.com": [
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+      "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv"
+    ],
+    "url_www.nomadstudio.com": [
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ],
+    "url_www.aiga.org": [
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ],
+    "url_benditomockup.com": [
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ],
+    "url_blazetype.eu": [
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ],
+    "url_www.underconsideration.com": [
+      "Directory 15936221d8b281ccaf09d4e6c7916f88.csv"
+    ]
+  },
+  "intelligent_recommendations": [
+    {
+      "category": "data_analysis",
+      "file_count": 15,
+      "total_size_mb": 6.46,
+      "priority": "medium",
+      "recommended_actions": [
+        "Organize data_analysis files in dedicated folder",
+        "Create subfolders based on content type",
+        "Review for relevance and cleanup opportunities",
+        "Consider project-specific organization"
+      ],
+      "sample_files": [
+        {
+          "file_name": "dataset.csv",
+          "file_path": "/Users/steven/Documents/claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 1825,
+          "content_hash": "5889ab8985c6fd0f",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "data_analysis",
+            "portfolio_work",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "portfolio_projects",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Portfolio or showcase project material | Data analysis or research | Portfolio or professional work",
+          "organization_priority": 21,
+          "suggested_destination": "~/Documents/CsV/Portfolio/Data/Data-Analysis/Experimental",
+          "restore_information": {
+            "original_path": "claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+            "restore_instructions": "Part of portfolio projects project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 1.1,
+          "content_length": 1150793,
+          "content_hash": "bc376bfcad09b3da",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "url_leonardo.ai",
+            "url_leonardo.ai",
+            "url_images.pexels.com",
+            "url_images.pexels.com",
+            "url_aiavatararts.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "05c0e3d16f6a0f8e",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_tome.app",
+            "url_palette.fm",
+            "url_pfpmaker.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "43a3345fc93c9283",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_pfpmaker.com",
+            "url_tome.app",
+            "url_www.voicemod.net"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 773,
+          "content_hash": "641e70dbde176100",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "data_analysis",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "python"
+          ],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Data analysis or research | Contains: python",
+          "organization_priority": 28,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 15 data_analysis files",
+        "Total size: 6.5 MB",
+        "Average priority: 41.9"
+      ],
+      "category_metrics": {
+        "high_priority_files": 15,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 41.9
+      }
+    },
+    {
+      "category": "portfolio_work",
+      "file_count": 15,
+      "total_size_mb": 6.46,
+      "priority": "medium",
+      "recommended_actions": [
+        "Create portfolio showcase structure",
+        "Organize by project type and client",
+        "Keep showcase materials separate from work files",
+        "Create subfolders for different types of work"
+      ],
+      "sample_files": [
+        {
+          "file_name": "dataset.csv",
+          "file_path": "/Users/steven/Documents/claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 1825,
+          "content_hash": "5889ab8985c6fd0f",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "data_analysis",
+            "portfolio_work",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "portfolio_projects",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Portfolio or showcase project material | Data analysis or research | Portfolio or professional work",
+          "organization_priority": 21,
+          "suggested_destination": "~/Documents/CsV/Portfolio/Data/Data-Analysis/Experimental",
+          "restore_information": {
+            "original_path": "claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+            "restore_instructions": "Part of portfolio projects project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 1.1,
+          "content_length": 1150793,
+          "content_hash": "bc376bfcad09b3da",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "url_leonardo.ai",
+            "url_leonardo.ai",
+            "url_images.pexels.com",
+            "url_images.pexels.com",
+            "url_aiavatararts.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "05c0e3d16f6a0f8e",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_tome.app",
+            "url_palette.fm",
+            "url_pfpmaker.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "43a3345fc93c9283",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_pfpmaker.com",
+            "url_tome.app",
+            "url_www.voicemod.net"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 2088,
+          "content_hash": "f5b61c5989034847",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "data_analysis",
+            "portfolio_work",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Data analysis or research",
+          "organization_priority": 25,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 15 portfolio files",
+        "Total size: 6.5 MB",
+        "High priority files: 15",
+        "Mature projects: 0",
+        "Consider creating project-specific subfolders"
+      ],
+      "category_metrics": {
+        "high_priority_files": 15,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 42.5
+      }
+    },
+    {
+      "category": "media_content",
+      "file_count": 18,
+      "total_size_mb": 6.46,
+      "priority": "medium",
+      "recommended_actions": [
+        "Organize media_content files in dedicated folder",
+        "Create subfolders based on content type",
+        "Review for relevance and cleanup opportunities",
+        "Consider project-specific organization"
+      ],
+      "sample_files": [
+        {
+          "file_name": "dataset.csv",
+          "file_path": "/Users/steven/Documents/claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 1825,
+          "content_hash": "5889ab8985c6fd0f",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "data_analysis",
+            "portfolio_work",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "portfolio_projects",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Portfolio or showcase project material | Data analysis or research | Portfolio or professional work",
+          "organization_priority": 21,
+          "suggested_destination": "~/Documents/CsV/Portfolio/Data/Data-Analysis/Experimental",
+          "restore_information": {
+            "original_path": "claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+            "restore_instructions": "Part of portfolio projects project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 1.1,
+          "content_length": 1150793,
+          "content_hash": "bc376bfcad09b3da",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "url_leonardo.ai",
+            "url_leonardo.ai",
+            "url_images.pexels.com",
+            "url_images.pexels.com",
+            "url_aiavatararts.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "05c0e3d16f6a0f8e",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_tome.app",
+            "url_palette.fm",
+            "url_pfpmaker.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "categories 15936221d8b281e9b6e6d5c1cda931be.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/categories 15936221d8b281e9b6e6d5c1cda931be.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 41,
+          "content_hash": "847546f1f375b27a",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "media_content"
+          ],
+          "project_context": "general",
+          "content_type": "general_content",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | General content file | General project file | Media or creative content",
+          "organization_priority": 0,
+          "suggested_destination": "~/Documents/CsV/Media/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/categories 15936221d8b281e9b6e6d5c1cda931be.csv",
+            "restore_instructions": "Standard file - can be restored to any appropriate location",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "43a3345fc93c9283",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_pfpmaker.com",
+            "url_tome.app",
+            "url_www.voicemod.net"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 18 media_content files",
+        "Total size: 6.5 MB",
+        "Average priority: 37.2"
+      ],
+      "category_metrics": {
+        "high_priority_files": 16,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 37.2
+      }
+    },
+    {
+      "category": "configuration",
+      "file_count": 9,
+      "total_size_mb": 6.43,
+      "priority": "medium",
+      "recommended_actions": [
+        "Organize configuration files in dedicated folder",
+        "Create subfolders based on content type",
+        "Review for relevance and cleanup opportunities",
+        "Consider project-specific organization"
+      ],
+      "sample_files": [
+        {
+          "file_name": "dataset.csv",
+          "file_path": "/Users/steven/Documents/claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 1825,
+          "content_hash": "5889ab8985c6fd0f",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "data_analysis",
+            "portfolio_work",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "portfolio_projects",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Portfolio or showcase project material | Data analysis or research | Portfolio or professional work",
+          "organization_priority": 21,
+          "suggested_destination": "~/Documents/CsV/Portfolio/Data/Data-Analysis/Experimental",
+          "restore_information": {
+            "original_path": "claude/claude-courses-master/prompt_evaluations/06_prompt_foo_code_graded_classification/dataset.csv",
+            "restore_instructions": "Part of portfolio projects project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 1.1,
+          "content_length": 1150793,
+          "content_hash": "bc376bfcad09b3da",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "url_leonardo.ai",
+            "url_leonardo.ai",
+            "url_images.pexels.com",
+            "url_images.pexels.com",
+            "url_aiavatararts.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.02,
+          "content_length": 16443,
+          "content_hash": "a22ee1ec5e3642c8",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 47,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 4.15,
+          "content_length": 2095704,
+          "content_hash": "35ad405293385ab9",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "references_http://www.incamayanaztec.com/index.html",
+            "url_www.worldhistory.org",
+            "url_www.ancient.eu",
+            "url_www.ancient.eu",
+            "url_www.youtube.com",
+            "url_twitter.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project | Some technical debt present",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "medium"
+          }
+        },
+        {
+          "file_name": "GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+          "file_path": "/Users/steven/Documents/Notion/OS Pages 190172d3915b4f54b350e17e2ca81e51/GPTs 228f4e54b03f405aa2fcb234a102456c/GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 2427,
+          "content_hash": "85f6d85768e599c1",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "openai",
+            "https",
+            "i'll help turn your wildest dreams into die-cut stickers, shipped right to your door.",
+            "gpt"
+          ],
+          "relationships": [
+            "url_chat.openai.com",
+            "url_chat.openai.com",
+            "url_chat.openai.com",
+            "url_chat.openai.com",
+            "url_chat.openai.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project | Contains: openai, https, i'll help turn your wildest dreams into die-cut stickers, shipped right to your door.",
+          "organization_priority": 37,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/OS Pages 190172d3915b4f54b350e17e2ca81e51/GPTs 228f4e54b03f405aa2fcb234a102456c/GPTs 6c2ff37690e743958aeb50d8aad8af3f.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 9 configuration files",
+        "Total size: 6.4 MB",
+        "Average priority: 47.9"
+      ],
+      "category_metrics": {
+        "high_priority_files": 9,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 47.9
+      }
+    },
+    {
+      "category": "ai_ml",
+      "file_count": 15,
+      "total_size_mb": 6.46,
+      "priority": "medium",
+      "recommended_actions": [
+        "Create dedicated AI/ML project folder structure",
+        "Organize by project type: models, data, scripts, documentation",
+        "Keep related files together for easy development workflow",
+        "Separate production models from experimental ones"
+      ],
+      "sample_files": [
+        {
+          "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 1.1,
+          "content_length": 1150793,
+          "content_hash": "bc376bfcad09b3da",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "url_leonardo.ai",
+            "url_leonardo.ai",
+            "url_images.pexels.com",
+            "url_images.pexels.com",
+            "url_aiavatararts.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "05c0e3d16f6a0f8e",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_tome.app",
+            "url_palette.fm",
+            "url_pfpmaker.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "43a3345fc93c9283",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_pfpmaker.com",
+            "url_tome.app",
+            "url_www.voicemod.net"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 773,
+          "content_hash": "641e70dbde176100",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "data_analysis",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "python"
+          ],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Data analysis or research | Contains: python",
+          "organization_priority": 28,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 2088,
+          "content_hash": "f5b61c5989034847",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "data_analysis",
+            "portfolio_work",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Data analysis or research",
+          "organization_priority": 25,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 15 AI/ML related files",
+        "Total size: 6.5 MB",
+        "High priority files: 15",
+        "Mature projects: 0",
+        "Consider creating subfolders for different AI projects"
+      ],
+      "category_metrics": {
+        "high_priority_files": 15,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 42.1
+      }
+    },
+    {
+      "category": "web_development",
+      "file_count": 15,
+      "total_size_mb": 6.42,
+      "priority": "medium",
+      "recommended_actions": [
+        "Create web development project structure",
+        "Separate frontend, backend, and assets",
+        "Organize by project or client",
+        "Keep production code separate from development"
+      ],
+      "sample_files": [
+        {
+          "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 1.1,
+          "content_length": 1150793,
+          "content_hash": "bc376bfcad09b3da",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "url_leonardo.ai",
+            "url_leonardo.ai",
+            "url_images.pexels.com",
+            "url_images.pexels.com",
+            "url_aiavatararts.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "05c0e3d16f6a0f8e",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_tome.app",
+            "url_palette.fm",
+            "url_pfpmaker.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "more products (7) 15936221d8b281f2bf81e3799b598c7d.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/more products (7) 15936221d8b281f2bf81e3799b598c7d.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 193,
+          "content_hash": "d31909d4ddc3c742",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "web_development"
+          ],
+          "project_context": "general",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_notionplates.gumroad.com",
+            "url_notionplates.gumroad.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file | Web development project | Contains: https",
+          "organization_priority": 8,
+          "suggested_destination": "~/Documents/CsV/Data/Web-Development/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/more products (7) 15936221d8b281f2bf81e3799b598c7d.csv",
+            "restore_instructions": "Standard file - can be restored to any appropriate location",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "43a3345fc93c9283",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_pfpmaker.com",
+            "url_tome.app",
+            "url_www.voicemod.net"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+          "file_path": "/Users/steven/Documents/Notion/OS Pages 190172d3915b4f54b350e17e2ca81e51/DALL-E 3 Gallery 0951b223b6b54cd686ec462b9af6adcc/DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 2810,
+          "content_hash": "3b56b11ce099a293",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "general",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https",
+            "openai",
+            "trim",
+            "width"
+          ],
+          "relationships": [
+            "url_images.openai.com",
+            "url_images.openai.com",
+            "url_images.openai.com",
+            "url_images.openai.com",
+            "url_images.openai.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | General project file | AI/ML related content | Web development project | Contains: https, openai, trim",
+          "organization_priority": 25,
+          "suggested_destination": "~/Documents/CsV/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/OS Pages 190172d3915b4f54b350e17e2ca81e51/DALL-E 3 Gallery 0951b223b6b54cd686ec462b9af6adcc/DALL-E 3 image gallery d4a9a67282ef41e19f449617b809bb59.csv",
+            "restore_instructions": "Standard file - can be restored to any appropriate location",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 15 web development files",
+        "Total size: 6.4 MB",
+        "Complex code files: 0",
+        "Average priority: 40.3",
+        "Consider organizing by technology stack"
+      ],
+      "category_metrics": {
+        "high_priority_files": 13,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 40.3
+      }
+    },
+    {
+      "category": "documentation",
+      "file_count": 17,
+      "total_size_mb": 6.46,
+      "priority": "medium",
+      "recommended_actions": [
+        "Organize documentation files in dedicated folder",
+        "Create subfolders based on content type",
+        "Review for relevance and cleanup opportunities",
+        "Consider project-specific organization"
+      ],
+      "sample_files": [
+        {
+          "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 1.1,
+          "content_length": 1150793,
+          "content_hash": "bc376bfcad09b3da",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "url_leonardo.ai",
+            "url_leonardo.ai",
+            "url_images.pexels.com",
+            "url_images.pexels.com",
+            "url_aiavatararts.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "05c0e3d16f6a0f8e",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_tome.app",
+            "url_palette.fm",
+            "url_pfpmaker.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "43a3345fc93c9283",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_pfpmaker.com",
+            "url_tome.app",
+            "url_www.voicemod.net"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.02,
+          "content_length": 16443,
+          "content_hash": "a22ee1ec5e3642c8",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 47,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Instagram Ai 4ec70cde15a44036980ca9dbde3e1086.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 4.15,
+          "content_length": 2095704,
+          "content_hash": "35ad405293385ab9",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "references_http://www.incamayanaztec.com/index.html",
+            "url_www.worldhistory.org",
+            "url_www.ancient.eu",
+            "url_www.ancient.eu",
+            "url_www.youtube.com",
+            "url_twitter.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project | Some technical debt present",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/Shorts - 2024 15336221d8b280be9760eae3f1708be2.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "medium"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 17 documentation files",
+        "Total size: 6.5 MB",
+        "Average priority: 31.9"
+      ],
+      "category_metrics": {
+        "high_priority_files": 11,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 31.9
+      }
+    },
+    {
+      "category": "automation_scripts",
+      "file_count": 16,
+      "total_size_mb": 6.46,
+      "priority": "medium",
+      "recommended_actions": [
+        "Organize automation_scripts files in dedicated folder",
+        "Create subfolders based on content type",
+        "Review for relevance and cleanup opportunities",
+        "Consider project-specific organization"
+      ],
+      "sample_files": [
+        {
+          "file_name": "Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_path": "/Users/steven/Documents/Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 1.1,
+          "content_length": 1150793,
+          "content_hash": "bc376bfcad09b3da",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content",
+            "configuration"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "markdown_documentation",
+          "key_phrases": [],
+          "relationships": [
+            "url_leonardo.ai",
+            "url_leonardo.ai",
+            "url_images.pexels.com",
+            "url_images.pexels.com",
+            "url_aiavatararts.com",
+            "versioned_file"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Markdown documentation with structured content | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Web development project",
+          "organization_priority": 65,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Documentation/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/79cfdbdd-8063-428d-961c-d0974f1d45d9_Export-29e4c77a-eca0-45f9-8032-7841592280eb/Untitled 15236221d8b2808aa697d88175ddfe35_all.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "05c0e3d16f6a0f8e",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_tome.app",
+            "url_palette.fm",
+            "url_pfpmaker.com"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b28005a532cadcd7b4f2ed/tools 15936221d8b28192b15fd6e595cc9b14.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.01,
+          "content_length": 5290,
+          "content_hash": "43a3345fc93c9283",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "web_development",
+            "data_analysis",
+            "portfolio_work",
+            "documentation",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "https"
+          ],
+          "relationships": [
+            "url_stablediffusionweb.com",
+            "url_speech.microsoft.com",
+            "url_pfpmaker.com",
+            "url_tome.app",
+            "url_www.voicemod.net"
+          ],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Web development project | Contains: https",
+          "organization_priority": 33,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Content-Master 15936221d8b280b5b989ea8b721de4e6/tools 15936221d8b28161bbbdf01d87ac6b55.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+          "file_path": "/Users/steven/Documents/Notion/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 773,
+          "content_hash": "641e70dbde176100",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "data_analysis",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "as_man_thinketh",
+          "content_type": "structured_data",
+          "key_phrases": [
+            "python"
+          ],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | Part of the 'As a Man Thinketh' audiobook project | AI/ML related content | Data analysis or research | Contains: python",
+          "organization_priority": 28,
+          "suggested_destination": "~/Documents/CsV/As-a-Man-Thinketh/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Prompt Database 15436221d8b2813d9134f2b77dc7ddc8.csv",
+            "restore_instructions": "Part of as man thinketh project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        },
+        {
+          "file_name": "Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+          "file_path": "/Users/steven/Documents/Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 2088,
+          "content_hash": "f5b61c5989034847",
+          "mime_type": "text/csv",
+          "semantic_categories": [
+            "ai_ml",
+            "data_analysis",
+            "portfolio_work",
+            "automation_scripts",
+            "media_content"
+          ],
+          "project_context": "youtube_content",
+          "content_type": "structured_data",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "Small file - likely configuration or simple content | Structured data file (JSON/XML/YAML) | YouTube content or video-related material | AI/ML related content | Data analysis or research",
+          "organization_priority": 25,
+          "suggested_destination": "~/Documents/CsV/YouTube-Content/Data/AI-ML/Experimental",
+          "restore_information": {
+            "original_path": "Notion/Export-50ef9a3a-d739-42e2-98a2-0a2d15b23936/AI Prompt Organizer 15436221d8b280b9ba03fde213f21175/Reusable Prompt Database 15436221d8b281a8be12ff9fc5ffd32a.csv",
+            "restore_instructions": "Part of youtube content project",
+            "backup_recommended": false
+          },
+          "content_insights": {
+            "code_complexity": "low",
+            "documentation_quality": "low",
+            "project_maturity": "low",
+            "technical_debt": "low"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 16 automation_scripts files",
+        "Total size: 6.5 MB",
+        "Average priority: 40.6"
+      ],
+      "category_metrics": {
+        "high_priority_files": 15,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 40.6
+      }
+    },
+    {
+      "category": "unreadable",
+      "file_count": 1,
+      "total_size_mb": 0.0,
+      "priority": "medium",
+      "recommended_actions": [
+        "Organize unreadable files in dedicated folder",
+        "Create subfolders based on content type",
+        "Review for relevance and cleanup opportunities",
+        "Consider project-specific organization"
+      ],
+      "sample_files": [
+        {
+          "file_name": "Intro AI Course Plan.csv",
+          "file_path": "/Users/steven/Documents/Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv",
+          "file_extension": ".csv",
+          "file_size_mb": 0.0,
+          "content_length": 0,
+          "content_hash": "unreadable",
+          "mime_type": "unknown",
+          "semantic_categories": [
+            "unreadable"
+          ],
+          "project_context": "unknown",
+          "content_type": "unreadable",
+          "key_phrases": [],
+          "relationships": [],
+          "intelligent_description": "File could not be read for analysis",
+          "organization_priority": 1,
+          "suggested_destination": "~/Documents/Other/Unreadable/",
+          "restore_information": {
+            "original_path": "Docs/05_Documentation_and_Notes/Documentation/Intro AI Course Plan.csv",
+            "restore_instructions": "File could not be analyzed - restore with caution",
+            "backup_recommended": true
+          },
+          "content_insights": {
+            "code_complexity": "unknown",
+            "documentation_quality": "unknown",
+            "project_maturity": "unknown",
+            "technical_debt": "unknown"
+          }
+        }
+      ],
+      "intelligent_insights": [
+        "Found 1 unreadable files",
+        "Total size: 0.0 MB",
+        "Average priority: 1.0"
+      ],
+      "category_metrics": {
+        "high_priority_files": 0,
+        "mature_projects": 0,
+        "complex_code": 0,
+        "avg_priority": 1.0
+      }
+    }
+  ]
+}

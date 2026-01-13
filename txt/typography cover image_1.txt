@@ -1,0 +1,32 @@
+typography cover image
+
+Create a vibrant and alive typography cover image that spells out '{topic/content}' in a bold, expressive, and futuristic style. The typography should be edgy and geeky, incorporating visual elements that reflect the emotional weight, thematic depth, and core message of the content.  
+
+The background should be dynamic and immersive, amplifying the tone and impact of the text. Each letter should be infused with symbolic imagery, seamlessly blending grunge, cyberpunk, or dystopian aesthetics to create a compelling and visually striking design.  
+
+Visual Breakdown:  
+🔹 Typography:  
+   - Bold, glitchy, or stencil-style fonts with distressed textures.  
+   - Letters infused with graffiti-like strokes, digital distortions, or neon lighting.  
+   - Some letters could morph into symbolic elements (e.g., an "O" becoming a surveillance eye, an "A" resembling a burning flag, or an "I" as a towering monolith of control).  
+
+🔹 Background & Setting:  
+   - A high-contrast solid color that amplifies the text (e.g., deep blues, neon reds, or eerie purples).  
+   - Optional futuristic overlays: digital billboards, surveillance cameras, urban decay, or chaotic protest visuals.  
+   - For thematic elements, weave in subtle shadows, technological grids, or glowing propaganda posters to add layers of storytelling.  
+
+🔹 Color Palette:  
+   - Dark, high-contrast tones for intensity and rebellion.  
+   - Neon blues, reds, and greens for a cyberpunk feel.  
+   - Muted golds, deep blacks, and crimson hues for a dystopian or authoritarian aesthetic.  
+
+🔹 Effects & Mood:  
+   - Glitch distortions to simulate a hacked signal or fractured reality.  
+   - Motion blur or light streaks to add a sense of urgency and action.  
+   - Smoke, sparks, or data particles floating around the letters to enhance the immersive, high-stakes atmosphere.  
+
+Technical Specifications:  
+📏 Aspect Ratio: 9:16 (1080x1920 pixels)  
+🎨 Background: Solid color or thematic texture  
+🔠 Resolution: High-quality PNG  
+

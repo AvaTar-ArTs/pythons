@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+reddit.py,[Reddit automation],,KEEP,
+refresolver-v1.py,JSON Schema URI resolution scopes and dereferencing,,KEEP,Already well-named
+remove-background.py,[No docstring found],,KEEP,
+remove-duplicate-files.py,[No docstring found],,KEEP,
+remove-duplicates.py,Advanced Duplicate Remover - Multiple detection methods,,KEEP,
+remove_redundant_prefixes.py,Remove Redundant Folder Name Prefixes,remove-redundant-prefixes.py,RENAME,Fix underscore to hyphen
+rename-files-utility.py,Master Rename Utility - Advanced Python File Renaming System,,KEEP,
+rename-suno-files.py,Python Intelligent Renamer - Flat Structure,instagram-rename-suno-files.py,RENAME,Add Instagram prefix
+rename.py,[No docstring found],,KEEP,
+rename_by_purpose.py,Rename by Purpose - What does the script DO?,rename-by-purpose.py,RENAME,Fix underscore to hyphen
+renamer.py,Simple Python Renamer for ~/Documents/python,,KEEP,
+render_text.py,[No docstring found],render-text.py,RENAME,Fix underscore to hyphen
+reorganize.py,Reorganize to Exact Structure,instagram-reorganize.py,RENAME,Add Instagram prefix
+reorganize_by_service.py,Reorganize by SERVICE instead of FILE TYPE,reorganize-by-service.py,RENAME,Fix underscore to hyphen
+rephrase.py,[OpenAI integration],,KEEP,
+replace.py,Apply text replacements to PowerPoint presentation.,,KEEP,
+reportbot.py,[Instagram automation],instagram-reportbot.py,RENAME,Add Instagram prefix
+request.py,[No docstring found],,LIBRARY,Library/framework code - request
+requirements.py,Intelligent Requirements Generator,instagram-requirements.py,RENAME,Add Instagram prefix
+research-assistant.py,🧠 AI Research Assistant with Memory,,KEEP,
+reset_following.py,This is a account reset tool.,reset-following.py,RENAME,Fix underscore to hyphen
+resize.py,[OpenAI integration],,KEEP,
+resizer.py,[No docstring found],,KEEP,
+resolution.py,[No docstring found],,KEEP,
+resource-cache.py,[No docstring found],,LIBRARY,Library/framework code - cache.py
+resource-manager.py,[No docstring found],,KEEP,
+response.py,[No docstring found],,LIBRARY,Library/framework code - response
+restarter.py,A basic kernel monitor with autorestarting.,,KEEP,
+retrieve-docs.py,[No docstring found],,KEEP,
+revenue-engine.py,💰 AI Revenue Engine,,KEEP,
+rich-theme.py,[No docstring found],,KEEP,
+riddle.py,[OpenAI integration],,KEEP,
+robust.py,Robust File Processor,,KEEP,
+root-scripts.py,Organize Root Python Scripts by Content,instagram-root-scripts.py,RENAME,Add Instagram prefix
+run-all-renamers.py,Master Runner for All Rename Utilities,,KEEP,
+safeduplicatecleanup-v1.py,Safe Duplicate Cleanup Script,,DELETE,One-time script or backup
+sample-config.py,[YouTube automation],,LIBRARY,Library/framework code - config.py
+save-ai-outputs.py,AI Outputs Hub - Integration Script,,KEEP,
+save-exit.py,Auto-save conversation on exit keywords,,KEEP,
+save-unfollowers-into.py,instabot example,instagram-save-unfollowers-into.py,RENAME,Add Instagram prefix
+save-users-following.py,instabot example,instagram-save-users-following.py,RENAME,Add Instagram prefix
+savify.py,Main module for Savify.,,KEEP,
+scan-and-categorize-files.py,[No docstring found],,KEEP,
+scan-leonardo-comprehensive.py,Final Comprehensive Scan - Uses ALL tools available,instagram-scan-leonardo-comprehensive.py,RENAME,Add Instagram prefix
+scancsv.py,[No docstring found],,KEEP,
+scanpython.py,[OpenAI integration],,KEEP,
+scanpythons.py,[OpenAI integration],,KEEP,
+scheme.py,For types associated with installation schemes.,,KEEP,
+scrape-suno-api.py,?? SUNO AI SCRAPER - Complete CSV Exporter,suno-scrape-suno-api.py,RENAME,Add Suno prefix
+scrape.py,[Reddit automation],,KEEP,

@@ -1,0 +1,16 @@
+action,original,new,status
+RENAME,scraping-download-news_api_fetcher.py,scraping-download-news-api-fetcher.py,completed
+RENAME,script_simple.py,script-simple.py,completed
+RENAME,setup_browser.py,setup-browser.py,completed
+RENAME,setup_legacy.py,setup-legacy.py,completed
+RENAME,setup_simple.py,setup-simple.py,completed
+RENAME,simple_flat_organizer.py,simple-flat-organizer.py,completed
+RENAME,simple_smart_renamer.py,simple-smart-renamer.py,completed
+RENAME,smart_archive_backups.py,smart-archive-backups.py,completed
+RENAME,smart_conservative_renamer.py,smart-conservative-renamer.py,completed
+RENAME,smart_content_renamer_v2.py,smart-content-renamer-v2.py,completed
+RENAME,smart_content_renamer_v3.py,smart-content-renamer-v3.py,completed
+RENAME,smart_local_renamer.py,smart-local-renamer.py,completed
+RENAME,smart_rename_versions.py,smart-rename-versions.py,completed
+LIBRARY,settings.py,_library/settings.py,completed
+LIBRARY,setup.py,_library/setup.py,completed

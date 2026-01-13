@@ -1,0 +1,237 @@
+#!/usr/bin/env python3
+"""from datetime import datetime
+from pathlib import Path
+import json
+import shutil
+Clean up Love_In_Imperfection folder - consolidate and organize by duration
+NAMING CONVENTION: file313 = 3:13 duration, file323 = 3:23 duration, etc.
+Different numbers = different cuts/versions (covers, edits)
+"""
+
+
+def cleanup_love_in_imperfection_v2():
+    """Clean up Love_In_Imperfection - keeping different duration versions"""
+    album_dir = Path.home() / "Music" / "nocTurneMeLoDieS" / "Love_In_Imperfection"
+    backup_dir = album_dir / f'_BACKUP_{datetime.now().strftime("%Y%m%d_%H%M%S")}'
+
+    print("\n" + "=" * 80)
+    print("  LOVE IN IMPERFECTION - Smart Cleanup (Duration-Based)")
+    print("=" * 80 + "\n")
+
+    print("📋 NAMING CONVENTION:")
+    print("   file313 = 3:13 duration (193s) - Short version/cover")
+    print("   file323 = 3:23 duration (203s) - Medium version/cover")
+    print("   Remastered = 3:40 duration (220s) - Full version")
+    print()
+
+    # Analysis results
+    print("📊 Current State - 3 DISTINCT VERSIONS:")
+    print()
+    print("   VERSION 1 (3:13 / 193s):")
+    print("   ✅ imperfection313.mp3")
+    print("   ✅ imperfection313_transcript.txt")
+    print("   ✅ imperfection313_analysis.txt")
+    print()
+    print("   VERSION 2 (3:23 / 203s):")
+    print("   📦 imperfection323.mp3 (basic naming)")
+    print("   📦 Love_in_Imperfection_-indie-Folk-Dark-323.mp3 (detailed naming)")
+    print("   📦 Related transcripts/analysis")
+    print()
+    print("   VERSION 3 (3:40 / 220s) - FULL REMASTERED:")
+    print("   ✅ Love_in_Imperfection_Remastered.mp3 (KEEP)")
+    print("   ❌ Love_in_Imperfection_Remastered2.mp3 (exact duplicate)")
+    print("   ❌ Love_in_Imperfection_v_4.mp3 (exact duplicate)")
+    print("   ✅ Related analysis/transcript")
+    print()
+
+    # Cleanup strategy
+    print("🎯 Cleanup Strategy - Keep Different Versions:")
+    print()
+    print("   KEEP & ORGANIZE BY DURATION:")
+    print("   ✅ Love_in_Imperfection_313.mp3 (short version)")
+    print("   ✅ Love_in_Imperfection_313_transcript.txt")
+    print("   ✅ Love_in_Imperfection_313_analysis.txt")
+    print()
+    print("   ✅ Love_in_Imperfection_323.mp3 (medium version)")
+    print("   ✅ Love_in_Imperfection_323_transcript.txt")
+    print("   ✅ Love_in_Imperfection_323_analysis.txt")
+    print()
+    print("   ✅ Love_in_Imperfection.mp3 (full remastered)")
+    print("   ✅ Love_in_Imperfection_transcript.txt")
+    print("   ✅ Love_in_Imperfection_analysis.txt")
+    print()
+    print("   REMOVE (exact duplicates):")
+    print("   ❌ Love_in_Imperfection_-indie-Folk-Dark-323.mp3 (dup of 323)")
+    print("   ❌ Love_in_Imperfection_Remastered2.mp3 (dup of Remastered)")
+    print("   ❌ Love_in_Imperfection_v_4.mp3 (dup of Remastered)")
+    print("   ❌ Related duplicate analyses")
+    print()
+
+    response = input("Proceed with duration-based cleanup? (yes/no): ").strip().lower()
+
+    if response != "yes":
+        print("\n❌ Cleanup cancelled.")
+        return
+
+    # Create backup directory
+    backup_dir.mkdir(exist_ok=True)
+    print(f"\n📁 Created backup directory: {backup_dir}")
+
+    # Track changes
+    changes = {
+        "timestamp": datetime.now().isoformat(),
+        "convention": "file323 = 3:23 duration (covers/versions)",
+        "kept": [],
+        "removed": [],
+        "renamed": [],
+    }
+
+    print("\n" + "=" * 80)
+    print("  STEP 1: ORGANIZE VERSION 1 (3:13)")
+    print("=" * 80)
+
+    # Version 1 (313) - already good naming
+    renames_v1 = {
+        "imperfection313.mp3": "Love_in_Imperfection_313.mp3",
+        "imperfection313_transcript.txt": "Love_in_Imperfection_313_transcript.txt",
+        "imperfection313_analysis.txt": "Love_in_Imperfection_313_analysis.txt",
+    }
+
+    for old_name, new_name in renames_v1.items():
+        old_path = album_dir / old_name
+        new_path = album_dir / new_name
+
+        if old_path.exists():
+            shutil.move(str(old_path), str(new_path))
+            print(f"✅ Renamed: {old_name} → {new_name}")
+            changes["renamed"].append({"from": old_name, "to": new_name})
+            changes["kept"].append(new_name)
+
+    print("\n" + "=" * 80)
+    print("  STEP 2: ORGANIZE VERSION 2 (3:23)")
+    print("=" * 80)
+
+    # Version 2 (323) - keep one, remove duplicate
+    # Keep the simpler named one
+    renames_v2 = {
+        "imperfection323.mp3": "Love_in_Imperfection_323.mp3",
+        "imperfection323_transcript.txt": "Love_in_Imperfection_323_transcript.txt",
+        "imperfection323_analysis.txt": "Love_in_Imperfection_323_analysis.txt",
+    }
+
+    for old_name, new_name in renames_v2.items():
+        old_path = album_dir / old_name
+        new_path = album_dir / new_name
+
+        if old_path.exists():
+            shutil.move(str(old_path), str(new_path))
+            print(f"✅ Renamed: {old_name} → {new_name}")
+            changes["renamed"].append({"from": old_name, "to": new_name})
+            changes["kept"].append(new_name)
+
+    # Remove duplicate 323 version
+    remove_v2_dups = [
+        "Love_in_Imperfection_-indie-Folk-Dark-323.mp3",
+        "Love_in_Imperfection_-indie-Folk-Dark-323_analysis.txt",
+        "Love_in_Imperfection_-indie-Folk-Dark-323_transcript.txt",
+    ]
+
+    for filename in remove_v2_dups:
+        src = album_dir / filename
+        dst = backup_dir / filename
+
+        if src.exists():
+            shutil.move(str(src), str(dst))
+            print(f"❌ Removed duplicate: {filename}")
+            changes["removed"].append(filename)
+
+    print("\n" + "=" * 80)
+    print("  STEP 3: ORGANIZE VERSION 3 (3:40 REMASTERED)")
+    print("=" * 80)
+
+    # Version 3 (Remastered) - keep best, remove exact duplicates
+    renames_v3 = {
+        "Love_in_Imperfection_Remastered.mp3": "Love_in_Imperfection.mp3",
+        "Love_in_Imperfection_Remastered_analysis.txt": "Love_in_Imperfection_analysis.txt",
+    }
+
+    for old_name, new_name in renames_v3.items():
+        old_path = album_dir / old_name
+        new_path = album_dir / new_name
+
+        if old_path.exists():
+            if old_name != new_name:
+                shutil.move(str(old_path), str(new_path))
+                print(f"✅ Renamed: {old_name} → {new_name}")
+                changes["renamed"].append({"from": old_name, "to": new_name})
+            changes["kept"].append(new_name)
+
+    # Use the best transcript (the detailed one from 323 version)
+    transcript_source = (
+        album_dir / "Love_in_Imperfection_-indie-Folk-Dark-323_transcript.txt"
+    )
+    transcript_dest = album_dir / "Love_in_Imperfection_transcript.txt"
+
+    # Check if it wasn't already removed
+    if (
+        backup_dir / "Love_in_Imperfection_-indie-Folk-Dark-323_transcript.txt"
+    ).exists():
+        shutil.move(
+            str(
+                backup_dir / "Love_in_Imperfection_-indie-Folk-Dark-323_transcript.txt",
+            ),
+            str(transcript_dest),
+        )
+        print("✅ Restored best transcript for main version")
+        changes["kept"].append("Love_in_Imperfection_transcript.txt")
+
+    # Remove exact duplicates
+    remove_v3_dups = [
+        "Love_in_Imperfection_Remastered2.mp3",
+        "Love_in_Imperfection_Remastered2_analysis.txt",
+        "Love_in_Imperfection_v_4.mp3",
+    ]
+
+    for filename in remove_v3_dups:
+        src = album_dir / filename
+        dst = backup_dir / filename
+
+        if src.exists():
+            shutil.move(str(src), str(dst))
+            print(f"❌ Removed duplicate: {filename}")
+            changes["removed"].append(filename)
+
+    # Save cleanup log
+    log_file = backup_dir / "cleanup_log_duration_based.json"
+    with open(log_file, "w") as f:
+        json.dump(changes, f, indent=2)
+
+    print("\n" + "=" * 80)
+    print("  ✅ CLEANUP COMPLETE!")
+    print("=" * 80 + "\n")
+
+    print("📊 Summary:")
+    print(f"   Kept:     {len(changes['kept'])} files (3 versions)")
+    print(f"   Renamed:  {len(changes['renamed'])} files")
+    print(f"   Removed:  {len(changes['removed'])} files (duplicates)")
+    print()
+    print("📁 Final state:")
+    print("   Love_in_Imperfection/")
+    print("   ├── Love_in_Imperfection_313.mp3 (3:13 short version)")
+    print("   ├── Love_in_Imperfection_313_transcript.txt")
+    print("   ├── Love_in_Imperfection_313_analysis.txt")
+    print("   ├── Love_in_Imperfection_323.mp3 (3:23 medium version)")
+    print("   ├── Love_in_Imperfection_323_transcript.txt")
+    print("   ├── Love_in_Imperfection_323_analysis.txt")
+    print("   ├── Love_in_Imperfection.mp3 (3:40 full remastered)")
+    print("   ├── Love_in_Imperfection_transcript.txt")
+    print("   └── Love_in_Imperfection_analysis.txt")
+    print()
+    print(f"💾 Backup location: {backup_dir}")
+    print(f"📋 Cleanup log: {log_file}")
+    print()
+    print("💡 3 distinct versions preserved based on duration naming convention")
+
+
+if __name__ == "__main__":
+    cleanup_love_in_imperfection_v2()

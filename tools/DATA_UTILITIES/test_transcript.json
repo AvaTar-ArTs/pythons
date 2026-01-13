@@ -1,0 +1,7 @@
+{"role": "user", "content": "Can you help me create a Python script?"}
+{"role": "assistant", "content": "Of course! I'd be happy to help you create a Python script. What would you like the script to do?"}
+{"role": "user", "content": "I need it to process CSV files"}
+{"role": "assistant", "content": "I'll create a script that processes CSV files. Let me write that for you."}
+{"role": "tool_use", "name": "Write", "input": {"file_path": "/example/process_csv.py", "content": "import csv\n\ndef process_csv(filename):\n    with open(filename, 'r') as f:\n        reader = csv.reader(f)\n        for row in reader:\n            print(row)"}}
+{"role": "tool_result", "content": "File created successfully"}
+{"role": "assistant", "content": "I've created the CSV processing script for you!"}

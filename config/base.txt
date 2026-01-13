@@ -1,0 +1,13 @@
+# Base requirements for Python Automation Framework
+# These are minimal runtime dependencies
+
+# Core Python libraries used across tools
+pathlib
+typing
+json
+datetime
+os
+sys
+collections
+csv
+hashlib

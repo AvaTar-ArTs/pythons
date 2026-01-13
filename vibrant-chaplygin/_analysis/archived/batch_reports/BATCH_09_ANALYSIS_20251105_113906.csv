@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+leoup.py,[Leonardo AI],leonardo-leoup.py,RENAME,Add Leonardo prefix
+lexica.py,[No docstring found],,KEEP,
+like-follow.py,instabot example,instagram-like-follow.py,RENAME,Add Instagram prefix
+like-hashtags-from.py,instabot example,instagram-like-hashtags-from.py,RENAME,Add Instagram prefix
+like-hashtags.py,instabot example,instagram-like-hashtags.py,RENAME,Add Instagram prefix
+like-location-feed.py,[Instagram automation],instagram-like-location-feed.py,RENAME,Add Instagram prefix
+like-user-followers.py,instabot example,instagram-like-user-followers.py,RENAME,Add Instagram prefix
+like-user-following.py,instabot example,instagram-like-user-following.py,RENAME,Add Instagram prefix
+like-users-from.py,instabot example,instagram-like-users-from.py,RENAME,Add Instagram prefix
+like-users.py,instabot example,instagram-like-users.py,RENAME,Add Instagram prefix
+like-your-last.py,instabot example,instagram-like-your-last.py,RENAME,Add Instagram prefix
+loop-upscale.py,[Leonardo AI],leonardo-loop-upscale.py,RENAME,Add Leonardo prefix
+loop.py,Agentic sampling loop that calls the Claude API and local implementation of anthropic-defined computer use tools.,,KEEP,
+lyrics-storyboards.py,[OpenAI integration],,KEEP,
+macro.py,Support for interactive macros in IPython,,KEEP,
+manage-repo.py,Enhanced GitHub Repository Manager,,KEEP,
+market-research-platform.py,🔍 AI Market Research Platform,,KEEP,
+massive.py,This template is written by @loopypanda,,KEEP,
+media-player.py,[No docstring found],,KEEP,
+media-processing-audio.py,[OpenAI integration],,KEEP,
+merge-csv.py,🎯 ULTIMATE FOLDER CLEANUP - Final Pass,suno-merge-csv.py,RENAME,Add Suno prefix
+merge-doc-csvs.py,[No docstring found],,KEEP,
+merge-files-intelligent.py,[No docstring found],,KEEP,
+merge-suno-csv.py,?? SUNO CSV COMPARATOR & MERGER,suno-merge-suno-csv.py,RENAME,Add Suno prefix
+merge_moonlight_and_misc.py,🌙 MERGE MOONLIGHT FOLDERS & ORGANIZE MISCELLANEOUS,merge-moonlight-and-misc.py,RENAME,Fix underscore to hyphen
+merge_other_content_albums.py,🔀 MERGE OTHER_CONTENT/ALBUMS INTO NOCTURNE,merge-other-content-albums.py,RENAME,Fix underscore to hyphen
+message-users.py,instabot example,instagram-message-users.py,RENAME,Add Instagram prefix
+midjourney-tool.py,[No docstring found],,KEEP,
+misc-gtts.py,[Reddit automation],,KEEP,
+model-evaluation-evaluate.py,[OpenAI integration],,KEEP,
+model-evaluation-sagemaker.py,[OpenAI integration],,KEEP,
+model-finetuning-sagemaker.py,[No docstring found],,KEEP,
+model.py,[OpenAI integration],suno-model.py,RENAME,Add Suno prefix
+models.py,Definition of the FFDNet model and its custom layers,,LIBRARY,Library/framework code - models.py
+move-improvements.py,[No docstring found],,KEEP,
+mp3-batch-timestamp.py,[OpenAI integration],,KEEP,
+multi.py,"Multi-API TTS Generator for ""As a Man Thinketh""",,KEEP,
+multi_depth_folder_analyzer.py,🔍 MULTI-DEPTH FOLDER ANALYZER & CONSOLIDATOR,multi-depth-folder-analyzer.py,RENAME,Fix underscore to hyphen
+music-catalog.py,[No docstring found],,KEEP,
+music-sort-dedup.py,Advanced Sort and Deduplication Tool,suno-music-sort-dedup.py,RENAME,Add Suno prefix
+mydesign-download.py,[No docstring found],,KEEP,
+mydesigner.py,[No docstring found],,KEEP,
+myinfo.py,[Leonardo AI],leonardo-myinfo.py,RENAME,Add Leonardo prefix
+named.py,[OpenAI integration],,KEEP,
+nativetypes.py,[No docstring found],,KEEP,
+nested.py,Validating highly nested schemas shouldn't cause exponential time blowups.,,KEEP,
+newsletter-empire.py,📰 AI-Powered Newsletter Empire,leonardo-newsletter-empire.py,RENAME,Add Leonardo prefix
+numpy-array-examples.py,[No docstring found],,LIBRARY,Library/framework code - numpy
+onedrive-gallery-logic.py,[No docstring found],,KEEP,
+openai-batch-image-seo-pipeline.py,[OpenAI integration],,KEEP,Already well-named

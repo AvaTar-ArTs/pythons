@@ -1,0 +1,137 @@
+original_path,type,file_count,size_kb,description,proposed_action,proposed_location,reason
+_archived_cleanup,directory,496,165769,Python project: _archived_cleanup,keep,_archived_cleanup,"Well-organized category, keep as-is"
+_organized_root_files,directory,211,92155,Python project: _organized_root_files,keep,_organized_root_files,"Well-organized category, keep as-is"
+ai-chatbot,directory,230,1122,Python project: ai-chatbot,keep,ai-chatbot,"Well-organized category, keep as-is"
+ai-image-generator,directory,508,10648,Python project: ai-image-generator,keep,ai-image-generator,"Well-organized category, keep as-is"
+ai-text-generator,directory,465,5466,Python project: ai-text-generator,keep,ai-text-generator,"Well-organized category, keep as-is"
+alfred_workflow,directory,3,13,Python project: alfred_workflow,keep,alfred_workflow,"Well-organized category, keep as-is"
+api-client,directory,155,868,Python project: api-client,keep,api-client,"Well-organized category, keep as-is"
+api-development,directory,379,3919,Python project: api-development,keep,api-development,"Well-organized category, keep as-is"
+apps,directory,304,1730,Python project: apps,keep,apps,"Well-organized category, keep as-is"
+As-a-Man-Thinketh,directory,0,0,Python project: As-a-Man-Thinketh,review,As-a-Man-Thinketh,Manual review needed to determine best location
+audio-converter,directory,23,18864,Python project: audio-converter,review,audio-converter,Manual review needed to determine best location
+audio-mixer,directory,1,5,Python project: audio-mixer,review,audio-mixer,Manual review needed to determine best location
+audio-transcription,directory,180,901,Audio file transcription (mp3/wav),keep,audio-transcription,"Well-organized category, keep as-is"
+automation,directory,83,931,Python project: automation,keep,automation,"Well-organized category, keep as-is"
+background-remover,directory,4,6,Background removal tools,keep,background-remover,"Well-organized category, keep as-is"
+backup-tool,directory,204,1082,Python project: backup-tool,keep,backup-tool,"Well-organized category, keep as-is"
+batch-processor,directory,14,112,Python project: batch-processor,keep,batch-processor,"Well-organized category, keep as-is"
+bot-automation,directory,447,6884,Python project: bot-automation,keep,bot-automation,"Well-organized category, keep as-is"
+cli-tool,directory,27,178,Python project: cli-tool,merge,utilities,"Merge contents into utilities, then remove"
+configuration,directory,52,136,Python project: configuration,keep,configuration,"Well-organized category, keep as-is"
+content-generation,directory,23,110,Python project: content-generation,review,content-generation,Manual review needed to determine best location
+cross-stitch-pattern-maker,directory,2,12,Python project: cross-stitch-pattern-maker,review,cross-stitch-pattern-maker,Manual review needed to determine best location
+csv-processor,directory,668,4917,Python project: csv-processor,keep,csv-processor,"Well-organized category, keep as-is"
+data-analyzer,directory,428,32637,Python project: data-analyzer,keep,data-analyzer,"Well-organized category, keep as-is"
+data-extractor,directory,49,244,Python project: data-extractor,keep,data-extractor,"Well-organized category, keep as-is"
+database,directory,67,1104,Python project: database,review,database,Manual review needed to determine best location
+database-tool,directory,15,275,Database tools,keep,database-tool,"Well-organized category, keep as-is"
+development_tools,directory,1,0,Python project: development_tools,move,shared_libraries/development_tools,Consolidate into shared_libraries
+doc-generator,directory,620,133044,Python project: doc-generator,keep,doc-generator,"Well-organized category, keep as-is"
+documentation,directory,229,1586,Python project: documentation,keep,documentation,"Well-organized category, keep as-is"
+download-all-the-gifs,directory,3,13,Python project: download-all-the-gifs,move,file-downloader/download-all-the-gifs,Consolidate into file-downloader
+Drive-image-link-converter,directory,4,13,Python project: Drive-image-link-converter,move,file-downloader/Drive-image-link-converter,Consolidate into file-downloader
+email-automation,directory,11,118,Email automation,keep,email-automation,"Well-organized category, keep as-is"
+examples,directory,13,47,Example code,move,_archived_cleanup/examples,Consolidate into _archived_cleanup
+excel-processor,directory,7,147,Excel/XLSX processing,keep,excel-processor,"Well-organized category, keep as-is"
+experimental,directory,1526,571245,Experimental scripts,move,_archived_cleanup/experimental,Consolidate into _archived_cleanup
+experiments,directory,129,1062,Python project: experiments,keep,experiments,"Well-organized category, keep as-is"
+face-processor,directory,5,19,Face detection/recognition,keep,face-processor,"Well-organized category, keep as-is"
+file-downloader,directory,3,7,Python project: file-downloader,review,file-downloader,Manual review needed to determine best location
+file-organizer,directory,1478,23067,Python project: file-organizer,keep,file-organizer,"Well-organized category, keep as-is"
+gallery-generator,directory,611,42113,Python project: gallery-generator,keep,gallery-generator,"Well-organized category, keep as-is"
+general-scripts,directory,384,5628,Python project: general-scripts,review,general-scripts,Manual review needed to determine best location
+heads,directory,2,0,Python project: heads,move,_archived_cleanup/heads,Consolidate into _archived_cleanup
+html-generator,directory,17,912,Python project: html-generator,review,html-generator,Manual review needed to determine best location
+image-converter,directory,124,638,Python project: image-converter,review,image-converter,Manual review needed to determine best location
+image-format-converter,directory,59,308,Image format conversion,keep,image-format-converter,"Well-organized category, keep as-is"
+image-resizer,directory,152,722,Python project: image-resizer,keep,image-resizer,"Well-organized category, keep as-is"
+image-upscaler,directory,52,176,Image upscaling/super-resolution,keep,image-upscaler,"Well-organized category, keep as-is"
+info,directory,1,0,Python project: info,move,_archived_cleanup/info,Consolidate into _archived_cleanup
+instagram-automation,directory,117,1047,Instagram bot/automation,merge,bot-automation,"Merge contents into bot-automation, then remove"
+installation,directory,2,12,Python project: installation,move,_archived_cleanup/installation,Consolidate into _archived_cleanup
+intelligent_articles,directory,3,48790,Article content,move,documentation/intelligent_articles,Consolidate into documentation
+ISSUE_TEMPLATE,directory,9,75,Python project: ISSUE_TEMPLATE,move,_archived_cleanup/ISSUE_TEMPLATE,Consolidate into _archived_cleanup
+json-processor,directory,160,936,Python project: json-processor,keep,json-processor,"Well-organized category, keep as-is"
+learning,directory,1,1,Learning/tutorial code,move,_archived_cleanup/learning,Consolidate into _archived_cleanup
+logs,directory,70,24,Python project: logs,move,_archived_cleanup/logs,Consolidate into _archived_cleanup
+mac,directory,1,1,Python project: mac,move,_archived_cleanup/mac,Consolidate into _archived_cleanup
+machine-learning,directory,2,9,Python project: machine-learning,review,machine-learning,Manual review needed to determine best location
+MDs,directory,1,8,Markdown documentation files,move,documentation/MDs,Consolidate into documentation
+medium_articles,directory,6,4619,Medium blog posts,move,documentation/medium_articles,Consolidate into documentation
+MIGRATION_BACKUP,directory,3,7,Python project: MIGRATION_BACKUP,move,_archived_cleanup/MIGRATION_BACKUP,Consolidate into _archived_cleanup
+ml-trainer,directory,24,130,Machine learning training,keep,ml-trainer,"Well-organized category, keep as-is"
+monitor-tool,directory,3,10,Python project: monitor-tool,keep,monitor-tool,"Well-organized category, keep as-is"
+notebooks,directory,0,0,Python project: notebooks,keep,notebooks,"Well-organized category, keep as-is"
+ocr-extractor,directory,6,36,OCR/text extraction,keep,ocr-extractor,"Well-organized category, keep as-is"
+pdf-converter,directory,0,0,Python project: pdf-converter,merge,pdf-processor,"Merge contents into pdf-processor, then remove"
+pdf-processor,directory,19,29,PDF operations,keep,pdf-processor,"Well-organized category, keep as-is"
+photoshop-mockup-automation,directory,5,12,Python project: photoshop-mockup-automation,move,_archived_cleanup/photoshop-mockup-automation,Consolidate into _archived_cleanup
+playlist-manager,directory,9,59,Python project: playlist-manager,merge,utilities,"Merge contents into utilities, then remove"
+reddit-automation,directory,42,130,Reddit scraping/automation,keep,reddit-automation,"Well-organized category, keep as-is"
+reddit-text-extract,directory,2,13,Python project: reddit-text-extract,move,video-generator/reddit-text-extract,Consolidate into video-generator
+Reddit-Tiktok-Video-Bot,directory,7,19,Python project: Reddit-Tiktok-Video-Bot,move,video-generator/Reddit-Tiktok-Video-Bot,Consolidate into video-generator
+reddit-to-instagram-bot,directory,3,12,Python project: reddit-to-instagram-bot,move,video-generator/reddit-to-instagram-bot,Consolidate into video-generator
+refs,directory,253,10,Python project: refs,move,_archived_cleanup/refs,Consolidate into _archived_cleanup
+remotes,directory,5,0,Python project: remotes,move,_archived_cleanup/remotes,Consolidate into _archived_cleanup
+run,directory,2,12,Python project: run,move,_archived_cleanup/run,Consolidate into _archived_cleanup
+savify,directory,9,72,Python project: savify,move,file-downloader/savify,Consolidate into file-downloader
+scheduler,directory,8,53,Python project: scheduler,keep,scheduler,"Well-organized category, keep as-is"
+seo-optimizer,directory,45,564,Python project: seo-optimizer,keep,seo-optimizer,"Well-organized category, keep as-is"
+shared_libraries,directory,66,410,Python project: shared_libraries,keep,shared_libraries,"Well-organized category, keep as-is"
+spicetify-themes,directory,27,137,Python project: spicetify-themes,move,_archived_cleanup/spicetify-themes,Consolidate into _archived_cleanup
+SpotifyMP3,directory,1,5,Python project: SpotifyMP3,move,file-downloader/SpotifyMP3,Consolidate into file-downloader
+storyboarder_adaptive_setup,directory,11,5,Python project: storyboarder_adaptive_setup,move,_archived_cleanup/storyboarder_adaptive_setup,Consolidate into _archived_cleanup
+subtitle-generator,directory,17,113,Subtitle/caption generation,keep,subtitle-generator,"Well-organized category, keep as-is"
+telegram-bot,directory,25,137,Telegram bot tools,merge,bot-automation,"Merge contents into bot-automation, then remove"
+test_export,directory,5,10,Python project: test_export,move,configuration/test_export,Consolidate into configuration
+tests,directory,1138,17214,Python project: tests,keep,tests,"Well-organized category, keep as-is"
+text-to-speech,directory,85,339,Python project: text-to-speech,review,text-to-speech,Manual review needed to determine best location
+thumbnail-generator,directory,23,574,Python project: thumbnail-generator,keep,thumbnail-generator,"Well-organized category, keep as-is"
+tiktok-downloader,directory,19,48,TikTok download tools,keep,tiktok-downloader,"Well-organized category, keep as-is"
+transcribe-analysis,directory,107,702,Python project: transcribe-analysis,merge,audio-transcription,"Merge contents into audio-transcription, then remove"
+Twitch-Best-Of,directory,1,6,Python project: Twitch-Best-Of,move,video-generator/Twitch-Best-Of,Consolidate into video-generator
+Twitch-TikTok-Youtube-Viewbot,directory,2,11,Python project: Twitch-TikTok-Youtube-Viewbot,move,video-generator/Twitch-TikTok-Youtube-Viewbot,Consolidate into video-generator
+TwitchClipGenerator-main,directory,2,11,Python project: TwitchClipGenerator-main,move,video-generator/TwitchClipGenerator-main,Consolidate into video-generator
+TwitchCompilationCreator,directory,21,192,Python project: TwitchCompilationCreator,move,video-generator/TwitchCompilationCreator,Consolidate into video-generator
+twitter-automation,directory,1,0,Python project: twitter-automation,merge,bot-automation,"Merge contents into bot-automation, then remove"
+types,directory,1,3,Python project: types,move,_archived_cleanup/types,Consolidate into _archived_cleanup
+ultimate,directory,3,0,Python project: ultimate,move,_archived_cleanup/ultimate,Consolidate into _archived_cleanup
+uml,directory,9,16,Python project: uml,move,_archived_cleanup/uml,Consolidate into _archived_cleanup
+Untitled,directory,1,7,Python project: Untitled,move,_archived_cleanup/Untitled,Consolidate into _archived_cleanup
+upscaler,directory,35,353,Python project: upscaler,review,upscaler,Manual review needed to determine best location
+url-image-downloader,directory,1,8,Python project: url-image-downloader,move,file-downloader/url-image-downloader,Consolidate into file-downloader
+utilities,directory,847,100742,Python project: utilities,review,utilities,Manual review needed to determine best location
+video-analyzer,directory,3,8,Python project: video-analyzer,review,video-analyzer,Manual review needed to determine best location
+video-converter,directory,29,100,Python project: video-converter,keep,video-converter,"Well-organized category, keep as-is"
+video-downloader,directory,692,35060,Python project: video-downloader,keep,video-downloader,"Well-organized category, keep as-is"
+video-editor,directory,128,472,Python project: video-editor,keep,video-editor,"Well-organized category, keep as-is"
+video-effects,directory,19,87,Video filters/effects,keep,video-effects,"Well-organized category, keep as-is"
+video-generator,directory,90,692,Python project: video-generator,review,video-generator,Manual review needed to determine best location
+video-transcription,directory,294,2047,Video transcription (mp4/avi),keep,video-transcription,"Well-organized category, keep as-is"
+voices,directory,32,3982,Python project: voices,move,_archived_cleanup/voices,Consolidate into _archived_cleanup
+watermark-tool,directory,6,16,Python project: watermark-tool,keep,watermark-tool,"Well-organized category, keep as-is"
+web-development,directory,34,50,Python project: web-development,keep,web-development,"Well-organized category, keep as-is"
+web-scraper,directory,580,65270,Python project: web-scraper,keep,web-scraper,"Well-organized category, keep as-is"
+work,directory,1,0,Python project: work,move,_archived_cleanup/work,Consolidate into _archived_cleanup
+youtube-automation,directory,153,95485,Python project: youtube-automation,keep,youtube-automation,"Well-organized category, keep as-is"
+youtube-downloader,directory,63,300,YouTube download tools,move,youtube-automation/youtube-downloader,Consolidate into youtube-automation
+advanced_directory_consolidation.py,file,0,9,Python project: advanced_directory_consolidation.py,move,experiments/advanced_directory_consolidation.py,Consolidate into experiments
+analyze_workflows.py,file,0,9,Python project: analyze_workflows.py,move,experiments/analyze_workflows.py,Consolidate into experiments
+Claude Conversations.alfredworkflow,file,0,4,Python project: Claude Conversations.alfredworkflow,review,Claude Conversations.alfredworkflow,Manual review needed to determine best location
+complete_final_cleanup.py,file,0,4,Python project: complete_final_cleanup.py,move,experiments/complete_final_cleanup.py,Consolidate into experiments
+COMPLETE_TRANSFORMATION_SUMMARY.md,file,0,9,Python project: COMPLETE_TRANSFORMATION_SUMMARY.md,move,documentation/COMPLETE_TRANSFORMATION_SUMMARY.md,Consolidate into documentation
+conversation_exporter.py,file,0,11,Python project: conversation_exporter.py,move,experiments/conversation_exporter.py,Consolidate into experiments
+CONVERSATION_EXPORTER_README.md,file,0,8,Python project: CONVERSATION_EXPORTER_README.md,move,documentation/CONVERSATION_EXPORTER_README.md,Consolidate into documentation
+create_reorganization_map.py,file,0,12,Python project: create_reorganization_map.py,review,create_reorganization_map.py,Manual review needed to determine best location
+deep_reorganization_plan_20251026_033602.json,file,0,143,Analysis plan from deep reorganization,move,_analysis_plans/deep_reorganization_plan_20251026_033602.json,Consolidate into _analysis_plans
+enhanced_intelligent_categorizer.py,file,0,23,Python project: enhanced_intelligent_categorizer.py,move,experiments/enhanced_intelligent_categorizer.py,Consolidate into experiments
+enhanced_reorganization_plan_20251026_034934.json,file,0,187,Enhanced analysis plan,move,_analysis_plans/enhanced_reorganization_plan_20251026_034934.json,Consolidate into _analysis_plans
+execute_deep_reorganization.py,file,0,5,Python project: execute_deep_reorganization.py,move,experiments/execute_deep_reorganization.py,Consolidate into experiments
+execute_enhanced_reorganization.py,file,0,5,Python project: execute_enhanced_reorganization.py,move,experiments/execute_enhanced_reorganization.py,Consolidate into experiments
+final_duplicate_merge.py,file,0,5,Python project: final_duplicate_merge.py,move,experiments/final_duplicate_merge.py,Consolidate into experiments
+FINAL_TRANSFORMATION_SUMMARY.md,file,0,17,Python project: FINAL_TRANSFORMATION_SUMMARY.md,move,documentation/FINAL_TRANSFORMATION_SUMMARY.md,Consolidate into documentation
+setup_conversation_hook.sh,file,0,2,Python project: setup_conversation_hook.sh,move,experiments/setup_conversation_hook.sh,Consolidate into experiments
+SETUP_GUIDE.md,file,0,7,Python project: SETUP_GUIDE.md,move,documentation/SETUP_GUIDE.md,Consolidate into documentation
+test_transcript.json,file,0,0,Python project: test_transcript.json,move,_analysis_plans/test_transcript.json,Consolidate into _analysis_plans
+ultimate_deep_reorganization.py,file,0,14,Python project: ultimate_deep_reorganization.py,move,experiments/ultimate_deep_reorganization.py,Consolidate into experiments

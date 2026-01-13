@@ -1,0 +1,57 @@
+import glob
+import os
+
+from moviepy.editor import AudioFileClip, ImageClip
+
+
+def get_cover_image(file_name, cover_image_directory):
+    # Check for both JPG and PNG extensions
+    jpg_path = os.path.join(cover_image_directory, f"{file_name}.jpg")
+    png_path = os.path.join(cover_image_directory, f"{file_name}.png")
+
+    if os.path.exists(jpg_path):
+        return jpg_path
+    elif os.path.exists(png_path):
+        return png_path
+    else:
+        print(
+            f"Cover image not found for {file_name}. Please ensure the cover image exists."
+        )
+        return None
+
+
+def convert_mp3_to_mp4(mp3_file, cover_image, output_file):
+    audio = AudioFileClip(mp3_file)
+    clip = ImageClip(cover_image)
+    clip = clip.set_duration(audio.duration)
+    clip = clip.set_audio(audio)
+    clip.write_videofile(output_file, fps=24)
+
+
+def process_directory(mp3_directory, cover_image_directory):
+    mp3_files = glob.glob(os.path.join(mp3_directory, "*.mp3"))
+
+    for mp3_file in mp3_files:
+        filename = os.path.basename(mp3_file)
+        name, ext = os.path.splitext(filename)
+
+        cover_image = get_cover_image(name, cover_image_directory)
+        if cover_image:
+            output_file = os.path.join(mp3_directory, f"{name}.mp4")
+            convert_mp3_to_mp4(mp3_file, cover_image, output_file)
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) > 2:
+        mp3_directory = sys.argv[1]
+        cover_image_directory = sys.argv[2]
+        process_directory(mp3_directory, cover_image_directory)
+    else:
+        print(
+            "Please provide the directories containing MP3 files and cover images as arguments."
+        )
+        print(
+            "Usage: python cover.py /path/to/mp3_directory /path/to/cover_image_directory"
+        )

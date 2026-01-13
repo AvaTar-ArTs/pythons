@@ -1,0 +1,14 @@
+action,original,new,status
+RENAME,AskReddit.py,ask-reddit.py,completed
+RENAME,DEEP_CONTENT_ANALYSIS.py,DEEP-CONTENT-ANALYSIS.py,completed
+RENAME,MultiThread.py,multi-thread.py,completed
+RENAME,STANDARD_ENV_LOADER.py,STANDARD-ENV-LOADER.py,completed
+RENAME,SendNotification.py,send-notification.py,completed
+RENAME,WhisperTranscriber.py,whisper-transcriber.py,completed
+RENAME,advanced_content_pipeline.py,advanced-content-pipeline.py,completed
+RENAME,aggressive-renamer.py,instagram-aggressive-renamer.py,completed
+RENAME,ai_deep_analyzer.py,ai-deep-analyzer.py,completed
+RENAME,api.py,leonardo-api.py,completed
+RENAME,api_key_inventory.py,api-key-inventory.py,completed
+RENAME,api_key_inventory_v2.py,api-key-inventory-v2.py,completed
+DELETE,CLEANUP_SUNO_TOOLS.py,,completed

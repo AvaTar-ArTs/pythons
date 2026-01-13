@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+AskReddit.py,[YouTube automation],ask-reddit.py,RENAME,Fix CamelCase
+CLEANUP_SUNO_TOOLS.py,CLEANUP SUNO_TOOLS FOLDER,,DELETE,One-time script or backup
+DEEP_CONTENT_ANALYSIS.py,DEEP CONTENT-AWARE ANALYSIS,DEEP-CONTENT-ANALYSIS.py,RENAME,Fix underscore to hyphen
+Multi-Modal.py,ULTIMATE Media Analysis Pipeline - Multi-API Edition,,KEEP,
+MultiThread.py,[No docstring found],multi-thread.py,RENAME,Fix CamelCase
+PSDImage.py,PSD Image module.,,KEEP,
+STANDARD_ENV_LOADER.py,STANDARD ENV LOADER FOR ~/.env.d/,STANDARD-ENV-LOADER.py,RENAME,Fix underscore to hyphen
+SendNotification.py,4. Send tweet when video is published,send-notification.py,RENAME,Fix CamelCase
+WhisperTranscriber.py,[No docstring found],whisper-transcriber.py,RENAME,Fix CamelCase
+adaptive-content-awareness.py,Adaptive Content-Aware Analysis System,,KEEP,
+advanced_content_pipeline.py,🚀 ADVANCED CONTENT GENERATION PIPELINE,advanced-content-pipeline.py,RENAME,Fix underscore to hyphen
+aggressive-filename-cleaner.py,Aggressive Filename Cleaner - Fix the filename insanity,,KEEP,
+aggressive-renamer.py,Python Aggressive Renamer,instagram-aggressive-renamer.py,RENAME,Add Instagram prefix
+ai-conversation-exports.py,File Organization Script for AI Export Tools,,KEEP,
+ai-stability-code.py,[No docstring found],,KEEP,
+ai_deep_analyzer.py,[OpenAI integration],ai-deep-analyzer.py,RENAME,Fix underscore to hyphen
+album-sorting.py,[No docstring found],,KEEP,
+alchemy-quiz.py,AlchemyAPI MP3 Generator,,KEEP,
+alchemyapi-audio-demo-generator.py,AlchemyAPI Advanced Demo Generator,,KEEP,
+analyze-code-complexity.py,[No docstring found],,KEEP,Already well-named
+analyze-file-migration.py,Analyze current structure and show what will be migrated where,,KEEP,Already well-named
+analyze-file-versions.py,Script Version Analyzer,,KEEP,Already well-named
+analyze-files-comprehensive.py,MASTER COMPREHENSIVE ANALYZER,,KEEP,Already well-named
+analyze-folder-reader.py,pyrepo_doc_organizer.py,,KEEP,Already well-named
+analyze-json-writer.py,Complete Cleanup Orchestrator,,KEEP,Already well-named
+analyze-metadata.py,Shared helpers for GPT-based image metadata enrichment.,,KEEP,
+analyze-mp3-transcript-prompts.py,[OpenAI integration],,KEEP,
+analyze-prompt.py,"Generate detailed, descriptive image prompts from a timestamped transcript.",,KEEP,
+analyze-reader.py,[OpenAI integration],,KEEP,
+analyze-transcribe-missing-audio.py,🔍 ANALYZE & TRANSCRIBE MISSING CONTENT,,KEEP,Already well-named
+analyze-transcript.py,Main entry point for the Transcription Analyzer example usage,,KEEP,
+analyze-writer.py,Simple Quality Monitor,,KEEP,
+analyze-youtube-shorts-info.py,[OpenAI integration],,KEEP,
+anthropic-download.py,Content-Aware Chat Analysis Organizer,,KEEP,Already well-named
+api.py,[Leonardo AI],leonardo-api.py,RENAME,Add Leonardo prefix
+api_key_inventory.py,🔑 API KEY INVENTORY SCANNER,api-key-inventory.py,RENAME,Fix underscore to hyphen
+api_key_inventory_v2.py,🔑 API KEY INVENTORY V2,api-key-inventory-v2.py,RENAME,Fix underscore to hyphen
+application-query-expanison.py,[OpenAI integration],,KEEP,
+application-self-query.py,[OpenAI integration],,KEEP,
+apply-improvements.py,GitHub Repository Improvement Script,,KEEP,
+archive-reader.py,Comprehensive Merge and Consolidation Tool,,KEEP,
+ascii-python.py,[No docstring found],,KEEP,
+askreddit-loop-1.py,[YouTube automation],,KEEP,
+askredditbot.py,[Reddit automation],,KEEP,
+assemblyai-audio-transcriber.py,This script is used to generate a transcript from an audio file using AssemblyAI api.,,KEEP,
+audio-analyzer.py,[OpenAI integration],,KEEP,
+audio-normalize.py,[No docstring found],,KEEP,
+audio-thinketh.py,Cinematic hybrid edition:,,KEEP,
+audio-transcription-pipeline.py,Shared audio transcription + analysis pipeline helpers.,,KEEP,
+audio.py,[No docstring found],,KEEP,

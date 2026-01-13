@@ -1,0 +1,11 @@
+action,original,new,status
+RENAME,pip_build_environment.py,pip-build-environment.py,completed
+RENAME,pip_install_command.py,pip-install-command.py,completed
+RENAME,pip_installer_bootstrap.py,pip-installer-bootstrap.py,completed
+RENAME,prepare_missing_song_folders.py,prepare-missing-song-folders.py,completed
+RENAME,process-images.py,leonardo-process-images.py,completed
+LIBRARY,protocols.py,_library/protocols.py,completed
+LIBRARY,py3compat.py,_library/py3compat.py,completed
+DELETE,python-aggressive-cleanup.py,,completed
+DELETE,python-cleanup-execute.py,,completed
+DELETE,python-filename-cleanup.py,,completed

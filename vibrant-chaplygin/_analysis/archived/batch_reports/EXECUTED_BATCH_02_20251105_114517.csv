@@ -1,0 +1,17 @@
+action,original,new,status
+RENAME,autonomous-content-agency.py,leonardo-autonomous-content-agency.py,completed
+RENAME,avatar-download.py,leonardo-avatar-download.py,completed
+RENAME,batch_transcript_finder.py,batch-transcript-finder.py,completed
+RENAME,block-bots.py,instagram-block-bots.py,completed
+RENAME,bot-library.py,instagram-bot-library.py,completed
+RENAME,botInstagram.py,bot-instagram.py,completed
+RENAME,botLike.py,bot-like.py,completed
+RENAME,bot_photo.py,bot-photo.py,completed
+RENAME,brand-builder.py,leonardo-brand-builder.py,completed
+RENAME,bulk-renamer.py,instagram-bulk-renamer.py,completed
+LIBRARY,base-classes.py,_library/base-classes.py,completed
+LIBRARY,base-gallery-logic.py,_library/base-gallery-logic.py,completed
+LIBRARY,basics.py,_library/basics.py,completed
+LIBRARY,button.py,_library/button.py,completed
+LIBRARY,buttons.py,_library/buttons.py,completed
+LIBRARY,cache.py,_library/cache.py,completed

@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+openai-content-analyzer.py,Advanced Content Analyzer - Consolidated Analysis Script,,KEEP,Already well-named
+openai-content-creation-nocturne.py,Merged Content Analysis Tool,,KEEP,Already well-named
+openai-csv-metadata-filler.py,[OpenAI integration],,KEEP,Already well-named
+openai-download.py,Python Script Map Generator,,KEEP,Already well-named
+openai-generate.py,[OpenAI integration],,KEEP,Already well-named
+openai-gpt4o-image-metadata.py,[OpenAI integration],,KEEP,Already well-named
+openai-image-enrichment.py,[OpenAI integration],,KEEP,Already well-named
+openai-image-generater.py,[OpenAI integration],,KEEP,Already well-named
+openai-media-processing-image.py,[OpenAI integration],,KEEP,Already well-named
+openai-missingapikeyerror.py,Environment loading helpers for analyze scripts.,,KEEP,Already well-named
+openai-setup.py,Test script to verify the transcription analyzer setup,,LIBRARY,Library/framework code - setup.py
+openai-song-lyrics-analyzer.py,[OpenAI integration],,KEEP,Already well-named
+openai-text-to-speech.py,[OpenAI integration],,KEEP,Already well-named
+openai-transcribe-audio.py,[OpenAI integration],,KEEP,Already well-named
+openai-vision-image-reader.py,[OpenAI integration],,KEEP,Already well-named
+openai-wikipedia-data-downloader.py,[OpenAI integration],,KEEP,Already well-named
+openai.py,Simple OpenAI CLI for terminal usage,,KEEP,
+optimizer.py,The optimizer tries to constant fold expressions and modify the AST,,KEEP,
+optional.py,[No docstring found],,KEEP,
+organize-directory.py,Directory Organizer,,KEEP,
+organize-excel-files.py,Intelligent Excel File Organizer,,KEEP,Already well-named
+organize-files-intelligent.py,Intelligent Organization System - Core Analyzer,,KEEP,Already well-named
+organize-files.py,💾 SAVE EVERYTHING BEFORE CLEANUP,,KEEP,
+organize-images-by-year.py,[No docstring found],,KEEP,
+organize-printify-products.py,[No docstring found],,KEEP,Already well-named
+organize-youtube-root.py,Final Root Directory Organizer,,KEEP,Already well-named
+organize.py,AI Outputs Hub - Auto-Organize Dry Run,,KEEP,
+organizer.py,[No docstring found],,KEEP,
+origin-date.py,[No docstring found],,KEEP,
+oshelper.py,OS helper,,KEEP,
+other_simple.py,[No docstring found],other-simple.py,RENAME,Fix underscore to hyphen
+output.py,[No docstring found],,KEEP,
+page.py,Page Maker v3 — a lean static generator with good defaults.,,KEEP,
+pager.py,[No docstring found],,KEEP,
+parse-reddit-post.py,[No docstring found],,KEEP,
+parse.py,[No docstring found],,KEEP,
+parse_api.py,[OpenAI integration],parse-api.py,RENAME,Fix underscore to hyphen
+parse_main.py,This module contains provisional support for SOCKS proxies from within,parse-main.py,RENAME,Fix underscore to hyphen
+parse_simple.py,[Instagram automation],parse-simple.py,RENAME,Fix underscore to hyphen
+payload.py,[No docstring found],,LIBRARY,Library/framework code - payload
+payloadpage.py,A payload based version of page.,,LIBRARY,Library/framework code - payload
+pdf-merge-with-toc.py,[No docstring found],,KEEP,
+pdf-merge.py,[No docstring found],,KEEP,
+pdf2html.py,[No docstring found],,KEEP,
+pdf2img.py,[No docstring found],,KEEP,
+pdfcsv.py,[No docstring found],,KEEP,
+performance.py,Performance Optimization Script,,KEEP,
+periodic.py,Periodic Quality Monitor,,KEEP,
+pexels-video-downloader.py,[No docstring found],,KEEP,
+photo-gallery-batch-generator.py,Enhanced Batch Gallery Generator for Simple Photo Gallery,,KEEP,

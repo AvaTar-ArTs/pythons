@@ -1,0 +1,105 @@
+{
+  "current_state": {
+    "total_directories": 340,
+    "depth_distribution": {
+      "1": 37,
+      "2": 72,
+      "3": 118,
+      "4": 17,
+      "5": 32,
+      "6": 33,
+      "7": 22,
+      "8": 9
+    },
+    "categories": {
+      "MISC": 1,
+      "documentation": 10,
+      "file_organization": 1,
+      "platforms": 1,
+      "tools": 171,
+      "spicetify-themes": 3,
+      "txt": 1,
+      "config": 2,
+      "remove-bg-cli": 1,
+      "references": 2,
+      "SEO_MARKETING": 3,
+      "projects": 7,
+      ".env.d": 1,
+      ".agents": 1,
+      "axolotl-main": 40,
+      ".claude": 1,
+      "CONTENT": 3,
+      "audio_generation": 3,
+      "TG-MegaBot": 1,
+      ".history": 1,
+      "simplegallery": 32,
+      "avatararts-deployment": 1,
+      "MEDIA_PROCESSING": 12,
+      "audio_transcription": 1,
+      "MarkD": 1,
+      "deepdive_scan_20251225_023925": 1,
+      ".playwright-mcp": 1,
+      "avatararts": 1,
+      "botty": 2,
+      "gol-ia-newq": 3,
+      ".aider.tags.cache.v4": 1,
+      "data": 4,
+      "revenue-dashboard": 1,
+      "system-archive": 9,
+      "WEBSITES": 13,
+      "n8n-local": 1,
+      "cataloging": 2
+    }
+  },
+  "opportunities": {
+    "deep_nesting_count": 113,
+    "small_dirs_count": 106,
+    "merge_opportunities": 26
+  },
+  "suggestions": [
+    {
+      "category": "tools",
+      "current_count": 171,
+      "potential_reduction": 116,
+      "strategies": [
+        "\ud83d\udd38 Moderate consolidation (171 dirs)",
+        "   \u2192 Flatten depth > 3 (could reduce ~56 dirs)",
+        "   \u2192 Merge small dirs (could reduce ~60 dirs)"
+      ]
+    }
+  ],
+  "potential_reduction": 194,
+  "strategy": [
+    {
+      "step": 1,
+      "category": "tools",
+      "action": "flatten_deep",
+      "count": 112,
+      "expected_reduction": 56
+    },
+    {
+      "step": 1,
+      "category": "simplegallery",
+      "action": "flatten_deep",
+      "count": 1,
+      "expected_reduction": 0
+    },
+    {
+      "step": 2,
+      "action": "merge_small",
+      "count": 106,
+      "expected_reduction": 68
+    },
+    {
+      "step": 3,
+      "action": "consolidate_duplicates",
+      "count": 26,
+      "expected_reduction": 52
+    },
+    {
+      "step": 4,
+      "action": "cleanup_empty",
+      "expected_reduction": "variable"
+    }
+  ]
+}

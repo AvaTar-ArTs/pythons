@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+generatetexts-1.py,[OpenAI integration],,KEEP,
+generatetexts.py,[OpenAI integration],,KEEP,
+generation.py,[Leonardo AI],leonardo-generation.py,RENAME,Add Leonardo prefix
+genshi.py,[No docstring found],,KEEP,
+get-threads.py,[Reddit automation],,KEEP,
+get_file.py,[No docstring found],get-file.py,RENAME,Fix underscore to hyphen
+get_hashtags_from.py,[Instagram automation],get-hashtags-from.py,RENAME,Fix underscore to hyphen
+get_simple.py,[No docstring found],get-simple.py,RENAME,Fix underscore to hyphen
+getattr.py,A static version of getattr.,,KEEP,
+getipython.py,Simple function to call to get the current InteractiveShell instance,,LIBRARY,Library/framework code - ipython
+giphy-download.py,Automated Image Upscaler,,KEEP,
+giphy-gifs.py,[No docstring found],,KEEP,
+giphy_downloader.py,[No docstring found],giphy-downloader.py,RENAME,Fix underscore to hyphen
+github_repo_audit.py,github_repo_audit.py,github-repo-audit.py,RENAME,Fix underscore to hyphen
+gmupload.py,This is used for uploading downloaded track to google play music,,KEEP,
+goapi-midjourney-imagine.py,[No docstring found],,KEEP,
+good-usage.py,This template is written by @jeremycjang,,KEEP,
+grok-langchain-agent.py,[OpenAI integration],,KEEP,
+groq-cli.py,Simple Groq CLI for terminal usage,,KEEP,
+gtts-text-to-speech.py,[Reddit automation],,KEEP,
+gui-apps-downloader.py,[No docstring found],,KEEP,
+handlers.py,Tests for input handlers.,,LIBRARY,Library/framework code - handlers.py
+hardcoded.py,Automated API Key Fixer,,KEEP,
+html-docs-generator.py,Simple HTML Documentation Generator,,KEEP,
+html-keep.py,HTML Content Analyzer,,KEEP,
+html.py,[Leonardo AI],,KEEP,
+ident.py,[OpenAI integration],,KEEP,
+identify-leonardo-user-scripts.py,[Instagram automation],,KEEP,
+image-add-text-overlay.py,[No docstring found],,KEEP,
+image-batch-downloader.py,[No docstring found],,KEEP,
+image-convert-upscale.py,[No docstring found],,KEEP,
+image-extract-prompt-metadata.py,[No docstring found],,KEEP,
+image-gallery-alphabetical.py,[No docstring found],,KEEP,
+image-generate-pics.py,[No docstring found],,KEEP,
+image-generator-generic.py,[Reddit automation],,KEEP,
+image-get-cover-images.py,[No docstring found],,KEEP,
+image-kaleidoscope-effect.py,Kaleidoscope Effect - Create mirror/rotation effects.,,KEEP,
+image-optimize-9mb-threshold.py,[No docstring found],,KEEP,
+image-resize-aspect-ratios.py,[No docstring found],,KEEP,
+image-resize.py,[No docstring found],,KEEP,
+image-scan-directory.py,[No docstring found],,KEEP,
+image-search.py,[No docstring found],,KEEP,
+image-taggy.py,[No docstring found],,KEEP,
+image-to-image-converter.py,[No docstring found],,KEEP,
+image-to-pdf.py,[No docstring found],,KEEP,
+image-ultimate.py,Ultimate Image Processor V2,,KEEP,
+image-upscale-batch.py,Merged Content Analysis Tool,,KEEP,
+imove.py,[No docstring found],,KEEP,
+implement.py,Implement Smart Organization System,,KEEP,
+import-clean-conversations.py,Deepseek Importer v3,,KEEP,

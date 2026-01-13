@@ -1,0 +1,384 @@
+git clone https://github.com/ComposioHQ/grok-cli.git  # Or superagent-ai/grok-cli for the main one
+cd grok-cli
+pip install -r requirements.txt
+pip install -e .  # Editable install
+pip install grok
+# Temporary (for this session)
+export GROK_API_KEY="your-api-key-here"
+
+# Permanent: Add to ~/.zshrc (or ~/.bash_profile if using Bash)
+echo 'export GROK_API_KEY="your-api-key-here"' >> ~/.zshrc
+source ~/.zshrc
+GROQ_API_KEY=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
+
+##### === Claude CLI Aliases ===
+alias claude='~/claude-cli.py'
+alias claude-i='~/claude-cli.py -i'
+alias claude-f='~/claude-cli.py -f'
+
+##### === OpenAI CLI Aliases ===
+alias openai='~/openai-cli.py'
+alias openai-i='~/openai-cli.py -i'
+alias openai-f='~/openai-cli.py -f'
+alias gpt='~/openai-cli.py'
+alias gpt-i='~/openai-cli.py -i'
+alias gpt-f='~/openai-cli.py -f'
+alias gpt4='~/openai-cli.py -m gpt-4o'
+alias gpt3='~/openai-cli.py -m gpt-3.5-turbo'
+
+##### === xAI/Grok CLI Aliases ===
+alias grok='~/xai-cli.py'
+alias grok-i='~/xai-cli.py -i'
+alias grok-f='~/xai-cli.py -f'
+alias grok-s='~/xai-cli.py -s'
+alias grok-models='~/xai-cli.py -l'
+alias xai='~/xai-cli.py'
+alias xai-i='~/xai-cli.py -i'
+alias xai-s='~/xai-cli.py -s'
+
+##### === Groq CLI Aliases ===
+alias groq='~/groq-cli.py'
+alias groq-i='~/groq-cli.py -i'
+alias groq-f='~/groq-cli.py -f'
+alias groq-models='~/groq-cli.py --list-models'
+
+##### === Unified AI CLI Toolkit ===
+alias ai='~/ai-cli-toolkit.py'
+alias ai-i='~/ai-cli-toolkit.py -i'
+alias ai-f='~/ai-cli-toolkit.py -f'
+alias ai-models='~/ai-cli-toolkit.py -l'
+
+# Service-specific shortcuts
+alias openai='~/ai-cli-toolkit.py -s openai'
+alias groq='~/ai-cli-toolkit.py -s groq'
+alias claude='~/ai-cli-toolkit.py -s claude'
+alias xai='~/ai-cli-toolkit.py -s xai'
+
+# Interactive modes
+alias openai-i='~/ai-cli-toolkit.py -s openai -i'
+alias groq-i='~/ai-cli-toolkit.py -s groq -i'
+alias claude-i='~/ai-cli-toolkit.py -s claude -i'
+alias xai-i='~/ai-cli-toolkit.py -s xai -i'
+
+# Model-specific shortcuts
+alias gpt4='~/ai-cli-toolkit.py -s openai -m gpt-4'
+alias gpt4o='~/ai-cli-toolkit.py -s openai -m gpt-4o'
+alias llama3='~/ai-cli-toolkit.py -s groq -m llama3-8b-8192'
+alias mixtral='~/ai-cli-toolkit.py -s groq -m mixtral-8x7b-32768'
+alias grok2='~/ai-cli-toolkit.py -s xai -m grok-beta'
+alias grok1='~/ai-cli-toolkit.py -s xai -m grok-1'
+
+##### === AI CLI Help ===
+alias ai-help='cat ~/AI-CLI-README.md'
+alias ai-quick='cat ~/AI-CLI-Quick-Reference.md'
+
+##### === API Key Setup ===
+alias api-setup='~/api-key-setup.py --interactive'
+alias api-list='~/api-key-setup.py --list'
+alias api-keys='~/api-key-setup.py --list'
+alias api-priority='~/priority-api-setup.py'
+alias api-open='~/simple-api-setup.py'
+alias api-select='~/api-selector.py'
+
+##### === AI Configuration Manager ===
+alias 
+# Remove the empty GROQ_API_KEY line
+sed -i '' '/GROQ_API_KEY=/d' ~/.zshrc
+
+# Add xAI's GROK_API_KEY
+echo 'export GROK_API_KEY="your-actual-xai-api-key-here"' >> ~/.zshrc
+source ~/.zshrc
+@6SGR5K*VaG9B!8L
+xai-12cWSKXhLaJD6TV6coS0xalQvWMksdlynqznGyqC7ZtSulJ2xJ2y5cKQfUmnILhD3F6IqxWoxJ14vYJv
+GROQ_API_KEY=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
+GROK_API_KEY="xai-12cWSKXhLaJD6TV6coS0xalQvWMksdlynqznGyqC7ZtSulJ2xJ2y5cKQfUmnILhD3F6IqxWoxJ14vYJv"
+curl https://api.x.ai/v1/chat/completions \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer xai-12cWSKXhLaJD6TV6coS0xalQvWMksdlynqznGyqC7ZtSulJ2xJ2y5cKQfUmnILhD3F6IqxWoxJ14vYJv" \
+    -d '{
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a test assistant."
+        },
+        {
+          "role": "user",
+          "content": "Testing. Just say hi and hello world and nothing else."
+        }
+      ],
+      "model": "grok-4-latest",
+      "stream": false,
+      "temperature": 0
+    }'
+sed -i '' '/GROQ_API_KEY=/d' ~/.zshrc
+echo 'export GROK_API_KEY="
+>> ~/.zshrc
+echo 'export GROK_API_KEY="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" >> ~/.zshrc
+##### === Basics & Aliases === #####
+# Use conda's Python instead of hardcoded versions
+alias pip='python -m pip'
+alias python='python3'
+
+##### === Oh-My-Zsh === #####
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_CUSTOM="$ZSH/custom"
+export ZSH_CACHE_DIR="$ZSH/cache"
+ZSH_THEME="adben"
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+
+# Lazy load Oh-My-Zsh for faster startup
+if [[ -z "${ZSH_LOADED:-}" ]]; then
+    source "$ZSH/oh-my-zsh.sh"
+    export ZSH_LOADED=1
+fi
+
+##### === Homebrew Completions (Intel macOS) ===
+if command -v brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
+fi
+
+##### === Environment Variable Loading === #####
+# Load environment variables if .env file exists (with security check)
+if [[ -f "$HOME/.env" ]]; then
+  # Check if .env has proper permissions (600)
+  if [[ $(stat -f %A "$HOME/.env" 2>/dev/null) == "600" ]]; then
+    set -o allexport
+    source "$HOME/.env"
+    set +o allexport
+  else
+    echo "⚠️  Warning: .env file should have 600 permissions for security"
+  fi
+fi
+
+##### === PATH Management === #####
+typeset -U path
+
+# Core user paths (brew > user > mamba > system)
+path=(
+  "/usr/local/bin"           # Homebrew managed binaries (Python, etc.) - PRIORITY
+  "$HOME/.local/bin"         # Local tools managed by pipx
+  "$HOME/.bun/bin"           # Bun JavaScript runtime
+  "$HOME/Documents/python"   # Personal Python scripts
+  "$path[@]"                 # Include all inherited paths
+)
+
+# Remove legacy Python user-site paths
+path=(${path:#$HOME/Library/Python/3.11/bin})
+#path=(${path:#$HOME/Library/Python/3.9/bin})
+
+##### === Helper Functions ===
+function ua {
+  for file_path in "$@"; do
+    [[ -e "$file_path" ]] || { echo "Path does not exist: $file_path" >&2; return 1; }
+  done
+  local -r absolute_paths=("${(@f)$(realpath "$@")}")
+  /usr/bin/osascript -l JavaScript -e 'function run(argv) { Application("com.runningwithcrayons.Alfred").action(argv) }' "${absolute_paths[@]}"
+}
+
+##### === iTerm2 Integration ===
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+##### === Zsh Quality of Life Settings ===
+setopt autocd
+setopt correct
+setopt nocaseglob
+setopt nocasematch
+bindkey -v
+
+##### === Bun / pipx / Go ===
+export BUN_INSTALL="$HOME/.bun"
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
+
+##### === Conda/Mamba Initialization (Optimized) ===
+# Use conda's built-in initialization (includes mamba)
+if [[ -f "/Users/steven/miniforge3/etc/profile.d/conda.sh" ]]; then
+    . "/Users/steven/miniforge3/etc/profile.d/conda.sh"
+else
+    export PATH="/Users/steven/miniforge3/bin:$PATH"
+fi
+
+# Initialize conda for zsh
+if command -v conda &>/dev/null; then
+    eval "$(conda shell.zsh hook)"
+fi
+
+# nvm configuration (lazy load for performance)
+export NVM_DIR="$HOME/.nvm"
+nvm() {
+    unset -f nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    nvm "$@"
+}
+
+##### === Final PATH Export === #####
+export PATH
+# Conversation Archive Quick Access Aliases
+# Added by setup_quick_actions.sh on Tue Oct 14 17:49:56 EDT 2025
+# Conversation Archive Quick Access Aliases
+# Add these to your ~/.zshrc file
+
+# Quick archive access
+alias archive='~/quick_archive.sh'
+alias arch='~/quick_archive.sh'
+
+# Specific archive commands
+alias arch-open='~/quick_archive.sh open'
+alias arch-update='~/quick_archive.sh update'
+alias arch-monitor='~/quick_archive.sh monitor'
+alias arch-stop='~/quick_archive.sh stop'
+alias arch-status='~/quick_archive.sh status'
+alias arch-manage='~/quick_archive.sh manage'
+alias arch-search='~/quick_archive.sh search'
+alias arch-export='~/quick_archive.sh export'
+
+# Quick update and open
+alias arch-refresh='~/quick_archive.sh update && ~/quick_archive.sh open'
+
+# Archive with search
+alias arch-find='~/quick_archive.sh search'
+
+# Show archive help
+alias arch-help='~/quick_archive.sh help'
+
+##### === Claude CLI Aliases ===
+alias claude='~/claude-cli.py'
+alias claude-i='~/claude-cli.py -i'
+alias claude-f='~/claude-cli.py -f'
+
+##### === OpenAI CLI Aliases ===
+alias openai='~/openai-cli.py'
+alias openai-i='~/openai-cli.py -i'
+alias openai-f='~/openai-cli.py -f'
+alias gpt='~/openai-cli.py'
+alias gpt-i='~/openai-cli.py -i'
+alias gpt-f='~/openai-cli.py -f'
+alias gpt4='~/openai-cli.py -m gpt-4o'
+alias gpt3='~/openai-cli.py -m gpt-3.5-turbo'
+
+##### === xAI/Grok CLI Aliases ===
+alias grok='~/xai-cli.py'
+alias grok-i='~/xai-cli.py -i'
+alias grok-f='~/xai-cli.py -f'
+alias grok-s='~/xai-cli.py -s'
+alias grok-models='~/xai-cli.py -l'
+alias xai='~/xai-cli.py'
+alias xai-i='~/xai-cli.py -i'
+alias xai-s='~/xai-cli.py -s'
+
+##### === Groq CLI Aliases ===
+alias groq='~/groq-cli.py'
+alias groq-i='~/groq-cli.py -i'
+alias groq-f='~/groq-cli.py -f'
+alias groq-models='~/groq-cli.py --list-models'
+
+##### === Unified AI CLI Toolkit ===
+alias ai='~/ai-cli-toolkit.py'
+alias ai-i='~/ai-cli-toolkit.py -i'
+alias ai-f='~/ai-cli-toolkit.py -f'
+alias ai-models='~/ai-cli-toolkit.py -l'
+
+# Service-specific shortcuts
+alias openai='~/ai-cli-toolkit.py -s openai'
+alias groq='~/ai-cli-toolkit.py -s groq'
+alias claude='~/ai-cli-toolkit.py -s claude'
+alias xai='~/ai-cli-toolkit.py -s xai'
+
+# Interactive modes
+alias openai-i='~/ai-cli-toolkit.py -s openai -i'
+alias groq-i='~/ai-cli-toolkit.py -s groq -i'
+alias claude-i='~/ai-cli-toolkit.py -s claude -i'
+alias xai-i='~/ai-cli-toolkit.py -s xai -i'
+
+# Model-specific shortcuts
+alias gpt4='~/ai-cli-toolkit.py -s openai -m gpt-4'
+alias gpt4o='~/ai-cli-toolkit.py -s openai -m gpt-4o'
+alias llama3='~/ai-cli-toolkit.py -s groq -m llama3-8b-8192'
+alias mixtral='~/ai-cli-toolkit.py -s groq -m mixtral-8x7b-32768'
+alias grok2='~/ai-cli-toolkit.py -s xai -m grok-beta'
+alias grok1='~/ai-cli-toolkit.py -s xai -m grok-1'
+
+##### === AI CLI Help ===
+alias ai-help='cat ~/AI-CLI-README.md'
+alias ai-quick='cat ~/AI-CLI-Quick-Reference.md'
+
+##### === API Key Setup ===
+alias api-setup='~/api-key-setup.py --interactive'
+alias api-list='~/api-key-setup.py --list'
+alias api-keys='~/api-key-setup.py --list'
+alias api-priority='~/priority-api-setup.py'
+alias api-open='~/simple-api-setup.py'
+alias api-select='~/api-selector.py'
+
+##### === AI Configuration Manager ===
+alias ai-config='~/ai-config.py'
+alias config='~/ai-config.py'
+alias config-simple='~/ai-config-simple.py'
+
+##### === Deep Analysis Tools ===
+alias deep-analyze='~/deep-analyzer.py'
+alias ai-analyze='~/ai-deep-analyzer.py'
+alias analyze='~/ai-deep-analyzer.py'
+alias quick-analyze='~/quick-analyze.py'
+alias qa='~/quick-analyze.py'
+
+
+
+# bun completions
+[ -s "/Users/steven/.bun/_bun" ] && source "/Users/steven/.bun/_bun"
+export GROK_API_KEY="your-actual-xai-api-key-here"
+
+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
+/Users/steven/Documents/python/api-key-setup.py
+python3 ~/api-key-setup.py --interactive # Interactive setup
+xai-2pp58h77OJUPWuruYdwS7eqjcbB7CB5igEpo4nRDabLwp1AYyjQIafQcbbKkEbwDADpaSD4mK5pC9UUz
+sk-G7gsajrbFHaUhbgnvRZyQ5uKlHR4dzoQd2gYuuCLZ7Z7Mmv5
+r8_OnH9DlwU8bEbKwxmgQdoF3hW4iI3lO34PqV5O
+key_d438c1a5ccf263714ffb063211e6e06dced1c9aff106d12e34826f5fdc163c9be29496f3cbfca8f29d67482267971337a6ad09c4a7f6eba4783a93e14af21855
+tfp_2ryRKk8Dsm7Q7qMu2B1ySWN5LDua6vccKdRAp3AXrKaD_3mMpPeeh4tAubw
+sk_50f7603f324aab2985117a53cf6c78b42cebfd8952efa130
+8b197779781a455aaaeefaa73aaa856b
+bddf429eda6af7d33e9661c424f433dadcc5213e
+fw_3ZeiH1Urprx1ajsrEAsepNxv
+pip install qdrant-client
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.AQuwtbYYL8hgji62tbDoJ4qu7gA6pXwu4t2bTTyZ2wc
+pip install pinecone
+
+from pinecone import Pinecone, ServerlessSpec
+
+pc = Pinecone(api_key="********-****-****-****-************")
+pcsk_4fCguW_LUsYDMbJVeG22D8M21S7w9Pvmn9oHXcqYTgj49d32dsjjG4jdN9ZnzpkqNki7S8
+pcsk_4Dp8Qj_DnnhVc7uLTAPzczK2eywkh1tUvGRLF9hTrKAtspTLuA6DQyuFHrrz3F3DjTdDgK
+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
+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
+81841488a8e9e87f39f74073e2b21e48c64d150504fbafbcaf09d8efe1661b51
+540f2a5e01ee42738acecd82ff3d412f
+npm install -g zapier-platform-cli
+Step 23/37: Azure OpenAI
+   Key: AZURE_OPENAI_KEY
+   Description: Microsoft's OpenAI service
+
+🌐 Opening Azure OpenAI registration page...
+   📝 Microsoft's OpenAI service
+   🔗 https://portal.azure.com/
+   ✅ Page opened in browser
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 22
+
+# Verify the Node.js version:
+node -v # Should print "v22.20.0".
+
+# Verify npm version:
+npm -v # Should print "10.9.3".
+
+npm i -g @openai/codex
+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
+~/Documents/python/Ai-cLi

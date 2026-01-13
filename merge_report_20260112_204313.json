@@ -1,0 +1,272 @@
+{
+  "timestamp": "2026-01-12T20:43:13.531228",
+  "total_files_scanned": 1929,
+  "target_files_existing": 4870,
+  "duplicate_groups": 230,
+  "files_to_copy": 0,
+  "conflicts": 0,
+  "duplicates": {
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": [
+      {
+        "relative_path": "vibrant-chaplygin/advanced_scripts_analysis_20251106_121921.json",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/.nojekyll",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "src/tools/analysis/__init__.py",
+        "source_dir": "/Users/steven/pythons-merged-backup"
+      },
+      {
+        "relative_path": "src/tools/cleanup/__init__.py",
+        "source_dir": "/Users/steven/pythons-merged-backup"
+      },
+      {
+        "relative_path": "src/tools/scanners/__init__.py",
+        "source_dir": "/Users/steven/pythons-merged-backup"
+      },
+      {
+        "relative_path": "src/tools/rename/__init__.py",
+        "source_dir": "/Users/steven/pythons-merged-backup"
+      },
+      {
+        "relative_path": "src/tools/dedup/__init__.py",
+        "source_dir": "/Users/steven/pythons-merged-backup"
+      },
+      {
+        "relative_path": "src/tools/analysis/__init__.py",
+        "source_dir": "/Users/steven/pythons-sort"
+      },
+      {
+        "relative_path": "src/tools/cleanup/__init__.py",
+        "source_dir": "/Users/steven/pythons-sort"
+      },
+      {
+        "relative_path": "src/tools/scanners/__init__.py",
+        "source_dir": "/Users/steven/pythons-sort"
+      },
+      {
+        "relative_path": "src/tools/rename/__init__.py",
+        "source_dir": "/Users/steven/pythons-sort"
+      },
+      {
+        "relative_path": "src/tools/dedup/__init__.py",
+        "source_dir": "/Users/steven/pythons-sort"
+      }
+    ],
+    "87709354d41e8e24e4350782ffc6be17895730bb0e57048ac21d4f2fbaa1a12c": [
+      {
+        "relative_path": "vibrant-chaplygin/scripts_ai_index.json",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/build/html/_downloads/b43714f9006d991cb0d04ef554813e5a/scripts_ai_index.json",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "ba9b97896e3d5083be33ddf00a5116f7049cdde3a3683dfa7962d50132012675": [
+      {
+        "relative_path": "vibrant-chaplygin/py/CustomDark.sublime-color-scheme",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "archived_content/other_files/CustomDark.sublime-color-scheme",
+        "source_dir": "/Users/steven/pythons-sort"
+      }
+    ],
+    "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b": [
+      {
+        "relative_path": "vibrant-chaplygin/_analysis/current/extracted_song_data.csv",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "src/python_automation_framework.egg-info/not-zip-safe",
+        "source_dir": "/Users/steven/pythons-merged-backup"
+      },
+      {
+        "relative_path": "src/python_automation_framework.egg-info/dependency_links.txt",
+        "source_dir": "/Users/steven/pythons-merged-backup"
+      },
+      {
+        "relative_path": "src/python_automation_framework.egg-info/not-zip-safe",
+        "source_dir": "/Users/steven/pythons-sort"
+      },
+      {
+        "relative_path": "src/python_automation_framework.egg-info/dependency_links.txt",
+        "source_dir": "/Users/steven/pythons-sort"
+      }
+    ],
+    "9b1260cc001da2fa848f09b4f479beee6db141d8285fd82c5bdcd42d96b586eb": [
+      {
+        "relative_path": "vibrant-chaplygin/_analysis/archived/batch_reports/EXECUTED_BATCH_01_20251105_114514.csv",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/_analysis/archived/batch_reports/EXECUTED_BATCH_01_20251105_114540.csv",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "7694a1485f914f592ee9a4cf174bed3e34f1f1cb13bad193fd7ff5183f9f036a": [
+      {
+        "relative_path": "vibrant-chaplygin/_analysis/archived/batch_reports/EXECUTED_BATCH_02_20251105_114517.csv",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/_analysis/archived/batch_reports/EXECUTED_BATCH_02_20251105_114542.csv",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "f089c400c26abd9033ff17bd60a079597b0d36e213f7f5374c0a0a0e4dee58b9": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/index.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/index.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "5d38ef22c9f892ff60001aae1731b111d91d9d2109b1ce3b15b62ea2f12b995f": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/quickstart.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/quickstart.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "21360c9cca606872459e56665ad74a923bef3518ae045451ed27835bb6c85315": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/source/index.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/source/index.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/build/html/_sources/index.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "4dd47147ef2f0baa8e8d8f701a3185d98462145a48a3aa1db2305ec26abec2c7": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/source/main-docs.md",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/build/html/_sources/main-docs.md.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "36686629b9c36d576b4b37ed5fdf2a60084266735a8d4e2280d3aea4432da2f8": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/source/quickstart.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/source/quickstart.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/build/html/_sources/quickstart.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "ee9ae53b7095959aee26270a91a0b59a40de03293fd954ce89be833f8ca31da3": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/guides/youtube_automation.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/guides/youtube_automation.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "153d92e18dfc77d07c4a4a46cdb16d2c17ef969f3a143a6d8e8476e1b994b4ea": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/api/ts_python_bridge.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/api/ts_python_bridge.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "4884a76dc1b7ce66990178139ebc7276fafe56fbe0e89e72d954de3f0a05d5d4": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/api/smart_automation_discovery.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/api/smart_automation_discovery.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "26bb2388c34fbdbf4cf9d8b0711b23b3866f8ee3aa434b12c2ec33b4e2172d7a": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/api/ai_orchestrator_ultimate.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/api/ai_orchestrator_ultimate.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "a7ebcf65e5732adc8cde79caaa9450058e964066bf374592b1c941a2d9945887": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/api/unified_content_orchestrator.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/api/unified_content_orchestrator.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "c45267da95fe43a85924847f6120e1a41d0bea874814b46eb5d8bd25db4df8a9": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/api/complete_media_prompt_analyzer.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/api/complete_media_prompt_analyzer.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "e001f267b4258c75d17f09077f860e84fee50fc16d1f7cafaa6276bb30a486a8": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/api/intelligent_workflow_builder.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/api/intelligent_workflow_builder.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "53b8c7620039eb84340da11c53210fbecd6b47ccc3b06c08c715e342d23685e6": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/api/deep_content_analyzer_ultimate.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/api/deep_content_analyzer_ultimate.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ],
+    "52d30280c5eceea89406ed30820ca2ab4cee1b0ee4e697d466023441a3aaf629": [
+      {
+        "relative_path": "vibrant-chaplygin/docs/_build/html/_sources/systems/overview.rst.txt",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      },
+      {
+        "relative_path": "vibrant-chaplygin/docs/systems/overview.rst",
+        "source_dir": "/Users/steven/.claude-worktrees/pythons"
+      }
+    ]
+  },
+  "conflict_details": [],
+  "files_to_copy_details": []
+}

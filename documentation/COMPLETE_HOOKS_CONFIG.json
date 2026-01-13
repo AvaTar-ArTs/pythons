@@ -1,0 +1,31 @@
+{
+  "description": "Complete Claude Code Hooks Configuration for Auto-Save",
+  "recommended": "Add this entire 'hooks' section to your Claude Code settings",
+  "location": "~/.config/claude/settings.json (or your Claude Code settings location)",
+
+  "hooks": {
+    "UserPromptSubmit": {
+      "command": "/Users/steven/Documents/python/auto_save_on_exit.py",
+      "description": "Saves when you type: exit, bye, save, done, quit, goodbye"
+    },
+    "SessionEnd": {
+      "command": "/Users/steven/Documents/python/conversation_exporter.py",
+      "description": "Saves automatically when session ends"
+    }
+  },
+
+  "notes": {
+    "manual_save": "Type 'save', 'exit', or 'bye' anytime to save conversation",
+    "auto_save": "Conversation saved automatically when session ends",
+    "output": "~/claude/conversations/ (both .txt and .html formats)",
+    "search": "Use Alfred: ⌘+Space → cc",
+    "formats": ["txt (primary - searchable)", "html (presentation)"]
+  },
+
+  "testing": {
+    "test_manual": "Type 'save' in Claude Code",
+    "test_auto": "End your session normally",
+    "verify": "ls ~/claude/conversations/",
+    "search": "Alfred: ⌘+Space → cc"
+  }
+}

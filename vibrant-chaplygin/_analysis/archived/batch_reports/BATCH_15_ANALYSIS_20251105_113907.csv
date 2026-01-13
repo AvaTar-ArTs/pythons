@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+suno-prompt-analyzer.py,NanoBanana API Prompt Analyzer,,KEEP,Already well-named
+super-simple-setting.py,This template is written by @Edhim,,KEEP,
+super_flatten.py,Super Aggressive Flattener,super-flatten.py,RENAME,Fix underscore to hyphen
+support.py,[Instagram automation],,LIBRARY,Library/framework code - support.py
+synthesize.py,As a Man Thinketh - Text to Speech System (Real Content),,KEEP,
+sysinfo.py,Utilities for getting information about IPython and the system it's running in.,,KEEP,
+system-monitor.py,🔍 AI System Health Monitor,,KEEP,
+system.py,Setup Periodic Quality Monitoring,,KEEP,
+targeted-v1.py,Targeted cleanup: Fix obvious issues,,KEEP,Already well-named
+tehsites-complete.py,Complete File Merge and Deduplication Script,,KEEP,
+telegraph-download-images.py,[No docstring found],,KEEP,
+temp-file-manager.py,"This module contains classes - NamedFileInTemporaryDirectory, TemporaryWorkingDirectory.",,KEEP,
+template-code.py,This template is written by @boldestfortune,,KEEP,
+template.py,[No docstring found],,KEEP,
+test_v3.py,Quick test of V3 renamer functionality,test-v3.py,RENAME,Fix underscore to hyphen
+testfonts-v1.py,[No docstring found],,KEEP,Already well-named
+testjoin-v1.py,[No docstring found],,KEEP,Already well-named
+textgenerator-1.py,[OpenAI integration],,KEEP,
+textgenerator.py,[OpenAI integration],,KEEP,
+texttospeech-v1.py,[No docstring found],,KEEP,Already well-named
+thinketh_content_renamer.py,As-a-Man-Thinketh Content-Aware Renamer,thinketh-content-renamer.py,RENAME,Fix underscore to hyphen
+thinketh_content_renamer_from_seo-optimizer.py,As-a-Man-Thinketh Content-Aware Renamer,thinketh-content-renamer-from-seo-optimizer.py,RENAME,Fix underscore to hyphen
+thinketh_duplicate_cleanup.py,As-a-Man-Thinketh Duplicate Cleanup,,DELETE,One-time script or backup
+thinketh_tts_adaptive.py,🎧 Adaptive Emotional Audiobook Generator (Cheerful Guide Style) 🎧,thinketh-tts-adaptive.py,RENAME,Fix underscore to hyphen
+thinketh_tts_asmr.py,"ASMR whisper edition with cheerful-guide affect,",thinketh-tts-asmr.py,RENAME,Fix underscore to hyphen
+thinketh_tts_main.py,thinketh_tts.py,thinketh-tts-main.py,RENAME,Fix underscore to hyphen
+thinketh_tts_scripty.py,Cinematic hybrid edition:,thinketh-tts-scripty.py,RENAME,Fix underscore to hyphen
+thinketh_tts_transcription.py,[OpenAI integration],thinketh-tts-transcription.py,RENAME,Fix underscore to hyphen
+thinketh_tts_universal.py,[OpenAI integration],thinketh-tts-universal.py,RENAME,Fix underscore to hyphen
+thumbnail.py,[YouTube automation],,KEEP,
+thumbs.py,[No docstring found],,KEEP,
+tiktok-compile-videos-v1.py,2. Compile video out of clips,,KEEP,Already well-named
+time-format-utils.py,[OpenAI integration],,LIBRARY,Library/framework code - utils.py
+to-html-gallery.py,[No docstring found],,KEEP,
+tocpdf.py,[No docstring found],,KEEP,
+tools.py,[OpenAI integration],,KEEP,
+track.py,[No docstring found],,KEEP,
+transcribe-analyze-local.py,analyze_mp3_open_source.py,,KEEP,Already well-named
+transcribe.py,[No docstring found],,KEEP,
+transcriber.py,Advanced Transcriber - Consolidated Transcription Script,,KEEP,
+transcript-prompts.py,[OpenAI integration],,KEEP,
+transcript.py,[OpenAI integration],,KEEP,
+transcription.py,Audio/Video Transcription and Analysis Tool,,KEEP,
+translation.py,[YouTube automation],,KEEP,
+twitch-download.py,[No docstring found],,KEEP,
+twitch-exceptions.py,[No docstring found],,KEEP,
+typedefs.py,[No docstring found],,LIBRARY,Library/framework code - typedefs.py
+typography.py,"Typography System - Professional text rendering with outlines, shadows, and effects.",,KEEP,
+ufunc.py,[No docstring found],,KEEP,
+ultra.py,Ultra Advanced Content-Aware File Analysis System,,KEEP,

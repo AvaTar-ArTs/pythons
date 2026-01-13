@@ -1,0 +1,51 @@
+filename,purpose,suggested_name,action,notes
+indent.py,[No docstring found],,KEEP,
+infinity-feedliker.py,instabot example,instagram-infinity-feedliker.py,RENAME,Add Instagram prefix
+infinity-hashtags-follower.py,instabot example,instagram-infinity-hashtags-follower.py,RENAME,Add Instagram prefix
+infinity-hashtags-liker.py,instabot example,instagram-infinity-hashtags-liker.py,RENAME,Add Instagram prefix
+instabot-api-prepare.py,[Instagram automation],,KEEP,
+instabot-bot-youtube-user-id.py,[Instagram automation],instagram-instabot-bot-youtube-user-id.py,RENAME,Add Instagram prefix
+instabot-devices.py,[No docstring found],,KEEP,
+instagram-approve-message-requests.py,instabot example,,LIBRARY,Library/framework code - request
+instagram-archive-media.py,instabot example,,KEEP,Already well-named
+instagram-blacklist-timeline-liker.py,instabot example,,KEEP,Already well-named
+instagram-bot-template.py,This template is written by @Nuzzo235,,KEEP,Already well-named
+instagram-botComment.py,[Instagram automation],instagram-bot-comment.py,RENAME,Fix CamelCase
+instagram-build.py,[Instagram automation],leonardo-instagram-build.py,RENAME,Add Leonardo prefix
+instagram-direct-send-photo.py,instabot example,,KEEP,Already well-named
+instagram-dom-tree.py,All methods must return media_ids that can be,,KEEP,Already well-named
+instagram-download-1.py,[No docstring found],,KEEP,Already well-named
+instagram-download-photos.py,instabot example,,KEEP,Already well-named
+instagram-download-user-videos.py,Download a user videos:,,KEEP,Already well-named
+instagram-download-your-photos.py,instabot example,,KEEP,Already well-named
+instagram-download.py,Content-Aware Etsy Collection Organizer,,KEEP,Already well-named
+instagram-handle-checker.py,Handle Availability Checker for Dual-Domain Strategy,,KEEP,Already well-named
+instagram-image-uploader.py,Based in @jeremycjang and @boldestfortune,,KEEP,Already well-named
+instagram-models.py,Models used when interacting with the database interface.,,LIBRARY,Library/framework code - models.py
+instagram-openai-download.py,[OpenAI integration],,KEEP,Already well-named
+instagram-parse.py,instabot example,,KEEP,Already well-named
+instagram-processor.py,[No docstring found],,KEEP,Already well-named
+instagram-repost-photo.py,instabot example,,KEEP,Already well-named
+instagram-save-users-followers.py,instabot example,,KEEP,Already well-named
+instagram-script_simple.py,[No docstring found],instagram-script-simple.py,RENAME,Fix underscore to hyphen
+instagram-setup.py,PrNdOwN setup file.,,LIBRARY,Library/framework code - setup.py
+instagram-upload-story-photo.py,[Instagram automation],,KEEP,Already well-named
+instagram-upload.py,[No docstring found],,KEEP,Already well-named
+instagram.py,[No docstring found],,KEEP,
+installations.py,[No docstring found],,KEEP,
+instareport-libs-attack.py,[Instagram automation],,KEEP,
+instareport-libs-utils.py,[No docstring found],,LIBRARY,Library/framework code - utils.py
+intelligent_code_orchestrator.py,🧠 INTELLIGENT CODE ORCHESTRATOR,intelligent-code-orchestrator.py,RENAME,Fix underscore to hyphen
+intelligent_renamer-1.py,[Instagram automation],intelligent-renamer-1.py,RENAME,Fix underscore to hyphen
+interact.py,instabot example,instagram-interact.py,RENAME,Add Instagram prefix
+ipython.py,[No docstring found],,LIBRARY,Library/framework code - ipython
+launcher.py,Utilities for launching kernels,,KEEP,
+leodown.py,[Leonardo AI],leonardo-leodown.py,RENAME,Add Leonardo prefix
+leonardo-convert.py,[Leonardo AI],,KEEP,Already well-named
+leonardo-cyberpunk-hacker-generator.py,[Leonardo AI],,KEEP,Already well-named
+leonardo-download-1.py,[Leonardo AI],,KEEP,Already well-named
+leonardo-download-batch.py,[Leonardo AI],,KEEP,Already well-named
+leonardo-download.py,[Leonardo AI],,KEEP,Already well-named
+leonardo-process.py,[Leonardo AI],,KEEP,Already well-named
+leonardo-upload-image.py,[Leonardo AI],,KEEP,Already well-named
+leonardo.py,leonardo_motion_cli.py,,KEEP,

@@ -1,0 +1,37 @@
+file,purpose,main_class,main_functions,detected_type,key_imports
+pickleshare.py,PickleShare - a small 'shelve' like datastore with concurrency support,PickleShareDB,"gethashfile, main",unknown,from pickleshare import * | from __future__ import print_function | from pathlib import Path | from pathlib2 import Path | import os
+pip_build_environment.py,No docstring,,"startDatabase, initDatabase, beginDatabaseConnection",unknown,import pickle | from datetime import date | import mysql.connector | import settings | from mysql.connector import pooling
+pip_install_command.py,"If the filepath already exists, append _1, _2, ... until a unique filename is found.",,"get_unique_filename, create_excerpt, generate_job_cards",unknown,from pathlib import Path | import csv | import html | import os | import logging
+pip_installer_bootstrap.py,Install setuptools only if absent and not excluded.,,"include_setuptools, include_wheel, determine_pip_install_arguments","news, images, etsy",from pathlib import Path | import argparse | import importlib  # Replaced deprecated importlib | import os.path | import pkgutil
+pipeline.py,Shared audio transcription + analysis pipeline helpers.,,"format_timestamp, transcribe_audio, analyze_transcript",transcript,"from __future__ import annotations | import os | from pathlib import Path | from typing import Iterable, Optional | from openai import OpenAI"
+playing.py,This template is written by @boldestfortune,,,unknown,"import random | from instapy import InstaPy, smart_run"
+playlist.py,No docstring,,"generate_token, get_youtube_url, download_mp3",unknown,from pathlib import Path | import argparse | import json | import os | import re
+podcast-studio.py,🎙️ AI Podcast Studio,PodcastStudio,main,"news, transcript",import os | import sys | import json | import requests | import openai
+polly.py,__init__ function.,AWSPolly,,audio,"import random | import sys | from boto3 import Session | from botocore.exceptions import BotoCoreError, ClientError, ProfileNotFound | from utils import settings"
+posttextparser.py,posttextparser function.,,posttextparser,unknown,from pathlib import Path | import os | import re | import time | from typing import List
+prepare_missing_song_folders.py,📂 PREPARE FOLDERS FOR MISSING SONGS,Colors,main,"duplicates, images, transcript",import os | import csv | import hashlib | from pathlib import Path | from datetime import datetime
+preservation-renamer.py,Python Preservation Renamer,PreservationRenamer,"execute_renaming, main","duplicates, images",import os | import re | import json | import csv | from pathlib import Path
+printify-organize.py,get_dominant_color function.,,"get_dominant_color, detect_text, suggest_product","images, etsy",from pathlib import Path | import csv | import os | import time | from datetime import datetime
+process-audio.py,Gemini Storybook Downloader (macOS-friendly),DownloadRecord,"slugify, ensure_dir, sha256_bytes","duplicates, images","from __future__ import annotations | import argparse, asyncio, csv, hashlib, json, os, re, sys, time, urllib.parse | from dataclasses import dataclass, asdict | from pathlib import Path | from typing import List, Dict, Optional, Tuple"
+process-csv.py,📊 ANALYSIS EXPORT TO CSV,Colors,main,duplicates,import logging | import json | import csv | from pathlib import Path | from datetime import datetime
+process-json.py,This script is intended for use as a GYP_GENERATOR. It takes as input (by way of,Target,,"images, etsy",
+process-proc_api.py,,,"chunks, profile_attack_process, video_attack_process",etsy,from pathlib import Path | import os  # line:26 | import time  # line:22 | import webbrowser  # line:27 | from multiprocessing import Process  # line:4
+process-proc_simple.py,No docstring,ExtractNews,,"news, audio, transcript","from topic.news import NEWS | from tts.polly import AudioProcessor | from utilities.const import LOG_PATH, TECH_NEWS"
+process-proc-2.py,QuantumForge CLI - Where Order Meets Chaos,,"cli, process_image","images, quantum",import click | from .quantum_media_processor import QuantumMediaProcessor | from .chaos_scheduler import ChaosScheduler
+process-remix.py,No docstring,,"extract_duration_from_transcript, get_all_song_data, read_file_content","etsy, transcript",from pathlib import Path | import csv | import os | import sys | from dotenv import load_dotenv
+process.py,Convert seconds into MM:SS format.,,"format_timestamp, transcribe_audio, analyze_text_for_section","etsy, transcript",from pathlib import Path | import csv | import os | import sys | from dotenv import load_dotenv
+processing-categories.py,scan_directory function.,,"scan_directory, export_to_csv, main",images,import csv | import os | import logging
+processing-csv-docs_simple.py,No docstring,,"get_creation_date, format_file_size, generate_dry_run_csv",unknown,import csv | import os | import re | from datetime import datetime | import config  # Import the configuration
+processing-docs.py,"Recursively walks through each directory in 'directories', excluding paths",,"generate_dry_run_csv, write_csv, format_file_size",images,import os | import csv | import re | import logging | from pathlib import Path
+processing-doubles.py,Check if a given path matches any of the exclusion patterns.,,"is_excluded, compute_md5, generate_detailed_duplicate_report",duplicates,import csv | import hashlib | import os | from collections import defaultdict | import pandas as pd
+processing-execute.py,Execute Smart Organization Plan,OrganizationExecutor,main,unknown,import os | import csv | import shutil | from pathlib import Path | from datetime import datetime
+processing-fdupes.py,No docstring,,,duplicates,import csv
+processing-imove.py,No docstring,,,images,from pathlib import Path | import csv | import os | import shutil | import logging
+processing-json.py,download gif from giphy by giphy id,,"download_gif, get_giphy_results, download_gifs_from_terms",giphy,import json | import sys | import time | from pathlib import Path | import requests
+processing-pandas-docs.py,"Reads multiple CSV files from specified paths, concatenates them, and",,combine_csvs,"csv_combine, duplicates",from pathlib import Path | import os | import pandas as pd | from pandas.errors import EmptyDataError | import logging
+processing-pandas-json.py,No docstring,,,conversations,from pathlib import Path | import json | import os | from glob import glob | import pandas as pd
+processing-pandas.py,No docstring,,,"images, etsy",from pathlib import Path | import pandas as pd | import requests | import logging
+processing.py,Check if a given path matches any of the exclusion patterns.,,"is_excluded, compute_md5, generate_detailed_duplicate_report",duplicates,import csv | import hashlib | import os | import re | from collections import defaultdict
+processor-transcript.py,Main entry point for the Transcription Analyzer example usage,,"check_api_key, validate_file_path, validate_directory_path",transcript,import logging | import os | import sys | from pathlib import Path | from dotenv import load_dotenv
+processor.py,No docstring,,"get_creation_date, get_audio_metadata, format_file_size",unknown,import csv | import os | import re | from datetime import datetime | import config  # Import the configuration
+processr.py,No docstring,,,images,from pathlib import Path | import csv | import json | import logging
