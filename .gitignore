@@ -16,3 +16,4 @@ __pycache__/
 ENV_D_ANALYSIS_*/
 ENV_D_ZSHRC_COMPARISON_*/
 MULTI_DEPTH_ANALYSIS_*/
+\n# Worktree directory for isolated development environments\n.worktrees/
