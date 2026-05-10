@@ -122,8 +122,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -147,13 +145,7 @@ class for global variables."""
     files = ["cat1.txt", "cat2.txt", "cat3.txt", "cat4.txt", "cat5.txt", "cat6.txt"]
     file = files[0]
     ascii = []
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    :  /:   ' .- = _   _
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
+    :  /:   ' .-= _   _
 
 
 # Constants
@@ -161,7 +153,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -171,13 +164,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -202,7 +196,9 @@ sys.path.insert(1, "ascii")
 
 
 async def clear():
-def clear(): -> Any
+    pass
+def clear() -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -217,7 +213,9 @@ def clear(): -> Any
 
 
 async def banner():
-def banner(): -> Any
+    pass
+def banner() -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -228,7 +226,7 @@ def banner(): -> Any
     logger.info(
         get_colors.white()
         + get_colors.randomize()
-        + """
+        + '\''
            .'\   /`.
          .'.-.`-'.-.`.
     ..._:   .-. .-.   :_...
@@ -240,7 +238,7 @@ def banner(): -> Any
     `.   `-:_| | |_:-'   .'     - Welcome To PrNdOwN!
       `-._   ````    _.-'
           ``-------''
-    """
+    '\''
         + get_colors.white()
     )
 
@@ -268,7 +266,9 @@ for i in list_choice:
 
 
 async def banner2():
-def banner2(): -> Any
+    pass
+def banner2() -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -279,7 +279,7 @@ def banner2(): -> Any
     logger.info(
         get_colors.white()
         + get_colors.randomize()
-        + f"""
+        + f'\''
       /\_/\ \
 
  /\  / o o \ \
@@ -289,7 +289,7 @@ def banner2(): -> Any
    | \\|| ||  {sentence}!
    \ '|| ||
     \\)()-())
-"""
+'\''
         + get_colors.white()
     )
 
@@ -297,7 +297,9 @@ def banner2(): -> Any
 
 
 async def banner3():
-def banner3(): -> Any
+    pass
+def banner3() -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -326,7 +328,9 @@ def banner3(): -> Any
 
 
 async def buggy():
-def buggy(): -> Any
+    pass
+def buggy() -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -353,7 +357,9 @@ def buggy(): -> Any
 
 
 async def banner4():
-def banner4(): -> Any
+    pass
+def banner4() -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:

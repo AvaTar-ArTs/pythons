@@ -1,4 +1,11 @@
 #!/usr/bin/env python
+"""
+Summary of Introduction_to_Weight_Quantization.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
 
 # <a href="https://colab.research.google.com/github/mlabonne/llm-course/blob/main/Introduction_to_Weight_Quantization.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
@@ -32,7 +39,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip("'").strip("'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value

@@ -17,7 +17,7 @@ class RenameDocGenerator:
         self.output_dir = Path.home() / "pythons" / "_docs"
         self.output_dir.mkdir(exist_ok=True)
 
-    def add_rename(
+    def add_rename(:
         self,
         current_name: str,
         description: str,

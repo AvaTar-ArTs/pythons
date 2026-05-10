@@ -1,7 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-6ce05d8588891185a7f9c5eba7b0acd0284c2e38 refs/remotes/origin/auth-gui
-6a30b55d0fd4976571a5b9b34c01fd41cec49c7a refs/remotes/origin/fix_293
-6a30b55d0fd4976571a5b9b34c01fd41cec49c7a refs/remotes/origin/master
-e09591eb99c3e0a42e3e3539cd754a63ed28bb71 refs/remotes/origin/modularize
-706207baa4eabda2dde2e4ffa7d30671e8b331ed refs/remotes/origin/more-retry-exceptions
-4a235da43570b606aabb0f9b27400bc316c69023 refs/tags/0.8.0

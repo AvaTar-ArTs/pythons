@@ -30,7 +30,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -142,7 +142,6 @@ class BaseComputerTool:
 
     @property
     def options(self) -> ComputerToolOptions:
-        width, height = self.scale_coordinates(
             ScalingSource.COMPUTER,
             self.width,
             self.height,
@@ -168,7 +167,7 @@ class BaseComputerTool:
 
         self.xdotool = f"{self._display_prefix}xdotool"
 
-    async def __call__(
+    async def __call__(:
         self,
         *,
         action: Action_20241022,
@@ -350,7 +349,7 @@ class ComputerTool20250124(BaseComputerTool, BaseAnthropicTool):
             {"name": self.name, "type": self.api_type, **self.options},
         )
 
-    async def __call__(
+    async def __call__(:
         self,
         *,
         action: Action_20250124,

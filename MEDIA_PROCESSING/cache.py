@@ -23,27 +23,24 @@ class ImageCache:
             cache_dir: Directory for cache files. If None, uses .cache in current dir.
         """
         if cache_dir is None:
-            cache_dir = os.path.join(os.getcwd(), '.image_cache')
+            cache_dir = os.path.join(os.getcwd(), ".image_cache")
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        self.cache_file = self.cache_dir / 'cache.json'
+        self.cache_file = self.cache_dir / "cache.json"
 
         # Load existing cache
         self.cache: Dict[str, Dict[str, Any]] = {}
         if self.cache_file.exists():
             try:
-                with open(self.cache_file, 'r') as f:
+                with open(self.cache_file, "r") as f:
                     self.cache = json.load(f)
             except Exception:
                 self.cache = {}
 
-    def _get_cache_key(
-        self,
-        image_path: str,
-        operation: str,
-        params: Optional[Dict[str, Any]] = None
+    def _get_cache_key(:
+        self, image_path: str, operation: str, params: Optional[Dict[str, Any]] = None
     ) -> str:
-        """
+        '\''
         Generate a cache key for an operation.
 
         Args:
@@ -65,11 +62,8 @@ class ImageCache:
         key_data = f"{image_path}:{mtime}:{operation}:{param_str}"
         return hashlib.md5(key_data.encode()).hexdigest()
 
-    def get(
-        self,
-        image_path: str,
-        operation: str,
-        params: Optional[Dict[str, Any]] = None
+    def get(:
+        self, image_path: str, operation: str, params: Optional[Dict[str, Any]] = None
     ) -> Optional[Dict[str, Any]]:
         """
         Get cached result if available.
@@ -82,15 +76,14 @@ class ImageCache:
         Returns:
             Cached result dict or None if not found
         """
-        key = self._get_cache_key(image_path, operation, params)
         return self.cache.get(key)
 
-    def set(
+    def set(:
         self,
         image_path: str,
         operation: str,
         result: Dict[str, Any],
-        params: Optional[Dict[str, Any]] = None
+        params: Optional[Dict[str, Any]] = None,
     ) -> None:
         """
         Cache a processing result.
@@ -101,12 +94,10 @@ class ImageCache:
             result: Result dictionary to cache
             params: Operation parameters
         """
-        key = self._get_cache_key(image_path, operation, params)
-        self.cache[key] = result
 
         # Save cache to disk
         try:
-            with open(self.cache_file, 'w') as f:
+            with open(self.cache_file, "w") as f:
                 json.dump(self.cache, f, indent=2)
         except Exception:
             pass  # Cache write failure is not critical
@@ -154,11 +145,11 @@ def get_cache(cache_dir: Optional[str] = None) -> ImageCache:
     return _global_cache
 
 
-def cache_image_result(
+def cache_image_result(:
     image_path: str,
     operation: str,
     result: Dict[str, Any],
-    params: Optional[Dict[str, Any]] = None
+    params: Optional[Dict[str, Any]] = None,
 ) -> None:
     """
     Cache an image processing result.
@@ -173,10 +164,8 @@ def cache_image_result(
     cache.set(image_path, operation, result, params)
 
 
-def get_cached_result(
-    image_path: str,
-    operation: str,
-    params: Optional[Dict[str, Any]] = None
+def get_cached_result(:
+    image_path: str, operation: str, params: Optional[Dict[str, Any]] = None
 ) -> Optional[Dict[str, Any]]:
     """
     Get a cached image processing result.
@@ -188,6 +177,6 @@ def get_cached_result(
 
     Returns:
         Cached result or None
-    """
+    '\''
     cache = get_cache()
     return cache.get(image_path, operation, params)

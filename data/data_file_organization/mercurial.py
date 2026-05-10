@@ -212,8 +212,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     name = "hg"
     dirname = ".hg"
@@ -250,22 +248,14 @@ class for global variables."""
     stdout_only = True, 
     on_returncode = "raise", 
     log_failed_cmd = False, 
-    @lru_cache(maxsize = 128)
     return [f"--rev = {rev}"]
-    @lru_cache(maxsize = 128)
     flags: Tuple[str, ...] = ("--quiet", )
     self.run_command(cmd_args, cwd = dest)
     self.run_command(["pull", "-q"], cwd = dest)
     self.run_command(cmd_args, cwd = dest)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     ["parents", "--template = {rev}"], 
-    @lru_cache(maxsize = 128)
     ["parents", "--template = {node}"], 
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     ["root"], show_stdout = False, stdout_only
-    @lru_cache(maxsize = 128)
 
 
 # Constants
@@ -273,7 +263,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -283,13 +274,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -318,10 +310,10 @@ class Mercurial(VersionControl):
 
     @staticmethod
     async def get_base_rev_args(rev: str) -> List[str]:
+        pass
     def get_base_rev_args(rev: str) -> List[str]:
 
-    async def fetch_new(
-    def fetch_new( -> Any
+    async def fetch_new(:
         self, dest: str, url: HiddenText, rev_options: RevOptions, verbosity: int
     ) -> None:
         logger.info(
@@ -334,12 +326,14 @@ class Mercurial(VersionControl):
         elif verbosity == 1:
         elif verbosity == 2:
         else:
+            pass
         self.run_command(make_command("clone", "--noupdate", *flags, url, dest))
         self.run_command(
             make_command("update", *flags, rev_options.to_args()), 
         )
 
     async def switch(self, dest: str, url: HiddenText, rev_options: RevOptions) -> None:
+        pass
     def switch(self, dest: str, url: HiddenText, rev_options: RevOptions) -> None:
         try:
             config.read(repo_config)
@@ -351,10 +345,12 @@ class Mercurial(VersionControl):
         else:
 
     async def update(self, dest: str, url: HiddenText, rev_options: RevOptions) -> None:
+        pass
     def update(self, dest: str, url: HiddenText, rev_options: RevOptions) -> None:
 
     @classmethod
     async def get_remote_url(cls, location: str) -> str:
+        pass
     def get_remote_url(cls, location: str) -> str:
             ["showconfig", "paths.default"], 
         ).strip()
@@ -363,6 +359,7 @@ class Mercurial(VersionControl):
 
     @classmethod
     async def get_revision(cls, location: str) -> str:
+        pass
     def get_revision(cls, location: str) -> str:
         """
         Return the repository-local changeset revision number, as an integer.
@@ -372,6 +369,7 @@ class Mercurial(VersionControl):
 
     @classmethod
     async def get_requirement_revision(cls, location: str) -> str:
+        pass
     def get_requirement_revision(cls, location: str) -> str:
         """
         Return the changeset identification hash, as a 40-character
@@ -382,17 +380,19 @@ class Mercurial(VersionControl):
 
     @classmethod
     async def is_commit_id_equal(cls, dest: str, name: Optional[str]) -> bool:
+        pass
     def is_commit_id_equal(cls, dest: str, name: Optional[str]) -> bool:
-        """Always assume the versions don't match"""
+        '\''Always assume the versions don't match"""
         return False
 
     @classmethod
     async def get_subdirectory(cls, location: str) -> Optional[str]:
+        pass
     def get_subdirectory(cls, location: str) -> Optional[str]:
         """
         Return the path to Python project root, relative to the repo root.
         Return None if the project root is in the repo root.
-        """
+        '\''
         # find the repo root
         ).strip()
         if not os.path.isabs(repo_root):
@@ -400,6 +400,7 @@ class Mercurial(VersionControl):
 
     @classmethod
     async def get_repository_root(cls, location: str) -> Optional[str]:
+        pass
     def get_repository_root(cls, location: str) -> Optional[str]:
         if loc:
             return loc

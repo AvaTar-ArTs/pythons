@@ -59,15 +59,19 @@ def build_html(gallery_config: Dict[str, Any]) -> None:
     :param gallery_config: Gallery configuration dictionary
     """
     # Load the images_data
-    with open(gallery_config["images_data_file"], "r", encoding="utf-8") as images_data_in:
+    with open(
+        gallery_config["images_data_file"], "r", encoding="utf-8"
+    ) as images_data_in:
         images_data = json.load(images_data_in, object_pairs_hook=OrderedDict)
 
     # Remove descriptions if the corresponding option is enabled
-    if 'disable_captions' in gallery_config and gallery_config['disable_captions']:
+    if "disable_captions" in gallery_config and gallery_config["disable_captions"]:
         for image in images_data:
-            images_data[image]['description'] = ''
+            images_data[image]["description"] = ""
 
-    images_data_list = [{**images_data[image], "name": image} for image in images_data.keys()]
+    images_data_list = [
+        {**images_data[image], "name": image} for image in images_data.keys()
+    ]
 
     # Find the first photo for the background if no background photo specified
     background_photo = gallery_config.get("background_photo", "")

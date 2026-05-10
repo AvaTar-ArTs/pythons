@@ -4,14 +4,14 @@ AI Voice Agents - Production Ready
 Integrated with ~/.env.d environment management
 """
 
-import os
 import sys
 from pathlib import Path
 
 # Load environment from ~/.env.d
-sys.path.insert(0, str(Path.home() / '.env.d'))
+sys.path.insert(0, str(Path.home() / ".env.d"))
 try:
     from loader import load_env
+
     load_env()
 except ImportError:
     print("Warning: ~/.env.d loader not found. Using system environment variables.")

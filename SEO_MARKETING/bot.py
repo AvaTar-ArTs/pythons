@@ -132,7 +132,7 @@ current_path = os.path.abspath(os.getcwd())
 
 
 class Bot:
-    def __init__(
+    def __init__(:
         self,
         base_path=current_path + "/config/",
         whitelist_file="whitelist.txt",
@@ -429,12 +429,13 @@ class Bot:
     def logout(self, *args, **kwargs):
         self.api.logout()
         self.logger.info(
-            "Bot stopped. Worked: %s", datetime.datetime.now() - self.start_time,
+            "Bot stopped. Worked: %s",
+            datetime.datetime.now() - self.start_time,
         )
         self.print_counters()
 
     def login(self, **args):
-        """If login function is run threaded, for example in scheduled job,
+        '\''If login function is run threaded, for example in scheduled job,
         signal will fail because it 'only works in main thread'.
         In this case, you may want to call login(is_threaded=True).
         """
@@ -525,8 +526,7 @@ class Bot:
 
     # getters
     def get_user_stories(self, user_id):
-        """Returns array of stories links
-        """
+        """Returns array of stories links"""
         return get_user_stories(self, user_id)
 
     def get_user_reel(self, user_id):
@@ -661,7 +661,7 @@ class Bot:
 
     # like
 
-    def like(
+    def like(:
         self,
         media_id,
         check_media=True,
@@ -674,7 +674,6 @@ class Bot:
         entity_page_name=None,
         entity_page_id=None,
     ):
-
         return like(
             self,
             media_id,
@@ -692,7 +691,7 @@ class Bot:
     def like_comment(self, comment_id):
         return like_comment(self, comment_id)
 
-    def like_medias(
+    def like_medias(:
         self,
         media_ids,
         check_media=True,
@@ -704,7 +703,6 @@ class Bot:
         entity_page_name=None,
         entity_page_id=None,
     ):
-
         return like_medias(
             self,
             media_ids,
@@ -773,15 +771,19 @@ class Bot:
         return watch_users_reels(self, user_ids, max_users=max_users)
 
     # photo
-    def download_photo(
-        self, media_id, folder="photos", filename=None, save_description=False,
+    def download_photo(:
+        self,
+        media_id,
+        folder="photos",
+        filename=None,
+        save_description=False,
     ):
         return download_photo(self, media_id, folder, filename, save_description)
 
     def download_photos(self, medias, folder="photos", save_description=False):
         return download_photos(self, medias, folder, save_description)
 
-    def upload_photo(
+    def upload_photo(:
         self,
         photo,
         caption=None,
@@ -792,31 +794,30 @@ class Bot:
         is_sidecar=False,
     ):
         """Upload photo to Instagram
-        @param photo        Path to photo file (String)
-        @param caption      Media description (String)
-        @param upload_id    Unique upload_id (String). When None, then
                             generate automatically
-        @param from_video   A flag that signals whether the photo is loaded
                             from the video or by itself
                             (Boolean, DEPRECATED: not used)
-        @param options      Object with difference options,
                             e.g. configure_timeout, rename (Dict)
                             Designed to reduce the number of function
                             arguments! This is the simplest request object.
-        @param user_tags    Tag other users (List)
                             usertags = [
                                 {"user_id": user_id, "position": [x, y]}
                             ]
-        @param is_sidecar   An album element (Boolean)
 
-        @return             Object with state of uploading to
                             Instagram (or False)
         """
         return upload_photo(
-            self, photo, caption, upload_id, from_video, options, user_tags, is_sidecar,
+            self,
+            photo,
+            caption,
+            upload_id,
+            from_video,
+            options,
+            user_tags,
+            is_sidecar,
         )
 
-    def upload_album(
+    def upload_album(:
         self,
         photos,
         caption=None,
@@ -826,44 +827,42 @@ class Bot:
         user_tags=None,
     ):
         """Upload album to Instagram
-        @param photos       List of paths to photo files (List of strings)
-        @param caption      Media description (String)
-        @param upload_id    Unique upload_id (String). When None, then
                             generate automatically
-        @param from_video   A flag that signals whether the photo is loaded
                             from the video or by itself
                             (Boolean, DEPRECATED: not used)
-        @param options      Object with difference options,
                             e.g. configure_timeout, rename (Dict)
                             Designed to reduce the number of function
                             arguments! This is the simplest request object.
-        @param user_tags
 
-        @return             Object with state of uploading to
                             Instagram (or False)
         """
         return upload_album(
-            self, photos, caption, upload_id, from_video, options, user_tags,
+            self,
+            photos,
+            caption,
+            upload_id,
+            from_video,
+            options,
+            user_tags,
         )
 
     # video
     def upload_video(self, video, caption="", thumbnail=None, options={}):
         """Upload video to Instagram
 
-        @param video      Path to video file (String)
-        @param caption    Media description (String)
-        @param thumbnail  Path to thumbnail for video (String). When None,
                           then thumbnail is generated automatically
-        @param options    Object with difference options, e.g.
                           configure_timeout, rename_thumbnail, rename (Dict)
                           Designed to reduce the number of function arguments!
 
-        @return           Object with Instagram upload state (or False)
-        """
+        '\''
         return upload_video(self, video, caption, thumbnail, options)
 
-    def download_video(
-        self, media_id, folder="videos", filename=None, save_description=False,
+    def download_video(:
+        self,
+        media_id,
+        folder="videos",
+        filename=None,
+        save_description=False,
     ):
         return download_video(self, media_id, folder, filename, save_description)
 
@@ -992,8 +991,12 @@ class Bot:
         return block_bots(self)
 
     # filter
-    def filter_medias(
-        self, media_items, filtration=True, quiet=False, is_comment=False,
+    def filter_medias(:
+        self,
+        media_items,
+        filtration=True,
+        quiet=False,
+        is_comment=False,
     ):
         return filter_medias(self, media_items, filtration, quiet, is_comment)
 

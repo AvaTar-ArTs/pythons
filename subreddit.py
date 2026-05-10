@@ -1,183 +1,126 @@
-import re
+"""
+Summary of subreddit.py
 
-import praw
-from praw.models import MoreComments
-from prawcore.exceptions import ResponseException
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
+import json
+from os.path import exists
+
 from utils import settings
 from utils.ai_methods import sort_by_similarity
-from utils.console import print_step, print_substep
-from utils.posttextparser import posttextparser
-from utils.subreddit import get_subreddit_undone
-from utils.videos import check_done
-from utils.voice import sanitize_text
-
-import logging
-
-logger = logging.getLogger(__name__)
+from utils.console import print_substep
 
 
-# Constants
-CONSTANT_100 = 100
-CONSTANT_401 = 401
+def get_subreddit_undone(
+    submissions: list, subreddit, times_checked=0, similarity_scores=None
+):
+    """_summary_
 
+    Args:
+        submissions (list): List of posts that are going to potentially be generated into a video
+        subreddit (praw.Reddit.SubredditHelper): Chosen subreddit
 
-def get_subreddit_threads(POST_ID: str):
+    Returns:
+        Any: The submission that has not been done
     """
-    Returns a list of threads from the AskReddit subreddit.
-    """
-
-    print_substep("Logging into Reddit.")
-
-    content = {}
-    if settings.config["reddit"]["creds"]["2fa"]:
+    # Second try of getting a valid Submission
+    if times_checked and settings.config["ai"]["ai_similarity_enabled"]:
         print(
-            "\nEnter your two-factor authentication code from your authenticator app.\n"
+            "Sorting based on similarity for a different date filter and thread limit.."
         )
-        code = input("> ")
-        print()
-        pw = settings.config["reddit"]["creds"]["password"]
-        passkey = f"{pw}:{code}"
-    else:
-        passkey = settings.config["reddit"]["creds"]["password"]
-    username = settings.config["reddit"]["creds"]["username"]
-    if str(username).casefold().startswith("u/"):
-        username = username[2:]
-    try:
-        reddit = praw.Reddit(
-            client_id=settings.config["reddit"]["creds"]["client_id"],
-            client_secret=settings.config["reddit"]["creds"]["client_secret"],
-            user_agent="Accessing Reddit threads",
-            username=username,
-            passkey=passkey,
-            check_for_async=False,
-        )
-    except ResponseException as e:
-        if e.response.status_code == CONSTANT_401:
-            logger.info("Invalid credentials - please check them in config.toml")
-    except (ValueError, TypeError):
-        logger.info("Something went wrong...")
-
-    # Ask user for subreddit input
-    print_step("Getting subreddit threads...")
-    similarity_score = 0
-    if not settings.config["reddit"]["thread"][
-        "subreddit"
-    ]:  # note to user. you can have multiple subreddits via reddit.subreddit("redditdev+learnpython")
-        try:
-            subreddit = reddit.subreddit(
-                re.sub(
-                    r"r\/", "", input("What subreddit would you like to pull from? ")
-                )
-                # removes the r/ from the input
-            )
-        except ValueError:
-            subreddit = reddit.subreddit("askreddit")
-            print_substep("Subreddit not defined. Using AskReddit.")
-    else:
-        sub = settings.config["reddit"]["thread"]["subreddit"]
-        print_substep(f"Using subreddit: r/{sub} from TOML config")
-        subreddit_choice = sub
-        if (
-            str(subreddit_choice).casefold().startswith("r/")
-        ):  # removes the r/ from the input
-            subreddit_choice = subreddit_choice[2:]
-        subreddit = reddit.subreddit(subreddit_choice)
-
-    if POST_ID:  # would only be called if there are multiple queued posts
-        submission = reddit.submission(id=POST_ID)
-
-    elif (
-        settings.config["reddit"]["thread"]["post_id"]
-        and len(str(settings.config["reddit"]["thread"]["post_id"]).split("+")) == 1
-    ):
-        submission = reddit.submission(
-            id=settings.config["reddit"]["thread"]["post_id"]
-        )
-    elif settings.config["ai"][
-        "ai_similarity_enabled"
-    ]:  # ai sorting based on comparison
-        threads = subreddit.hot(limit=50)
-        keywords = settings.config["ai"]["ai_similarity_keywords"].split(",")
-        keywords = [keyword.strip() for keyword in keywords]
-        # Reformat the keywords for printing
-        keywords_print = ", ".join(keywords)
-        logger.info(
-            f"Sorting threads by similarity to the given keywords: {keywords_print}"
-        )
-        threads, similarity_scores = sort_by_similarity(threads, keywords)
-        submission, similarity_score = get_subreddit_undone(
-            threads, subreddit, similarity_scores=similarity_scores
-        )
-    else:
-        threads = subreddit.hot(limit=25)
-        submission = get_subreddit_undone(threads, subreddit)
-
-    if submission is None:
-        return get_subreddit_threads(POST_ID)  # submission already done. rerun
-
-    elif (
-        not submission.num_comments
-        and settings.config["settings"]["storymode"] == "false"
-    ):
-        print_substep("No comments found. Skipping.")
-        exit()
-
-    submission = check_done(submission)  # double-checking
-
-    upvotes = submission.score
-    ratio = submission.upvote_ratio * CONSTANT_100
-    num_comments = submission.num_comments
-    threadurl = f"https://reddit.com{submission.permalink}"
-
-    print_substep(f"Video will be: {submission.title} :thumbsup:", style="bold green")
-    print_substep(f"Thread url is: {threadurl} :thumbsup:", style="bold green")
-    print_substep(f"Thread has {upvotes} upvotes", style="bold blue")
-    print_substep(f"Thread has a upvote ratio of {ratio}%", style="bold blue")
-    print_substep(f"Thread has {num_comments} comments", style="bold blue")
-    if similarity_score:
-        print_substep(
-            f"Thread has a similarity score up to {round(similarity_score * CONSTANT_100)}%",
-            style="bold blue",
+        submissions = sort_by_similarity(
+            submissions, keywords=settings.config["ai"]["ai_similarity_enabled"]
         )
 
-    content["thread_url"] = threadurl
-    content["thread_title"] = submission.title
-    content["thread_id"] = submission.id
-    content["is_nsfw"] = submission.over_18
-    content["comments"] = []
-    if settings.config["settings"]["storymode"]:
-        if settings.config["settings"]["storymodemethod"] == 1:
-            content["thread_post"] = posttextparser(submission.selftext)
-        else:
-            content["thread_post"] = submission.selftext
-    else:
-        for top_level_comment in submission.comments:
-            if isinstance(top_level_comment, MoreComments):
-                continue
-
-            if top_level_comment.body in ["[removed]", "[deleted]"]:
-                continue  # # see https://github.com/JasonLovesDoggo/RedditVideoMakerBot/issues/78
-            if not top_level_comment.stickied:
-                sanitised = sanitize_text(top_level_comment.body)
-                if not sanitised or sanitised == " ":
+    # recursively checks if the top submission in the list was already done.
+    if not exists("./video_creation/data/videos.json"):
+        with open("./video_creation/data/videos.json", "w+") as f:
+            json.dump([], f)
+    with open(
+        "./video_creation/data/videos.json", "r", encoding="utf-8"
+    ) as done_vids_raw:
+        done_videos = json.load(done_vids_raw)
+    for i, submission in enumerate(submissions):
+        if already_done(done_videos, submission):
+            continue
+        if submission.over_18:
+            try:
+                if not settings.config["settings"]["allow_nsfw"]:
+                    print_substep("NSFW Post Detected. Skipping...")
                     continue
-                if len(top_level_comment.body) <= int(
-                    settings.config["reddit"]["thread"]["max_comment_length"]
+            except AttributeError:
+                print_substep("NSFW settings not defined. Skipping NSFW post...")
+        if submission.stickied:
+            print_substep("This post was pinned by moderators. Skipping...")
+            continue
+        if (
+            submission.num_comments
+            <= int(settings.config["reddit"]["thread"]["min_comments"])
+            and not settings.config["settings"]["storymode"]
+        ):
+            print_substep(
+                f'This post has under the specified minimum of comments ({settings.config["reddit"]["thread"]["min_comments"]}). Skipping...'
+            )
+            continue
+        if settings.config["settings"]["storymode"]:
+            if not submission.selftext:
+                print_substep(
+                    "You are trying to use story mode on post with no post text"
+                )
+                continue
+            else:
+                # Check for the length of the post text
+                if len(submission.selftext) > (
+                    settings.config["settings"]["storymode_max_length"] or 2000
                 ):
-                    if len(top_level_comment.body) >= int(
-                        settings.config["reddit"]["thread"]["min_comment_length"]
-                    ):
-                        if (
-                            top_level_comment.author is not None
-                            and sanitize_text(top_level_comment.body) is not None
-                        ):  # if errors occur with this change to if not.
-                            content["comments"].append(
-                                {
-                                    "comment_body": top_level_comment.body,
-                                    "comment_url": top_level_comment.permalink,
-                                    "comment_id": top_level_comment.id,
-                                }
-                            )
+                    print_substep(
+                        f"Post is too long ({len(submission.selftext)}), try with a different post. ({settings.config['settings']['storymode_max_length']} character limit)"
+                    )
+                    continue
+                elif len(submission.selftext) < 30:
+                    continue
+        if settings.config["settings"]["storymode"] and not submission.is_self:
+            continue
+        if similarity_scores is not None:
+            return submission, similarity_scores[i].item()
+        return submission
+    print("all submissions have been done going by top submission order")
+    VALID_TIME_FILTERS = [
+        "day",
+        "hour",
+        "month",
+        "week",
+        "year",
+        "all",
+    ]  # set doesn't have __getitem__
+    index = times_checked + 1
+    if index == len(VALID_TIME_FILTERS):
+        print("All submissions have been done.")
 
-    print_substep("Received subreddit threads Successfully.", style="bold green")
-    return content
+    return get_subreddit_undone(
+        subreddit.top(
+            time_filter=VALID_TIME_FILTERS[index],
+            limit=(50 if int(index) == 0 else index + 1 * 50),
+        ),
+        subreddit,
+        times_checked=index,
+    )  # all the videos in hot have already been done
+
+
+def already_done(done_videos: list, submission) -> bool:
+    """Checks to see if the given submission is in the list of videos
+
+    Args:
+        done_videos (list): Finished videos
+        submission (Any): The submission
+
+    Returns:
+        Boolean: Whether the video was found in the list
+    """
+
+    for video in done_videos:
+        if video["id"] == str(submission):
+            return True
+    return False

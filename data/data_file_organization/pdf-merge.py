@@ -84,7 +84,7 @@ def sanitize_string(value: str) -> str:
         raise ValueError("Input must be a string")
 
     # Remove potentially dangerous characters
-    dangerous_chars = ['<', '>', '"', "'", '&', ';', '(', ')', '{', '}']
+    dangerous_chars = ['<', '>', '\'', "\'", '&', ';', '(', ')', '{', '}']
     for char in dangerous_chars:
         value = value.replace(char, '')
 

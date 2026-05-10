@@ -1,0 +1,58 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+"""
+Summary of main.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
+import os
+
+import config
+from slugify import slugify
+from utils.textgenerator import generate_text_list
+from utils.videogenerator import VideoGenerator
+
+try:
+        vg = VideoGenerator(
+            video_folder=config.VIDEO,
+            music_folder=config.MUSIC,
+            duration=config.DURATION,
+            size=config.SIZE,
+        )
+        with open("prompts.txt", "r") as file:
+            prompts = file.readlines()
+            prompts = [line.strip() for line in prompts]
+        for prompt in prompts:
+            file_path = f"output/{prompt}"
+            if not os.path.exists(file_path):
+                os.makedirs(file_path)
+            # get list of facts on specific date
+            while True:
+                facts_list = generate_text_list(prompt)
+                print(facts_list)
+                answer = input(
+                    "Generate videos with this text? (y/n) Or Ctrl+c to cancel: "
+                )
+                if answer in ["y", "Y"]:
+                    for text in facts_list:
+                        print(f"About the text >> {text}")
+                        file_name = (
+                            slugify(text=text, max_length=60, word_boundary=True) + ".mp4"
+                        )
+                        video = vg.generate_video(text, prompt)
+                        video.write_videofile(
+                            f"{file_path}/{file_name}",
+                            fps=config.FPS,
+                            preset="ultrafast",
+                            threads=4,
+                        )
+                    break
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)

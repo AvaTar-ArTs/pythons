@@ -8,11 +8,9 @@ Alfred Script Filter for Claude Code Conversations - Enhanced Version
 
 import json
 import sys
-import os
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime
 import re
-import hashlib
 
 # Configuration
 CONVERSATIONS_DIR = Path.home() / "claude" / "conversations"
@@ -42,7 +40,7 @@ def load_cache():
     """Load cached conversation data"""
     cache_path = get_cache_path()
     try:
-        with open(cache_path, 'r') as f:
+        with open(cache_path, "r") as f:
             return json.load(f)
     except:
         return None
@@ -52,7 +50,7 @@ def save_cache(data):
     """Save conversation data to cache"""
     cache_path = get_cache_path()
     try:
-        with open(cache_path, 'w') as f:
+        with open(cache_path, "w") as f:
             json.dump(data, f)
     except:
         pass
@@ -61,7 +59,7 @@ def save_cache(data):
 def extract_conversation_preview(file_path, max_length=150):
     """Extract meaningful preview from conversation"""
     try:
-        with open(file_path, 'r') as f:
+        with open(file_path, "r") as f:
             lines = f.readlines()
 
         # Skip header (first 7 lines)
@@ -74,55 +72,55 @@ def extract_conversation_preview(file_path, max_length=150):
         for line in content_lines[:50]:  # Look at first 50 lines
             line = line.strip()
 
-            if line.startswith('[USER]'):
-                current_role = 'user'
+            if line.startswith("[USER]"):
+                current_role = "user"
                 continue
-            elif line.startswith('[ASSISTANT]'):
-                current_role = 'assistant'
+            elif line.startswith("[ASSISTANT]"):
+                current_role = "assistant"
                 continue
-            elif line.startswith('[TOOL'):
+            elif line.startswith("[TOOL"):
                 current_role = None
                 continue
 
             # Collect content
-            if line and current_role and not line.startswith('['):
+            if line and current_role and not line.startswith("["):
                 preview_parts.append(line)
-                if len(' '.join(preview_parts)) > max_length:
+                if len(" ".join(preview_parts)) > max_length:
                     break
 
-        preview = ' '.join(preview_parts)
+        preview = " ".join(preview_parts)
 
         # Truncate if too long
         if len(preview) > max_length:
-            preview = preview[:max_length] + '...'
+            preview = preview[:max_length] + "..."
 
         return preview if preview else "Empty conversation"
 
-    except Exception as e:
+    except Exception:
         return "Error reading conversation"
 
 
 def parse_conversation_metadata(file_path):
     """Extract metadata with intelligent parsing"""
     try:
-        with open(file_path, 'r') as f:
+        with open(file_path, "r") as f:
             content = f.read()
 
         # Count different elements
-        user_count = content.count('[USER]')
-        assistant_count = content.count('[ASSISTANT]')
-        tool_matches = re.findall(r'\[TOOL: ([^\]]+)\]', content)
+        user_count = content.count("[USER]")
+        assistant_count = content.count("[ASSISTANT]")
+        tool_matches = re.findall(r"\[TOOL: ([^\]]+)\]", content)
         tool_count = len(tool_matches)
 
         # Extract unique tools used
         unique_tools = list(set(tool_matches))[:3]  # Top 3 tools
 
         # Get export date from header
-        lines = content.split('\n')
+        lines = content.split("\n")
         export_date = ""
         for line in lines[:5]:
-            if line.startswith('Exported:'):
-                export_date = line.replace('Exported:', '').strip()
+            if line.startswith("Exported:"):
+                export_date = line.replace("Exported:", "").strip()
                 break
 
         # Get word count approximation
@@ -132,16 +130,16 @@ def parse_conversation_metadata(file_path):
         preview = extract_conversation_preview(file_path)
 
         return {
-            'export_date': export_date,
-            'user_count': user_count,
-            'assistant_count': assistant_count,
-            'tool_count': tool_count,
-            'unique_tools': unique_tools,
-            'word_count': word_count,
-            'preview': preview,
-            'total_exchanges': user_count + assistant_count
+            "export_date": export_date,
+            "user_count": user_count,
+            "assistant_count": assistant_count,
+            "tool_count": tool_count,
+            "unique_tools": unique_tools,
+            "word_count": word_count,
+            "preview": preview,
+            "total_exchanges": user_count + assistant_count,
         }
-    except Exception as e:
+    except Exception:
         return None
 
 
@@ -150,25 +148,25 @@ def build_smart_subtitle(metadata, query, matches=None):
 
     # If there's a query with matches, show matches
     if query and matches:
-        return ' | '.join(matches[:2])  # Show top 2 matches
+        return " | ".join(matches[:2])  # Show top 2 matches
 
     # Otherwise, show conversation preview
     parts = []
 
     # Add exchange count
-    if metadata['user_count'] > 0:
+    if metadata["user_count"] > 0:
         parts.append(f"💬 {metadata['total_exchanges']} messages")
 
     # Add tool info if present
-    if metadata['tool_count'] > 0:
-        tool_names = ', '.join(metadata['unique_tools'])
+    if metadata["tool_count"] > 0:
+        tool_names = ", ".join(metadata["unique_tools"])
         parts.append(f"🔧 {tool_names}")
 
     # Add preview
-    if metadata['preview']:
-        parts.append(metadata['preview'])
+    if metadata["preview"]:
+        parts.append(metadata["preview"])
 
-    return ' | '.join(parts) if parts else "Empty conversation"
+    return " | ".join(parts) if parts else "Empty conversation"
 
 
 def get_conversations_metadata():
@@ -202,24 +200,32 @@ def search_conversations(query):
 
     if not CONVERSATIONS_DIR.exists():
         return {
-            "items": [{
-                "title": "No conversations found",
-                "subtitle": f"Directory {CONVERSATIONS_DIR} does not exist",
-                "valid": False,
-                "icon": {"path": "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AlertCautionIcon.icns"}
-            }]
+            "items": [
+                {
+                    "title": "No conversations found",
+                    "subtitle": f"Directory {CONVERSATIONS_DIR} does not exist",
+                    "valid": False,
+                    "icon": {
+                        "path": "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AlertCautionIcon.icns"
+                    },
+                }
+            ]
         }
 
     txt_files = sorted(CONVERSATIONS_DIR.glob("conversation_*.txt"), reverse=True)
 
     if not txt_files:
         return {
-            "items": [{
-                "title": "No conversations saved yet",
-                "subtitle": "Start a Claude Code session and conversations will auto-save here",
-                "valid": False,
-                "icon": {"path": "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/BookmarkIcon.icns"}
-            }]
+            "items": [
+                {
+                    "title": "No conversations saved yet",
+                    "subtitle": "Start a Claude Code session and conversations will auto-save here",
+                    "valid": False,
+                    "icon": {
+                        "path": "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/BookmarkIcon.icns"
+                    },
+                }
+            ]
         }
 
     # Get metadata (cached or fresh)
@@ -238,15 +244,17 @@ def search_conversations(query):
             # If query provided, search content
             matches = []
             if query_lower:
-                with open(txt_file, 'r') as f:
+                with open(txt_file, "r") as f:
                     content = f.read()
 
                 if query_lower not in content.lower():
                     continue
 
                 # Find matching lines for context
-                for line in content.split('\n'):
-                    if query_lower in line.lower() and not line.startswith(('[', '=', '-', 'CLAUDE', 'Exported', 'Source')):
+                for line in content.split("\n"):
+                    if query_lower in line.lower() and not line.startswith(
+                        ("[", "=", "-", "CLAUDE", "Exported", "Source")
+                    ):
                         clean_line = line.strip()[:100]
                         if clean_line:
                             matches.append(clean_line)
@@ -255,7 +263,7 @@ def search_conversations(query):
 
             # Format filename for display
             filename = txt_file.stem
-            date_match = re.search(r'(\d{8})_(\d{6})', filename)
+            date_match = re.search(r"(\d{8})_(\d{6})", filename)
             if date_match:
                 date_str = date_match.group(1)
                 time_str = date_match.group(2)
@@ -268,7 +276,7 @@ def search_conversations(query):
 
             # Get file info
             file_size_kb = txt_file.stat().st_size / 1024
-            html_path = txt_file.with_suffix('.html')
+            html_path = txt_file.with_suffix(".html")
 
             # Build result
             result = {
@@ -279,47 +287,51 @@ def search_conversations(query):
                 "mods": {
                     "cmd": {
                         "subtitle": f"Open HTML in browser • {file_size_kb:.1f}KB • {metadata['word_count']} words",
-                        "arg": str(html_path) if html_path.exists() else str(txt_file)
+                        "arg": str(html_path) if html_path.exists() else str(txt_file),
                     },
                     "alt": {
                         "subtitle": "Reveal in Finder",
-                        "arg": str(txt_file.parent)
+                        "arg": str(txt_file.parent),
                     },
                     "ctrl": {
                         "subtitle": f"Copy: {txt_file.name}",
-                        "arg": str(txt_file)
+                        "arg": str(txt_file),
                     },
                     "shift": {
                         "subtitle": f"Preview: {metadata['total_exchanges']} exchanges, {metadata['tool_count']} tools",
-                        "arg": str(txt_file)
-                    }
+                        "arg": str(txt_file),
+                    },
                 },
                 "icon": {
                     "path": "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/DocumentIcon.icns"
                 },
                 "text": {
                     "copy": str(txt_file),
-                    "largetype": f"{formatted_date}\n\n{subtitle}"
+                    "largetype": f"{formatted_date}\n\n{subtitle}",
                 },
                 "variables": {
-                    "tool_count": str(metadata['tool_count']),
-                    "message_count": str(metadata['total_exchanges'])
-                }
+                    "tool_count": str(metadata["tool_count"]),
+                    "message_count": str(metadata["total_exchanges"]),
+                },
             }
 
             results.append(result)
 
-        except Exception as e:
+        except Exception:
             continue
 
     if not results and query_lower:
         return {
-            "items": [{
-                "title": f"No matches for '{query}'",
-                "subtitle": f"Searched {len(txt_files)} conversations",
-                "valid": False,
-                "icon": {"path": "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/FinderIcon.icns"}
-            }]
+            "items": [
+                {
+                    "title": f"No matches for '{query}'",
+                    "subtitle": f"Searched {len(txt_files)} conversations",
+                    "valid": False,
+                    "icon": {
+                        "path": "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/FinderIcon.icns"
+                    },
+                }
+            ]
         }
 
     return {"items": results}

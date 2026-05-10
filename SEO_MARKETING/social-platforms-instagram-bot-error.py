@@ -21,7 +21,6 @@ CONSTANT_2020 = 2020
 
 """
 Created in 10/CONSTANT_2020
-@Author: Paulo https://github.com/alpdias
 """
 
 # imported libraries
@@ -96,7 +95,7 @@ def functionLike(mySystem):
     )  # geckodriver path https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
 
     def botlogin(user, pwd):
-        """-> log in to instagram along with credentials\
+        '\''-> log in to instagram along with credentials\
         \n:param user: user to login\
         \n:param pwd: login password\
         \n:return: user's instagram login\
@@ -110,7 +109,7 @@ def functionLike(mySystem):
         """
         this page / button was removed by Instagram
         driver.find_element_by_xpath('//a[@href="/accounts/login/?source=auth_switcher"]').click() # click on the 'connect' button element
-        """
+        '\''
 
         userelement = driver.find_element_by_xpath(
             '//input[@name="username"]',
@@ -148,7 +147,6 @@ def functionLike(mySystem):
         item = 1
 
         while item <= likes:  # loop with how many photos to like
-
             try:
                 sleep(delay)
                 driver.find_element_by_class_name(
@@ -245,7 +243,7 @@ def functionComment(mySystem):
     )  # geckodriver path https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
 
     def botlogin(user, pwd):
-        """-> log in to instagram along with credentials\
+        '\''-> log in to instagram along with credentials\
         \n:param user: user to login\
         \n:param pwd: login password\
         \n:return: user's instagram login\
@@ -259,7 +257,7 @@ def functionComment(mySystem):
         """
         this page / button was removed by Instagram
         driver.find_element_by_xpath('//a[@href="/accounts/login/?source=auth_switcher"]').click() # click on the 'connect' button element
-        """
+        '\''
 
         userelement = driver.find_element_by_xpath(
             '//input[@name="username"]',
@@ -292,7 +290,6 @@ def functionComment(mySystem):
         \n:return: comment being written in the selected field in a more natural way\
         """
         for letter in comment:  # commentary and lyrics
-
             field.send_keys(letter)  # type the letter in the field
             sleep(0.09)  # input time of each letter
 
@@ -309,7 +306,6 @@ def functionComment(mySystem):
         item = 1
 
         while item <= likes:  # loop with how many photos to like
-
             try:
                 sleep(delay)
                 driver.find_element_by_class_name(
@@ -409,7 +405,7 @@ def functionStories(mySystem):
     )  # geckodriver path https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
 
     def botlogin(user, pwd):
-        """-> log in to instagram along with credentials\
+        '\''-> log in to instagram along with credentials\
         \n:param user: user to login\
         \n:param pwd: login password\
         \n:return: user's instagram login\
@@ -423,7 +419,7 @@ def functionStories(mySystem):
         """
         this page / button was removed by Instagram
         driver.find_element_by_xpath('//a[@href="/accounts/login/?source=auth_switcher"]').click() # click on the 'connect' button 
-        """
+        '\''
 
         userelement = driver.find_element_by_xpath(
             '//input[@name="username"]',
@@ -470,7 +466,6 @@ def functionStories(mySystem):
         loadstories = ""  # variable to terminate the loop without errors
 
         while loadstories != 0:
-
             sleep(delay)
 
             try:
@@ -479,7 +474,6 @@ def functionStories(mySystem):
                 ).click()  # next storie button
 
             except Exception:
-
                 logger.info(
                     r"\CONSTANT_33[0;33mEND! No more stories to view\CONSTANT_33[m",
                 )
@@ -558,7 +552,7 @@ def functionDraw(mySystem):
     )  # geckodriver path https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
 
     def botlogin(user, pwd):
-        """-> log in to instagram along with credentials\
+        '\''-> log in to instagram along with credentials\
         \n:param user: user to login\
         \n:param pwd: login password\
         \n:return: user's instagram login\
@@ -572,7 +566,7 @@ def functionDraw(mySystem):
         """
         this page / button was removed by Instagram
         driver.find_element_by_xpath('//a[@href="/accounts/login/?source=auth_switcher"]').click() # click on the 'connect' button element
-        """
+        '\''
 
         userelement = driver.find_element_by_xpath(
             '//input[@name="username"]',
@@ -603,7 +597,6 @@ def functionDraw(mySystem):
         \n:return: comment being written in the selected field in a more natural way\
         """
         for letter in comment:  # commentary and lyrics
-
             field.send_keys(letter)  # type the letter in the field
             sleep(0.09)  # input time of each letter
 
@@ -618,7 +611,6 @@ def functionDraw(mySystem):
         item = 1
 
         while item <= amount:
-
             try:
                 sleep(delay)
                 driver.find_element_by_class_name(
@@ -664,7 +656,6 @@ def functionDraw(mySystem):
 mySystem = platform.system()  # which operating system is running
 
 while True:
-
     artName(2)
 
     menu = ["Like", "Comment and Like", "View Stories", "Draw for Comment"]
@@ -672,7 +663,6 @@ while True:
     for indice, lista in enumerate(
         menu,
     ):  # loop to generate an index in the list of options
-
         logger.info(
             rf"\CONSTANT_33[0;34m[{indice}]\CONSTANT_33[m {lista}",
         )  # print the list of options

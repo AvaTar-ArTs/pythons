@@ -118,20 +118,15 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     log_file = "copy_log.txt"
     reader = csv.reader(csvfile)
-    src_file_path = row[0]
     error_message = f"Source file does not exist: {src_file_path}"
     relative_path = os.path.relpath(
-    dest_file_path = os.path.join(destination_root, relative_path)
     error_message = f"Permission denied: {e}"
     error_message = f"Error copying {src_file_path} to {dest_file_path}: {e}"
     csv_files = ["~/Documents/Python/Sort/tagg/vids-07-11-12:31.csv"]
     destination_base_path = "/Volumes/oG-bAk/organized"
-    @lru_cache(maxsize = 128)
     open(csv_file, newline = "") as csvfile, 
     os.makedirs(os.path.dirname(dest_file_path), exist_ok = True)
 
@@ -141,7 +136,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -151,13 +147,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -170,7 +167,9 @@ class Config:
 
 # Function to copy files while preserving folder structure and logging each copied file
 async def copy_files_with_logging(csv_file, destination_root):
-def copy_files_with_logging(csv_file, destination_root): -> Any
+    pass
+def copy_files_with_logging(csv_file, destination_root) -> Any:
+    pass
  """
  TODO: Add function documentation
  """

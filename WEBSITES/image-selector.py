@@ -24,6 +24,7 @@ CATEGORIES = {
     "dark_art": ["dark", "gothic", "skull", "demon"],
 }
 
+
 def analyze_directory():
     """Analyze Pictures directory and categorize images"""
     print("🔍 Analyzing Pictures directory...")
@@ -33,7 +34,7 @@ def analyze_directory():
     total_files = 0
 
     # Supported image formats
-    image_extensions = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
+    image_extensions = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 
     for root, dirs, files in os.walk(PICTURES_DIR):
         for file in files:
@@ -47,26 +48,37 @@ def analyze_directory():
                 # Categorize based on filename
                 for category, keywords in CATEGORIES.items():
                     if any(keyword.lower() in file_lower for keyword in keywords):
-                        categorized[category].append({
-                            'path': str(file_path),
-                            'name': file,
-                            'size': file_path.stat().st_size if file_path.exists() else 0
-                        })
+                        categorized[category].append(
+                            {
+                                "path": str(file_path),
+                                "name": file,
+                                "size": file_path.stat().st_size
+                                if file_path.exists()
+                                else 0,
+                            }
+                        )
                         break
                 else:
-                    categorized['other'].append({
-                        'path': str(file_path),
-                        'name': file,
-                        'size': file_path.stat().st_size if file_path.exists() else 0
-                    })
+                    categorized["other"].append(
+                        {
+                            "path": str(file_path),
+                            "name": file,
+                            "size": file_path.stat().st_size
+                            if file_path.exists()
+                            else 0,
+                        }
+                    )
 
-    print(f"\n📊 Analysis Complete!")
+    print("\n📊 Analysis Complete!")
     print(f"Total images: {total_files:,}")
     print("\n📂 Categorization:")
-    for category, files in sorted(categorized.items(), key=lambda x: len(x[1]), reverse=True):
+    for category, files in sorted(
+        categorized.items(), key=lambda x: len(x[1]), reverse=True
+    ):
         print(f"  {category}: {len(files)} images")
 
     return categorized
+
 
 def select_top_designs(categorized, top_n=10):
     """Select top N designs from each category"""
@@ -74,16 +86,17 @@ def select_top_designs(categorized, top_n=10):
 
     selected = {}
     for category, files in categorized.items():
-        if category == 'other':
+        if category == "other":
             continue
 
         # Sort by file size (larger = higher quality)
-        sorted_files = sorted(files, key=lambda x: x['size'], reverse=True)
+        sorted_files = sorted(files, key=lambda x: x["size"], reverse=True)
         selected[category] = sorted_files[:top_n]
 
         print(f"  ✅ {category}: Selected {len(selected[category])} designs")
 
     return selected
+
 
 def copy_selected_designs(selected):
     """Copy selected designs to output directory"""
@@ -98,7 +111,7 @@ def copy_selected_designs(selected):
         category_dir.mkdir(exist_ok=True)
 
         for file_info in files:
-            src = Path(file_info['path'])
+            src = Path(file_info["path"])
             if src.exists():
                 dst = category_dir / src.name
                 try:
@@ -110,6 +123,7 @@ def copy_selected_designs(selected):
     print(f"  ✅ Copied {total_copied} files")
     return total_copied
 
+
 def generate_report(categorized, selected):
     """Generate JSON report of analysis"""
     report_path = OUTPUT_DIR / "analysis-report.json"
@@ -118,40 +132,41 @@ def generate_report(categorized, selected):
         "total_images": sum(len(files) for files in categorized.values()),
         "categories": {cat: len(files) for cat, files in categorized.items()},
         "selected": {cat: len(files) for cat, files in selected.items()},
-        "recommendations": []
+        "recommendations": [],
     }
 
     # Add recommendations
-    if len(categorized.get('raccoon', [])) > 20:
-        report['recommendations'].append(
+    if len(categorized.get("raccoon", [])) > 20:
+        report["recommendations"].append(
             "🦝 Raccoon theme is strong! Consider 'RaccoonPunkArt' as Redbubble username"
         )
-    if len(categorized.get('holiday', [])) > 15:
-        report['recommendations'].append(
+    if len(categorized.get("holiday", [])) > 15:
+        report["recommendations"].append(
             "🎃 Holiday content ready for seasonal launches (Krampus for Christmas!)"
         )
-    if len(categorized.get('typography', [])) > 10:
-        report['recommendations'].append(
+    if len(categorized.get("typography", [])) > 10:
+        report["recommendations"].append(
             "✨ Typography designs perfect for minimalist products"
         )
 
-    with open(report_path, 'w') as f:
+    with open(report_path, "w") as f:
         json.dump(report, f, indent=2)
 
     print(f"\n📄 Report saved: {report_path}")
     return report
 
+
 def print_next_steps(report):
     """Print actionable next steps"""
-    print("\n" + "="*50)
+    print("\n" + "=" * 50)
     print("🚀 NEXT STEPS")
-    print("="*50)
+    print("=" * 50)
 
     print("\n1️⃣  Review selected designs:")
     print(f"   open {OUTPUT_DIR}")
 
     print("\n2️⃣  Redbubble Username Suggestions:")
-    if report['categories'].get('raccoon', 0) > 20:
+    if report["categories"].get("raccoon", 0) > 20:
         print("   • RaccoonPunkArt (matches your signature theme)")
         print("   • TrashPandaDesigns")
         print("   • UrbanRaccoonCo")
@@ -188,7 +203,8 @@ def print_next_steps(report):
     print("\n7️⃣  Read the complete guide:")
     print("   open ~/ai-sites/passive-income-empire/print-on-demand/redbubble-setup.md")
 
-    print("\n" + "="*50)
+    print("\n" + "=" * 50)
+
 
 def main():
     print("🎨 PRINT-ON-DEMAND IMAGE SELECTOR")
@@ -201,20 +217,21 @@ def main():
     selected = select_top_designs(categorized, top_n=10)
 
     # Step 3: Copy files
-    total_copied = copy_selected_designs(selected)
+    copy_selected_designs(selected)
 
     # Step 4: Generate report
     report = generate_report(categorized, selected)
 
     # Step 5: Show recommendations
     print("\n💡 RECOMMENDATIONS:")
-    for rec in report['recommendations']:
+    for rec in report["recommendations"]:
         print(f"  {rec}")
 
     # Step 6: Next steps
     print_next_steps(report)
 
     print("\n✅ Analysis complete! Ready to launch print-on-demand business.")
+
 
 if __name__ == "__main__":
     main()

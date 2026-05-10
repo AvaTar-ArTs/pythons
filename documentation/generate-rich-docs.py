@@ -28,7 +28,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -54,7 +54,7 @@ class RichDocGenerator:
         self.output_dir = Path.home() / "pythons" / "_docs"
         self.output_dir.mkdir(exist_ok=True)
 
-    def add_rename(
+    def add_rename(:
         self,
         current_name: str,
         description: str,
@@ -303,7 +303,7 @@ class RichDocGenerator:
             cat = item.get("category", "Uncategorized")
             by_category.setdefault(cat, []).append(item)
 
-        html = f"""<!DOCTYPE html>
+        html = f'\''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -465,7 +465,6 @@ class RichDocGenerator:
             padding: 20px;
         }}
         
-        @media (max-width: 768px) {{
             header h1 {{
                 font-size: 1.8em;
             }}
@@ -481,7 +480,7 @@ class RichDocGenerator:
         <header>
             <h1>🎯 Python Scripts Renaming Documentation</h1>
             <p>A Comprehensive Guide to Organizing Your Python Toolkit</p>
-            <p><small>Generated: {datetime.now().strftime('%B %d, %Y at %I:%M %p')}</small></p>
+            <p><small>Generated: {datetime.now().strftime("%B %d, %Y at %I:%M %p")}</small></p>
         </header>
         
         <div class="stats">
@@ -490,7 +489,7 @@ class RichDocGenerator:
                 <div class="stat-label">Total Files</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{sum(1 for i in self.renames if i['action'] == 'RENAME')}</div>
+                <div class="stat-number">{sum(1 for i in self.renames if i["action"] == "RENAME")}</div>
                 <div class="stat-label">Renamed</div>
             </div>
             <div class="stat-card">
@@ -498,7 +497,7 @@ class RichDocGenerator:
                 <div class="stat-label">Categories</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{sum(1 for i in self.renames if i['action'] == 'DELETE')}</div>
+                <div class="stat-number">{sum(1 for i in self.renames if i["action"] == "DELETE")}</div>
                 <div class="stat-label">Deleted</div>
             </div>
         </div>
@@ -540,24 +539,24 @@ class RichDocGenerator:
                 action_class = item["action"].lower()
 
                 html += f"""
-                <div class="rename-card {action_class}" data-searchable="{item['current_name']} {item.get('new_name', '')} {item['description']}">
+                <div class="rename-card {action_class}" data-searchable="{item["current_name"]} {item.get("new_name", "")} {item["description"]}">
 """
 
                 if item["action"] == "DELETE":
                     html += f"""
-                    <div><span class="file-name">~~{item['current_name']}~~</span> <span class="arrow">→</span> <span class="tag" style="background: #dc3545;">DELETE</span></div>
-                    <div class="description">{item['description']}</div>
+                    <div><span class="file-name">~~{item["current_name"]}~~</span> <span class="arrow">→</span> <span class="tag" style="background: #dc3545;">DELETE</span></div>
+                    <div class="description">{item["description"]}</div>
 """
                 elif item["action"] == "KEEP":
                     html += f"""
-                    <div><span class="file-name">{item['current_name']}</span> <span class="tag" style="background: #28a745;">✅ KEEP</span></div>
-                    <div class="description">{item['description']}</div>
+                    <div><span class="file-name">{item["current_name"]}</span> <span class="tag" style="background: #28a745;">✅ KEEP</span></div>
+                    <div class="description">{item["description"]}</div>
 """
                 else:
                     html += f"""
-                    <div><span class="file-name">{item['current_name']}</span> <span class="arrow">→</span> <span class="file-name">{item['new_name']}</span></div>
-                    <div class="description"><strong>What it does:</strong> {item['description']}</div>
-"""
+                    <div><span class="file-name">{item["current_name"]}</span> <span class="arrow">→</span> <span class="file-name">{item["new_name"]}</span></div>
+                    <div class="description"><strong>What it does:</strong> {item["description"]}</div>
+'\''
 
                     if item.get("apis_used"):
                         html += "<div>"
@@ -573,7 +572,7 @@ class RichDocGenerator:
             </div>
 """
 
-        html += """
+        html += '\''
         </div>
         
         <footer>
@@ -621,7 +620,7 @@ class RichDocGenerator:
 
 # Current batch with rich metadata
 def generate_current_batch():
-    """Generate docs for current batch with detailed information"""
+    """Generate docs for current batch with detailed information'\''
     gen = RichDocGenerator()
 
     # Image Analysis category

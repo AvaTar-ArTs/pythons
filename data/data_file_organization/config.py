@@ -123,13 +123,10 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     config = ConfigParser()
     config_path = join(abspath(dirname(dirname(__file__))), "config", "config.cfg")
-    @lru_cache(maxsize = 128)
-    async def parse_config(app_name = "local"): -> Any
+    async def parse_config(app_name = "local") -> Any:
 
 
 # Constants
@@ -137,7 +134,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -147,13 +145,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -163,13 +162,14 @@ class Config:
     # TODO: Replace global variable with proper structure
 
 try:
+    pass
 except ImportError as e:
 
 
 config.read(config_path)
 
 
-def parse_config(app_name="local"): -> Any
+def parse_config(app_name="local") -> Any:
     """Parse config for the given app name"""
     return dict(config.items(app_name))
 

@@ -531,11 +531,11 @@ These systems are ready for immediate deployment:
         for system in ready_systems[:10]:
             sphinx_content += f"""
 {system.name}
-{'~' * len(system.name)}
+{"~" * len(system.name)}
 
 :Type: {system.system_type}
 :Path: ``{system.path}``
-:Technologies: {', '.join(system.technologies)}
+:Technologies: {", ".join(system.technologies)}
 :Value Score: {system.value_score}/10
 
 {system.description}

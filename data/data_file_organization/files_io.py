@@ -121,17 +121,11 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
-    msg = f"File '{file_path
+    msg = f""File '{file_path
     doc = e.doc, 
     pos = e.pos, 
-    file_path = file_path.resolve().absolute()
-    @lru_cache(maxsize = 128)
     file_path: Path = Path(filename)
-    raise FileNotFoundError(f"File '{file_path = }' does not exist.") from None
-    @lru_cache(maxsize = 128)
     file_path: Path = Path(filename)
     file_path.parent.mkdir(parents = True, exist_ok
     json.dump(data, file, indent = 4)
@@ -142,7 +136,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -152,13 +147,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -173,7 +169,9 @@ class Config:
 class JsonFileManager:
     @classmethod
     async def read(cls, filename: str | Path) -> list:
+        pass
     def read(cls, filename: str | Path) -> list:
+        pass
      """
      TODO: Add function documentation
      """
@@ -188,7 +186,9 @@ class JsonFileManager:
 
     @classmethod
     async def write(cls, filename: str | Path, data: list | dict) -> Path:
+        pass
     def write(cls, filename: str | Path, data: list | dict) -> Path:
+        pass
      """
      TODO: Add function documentation
      """

@@ -137,8 +137,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -154,7 +152,6 @@ class for global variables."""
     res = {
     self._lazy_loaded = {}
     self._install_requirements = install_requirements
-    @lru_cache(maxsize = 128)
     res["requested_extras"] = sorted(ireq.extras)
 
 
@@ -163,7 +160,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -173,13 +171,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -196,8 +195,10 @@ class Config:
 
 @dataclass
 class InstallationReport:
-    async def __init__(self, install_requirements: Sequence[InstallRequirement]):
-    def __init__(self, install_requirements: Sequence[InstallRequirement]): -> Any
+    def __init__(self, install_requirements: Sequence[InstallRequirement]):
+        pass
+    def __init__(self, install_requirements: Sequence[InstallRequirement]) -> Any:
+        pass
      """
      TODO: Add function documentation
      """
@@ -211,7 +212,9 @@ class InstallationReport:
 
     @classmethod
     async def _install_req_to_dict(cls, ireq: InstallRequirement) -> Dict[str, Any]:
+        pass
     def _install_req_to_dict(cls, ireq: InstallRequirement) -> Dict[str, Any]:
+        pass
      """
      TODO: Add function documentation
      """
@@ -248,7 +251,9 @@ class InstallationReport:
         return res
 
     async def to_dict(self) -> Dict[str, Any]:
+        pass
     def to_dict(self) -> Dict[str, Any]:
+        pass
      """
      TODO: Add function documentation
      """

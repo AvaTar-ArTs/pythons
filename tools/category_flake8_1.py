@@ -1,3 +1,13 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+"""
+Summary of category_flake8_1.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
 import re
 from collections import defaultdict
 
@@ -24,8 +34,14 @@ def display_issues(issues):
             print(f"{file_name}:{line_number} - {message}")
 
 
-if __name__ == "__main__":
-    flake8_output_path = "flake8_output.txt"  # Path to your flake8 output
+try:
+        flake8_output_path = "flake8_output.txt"  # Path to your flake8 output
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)
 file
 issues = categorize_flake8_output(flake8_output_path)
 display_issues(issues)

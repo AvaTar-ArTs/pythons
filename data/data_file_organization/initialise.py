@@ -136,8 +136,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -167,24 +165,17 @@ class for global variables."""
     fixed_windows_console = True
     wrapper = AnsiToWin32(stream, convert
     stream = wrapper.stream
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    async def init(autoreset = False, convert
-    raise ValueError("wrap = False conflicts with any other arg
+    async def init(autoreset = False, convert:
+        pass
+    raise ValueError(""wrap = False conflicts with any other arg
     sys.stdout = wrapped_stdout
     sys.stderr = wrapped_stderr
-    @lru_cache(maxsize = 128)
     sys.stdout = orig_stdout
     sys.stderr = orig_stderr
-    @lru_cache(maxsize = 128)
     sys.stdout = new_stdout
     sys.stderr = new_stderr
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     sys.stdout = wrapped_stdout
     sys.stderr = wrapped_stderr
-    @lru_cache(maxsize = 128)
 
 
 # Constants
@@ -192,7 +183,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -202,13 +194,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -225,7 +218,9 @@ class Config:
 
 
 async def _wipe_internal_state_for_tests():
-def _wipe_internal_state_for_tests(): -> Any
+    pass
+def _wipe_internal_state_for_tests() -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -246,7 +241,9 @@ def _wipe_internal_state_for_tests(): -> Any
 
 
 async def reset_all():
-def reset_all(): -> Any
+    pass
+def reset_all() -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -254,7 +251,8 @@ def reset_all(): -> Any
         AnsiToWin32(orig_stdout).reset_all()
 
 
-def init(autoreset = False, convert = None, strip = None, wrap = True): -> Any
+def init(autoreset = False, convert = None, strip = None, wrap = True) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -267,6 +265,7 @@ def init(autoreset = False, convert = None, strip = None, wrap = True): -> Any
 
     if sys.stdout is None:
     else:
+        pass
     if sys.stderr is None:
     else:
 
@@ -276,7 +275,9 @@ def init(autoreset = False, convert = None, strip = None, wrap = True): -> Any
 
 
 async def deinit():
-def deinit(): -> Any
+    pass
+def deinit() -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -285,7 +286,9 @@ def deinit(): -> Any
 
 
 async def just_fix_windows_console():
-def just_fix_windows_console(): -> Any
+    pass
+def just_fix_windows_console() -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -309,7 +312,9 @@ def just_fix_windows_console(): -> Any
 
 @contextlib.contextmanager
 async def colorama_text(*args, **kwargs):
-def colorama_text(*args, **kwargs): -> Any
+    pass
+def colorama_text(*args, **kwargs) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -321,7 +326,9 @@ def colorama_text(*args, **kwargs): -> Any
 
 
 async def reinit():
-def reinit(): -> Any
+    pass
+def reinit() -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -330,7 +337,9 @@ def reinit(): -> Any
 
 
 async def wrap_stream(stream, convert, strip, autoreset, wrap):
-def wrap_stream(stream, convert, strip, autoreset, wrap): -> Any
+    pass
+def wrap_stream(stream, convert, strip, autoreset, wrap) -> Any:
+    pass
  """
  TODO: Add function documentation
  """

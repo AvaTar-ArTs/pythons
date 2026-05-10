@@ -17,15 +17,15 @@ def get_date_filter(filter_type):
     now = datetime.now()
     today = now.date()
 
-    if filter_type == 'today':
+    if filter_type == "today":
         return today, today, "Today"
-    elif filter_type == 'yesterday':
+    elif filter_type == "yesterday":
         yesterday = today - timedelta(days=1)
         return yesterday, yesterday, "Yesterday"
-    elif filter_type == 'week':
+    elif filter_type == "week":
         week_ago = today - timedelta(days=7)
         return week_ago, today, "Last 7 Days"
-    elif filter_type == 'month':
+    elif filter_type == "month":
         month_ago = today - timedelta(days=30)
         return month_ago, today, "Last 30 Days"
     else:
@@ -34,11 +34,11 @@ def get_date_filter(filter_type):
 
 def extract_file_date(filename):
     """Extract date from conversation filename"""
-    match = re.search(r'(\d{8})_(\d{6})', filename)
+    match = re.search(r"(\d{8})_(\d{6})", filename)
     if match:
         date_str = match.group(1)
         try:
-            return datetime.strptime(date_str, '%Y%m%d').date()
+            return datetime.strptime(date_str, "%Y%m%d").date()
         except:
             return None
     return None
@@ -49,22 +49,26 @@ def search_by_date(query, filter_type):
 
     if not CONVERSATIONS_DIR.exists():
         return {
-            "items": [{
-                "title": "No conversations directory",
-                "subtitle": f"{CONVERSATIONS_DIR} does not exist",
-                "valid": False
-            }]
+            "items": [
+                {
+                    "title": "No conversations directory",
+                    "subtitle": f"{CONVERSATIONS_DIR} does not exist",
+                    "valid": False,
+                }
+            ]
         }
 
     txt_files = sorted(CONVERSATIONS_DIR.glob("conversation_*.txt"), reverse=True)
 
     if not txt_files:
         return {
-            "items": [{
-                "title": "No conversations yet",
-                "subtitle": "Conversations will appear after Claude Code sessions",
-                "valid": False
-            }]
+            "items": [
+                {
+                    "title": "No conversations yet",
+                    "subtitle": "Conversations will appear after Claude Code sessions",
+                    "valid": False,
+                }
+            ]
         }
 
     # Get date filter
@@ -80,11 +84,13 @@ def search_by_date(query, filter_type):
 
     if not filtered_files:
         return {
-            "items": [{
-                "title": f"No conversations from {filter_name}",
-                "subtitle": f"Total conversations: {len(txt_files)}",
-                "valid": False
-            }]
+            "items": [
+                {
+                    "title": f"No conversations from {filter_name}",
+                    "subtitle": f"Total conversations: {len(txt_files)}",
+                    "valid": False,
+                }
+            ]
         }
 
     # If there's a query, filter further
@@ -94,7 +100,7 @@ def search_by_date(query, filter_type):
     for txt_file, file_date in filtered_files[:50]:
         try:
             # Read content
-            with open(txt_file, 'r') as f:
+            with open(txt_file, "r") as f:
                 content = f.read()
 
             # Filter by query if provided
@@ -102,17 +108,17 @@ def search_by_date(query, filter_type):
                 continue
 
             # Extract preview
-            lines = content.split('\n')
+            lines = content.split("\n")
             preview = ""
             for line in lines[7:20]:  # Skip header
                 line = line.strip()
-                if line and not line.startswith(('[', '=', '-')):
+                if line and not line.startswith(("[", "=", "-")):
                     preview = line[:100]
                     break
 
             # Format date
-            date_display = file_date.strftime('%Y-%m-%d')
-            time_match = re.search(r'_(\d{6})', txt_file.name)
+            date_display = file_date.strftime("%Y-%m-%d")
+            time_match = re.search(r"_(\d{6})", txt_file.name)
             if time_match:
                 time_str = time_match.group(1)
                 date_display += f" {time_str[:2]}:{time_str[2:4]}"
@@ -120,36 +126,40 @@ def search_by_date(query, filter_type):
             # Build subtitle
             subtitle = preview if preview else "Empty conversation"
 
-            results.append({
-                "title": date_display,
-                "subtitle": subtitle,
-                "arg": str(txt_file),
-                "quicklookurl": str(txt_file.with_suffix('.html')),
-                "mods": {
-                    "cmd": {
-                        "subtitle": "Open HTML in browser",
-                        "arg": str(txt_file.with_suffix('.html'))
+            results.append(
+                {
+                    "title": date_display,
+                    "subtitle": subtitle,
+                    "arg": str(txt_file),
+                    "quicklookurl": str(txt_file.with_suffix(".html")),
+                    "mods": {
+                        "cmd": {
+                            "subtitle": "Open HTML in browser",
+                            "arg": str(txt_file.with_suffix(".html")),
+                        },
+                        "alt": {
+                            "subtitle": "Reveal in Finder",
+                            "arg": str(txt_file.parent),
+                        },
                     },
-                    "alt": {
-                        "subtitle": "Reveal in Finder",
-                        "arg": str(txt_file.parent)
-                    }
-                },
-                "icon": {
-                    "path": "/System/Library/CoreServices/CoreServices.bundle/Contents/Resources/Clock.icns"
+                    "icon": {
+                        "path": "/System/Library/CoreServices/CoreServices.bundle/Contents/Resources/Clock.icns"
+                    },
                 }
-            })
+            )
 
-        except Exception as e:
+        except Exception:
             continue
 
     if not results:
         return {
-            "items": [{
-                "title": f"No matches in {filter_name}",
-                "subtitle": f"{len(filtered_files)} conversations in this period",
-                "valid": False
-            }]
+            "items": [
+                {
+                    "title": f"No matches in {filter_name}",
+                    "subtitle": f"{len(filtered_files)} conversations in this period",
+                    "valid": False,
+                }
+            ]
         }
 
     # Add header item
@@ -159,7 +169,7 @@ def search_by_date(query, filter_type):
         "valid": False,
         "icon": {
             "path": "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/ToolbarInfo.icns"
-        }
+        },
     }
 
     return {"items": [header] + results}
@@ -167,7 +177,7 @@ def search_by_date(query, filter_type):
 
 def main():
     # Get filter type from environment or argument
-    filter_type = os.environ.get('date_filter', 'all')
+    filter_type = os.environ.get("date_filter", "all")
     query = sys.argv[1] if len(sys.argv) > 1 else ""
 
     results = search_by_date(query, filter_type)
@@ -176,4 +186,5 @@ def main():
 
 if __name__ == "__main__":
     import os
+
     main()

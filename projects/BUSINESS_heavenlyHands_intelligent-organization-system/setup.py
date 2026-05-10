@@ -16,8 +16,8 @@ import sys
 import subprocess
 import platform
 from pathlib import Path
-import json
 import yaml
+
 
 def check_python_version():
     """Check if Python version is compatible."""
@@ -27,64 +27,60 @@ def check_python_version():
         sys.exit(1)
     print(f"✅ Python version: {sys.version}")
 
+
 def install_requirements():
     """Install required packages."""
     print("📦 Installing required packages...")
-    
+
     try:
-        subprocess.check_call([
-            sys.executable, "-m", "pip", "install", "-r", "requirements_simple.txt"
-        ])
+        subprocess.check_call(
+            [sys.executable, "-m", "pip", "install", "-r", "requirements_simple.txt"]
+        )
         print("✅ Requirements installed successfully")
     except subprocess.CalledProcessError as e:
         print(f"❌ Failed to install requirements: {e}")
         sys.exit(1)
 
+
 def setup_directories():
     """Create necessary directories."""
     print("📁 Setting up directories...")
-    
-    directories = [
-        "vector_indices",
-        "logs",
-        "screenshots",
-        "backups",
-        "temp",
-        "data"
-    ]
-    
+
+    directories = ["vector_indices", "logs", "screenshots", "backups", "temp", "data"]
+
     for directory in directories:
         Path(directory).mkdir(exist_ok=True)
         print(f"  ✅ Created directory: {directory}")
 
+
 def setup_database():
     """Initialize the database."""
     print("🗄️ Setting up database...")
-    
+
     try:
         import sqlite3
-        
+
         db_path = "intelligent_org_system.db"
         with sqlite3.connect(db_path) as conn:
             # Create tables
-            conn.execute('''
+            conn.execute("""
                 CREATE TABLE IF NOT EXISTS system_status (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     status_data TEXT
                 )
-            ''')
-            
-            conn.execute('''
+            """)
+
+            conn.execute("""
                 CREATE TABLE IF NOT EXISTS project_analyses (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     project_name TEXT,
                     analysis_data TEXT,
                     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
-            ''')
-            
-            conn.execute('''
+            """)
+
+            conn.execute("""
                 CREATE TABLE IF NOT EXISTS automation_tasks (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     task_id TEXT UNIQUE,
@@ -92,83 +88,87 @@ def setup_database():
                     status TEXT,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
-            ''')
-            
+            """)
+
             print("✅ Database initialized successfully")
     except Exception as e:
         print(f"❌ Failed to initialize database: {e}")
         sys.exit(1)
 
+
 def download_nltk_data():
     """Download required NLTK data."""
     print("📚 Downloading NLTK data...")
-    
+
     try:
         import nltk
-        nltk.download('punkt', quiet=True)
-        nltk.download('stopwords', quiet=True)
-        nltk.download('wordnet', quiet=True)
+
+        nltk.download("punkt", quiet=True)
+        nltk.download("stopwords", quiet=True)
+        nltk.download("wordnet", quiet=True)
         print("✅ NLTK data downloaded successfully")
     except Exception as e:
         print(f"⚠️ Warning: Could not download NLTK data: {e}")
 
+
 def create_sample_config():
     """Create sample configuration files."""
     print("⚙️ Creating configuration files...")
-    
+
     # Create sample automation config
     automation_config = {
         "general": {
             "max_concurrent_tasks": 10,
             "task_timeout": 300,
             "retry_delay": 5,
-            "log_level": "INFO"
+            "log_level": "INFO",
         },
         "platforms": {
             "web": {
                 "enabled": True,
                 "browser": "chrome",
                 "headless": True,
-                "window_size": [1920, 1080]
+                "window_size": [1920, 1080],
             },
             "api": {
                 "enabled": True,
                 "base_url": "https://api.example.com",
                 "timeout": 30,
-                "retry_count": 3
-            }
-        }
+                "retry_count": 3,
+            },
+        },
     }
-    
+
     with open("automation_config.yaml", "w") as f:
         yaml.dump(automation_config, f, default_flow_style=False)
-    
+
     # Create sample agentic config
     agentic_config = {
         "system": {
             "max_concurrent_agents": 10,
             "max_workflow_executions": 5,
             "learning_enabled": True,
-            "optimization_enabled": True
+            "optimization_enabled": True,
         },
         "ai": {
             "openai_api_key": "",
             "model_name": "gpt-4",
             "max_tokens": 2000,
-            "temperature": 0.7
-        }
+            "temperature": 0.7,
+        },
     }
-    
+
     with open("agentic_config.yaml", "w") as f:
         yaml.dump(agentic_config, f, default_flow_style=False)
-    
+
     print("✅ Configuration files created")
+
 
 def create_launcher_script():
     """Create launcher script."""
     print("🚀 Creating launcher script...")
-    
-    launcher_content = '''#!/usr/bin/env python3
+
+    launcher_content = "\'"#!/usr/bin/env python3
 """
 Intelligent Organization System Launcher
 =======================================
@@ -239,22 +239,23 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
-    
+"\'"
+
     with open("launch_system.py", "w") as f:
         f.write(launcher_content)
-    
+
     # Make it executable on Unix systems
     if platform.system() != "Windows":
         os.chmod("launch_system.py", 0o755)
-    
+
     print("✅ Launcher script created")
+
 
 def create_readme():
     """Create README file."""
     print("📖 Creating README...")
-    
-    readme_content = '''# Intelligent Organization System
+
+    readme_content = """# Intelligent Organization System
 ## Advanced Content-Aware Intelligence for Creative Automation
 
 This system provides comprehensive intelligent organization capabilities for the Heavenly Hands project, featuring:
@@ -376,42 +377,43 @@ MIT License - See LICENSE file for details.
 **Generated**: January 27, 2025  
 **Version**: 2.0.0  
 **Status**: ✅ Ready for Production
-'''
-    
+"""
+
     with open("README.md", "w") as f:
         f.write(readme_content)
-    
+
     print("✅ README created")
+
 
 def main():
     """Main setup function."""
     print("🚀 Setting up Intelligent Organization System...")
     print("=" * 60)
-    
+
     # Check Python version
     check_python_version()
-    
+
     # Install requirements
     install_requirements()
-    
+
     # Setup directories
     setup_directories()
-    
+
     # Setup database
     setup_database()
-    
+
     # Download NLTK data
     download_nltk_data()
-    
+
     # Create configuration files
     create_sample_config()
-    
+
     # Create launcher script
     create_launcher_script()
-    
+
     # Create README
     create_readme()
-    
+
     print("\n" + "=" * 60)
     print("✅ Setup complete!")
     print("\n🎉 Intelligent Organization System is ready!")
@@ -419,6 +421,7 @@ def main():
     print("  python launch_system.py")
     print("\nOr use the integration system directly:")
     print("  python integration_system.py")
+
 
 if __name__ == "__main__":
     main()

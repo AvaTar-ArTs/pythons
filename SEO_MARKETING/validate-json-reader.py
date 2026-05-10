@@ -23,7 +23,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -411,9 +411,9 @@ class APIKeyManager:
 
     def print_header(self, title: str):
         """Print a formatted header"""
-        logger.info(f"\n{Colors.CYAN}{'='*60}{Colors.NC}")
+        logger.info(f"\n{Colors.CYAN}{'=' * 60}{Colors.NC}")
         logger.info(f"{Colors.WHITE}{title:^60}{Colors.NC}")
-        logger.info(f"{Colors.CYAN}{'='*60}{Colors.NC}\n")
+        logger.info(f"{Colors.CYAN}{'=' * 60}{Colors.NC}\n")
 
     def print_success(self, message: str):
         """Print success message"""
@@ -458,7 +458,6 @@ class APIKeyManager:
                         # Extract API key variable
                         if "=" in line:
                             key, value = line.split("=", 1)
-                            key = key.strip()
                             value = value.strip()
 
                             # Remove inline comments
@@ -579,7 +578,6 @@ class APIKeyManager:
 
             # Get user input
             while True:
-                api_key = input(
                     f"\n{Colors.WHITE}Enter your {service_name} API key (or 'skip' to skip, 'quit' to exit): {Colors.NC}",
                 ).strip()
 
@@ -616,13 +614,12 @@ class APIKeyManager:
                         pattern = API_SERVICES[key]["pattern"]
                         logger.info(f"Expected format: {pattern}")
 
-            logger.info(f"{Colors.CYAN}{'─'*60}{Colors.NC}")
+            logger.info(f"{Colors.CYAN}{'─' * 60}{Colors.NC}")
 
     def update_env_file(self, key: str, value: str, location: str) -> bool:
         """Update an API key in the appropriate .env file"""
         try:
             file_path, line_num = location.split(":")
-            file_path = self.env_dir / file_path
             line_num = int(line_num) - 1  # Convert to 0-based index
 
             # Read the file
@@ -692,7 +689,6 @@ class APIKeyManager:
                     logger.info(f"Please manually visit: {service_url}")
 
             while True:
-                new_key = input(
                     f"\n{Colors.WHITE}Enter the correct {service_name} API key (or 'skip' to skip): {Colors.NC}",
                 ).strip()
 
@@ -719,7 +715,7 @@ class APIKeyManager:
                         f"{Colors.RED}Invalid API key format. Please check and try again.{Colors.NC}",
                     )
 
-            logger.info(f"{Colors.CYAN}{'─'*60}{Colors.NC}")
+            logger.info(f"{Colors.CYAN}{'─' * 60}{Colors.NC}")
 
     def generate_report(self):
         """Generate a detailed report of all API keys"""
@@ -769,7 +765,7 @@ class APIKeyManager:
 
         self.print_success(f"Detailed report saved to: {report_file}")
 
-    def run(
+    def run(:
         self,
         interactive: bool = True,
         fix_invalid: bool = True,

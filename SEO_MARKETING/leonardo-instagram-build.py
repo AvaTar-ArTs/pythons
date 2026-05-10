@@ -88,7 +88,7 @@ def gh_url(folder: str) -> str:
     return f"https://github.com/ichoake/python/tree/main/{folder.replace(' ', '%20')}"
 
 
-def main(
+def main(:
     repo_root=".",
     out_csv="portfolio/portfolio_descriptions.csv",
     out_py_md="content/python_portfolio.md",

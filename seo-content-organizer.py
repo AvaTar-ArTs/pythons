@@ -155,7 +155,7 @@ class EnhancedContentAnalyzerV2:
             score += 0.05
 
         # Documentation
-        if '"""' in code or "'''" in code:
+        if '\"\'"' in code or "\'"'"" in code:
             score += 0.1
         if "#" in code and code.count("#") > 2:
             score += 0.05
@@ -825,15 +825,15 @@ class EnhancedContentAnalyzerV2:
 
     def generate_enhanced_batch_report(self, batch_results):
         """Generate professional analysis report for a batch with Dr. Adu focus"""
-        report = f"""# Enhanced Content Analysis - Batch {batch_results['batch_number']}
+        report = f"""# Enhanced Content Analysis - Batch {batch_results["batch_number"]}
 
-**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+**Generated:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
 ---
 
 ## Executive Summary
 
-This batch contains **{batch_results['statistics']['total_files']} files** with a total size of **{batch_results['statistics']['total_size']:,} bytes** and **{batch_results['statistics']['total_words']:,} words**. The average quality score is **{batch_results['statistics']['avg_quality']:.2f}/1.0**, with **{batch_results['statistics']['high_value_count']} high-value files**, **{batch_results['statistics']['dr_adu_count']} Dr. Adu files**, and **{batch_results['statistics']['seo_count']} SEO files** identified.
+This batch contains **{batch_results["statistics"]["total_files"]} files** with a total size of **{batch_results["statistics"]["total_size"]:,} bytes** and **{batch_results["statistics"]["total_words"]:,} words**. The average quality score is **{batch_results["statistics"]["avg_quality"]:.2f}/1.0**, with **{batch_results["statistics"]["high_value_count"]} high-value files**, **{batch_results["statistics"]["dr_adu_count"]} Dr. Adu files**, and **{batch_results["statistics"]["seo_count"]} SEO files** identified.
 
 ---
 
@@ -988,25 +988,25 @@ This batch contains **{batch_results['statistics']['total_files']} files** with 
 
     def generate_professional_master_report_v2(self, master_stats):
         """Generate professional master analysis report with Dr. Adu focus"""
-        report = f"""# Content-Aware Deep Analysis Report v2.0
+        report = f'\''# Content-Aware Deep Analysis Report v2.0
 
-**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}  
-**Analysis Scope:** {master_stats['total_files']} files across {master_stats['total_batches']} batches  
-**Total Content:** {master_stats['total_size']:,} bytes ({master_stats['total_size']/CONSTANT_1024/CONSTANT_1024:.2f} MB), {master_stats['total_words']:,} words
+**Generated:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}  
+**Analysis Scope:** {master_stats["total_files"]} files across {master_stats["total_batches"]} batches  
+**Total Content:** {master_stats["total_size"]:,} bytes ({master_stats["total_size"] / CONSTANT_1024 / CONSTANT_1024:.2f} MB), {master_stats["total_words"]:,} words
 
 ---
 
 ## Executive Summary
 
-This comprehensive analysis reveals a **sophisticated content ecosystem** with significant business potential, particularly focused on **Dr. Adu's Gainesville Psychiatry practice**. The data shows **{len(master_stats['high_value_files'])} high-value files**, **{len(master_stats['dr_adu_files'])} Dr. Adu-specific files**, and **{len(master_stats['seo_files'])} SEO-optimized files** that directly impact business objectives.
+This comprehensive analysis reveals a **sophisticated content ecosystem** with significant business potential, particularly focused on **Dr. Adu's Gainesville Psychiatry practice**. The data shows **{len(master_stats["high_value_files"])} high-value files**, **{len(master_stats["dr_adu_files"])} Dr. Adu-specific files**, and **{len(master_stats["seo_files"])} SEO-optimized files** that directly impact business objectives.
 
 ### Key Performance Indicators
-- **Content Quality Distribution:** {master_stats['quality_distribution']['excellent']} excellent, {master_stats['quality_distribution']['good']} good, {master_stats['quality_distribution']['fair']} fair, {master_stats['quality_distribution']['poor']} poor
-- **Project Diversity:** {len(master_stats['unique_projects'])} unique projects identified
-- **Category Coverage:** {len(master_stats['unique_categories'])} content categories
-- **Technical Stack:** {len(master_stats['unique_code_types'])} code types, {len(master_stats['unique_tool_types'])} tool types
-- **Dr. Adu Content:** {len(master_stats['dr_adu_files'])} files with direct practice relevance
-- **SEO Potential:** {len(master_stats['seo_files'])} files with optimization opportunities
+- **Content Quality Distribution:** {master_stats["quality_distribution"]["excellent"]} excellent, {master_stats["quality_distribution"]["good"]} good, {master_stats["quality_distribution"]["fair"]} fair, {master_stats["quality_distribution"]["poor"]} poor
+- **Project Diversity:** {len(master_stats["unique_projects"])} unique projects identified
+- **Category Coverage:** {len(master_stats["unique_categories"])} content categories
+- **Technical Stack:** {len(master_stats["unique_code_types"])} code types, {len(master_stats["unique_tool_types"])} tool types
+- **Dr. Adu Content:** {len(master_stats["dr_adu_files"])} files with direct practice relevance
+- **SEO Potential:** {len(master_stats["seo_files"])} files with optimization opportunities
 
 ---
 
@@ -1033,9 +1033,9 @@ The content portfolio demonstrates **exceptional technical depth** with clear bu
 ### 2. Dr. Adu Practice Analysis
 
 **Practice-Specific Content Identification:**
-Found **{len(master_stats['dr_adu_files'])} files** with direct Dr. Adu practice relevance:
+Found **{len(master_stats["dr_adu_files"])} files** with direct Dr. Adu practice relevance:
 
-"""
+'\''
 
         # Add Dr. Adu files analysis
         if master_stats["dr_adu_files"]:
@@ -1052,12 +1052,12 @@ Found **{len(master_stats['dr_adu_files'])} files** with direct Dr. Adu practice
         else:
             report += "No Dr. Adu-specific files identified in current analysis.\n\n"
 
-        report += """### 3. SEO Optimization Analysis
+        report += '\''### 3. SEO Optimization Analysis
 
 **SEO Content Identification:**
 Found **{len(master_stats['seo_files'])} files** with SEO optimization potential:
 
-"""
+'\''
 
         # Add SEO files analysis
         if master_stats["seo_files"]:
@@ -1086,7 +1086,7 @@ Found **{len(master_stats['seo_files'])} files** with SEO optimization potential
         for tool_type in sorted(master_stats["unique_tool_types"]):
             report += f"- **{tool_type.replace('_', ' ').title()}** - Efficient workflow integration\n"
 
-        report += """
+        report += '\''
 ---
 
 ## Strategic Recommendations
@@ -1291,8 +1291,10 @@ This content ecosystem represents a **significant business asset** with substant
 
 
 def main():
-    """Main execution function"""
-    source_dir = str(Path.home()) + "/Documents/cursor-agent/chat_analysis /markdown_reports"
+    """Main execution function'\''
+    source_dir = (
+        str(Path.home()) + "/Documents/cursor-agent/chat_analysis /markdown_reports"
+    )
     target_dir = Path(str(Path.home()) + "/tehSiTes/Dr_Adu_GainesvillePFS_SEO_Project")
 
     # Process with enhanced analysis

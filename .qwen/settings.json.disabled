@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir *)",
+      "Read(//Users/steven/.claude/plugins/**)",
+      "Read(//Users/steven/.claude/**)",
+      "macBaks",
+      "/Volumes/macBaks/diVinePyTHon",
+      "Bash(mv *)",
+      "Bash(find *)",
+      "Bash(echo *)",
+      "Bash(du *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Read(//Users/steven/PYTHON_MARKETPLACE_MASTER/07_MARKETING_SEO/seo_tools/**)",
+      "Read(//Users/steven/PYTHON_MARKETPLACE_MASTER/05_WEB_DEVELOPMENT/mcp_protocol/**)",
+      "Read(//Users/steven/PYTHON_MARKETPLACE_MASTER/03_MEDIA_PROCESSING/audio_transcription/**)",
+      "Read(//Users/steven/PYTHON_MARKETPLACE_MASTER/03_MEDIA_PROCESSING/image_upscaling/**)"
+    ]
+  },
+  "$version": 3,
+  "context": {
+    "includeDirectories": [
+      "/Volumes/macBaks/diVinePyTHon"
+    ]
+  }
+}

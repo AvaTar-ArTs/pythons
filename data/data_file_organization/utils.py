@@ -116,19 +116,14 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     APP_PATH = Path(sys.executable).resolve().parent
     RESOURCE_PATH = Path(sys._MEIPASS).resolve()
     APP_PATH = Path(sys.argv[0]).resolve().parent
     RESOURCE_PATH = APP_PATH
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     path = get_local_path(file_path)
     path.parent.mkdir(parents = True, exist_ok
-    @lru_cache(maxsize = 128)
     async def load_local_file(file_path: str, default: str = None):
+        pass
     path = get_local_path(file_path)
 
 
@@ -137,7 +132,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -147,13 +143,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -163,7 +160,9 @@ else:
 
 
 async def resource_path(path: str) -> Path:
+    pass
 def resource_path(path: str) -> Path:
+    pass
  """
  TODO: Add function documentation
  """
@@ -178,7 +177,9 @@ def resource_path(path: str) -> Path:
 
 
 async def get_local_path(path: str) -> Path:
+    pass
 def get_local_path(path: str) -> Path:
+    pass
  """
  TODO: Add function documentation
  """
@@ -193,7 +194,9 @@ def get_local_path(path: str) -> Path:
 
 
 async def save_local_file(file_path: str, content: str):
-def save_local_file(file_path: str, content: str): -> Any
+    pass
+def save_local_file(file_path: str, content: str) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -207,7 +210,8 @@ def save_local_file(file_path: str, content: str): -> Any
     path.write_text(content)
 
 
-def load_local_file(file_path: str, default: str = None): -> Any
+def load_local_file(file_path: str, default: str = None) -> Any:
+    pass
  """
  TODO: Add function documentation
  """

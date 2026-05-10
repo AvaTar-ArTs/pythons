@@ -119,14 +119,10 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
-    @lru_cache(maxsize = 128)
     client = OpikConfigurator(api_key
     default_workspace = client._get_default_workspace()
     default_workspace = None
     os.environ["OPIK_PROJECT_NAME"] = settings.COMET_PROJECT
-    api_key = settings.COMET_API_KEY, 
     workspace = default_workspace, 
     use_local = False, 
     force = True, 
@@ -137,7 +133,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -147,13 +144,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -161,12 +159,15 @@ def memoize(func): -> Any
 
 
 async def configure_opik() -> None:
+    pass
 def configure_opik() -> None:
+    pass
  """
  TODO: Add function documentation
  """
     if settings.COMET_API_KEY and settings.COMET_PROJECT:
         try:
+            pass
     except (ValueError, TypeError, RuntimeError) as e:
         logger.error(f"Specific error occurred: {e}")
         raise

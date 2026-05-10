@@ -1,3 +1,10 @@
+"""
+Summary of generate_songs_csv.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
 import os
 import csv
 
@@ -9,6 +16,7 @@ csv_output = "/Users/steven/Music/suno/music_project/songs_data.csv"
 # Collect the list of MP3 and text files
 mp3_files = [f for f in os.listdir(mp3_dir) if f.endswith(".mp3")]
 txt_files = [f for f in os.listdir(txt_dir) if f.endswith(".txt")]
+
 
 # Function to match song with corresponding text files
 def get_matching_files(song_title, txt_files):
@@ -23,10 +31,21 @@ def get_matching_files(song_title, txt_files):
                 transcript_file = txt
     return analysis_file, transcript_file
 
+
 # Create and write to the CSV
 with open(csv_output, mode="w", newline="") as file:
     writer = csv.writer(file)
-    writer.writerow(["Title", "Artist", "MP3 Path", "Analysis Path", "Transcript Path", "Image Path", "Description"])
+    writer.writerow(
+        [
+            "Title",
+            "Artist",
+            "MP3 Path",
+            "Analysis Path",
+            "Transcript Path",
+            "Image Path",
+            "Description",
+        ]
+    )
 
     # Loop over MP3 files
     for mp3 in mp3_files:
@@ -34,14 +53,20 @@ with open(csv_output, mode="w", newline="") as file:
         analysis_file, transcript_file = get_matching_files(mp3, txt_files)
 
         # Set Artist as TrashCaTs but allow customization in the CSV
-        writer.writerow([
-            song_title, 
-            "TrashCaTs (Customizable)",  # Customize later for each song
-            os.path.join(mp3_dir, mp3),  # MP3 path
-            os.path.join(txt_dir, analysis_file) if analysis_file else "",  # Analysis path
-            os.path.join(txt_dir, transcript_file) if transcript_file else "",  # Transcript path
-            "https://via.placeholder.com/150",  # Placeholder for an image
-            "Lorem ipsum dolor sit amet."  # Placeholder description
-        ])
+        writer.writerow(
+            [
+                song_title,
+                "TrashCaTs (Customizable)",  # Customize later for each song
+                os.path.join(mp3_dir, mp3),  # MP3 path
+                os.path.join(txt_dir, analysis_file)
+                if analysis_file
+                else "",  # Analysis path
+                os.path.join(txt_dir, transcript_file)
+                if transcript_file
+                else "",  # Transcript path
+                "https://via.placeholder.com/150",  # Placeholder for an image
+                "Lorem ipsum dolor sit amet.",  # Placeholder description
+            ]
+        )
 
 print(f"CSV file generated at: {csv_output}")

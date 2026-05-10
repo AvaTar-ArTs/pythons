@@ -111,7 +111,7 @@ class CodeStandards:
 # FUNCTION TEMPLATES
 # =============================================================================
 
-def standard_function_template(
+def standard_function_template(:
     param1: str, 
     param2: int, 
     optional_param: Optional[str] = None, 
@@ -335,7 +335,7 @@ def safe_execute(func: Callable, *args, **kwargs) -> Dict[str, Any]:
 # LOGGING TEMPLATES
 # =============================================================================
 
-def setup_logging(
+def setup_logging(:
     name: str, 
     level: str = "INFO", 
     log_file: Optional[str] = None, 
@@ -533,7 +533,7 @@ def retry_decorator(max_retries: int = 3, delay: float = 1.0):
 
 @contextmanager
 def safe_file_operation(file_path: Union[str, Path], mode: str = 'r'):
-    """
+    '\''
     Context manager for safe file operations.
 
     Args:
@@ -580,7 +580,7 @@ def main():
     This function demonstrates the expected structure for main functions
     in the codebase, including argument parsing, configuration loading, 
     error handling, and logging setup.
-    """
+    '\''
     # Set up logging
     logger = setup_logging(__name__, level="INFO")
 

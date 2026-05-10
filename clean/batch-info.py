@@ -1,6 +1,7 @@
 # Load API keys from ~/.env.d/ (best practice - handles export statements, quotes, comments)
 from pathlib import Path as PathLib
 
+
 def load_env_d():
     """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
     env_d_path = PathLib.home() / ".env.d"
@@ -16,7 +17,7 @@ def load_env_d():
                                 line = line[7:]
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -24,11 +25,13 @@ def load_env_d():
                 # Logger not initialized yet, use print
                 print(f"Warning: Error loading {env_file}: {e}")
 
+
 load_env_d()
 
 # Also load from ~/.env as fallback using dotenv
 try:
     from dotenv import load_dotenv
+
     load_dotenv(os.path.expanduser("~/.env"))
 except ImportError:
     pass
@@ -116,7 +119,7 @@ def get_openai_batch_titles(script_contents):
         {
             "role": "user",
             "content": "\n\n".join(
-                f"Script {i+1}:\n{content[:1000]}"
+                f"Script {i + 1}:\n{content[:1000]}"
                 for i, content in enumerate(script_contents)
             ),
         },
@@ -140,17 +143,17 @@ def get_openai_batch_titles(script_contents):
             ):  # Look for lines that start with a number followed by a dot
                 titles.append(line)
             else:
-                titles.append(f"{i+1}. Untitled")
+                titles.append(f"{i + 1}. Untitled")
 
         if len(titles) < len(script_contents):
             titles.extend(
-                [f"{i+1}. Untitled" for i in range(len(titles), len(script_contents))]
+                [f"{i + 1}. Untitled" for i in range(len(titles), len(script_contents))]
             )
 
         return titles
     except Exception as e:
         print(f"Error during batch processing: {e}")
-        return [f"{i+1}. Untitled" for i in range(len(script_contents))]
+        return [f"{i + 1}. Untitled" for i in range(len(script_contents))]
 
 
 # Function to process files in batches and get their details
@@ -195,7 +198,7 @@ def suggest_script_titles_batch(file_paths, batch_size=10):
 
 
 # Function to scan a directory for .py files and output the results to a CSV
-def process_directory_with_batching(
+def process_directory_with_batching(:
     directory_path, batch_size=10, output_csv="output.csv"
 ):
     file_paths = [

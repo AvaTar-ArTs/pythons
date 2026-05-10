@@ -353,7 +353,7 @@ class ContentGenerator:
 
         return calendar
 
-    def save_content_calendar(
+    def save_content_calendar(:
         self,
         calendar: List[Dict[str, Any]],
         filename: str = None,

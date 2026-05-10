@@ -4,13 +4,11 @@
 Generates high-quality templates for sale
 """
 
-import os
 import json
-import sqlite3
 from datetime import datetime
 from pathlib import Path
 from dataclasses import dataclass
-from typing import Dict, List, Optional
+from typing import Dict, List
 import logging
 import random
 
@@ -18,9 +16,11 @@ import random
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 @dataclass
 class Template:
     """Template data structure"""
+
     id: str
     name: str
     description: str
@@ -36,17 +36,20 @@ class Template:
     created_at: str
     updated_at: str
 
+
 class TemplateGenerator:
     """Template generator for marketplace"""
-    
+
     def __init__(self):
-        self.base_path = Path("/Users/steven/ai-sites/retention-products-suite/templates-marketplace")
+        self.base_path = Path(
+            "/Users/steven/ai-sites/retention-products-suite/templates-marketplace"
+        )
         self.templates_path = self.base_path / "generated_templates"
         self.templates_path.mkdir(parents=True, exist_ok=True)
-        
+
         # Template categories and configurations
         self.template_configs = self._initialize_template_configs()
-        
+
     def _initialize_template_configs(self) -> Dict:
         """Initialize template configurations"""
         return {
@@ -55,80 +58,126 @@ class TemplateGenerator:
                 "price_range": (29.99, 199.99),
                 "formats": ["HTML", "WordPress", "React", "Vue"],
                 "features": [
-                    "Responsive Design", "SEO Optimized", "Mobile Friendly",
-                    "Cross Browser Compatible", "Fast Loading", "Modern UI/UX"
-                ]
+                    "Responsive Design",
+                    "SEO Optimized",
+                    "Mobile Friendly",
+                    "Cross Browser Compatible",
+                    "Fast Loading",
+                    "Modern UI/UX",
+                ],
             },
             "email_templates": {
-                "categories": ["newsletter", "promotional", "transactional", "welcome", "followup"],
+                "categories": [
+                    "newsletter",
+                    "promotional",
+                    "transactional",
+                    "welcome",
+                    "followup",
+                ],
                 "price_range": (9.99, 49.99),
                 "formats": ["HTML", "Mailchimp", "Constant Contact", "SendGrid"],
                 "features": [
-                    "Mobile Responsive", "Dark Mode Support", "A/B Test Ready",
-                    "Email Client Compatible", "Accessibility Compliant"
-                ]
+                    "Mobile Responsive",
+                    "Dark Mode Support",
+                    "A/B Test Ready",
+                    "Email Client Compatible",
+                    "Accessibility Compliant",
+                ],
             },
             "social_media_templates": {
-                "categories": ["instagram", "facebook", "twitter", "linkedin", "pinterest"],
+                "categories": [
+                    "instagram",
+                    "facebook",
+                    "twitter",
+                    "linkedin",
+                    "pinterest",
+                ],
                 "price_range": (4.99, 24.99),
                 "formats": ["PSD", "PNG", "JPG", "AI", "Figma"],
                 "features": [
-                    "High Resolution", "Multiple Sizes", "Easy to Customize",
-                    "Brand Consistent", "Trendy Designs"
-                ]
+                    "High Resolution",
+                    "Multiple Sizes",
+                    "Easy to Customize",
+                    "Brand Consistent",
+                    "Trendy Designs",
+                ],
             },
             "presentation_templates": {
-                "categories": ["business", "pitch", "education", "creative", "minimalist"],
+                "categories": [
+                    "business",
+                    "pitch",
+                    "education",
+                    "creative",
+                    "minimalist",
+                ],
                 "price_range": (19.99, 99.99),
                 "formats": ["PowerPoint", "Keynote", "Google Slides", "PDF"],
                 "features": [
-                    "Professional Design", "Easy to Edit", "Multiple Layouts",
-                    "Charts & Graphs", "Icons & Illustrations"
-                ]
+                    "Professional Design",
+                    "Easy to Edit",
+                    "Multiple Layouts",
+                    "Charts & Graphs",
+                    "Icons & Illustrations",
+                ],
             },
             "print_templates": {
-                "categories": ["business_cards", "flyers", "posters", "brochures", "invitations"],
+                "categories": [
+                    "business_cards",
+                    "flyers",
+                    "posters",
+                    "brochures",
+                    "invitations",
+                ],
                 "price_range": (7.99, 39.99),
                 "formats": ["AI", "PSD", "PDF", "InDesign"],
                 "features": [
-                    "Print Ready", "High Resolution", "CMYK Color",
-                    "Bleed Marks", "Multiple Sizes"
-                ]
-            }
+                    "Print Ready",
+                    "High Resolution",
+                    "CMYK Color",
+                    "Bleed Marks",
+                    "Multiple Sizes",
+                ],
+            },
         }
-    
-    def generate_template_collection(self, template_type: str, count: int = 20) -> List[Template]:
+
+    def generate_template_collection(:
+        self, template_type: str, count: int = 20
+    ) -> List[Template]:
         """Generate a collection of templates"""
         logger.info(f"Generating {count} {template_type} templates")
-        
+
         if template_type not in self.template_configs:
             raise ValueError(f"Template type '{template_type}' not supported")
-        
+
         config = self.template_configs[template_type]
         templates = []
-        
+
         for i in range(count):
             template = self._generate_single_template(template_type, config, i + 1)
             templates.append(template)
-            
+
             # Generate template files
             self._generate_template_files(template)
-        
+
         # Save collection metadata
         self._save_collection_metadata(template_type, templates)
-        
+
         return templates
-    
-    def _generate_single_template(self, template_type: str, config: Dict, index: int) -> Template:
+
+    def _generate_single_template(:
+        self, template_type: str, config: Dict, index: int
+    ) -> Template:
         """Generate a single template"""
         category = random.choice(config["categories"])
         subcategory = self._generate_subcategory(category)
         name = self._generate_template_name(template_type, category, index)
-        
+
         template = Template(
             id=f"{template_type}_{category}_{index:03d}",
             name=name,
-            description=self._generate_description(template_type, category, subcategory),
+            description=self._generate_description(
+                template_type, category, subcategory
+            ),
             category=template_type.replace("_", " ").title(),
             subcategory=subcategory,
             price=round(random.uniform(*config["price_range"]), 2),
@@ -139,11 +188,11 @@ class TemplateGenerator:
             preview_url=f"previews/{template_type}_{category}_{index:03d}_preview.jpg",
             download_url=f"downloads/{template_type}_{category}_{index:03d}.zip",
             created_at=datetime.now().isoformat(),
-            updated_at=datetime.now().isoformat()
+            updated_at=datetime.now().isoformat(),
         )
-        
+
         return template
-    
+
     def _generate_subcategory(self, category: str) -> str:
         """Generate subcategory based on category"""
         subcategories = {
@@ -156,98 +205,154 @@ class TemplateGenerator:
             "promotional": ["sale", "launch", "event", "seasonal"],
             "instagram": ["story", "post", "reel", "highlight"],
             "facebook": ["cover", "post", "ad", "event"],
-            "business_cards": ["modern", "classic", "creative", "minimalist"]
+            "business_cards": ["modern", "classic", "creative", "minimalist"],
         }
-        
+
         return random.choice(subcategories.get(category, ["standard"]))
-    
-    def _generate_template_name(self, template_type: str, category: str, index: int) -> str:
+
+    def _generate_template_name(:
+        self, template_type: str, category: str, index: int
+    ) -> str:
         """Generate template name"""
-        adjectives = ["Modern", "Elegant", "Creative", "Professional", "Minimalist", "Bold", "Clean", "Stylish"]
-        nouns = ["Design", "Template", "Layout", "Theme", "Style", "Framework", "Kit", "Collection"]
-        
+        adjectives = [
+            "Modern",
+            "Elegant",
+            "Creative",
+            "Professional",
+            "Minimalist",
+            "Bold",
+            "Clean",
+            "Stylish",
+        ]
+        nouns = [
+            "Design",
+            "Template",
+            "Layout",
+            "Theme",
+            "Style",
+            "Framework",
+            "Kit",
+            "Collection",
+        ]
+
         adjective = random.choice(adjectives)
         noun = random.choice(nouns)
-        
+
         return f"{adjective} {category.title()} {noun} #{index}"
-    
-    def _generate_description(self, template_type: str, category: str, subcategory: str) -> str:
+
+    def _generate_description(:
+        self, template_type: str, category: str, subcategory: str
+    ) -> str:
         """Generate template description"""
         descriptions = {
             "website_templates": f"A stunning {subcategory} {category} website template perfect for modern businesses. Features responsive design, clean code, and professional aesthetics.",
             "email_templates": f"Professional {subcategory} email template designed for {category} campaigns. Mobile-responsive and email client compatible.",
             "social_media_templates": f"Eye-catching {subcategory} template for {category} social media posts. High-quality design that stands out in feeds.",
             "presentation_templates": f"Professional {subcategory} presentation template for {category} purposes. Clean design with multiple layout options.",
-            "print_templates": f"High-quality {subcategory} {category} template ready for print. Professional design with proper bleed and margins."
+            "print_templates": f"High-quality {subcategory} {category} template ready for print. Professional design with proper bleed and margins.",
         }
-        
-        return descriptions.get(template_type, f"Professional {category} template for {subcategory} use.")
-    
+
+        return descriptions.get(
+            template_type, f"Professional {category} template for {subcategory} use."
+        )
+
     def _generate_dimensions(self, template_type: str) -> str:
         """Generate template dimensions"""
         dimensions = {
             "website_templates": ["1920x1080", "1440x900", "1366x768", "1280x720"],
             "email_templates": ["600x400", "600x600", "600x800", "600x1200"],
-            "social_media_templates": ["1080x1080", "1080x1350", "1080x1920", "1200x630"],
+            "social_media_templates": [
+                "1080x1080",
+                "1080x1350",
+                "1080x1920",
+                "1200x630",
+            ],
             "presentation_templates": ["1920x1080", "1280x720", "1024x768", "1600x900"],
-            "print_templates": ["8.5x11", "11x17", "A4", "A3", "5x7", "4x6"]
+            "print_templates": ["8.5x11", "11x17", "A4", "A3", "5x7", "4x6"],
         }
-        
+
         return random.choice(dimensions.get(template_type, ["1920x1080"]))
-    
+
     def _generate_tags(self, template_type: str, category: str) -> List[str]:
         """Generate template tags"""
         base_tags = [template_type.replace("_", " "), category, "template", "design"]
-        
+
         additional_tags = {
-            "website_templates": ["responsive", "modern", "clean", "professional", "seo"],
-            "email_templates": ["mobile", "responsive", "newsletter", "marketing", "html"],
-            "social_media_templates": ["instagram", "facebook", "social", "marketing", "graphic"],
-            "presentation_templates": ["powerpoint", "business", "corporate", "slides", "presentation"],
-            "print_templates": ["print", "business", "marketing", "professional", "branding"]
+            "website_templates": [
+                "responsive",
+                "modern",
+                "clean",
+                "professional",
+                "seo",
+            ],
+            "email_templates": [
+                "mobile",
+                "responsive",
+                "newsletter",
+                "marketing",
+                "html",
+            ],
+            "social_media_templates": [
+                "instagram",
+                "facebook",
+                "social",
+                "marketing",
+                "graphic",
+            ],
+            "presentation_templates": [
+                "powerpoint",
+                "business",
+                "corporate",
+                "slides",
+                "presentation",
+            ],
+            "print_templates": [
+                "print",
+                "business",
+                "marketing",
+                "professional",
+                "branding",
+            ],
         }
-        
+
         tags = base_tags + random.sample(additional_tags.get(template_type, []), 3)
         return list(set(tags))  # Remove duplicates
-    
+
     def _generate_template_files(self, template: Template):
         """Generate actual template files"""
         template_dir = self.templates_path / template.id
         template_dir.mkdir(parents=True, exist_ok=True)
-        
+
         # Generate main template file
         self._generate_main_template_file(template, template_dir)
-        
+
         # Generate preview image
         self._generate_preview_image(template, template_dir)
-        
+
         # Generate documentation
         self._generate_documentation(template, template_dir)
-        
+
         # Generate license file
         self._generate_license_file(template, template_dir)
-        
+
         # Generate README
         self._generate_readme(template, template_dir)
-    
+
     def _generate_main_template_file(self, template: Template, template_dir: Path):
         """Generate the main template file"""
         if template.file_format == "HTML":
             content = self._generate_html_template(template)
-            file_path = template_dir / f"{template.id}.html"
         elif template.file_format == "PSD":
             content = self._generate_psd_placeholder(template)
-            file_path = template_dir / f"{template.id}.psd"
         else:
             content = self._generate_generic_template(template)
-            file_path = template_dir / f"{template.id}.{template.file_format.lower()}"
-        
-        with open(file_path, 'w') as f:
+
+        with open(file_path, "w") as f:
             f.write(content)
-    
+
     def _generate_html_template(self, template: Template) -> str:
         """Generate HTML template"""
-        return f"""<!DOCTYPE html>
+        return f'\''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -326,7 +431,7 @@ class TemplateGenerator:
         <main class="content">
             <h2>Template Features</h2>
             <div class="features">
-                {''.join(f'<div class="feature"><h3>{feature}</h3><p>Professional {feature.lower()} implementation</p></div>' for feature in template.features)}
+                {"".join(f'<div class="feature"><h3>{feature}</h3><p>Professional {feature.lower()} implementation</p></div>' for feature in template.features)}
             </div>
             
             <button class="cta">Get Started</button>
@@ -334,16 +439,16 @@ class TemplateGenerator:
     </div>
 </body>
 </html>"""
-    
+
     def _generate_psd_placeholder(self, template: Template) -> str:
         """Generate PSD placeholder content"""
         return f"""PSD Template: {template.name}
 Description: {template.description}
 Dimensions: {template.dimensions}
-Features: {', '.join(template.features)}
+Features: {", ".join(template.features)}
 Created: {template.created_at}
 Price: ${template.price}"""
-    
+
     def _generate_generic_template(self, template: Template) -> str:
         """Generate generic template content"""
         return f"""Template: {template.name}
@@ -353,21 +458,21 @@ Subcategory: {template.subcategory}
 Price: ${template.price}
 Format: {template.file_format}
 Dimensions: {template.dimensions}
-Features: {', '.join(template.features)}
-Tags: {', '.join(template.tags)}
+Features: {", ".join(template.features)}
+Tags: {", ".join(template.tags)}
 Created: {template.created_at}"""
-    
+
     def _generate_preview_image(self, template: Template, template_dir: Path):
         """Generate preview image (placeholder)"""
         preview_content = f"""Preview for {template.name}
 {template.description}
 Dimensions: {template.dimensions}
 Price: ${template.price}
-Features: {', '.join(template.features[:3])}..."""
-        
-        with open(template_dir / f"{template.id}_preview.txt", 'w') as f:
+Features: {", ".join(template.features[:3])}..."""
+
+        with open(template_dir / f"{template.id}_preview.txt", "w") as f:
             f.write(preview_content)
-    
+
     def _generate_documentation(self, template: Template, template_dir: Path):
         """Generate template documentation"""
         doc_content = f"""# {template.name}
@@ -397,12 +502,12 @@ This template is licensed for commercial use. See LICENSE file for details.
 For support and customization requests, contact our team.
 
 ## Tags
-{', '.join(template.tags)}
+{", ".join(template.tags)}
 """
-        
-        with open(template_dir / "DOCUMENTATION.md", 'w') as f:
+
+        with open(template_dir / "DOCUMENTATION.md", "w") as f:
             f.write(doc_content)
-    
+
     def _generate_license_file(self, template: Template, template_dir: Path):
         """Generate license file"""
         license_content = f"""Template License Agreement
@@ -438,10 +543,10 @@ LICENSE TERMS:
 
 By using this template, you agree to these terms.
 """
-        
-        with open(template_dir / "LICENSE.txt", 'w') as f:
+
+        with open(template_dir / "LICENSE.txt", "w") as f:
             f.write(license_content)
-    
+
     def _generate_readme(self, template: Template, template_dir: Path):
         """Generate README file"""
         readme_content = f"""# {template.name}
@@ -469,10 +574,10 @@ ${template.price}
 ---
 Generated by Creative AI Empire Template Generator
 """
-        
-        with open(template_dir / "README.md", 'w') as f:
+
+        with open(template_dir / "README.md", "w") as f:
             f.write(readme_content)
-    
+
     def _save_collection_metadata(self, template_type: str, templates: List[Template]):
         """Save collection metadata"""
         collection_data = {
@@ -492,41 +597,43 @@ Generated by Creative AI Empire Template Generator
                     "tags": template.tags,
                     "features": template.features,
                     "preview_url": template.preview_url,
-                    "download_url": template.download_url
+                    "download_url": template.download_url,
                 }
                 for template in templates
-            ]
+            ],
         }
-        
+
         collection_path = self.templates_path / f"{template_type}_collection.json"
-        with open(collection_path, 'w') as f:
+        with open(collection_path, "w") as f:
             json.dump(collection_data, f, indent=2)
-        
+
         logger.info(f"Collection metadata saved to {collection_path}")
 
+
 def main():
-    """Main function to generate templates"""
+    """Main function to generate templates'\''
     generator = TemplateGenerator()
-    
+
     print("🛍️ Template Generator - Marketplace System")
     print("=" * 50)
-    
+
     # Generate templates for all types
     for template_type in generator.template_configs.keys():
         print(f"\n🛍️ Generating {template_type} templates...")
         try:
             templates = generator.generate_template_collection(template_type, 15)
             print(f"✅ Generated {len(templates)} {template_type} templates")
-            
+
             # Calculate total value
             total_value = sum(template.price for template in templates)
             print(f"   Total value: ${total_value:.2f}")
-            
+
         except Exception as e:
             print(f"❌ Error generating {template_type} templates: {e}")
-    
-    print(f"\n🎉 All templates generated!")
+
+    print("\n🎉 All templates generated!")
     print(f"📁 Output directory: {generator.templates_path}")
+
 
 if __name__ == "__main__":
     main()

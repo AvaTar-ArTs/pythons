@@ -8,7 +8,9 @@
 # - LICENSE (MIT)
 # Then zip everything for download.
 
-import os, zipfile, shutil, textwrap, json, pathlib
+import os
+import zipfile
+import shutil
 
 root = "/Users/steven/MySiTes/QuantumForgeLabs"
 assets = os.path.join(root, "assets")
@@ -75,12 +77,10 @@ header{position:sticky;top:0;background:rgba(11,15,26,.7);backdrop-filter:blur(8
 footer{border-top:1px solid #141b2d;background:#0b0f1a;padding:40px 0;color:#b9d0e6}
 .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .small{color:#94adc4;font-size:14px}
-@media (max-width: 960px){
   .grid{grid-template-columns:1fr 1fr}
   .about{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
-@media (max-width: 640px){
   .grid{grid-template-columns:1fr}
 }
 """
@@ -94,14 +94,15 @@ if os.path.exists(og_src):
     shutil.copy(og_src, og_dest)
 else:
     # make a tiny placeholder png if not found
-    from PIL import Image, ImageDraw, ImageFont
-    img = Image.new("RGB", (1200, 630), (11,15,26))
+    from PIL import Image, ImageDraw
+
+    img = Image.new("RGB", (1200, 630), (11, 15, 26))
     d = ImageDraw.Draw(img)
-    d.text((40,280), "QuantumForgeLabs", fill=(102,224,255))
+    d.text((40, 280), "QuantumForgeLabs", fill=(102, 224, 255))
     img.save(og_dest)
 
 # Index.html with SEO + OpenGraph + JSON-LD
-index_html = """<!doctype html>
+index_html = '\''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -331,7 +332,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-"""
+'\''
 with open(os.path.join(root, "LICENSE"), "w") as f:
     f.write(license_text)
 

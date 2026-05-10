@@ -1,0 +1,441 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+#!/usr/bin/env python3
+"""
+Reanalyze Entire Conversation — sort, format, and organize into export.
+
+Reads a conversation from a file or stdin, reanalyzes structure (turns, topics,
+code blocks), sorts (chronological, by role, or by topic), formats consistently,
+and exports to Markdown, JSON, and an optional summary index.
+
+Usage:
+  python miscellaneous_reanalyze_conversation_export.py conversation.md
+  python miscellaneous_reanalyze_conversation_export.py --input - --output-dir ./out
+  python miscellaneous_reanalyze_conversation_export.py --input chat.json --sort-by topic --format md,json
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from dataclasses import asdict, dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, List, Optional
+
+# Default output base (can override with env or flag)
+DEFAULT_OUTPUT_DIR = Path.home() / "conversation-exports" / "reanalyzed"
+
+
+@dataclass
+class Turn:
+    """Single conversation turn with optional analysis metadata."""
+
+    index: int
+    role: str  # user, assistant, system, raw
+    content: str
+    topic_hint: Optional[str] = None
+    has_code: bool = False
+    word_count: int = 0
+
+    def __post_init__(self) -> None:
+        if self.word_count == 0 and self.content:
+            self.word_count = len(self.content.split())
+        if self.has_code is False and self.content:
+            self.has_code = bool(
+                re.search(r"```[\s\S]*?```|`[^`]+`", self.content)
+            )
+
+
+@dataclass
+class AnalyzedConversation:
+    """Reanalyzed conversation with metadata and sorted turns."""
+
+    title: str
+    source: str
+    analyzed_at: str
+    turns: List[Turn] = field(default_factory=list)
+    topic_summary: List[str] = field(default_factory=list)
+    total_turns: int = 0
+    total_words: int = 0
+
+    def __post_init__(self) -> None:
+        self.total_turns = len(self.turns)
+        self.total_words = sum(t.word_count for t in self.turns)
+
+
+def _normalize_role(line: str, prev_role: Optional[str]) -> str:
+    """Infer role from common headers or alternating pattern."""
+    line_lower = line.strip().lower()
+    if line_lower.startswith(("## human", "## 👤", "**user**", "user:")):
+        return "user"
+    if line_lower.startswith(
+        (
+            "## assistant",
+            "## 🤖",
+            "## chatgpt",
+            "## claude",
+            "**assistant**",
+            "assistant:",
+        )
+    ):
+        return "assistant"
+    if line_lower.startswith("## system") or "system:" in line_lower[:20]:
+        return "system"
+    if prev_role == "user":
+        return "assistant"
+    if prev_role == "assistant":
+        return "user"
+    return "user"  # default first speaker
+
+
+def parse_markdown(content: str, source: str = "stdin") -> AnalyzedConversation:
+    """Parse markdown-style conversation into structured turns."""
+    title = "Conversation"
+    if content.startswith("---"):
+        end = content.find("---", 3)
+        if end != -1:
+            fm = content[3:end].strip()
+            content = content[end + 3 :].lstrip()
+            for line in fm.split("\n"):
+                if line.strip().startswith("title:"):
+                    title = line.split(":", 1)[1].strip().strip('"')
+                    break
+
+    # Try first # heading as title
+    m = re.match(r"^#\s+(.+)$", content, re.MULTILINE)
+    if m:
+        title = m.group(1).strip()
+        content = re.sub(r"^#\s+.+$", "", content, count=1).strip()
+
+    turns: List[Turn] = []
+    current_role: Optional[str] = None
+    current_lines: List[str] = []
+    index = 0
+
+    for line in content.split("\n"):
+        stripped = line.strip()
+        if not stripped:
+            if current_lines:
+                text = "\n".join(current_lines).strip()
+                if text:
+                    role = current_role or "user"
+                    turns.append(
+                        Turn(
+                            index=index,
+                            role=role,
+                            content=text,
+                        )
+                    )
+                    index += 1
+                current_lines = []
+            continue
+
+        new_role = _normalize_role(line, current_role)
+        if new_role != current_role and current_lines:
+            text = "\n".join(current_lines).strip()
+            if text:
+                turns.append(
+                    Turn(
+                        index=index,
+                        role=current_role or "user",
+                        content=text,
+                    )
+                )
+                index += 1
+            current_lines = []
+
+        current_role = new_role
+        if re.match(r"^##\s+", stripped):
+            current_lines.append(re.sub(r"^##\s*[\w\s👤🤖]*\s*", "", line))
+        else:
+            current_lines.append(line)
+
+    if current_lines:
+        text = "\n".join(current_lines).strip()
+        if text:
+            turns.append(
+                Turn(
+                    index=index,
+                    role=current_role or "user",
+                    content=text,
+                )
+            )
+
+    # Topic hints: first 3–5 significant words from each turn (simple)
+    stop = {"the", "a", "an", "is", "are", "to", "of", "and", "or", "in", "on"}
+    all_words: List[str] = []
+    for t in turns:
+        words = [
+            w.lower()
+            for w in re.findall(r"\b\w+\b", t.content)
+            if w.lower() not in stop and len(w) > 2
+        ]
+        all_words.extend(words[:8])
+    from collections import Counter
+
+    topic_summary = [
+        w for w, _ in Counter(all_words).most_common(12)
+    ]
+
+    return AnalyzedConversation(
+        title=title,
+        source=source,
+        analyzed_at=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        turns=turns,
+        topic_summary=topic_summary,
+    )
+
+
+def parse_json(content: str, source: str = "stdin") -> AnalyzedConversation:
+    """Parse JSON conversation (list of messages or {messages: [...]})."""
+    data = json.loads(content)
+    messages = data if isinstance(data, list) else data.get("messages", data.get("conversation", [data]))
+    if not isinstance(messages, list):
+        messages = [messages]
+
+    turns: List[Turn] = []
+    for i, m in enumerate(messages):
+        if isinstance(m, dict):
+            role = (m.get("role") or m.get("type") or "user").lower()
+            if role not in ("user", "assistant", "system"):
+                role = "user"
+            text = m.get("content") or m.get("text") or str(m)
+            if isinstance(text, list):
+                parts = [p.get("text", p) if isinstance(p, dict) else str(p) for p in text]
+                text = "\n".join(str(p) for p in parts)
+            turns.append(Turn(index=i, role=role, content=str(text).strip()))
+        else:
+            turns.append(Turn(index=i, role="user", content=str(m).strip()))
+
+    title = (data.get("title") if isinstance(data, dict) else None) or "Conversation"
+    from collections import Counter
+    all_words = []
+    for t in turns:
+        words = [w.lower() for w in re.findall(r"\b\w+\b", t.content) if len(w) > 2]
+        all_words.extend(words[:8])
+    topic_summary = [w for w, _ in Counter(all_words).most_common(12)]
+
+    return AnalyzedConversation(
+        title=title,
+        source=source,
+        analyzed_at=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        turns=turns,
+        topic_summary=topic_summary,
+    )
+
+
+def parse_plain(content: str, source: str = "stdin") -> AnalyzedConversation:
+    """Parse plain text: paragraphs as alternating user/assistant."""
+    turns: List[Turn] = []
+    blocks = [b.strip() for b in content.split("\n\n") if b.strip()]
+    for i, block in enumerate(blocks):
+        role = "assistant" if i % 2 == 1 else "user"
+        turns.append(Turn(index=i, role=role, content=block))
+    from collections import Counter
+    all_words = []
+    for t in turns:
+        words = [w.lower() for w in re.findall(r"\b\w+\b", t.content) if len(w) > 2]
+        all_words.extend(words[:8])
+    topic_summary = [w for w, _ in Counter(all_words).most_common(12)]
+    return AnalyzedConversation(
+        title="Conversation",
+        source=source,
+        analyzed_at=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        turns=turns,
+        topic_summary=topic_summary,
+    )
+
+
+def sort_turns(conv: AnalyzedConversation, sort_by: str) -> None:
+    """Sort turns in place: chronological (default), role, or topic."""
+    if sort_by == "chronological" or sort_by == "chrono":
+        conv.turns.sort(key=lambda t: t.index)
+        return
+    if sort_by == "role":
+        conv.turns.sort(key=lambda t: (t.role, t.index))
+        return
+    if sort_by == "topic":
+        # Keep chronological but group by simple topic hint (first significant word)
+        def topic_key(t: Turn) -> tuple:
+            words = re.findall(r"\b\w{4,}\b", t.content)
+            hint = words[0].lower() if words else ""
+            return (hint, t.index)
+        conv.turns.sort(key=topic_key)
+        return
+    conv.turns.sort(key=lambda t: t.index)
+
+
+def format_markdown(conv: AnalyzedConversation) -> str:
+    """Produce a single formatted Markdown export."""
+    lines = [
+        "---",
+        f"title: {conv.title}",
+        f"source: {conv.source}",
+        f"analyzed_at: {conv.analyzed_at}",
+        f"total_turns: {conv.total_turns}",
+        f"total_words: {conv.total_words}",
+        f"topics: {', '.join(conv.topic_summary[:8])}",
+        "---",
+        "",
+        f"# {conv.title}",
+        "",
+        f"*Reanalyzed: {conv.analyzed_at}* · {conv.total_turns} turns · ~{conv.total_words} words",
+        "",
+        "## Summary",
+        "",
+        "Topics: " + ", ".join(conv.topic_summary[:10]) + ".",
+        "",
+        "---",
+        "",
+    ]
+    for t in conv.turns:
+        role_label = "Human" if t.role == "user" else "Assistant"
+        lines.append(f"## {role_label}\n")
+        lines.append(t.content.strip())
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+    return "\n".join(lines).rstrip()
+
+
+def format_json(conv: AnalyzedConversation) -> str:
+    """Produce JSON export (serializable)."""
+    out = {
+        "title": conv.title,
+        "source": conv.source,
+        "analyzed_at": conv.analyzed_at,
+        "total_turns": conv.total_turns,
+        "total_words": conv.total_words,
+        "topic_summary": conv.topic_summary,
+        "turns": [asdict(t) for t in conv.turns],
+    }
+    return json.dumps(out, indent=2, ensure_ascii=False)
+
+
+def export(
+    conv: AnalyzedConversation,
+    output_dir: Path,
+    formats: List[str],
+    sort_by: str = "chronological",
+) -> List[Path]:
+    """Sort, format, and write exports. Returns list of written paths."""
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    sort_turns(conv, sort_by)
+
+    safe_title = re.sub(r"[^\w\s-]", "", conv.title).strip()
+    safe_title = re.sub(r"[-\s]+", "_", safe_title) or "conversation"
+    written: List[Path] = []
+
+    if "md" in formats or "markdown" in formats:
+        path = output_dir / f"{safe_title}_reanalyzed.md"
+        path.write_text(format_markdown(conv), encoding="utf-8")
+        written.append(path)
+
+    if "json" in formats:
+        path = output_dir / f"{safe_title}_reanalyzed.json"
+        path.write_text(format_json(conv), encoding="utf-8")
+        written.append(path)
+
+    # Summary index
+    index_path = output_dir / "reanalyzed_index.md"
+    index_lines = [
+        "# Reanalyzed conversation exports",
+        "",
+        f"Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S')} UTC",
+        "",
+        f"- **{conv.title}** — {conv.total_turns} turns, ~{conv.total_words} words",
+        f"  - Topics: {', '.join(conv.topic_summary[:10])}",
+        "",
+        "## Files",
+        "",
+    ]
+    for p in written:
+        index_lines.append(f"- [{p.name}]({p.name})")
+    index_lines.append(f"- [{index_path.name}]({index_path.name}) (this index)")
+    index_path.write_text("\n".join(index_lines), encoding="utf-8")
+    written.append(index_path)
+
+    return written
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Reanalyze conversation: sort, format, organize into export.",
+    )
+    parser.add_argument(
+        "input",
+        nargs="?",
+        default="-",
+        help="Path to conversation file (.md, .json, .txt) or '-' for stdin",
+    )
+    parser.add_argument(
+        "--output-dir",
+        "-o",
+        type=Path,
+        default=DEFAULT_OUTPUT_DIR,
+        help=f"Output directory (default: {DEFAULT_OUTPUT_DIR})",
+    )
+    parser.add_argument(
+        "--sort-by",
+        choices=["chronological", "chrono", "role", "topic"],
+        default="chronological",
+        help="Sort turns by order, role, or topic",
+    )
+    parser.add_argument(
+        "--format",
+        "-f",
+        default="md,json",
+        help="Export formats: md, json (comma-separated)",
+    )
+    args = parser.parse_args()
+
+    if args.input == "-":
+        content = sys.stdin.read()
+        source = "stdin"
+    else:
+        path = Path(args.input)
+        if not path.exists():
+            print(f"Error: file not found: {path}", file=sys.stderr)
+            return 1
+        content = path.read_text(encoding="utf-8")
+        source = str(path)
+
+    # Parse by extension or content
+    if args.input != "-":
+        suf = Path(args.input).suffix.lower()
+    else:
+        suf = ".md"  # assume markdown from stdin if not specified
+    if suf == ".json":
+        conv = parse_json(content, source)
+    elif suf in (".md", ".markdown"):
+        conv = parse_markdown(content, source)
+    else:
+        if content.strip().startswith("{"):
+            conv = parse_json(content, source)
+        else:
+            conv = parse_markdown(content, source) if "## " in content else parse_plain(content, source)
+
+    formats = [x.strip().lower() for x in args.format.split(",") if x.strip()]
+    if not formats:
+        formats = ["md", "json"]
+    written = export(conv, args.output_dir, formats, args.sort_by)
+    print(f"Reanalyzed: {conv.total_turns} turns, ~{conv.total_words} words")
+    print("Exported:")
+    for p in written:
+        print(f"  {p}")
+    return 0
+
+
+try:
+        sys.exit(main())
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)

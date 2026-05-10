@@ -27,7 +27,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -62,7 +62,7 @@ class ExternalDocsMerger:
         }
 
     def analyze_external_content(self):
-        """Analyze what's on external volumes"""
+        '\''Analyze what's on external volumes"""
         print("?? Analyzing External Volumes...")
         print("=" * 80)
 
@@ -162,7 +162,7 @@ class ExternalDocsMerger:
 
         content = f"""# ?? API Master Documentation Index
 
-> **Last Updated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+> **Last Updated**: {datetime.now().strftime("%Y-%m-%d %H:%M")}
 > **Total API Docs**: {len(files)}
 
 ## ?? Available Documentation
@@ -251,7 +251,7 @@ for f in ~/.env.d/*.env; do source "$f"; done
 
         content = f"""# ?? External Projects Catalog
 
-> **Last Scanned**: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+> **Last Scanned**: {datetime.now().strftime("%Y-%m-%d %H:%M")}
 
 ## ?? Projects by Volume
 
@@ -318,7 +318,7 @@ for f in ~/.env.d/*.env; do source "$f"; done
         return catalog_path
 
     def run(self):
-        """Execute merge operation"""
+        """Execute merge operation'\''
         print("?? External Docs Merger")
         print("=" * 80)
 

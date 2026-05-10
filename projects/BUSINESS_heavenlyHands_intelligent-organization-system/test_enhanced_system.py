@@ -14,9 +14,7 @@ Date: 2025-01-27
 Version: 3.0.0
 """
 
-import os
 import sys
-import time
 import logging
 from pathlib import Path
 
@@ -24,8 +22,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
+
 
 def test_enhanced_system():
     """Test the enhanced intelligent organization system."""
@@ -52,8 +53,12 @@ def test_enhanced_system():
         print(f"  System Running: {status['is_running']}")
         print(f"  Creative Projects: {status['creative_projects']['total']}")
         print(f"  Semantic Insights: {status['semantic_insights']['total']}")
-        print(f"  Multi-Platform Workflows: {status['multi_platform_workflows']['total']}")
-        print(f"  Agentic Creative Workflows: {status['agentic_creative_workflows']['total']}")
+        print(
+            f"  Multi-Platform Workflows: {status['multi_platform_workflows']['total']}"
+        )
+        print(
+            f"  Agentic Creative Workflows: {status['agentic_creative_workflows']['total']}"
+        )
 
         print("✅ Enhanced system status test passed")
 
@@ -68,8 +73,8 @@ def test_enhanced_system():
             content_requirements={
                 "target_audience": "test_users",
                 "content_types": ["test_content"],
-                "quality_standards": "test"
-            }
+                "quality_standards": "test",
+            },
         )
 
         print(f"✅ Created creative project: {project_id}")
@@ -84,10 +89,10 @@ def test_enhanced_system():
                     "name": "Test Task",
                     "description": "Test automation task",
                     "task_type": "performance_testing",
-                    "parameters": {"test_mode": True}
+                    "parameters": {"test_mode": True},
                 }
             ],
-            coordination_strategy="sequential"
+            coordination_strategy="sequential",
         )
 
         print(f"✅ Created multi-platform workflow: {workflow_id}")
@@ -100,11 +105,11 @@ def test_enhanced_system():
                 "planner": ["test_planning"],
                 "executor": ["test_execution"],
                 "monitor": ["test_monitoring"],
-                "optimizer": ["test_optimization"]
+                "optimizer": ["test_optimization"],
             },
             adaptive_planning=True,
             learning_enabled=True,
-            creative_constraints={"test_mode": True}
+            creative_constraints={"test_mode": True},
         )
 
         print(f"✅ Created agentic creative workflow: {agentic_workflow_id}")
@@ -116,13 +121,19 @@ def test_enhanced_system():
             print(f"✅ Found {len(search_results)} search results")
 
             for i, result in enumerate(search_results, 1):
-                creative_tags = [tag for tag in result.semantic_tags if tag.startswith('creative:')]
-                print(f"  {i}. {result.file_path} (Score: {result.similarity_score:.3f})")
+                creative_tags = [
+                    tag for tag in result.semantic_tags if tag.startswith("creative:")
+                ]
+                print(
+                    f"  {i}. {result.file_path} (Score: {result.similarity_score:.3f})"
+                )
                 if creative_tags:
                     print(f"     Creative Tags: {creative_tags}")
 
         except Exception as e:
-            print(f"⚠️  Semantic search test skipped (may require vector database setup): {e}")
+            print(
+                f"⚠️  Semantic search test skipped (may require vector database setup): {e}"
+            )
 
         # Test 6: Project Status
         print("\n📊 Testing project status retrieval...")
@@ -164,6 +175,7 @@ def test_enhanced_system():
         logger.error(f"Test failed: {e}")
         return False
 
+
 def main():
     """Main function."""
     print("🧠 Enhanced Intelligent Organization System - Quick Test")
@@ -175,8 +187,12 @@ def main():
         print("\n🎉 Enhanced system test completed successfully!")
         print("\nNext steps:")
         print("  1. Run the full demo: python launch_enhanced_system.py --mode demo")
-        print("  2. Explore interactive mode: python launch_enhanced_system.py --mode interactive")
-        print("  3. Configure for production: python launch_enhanced_system.py --mode production")
+        print(
+            "  2. Explore interactive mode: python launch_enhanced_system.py --mode interactive"
+        )
+        print(
+            "  3. Configure for production: python launch_enhanced_system.py --mode production"
+        )
         sys.exit(0)
     else:
         print("\n❌ Enhanced system test failed!")
@@ -185,6 +201,7 @@ def main():
         print("  2. Verify configuration: enhanced_intelligent_org_config.yaml")
         print("  3. Check logs for detailed error information")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

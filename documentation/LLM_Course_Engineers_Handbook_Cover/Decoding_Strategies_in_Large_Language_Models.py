@@ -312,7 +312,7 @@ plot_graph(graph, length, beams, "sequence")
 # In[ ]:
 
 
-def plot_prob_distribution(
+def plot_prob_distribution(:
     probabilities,
     next_tokens,
     sampling,

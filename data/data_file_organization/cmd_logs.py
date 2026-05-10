@@ -118,13 +118,7 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     async def log(text, success = True) -> None:
 
 
@@ -133,7 +127,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -143,13 +138,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -164,7 +160,9 @@ class Config:
 
 
 async def cls() -> None:
+    pass
 def cls() -> None:
+    pass
  """
  TODO: Add function documentation
  """
@@ -178,7 +176,9 @@ def cls() -> None:
 
 
 async def initLog() -> None:
+    pass
 def initLog() -> None:
+    pass
  """
  TODO: Add function documentation
  """
@@ -193,7 +193,9 @@ def initLog() -> None:
 
 
 async def info(text: str) -> None:
+    pass
 def info(text: str) -> None:
+    pass
  """
  TODO: Add function documentation
  """
@@ -208,6 +210,7 @@ def info(text: str) -> None:
 
 
 def log(text, success = True) -> None:
+    pass
  """
  TODO: Add function documentation
  """

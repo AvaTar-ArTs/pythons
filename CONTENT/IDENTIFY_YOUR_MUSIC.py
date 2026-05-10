@@ -3,8 +3,8 @@
 Identify YOUR Music vs Downloaded Music
 Separates original content from copyrighted downloads
 """
+
 from pathlib import Path
-import re
 
 music_dir = Path.home() / "Music"
 
@@ -15,23 +15,23 @@ print()
 
 # Indicators of YOUR music
 your_music_indicators = [
-    'suno',
-    'avatararts',
-    'nocturnemelodies',
-    'petalfall',
-    'ktherias',
-    'by _',  # Suno AI naming pattern
-    'by @',  # Suno AI pattern
+    "suno",
+    "avatararts",
+    "nocturnemelodies",
+    "petalfall",
+    "ktherias",
+    "by _",  # Suno AI naming pattern
+    "by @",  # Suno AI pattern
 ]
 
 # Indicators of DOWNLOADED music
 downloaded_indicators = [
-    '[',  # YouTube download pattern [ID].mp3
-    'official',
-    'audio)',
-    'music video',
-    'cover)',
-    'remix)',
+    "[",  # YouTube download pattern [ID].mp3
+    "official",
+    "audio)",
+    "music video",
+    "cover)",
+    "remix)",
 ]
 
 your_music = []
@@ -41,19 +41,22 @@ uncertain = []
 print("?? Scanning 936 audio files...")
 print()
 
-for file in music_dir.rglob('*'):
-    if file.suffix.lower() in ['.mp3', '.m4a', '.wav', '.flac', '.m4r']:
+for file in music_dir.rglob("*"):
+    if file.suffix.lower() in [".mp3", ".m4a", ".wav", ".flac", ".m4r"]:
         filename_lower = file.name.lower()
         parent_lower = file.parent.name.lower()
-        
+
         # Check if it's yours
-        is_yours = any(indicator in filename_lower or indicator in parent_lower 
-                      for indicator in your_music_indicators)
-        
+        is_yours = any(
+            indicator in filename_lower or indicator in parent_lower
+            for indicator in your_music_indicators
+        )
+
         # Check if it's downloaded
-        is_downloaded = any(indicator in filename_lower 
-                           for indicator in downloaded_indicators)
-        
+        is_downloaded = any(
+            indicator in filename_lower for indicator in downloaded_indicators
+        )
+
         if is_yours and not is_downloaded:
             your_music.append(file)
         elif is_downloaded and not is_yours:
@@ -67,7 +70,7 @@ print("=" * 70)
 print()
 
 print(f"? YOUR ORIGINAL MUSIC: {len(your_music)} files")
-print(f"   (Can monetize freely!)")
+print("   (Can monetize freely!)")
 print()
 
 if your_music[:10]:
@@ -77,7 +80,7 @@ if your_music[:10]:
 print()
 
 print(f"? DOWNLOADED MUSIC: {len(downloaded_music)} files")
-print(f"   (Copyrighted - do NOT monetize)")
+print("   (Copyrighted - do NOT monetize)")
 print()
 
 if downloaded_music[:10]:
@@ -87,7 +90,7 @@ if downloaded_music[:10]:
 print()
 
 print(f"??  UNCERTAIN: {len(uncertain)} files")
-print(f"   (Need manual review)")
+print("   (Need manual review)")
 print()
 
 # Breakdown by project
@@ -106,14 +109,16 @@ for file in your_music:
             project = rel_path.parts[0]
         else:
             project = "Root"
-        
+
         if project not in your_projects:
             your_projects[project] = []
         your_projects[project].append(file)
     except:
         pass
 
-for project, files in sorted(your_projects.items(), key=lambda x: len(x[1]), reverse=True):
+for project, files in sorted(
+    your_projects.items(), key=lambda x: len(x[1]), reverse=True
+):
     print(f"?? {project}: {len(files)} files")
 
 print()
@@ -128,10 +133,10 @@ print("?? Focus on these projects for revenue:")
 print()
 
 monetizable = {
-    'nocTurneMeLoDieS': 'Your original music album/project',
-    'SUNO': 'AI-generated music (100% yours)',
-    'PetalsFall': 'Original music project',
-    'Ktherias': 'Original content'
+    "nocTurneMeLoDieS": "Your original music album/project",
+    "SUNO": "AI-generated music (100% yours)",
+    "PetalsFall": "Original music project",
+    "Ktherias": "Original content",
 }
 
 for project, files in your_projects.items():
@@ -151,12 +156,12 @@ print()
 
 # Save report
 report_path = Path.home() / "workspace" / "music-analysis" / "YOUR_MUSIC_ONLY.txt"
-with open(report_path, 'w') as f:
+with open(report_path, "w") as f:
     f.write("YOUR ORIGINAL MUSIC (Can Monetize):\n")
     f.write("=" * 60 + "\n\n")
     for file in your_music:
         f.write(f"{file}\n")
-    
+
     f.write("\n\nDOWNLOADED MUSIC (Do NOT Monetize):\n")
     f.write("=" * 60 + "\n\n")
     for file in downloaded_music:
@@ -170,5 +175,5 @@ print("              ?? ANALYSIS COMPLETE!")
 print("=" * 70)
 print()
 print(f"Your original music: {len(your_music)} files")
-print(f"Ready to monetize: YES!")
+print("Ready to monetize: YES!")
 print()

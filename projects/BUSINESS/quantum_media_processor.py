@@ -1,6 +1,13 @@
+"""
+Summary of quantum_media_processor.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
 import numpy as np
-from PIL import Image, ImageOps
-from scipy.fftpack import dct, idct
+from PIL import Image
+from scipy.fftpack import dct
 
 
 class QuantumMediaProcessor:
@@ -16,7 +23,6 @@ class QuantumMediaProcessor:
         return coeffs
 
     def process_image(self, image_path, output_path):
-        img = ImageOps.exif_transpose(Image.open(image_path))
         ycbcr = img.convert("YCbCr")
         for i in range(0, ycbcr.size[0], 8):
             for j in range(0, ycbcr.size[1], 8):

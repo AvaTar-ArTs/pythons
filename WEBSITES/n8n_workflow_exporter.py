@@ -13,57 +13,53 @@ Usage:
 import json
 import os
 from pathlib import Path
-from typing import Dict, List, Any
+
 
 def export_n8n_workflows():
     """Export n8n workflows to individual JSON files"""
-    
+
     # Load the main template file
     template_file = Path("/Users/steven/n8n_ai_agent_templates.json")
-    
+
     if not template_file.exists():
         print("❌ Template file not found: n8n_ai_agent_templates.json")
         return
-    
-    with open(template_file, 'r') as f:
+
+    with open(template_file, "r") as f:
         templates = json.load(f)
-    
+
     # Create output directory
     output_dir = Path("/Users/steven/n8n_workflows")
     output_dir.mkdir(exist_ok=True)
-    
+
     print("🚀 Exporting n8n workflows...")
     print("=" * 50)
-    
+
     # Export individual workflows
     workflows = templates.get("n8n_workflows", {})
-    
+
     for workflow_name, workflow_data in workflows.items():
         # Create individual workflow file
         workflow_file = output_dir / f"{workflow_name}.json"
-        
+
         # Format for n8n import
         n8n_workflow = {
             "name": workflow_data["name"],
             "nodes": workflow_data["nodes"],
             "connections": workflow_data["connections"],
             "active": False,
-            "settings": {
-                "executionOrder": "v1"
-            },
+            "settings": {"executionOrder": "v1"},
             "staticData": None,
-            "meta": {
-                "templateCredsSetupCompleted": True
-            },
+            "meta": {"templateCredsSetupCompleted": True},
             "pinData": None,
-            "versionId": "1"
+            "versionId": "1",
         }
-        
-        with open(workflow_file, 'w') as f:
+
+        with open(workflow_file, "w") as f:
             json.dump(n8n_workflow, f, indent=2)
-        
+
         print(f"✅ Exported: {workflow_name}.json")
-    
+
     # Export credentials template
     credentials_file = output_dir / "credentials_template.json"
     credentials_data = {
@@ -71,15 +67,15 @@ def export_n8n_workflows():
         "setup_instructions": {
             "openai": "1. Go to Settings → Credentials\n2. Add new credential\n3. Select 'OpenAI API'\n4. Enter your API key",
             "serp_api": "1. Go to Settings → Credentials\n2. Add new credential\n3. Select 'HTTP Request Auth'\n4. Enter your SERP API key",
-            "news_api": "1. Go to Settings → Credentials\n2. Add new credential\n3. Select 'HTTP Request Auth'\n4. Enter your News API key"
-        }
+            "news_api": "1. Go to Settings → Credentials\n2. Add new credential\n3. Select 'HTTP Request Auth'\n4. Enter your News API key",
+        },
     }
-    
-    with open(credentials_file, 'w') as f:
+
+    with open(credentials_file, "w") as f:
         json.dump(credentials_data, f, indent=2)
-    
-    print(f"✅ Exported: credentials_template.json")
-    
+
+    print("✅ Exported: credentials_template.json")
+
     # Export setup script
     setup_script_file = output_dir / "setup_n8n_workflows.sh"
     setup_script = """#!/bin/bash
@@ -116,15 +112,15 @@ echo "5. Configure webhook URLs"
 echo ""
 echo "🎉 Setup complete!"
 """
-    
-    with open(setup_script_file, 'w') as f:
+
+    with open(setup_script_file, "w") as f:
         f.write(setup_script)
-    
+
     # Make script executable
     os.chmod(setup_script_file, 0o755)
-    
-    print(f"✅ Exported: setup_n8n_workflows.sh")
-    
+
+    print("✅ Exported: setup_n8n_workflows.sh")
+
     # Create README
     readme_file = output_dir / "README.md"
     readme_content = """# n8n AI Agent Workflows
@@ -174,12 +170,12 @@ Update these URLs in each workflow:
 For issues and questions, check the main setup guide:
 `/Users/steven/n8n_setup_guide.md`
 """
-    
-    with open(readme_file, 'w') as f:
+
+    with open(readme_file, "w") as f:
         f.write(readme_content)
-    
-    print(f"✅ Exported: README.md")
-    
+
+    print("✅ Exported: README.md")
+
     print("\n🎉 Export complete!")
     print(f"📁 Workflows exported to: {output_dir}")
     print("\nNext steps:")
@@ -188,10 +184,11 @@ For issues and questions, check the main setup guide:
     print("3. Configure credentials in n8n")
     print("4. Import workflows")
 
+
 def create_n8n_docker_compose():
     """Create Docker Compose file for n8n with AI agent"""
-    
-    docker_compose_content = """version: '3.8'
+
+    docker_compose_content = '\''version: '3.8'
 
 services:
   n8n:
@@ -251,13 +248,13 @@ networks:
   default:
     name: ai-agent-network
 """
-    
+
     docker_compose_file = Path("/Users/steven/docker-compose.yml")
-    with open(docker_compose_file, 'w') as f:
+    with open(docker_compose_file, "w") as f:
         f.write(docker_compose_content)
-    
-    print(f"✅ Created: docker-compose.yml")
-    
+
+    print("✅ Created: docker-compose.yml")
+
     # Create .env file
     env_file = Path("/Users/steven/.env.docker")
     env_content = """# Docker Environment Variables
@@ -268,30 +265,32 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
 GROQ_API_KEY=your_groq_api_key_here
 NGROK_AUTHTOKEN=your_ngrok_authtoken_here
 """
-    
-    with open(env_file, 'w') as f:
+
+    with open(env_file, "w") as f:
         f.write(env_content)
-    
-    print(f"✅ Created: .env.docker")
+
+    print("✅ Created: .env.docker")
+
 
 def main():
-    """Main function"""
+    """Main function'\''
     print("🤖 n8n Workflow Exporter")
     print("=" * 30)
-    
+
     # Export workflows
     export_n8n_workflows()
-    
+
     # Create Docker setup
     print("\n🐳 Creating Docker setup...")
     create_n8n_docker_compose()
-    
+
     print("\n🎉 All done!")
     print("\nYou now have:")
     print("📁 Individual n8n workflow files")
     print("🐳 Docker Compose setup")
     print("📋 Setup scripts and documentation")
     print("\nReady to deploy your AI agent! 🚀")
+
 
 if __name__ == "__main__":
     main()

@@ -15,8 +15,7 @@ def parse_args():
     """
 
     description = """Generated all files needed to display the gallery (thumbnails, image descriptions and HTML page).
-                    For detailed documentation please refer to https://github.com/haltakov/simple-photo-gallery.
-                    Note: This is the main build script. The build.py file is a legacy wrapper."""
+                    For detailed documentation please refer to https://github.com/haltakov/simple-photo-gallery."""
 
     parser = argparse.ArgumentParser(description=description)
 
@@ -64,18 +63,6 @@ def build_html(gallery_config):
             if images_data[image]["type"] == "image":
                 background_photo = image
                 break
-
-    # Extract parent folder name for title if title matches folder name
-    # Get gallery root from images_data_file path
-    gallery_root = os.path.dirname(gallery_config["images_data_file"])
-    parent_folder_name = os.path.basename(os.path.abspath(gallery_root))
-    
-    # Use parent folder name as title if title matches folder name
-    if gallery_config.get("title") == parent_folder_name:
-        gallery_config["title"] = parent_folder_name
-    
-    # Set description to empty so it doesn't show in the <p> tag
-    gallery_config["description"] = ""
 
     # Collect the information for a remote gallery attribution
     remote_data = {}

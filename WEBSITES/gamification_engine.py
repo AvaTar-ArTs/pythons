@@ -4,23 +4,22 @@
 Comprehensive gamification system for user retention
 """
 
-import os
 import json
 import sqlite3
 from datetime import datetime, timedelta
-from pathlib import Path
 from dataclasses import dataclass
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List
 import logging
-import random
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 @dataclass
 class Achievement:
     """Achievement data structure"""
+
     id: str
     name: str
     description: str
@@ -30,9 +29,11 @@ class Achievement:
     icon: str
     rarity: str  # common, rare, epic, legendary
 
+
 @dataclass
 class Challenge:
     """Challenge data structure"""
+
     id: str
     title: str
     description: str
@@ -43,9 +44,11 @@ class Challenge:
     duration_hours: int
     is_active: bool
 
+
 @dataclass
 class UserProgress:
     """User progress tracking"""
+
     user_id: str
     total_points: int
     level: int
@@ -56,20 +59,24 @@ class UserProgress:
     streak_days: int
     last_activity: datetime
 
+
 class GamificationEngine:
     """Main gamification engine"""
-    
+
     def __init__(self, db_path: str = None):
-        self.db_path = db_path or "/Users/steven/ai-sites/retention-products-suite/engagement-tools/gamification.db"
+        self.db_path = (
+            db_path
+            or "/Users/steven/ai-sites/retention-products-suite/engagement-tools/gamification.db"
+        )
         self.setup_database()
         self.achievements = self._initialize_achievements()
         self.challenges = self._initialize_challenges()
-        
+
     def setup_database(self):
         """Set up gamification database"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         # Users table
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS users (
@@ -84,9 +91,9 @@ class GamificationEngine:
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
+
         # Achievements table
-        cursor.execute("""
+        cursor.execute('\''
             CREATE TABLE IF NOT EXISTS achievements (
                 id TEXT PRIMARY KEY,
                 name TEXT NOT NULL,
@@ -98,7 +105,7 @@ class GamificationEngine:
                 rarity TEXT DEFAULT 'common'
             )
         """)
-        
+
         # User achievements
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS user_achievements (
@@ -110,7 +117,7 @@ class GamificationEngine:
                 FOREIGN KEY (achievement_id) REFERENCES achievements (id)
             )
         """)
-        
+
         # Challenges table
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS challenges (
@@ -126,7 +133,7 @@ class GamificationEngine:
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
+
         # User challenges
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS user_challenges (
@@ -141,7 +148,7 @@ class GamificationEngine:
                 FOREIGN KEY (challenge_id) REFERENCES challenges (id)
             )
         """)
-        
+
         # User actions (for tracking)
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS user_actions (
@@ -154,7 +161,7 @@ class GamificationEngine:
                 FOREIGN KEY (user_id) REFERENCES users (id)
             )
         """)
-        
+
         # Leaderboards
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS leaderboards (
@@ -168,10 +175,10 @@ class GamificationEngine:
                 FOREIGN KEY (user_id) REFERENCES users (id)
             )
         """)
-        
+
         conn.commit()
         conn.close()
-        
+
     def _initialize_achievements(self) -> List[Achievement]:
         """Initialize predefined achievements"""
         return [
@@ -184,7 +191,7 @@ class GamificationEngine:
                 points=10,
                 requirements={"content_created": 1},
                 icon="🎨",
-                rarity="common"
+                rarity="common",
             ),
             Achievement(
                 id="content_master",
@@ -194,7 +201,7 @@ class GamificationEngine:
                 points=500,
                 requirements={"content_created": 100},
                 icon="👑",
-                rarity="legendary"
+                rarity="legendary",
             ),
             Achievement(
                 id="daily_creator",
@@ -204,9 +211,8 @@ class GamificationEngine:
                 points=100,
                 requirements={"daily_streak": 7},
                 icon="🔥",
-                rarity="rare"
+                rarity="rare",
             ),
-            
             # Social Achievements
             Achievement(
                 id="social_butterfly",
@@ -216,7 +222,7 @@ class GamificationEngine:
                 points=200,
                 requirements={"content_shared": 50},
                 icon="🦋",
-                rarity="epic"
+                rarity="epic",
             ),
             Achievement(
                 id="community_hero",
@@ -226,9 +232,8 @@ class GamificationEngine:
                 points=300,
                 requirements={"users_helped": 25},
                 icon="🦸",
-                rarity="epic"
+                rarity="epic",
             ),
-            
             # Learning Achievements
             Achievement(
                 id="knowledge_seeker",
@@ -238,7 +243,7 @@ class GamificationEngine:
                 points=150,
                 requirements={"courses_completed": 10},
                 icon="📚",
-                rarity="rare"
+                rarity="rare",
             ),
             Achievement(
                 id="skill_master",
@@ -248,9 +253,8 @@ class GamificationEngine:
                 points=400,
                 requirements={"skills_mastered": 5},
                 icon="🎯",
-                rarity="legendary"
+                rarity="legendary",
             ),
-            
             # Engagement Achievements
             Achievement(
                 id="early_bird",
@@ -260,7 +264,7 @@ class GamificationEngine:
                 points=250,
                 requirements={"login_streak": 30},
                 icon="🐦",
-                rarity="epic"
+                rarity="epic",
             ),
             Achievement(
                 id="night_owl",
@@ -270,10 +274,10 @@ class GamificationEngine:
                 points=100,
                 requirements={"late_night_sessions": 7},
                 icon="🦉",
-                rarity="rare"
-            )
+                rarity="rare",
+            ),
         ]
-    
+
     def _initialize_challenges(self) -> List[Challenge]:
         """Initialize predefined challenges"""
         return [
@@ -287,7 +291,7 @@ class GamificationEngine:
                 points_reward=20,
                 requirements={"content_created": 1},
                 duration_hours=24,
-                is_active=True
+                is_active=True,
             ),
             Challenge(
                 id="daily_share",
@@ -298,9 +302,8 @@ class GamificationEngine:
                 points_reward=15,
                 requirements={"content_shared": 1},
                 duration_hours=24,
-                is_active=True
+                is_active=True,
             ),
-            
             # Weekly Challenges
             Challenge(
                 id="weekly_creator",
@@ -311,7 +314,7 @@ class GamificationEngine:
                 points_reward=100,
                 requirements={"content_created": 10},
                 duration_hours=168,
-                is_active=True
+                is_active=True,
             ),
             Challenge(
                 id="weekly_learner",
@@ -322,9 +325,8 @@ class GamificationEngine:
                 points_reward=150,
                 requirements={"courses_completed": 3},
                 duration_hours=168,
-                is_active=True
+                is_active=True,
             ),
-            
             # Monthly Challenges
             Challenge(
                 id="monthly_master",
@@ -335,7 +337,7 @@ class GamificationEngine:
                 points_reward=500,
                 requirements={"content_created": 50},
                 duration_hours=720,
-                is_active=True
+                is_active=True,
             ),
             Challenge(
                 id="monthly_mentor",
@@ -346,21 +348,26 @@ class GamificationEngine:
                 points_reward=400,
                 requirements={"users_helped": 10},
                 duration_hours=720,
-                is_active=True
-            )
+                is_active=True,
+            ),
         ]
-    
-    def register_user(self, user_id: str, username: str = None, email: str = None) -> bool:
+
+    def register_user(:
+        self, user_id: str, username: str = None, email: str = None
+    ) -> bool:
         """Register a new user in the gamification system"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         try:
-            cursor.execute("""
+            cursor.execute(
+                """
                 INSERT OR IGNORE INTO users (id, username, email)
                 VALUES (?, ?, ?)
-            """, (user_id, username, email))
-            
+            """,
+                (user_id, username, email),
+            )
+
             conn.commit()
             return True
         except Exception as e:
@@ -368,238 +375,282 @@ class GamificationEngine:
             return False
         finally:
             conn.close()
-    
-    def track_action(self, user_id: str, action_type: str, action_value: int = 1) -> Dict:
+
+    def track_action(:
+        self, user_id: str, action_type: str, action_value: int = 1
+    ) -> Dict:
         """Track user action and award points"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         # Calculate points for action
         points_earned = self._calculate_points(action_type, action_value)
-        
+
         # Record action
-        cursor.execute("""
+        cursor.execute(
+            """
             INSERT INTO user_actions (user_id, action_type, action_value, points_earned)
             VALUES (?, ?, ?, ?)
-        """, (user_id, action_type, action_value, points_earned))
-        
+        """,
+            (user_id, action_type, action_value, points_earned),
+        )
+
         # Update user points and level
-        cursor.execute("""
+        cursor.execute(
+            """
             UPDATE users 
             SET total_points = total_points + ?, 
                 current_xp = current_xp + ?,
                 last_activity = CURRENT_TIMESTAMP
             WHERE id = ?
-        """, (points_earned, points_earned, user_id))
-        
+        """,
+            (points_earned, points_earned, user_id),
+        )
+
         # Check for level up
         level_up = self._check_level_up(user_id)
-        
+
         # Check for new achievements
         new_achievements = self._check_achievements(user_id)
-        
+
         # Update streak
         self._update_streak(user_id)
-        
+
         conn.commit()
         conn.close()
-        
+
         return {
-            'points_earned': points_earned,
-            'level_up': level_up,
-            'new_achievements': new_achievements
+            "points_earned": points_earned,
+            "level_up": level_up,
+            "new_achievements": new_achievements,
         }
-    
+
     def _calculate_points(self, action_type: str, action_value: int) -> int:
         """Calculate points for different actions"""
         point_values = {
-            'content_created': 10,
-            'content_shared': 5,
-            'course_completed': 25,
-            'user_helped': 15,
-            'login': 1,
-            'challenge_completed': 50,
-            'social_interaction': 3,
-            'feedback_given': 5
+            "content_created": 10,
+            "content_shared": 5,
+            "course_completed": 25,
+            "user_helped": 15,
+            "login": 1,
+            "challenge_completed": 50,
+            "social_interaction": 3,
+            "feedback_given": 5,
         }
-        
+
         base_points = point_values.get(action_type, 1)
         return base_points * action_value
-    
+
     def _check_level_up(self, user_id: str) -> bool:
         """Check if user should level up"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         cursor.execute("SELECT level, current_xp FROM users WHERE id = ?", (user_id,))
         user = cursor.fetchone()
-        
+
         if not user:
             conn.close()
             return False
-        
+
         current_level, current_xp = user
         next_level_xp = self._calculate_level_xp(current_level + 1)
-        
+
         if current_xp >= next_level_xp:
             # Level up!
-            cursor.execute("""
+            cursor.execute(
+                """
                 UPDATE users 
                 SET level = level + 1, current_xp = current_xp - ?
                 WHERE id = ?
-            """, (next_level_xp, user_id))
-            
+            """,
+                (next_level_xp, user_id),
+            )
+
             conn.commit()
             conn.close()
             return True
-        
+
         conn.close()
         return False
-    
+
     def _calculate_level_xp(self, level: int) -> int:
         """Calculate XP required for a level"""
         return level * 100 + (level - 1) * 50
-    
+
     def _check_achievements(self, user_id: str) -> List[str]:
         """Check for new achievements"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         new_achievements = []
-        
+
         for achievement in self.achievements:
             # Check if user already has this achievement
-            cursor.execute("""
+            cursor.execute(
+                """
                 SELECT id FROM user_achievements 
                 WHERE user_id = ? AND achievement_id = ?
-            """, (user_id, achievement.id))
-            
+            """,
+                (user_id, achievement.id),
+            )
+
             if cursor.fetchone():
                 continue
-            
+
             # Check if requirements are met
             if self._check_achievement_requirements(user_id, achievement.requirements):
                 # Award achievement
-                cursor.execute("""
+                cursor.execute(
+                    """
                     INSERT INTO user_achievements (user_id, achievement_id)
                     VALUES (?, ?)
-                """, (user_id, achievement.id))
-                
+                """,
+                    (user_id, achievement.id),
+                )
+
                 # Add points
-                cursor.execute("""
+                cursor.execute(
+                    """
                     UPDATE users 
                     SET total_points = total_points + ?
                     WHERE id = ?
-                """, (achievement.points, user_id))
-                
+                """,
+                    (achievement.points, user_id),
+                )
+
                 new_achievements.append(achievement.name)
-        
+
         conn.commit()
         conn.close()
-        
+
         return new_achievements
-    
+
     def _check_achievement_requirements(self, user_id: str, requirements: Dict) -> bool:
         """Check if achievement requirements are met"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         for requirement, target_value in requirements.items():
             if requirement == "content_created":
-                cursor.execute("""
+                cursor.execute(
+                    """
                     SELECT COUNT(*) FROM user_actions 
                     WHERE user_id = ? AND action_type = 'content_created'
-                """, (user_id,))
+                """,
+                    (user_id,),
+                )
                 count = cursor.fetchone()[0]
                 if count < target_value:
                     conn.close()
                     return False
-            
+
             elif requirement == "daily_streak":
-                cursor.execute("""
+                cursor.execute(
+                    """
                     SELECT streak_days FROM users WHERE id = ?
-                """, (user_id,))
+                """,
+                    (user_id,),
+                )
                 streak = cursor.fetchone()[0]
                 if streak < target_value:
                     conn.close()
                     return False
-            
+
             # Add more requirement checks as needed
-        
+
         conn.close()
         return True
-    
+
     def _update_streak(self, user_id: str):
         """Update user streak"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
-        cursor.execute("""
+
+        cursor.execute(
+            """
             SELECT last_activity FROM users WHERE id = ?
-        """, (user_id,))
-        
+        """,
+            (user_id,),
+        )
+
         last_activity = cursor.fetchone()[0]
         if last_activity:
             last_activity = datetime.fromisoformat(last_activity)
             today = datetime.now().date()
             last_activity_date = last_activity.date()
-            
+
             if last_activity_date == today:
                 # Already updated today
                 conn.close()
                 return
             elif last_activity_date == today - timedelta(days=1):
                 # Consecutive day
-                cursor.execute("""
+                cursor.execute(
+                    """
                     UPDATE users SET streak_days = streak_days + 1
                     WHERE id = ?
-                """, (user_id,))
+                """,
+                    (user_id,),
+                )
             else:
                 # Streak broken
-                cursor.execute("""
+                cursor.execute(
+                    """
                     UPDATE users SET streak_days = 1
                     WHERE id = ?
-                """, (user_id,))
-        
+                """,
+                    (user_id,),
+                )
+
         conn.commit()
         conn.close()
-    
+
     def get_user_progress(self, user_id: str) -> UserProgress:
         """Get user progress information"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
-        cursor.execute("""
+
+        cursor.execute(
+            """
             SELECT total_points, level, current_xp, streak_days, last_activity
             FROM users WHERE id = ?
-        """, (user_id,))
-        
+        """,
+            (user_id,),
+        )
+
         user = cursor.fetchone()
         if not user:
             conn.close()
             return None
-        
+
         total_points, level, current_xp, streak_days, last_activity = user
         next_level_xp = self._calculate_level_xp(level + 1)
-        
+
         # Get achievements
-        cursor.execute("""
+        cursor.execute(
+            """
             SELECT a.name FROM user_achievements ua
             JOIN achievements a ON ua.achievement_id = a.id
             WHERE ua.user_id = ?
-        """, (user_id,))
+        """,
+            (user_id,),
+        )
         achievements = [row[0] for row in cursor.fetchall()]
-        
+
         # Get completed challenges
-        cursor.execute("""
+        cursor.execute(
+            """
             SELECT c.title FROM user_challenges uc
             JOIN challenges c ON uc.challenge_id = c.id
             WHERE uc.user_id = ? AND uc.status = 'completed'
-        """, (user_id,))
+        """,
+            (user_id,),
+        )
         challenges_completed = [row[0] for row in cursor.fetchall()]
-        
+
         conn.close()
-        
+
         return UserProgress(
             user_id=user_id,
             total_points=total_points,
@@ -609,150 +660,187 @@ class GamificationEngine:
             achievements=achievements,
             challenges_completed=challenges_completed,
             streak_days=streak_days,
-            last_activity=datetime.fromisoformat(last_activity) if last_activity else datetime.now()
+            last_activity=datetime.fromisoformat(last_activity)
+            if last_activity
+            else datetime.now(),
         )
-    
-    def get_leaderboard(self, leaderboard_type: str = "points", limit: int = 50) -> List[Dict]:
+
+    def get_leaderboard(:
+        self, leaderboard_type: str = "points", limit: int = 50
+    ) -> List[Dict]:
         """Get leaderboard"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         if leaderboard_type == "points":
-            cursor.execute("""
+            cursor.execute(
+                """
                 SELECT username, total_points, level, streak_days
                 FROM users
                 ORDER BY total_points DESC
                 LIMIT ?
-            """, (limit,))
+            """,
+                (limit,),
+            )
         elif leaderboard_type == "streak":
-            cursor.execute("""
+            cursor.execute(
+                """
                 SELECT username, streak_days, total_points, level
                 FROM users
                 ORDER BY streak_days DESC
                 LIMIT ?
-            """, (limit,))
-        
+            """,
+                (limit,),
+            )
+
         leaderboard = cursor.fetchall()
         conn.close()
-        
-        return [{
-            'username': user[0] or f"User {user[0][:8]}",
-            'points': user[1],
-            'level': user[2],
-            'streak': user[3]
-        } for user in leaderboard]
-    
+
+        return [
+            {
+                "username": user[0] or f"User {user[0][:8]}",
+                "points": user[1],
+                "level": user[2],
+                "streak": user[3],
+            }
+            for user in leaderboard
+        ]
+
     def get_available_challenges(self, user_id: str) -> List[Challenge]:
-        """Get available challenges for user"""
+        """Get available challenges for user'\''
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         # Get challenges user hasn't completed
-        cursor.execute("""
+        cursor.execute(
+            '\''
             SELECT c.* FROM challenges c
             LEFT JOIN user_challenges uc ON c.id = uc.challenge_id AND uc.user_id = ?
             WHERE c.is_active = 1 AND (uc.id IS NULL OR uc.status != 'completed')
             ORDER BY c.difficulty, c.points_reward DESC
-        """, (user_id,))
-        
+        """,
+            (user_id,),
+        )
+
         challenges = cursor.fetchall()
         conn.close()
-        
-        return [Challenge(
-            id=challenge[0],
-            title=challenge[1],
-            description=challenge[2],
-            challenge_type=challenge[3],
-            difficulty=challenge[4],
-            points_reward=challenge[5],
-            requirements=json.loads(challenge[6]) if challenge[6] else {},
-            duration_hours=challenge[7],
-            is_active=bool(challenge[8])
-        ) for challenge in challenges]
-    
+
+        return [
+            Challenge(
+                id=challenge[0],
+                title=challenge[1],
+                description=challenge[2],
+                challenge_type=challenge[3],
+                difficulty=challenge[4],
+                points_reward=challenge[5],
+                requirements=json.loads(challenge[6]) if challenge[6] else {},
+                duration_hours=challenge[7],
+                is_active=bool(challenge[8]),
+            )
+            for challenge in challenges
+        ]
+
     def start_challenge(self, user_id: str, challenge_id: str) -> bool:
         """Start a challenge for user"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         try:
-            cursor.execute("""
+            cursor.execute(
+                """
                 INSERT INTO user_challenges (user_id, challenge_id, status)
                 VALUES (?, ?, 'active')
-            """, (user_id, challenge_id))
-            
+            """,
+                (user_id, challenge_id),
+            )
+
             conn.commit()
             return True
         except Exception as e:
-            logger.error(f"Error starting challenge {challenge_id} for user {user_id}: {e}")
-            return False
-        finally:
-            conn.close()
-    
-    def complete_challenge(self, user_id: str, challenge_id: str) -> bool:
-        """Complete a challenge for user"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        try:
-            # Get challenge points
-            cursor.execute("""
-                SELECT points_reward FROM challenges WHERE id = ?
-            """, (challenge_id,))
-            challenge = cursor.fetchone()
-            
-            if not challenge:
-                return False
-            
-            points_reward = challenge[0]
-            
-            # Update challenge status
-            cursor.execute("""
-                UPDATE user_challenges 
-                SET status = 'completed', completed_at = CURRENT_TIMESTAMP
-                WHERE user_id = ? AND challenge_id = ?
-            """, (user_id, challenge_id))
-            
-            # Award points
-            cursor.execute("""
-                UPDATE users 
-                SET total_points = total_points + ?
-                WHERE id = ?
-            """, (points_reward, user_id))
-            
-            conn.commit()
-            return True
-        except Exception as e:
-            logger.error(f"Error completing challenge {challenge_id} for user {user_id}: {e}")
+            logger.error(
+                f"Error starting challenge {challenge_id} for user {user_id}: {e}"
+            )
             return False
         finally:
             conn.close()
 
+    def complete_challenge(self, user_id: str, challenge_id: str) -> bool:
+        """Complete a challenge for user"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+
+        try:
+            # Get challenge points
+            cursor.execute(
+                """
+                SELECT points_reward FROM challenges WHERE id = ?
+            """,
+                (challenge_id,),
+            )
+            challenge = cursor.fetchone()
+
+            if not challenge:
+                return False
+
+            points_reward = challenge[0]
+
+            # Update challenge status
+            cursor.execute(
+                """
+                UPDATE user_challenges 
+                SET status = 'completed', completed_at = CURRENT_TIMESTAMP
+                WHERE user_id = ? AND challenge_id = ?
+            """,
+                (user_id, challenge_id),
+            )
+
+            # Award points
+            cursor.execute(
+                """
+                UPDATE users 
+                SET total_points = total_points + ?
+                WHERE id = ?
+            """,
+                (points_reward, user_id),
+            )
+
+            conn.commit()
+            return True
+        except Exception as e:
+            logger.error(
+                f"Error completing challenge {challenge_id} for user {user_id}: {e}"
+            )
+            return False
+        finally:
+            conn.close()
+
+
 def main():
-    """Main function to test gamification engine"""
+    """Main function to test gamification engine'\''
     engine = GamificationEngine()
-    
+
     print("🎮 Gamification Engine - User Engagement System")
     print("=" * 50)
-    
+
     # Test user registration
     test_user = "test_user_123"
     engine.register_user(test_user, "TestUser", "test@example.com")
     print(f"✅ User {test_user} registered")
-    
+
     # Test action tracking
     result = engine.track_action(test_user, "content_created", 1)
     print(f"✅ Action tracked: {result['points_earned']} points earned")
-    
+
     # Test progress
     progress = engine.get_user_progress(test_user)
     print(f"✅ User progress: Level {progress.level}, {progress.total_points} points")
-    
+
     # Test leaderboard
     leaderboard = engine.get_leaderboard()
     print(f"✅ Leaderboard generated with {len(leaderboard)} users")
-    
+
     print("\n🎉 Gamification engine is ready!")
+
 
 if __name__ == "__main__":
     main()

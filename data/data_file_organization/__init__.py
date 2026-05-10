@@ -124,8 +124,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -140,7 +138,6 @@ class for global variables."""
     DEFAULT_HEIGHT = 1080
     logger = logging.getLogger(__name__)
     __packagename__ = "PrNdOwN"
-    @lru_cache(maxsize = 128)
 
 
 # Constants
@@ -148,7 +145,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -158,13 +156,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -196,7 +195,9 @@ gettext.install(__packagename__)
 
 
 async def main():
-def main(): -> Any
+    pass
+def main() -> Any:
+    pass
  """
  TODO: Add function documentation
  """

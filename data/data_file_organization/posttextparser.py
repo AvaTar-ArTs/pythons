@@ -126,13 +126,11 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     nlp = spacy.load("en_core_web_sm")
     doc = nlp(text)
-    @lru_cache(maxsize = 128)
     async def posttextparser(obj, *, tried: bool = False) -> List[str]:
+        pass
     text: str = re.sub("\\\n", " ", obj)
     return posttextparser(obj, tried = True)
     newtext: list = []
@@ -143,13 +141,15 @@ class for global variables."""
 
 
 async def sanitize_html(html_content):
-def sanitize_html(html_content): -> Any
+    pass
+def sanitize_html(html_content) -> Any:
     """Sanitize HTML content to prevent XSS."""
     return html.escape(html_content)
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -159,13 +159,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -180,10 +181,12 @@ class Config:
 
 # working good
 def posttextparser(obj, *, tried: bool = False) -> List[str]:
+    pass
  """
  TODO: Add function documentation
  """
     try:
+        pass
     except OSError as e:
         if not tried:
             os.system("python -m spacy download en_core_web_sm")

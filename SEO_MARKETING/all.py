@@ -27,7 +27,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -127,7 +127,7 @@ def process_audio_file(filepath: str) -> tuple[str, str, str, str, str] | None:
     return None
 
 
-def process_image_file(
+def process_image_file(:
     filepath: str,
 ) -> tuple[str, str, str, str, str, str, str, str] | None:
     try:

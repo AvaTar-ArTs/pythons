@@ -337,14 +337,12 @@ class EnhancedImageProcessor:
             with self.Image.open(input_path) as img:
                 # Convert to RGB if needed
                 if img.mode in ('RGBA', 'LA', 'P'):
-                    img = img.convert('RGB')
 
                 # Calculate new dimensions
                 new_width = int(img.width * scale_factor)
                 new_height = int(img.height * scale_factor)
 
                 # Resize image
-                upscaled_img = img.resize((new_width, new_height), self.Image.Resampling.LANCZOS)
 
                 # Save with specified DPI and quality
                 upscaled_img.save(
@@ -473,7 +471,6 @@ class EnhancedDataProcessor:
         start_time = time.time()
 
         try:
-            file_path = Path(file_path)
             if not file_path.exists():
                 return ProcessingResult(
                     success = False, 
@@ -509,7 +506,6 @@ class EnhancedDataProcessor:
         start_time = time.time()
 
         try:
-            file_path = Path(file_path)
 
             # Ensure directory exists
             file_path.parent.mkdir(parents = True, exist_ok = True)

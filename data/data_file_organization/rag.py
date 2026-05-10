@@ -143,14 +143,16 @@ class for global variables."""
 
 
 async def safe_sql_query(query, params):
+    pass
 @lru_cache(maxsize = 128)
-def safe_sql_query(query, params): -> Any
+def safe_sql_query(query, params) -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
  except Exception as e:
   logger.error(f"Error in function: {e}")
   raise
-    """Execute SQL query safely with parameterized queries."""
+    """Execute SQL query safely with parameterized queries.'\''
     # Use parameterized queries to prevent SQL injection
     return execute_query(query, params)
 
@@ -165,7 +167,7 @@ if __name__ == "__main__":
         I'm particularly interested in:
             - how RAG works
             - how it is integrated with vector DBs and large language models (LLMs).
-        """
+        '\''
 
 
     logger.info("Retrieved documents:")

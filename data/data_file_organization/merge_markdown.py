@@ -117,8 +117,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     MARKDOWN_DIR = "~/avatararts/mark/2/markdown_files"
     duplicates = []
@@ -136,12 +134,6 @@ class for global variables."""
     markdown_files = [f for f in os.listdir(MARKDOWN_DIR) if f.endswith(".md")]
     duplicates = find_duplicates(markdown_files)
     merged_content = merge_files(file1, file2)
-    merged_file_path = os.path.join(MARKDOWN_DIR, f"merged_{file1}")
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
 
 
 # Constants
@@ -149,7 +141,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -159,13 +152,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -179,8 +173,10 @@ class Config:
 
 
 
-async def read_file(file_path): -> Any
-def read_file(file_path): -> Any
+async def read_file(file_path) -> Any:
+    pass
+def read_file(file_path) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -195,8 +191,10 @@ def read_file(file_path): -> Any
         return file.readlines()
 
 
-async def write_file(file_path, content): -> Any
-def write_file(file_path, content): -> Any
+async def write_file(file_path, content) -> Any:
+    pass
+def write_file(file_path, content) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -211,8 +209,10 @@ def write_file(file_path, content): -> Any
         file.writelines(content)
 
 
-async def find_duplicates(markdown_files): -> Any
-def find_duplicates(markdown_files): -> Any
+async def find_duplicates(markdown_files) -> Any:
+    pass
+def find_duplicates(markdown_files) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -233,8 +233,10 @@ def find_duplicates(markdown_files): -> Any
     return duplicates
 
 
-async def merge_files(file1, file2): -> Any
-def merge_files(file1, file2): -> Any
+async def merge_files(file1, file2) -> Any:
+    pass
+def merge_files(file1, file2) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -248,8 +250,10 @@ def merge_files(file1, file2): -> Any
     return merged_content
 
 
-async def main(): -> Any
-def main(): -> Any
+async def main() -> Any:
+    pass
+def main() -> Any:
+    pass
  """
  TODO: Add function documentation
  """

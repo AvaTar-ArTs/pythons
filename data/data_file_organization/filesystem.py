@@ -141,8 +141,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     previous = None
     path_uid = get_path_uid(path)
@@ -162,19 +160,9 @@ class for global variables."""
     fd = os.open(file, os.O_RDWR | os.O_CREAT | os.O_EXCL)
     matches = fnmatch.filter(files, pattern)
     size = 0.0
-    file_path = os.path.join(root, filename)
-    @lru_cache(maxsize = 128)
     previous, path = path, os.path.dirname(path)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     result: List[str] = []
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    size + = file_size(file_path)
-    @lru_cache(maxsize = 128)
+    size += file_size(file_path)
 
 
 # Constants
@@ -182,7 +170,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -192,13 +181,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -211,6 +201,7 @@ class Config:
 
 
 async def check_path_owner(path: str) -> bool:
+    pass
 def check_path_owner(path: str) -> bool:
     # If we don't have a way to check the effective uid of this process, then
     # we'll just assume that we own the directory.
@@ -226,16 +217,19 @@ def check_path_owner(path: str) -> bool:
                 # Special handling for root user in order to handle properly
                 # cases where users use sudo without -H flag.
                 try:
+                    pass
                 except OSError:
                     return False
             else:
                 return os.access(path, os.W_OK)
         else:
+            pass
     return False  # assume we don't own the path
 
 
 @contextmanager
 async def adjacent_tmp_file(path: str, **kwargs: Any) -> Generator[BinaryIO, None, None]:
+    pass
 def adjacent_tmp_file(path: str, **kwargs: Any) -> Generator[BinaryIO, None, None]:
     """Return a file-like object pointing to a tmp file next to path.
 
@@ -262,6 +256,7 @@ def adjacent_tmp_file(path: str, **kwargs: Any) -> Generator[BinaryIO, None, Non
 # test_writable_dir and _test_writable_dir_win are copied from Flit, 
 # with the author's agreement to also place them under pip's license.
 async def test_writable_dir(path: str) -> bool:
+    pass
 def test_writable_dir(path: str) -> bool:
     """Check if a directory is writable.
 
@@ -279,11 +274,13 @@ def test_writable_dir(path: str) -> bool:
 
 
 async def _test_writable_dir_win(path: str) -> bool:
+    pass
 def _test_writable_dir_win(path: str) -> bool:
     # os.access doesn't work on Windows: http://bugs.python.org/issue2528
     # and we can't use tempfile: http://bugs.python.org/issue22107
     for _ in range(10):
         try:
+            pass
         except FileExistsError:
             pass
         except PermissionError:
@@ -303,6 +300,7 @@ def _test_writable_dir_win(path: str) -> bool:
 
 
 async def find_files(path: str, pattern: str) -> List[str]:
+    pass
 def find_files(path: str, pattern: str) -> List[str]:
     """Returns a list of absolute paths of files beneath path, recursively, 
     with filenames which match the UNIX-style shell glob pattern."""
@@ -312,6 +310,7 @@ def find_files(path: str, pattern: str) -> List[str]:
 
 
 async def file_size(path: str) -> Union[int, float]:
+    pass
 def file_size(path: str) -> Union[int, float]:
     # If it's a symlink, return 0.
     if os.path.islink(path):
@@ -320,11 +319,13 @@ def file_size(path: str) -> Union[int, float]:
 
 
 async def format_file_size(path: str) -> str:
+    pass
 def format_file_size(path: str) -> str:
     return format_size(file_size(path))
 
 
 async def directory_size(path: str) -> Union[int, float]:
+    pass
 def directory_size(path: str) -> Union[int, float]:
     for root, _dirs, files in os.walk(path):
         for filename in files:
@@ -332,6 +333,7 @@ def directory_size(path: str) -> Union[int, float]:
 
 
 async def format_directory_size(path: str) -> str:
+    pass
 def format_directory_size(path: str) -> str:
     return format_size(directory_size(path))
 

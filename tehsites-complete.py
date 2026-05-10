@@ -177,37 +177,53 @@ class CompleteFileProcessor:
 
 
 def parse_complete_file_list():
-    """Parse the complete file list from the user's input"""
+    '\''Parse the complete file list from the user's input'\''
     # This is the complete file list from the user's request
     file_list = [
         Path(
-            str(Path.home()) + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
+            str(Path.home())
+            + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/03_Content_Development/01_Original_Content/_downloads.html"
+            str(Path.home())
+            + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/03_Content_Development/01_Original_Content/_downloads.html"
         ),
         Path(
-            str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/avatararts.org/dr/_downloads.html"
+            str(Path.home())
+            + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
+            str(Path.home())
+            + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/avatararts.org/dr/_downloads.html"
         ),
         Path(
-            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/04_Technical_Implementation/01_HTML_Files/_downloads.html"
+            str(Path.home())
+            + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/04_Technical_Implementation/01_HTML_Files/_downloads.html"
         ),
         Path(
-            str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/04_Technical_Implementation/01_HTML_Files/_downloads.html"
+            str(Path.home())
+            + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/04_Technical_Implementation/01_HTML_Files/_downloads.html"
         ),
-        Path(str(Path.home()) + "/tehSiTes/03_Busintent/projects/multimedia-workflows/1.txt"),
         Path(
-            str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/steven-chaplinski-website/content/projects/multimedia-workflows/1.txt"
+            str(Path.home())
+            + "/tehSiTes/03_Busintent/projects/multimedia-workflows/1.txt"
         ),
-        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/dr/Dr Adu-Upscale Image/2.png",
-        str(Path.home()) + "/tehSiTes/06_Archives_Backups/dr/Dr Adu-Upscale Image/2.png",
-        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
-        str(Path.home()) + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
-        str(Path.home()) + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
-        str(Path.home()) + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
+        Path(
+            str(Path.home())
+            + "/tehSiTes/02_Creative_Portfolio/steven-chaplinski-website/content/projects/multimedia-workflows/1.txt"
+        ),
+        str(Path.home())
+        + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/dr/Dr Adu-Upscale Image/2.png",
+        str(Path.home())
+        + "/tehSiTes/06_Archives_Backups/dr/Dr Adu-Upscale Image/2.png",
+        str(Path.home())
+        + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
+        str(Path.home())
+        + "/tehSiTes/03_Business_Platforms/seo-professional-portfolio/Dr Adu-Upscale Image/2.png",
+        str(Path.home())
+        + "/tehSiTes/02_Creative_Portfolio/AvaTarArTs/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
+        str(Path.home())
+        + "/tehSiTes/03_Business_Platforms/Dr_Adu_GainesvillePFS_SEO_Project/Dr Adu-Upscale Image/2.png",
     ]
 
     # Add more files from the user's list (truncated for brevity, but this would include all files)
@@ -278,7 +294,7 @@ def main():
         )
 
     logger.info(
-        f"\nTotal space that could be saved: {total_space_saved} bytes ({total_space_saved/CONSTANT_1024:.1f} KB)"
+        f"\nTotal space that could be saved: {total_space_saved} bytes ({total_space_saved / CONSTANT_1024:.1f} KB)"
     )
 
     return report

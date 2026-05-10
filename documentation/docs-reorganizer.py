@@ -28,7 +28,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -165,9 +165,9 @@ class DocsReorganizer:
         doc = f"""# ?? Python Automation Arsenal
 ## Comprehensive Documentation & Script Reference
 
-> **Last Updated**: {datetime.now().strftime('%B %d, %Y at %I:%M %p')}  
-> **Total Scripts**: {len(self.data['scripts'])}  
-> **Intelligent Categories**: {len([c for c in categories.values() if c['scripts']])}
+> **Last Updated**: {datetime.now().strftime("%B %d, %Y at %I:%M %p")}  
+> **Total Scripts**: {len(self.data["scripts"])}  
+> **Intelligent Categories**: {len([c for c in categories.values() if c["scripts"]])}
 
 ---
 
@@ -244,10 +244,10 @@ Welcome to your **Python Automation Arsenal** - a comprehensive collection of {t
 | Metric | Count |
 |--------|-------|
 | Total Scripts | {total} |
-| Instagram Tools | {len([s for s in self.data['scripts'] if 'instagram' in s['filename'].lower()])} |
-| Leonardo AI Tools | {len([s for s in self.data['scripts'] if 'leonardo' in s['filename'].lower()])} |
-| Audio/Music Tools | {len([s for s in self.data['scripts'] if any(x in s['filename'].lower() for x in ['audio', 'music', 'suno'])])} |
-| AI/LLM Integration | {len([s for s in self.data['scripts'] if any(x in s['filename'].lower() for x in ['openai', 'claude', 'ai-', 'gpt'])])} |
+| Instagram Tools | {len([s for s in self.data["scripts"] if "instagram" in s["filename"].lower()])} |
+| Leonardo AI Tools | {len([s for s in self.data["scripts"] if "leonardo" in s["filename"].lower()])} |
+| Audio/Music Tools | {len([s for s in self.data["scripts"] if any(x in s["filename"].lower() for x in ["audio", "music", "suno"])])} |
+| AI/LLM Integration | {len([s for s in self.data["scripts"] if any(x in s["filename"].lower() for x in ["openai", "claude", "ai-", "gpt"])])} |
 
 ---
 
@@ -328,7 +328,7 @@ Welcome to your **Python Automation Arsenal** - a comprehensive collection of {t
 
     def generate_appendices(self):
         """Generate helpful appendices"""
-        return """
+        return '\''
 ---
 
 ## ?? Appendices
@@ -443,7 +443,7 @@ _Built with ?? for automation enthusiasts ? Last updated {datetime.now().strftim
 
 
 def main():
-    """Generate reorganized documentation"""
+    """Generate reorganized documentation'\''
     print("?? Documentation Reorganizer")
     print("=" * 80)
 

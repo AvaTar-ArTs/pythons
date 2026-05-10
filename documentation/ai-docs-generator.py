@@ -30,7 +30,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -56,8 +56,6 @@ class IntelligentDocGenerator:
     """Generate intelligent documentation using AI analysis"""
 
     def __init__(self):
-        self.openai_key = os.getenv("OPENAI_API_KEY")
-        self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
         self.openai_client = (
             OpenAI(api_key=self.openai_key) if self.openai_key else None
         )
@@ -68,7 +66,7 @@ class IntelligentDocGenerator:
         )
 
     def analyze_script_with_ai(self, filepath: Path) -> dict:
-        """Use AI to deeply understand a script's purpose and capabilities"""
+        '\''Use AI to deeply understand a script's purpose and capabilities"""
         try:
             with open(filepath, encoding="utf-8", errors="ignore") as f:
                 code = f.read(4000)  # First 4000 chars
@@ -143,7 +141,7 @@ Return JSON format:
         }
 
     def analyze_relationships(self, scripts: list) -> dict:
-        """Use Claude to understand relationships between scripts"""
+        """Use Claude to understand relationships between scripts'\''
         if not self.anthropic_client:
             return {}
 
@@ -302,18 +300,18 @@ This repository contains **{len(scripts)}** Python automation scripts, intellige
         }.get(script.get("complexity", "Intermediate"), "?")
 
         entry = f"""
-#### {script.get('title', script['filename'])}
+#### {script.get("title", script["filename"])}
 
-**File**: `{script['filename']}` {complexity_badge} *{script.get('complexity', 'Intermediate')}*
+**File**: `{script["filename"]}` {complexity_badge} *{script.get("complexity", "Intermediate")}*
 
-**Purpose**: {script.get('purpose', 'N/A')}
+**Purpose**: {script.get("purpose", "N/A")}
 
 **Key Features**:
-{self._format_features(script.get('features', []))}
+{self._format_features(script.get("features", []))}
 
-**Use Case**: _{script.get('use_case', 'See documentation')}_
+**Use Case**: _{script.get("use_case", "See documentation")}_
 
-**Tags**: {', '.join(f'`{tag}`' for tag in script.get('tags', []))}
+**Tags**: {", ".join(f"`{tag}`" for tag in script.get("tags", []))}
 
 ---
 

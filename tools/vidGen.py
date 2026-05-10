@@ -1,9 +1,14 @@
-import random
+"""
+Summary of vidGen.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
 import os
 import time
 import shutil
 import subprocess
-import re
 import cv2
 from time import sleep
 import datetime
@@ -77,7 +82,8 @@ def renderThread(renderingScreen):
 
             if settings.backupVideos:
                 backupName = save_names[i].replace(
-                    settings.temp_path, settings.backup_path,
+                    settings.temp_path,
+                    settings.backup_path,
                 )
                 if os.path.exists(backupName):
                     print("Backup for video %s already exists" % backupName)
@@ -158,7 +164,7 @@ def renderVideo(video, rendering_screen):
                 credits.append(f"{clip.author_name}")
                 streamers_in_cred.append(clip.author_name)
 
-            final_duration = round(clip.vid_duration, 1)
+            round(clip.vid_duration, 1)
 
             print(
                 f'Rendering video ({i + 1}/{len(clips)}) to "{settings.vid_finishedvids}"/{mp4}_finished.mp4',

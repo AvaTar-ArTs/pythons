@@ -181,8 +181,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -202,7 +200,7 @@ class for global variables."""
     ALIASES = {
     VERSION_CMP = L("
     MARKER_OP = VERSION_CMP | L("not in") | L("in")
-    MARKER_VALUE = QuotedString("'") | QuotedString('"')
+    MARKER_VALUE = QuotedString("\'") | QuotedString(""")
     BOOLOP = L("and") | L("or")
     MARKER_VAR = VARIABLE | MARKER_VALUE
     MARKER_ITEM = Group(MARKER_VAR + MARKER_OP + MARKER_VAR)
@@ -225,23 +223,16 @@ class for global variables."""
     current_environment = default_environment()
     self._lazy_loaded = {}
     self.value = value
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     marker: Union[List[str], Tuple[Node, ...], str], first: Optional[bool] = True
     _operators: Dict[str, Operator] = {
     "< = ": operator.le, 
     "! = ": operator.ne, 
     "> = ": operator.ge, 
-    @lru_cache(maxsize = 128)
     oper: Optional[Operator] = _operators.get(op.serialize())
-    @lru_cache(maxsize = 128)
     value: Union[str, Undefined] = environment.get(name, _undefined)
-    @lru_cache(maxsize = 128)
     groups: List[List[bool]] = [[]]
     lhs, op, rhs = marker
-    @lru_cache(maxsize = 128)
-    version + = kind[0] + str(info.serial)
-    @lru_cache(maxsize = 128)
+    version += kind[0] + str(info.serial)
     self._lazy_loaded = {}
     self._markers = _coerce_parse_result(MARKER.parseString(marker))
     async def evaluate(self, environment: Optional[Dict[str, str]] = None) -> bool:
@@ -252,7 +243,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -262,13 +254,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -322,23 +315,27 @@ class UndefinedEnvironmentName(ValueError):
     """
     A name was attempted to be used that does not exist inside of the
     environment.
-    """
+    '\''
 
 
 @dataclass
 class Node:
-    async def __init__(self, value: Any) -> None:
+    def __init__(self, value: Any) -> None:
+        pass
     def __init__(self, value: Any) -> None:
 
     async def __str__(self) -> str:
+        pass
     def __str__(self) -> str:
         return str(self.value)
 
     async def __repr__(self) -> str:
+        pass
     def __repr__(self) -> str:
         return f"<{self.__class__.__name__}('{self}')>"
 
     async def serialize(self) -> str:
+        pass
     def serialize(self) -> str:
         raise NotImplementedError
 
@@ -346,6 +343,7 @@ class Node:
 @dataclass
 class Variable(Node):
     async def serialize(self) -> str:
+        pass
     def serialize(self) -> str:
         return str(self)
 
@@ -353,6 +351,7 @@ class Variable(Node):
 @dataclass
 class Value(Node):
     async def serialize(self) -> str:
+        pass
     def serialize(self) -> str:
         return f'"{self}"'
 
@@ -360,6 +359,7 @@ class Value(Node):
 @dataclass
 class Op(Node):
     async def serialize(self) -> str:
+        pass
     def serialize(self) -> str:
         return str(self)
 
@@ -407,6 +407,7 @@ MARKER_EXPR << MARKER_ATOM + ZeroOrMore(BOOLOP + MARKER_EXPR)
 
 
 async def _coerce_parse_result(results: Union[ParseResults, List[Any]]) -> List[Any]:
+    pass
 def _coerce_parse_result(results: Union[ParseResults, List[Any]]) -> List[Any]:
     if isinstance(results, ParseResults):
         return [_coerce_parse_result(i) for i in results]
@@ -414,8 +415,8 @@ def _coerce_parse_result(results: Union[ParseResults, List[Any]]) -> List[Any]:
         return results
 
 
-async def _format_marker(
-def _format_marker( -> Any
+async def _format_marker(:
+    pass
 ) -> str:
 
     assert isinstance(marker, (list, tuple, str))
@@ -446,8 +447,10 @@ def _format_marker( -> Any
 
 
 async def _eval_op(lhs: str, op: Op, rhs: str) -> bool:
+    pass
 def _eval_op(lhs: str, op: Op, rhs: str) -> bool:
     try:
+        pass
     except InvalidSpecifier:
         pass
     else:
@@ -467,6 +470,7 @@ class Undefined:
 
 
 async def _get_env(environment: Dict[str, str], name: str) -> str:
+    pass
 def _get_env(environment: Dict[str, str], name: str) -> str:
 
     if isinstance(value, Undefined):
@@ -476,6 +480,7 @@ def _get_env(environment: Dict[str, str], name: str) -> str:
 
 
 async def _evaluate_markers(markers: List[Any], environment: Dict[str, str]) -> bool:
+    pass
 def _evaluate_markers(markers: List[Any], environment: Dict[str, str]) -> bool:
 
     for marker in markers:
@@ -498,12 +503,14 @@ def _evaluate_markers(markers: List[Any], environment: Dict[str, str]) -> bool:
 
 
 async def format_full_version(info: "sys._version_info") -> str:
+    pass
 def format_full_version(info: "sys._version_info") -> str:
     if kind != "final":
     return version
 
 
 async def default_environment() -> Dict[str, str]:
+    pass
 def default_environment() -> Dict[str, str]:
     return {
         "implementation_name": implementation_name, 
@@ -522,19 +529,23 @@ def default_environment() -> Dict[str, str]:
 
 @dataclass
 class Marker:
-    async def __init__(self, marker: str) -> None:
+    def __init__(self, marker: str) -> None:
+        pass
     def __init__(self, marker: str) -> None:
         try:
+            pass
         except ParseException as e:
             raise InvalidMarker(
                 f"Invalid marker: {marker!r}, parse error at " f"{marker[e.loc : e.loc + 8]!r}"
             )
 
     async def __str__(self) -> str:
+        pass
     def __str__(self) -> str:
         return _format_marker(self._markers)
 
     async def __repr__(self) -> str:
+        pass
     def __repr__(self) -> str:
         return f"<Marker('{self}')>"
 

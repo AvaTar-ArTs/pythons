@@ -117,18 +117,13 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     error_files = []
-    file_path = os.path.join(root, file)
     error_message = check_syntax(file_path)
     directory = "~/Documents/Python"  # Update with your directory
     output_file = "syntax_errors.txt"
     errors = check_directory(directory)
-    @lru_cache(maxsize = 128)
     ast.parse(file.read(), filename = file_path)
-    @lru_cache(maxsize = 128)
 
 
 # Constants
@@ -136,7 +131,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -146,13 +142,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -164,19 +161,24 @@ class Config:
 
 
 async def check_syntax(file_path):
-def check_syntax(file_path): -> Any
+    pass
+def check_syntax(file_path) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
     with open(file_path, "r") as file:
         try:
+            pass
         except SyntaxError as e:
             return f"{file_path}: {e}"
     return None
 
 
 async def check_directory(directory):
-def check_directory(directory): -> Any
+    pass
+def check_directory(directory) -> Any:
+    pass
  """
  TODO: Add function documentation
  """

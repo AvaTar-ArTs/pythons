@@ -144,8 +144,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     usage = """
     dest = "download_dir", 
@@ -194,8 +192,9 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
+    pass
 @lru_cache(maxsize = 128)
-def validate_input(data, validators): -> Any
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -205,13 +204,15 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
+    pass
 @lru_cache(maxsize = 128)
-def memoize(func): -> Any
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
+        pass
 @lru_cache(maxsize = 128)
-    def wrapper(*args, **kwargs): -> Any
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
         return cache[key]
 
@@ -247,7 +248,9 @@ class DownloadCommand(RequirementCommand):
       %prog [options] <archive url/path> ..."""
 
     async def add_options(self) -> None:
+        pass
     def add_options(self) -> None:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -290,7 +293,9 @@ class DownloadCommand(RequirementCommand):
 
     @with_cleanup
     async def run(self, options: Values, args: List[str]) -> int:
+        pass
     def run(self, options: Values, args: List[str]) -> int:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:

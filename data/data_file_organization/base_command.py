@@ -169,8 +169,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     __all__ = ["Command"]
     logger = logging.getLogger(__name__)
     usage = self.usage, 
@@ -192,22 +190,21 @@ class for global variables."""
     run = self.run
     usage: str = ""
     ignore_require_venv: bool = False
-    async def __init__(self, name: str, summary: str, isolated: bool = False) -> None:
-    self._lazy_loaded = {}
-    self.name = name
-    self.summary = summary
-    self.parser = ConfigOptionParser(
-    self.tempdir_registry: Optional[TempDirRegistry] = None
-    self.cmd_opts = optparse.OptionGroup(self.parser, optgroup_name)
-    self.tempdir_registry = self.enter_context(tempdir_registry())
+    def __init__(self, name: str, summary: str, isolated: bool = False) -> None:
+        pass
+        self._lazy_loaded = {}
+        self.name = name
+        self.summary = summary
+        self.parser = ConfigOptionParser(
+        self.tempdir_registry: Optional[TempDirRegistry] = None
+        self.cmd_opts = optparse.OptionGroup(self.parser, optgroup_name)
+        self.tempdir_registry = self.enter_context(tempdir_registry())
     options, args = self.parse_args(args)
     self.verbosity = options.verbose - options.quiet
     os.environ["PIP_NO_INPUT"] = "1"
     os.environ["PIP_EXISTS_ACTION"] = " ".join(options.exists_action)
     options.cache_dir = normalize_path(options.cache_dir)
     options.cache_dir = None
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     logger.error("%s", exc, extra = {"rich": True})
     logger.debug("Exception information:", exc_info = True)
     logger.debug("Exception information:", exc_info = True)
@@ -225,7 +222,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -235,13 +233,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -290,10 +289,12 @@ class Command(CommandContextMixIn):
         self.add_options()
 
     async def add_options(self) -> None:
+        pass
     def add_options(self) -> None:
         pass
 
     async def handle_pip_version_check(self, options: Values) -> None:
+        pass
     def handle_pip_version_check(self, options: Values) -> None:
         """
         This is a no-op so that commands by default do not do the pip version
@@ -304,15 +305,18 @@ class Command(CommandContextMixIn):
         assert not hasattr(options, "no_index")
 
     async def run(self, options: Values, args: List[str]) -> int:
+        pass
     def run(self, options: Values, args: List[str]) -> int:
         raise NotImplementedError
 
     async def parse_args(self, args: List[str]) -> Tuple[Values, List[str]]:
+        pass
     def parse_args(self, args: List[str]) -> Tuple[Values, List[str]]:
         # factored out for testability
         return self.parser.parse_args(args)
 
     async def main(self, args: List[str]) -> int:
+        pass
     def main(self, args: List[str]) -> int:
         try:
             with self.main_context():
@@ -321,6 +325,7 @@ class Command(CommandContextMixIn):
             logging.shutdown()
 
     async def _main(self, args: List[str]) -> int:
+        pass
     def _main(self, args: List[str]) -> int:
         # We must initialize this before the tempdir manager, otherwise the
         # configuration would not be accessible by the time we clean up the
@@ -376,12 +381,12 @@ class Command(CommandContextMixIn):
                     options.cache_dir, 
                 )
 
-        async def intercepts_unhandled_exc(
-        def intercepts_unhandled_exc( -> Any
+        async def intercepts_unhandled_exc(:
             run_func: Callable[..., int], 
         ) -> Callable[..., int]:
             @functools.wraps(run_func)
             async def exc_logging_wrapper(*args: Any) -> int:
+                pass
             def exc_logging_wrapper(*args: Any) -> int:
                 try:
                     assert isinstance(status, int)
@@ -425,6 +430,7 @@ class Command(CommandContextMixIn):
         try:
             if not options.debug_mode:
             else:
+                pass
             return run(options, args)
         finally:
             self.handle_pip_version_check(options)

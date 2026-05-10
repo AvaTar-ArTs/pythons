@@ -84,7 +84,7 @@ def sanitize_string(value: str) -> str:
         raise ValueError("Input must be a string")
 
     # Remove potentially dangerous characters
-    dangerous_chars = ['<', '>', '"', "'", '&', ';', '(', ')', '{', '}']
+    dangerous_chars = ['<', '>', '\'', "\'", '&', ';', '(', ')', '{', '}']
     for char in dangerous_chars:
         value = value.replace(char, '')
 
@@ -146,10 +146,8 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     logger = logging.getLogger(__name__)
-    csv_file_path = input("Enter the path to the CSV file: ")
     destination_directory = "/Volumes/oG-bAk/steven"
     csv_reader = csv.reader(file)
-    file_path = row[-1].strip()  # Assuming the file paths are in the last column
     relative_path = os.path.relpath(file_path, start
     destination_path = os.path.join(destination_directory, relative_path)
     os.makedirs(os.path.dirname(destination_path), exist_ok = True)

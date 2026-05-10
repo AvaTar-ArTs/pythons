@@ -1,4 +1,0 @@
-mutagen==1.47.0
-openai==1.53.0
-Pillow==9.0
-python-dotenv==1.0.1
