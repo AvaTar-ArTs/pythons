@@ -1,19 +1,49 @@
-404: Not Found*.json
-suno-476514-*.json
-_archives/*.zip
-*.zip
+# OS files
 .DS_Store
 **/.DS_Store
+
+# Local environment and editor state
+.env
+.venv/
+.vscode/
+.pytest_cache/
+.ruff_cache/
+.aider*
 
 # Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.aider*
+
+# Archive outputs
+_archives/*.zip
+*.zip
+*.rar
+*.7z
+*.tar.gz
 
 # Local analysis outputs
 ENV_D_ANALYSIS_*/
 ENV_D_ZSHRC_COMPARISON_*/
 MULTI_DEPTH_ANALYSIS_*/
-\n# Worktree directory for isolated development environments\n.worktrees/
+
+# Worktree directory for isolated development environments
+.worktrees/
+
+# Generated and temporary artifacts
+*.backup
+*.backup_*
+*.bak
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# Generated indexes and site artifacts
+content_index/*.csv
+content_index/*.json
+site/*.xml.gz
+
+# Known local exports
+suno-476514-*.json
