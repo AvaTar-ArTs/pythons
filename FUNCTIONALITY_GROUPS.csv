@@ -1,0 +1,192 @@
+folder,file,current_path,functionality,keywords,primary_imports,function_count,suggested_group,group_size
+audio,tts_main.py,audio/tts_main.py,api,"api, file_operations",,0,api,10
+audio,mp3_processor.py,audio/mp3_processor.py,api,"api, file_operations",,0,api,10
+audio,webm-to-mp3.py,audio/webm-to-mp3.py,api,"api, audio_processing, file_operations, video_processing",,0,api,10
+audio,convert_to_audio.py,audio/convert_to_audio.py,api,"api, file_operations, image_processing",,0,api,10
+audio,aws_polly.py,audio/aws_polly.py,api,"api, config, file_operations, testing",,0,api,10
+audio,text_to_speech.py,audio/text_to_speech.py,api,"api, file_operations",,0,api,10
+audio,mp3_to_mp4.py,audio/mp3_to_mp4.py,api,"api, audio_processing, file_operations, testing, video_processing, youtube",,0,api,10
+audio,audiometadata.py,audio/audiometadata.py,api,"api, file_operations, image_processing",,0,api,10
+audio,audiodownload.py,audio/audiodownload.py,api,"api, audio_processing, data_processing, file_operations, video_processing, youtube",,0,api,10
+audio,streamlabs_polly.py,audio/streamlabs_polly.py,api,"api, data_processing, file_operations",,0,api,10
+audio,ORGANIZE_AUDIOBOOK.py,audio/ORGANIZE_AUDIOBOOK.py,file_operations,file_operations,"pathlib, shutil",0,file_operations,2
+audio,audio_test.py,audio/audio_test.py,file_operations,"file_operations, testing",,0,file_operations,2
+image,imgmove.py,image/imgmove.py,api,"api, file_operations",,0,api,21
+image,ImageCreator.py,image/ImageCreator.py,api,"api, file_operations, image_processing",,0,api,21
+image,gallery_upload.py,image/gallery_upload.py,api,"api, data_processing, file_operations",,0,api,21
+image,repost_best_photos_from_users.py,image/repost_best_photos_from_users.py,api,"api, file_operations, instagram",,0,api,21
+image,repost_photo.py,image/repost_photo.py,api,"api, file_operations, instagram",,0,api,21
+image,scan_images.py,image/scan_images.py,api,"api, file_operations",,0,api,21
+image,img-img.py,image/img-img.py,api,"api, file_operations, image_processing, upscaling",,0,api,21
+image,Telegraph Image Downloader [RUS].py,image/Telegraph Image Downloader [RUS].py,api,"api, file_operations, web_scraping",,0,api,21
+image,html-auto-img-gallery.py,image/html-auto-img-gallery.py,api,"api, data_processing, file_operations",,0,api,21
+image,img2img.py,image/img2img.py,api,"api, file_operations, image_processing, upscaling",,0,api,21
+image,imagenarator.py,image/imagenarator.py,api,"api, file_operations, image_processing",,0,api,21
+image,img.py,image/img.py,api,"api, data_processing, file_operations",,0,api,21
+image,gallery_logic.py,image/gallery_logic.py,api,"api, data_processing, file_operations",,0,api,21
+image,img2pdf.py,image/img2pdf.py,api,"api, file_operations, image_processing",,0,api,21
+image,scan_images--.py,image/scan_images--.py,api,"api, file_operations",,0,api,21
+image,imgsearch.py,image/imgsearch.py,api,"api, data_processing, file_operations",,0,api,21
+image,img-to-pdf-folder.py,image/img-to-pdf-folder.py,api,"api, file_operations, image_processing",,0,api,21
+image,api_photo.py,image/api_photo.py,api,"api, data_processing, file_operations, image_processing, instagram",,0,api,21
+image,img2img copy.py,image/img2img copy.py,api,"api, file_operations, image_processing, upscaling",,0,api,21
+image,bot_photo.py,image/bot_photo.py,api,"api, file_operations, instagram",,0,api,21
+image,auto-image-gallery.py,image/auto-image-gallery.py,api,"api, data_processing, file_operations",,0,api,21
+image,direct_send_photo.py,image/direct_send_photo.py,file_operations,"file_operations, instagram",,0,file_operations,10
+image,image_utils.py,image/image_utils.py,file_operations,"file_operations, image_processing","PIL, contextlib, exceptions",11,file_operations,10
+image,download_your_photos.py,image/download_your_photos.py,file_operations,"file_operations, instagram",,0,file_operations,10
+image,test_image_utils.py,image/test_image_utils.py,file_operations,"file_operations, image_processing, testing","core, os, pathlib",8,file_operations,10
+image,download_photos_by_user.py,image/download_photos_by_user.py,file_operations,"file_operations, instagram",,0,file_operations,10
+image,upload_photos.py,image/upload_photos.py,file_operations,"file_operations, instagram",,0,file_operations,10
+image,image_test.py,image/image_test.py,file_operations,file_operations,,0,file_operations,10
+image,pdf2img.py,image/pdf2img.py,file_operations,file_operations,,0,file_operations,10
+image,upload_story_photo.py,image/upload_story_photo.py,file_operations,"file_operations, instagram",,0,file_operations,10
+image,download_photos_by_hashtag.py,image/download_photos_by_hashtag.py,file_operations,"file_operations, instagram",,0,file_operations,10
+image,test_gallery_init.py,image/test_gallery_init.py,config,"config, data_processing, file_operations, testing",,0,config,3
+image,test_gallery_logic.py,image/test_gallery_logic.py,config,"config, data_processing, file_operations, testing",,0,config,3
+image,test_gallery_upload.py,image/test_gallery_upload.py,config,"config, data_processing, file_operations, image_processing, testing",,0,config,3
+video,youtube.py,video/youtube.py,data_processing,"data_processing, file_operations, youtube",,0,data_processing,4
+video,ytube.py,video/ytube.py,data_processing,"data_processing, file_operations, youtube",,0,data_processing,4
+video,download_user_videos.py,video/download_user_videos.py,data_processing,"data_processing, file_operations, instagram",,0,data_processing,4
+video,youtube2.py,video/youtube2.py,data_processing,"data_processing, file_operations, youtube",,0,data_processing,4
+video,cache_media_video.py,video/cache_media_video.py,api,"api, file_operations",,0,api,22
+video,clips.py,video/clips.py,api,"api, data_processing, file_operations, image_processing",,0,api,22
+video,youtube_analytics.py,video/youtube_analytics.py,api,"api, data_processing, file_operations, youtube",,0,api,22
+video,convert_to_video.py,video/convert_to_video.py,api,"api, file_operations, image_processing",,0,api,22
+video,YouTube_VIEWBOT.py,video/YouTube_VIEWBOT.py,api,"api, file_operations, testing, youtube",,0,api,22
+video,uploadYT.py,video/uploadYT.py,api,"api, data_processing, file_operations, youtube",,0,api,22
+video,DownloadVideos.py,video/DownloadVideos.py,api,"api, file_operations",,0,api,22
+video,create_video.py,video/create_video.py,api,"api, file_operations, image_processing, video_processing",,0,api,22
+video,twitchClips.py,video/twitchClips.py,api,"api, automation, file_operations, testing, video_processing, web_scraping",,0,api,22
+video,bot_video.py,video/bot_video.py,api,"api, file_operations, instagram",,0,api,22
+video,youtube 4.py,video/youtube 4.py,api,"api, automation, data_processing, file_operations, testing, web_scraping, youtube",,0,api,22
+video,YouTubeBot.py,video/YouTubeBot.py,api,"api, automation, file_operations, image_processing, web_scraping, youtube",,0,api,22
+video,yt_studio.py,video/yt_studio.py,api,"api, file_operations, youtube",,0,api,22
+video,upload_video.py,video/upload_video.py,api,"api, data_processing, file_operations, testing, youtube",,0,api,22
+video,video-downloader.py,video/video-downloader.py,api,"api, file_operations",,0,api,22
+video,YouTubeBot 3.py,video/YouTubeBot 3.py,api,"api, automation, file_operations, image_processing, web_scraping, youtube",,0,api,22
+video,dedupe_python.py,video/dedupe_python.py,api,"api, file_operations, testing",,0,api,22
+video,scrape-youtube-channel-videos-url.py,video/scrape-youtube-channel-videos-url.py,api,"api, automation, file_operations, testing, web_scraping, youtube",,0,api,22
+video,yt_auto_main.py,video/yt_auto_main.py,api,"api, data_processing, file_operations, instagram",,0,api,22
+video,video.py,video/video.py,api,"api, automation, data_processing, file_operations, testing, video_processing, web_scraping, youtube",,0,api,22
+video,YouTubeBot 2.py,video/YouTubeBot 2.py,api,"api, automation, file_operations, image_processing, web_scraping, youtube",,0,api,22
+video,videos.py,video/videos.py,api,"api, data_processing, file_operations",,0,api,22
+video,ytcsv.py,video/ytcsv.py,file_operations,"file_operations, youtube",,0,file_operations,2
+video,Clip.py,video/Clip.py,file_operations,file_operations,,0,file_operations,2
+social_media,watch_user_likers_stories.py,social_media/watch_user_likers_stories.py,api,"api, data_processing, file_operations, instagram, testing",,0,api,44
+social_media,bot_comment.py,social_media/bot_comment.py,api,"api, file_operations",,0,api,44
+social_media,test_bot_get.py,social_media/test_bot_get.py,api,"api, data_processing, file_operations, instagram, testing",,0,api,44
+social_media,AskReddit_loop.py,social_media/AskReddit_loop.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,gmupload.py,social_media/gmupload.py,api,"api, file_operations",,0,api,44
+social_media,help_uploadbot.py,social_media/help_uploadbot.py,api,"api, file_operations",,0,api,44
+social_media,bot_filter.py,social_media/bot_filter.py,api,"api, data_processing, file_operations",,0,api,44
+social_media,NewUpload_20250607125012.py,social_media/NewUpload_20250607125012.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,society6-upload.py,social_media/society6-upload.py,api,"api, automation, file_operations, web_scraping",,0,api,44
+social_media,friends_last_post_likes_and_interact_with_user_based_on_hashtahs.py,social_media/friends_last_post_likes_and_interact_with_user_based_on_hashtahs.py,api,"api, automation, config, file_operations, instagram, web_scraping",,0,api,44
+social_media,bot_get.py,social_media/bot_get.py,api,"api, data_processing, file_operations, instagram",,0,api,44
+social_media,UploadCompilation.py,social_media/UploadCompilation.py,api,"api, data_processing, file_operations, image_processing, testing, youtube",,0,api,44
+social_media,botStories.py,social_media/botStories.py,api,"api, automation, file_operations, instagram, web_scraping",,0,api,44
+social_media,NewUpload_20250607131031.py,social_media/NewUpload_20250607131031.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,downloadupload.py,social_media/downloadupload.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,NewUpload_20250607131227.py,social_media/NewUpload_20250607131227.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,reset_following.py,social_media/reset_following.py,api,"api, file_operations, instagram",,0,api,44
+social_media,infinity_hashtags_liker.py,social_media/infinity_hashtags_liker.py,api,"api, file_operations, instagram",,0,api,44
+social_media,NewUpload_20250607130507.py,social_media/NewUpload_20250607130507.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,bot_direct.py,social_media/bot_direct.py,api,"api, file_operations",,0,api,44
+social_media,botLike.py,social_media/botLike.py,api,"api, automation, file_operations, instagram, web_scraping",,0,api,44
+social_media,NewUpload_20250607131212.py,social_media/NewUpload_20250607131212.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,bot_unlike.py,social_media/bot_unlike.py,api,"api, file_operations",,0,api,44
+social_media,bot_story.py,social_media/bot_story.py,api,"api, file_operations, instagram",,0,api,44
+social_media,botComment.py,social_media/botComment.py,api,"api, automation, file_operations, instagram, web_scraping",,0,api,44
+social_media,NewUpload_20250607131221.py,social_media/NewUpload_20250607131221.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,upload (1).py,social_media/upload (1).py,api,"api, data_processing, file_operations, upscaling",,0,api,44
+social_media,NewUpload_20250607131205.py,social_media/NewUpload_20250607131205.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,bot_follow.py,social_media/bot_follow.py,api,"api, file_operations",,0,api,44
+social_media,NewUpload_20250607130440.py,social_media/NewUpload_20250607130440.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,bot.py,social_media/bot.py,api,"api, automation, file_operations, image_processing, instagram",,0,api,44
+social_media,bulk_upload.py,social_media/bulk_upload.py,api,"api, data_processing, file_operations, testing, youtube",,0,api,44
+social_media,botError.py,social_media/botError.py,api,"api, automation, file_operations, instagram, web_scraping",,0,api,44
+social_media,askreddit.py,social_media/askreddit.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,instagram.py,social_media/instagram.py,api,"api, automation, data_processing, file_operations, image_processing, instagram, web_scraping",,0,api,44
+social_media,bot_stats.py,social_media/bot_stats.py,api,"api, file_operations",,0,api,44
+social_media,NewUpload_20250607124913.py,social_media/NewUpload_20250607124913.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,bot_unfollow.py,social_media/bot_unfollow.py,api,"api, file_operations",,0,api,44
+social_media,AskRedditBot.py,social_media/AskRedditBot.py,api,"api, file_operations",,0,api,44
+social_media,botDraw.py,social_media/botDraw.py,api,"api, automation, file_operations, instagram, web_scraping",,0,api,44
+social_media,googleapi-upload.py,social_media/googleapi-upload.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,NewUpload_20250607131028.py,social_media/NewUpload_20250607131028.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,ReportBot.py,social_media/ReportBot.py,api,"api, automation, config, file_operations, instagram",,0,api,44
+social_media,NewUpload_20250607125040.py,social_media/NewUpload_20250607125040.py,api,"api, data_processing, file_operations, youtube",,0,api,44
+social_media,like_hashtags.py,social_media/like_hashtags.py,file_operations,"file_operations, instagram",,0,file_operations,7
+social_media,like_hashtags_from_file.py,social_media/like_hashtags_from_file.py,file_operations,"file_operations, instagram",,0,file_operations,7
+social_media,test_bot_support.py,social_media/test_bot_support.py,file_operations,"file_operations, instagram, testing",,0,file_operations,7
+social_media,target_followers_of_similar_accounts_and_influencers.py,social_media/target_followers_of_similar_accounts_and_influencers.py,file_operations,file_operations,,0,file_operations,7
+social_media,basic_follow-unfollow_activity.py,social_media/basic_follow-unfollow_activity.py,file_operations,file_operations,,0,file_operations,7
+social_media,like_by_tag_interact_unfollow.py,social_media/like_by_tag_interact_unfollow.py,file_operations,file_operations,,0,file_operations,7
+social_media,massive_follow_then_unfollow_works-non-stop.py,social_media/massive_follow_then_unfollow_works-non-stop.py,file_operations,file_operations,,0,file_operations,7
+social_media,test_bot_follow.py,social_media/test_bot_follow.py,data_processing,"data_processing, file_operations, instagram, testing",,0,data_processing,3
+social_media,test_bot_like.py,social_media/test_bot_like.py,data_processing,"data_processing, file_operations, instagram, testing",,0,data_processing,3
+social_media,test_bot_unlike.py,social_media/test_bot_unlike.py,data_processing,"data_processing, file_operations, instagram, testing",,0,data_processing,3
+upscale,upscaled_media_image.py,upscale/upscaled_media_image.py,api,"api, data_processing, file_operations, image_processing, upscaling",,0,api,15
+upscale,upscale_media_image.py,upscale/upscale_media_image.py,api,"api, file_operations, image_processing, upscaling",,0,api,15
+upscale,upscale copy 2.py,upscale/upscale copy 2.py,api,"api, file_operations, image_processing, upscaling",,0,api,15
+upscale,upscale-dl.py,upscale/upscale-dl.py,api,"api, data_processing, file_operations, upscaling","os, requests, time",0,api,15
+upscale,upscale-dl 2.py,upscale/upscale-dl 2.py,api,"api, data_processing, file_operations, upscaling",,0,api,15
+upscale,upscale-dl_media_image.py,upscale/upscale-dl_media_image.py,api,"api, data_processing, file_operations, upscaling",,0,api,15
+upscale,upscale_file.py,upscale/upscale_file.py,api,"api, data_processing, file_operations, upscaling","json, os, requests",0,api,15
+upscale,upscale copy.py,upscale/upscale copy.py,api,"api, file_operations, image_processing, upscaling",,0,api,15
+upscale,web-png-upscale.py,upscale/web-png-upscale.py,api,"api, file_operations, image_processing, upscaling",,0,api,15
+upscale,upscale2_media_image.py,upscale/upscale2_media_image.py,api,"api, file_operations, image_processing, upscaling",,0,api,15
+upscale,loop-upscale.py,upscale/loop-upscale.py,api,"api, data_processing, file_operations, upscaling","json, os, requests",0,api,15
+upscale,upscale 2 copy.py,upscale/upscale 2 copy.py,api,"api, data_processing, file_operations, upscaling",,0,api,15
+upscale,img-img-upscale.py,upscale/img-img-upscale.py,api,"api, file_operations, image_processing, upscaling",,0,api,15
+upscale,upscale--_media_image.py,upscale/upscale--_media_image.py,api,"api, file_operations, image_processing, upscaling",,0,api,15
+upscale,upscaled.py,upscale/upscaled.py,api,"api, config, data_processing, file_operations, image_processing, upscaling","PIL, csv, datetime",7,api,15
+upscale,auto_upscale.py,upscale/auto_upscale.py,file_operations,"file_operations, upscaling","os, pathlib, shutil",7,file_operations,14
+upscale,upscale_system.py,upscale/upscale_system.py,file_operations,"file_operations, upscaling","os, pathlib, shutil",9,file_operations,14
+upscale,processor_cli_from_upscaler.py,upscale/processor_cli_from_upscaler.py,file_operations,"file_operations, image_processing, upscaling","PIL, os",2,file_operations,14
+upscale,upscale.py,upscale/upscale.py,file_operations,"file_operations, image_processing, upscaling","PIL, os, tqdm",1,file_operations,14
+upscale,batch_upscaler.py,upscale/batch_upscaler.py,file_operations,"file_operations, upscaling","os, pathlib, shutil",10,file_operations,14
+upscale,upscale-sub.py,upscale/upscale-sub.py,file_operations,"file_operations, image_processing, upscaling","PIL, os",2,file_operations,14
+upscale,upscale--.py,upscale/upscale--.py,file_operations,"file_operations, image_processing, upscaling","PIL, os, tqdm",1,file_operations,14
+upscale,imgupscale.py,upscale/imgupscale.py,file_operations,"file_operations, image_processing, upscaling","PIL, os",2,file_operations,14
+upscale,simple_upscaler.py,upscale/simple_upscaler.py,file_operations,"file_operations, image_processing, testing, upscaling","PIL, io, os",7,file_operations,14
+upscale,batch_upscale.py,upscale/batch_upscale.py,file_operations,"file_operations, image_processing, testing, upscaling","PIL, io, os",5,file_operations,14
+upscale,upscale2.py,upscale/upscale2.py,file_operations,"file_operations, image_processing, upscaling","PIL, os",2,file_operations,14
+upscale,upscale_with_sips.py,upscale/upscale_with_sips.py,file_operations,"file_operations, upscaling","os, pathlib, shutil",7,file_operations,14
+upscale,enhanced_image_upscaler.py,upscale/enhanced_image_upscaler.py,file_operations,"file_operations, upscaling",,0,file_operations,14
+upscale,web_upscaler_v2.py,upscale/web_upscaler_v2.py,file_operations,"file_operations, image_processing, upscaling","PIL, core, os",4,file_operations,14
+upscale,upscalerr.py,upscale/upscalerr.py,data_processing,"data_processing, file_operations, image_processing, upscaling","PIL, csv, datetime",8,data_processing,3
+upscale,improved_batch_upscaler_2_1.py,upscale/improved_batch_upscaler_2_1.py,data_processing,"data_processing, file_operations, upscaling",,0,data_processing,3
+upscale,improved_batch_upscaler.py,upscale/improved_batch_upscaler.py,data_processing,"data_processing, file_operations, upscaling",,0,data_processing,3
+organize,consolidated_media_processor.py,organize/consolidated_media_processor.py,api,"api, audio_processing, file_operations, image_processing, upscaling, video_processing","PIL, argparse, concurrent",19,api,18
+organize,cleanups.py,organize/cleanups.py,api,"api, file_operations",,0,api,18
+organize,organize (1).py,organize/organize (1).py,api,"api, data_processing, file_operations",,0,api,18
+organize,vanceai-removebg.py,organize/vanceai-removebg.py,api,"api, data_processing, file_operations",,0,api,18
+organize,organize_albums 2.py,organize/organize_albums 2.py,api,"api, file_operations",,0,api,18
+organize,cleanupd.py,organize/cleanupd.py,api,"api, file_operations",,0,api,18
+organize,organize_albums 1.py,organize/organize_albums 1.py,api,"api, file_operations",,0,api,18
+organize,sort copy.py,organize/sort copy.py,api,"api, file_operations, image_processing",,0,api,18
+organize,sort2.py,organize/sort2.py,api,"api, file_operations, image_processing",,0,api,18
+organize,removebg2.py,organize/removebg2.py,api,"api, file_operations",,0,api,18
+organize,organize_albums 4.py,organize/organize_albums 4.py,api,"api, file_operations",,0,api,18
+organize,organize_albums1.py,organize/organize_albums1.py,api,"api, file_operations",,0,api,18
+organize,move.py,organize/move.py,api,"api, file_operations",,0,api,18
+organize,organize_music_library.py,organize/organize_music_library.py,api,"api, file_operations",,0,api,18
+organize,sort2 (1).py,organize/sort2 (1).py,api,"api, file_operations, image_processing",,0,api,18
+organize,organize_albums 14.py,organize/organize_albums 14.py,api,"api, file_operations",,0,api,18
+organize,organize_media.py,organize/organize_media.py,api,"api, file_operations",,0,api,18
+organize,clean-album.py,organize/clean-album.py,api,"api, file_operations",,0,api,18
+organize,file-sort.py,organize/file-sort.py,data_processing,"data_processing, file_operations",,0,data_processing,3
+organize,imove.py,organize/imove.py,data_processing,"data_processing, file_operations",,0,data_processing,3
+organize,imove--.py,organize/imove--.py,data_processing,"data_processing, file_operations",,0,data_processing,3
+organize,REMOVE_DUPLICATE_CHAPTERS.py,organize/REMOVE_DUPLICATE_CHAPTERS.py,file_operations,file_operations,"collections, mutagen, pathlib",1,file_operations,6
+organize,CLEANUP_LOOSE_FILES.py,organize/CLEANUP_LOOSE_FILES.py,file_operations,file_operations,"pathlib, shutil",0,file_operations,6
+organize,remove.py,organize/remove.py,file_operations,"file_operations, image_processing",,0,file_operations,6
+organize,move-date.py,organize/move-date.py,file_operations,file_operations,,0,file_operations,6
+organize,100sort.py,organize/100sort.py,file_operations,file_operations,,0,file_operations,6
+organize,CONSOLIDATE_TO_TRUE_CHAPTERS.py,organize/CONSOLIDATE_TO_TRUE_CHAPTERS.py,file_operations,file_operations,"collections, mutagen, pathlib",0,file_operations,6
+utilities,util.py,utilities/util.py,api,"api, file_operations",,0,api,4
+utilities,direct_url_helpers.py,utilities/direct_url_helpers.py,api,"api, file_operations, testing",,0,api,4
+utilities,common.py,utilities/common.py,api,"api, data_processing, file_operations",,0,api,4
+utilities,gui_utils.py,utilities/gui_utils.py,api,"api, config, data_processing, file_operations, image_processing, youtube",,0,api,4

@@ -36,17 +36,19 @@ class UpscaleConfig:
     batch_size: int = 5
     """Number of images to process per batch."""
 
-    aspect_ratios: Dict[str, Tuple[int, int, str]] = field(default_factory=lambda: {
-        '16x9': (16, 9, '16:9'),
-        '9x16': (9, 16, '9:16'),
-        '1x1': (1, 1, '1:1'),
-        '4x3': (4, 3, '4:3'),
-        '3x4': (3, 4, '3:4'),
-        '3x2': (3, 2, '3:2'),
-        '2x3': (2, 3, '2:3'),
-        '21x9': (21, 9, '21:9'),
-        '5x4': (5, 4, '5:4'),
-    })
+    aspect_ratios: Dict[str, Tuple[int, int, str]] = field(
+        default_factory=lambda: {
+            "16x9": (16, 9, "16:9"),
+            "9x16": (9, 16, "9:16"),
+            "1x1": (1, 1, "1:1"),
+            "4x3": (4, 3, "4:3"),
+            "3x4": (3, 4, "3:4"),
+            "3x2": (3, 2, "3:2"),
+            "2x3": (2, 3, "2:3"),
+            "21x9": (21, 9, "21:9"),
+            "5x4": (5, 4, "5:4"),
+        }
+    )
     """Standard aspect ratios with (width_ratio, height_ratio, display_name)."""
 
     def __post_init__(self):
@@ -56,10 +58,11 @@ class UpscaleConfig:
 
         if self.target_dpi not in [72, 150, 300, 600]:
             import warnings
+
             warnings.warn(
                 f"Uncommon DPI value: {self.target_dpi}. "
                 f"Standard values are 72, 150, 300, or 600.",
-                UserWarning
+                UserWarning,
             )
 
         if self.base_size <= 0 or self.max_dimension <= 0:
@@ -67,10 +70,11 @@ class UpscaleConfig:
 
         if self.max_dimension < self.base_size:
             import warnings
+
             warnings.warn(
                 "max_dimension is less than base_size. "
                 "Some aspect ratios may be constrained.",
-                UserWarning
+                UserWarning,
             )
 
         max_q, min_q = self.quality_range
@@ -86,8 +90,8 @@ class UpscaleConfig:
             raise ValueError("batch_size must be positive")
 
     @classmethod
-    def from_file(cls, filepath: str) -> 'UpscaleConfig':
-        """
+    def from_file(cls, filepath: str) -> "UpscaleConfig":
+        '\''
         Load configuration from a JSON file.
 
         Args:
@@ -105,7 +109,7 @@ class UpscaleConfig:
             raise FileNotFoundError(f"Config file not found: {filepath}")
 
         try:
-            with open(config_path, 'r') as f:
+            with open(config_path, "r") as f:
                 data = json.load(f)
             return cls(**data)
         except json.JSONDecodeError as e:
@@ -121,22 +125,22 @@ class UpscaleConfig:
             filepath: Path to save the configuration
         """
         config_data = {
-            'max_file_size_mb': self.max_file_size_mb,
-            'target_dpi': self.target_dpi,
-            'base_size': self.base_size,
-            'max_dimension': self.max_dimension,
-            'quality_range': list(self.quality_range),
-            'quality_step': self.quality_step,
-            'batch_size': self.batch_size,
+            "max_file_size_mb": self.max_file_size_mb,
+            "target_dpi": self.target_dpi,
+            "base_size": self.base_size,
+            "max_dimension": self.max_dimension,
+            "quality_range": list(self.quality_range),
+            "quality_step": self.quality_step,
+            "batch_size": self.batch_size,
         }
 
-        with open(filepath, 'w') as f:
+        with open(filepath, "w") as f:
             json.dump(config_data, f, indent=2)
 
     def get_aspect_ratio(self, key: str) -> Tuple[int, int, str]:
         """Get aspect ratio by key."""
-        return self.aspect_ratios.get(key, (1, 1, '1:1'))
+        return self.aspect_ratios.get(key, (1, 1, "1:1"))
 
     def list_aspect_ratios(self) -> Dict[str, str]:
-        """Get a dictionary of aspect ratio keys to display names."""
+        """Get a dictionary of aspect ratio keys to display names.'\''
         return {k: v[2] for k, v in self.aspect_ratios.items()}

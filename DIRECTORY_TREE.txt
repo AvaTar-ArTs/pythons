@@ -1,0 +1,64 @@
+~/pythons/
+│
+├── 📁 Main Categories (Root Level)
+│   ├── apis/                    (215 files) - API scripts
+│   ├── data_processing/          (365 files) - Data processing
+│   ├── file_operations/         (212 files) - File utilities
+│   ├── audio_processing/         (30 files)  - Audio scripts
+│   ├── image_processing/        (32 files)  - Image scripts
+│   ├── automation/              (17 files)  - Automation
+│   ├── testing/                 (30 files)  - Test files
+│   ├── config/                  (98 files)  - Config files
+│   ├── llm/                     (12 files)  - LLM scripts
+│   └── other/                   (59 files)  - Miscellaneous
+│
+├── 📁 tools/
+│   ├── apis/                    (108 files) - API tools
+│   ├── data/                    (71 files)  - Data tools
+│   ├── utils/                   (48 files)  - Utility tools
+│   ├── testing/                 (6 files)   - Test tools
+│   ├── automation/              - Automation bots
+│   ├── api_integrations/        - API integrations
+│   ├── dev/                     - Dev utilities
+│   └── legacy/                  - Legacy scripts
+│
+├── 📁 projects/
+│   ├── vibrant-chaplygin/
+│   │   └── pyt/                 (973 files)
+│   ├── simplegallery/           (87 files)
+│   └── avatararts/
+│
+├── 📁 MEDIA_PROCESSING/
+│   ├── apis/
+│   │   ├── instagram/           - Instagram APIs
+│   │   ├── youtube/             - YouTube APIs
+│   │   └── audio_apis/          - Audio service APIs
+│   ├── processing/
+│   │   └── upscaling/           - Image upscaling
+│   ├── social_media/
+│   │   ├── instagram/           (30 files)
+│   │   ├── uploads/             (19 files)
+│   │   └── tests/               (5 files)
+│   ├── audio/                   (12 files)
+│   ├── image/                   (35 files)
+│   ├── video/                   (28 files)
+│   ├── upscale/                 (33 files)
+│   ├── organize/                (27 files)
+│   └── utilities/               (4 files)
+│
+├── 📁 Other Major Directories
+│   ├── youtube/                 (109 files)
+│   ├── file_organization/       (43 files)
+│   ├── transcribe/              (35 files)
+│   ├── WEBSITES/
+│   ├── data/
+│   └── [other directories]
+│
+└── 📁 Documentation
+    ├── README.md
+    ├── INDEX.md
+    ├── QUICK_REFERENCE.md
+    ├── MIGRATION_GUIDE.md
+    └── [analysis CSVs and reports]
+
+Total: ~4,232 Python files across 145+ folders

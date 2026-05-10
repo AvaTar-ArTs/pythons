@@ -1,0 +1,6 @@
+openai
+requests
+assemblyai
+elevenlabs
+pillow
+numpy

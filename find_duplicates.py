@@ -1,182 +1,91 @@
 #!/usr/bin/env python3
 """
-Find duplicate files in Google Drive directories.
-Identifies duplicates by name, size, and content hash.
+find_duplicates.py
+
+Utility to analyze `COMPLETE_FILE_CATALOG.json` (generated inventory) and report duplicate files by MD5 and high filename similarity.
+
+Usage:
+    python tools/find_duplicates.py --catalog ../COMPLETE_FILE_CATALOG.json --out duplicates_report.csv
+
+Outputs CSV with groups of duplicates and simple metadata to help consolidations.
+
+NOTE: This script is read-only and safe to run. It does not delete or move files.
 """
-import os
-import hashlib
+import argparse
+import json
 import csv
-from pathlib import Path
+import os
 from collections import defaultdict
+from difflib import SequenceMatcher
 
-base_path = Path('/Users/steven/Library/CloudStorage/GoogleDrive-sjchaplinski@gmail.com')
-output_file = Path('/Users/steven/duplicate_files_report.csv')
-duplicates_file = Path('/Users/steven/duplicate_files_to_remove.csv')
 
-def calculate_hash(file_path, chunk_size=8192):
-    """Calculate MD5 hash of file content"""
-    hash_md5 = hashlib.md5()
-    try:
-        with open(file_path, 'rb') as f:
-            for chunk in iter(lambda: f.read(chunk_size), b""):
-                hash_md5.update(chunk)
-        return hash_md5.hexdigest()
-    except Exception as e:
-        return None
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()
 
-def format_size(size_bytes):
-    """Format bytes to human readable size"""
-    if size_bytes == 0:
-        return "0 B"
-    for unit in ['B', 'KB', 'MB', 'GB']:
-        if size_bytes < 1024.0:
-            return f"{size_bytes:.2f} {unit}"
-        size_bytes /= 1024.0
-    return f"{size_bytes:.2f} TB"
 
-print("Step 1: Finding files with duplicate names...")
-name_duplicates = defaultdict(list)
-size_duplicates = defaultdict(list)
-all_files = []
+def group_by_md5(entries):
+    md5_map = defaultdict(list)
+    for e in entries:
+        md5_map[e.get('md5_hash', '')].append(e)
+    # keep only groups >1
+    return {k: v for k, v in md5_map.items() if k and len(v) > 1}
 
-count = 0
-for root, dirs, files in os.walk(base_path / 'My Drive'):
-    for file in files:
-        file_path = Path(root) / file
-        try:
-            size = file_path.stat().st_size
-            rel_path = str(file_path.relative_to(base_path))
-            name_duplicates[file].append((rel_path, size))
-            size_duplicates[size].append((rel_path, file))
-            all_files.append((rel_path, file, size))
-            count += 1
-            if count % 1000 == 0:
-                print(f"  Processed {count} files...")
-        except:
-            continue
 
-for root, dirs, files in os.walk(base_path / 'Other computers'):
-    for file in files:
-        file_path = Path(root) / file
-        try:
-            size = file_path.stat().st_size
-            rel_path = str(file_path.relative_to(base_path))
-            name_duplicates[file].append((rel_path, size))
-            size_duplicates[size].append((rel_path, file))
-            all_files.append((rel_path, file, size))
-            count += 1
-            if count % 1000 == 0:
-                print(f"  Processed {count} files...")
-        except:
-            continue
+def find_name_similarities(entries, threshold=0.85):
+    name_map = []
+    n = len(entries)
+    for i in range(n):
+        for j in range(i+1, n):
+            a = entries[i]['filename']
+            b = entries[j]['filename']
+            score = similar(a, b)
+            if score >= threshold:
+                name_map.append((entries[i], entries[j], score))
+    return name_map
 
-print(f"\nTotal files scanned: {count}")
 
-# Find exact name duplicates
-print("\nStep 2: Identifying exact name duplicates...")
-exact_name_dups = {name: paths for name, paths in name_duplicates.items() if len(paths) > 1}
+def write_md5_groups(md5_groups, out_writer):
+    for md5, items in md5_groups.items():
+        # pick representative
+        out_writer.writerow(['MD5_GROUP', md5, len(items), ''])
+        for it in items:
+            out_writer.writerow(['', it['file_path'], it.get('size_bytes', ''), it.get('depth','')])
 
-print(f"Found {len(exact_name_dups)} files with duplicate names")
 
-# Find same-size duplicates (potential content duplicates)
-print("\nStep 3: Identifying same-size duplicates (potential content duplicates)...")
-same_size_dups = {size: paths for size, paths in size_duplicates.items() 
-                  if len(paths) > 1 and size > 1000}  # Only files > 1KB
+def write_name_similar(name_pairs, out_writer):
+    for a, b, score in name_pairs:
+        out_writer.writerow(['NAME_SIM', f'{score:.3f}', a['file_path'], b['file_path']])
 
-print(f"Found {len(same_size_dups)} file sizes with multiple files")
 
-# For large same-size files, calculate hashes to confirm duplicates
-print("\nStep 4: Calculating content hashes for large same-size files...")
-content_duplicates = defaultdict(list)
-hash_count = 0
+def main():
+    parser = argparse.ArgumentParser(description='Find duplicates from catalog JSON')
+    parser.add_argument('--catalog', required=True, help='Path to COMPLETE_FILE_CATALOG.json')
+    parser.add_argument('--out', default='duplicates_report.csv', help='CSV output path')
+    parser.add_argument('--name-threshold', type=float, default=0.88, help='Filename similarity threshold (0-1)')
+    args = parser.parse_args()
 
-for size, paths in list(same_size_dups.items())[:100]:  # Limit to first 100 size groups
-    if size > 100000:  # Only hash files > 100KB
-        for rel_path, filename in paths:
-            full_path = base_path / rel_path
-            file_hash = calculate_hash(full_path)
-            if file_hash:
-                content_duplicates[file_hash].append((rel_path, filename, size))
-                hash_count += 1
-                if hash_count % 50 == 0:
-                    print(f"  Hashed {hash_count} files...")
+    with open(args.catalog, 'r', encoding='utf-8') as f:
+        catalog = json.load(f)
 
-print(f"\nHashed {hash_count} files for content comparison")
+    # catalog is expected to be a list of file metadata
+    md5_groups = group_by_md5(catalog)
 
-# Generate reports
-print("\nStep 5: Generating reports...")
+    # Convert catalog into fast lookup list for similarity checks (limit to files >1KB to avoid tiny files)
+    candidates = [c for c in catalog if (c.get('size_bytes') or 0) > 1024]
 
-# Report 1: All duplicate groups
-with open(output_file, 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    writer.writerow(['Type', 'Key', 'File_Path', 'File_Name', 'Size', 'Size_Formatted'])
-    
-    # Exact name duplicates
-    for name, paths in sorted(exact_name_dups.items(), key=lambda x: len(x[1]), reverse=True):
-        for rel_path, size in paths:
-            writer.writerow(['Exact_Name', name, rel_path, os.path.basename(rel_path), size, format_size(size)])
-    
-    # Content duplicates (same hash)
-    for file_hash, files in content_duplicates.items():
-        if len(files) > 1:
-            for rel_path, filename, size in files:
-                writer.writerow(['Content_Hash', file_hash[:16], rel_path, filename, size, format_size(size)])
+    name_pairs = find_name_similarities(candidates, threshold=args.name_threshold)
 
-# Report 2: Files to remove (keeping first occurrence)
-with open(duplicates_file, 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    writer.writerow(['File_Path', 'File_Name', 'Size', 'Size_Formatted', 'Duplicate_Type', 'Keep_Path', 'Reason'])
-    
-    removed_count = 0
-    total_size = 0
-    
-    # Exact name duplicates - keep first, remove rest
-    for name, paths in sorted(exact_name_dups.items(), key=lambda x: len(x[1]), reverse=True):
-        if len(paths) > 1:
-            # Sort by path (prefer "My Drive" over "Other computers")
-            sorted_paths = sorted(paths, key=lambda x: (x[0].startswith('Other computers'), x[0]))
-            keep_path = sorted_paths[0][0]
-            
-            for rel_path, size in sorted_paths[1:]:
-                writer.writerow([
-                    rel_path,
-                    name,
-                    size,
-                    format_size(size),
-                    'Exact_Name',
-                    keep_path,
-                    f'Duplicate of {keep_path}'
-                ])
-                removed_count += 1
-                total_size += size
-    
-    # Content duplicates - keep first, remove rest
-    for file_hash, files in content_duplicates.items():
-        if len(files) > 1:
-            # Sort by path
-            sorted_files = sorted(files, key=lambda x: (x[0].startswith('Other computers'), x[0]))
-            keep_path = sorted_files[0][0]
-            
-            for rel_path, filename, size in sorted_files[1:]:
-                writer.writerow([
-                    rel_path,
-                    filename,
-                    size,
-                    format_size(size),
-                    'Content_Hash',
-                    keep_path,
-                    f'Identical content to {keep_path}'
-                ])
-                removed_count += 1
-                total_size += size
+    with open(args.out, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['TYPE','KEY','VALUE','EXTRA'])
+        write_md5_groups(md5_groups, writer)
+        writer.writerow([])
+        writer.writerow(['NAME_SIMILAR_PAIRS', 'threshold', args.name_threshold, ''])
+        write_name_similar(name_pairs, writer)
 
-print(f"\n{'='*60}")
-print(f"DUPLICATE ANALYSIS COMPLETE")
-print(f"{'='*60}")
-print(f"Files with duplicate names: {len(exact_name_dups)}")
-print(f"Potential content duplicates: {len([g for g in content_duplicates.values() if len(g) > 1])}")
-print(f"\nFiles recommended for removal: {removed_count}")
-print(f"Potential space savings: {format_size(total_size)}")
-print(f"\nReports saved:")
-print(f"  - {output_file}")
-print(f"  - {duplicates_file}")
+    print(f'Duplicate analysis complete. MD5 groups: {len(md5_groups)}; name-similar pairs: {len(name_pairs)}')
+    print(f'Report written to: {args.out}')
+
+
+if __name__ == '__main__':
+    main()

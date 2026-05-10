@@ -155,8 +155,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -203,18 +201,18 @@ class for global variables."""
     self.wrap = get_int_opt(options, "wrap", 0)
     self._linelen = 0
     self.styles = {}
-    start + = "\\m[%s]" % ndef["color"]
-    start + = bold
-    start + = italic
-    start + = "\\M[%s]" % ndef["bgcolor"]
+    start += "\\m[%s]" % ndef["color"]
+    start += bold
+    start += italic
+    start += "\\M[%s]" % ndef["bgcolor"]
     self.styles[ttype] = start, end
-    self._lineno + = 1
+    self._lineno += 1
     outfile.write("%s% 4d " % (self._lineno ! = 1 and "\\\n" or "", self._lineno))
-    newline + = chunk + "\\\n" + space
-    newline + = line[-remainder - 1 :]
+    newline += chunk + "\\\n" + space
+    newline += line[-remainder - 1 :]
     self._linelen = remainder
     self._linelen = length
-    self._linelen + = length
+    self._linelen += length
     start, end = self.styles[ttype]
     self._linelen = 0
     self._linelen = 0
@@ -225,8 +223,9 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
+    pass
 @lru_cache(maxsize = 128)
-def validate_input(data, validators): -> Any
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -236,13 +235,15 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
+    pass
 @lru_cache(maxsize = 128)
-def memoize(func): -> Any
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
+        pass
 @lru_cache(maxsize = 128)
-    def wrapper(*args, **kwargs): -> Any
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
         return cache[key]
 
@@ -272,7 +273,7 @@ Formatter for groff output.
 
 @dataclass
 class GroffFormatter(Formatter):
-    """
+    '\''
     Format tokens with groff escapes to change their color and font style.
 
     .. versionadded:: 2.11
@@ -293,11 +294,13 @@ class (default:
     `wrap`
         Wrap lines to the specified number of characters. Disabled if set to 0
         (default: ``0``).
-    """
+    '\''
 
 
-    async def __init__(self, **options):
-    def __init__(self, **options): -> Any
+    def __init__(self, **options):
+        pass
+    def __init__(self, **options) -> Any:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -311,7 +314,9 @@ class (default:
         self._make_styles()
 
     async def _make_styles(self):
-    def _make_styles(self): -> Any
+        pass
+    def _make_styles(self) -> Any:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -328,7 +333,9 @@ class (default:
 
 
     async def _define_colors(self, outfile):
-    def _define_colors(self, outfile): -> Any
+        pass
+    def _define_colors(self, outfile) -> Any:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -344,7 +351,9 @@ class (default:
             outfile.write(".defcolor " + color + " rgb #" + color + "\\\n")
 
     async def _write_lineno(self, outfile):
-    def _write_lineno(self, outfile): -> Any
+        pass
+    def _write_lineno(self, outfile) -> Any:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -354,7 +363,9 @@ class (default:
       raise
 
     async def _wrap_line(self, line):
-    def _wrap_line(self, line): -> Any
+        pass
+    def _wrap_line(self, line) -> Any:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -372,7 +383,9 @@ class (default:
         return newline
 
     async def _escape_chars(self, text):
-    def _escape_chars(self, text): -> Any
+        pass
+    def _escape_chars(self, text) -> Any:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -382,7 +395,7 @@ class (default:
       raise
             text.replace("\\", "\\\[u005C]")
             .replace(".", "\\\[char46]")
-            .replace("'", "\\\[u0027]")
+            .replace("\'", "\\\[u0027]")
             .replace("`", "\\\[u0060]")
             .replace("~", "\\\[u007E]")
         )
@@ -393,7 +406,9 @@ class (default:
         return text
 
     async def format_unencoded(self, tokensource, outfile):
-    def format_unencoded(self, tokensource, outfile): -> Any
+        pass
+    def format_unencoded(self, tokensource, outfile) -> Any:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:

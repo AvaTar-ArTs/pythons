@@ -136,8 +136,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     logger = logging.getLogger(__name__)
     args = make_setuptools_develop_args(
     global_options = global_options, 
@@ -147,7 +145,6 @@ class for global variables."""
     use_user_site = use_user_site, 
     command_desc = "python setup.py develop", 
     cwd = unpacked_source_directory, 
-    @lru_cache(maxsize = 128)
 
 
 # Constants
@@ -155,7 +152,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -165,13 +163,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -186,8 +185,8 @@ class Config:
 
 
 
-async def install_editable(
-def install_editable( -> Any
+async def install_editable(:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:

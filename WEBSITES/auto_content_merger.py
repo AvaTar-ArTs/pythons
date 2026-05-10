@@ -5,14 +5,11 @@ Automatically merges and removes duplicates without user interaction
 """
 
 import difflib
-import hashlib
 import json
-import os
 import shutil
-from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 
 
 class AutoContentMerger:
@@ -111,7 +108,7 @@ class AutoContentMerger:
 
         return score
 
-    def find_best_file(
+    def find_best_file(:
         self, files: List[Dict], strategy: str = "newest_largest"
     ) -> Dict:
         """Find the best file to keep based on strategy"""
@@ -166,7 +163,6 @@ class AutoContentMerger:
                 similarities = []
                 for i in range(len(contents)):
                     for j in range(i + 1, len(contents)):
-                        sim = self.calculate_similarity(contents[i], contents[j])
                         similarities.append(sim)
 
                 if similarities:
@@ -219,7 +215,7 @@ class AutoContentMerger:
             print(f"❌ Error executing action: {e}")
             return False
 
-    def process_content_type(
+    def process_content_type(:
         self, content_type: str, duplicate_groups: List[Dict]
     ) -> Dict:
         """Process all duplicate groups for a content type"""
@@ -234,7 +230,7 @@ class AutoContentMerger:
         }
 
         for i, group in enumerate(duplicate_groups):
-            print(f"   Processing group {i+1}/{len(duplicate_groups)}...")
+            print(f"   Processing group {i + 1}/{len(duplicate_groups)}...")
 
             action = self.process_duplicate_group(group, content_type)
 
@@ -258,7 +254,7 @@ class AutoContentMerger:
         report_lines.append(
             f"\n**Merge Date:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         )
-        report_lines.append(f"\n---\n")
+        report_lines.append("\n---\n")
 
         total_space_saved = sum(
             stats.get("total_space_saved", 0) for stats in all_stats.values()
@@ -293,7 +289,7 @@ class AutoContentMerger:
             report_lines.append("## 📝 ACTION LOG\n")
             for entry in self.merge_log:
                 report_lines.append(
-                    f"- **{entry['timestamp']}**: {entry['action']} - Kept `{Path(entry['kept_file']).name}`, removed {entry['removed_count']} files, saved {round(entry['space_saved']/(1024*1024), 2)} MB"
+                    f"- **{entry['timestamp']}**: {entry['action']} - Kept `{Path(entry['kept_file']).name}`, removed {entry['removed_count']} files, saved {round(entry['space_saved'] / (1024 * 1024), 2)} MB"
                 )
 
         report_path = self.base_path / "AUTO_MERGE_REPORT.md"
@@ -333,7 +329,7 @@ class AutoContentMerger:
             stats.get("total_files_removed", 0) for stats in all_stats.values()
         )
 
-        print(f"\n🎯 RESULTS:")
+        print("\n🎯 RESULTS:")
         print(
             f"   💾 Total space saved: {round(total_space_saved / (1024 * 1024), 2)} MB"
         )

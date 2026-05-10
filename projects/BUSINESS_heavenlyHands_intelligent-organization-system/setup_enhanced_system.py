@@ -13,11 +13,9 @@ Author: AI Assistant
 Date: 2025-10-26
 """
 
-import os
 import sys
 import subprocess
-import json
-from pathlib import Path
+
 
 def install_requirements():
     """Install enhanced requirements"""
@@ -33,11 +31,11 @@ def install_requirements():
         "nltk>=3.8",
         "scikit-learn>=1.3.0",
         "faiss-cpu>=1.7.4",
-        "selenium>=4.15.0"
+        "selenium>=4.15.0",
     ]
-    
+
     print("📦 Installing enhanced requirements...")
-    
+
     for req in requirements:
         try:
             print(f"Installing {req}...")
@@ -49,6 +47,7 @@ def install_requirements():
                 print(f"⚠️  {req} is required for enhanced functionality")
             else:
                 print(f"⚠️  {req} is optional, continuing...")
+
 
 def create_enhanced_env():
     """Create enhanced environment configuration"""
@@ -109,18 +108,19 @@ EMAIL_PASSWORD=your_app_password_here
 GOOGLE_ANALYTICS_ID=your_ga_id_here
 FACEBOOK_PIXEL_ID=your_pixel_id_here
 """
-    
-    with open('.env', 'w') as f:
+
+    with open(".env", "w") as f:
         f.write(env_content)
-    
+
     print("✅ Enhanced .env file created")
     print("⚠️  Please update Twilio credentials in .env file")
 
+
 def create_heavenly_hands_phone_scripts():
     """Create Heavenly Hands specific phone automation scripts"""
-    
+
     # TwiML webhook handler
-    twiml_handler = '''from flask import Flask, request
+    twiml_handler = "\'"from flask import Flask, request
 from twilio.twiml import VoiceResponse
 import json
 
@@ -175,13 +175,13 @@ def handle_lead_gather():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
-'''
-    
-    with open('heavenly_hands_webhook.py', 'w') as f:
+"\'"
+
+    with open("heavenly_hands_webhook.py", "w") as f:
         f.write(twiml_handler)
-    
+
     # Lead generation script
-    lead_script = '''#!/usr/bin/env python3
+    lead_script = "\'"#!/usr/bin/env python3
 """
 Heavenly Hands Lead Generation Script
 =====================================
@@ -274,16 +274,17 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
-    
-    with open('heavenly_hands_leads.py', 'w') as f:
+"\'"
+
+    with open("heavenly_hands_leads.py", "w") as f:
         f.write(lead_script)
-    
+
     print("✅ Heavenly Hands phone automation scripts created")
+
 
 def create_demo_script():
     """Create comprehensive demo script"""
-    demo_script = '''#!/usr/bin/env python3
+    demo_script = "\'"#!/usr/bin/env python3
 """
 Enhanced Creative Automation System - Full Demo
 ===============================================
@@ -391,30 +392,31 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
-    
-    with open('demo_enhanced_system.py', 'w') as f:
+"\'"
+
+    with open("demo_enhanced_system.py", "w") as f:
         f.write(demo_script)
-    
+
     print("✅ Enhanced demo script created")
+
 
 def main():
     """Main setup function"""
     print("🚀 Setting up Enhanced Creative Automation System")
     print("=" * 60)
-    
+
     # Install requirements
     install_requirements()
-    
+
     # Create enhanced environment
     create_enhanced_env()
-    
+
     # Create Heavenly Hands phone scripts
     create_heavenly_hands_phone_scripts()
-    
+
     # Create demo script
     create_demo_script()
-    
+
     print("\\n" + "=" * 60)
     print("🎉 Enhanced Creative Automation System Setup Complete!")
     print("=" * 60)
@@ -430,6 +432,7 @@ def main():
     print("   📄 heavenly_hands_leads.py - Lead generation")
     print("   📄 heavenly_hands_webhook.py - TwiML webhook handler")
     print("   📄 .env - Enhanced environment configuration")
+
 
 if __name__ == "__main__":
     main()

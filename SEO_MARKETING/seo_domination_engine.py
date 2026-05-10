@@ -17,14 +17,15 @@ import json
 import re
 import argparse
 from pathlib import Path
-from typing import Dict, List, Set, Tuple, Any, Optional
-from collections import defaultdict, Counter
+from typing import Dict, List, Any, Optional
+from collections import Counter
 from dataclasses import dataclass, asdict
 from datetime import datetime
 import hashlib
 
 try:
     import numpy as np
+
     NUMPY_AVAILABLE = True
 except ImportError:
     NUMPY_AVAILABLE = False
@@ -33,18 +34,21 @@ try:
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.cluster import KMeans
     from sklearn.metrics.pairwise import cosine_similarity
+
     SKLEARN_AVAILABLE = True
 except ImportError:
     SKLEARN_AVAILABLE = False
 
 try:
     import openai
+
     OPENAI_AVAILABLE = True
 except ImportError:
     OPENAI_AVAILABLE = False
 
 try:
     from anthropic import Anthropic
+
     ANTHROPIC_AVAILABLE = True
 except ImportError:
     ANTHROPIC_AVAILABLE = False
@@ -53,6 +57,7 @@ except ImportError:
 @dataclass
 class ContentSemanticAnalysis:
     """Semantic analysis of content for SEO optimization"""
+
     content_hash: str
     semantic_tags: List[str]
     intent_classification: Dict[str, float]
@@ -70,6 +75,7 @@ class ContentSemanticAnalysis:
 @dataclass
 class KeywordIntelligence:
     """Intelligent keyword analysis with semantic understanding"""
+
     primary_keyword: str
     search_intent: str  # informational, transactional, commercial, navigational
     semantic_variations: List[str]
@@ -86,6 +92,7 @@ class KeywordIntelligence:
 @dataclass
 class SEOArchitecturalPattern:
     """Detected SEO architectural pattern"""
+
     pattern_type: str  # pillar-cluster, topic-cluster, hub-spoke, etc.
     primary_topic: str
     supporting_content: List[str]
@@ -102,15 +109,14 @@ class ContentAwareSemanticAnalyzer:
         self.vectorizer = None
         if SKLEARN_AVAILABLE:
             self.vectorizer = TfidfVectorizer(
-                max_features=500,
-                stop_words='english',
-                ngram_range=(1, 3),
-                min_df=2
+                max_features=500, stop_words="english", ngram_range=(1, 3), min_df=2
             )
         self.content_cache = {}
         self.learning_data = []
 
-    def analyze_content_semantics(self, content: str, metadata: Dict = None) -> ContentSemanticAnalysis:
+    def analyze_content_semantics(:
+        self, content: str, metadata: Dict = None
+    ) -> ContentSemanticAnalysis:
         """Perform deep semantic analysis of content"""
         content_hash = hashlib.md5(content.encode()).hexdigest()
 
@@ -130,7 +136,9 @@ class ContentAwareSemanticAnalyzer:
 
         # Find related keywords
         related_keywords = self._discover_related_keywords(content, semantic_tags)
-        semantic_relationships = self._map_semantic_relationships(content, semantic_tags)
+        semantic_relationships = self._map_semantic_relationships(
+            content, semantic_tags
+        )
 
         # Calculate confidence
         confidence = self._calculate_confidence(
@@ -149,16 +157,17 @@ class ContentAwareSemanticAnalyzer:
             confidence_score=confidence,
             optimization_recommendations=recommendations,
             related_keywords=related_keywords,
-            semantic_relationships=semantic_relationships
+            semantic_relationships=semantic_relationships,
         )
 
         # Cache for learning
-        self.content_cache[content_hash] = analysis
-        self.learning_data.append({
-            'content': content[:500],
-            'analysis': asdict(analysis),
-            'timestamp': datetime.now().isoformat()
-        })
+        self.learning_data.append(
+            {
+                "content": content[:500],
+                "analysis": asdict(analysis),
+                "timestamp": datetime.now().isoformat(),
+            }
+        )
 
         return analysis
 
@@ -169,13 +178,55 @@ class ContentAwareSemanticAnalyzer:
 
         # SEO-specific semantic categories
         semantic_categories = {
-            'ai_automation': ['ai', 'automation', 'workflow', 'pipeline', 'agent', 'intelligent'],
-            'creative_tools': ['art', 'creative', 'generative', 'design', 'visual', 'image'],
-            'technical': ['python', 'api', 'code', 'development', 'technical', 'implementation'],
-            'business': ['revenue', 'business', 'enterprise', 'saas', 'product', 'service'],
-            'tutorial': ['guide', 'tutorial', 'how-to', 'step-by-step', 'learn', 'explain'],
-            'comparison': ['vs', 'compare', 'alternative', 'best', 'review', 'comparison'],
-            'trending': ['2025', 'trending', 'latest', 'new', 'emerging', 'future']
+            "ai_automation": [
+                "ai",
+                "automation",
+                "workflow",
+                "pipeline",
+                "agent",
+                "intelligent",
+            ],
+            "creative_tools": [
+                "art",
+                "creative",
+                "generative",
+                "design",
+                "visual",
+                "image",
+            ],
+            "technical": [
+                "python",
+                "api",
+                "code",
+                "development",
+                "technical",
+                "implementation",
+            ],
+            "business": [
+                "revenue",
+                "business",
+                "enterprise",
+                "saas",
+                "product",
+                "service",
+            ],
+            "tutorial": [
+                "guide",
+                "tutorial",
+                "how-to",
+                "step-by-step",
+                "learn",
+                "explain",
+            ],
+            "comparison": [
+                "vs",
+                "compare",
+                "alternative",
+                "best",
+                "review",
+                "comparison",
+            ],
+            "trending": ["2025", "trending", "latest", "new", "emerging", "future"],
         }
 
         for category, keywords in semantic_categories.items():
@@ -184,10 +235,13 @@ class ContentAwareSemanticAnalyzer:
                 tags.append(category)
 
         # Extract domain-specific terms
-        domain_terms = re.findall(r'\b[a-z]{4,}\b', content_lower)
+        domain_terms = re.findall(r"\b[a-z]{4,}\b", content_lower)
         word_freq = Counter(domain_terms)
-        top_terms = [term for term, count in word_freq.most_common(10)
-                    if count >= 2 and len(term) >= 4]
+        top_terms = [
+            term
+            for term, count in word_freq.most_common(10)
+            if count >= 2 and len(term) >= 4
+        ]
         tags.extend(top_terms[:5])
 
         return list(set(tags))[:15]
@@ -195,33 +249,58 @@ class ContentAwareSemanticAnalyzer:
     def _classify_content_intent(self, content: str) -> Dict[str, float]:
         """Classify content search intent"""
         intents = {
-            'informational': 0.0,
-            'transactional': 0.0,
-            'commercial': 0.0,
-            'navigational': 0.0
+            "informational": 0.0,
+            "transactional": 0.0,
+            "commercial": 0.0,
+            "navigational": 0.0,
         }
 
         content_lower = content.lower()
 
         # Informational indicators
-        info_keywords = ['what', 'how', 'why', 'guide', 'tutorial', 'explain', 'learn', 'understand']
+        info_keywords = [
+            "what",
+            "how",
+            "why",
+            "guide",
+            "tutorial",
+            "explain",
+            "learn",
+            "understand",
+        ]
         info_score = sum(1 for kw in info_keywords if kw in content_lower)
-        intents['informational'] = min(info_score / 5.0, 1.0)
+        intents["informational"] = min(info_score / 5.0, 1.0)
 
         # Transactional indicators
-        trans_keywords = ['buy', 'purchase', 'price', 'cost', 'order', 'get', 'download']
+        trans_keywords = [
+            "buy",
+            "purchase",
+            "price",
+            "cost",
+            "order",
+            "get",
+            "download",
+        ]
         trans_score = sum(1 for kw in trans_keywords if kw in content_lower)
-        intents['transactional'] = min(trans_score / 5.0, 1.0)
+        intents["transactional"] = min(trans_score / 5.0, 1.0)
 
         # Commercial indicators
-        comm_keywords = ['best', 'review', 'compare', 'vs', 'alternative', 'top', 'recommend']
+        comm_keywords = [
+            "best",
+            "review",
+            "compare",
+            "vs",
+            "alternative",
+            "top",
+            "recommend",
+        ]
         comm_score = sum(1 for kw in comm_keywords if kw in content_lower)
-        intents['commercial'] = min(comm_score / 5.0, 1.0)
+        intents["commercial"] = min(comm_score / 5.0, 1.0)
 
         # Navigational indicators
-        nav_keywords = ['login', 'sign in', 'account', 'dashboard', 'home', 'about']
+        nav_keywords = ["login", "sign in", "account", "dashboard", "home", "about"]
         nav_score = sum(1 for kw in nav_keywords if kw in content_lower)
-        intents['navigational'] = min(nav_score / 3.0, 1.0)
+        intents["navigational"] = min(nav_score / 3.0, 1.0)
 
         return intents
 
@@ -231,17 +310,16 @@ class ContentAwareSemanticAnalyzer:
             return []
 
         # Extract potential keywords
-        words = re.findall(r'\b[a-z]{4,}\b', content.lower())
+        words = re.findall(r"\b[a-z]{4,}\b", content.lower())
         word_freq = Counter(words)
-        top_words = [word for word, count in word_freq.most_common(50)
-                    if count >= 2]
+        top_words = [word for word, count in word_freq.most_common(50) if count >= 2]
 
         if len(top_words) < 5:
             return []
 
         try:
             # Vectorize keywords
-            vectors = self.vectorizer.fit_transform([' '.join(top_words)])
+            vectors = self.vectorizer.fit_transform([" ".join(top_words)])
 
             # Simple clustering by co-occurrence
             clusters = []
@@ -255,8 +333,18 @@ class ContentAwareSemanticAnalyzer:
 
                 # Find related words (simplified)
                 for other_word in top_words:
-                    if other_word not in used and word in content.lower() and other_word in content.lower():
-                        if abs(content.lower().find(word) - content.lower().find(other_word)) < 100:
+                    if (
+                        other_word not in used
+                        and word in content.lower()
+                        and other_word in content.lower()
+                    ):
+                        if (
+                            abs(
+                                content.lower().find(word)
+                                - content.lower().find(other_word)
+                            )
+                            < 100
+                        ):
                             cluster.append(other_word)
                             used.add(other_word)
                             if len(cluster) >= 5:
@@ -274,12 +362,14 @@ class ContentAwareSemanticAnalyzer:
         entities = []
 
         # Extract capitalized phrases (potential entities)
-        capitalized = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', content)
+        capitalized = re.findall(r"\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b", content)
         entity_freq = Counter(capitalized)
-        entities.extend([ent for ent, count in entity_freq.most_common(10) if count >= 2])
+        entities.extend(
+            [ent for ent, count in entity_freq.most_common(10) if count >= 2]
+        )
 
         # Extract technical terms
-        tech_terms = re.findall(r'\b[A-Z]{2,}\b', content)  # Acronyms
+        tech_terms = re.findall(r"\b[A-Z]{2,}\b", content)  # Acronyms
         entities.extend(list(set(tech_terms))[:5])
 
         return list(set(entities))[:15]
@@ -287,22 +377,26 @@ class ContentAwareSemanticAnalyzer:
     def _analyze_content_structure(self, content: str) -> Dict[str, Any]:
         """Analyze content structure for SEO"""
         structure = {
-            'word_count': len(content.split()),
-            'paragraph_count': len([p for p in content.split('\n\n') if p.strip()]),
-            'heading_count': len(re.findall(r'^#+\s', content, re.MULTILINE)),
-            'list_count': len(re.findall(r'^\s*[-*+]\s', content, re.MULTILINE)),
-            'link_count': len(re.findall(r'\[.*?\]\(.*?\)', content)),
-            'image_count': len(re.findall(r'!\[.*?\]\(.*?\)', content)),
-            'code_block_count': len(re.findall(r'```', content)),
-            'has_intro': len(content.split('\n\n')[0]) > 100 if content.split('\n\n') else False,
-            'has_conclusion': len(content.split('\n\n')[-1]) > 100 if content.split('\n\n') else False
+            "word_count": len(content.split()),
+            "paragraph_count": len([p for p in content.split("\n\n") if p.strip()]),
+            "heading_count": len(re.findall(r"^#+\s", content, re.MULTILINE)),
+            "list_count": len(re.findall(r"^\s*[-*+]\s", content, re.MULTILINE)),
+            "link_count": len(re.findall(r"\[.*?\]\(.*?\)", content)),
+            "image_count": len(re.findall(r"!\[.*?\]\(.*?\)", content)),
+            "code_block_count": len(re.findall(r"```", content)),
+            "has_intro": len(content.split("\n\n")[0]) > 100
+            if content.split("\n\n")
+            else False,
+            "has_conclusion": len(content.split("\n\n")[-1]) > 100
+            if content.split("\n\n")
+            else False,
         }
 
         return structure
 
     def _calculate_readability(self, content: str) -> float:
         """Calculate readability score (simplified)"""
-        sentences = re.split(r'[.!?]+', content)
+        sentences = re.split(r"[.!?]+", content)
         words = content.split()
 
         if not sentences or not words:
@@ -312,7 +406,9 @@ class ContentAwareSemanticAnalyzer:
         avg_word_length = sum(len(word) for word in words) / len(words)
 
         # Simplified Flesch-like score
-        readability = 1.0 - min((avg_sentence_length / 30.0) * 0.3 + (avg_word_length / 7.0) * 0.2, 1.0)
+        readability = 1.0 - min(
+            (avg_sentence_length / 30.0) * 0.3 + (avg_word_length / 7.0) * 0.2, 1.0
+        )
 
         return max(0.0, min(1.0, readability))
 
@@ -338,7 +434,7 @@ class ContentAwareSemanticAnalyzer:
             score += 0.1
 
         # Structure quality
-        headings = len(re.findall(r'^#+\s', content, re.MULTILINE))
+        headings = len(re.findall(r"^#+\s", content, re.MULTILINE))
         if headings >= 5:
             score += 0.2
         elif headings >= 3:
@@ -347,8 +443,8 @@ class ContentAwareSemanticAnalyzer:
             score += 0.1
 
         # Links and media
-        links = len(re.findall(r'\[.*?\]\(.*?\)', content))
-        images = len(re.findall(r'!\[.*?\]\(.*?\)', content))
+        links = len(re.findall(r"\[.*?\]\(.*?\)", content))
+        images = len(re.findall(r"!\[.*?\]\(.*?\)", content))
         if links >= 5 and images >= 2:
             score += 0.2
         elif links >= 3 or images >= 1:
@@ -358,9 +454,12 @@ class ContentAwareSemanticAnalyzer:
 
         return min(1.0, score)
 
-    def _generate_optimization_recommendations(
-        self, content: str, semantic_tags: List[str],
-        intent: Dict[str, float], seo_potential: float
+    def _generate_optimization_recommendations(:
+        self,
+        content: str,
+        semantic_tags: List[str],
+        intent: Dict[str, float],
+        seo_potential: float,
     ) -> List[str]:
         """Generate intelligent optimization recommendations"""
         recommendations = []
@@ -368,36 +467,50 @@ class ContentAwareSemanticAnalyzer:
         word_count = len(content.split())
 
         if word_count < 1500:
-            recommendations.append(f"Increase content length to 2000-2500 words (currently {word_count})")
+            recommendations.append(
+                f"Increase content length to 2000-2500 words (currently {word_count})"
+            )
 
         if seo_potential < 0.6:
-            recommendations.append("Enhance semantic richness with more related keywords and topics")
+            recommendations.append(
+                "Enhance semantic richness with more related keywords and topics"
+            )
 
-        headings = len(re.findall(r'^#+\s', content, re.MULTILINE))
+        headings = len(re.findall(r"^#+\s", content, re.MULTILINE))
         if headings < 5:
-            recommendations.append(f"Add more H2/H3 headings (currently {headings}, target: 5-8)")
+            recommendations.append(
+                f"Add more H2/H3 headings (currently {headings}, target: 5-8)"
+            )
 
-        links = len(re.findall(r'\[.*?\]\(.*?\)', content))
+        links = len(re.findall(r"\[.*?\]\(.*?\)", content))
         if links < 5:
-            recommendations.append(f"Increase internal/external links (currently {links}, target: 5-10)")
+            recommendations.append(
+                f"Increase internal/external links (currently {links}, target: 5-10)"
+            )
 
-        images = len(re.findall(r'!\[.*?\]\(.*?\)', content))
+        images = len(re.findall(r"!\[.*?\]\(.*?\)", content))
         if images < 2:
-            recommendations.append(f"Add more images with alt text (currently {images}, target: 2-5)")
+            recommendations.append(
+                f"Add more images with alt text (currently {images}, target: 2-5)"
+            )
 
         # Intent-specific recommendations
         max_intent = max(intent.values())
         if max_intent < 0.5:
-            recommendations.append("Clarify content intent - focus on one primary search intent")
+            recommendations.append(
+                "Clarify content intent - focus on one primary search intent"
+            )
 
-        if intent['informational'] > 0.6:
+        if intent["informational"] > 0.6:
             recommendations.append("Add FAQ section for informational queries")
-        elif intent['transactional'] > 0.6:
+        elif intent["transactional"] > 0.6:
             recommendations.append("Add clear CTAs and pricing information")
 
         return recommendations
 
-    def _discover_related_keywords(self, content: str, semantic_tags: List[str]) -> List[str]:
+    def _discover_related_keywords(:
+        self, content: str, semantic_tags: List[str]
+    ) -> List[str]:
         """Discover related keywords semantically"""
         related = []
 
@@ -412,12 +525,14 @@ class ContentAwareSemanticAnalyzer:
                 context = content_lower[start:end]
 
                 # Find related words in context
-                words = re.findall(r'\b[a-z]{4,}\b', context)
+                words = re.findall(r"\b[a-z]{4,}\b", context)
                 related.extend([w for w in words if w != tag and len(w) >= 4][:3])
 
         return list(set(related))[:20]
 
-    def _map_semantic_relationships(self, content: str, semantic_tags: List[str]) -> Dict[str, List[str]]:
+    def _map_semantic_relationships(:
+        self, content: str, semantic_tags: List[str]
+    ) -> Dict[str, List[str]]:
         """Map semantic relationships between concepts"""
         relationships = {}
         content_lower = content.lower()
@@ -428,8 +543,10 @@ class ContentAwareSemanticAnalyzer:
 
             if tag_pos != -1:
                 # Find co-occurring terms
-                context_window = content_lower[max(0, tag_pos-100):min(len(content), tag_pos+len(tag)+100)]
-                words = re.findall(r'\b[a-z]{4,}\b', context_window)
+                context_window = content_lower[
+                    max(0, tag_pos - 100) : min(len(content), tag_pos + len(tag) + 100)
+                ]
+                words = re.findall(r"\b[a-z]{4,}\b", context_window)
                 word_freq = Counter(words)
 
                 for word, count in word_freq.most_common(5):
@@ -440,7 +557,7 @@ class ContentAwareSemanticAnalyzer:
 
         return relationships
 
-    def _calculate_confidence(
+    def _calculate_confidence(:
         self, semantic_tags: List[str], intent: Dict[str, float], seo_potential: float
     ) -> float:
         """Calculate confidence score for analysis"""
@@ -466,7 +583,11 @@ class ContentAwareSemanticAnalyzer:
         # SEO potential
         confidence_factors.append(seo_potential)
 
-        return sum(confidence_factors) / len(confidence_factors) if confidence_factors else 0.5
+        return (
+            sum(confidence_factors) / len(confidence_factors)
+            if confidence_factors
+            else 0.5
+        )
 
 
 class KeywordIntelligenceEngine:
@@ -477,9 +598,11 @@ class KeywordIntelligenceEngine:
         self.keyword_cache = {}
         self.performance_data = []
 
-    def analyze_keyword(
-        self, keyword: str, existing_content: Optional[str] = None,
-        competitor_analysis: Optional[Dict] = None
+    def analyze_keyword(:
+        self,
+        keyword: str,
+        existing_content: Optional[str] = None,
+        competitor_analysis: Optional[Dict] = None,
     ) -> KeywordIntelligence:
         """Perform deep keyword intelligence analysis"""
 
@@ -528,10 +651,9 @@ class KeywordIntelligenceEngine:
             content_angle=content_angle,
             target_audience=target_audience,
             content_gaps=content_gaps,
-            confidence=confidence
+            confidence=confidence,
         )
 
-        self.keyword_cache[keyword] = intelligence
         return intelligence
 
     def _classify_search_intent(self, keyword: str) -> str:
@@ -539,19 +661,28 @@ class KeywordIntelligenceEngine:
         keyword_lower = keyword.lower()
 
         # Informational indicators
-        if any(q in keyword_lower for q in ['what', 'how', 'why', 'guide', 'tutorial', 'learn']):
-            return 'informational'
+        if any(
+            q in keyword_lower
+            for q in ["what", "how", "why", "guide", "tutorial", "learn"]
+        ):
+            return "informational"
 
         # Transactional indicators
-        if any(t in keyword_lower for t in ['buy', 'purchase', 'price', 'cost', 'order', 'download']):
-            return 'transactional'
+        if any(
+            t in keyword_lower
+            for t in ["buy", "purchase", "price", "cost", "order", "download"]
+        ):
+            return "transactional"
 
         # Commercial indicators
-        if any(c in keyword_lower for c in ['best', 'review', 'compare', 'vs', 'alternative', 'top']):
-            return 'commercial'
+        if any(
+            c in keyword_lower
+            for c in ["best", "review", "compare", "vs", "alternative", "top"]
+        ):
+            return "commercial"
 
         # Default to informational
-        return 'informational'
+        return "informational"
 
     def _generate_semantic_variations(self, keyword: str) -> List[str]:
         """Generate semantic variations of keyword"""
@@ -561,12 +692,12 @@ class KeywordIntelligenceEngine:
         keyword_lower = keyword.lower()
 
         # Add "how to" variations
-        if 'how to' not in keyword_lower:
+        if "how to" not in keyword_lower:
             variations.append(f"how to {keyword}")
             variations.append(f"{keyword} tutorial")
 
         # Add "best" variations
-        if 'best' not in keyword_lower:
+        if "best" not in keyword_lower:
             variations.append(f"best {keyword}")
 
         # Add year variations
@@ -584,11 +715,16 @@ class KeywordIntelligenceEngine:
 
         # Domain-specific entity mapping
         entity_map = {
-            'ai': ['artificial intelligence', 'machine learning', 'neural network', 'deep learning'],
-            'automation': ['workflow', 'pipeline', 'process', 'system'],
-            'art': ['creative', 'design', 'visual', 'generative'],
-            'workflow': ['process', 'automation', 'pipeline', 'system'],
-            'python': ['programming', 'code', 'development', 'scripting']
+            "ai": [
+                "artificial intelligence",
+                "machine learning",
+                "neural network",
+                "deep learning",
+            ],
+            "automation": ["workflow", "pipeline", "process", "system"],
+            "art": ["creative", "design", "visual", "generative"],
+            "workflow": ["process", "automation", "pipeline", "system"],
+            "python": ["programming", "code", "development", "scripting"],
         }
 
         keyword_lower = keyword.lower()
@@ -614,53 +750,55 @@ class KeywordIntelligenceEngine:
         related = []
 
         # Common related term patterns
-        if 'ai' in keyword.lower():
-            related.extend(['machine learning', 'automation', 'intelligent', 'neural'])
-        if 'automation' in keyword.lower():
-            related.extend(['workflow', 'process', 'efficiency', 'system'])
-        if 'art' in keyword.lower():
-            related.extend(['creative', 'design', 'visual', 'generative'])
+        if "ai" in keyword.lower():
+            related.extend(["machine learning", "automation", "intelligent", "neural"])
+        if "automation" in keyword.lower():
+            related.extend(["workflow", "process", "efficiency", "system"])
+        if "art" in keyword.lower():
+            related.extend(["creative", "design", "visual", "generative"])
 
         return related[:5]
 
-    def _assess_competition(self, keyword: str, competitor_analysis: Optional[Dict]) -> str:
+    def _assess_competition(:
+        self, keyword: str, competitor_analysis: Optional[Dict]
+    ) -> str:
         """Assess competition level"""
         if competitor_analysis:
-            domain_authority = competitor_analysis.get('domain_authority', 50)
-            backlinks = competitor_analysis.get('backlinks', 0)
+            domain_authority = competitor_analysis.get("domain_authority", 50)
+            backlinks = competitor_analysis.get("backlinks", 0)
 
             if domain_authority > 70 or backlinks > 10000:
-                return 'high'
+                return "high"
             elif domain_authority > 50 or backlinks > 5000:
-                return 'medium'
+                return "medium"
             else:
-                return 'low'
+                return "low"
 
         # Default assessment based on keyword characteristics
         keyword_lower = keyword.lower()
-        if any(term in keyword_lower for term in ['best', 'top', 'review', 'vs']):
-            return 'high'
+        if any(term in keyword_lower for term in ["best", "top", "review", "vs"]):
+            return "high"
         elif len(keyword.split()) >= 4:  # Long-tail
-            return 'low'
+            return "low"
         else:
-            return 'medium'
+            return "medium"
 
-    def _calculate_opportunity_score(
+    def _calculate_opportunity_score(:
         self, keyword: str, search_intent: str, competition: str
     ) -> float:
         """Calculate opportunity score"""
         score = 0.5  # Base score
 
         # Intent bonus
-        if search_intent == 'informational':
+        if search_intent == "informational":
             score += 0.2
-        elif search_intent == 'commercial':
+        elif search_intent == "commercial":
             score += 0.15
 
         # Competition adjustment
-        if competition == 'low':
+        if competition == "low":
             score += 0.3
-        elif competition == 'medium':
+        elif competition == "medium":
             score += 0.15
         else:
             score -= 0.1
@@ -675,74 +813,84 @@ class KeywordIntelligenceEngine:
         """Determine optimal content angle"""
         keyword_lower = keyword.lower()
 
-        if search_intent == 'informational':
-            if 'how' in keyword_lower or 'tutorial' in keyword_lower:
-                return 'step-by-step-guide'
-            elif 'what' in keyword_lower:
-                return 'comprehensive-explanation'
+        if search_intent == "informational":
+            if "how" in keyword_lower or "tutorial" in keyword_lower:
+                return "step-by-step-guide"
+            elif "what" in keyword_lower:
+                return "comprehensive-explanation"
             else:
-                return 'educational-content'
-        elif search_intent == 'commercial':
-            return 'comparison-review'
-        elif search_intent == 'transactional':
-            return 'product-service-showcase'
+                return "educational-content"
+        elif search_intent == "commercial":
+            return "comparison-review"
+        elif search_intent == "transactional":
+            return "product-service-showcase"
         else:
-            return 'informative-article'
+            return "informative-article"
 
     def _identify_target_audience(self, keyword: str, search_intent: str) -> List[str]:
         """Identify target audience"""
         audience = []
         keyword_lower = keyword.lower()
 
-        if 'developer' in keyword_lower or 'python' in keyword_lower or 'code' in keyword_lower:
-            audience.append('developers')
-            audience.append('technical-professionals')
+        if (
+            "developer" in keyword_lower
+            or "python" in keyword_lower
+            or "code" in keyword_lower
+        ):
+            audience.append("developers")
+            audience.append("technical-professionals")
 
-        if 'business' in keyword_lower or 'enterprise' in keyword_lower:
-            audience.append('business-owners')
-            audience.append('decision-makers')
+        if "business" in keyword_lower or "enterprise" in keyword_lower:
+            audience.append("business-owners")
+            audience.append("decision-makers")
 
-        if 'art' in keyword_lower or 'creative' in keyword_lower or 'design' in keyword_lower:
-            audience.append('creators')
-            audience.append('artists')
+        if (
+            "art" in keyword_lower
+            or "creative" in keyword_lower
+            or "design" in keyword_lower
+        ):
+            audience.append("creators")
+            audience.append("artists")
 
-        if 'automation' in keyword_lower or 'workflow' in keyword_lower:
-            audience.append('productivity-seekers')
-            audience.append('efficiency-focused')
+        if "automation" in keyword_lower or "workflow" in keyword_lower:
+            audience.append("productivity-seekers")
+            audience.append("efficiency-focused")
 
         if not audience:
-            audience = ['general-audience', 'tech-interested']
+            audience = ["general-audience", "tech-interested"]
 
         return audience
 
-    def _identify_content_gaps(self, keyword: str, existing_content: Optional[str]) -> List[str]:
+    def _identify_content_gaps(:
+        self, keyword: str, existing_content: Optional[str]
+    ) -> List[str]:
         """Identify content gaps"""
         gaps = []
 
         if not existing_content:
-            gaps.append('no-existing-content')
-            gaps.append('create-comprehensive-guide')
+            gaps.append("no-existing-content")
+            gaps.append("create-comprehensive-guide")
             return gaps
 
         content_lower = existing_content.lower()
         keyword_lower = keyword.lower()
 
         # Check for key sections
-        if 'faq' not in content_lower and 'question' not in content_lower:
-            gaps.append('add-faq-section')
+        if "faq" not in content_lower and "question" not in content_lower:
+            gaps.append("add-faq-section")
 
-        if 'example' not in content_lower and 'demo' not in content_lower:
-            gaps.append('add-examples-demos')
+        if "example" not in content_lower and "demo" not in content_lower:
+            gaps.append("add-examples-demos")
 
-        if 'step' not in content_lower and 'tutorial' not in content_lower:
-            gaps.append('add-step-by-step-guide')
+        if "step" not in content_lower and "tutorial" not in content_lower:
+            gaps.append("add-step-by-step-guide")
 
         if len(existing_content.split()) < 1500:
-            gaps.append('expand-content-depth')
+            gaps.append("expand-content-depth")
 
         return gaps
 
-    def _calculate_keyword_confidence(
+    def _calculate_keyword_confidence(:
         self, keyword: str, variations: List[str], opportunity_score: float
     ) -> float:
         """Calculate confidence in keyword analysis"""
@@ -763,43 +911,46 @@ class SEOArchitecturalPatternDetector:
 
     def __init__(self):
         self.patterns = {
-            'pillar-cluster': {
-                'description': 'One pillar page + multiple cluster pages',
-                'best_for': ['comprehensive topics', 'authority building'],
-                'structure': 'hierarchical'
+            "pillar-cluster": {
+                "description": "One pillar page + multiple cluster pages",
+                "best_for": ["comprehensive topics", "authority building"],
+                "structure": "hierarchical",
             },
-            'topic-cluster': {
-                'description': 'Topic-focused content clusters',
-                'best_for': ['semantic SEO', 'related topics'],
-                'structure': 'network'
+            "topic-cluster": {
+                "description": "Topic-focused content clusters",
+                "best_for": ["semantic SEO", "related topics"],
+                "structure": "network",
             },
-            'hub-spoke': {
-                'description': 'Central hub + supporting spokes',
-                'best_for': ['product pages', 'service offerings'],
-                'structure': 'radial'
+            "hub-spoke": {
+                "description": "Central hub + supporting spokes",
+                "best_for": ["product pages", "service offerings"],
+                "structure": "radial",
             },
-            'content-silo': {
-                'description': 'Themed content silos',
-                'best_for': ['niche topics', 'vertical focus'],
-                'structure': 'isolated-clusters'
-            }
+            "content-silo": {
+                "description": "Themed content silos",
+                "best_for": ["niche topics", "vertical focus"],
+                "structure": "isolated-clusters",
+            },
         }
 
-    def detect_optimal_pattern(
-        self, primary_topic: str, supporting_topics: List[str],
-        content_count: int, domain_focus: str
+    def detect_optimal_pattern(:
+        self,
+        primary_topic: str,
+        supporting_topics: List[str],
+        content_count: int,
+        domain_focus: str,
     ) -> SEOArchitecturalPattern:
         """Detect optimal SEO architectural pattern"""
 
         # Analyze requirements
         if content_count >= 10 and len(supporting_topics) >= 5:
-            pattern_type = 'pillar-cluster'
+            pattern_type = "pillar-cluster"
         elif len(supporting_topics) >= 8:
-            pattern_type = 'topic-cluster'
-        elif domain_focus in ['product', 'service']:
-            pattern_type = 'hub-spoke'
+            pattern_type = "topic-cluster"
+        elif domain_focus in ["product", "service"]:
+            pattern_type = "hub-spoke"
         else:
-            pattern_type = 'content-silo'
+            pattern_type = "content-silo"
 
         # Build content hierarchy
         content_hierarchy = self._build_content_hierarchy(
@@ -828,52 +979,53 @@ class SEOArchitecturalPatternDetector:
             internal_linking_strategy=linking_strategy,
             content_hierarchy=content_hierarchy,
             optimization_priority=optimization_priority,
-            confidence=confidence
+            confidence=confidence,
         )
 
         return pattern
 
-    def _build_content_hierarchy(
+    def _build_content_hierarchy(:
         self, primary: str, supporting: List[str], pattern_type: str
     ) -> Dict[str, Any]:
         """Build content hierarchy based on pattern"""
         hierarchy = {
-            'tier_1': primary,
-            'tier_2': supporting[:5],
-            'tier_3': supporting[5:10] if len(supporting) > 5 else []
+            "tier_1": primary,
+            "tier_2": supporting[:5],
+            "tier_3": supporting[5:10] if len(supporting) > 5 else [],
         }
 
-        if pattern_type == 'pillar-cluster':
-            hierarchy['structure'] = 'pillar -> clusters -> supporting'
-        elif pattern_type == 'topic-cluster':
-            hierarchy['structure'] = 'topics -> related topics -> subtopics'
-        elif pattern_type == 'hub-spoke':
-            hierarchy['structure'] = 'hub -> spokes -> details'
+        if pattern_type == "pillar-cluster":
+            hierarchy["structure"] = "pillar -> clusters -> supporting"
+        elif pattern_type == "topic-cluster":
+            hierarchy["structure"] = "topics -> related topics -> subtopics"
+        elif pattern_type == "hub-spoke":
+            hierarchy["structure"] = "hub -> spokes -> details"
         else:
-            hierarchy['structure'] = 'silos -> related content'
+            hierarchy["structure"] = "silos -> related content"
 
         return hierarchy
 
-    def _generate_linking_strategy(
+    def _generate_linking_strategy(:
         self, primary: str, supporting: List[str], pattern_type: str
     ) -> Dict[str, List[str]]:
         """Generate internal linking strategy"""
         strategy = {}
 
-        if pattern_type == 'pillar-cluster':
+        if pattern_type == "pillar-cluster":
             # All clusters link to pillar
             strategy[primary] = supporting
             # Clusters link to each other
             for topic in supporting[:5]:
                 strategy[topic] = [s for s in supporting if s != topic][:3]
-        elif pattern_type == 'topic-cluster':
+        elif pattern_type == "topic-cluster":
             # Topics link to related topics
             for i, topic in enumerate(supporting):
                 strategy[topic] = [
-                    s for s in supporting
+                    s
+                    for s in supporting
                     if s != topic and abs(supporting.index(s) - i) <= 2
                 ][:3]
-        elif pattern_type == 'hub-spoke':
+        elif pattern_type == "hub-spoke":
             # All spokes link to hub
             strategy[primary] = supporting
             # Hub links to all spokes
@@ -886,24 +1038,44 @@ class SEOArchitecturalPatternDetector:
 
         return strategy
 
-    def _determine_optimization_priority(
+    def _determine_optimization_priority(:
         self, pattern_type: str, supporting: List[str]
     ) -> List[str]:
         """Determine optimization priority"""
         priority = []
 
-        if pattern_type == 'pillar-cluster':
-            priority = ['pillar-page', 'cluster-pages', 'internal-links', 'supporting-content']
-        elif pattern_type == 'topic-cluster':
-            priority = ['topic-pages', 'semantic-linking', 'related-content', 'topic-authority']
-        elif pattern_type == 'hub-spoke':
-            priority = ['hub-page', 'spoke-pages', 'hub-links', 'conversion-optimization']
+        if pattern_type == "pillar-cluster":
+            priority = [
+                "pillar-page",
+                "cluster-pages",
+                "internal-links",
+                "supporting-content",
+            ]
+        elif pattern_type == "topic-cluster":
+            priority = [
+                "topic-pages",
+                "semantic-linking",
+                "related-content",
+                "topic-authority",
+            ]
+        elif pattern_type == "hub-spoke":
+            priority = [
+                "hub-page",
+                "spoke-pages",
+                "hub-links",
+                "conversion-optimization",
+            ]
         else:
-            priority = ['silo-pages', 'silo-linking', 'vertical-depth', 'niche-authority']
+            priority = [
+                "silo-pages",
+                "silo-linking",
+                "vertical-depth",
+                "niche-authority",
+            ]
 
         return priority
 
-    def _calculate_pattern_confidence(
+    def _calculate_pattern_confidence(:
         self, pattern_type: str, supporting: List[str], content_count: int
     ) -> float:
         """Calculate confidence in pattern recommendation"""
@@ -922,7 +1094,7 @@ class SEOArchitecturalPatternDetector:
             confidence += 0.15
 
         # Pattern appropriateness
-        if pattern_type in ['pillar-cluster', 'topic-cluster']:
+        if pattern_type in ["pillar-cluster", "topic-cluster"]:
             confidence += 0.1
 
         return min(1.0, confidence)
@@ -935,18 +1107,18 @@ class AdvancedSEODominationEngine:
         self.semantic_analyzer = ContentAwareSemanticAnalyzer()
         self.keyword_engine = KeywordIntelligenceEngine(self.semantic_analyzer)
         self.pattern_detector = SEOArchitecturalPatternDetector()
-        self.output_dir = Path.home() / 'seo_content'
+        self.output_dir = Path.home() / "seo_content"
         self.output_dir.mkdir(exist_ok=True)
 
         # Initialize AI clients if available
         self.openai_client = None
         self.anthropic_client = None
 
-        if OPENAI_AVAILABLE and os.getenv('OPENAI_API_KEY'):
-            self.openai_client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        if OPENAI_AVAILABLE and os.getenv("OPENAI_API_KEY"):
+            self.openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-        if ANTHROPIC_AVAILABLE and os.getenv('ANTHROPIC_API_KEY'):
-            self.anthropic_client = Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
+        if ANTHROPIC_AVAILABLE and os.getenv("ANTHROPIC_API_KEY"):
+            self.anthropic_client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
     def generate_metadata_pack(self, domain: str) -> Dict[str, Any]:
         """Generate comprehensive metadata pack with content-aware intelligence"""
@@ -961,20 +1133,26 @@ class AdvancedSEODominationEngine:
 
         # Generate intelligent metadata
         metadata_pack = {
-            'domain': domain,
-            'generated_at': datetime.now().isoformat(),
-            'site_wide_metadata': self._generate_site_wide_metadata(domain_config, existing_content_analysis),
-            'page_specific_metadata': self._generate_page_metadata(domain_config, existing_content_analysis),
-            'schema_markup': self._generate_schema_markup(domain_config),
-            'content_briefs': self._generate_content_briefs(domain_config, existing_content_analysis),
-            'alt_text_templates': self._generate_alt_text_templates(domain_config),
-            'implementation_guide': self._generate_implementation_guide(domain_config),
-            'content_aware_insights': existing_content_analysis
+            "domain": domain,
+            "generated_at": datetime.now().isoformat(),
+            "site_wide_metadata": self._generate_site_wide_metadata(
+                domain_config, existing_content_analysis
+            ),
+            "page_specific_metadata": self._generate_page_metadata(
+                domain_config, existing_content_analysis
+            ),
+            "schema_markup": self._generate_schema_markup(domain_config),
+            "content_briefs": self._generate_content_briefs(
+                domain_config, existing_content_analysis
+            ),
+            "alt_text_templates": self._generate_alt_text_templates(domain_config),
+            "implementation_guide": self._generate_implementation_guide(domain_config),
+            "content_aware_insights": existing_content_analysis,
         }
 
         # Save metadata pack
         output_file = self.output_dir / f"{domain}_metadata_pack_v2.json"
-        with open(output_file, 'w', encoding='utf-8') as f:
+        with open(output_file, "w", encoding="utf-8") as f:
             json.dump(metadata_pack, f, indent=2, ensure_ascii=False)
 
         # Generate implementation guide
@@ -986,11 +1164,11 @@ class AdvancedSEODominationEngine:
 
         return metadata_pack
 
-    def create_seo_content(
+    def create_seo_content(:
         self, keyword: str, domain: str, word_count: int = 2500
     ) -> Dict[str, Any]:
         """Create SEO-optimized content with content-aware intelligence"""
-        print(f"\n🚀 Creating Advanced SEO Content")
+        print("\n🚀 Creating Advanced SEO Content")
         print("=" * 70)
         print(f"Keyword: {keyword}")
         print(f"Domain: {domain}")
@@ -1009,7 +1187,9 @@ class AdvancedSEODominationEngine:
         existing_content = self._get_existing_content(domain, keyword)
         content_analysis = None
         if existing_content:
-            content_analysis = self.semantic_analyzer.analyze_content_semantics(existing_content)
+            content_analysis = self.semantic_analyzer.analyze_content_semantics(
+                existing_content
+            )
             print(f"   Semantic Tags: {', '.join(content_analysis.semantic_tags[:5])}")
             print(f"   SEO Potential: {content_analysis.seo_potential:.2f}")
 
@@ -1031,23 +1211,23 @@ class AdvancedSEODominationEngine:
 
         # Create complete package
         content_package = {
-            'keyword': keyword,
-            'domain': domain,
-            'generated_at': datetime.now().isoformat(),
-            'content': content,
-            'word_count': len(content.split()),
-            'seo_metadata': seo_metadata,
-            'keyword_intelligence': asdict(keyword_intelligence),
-            'content_analysis': asdict(generated_analysis),
-            'optimization_recommendations': generated_analysis.optimization_recommendations,
-            'related_keywords': generated_analysis.related_keywords,
-            'semantic_relationships': generated_analysis.semantic_relationships
+            "keyword": keyword,
+            "domain": domain,
+            "generated_at": datetime.now().isoformat(),
+            "content": content,
+            "word_count": len(content.split()),
+            "seo_metadata": seo_metadata,
+            "keyword_intelligence": asdict(keyword_intelligence),
+            "content_analysis": asdict(generated_analysis),
+            "optimization_recommendations": generated_analysis.optimization_recommendations,
+            "related_keywords": generated_analysis.related_keywords,
+            "semantic_relationships": generated_analysis.semantic_relationships,
         }
 
         # Save content
-        safe_keyword = re.sub(r'[^a-z0-9-]', '', keyword.lower().replace(' ', '-'))
+        safe_keyword = re.sub(r"[^a-z0-9-]", "", keyword.lower().replace(" ", "-"))
         output_file = self.output_dir / f"{domain}_{safe_keyword}_v2.json"
-        with open(output_file, 'w', encoding='utf-8') as f:
+        with open(output_file, "w", encoding="utf-8") as f:
             json.dump(content_package, f, indent=2, ensure_ascii=False)
 
         # Save markdown version
@@ -1056,7 +1236,7 @@ class AdvancedSEODominationEngine:
 
         print(f"\n✅ Content saved to: {output_file}")
         print(f"✅ Markdown saved to: {md_file}")
-        print(f"\n📊 Content Analysis:")
+        print("\n📊 Content Analysis:")
         print(f"   Word Count: {len(content.split())}")
         print(f"   SEO Potential: {generated_analysis.seo_potential:.2f}")
         print(f"   Readability: {generated_analysis.readability_score:.2f}")
@@ -1070,49 +1250,51 @@ class AdvancedSEODominationEngine:
         print("=" * 70)
 
         results = {
-            'avatararts': {},
-            'quantumforge': {},
-            'generated_at': datetime.now().isoformat()
+            "avatararts": {},
+            "quantumforge": {},
+            "generated_at": datetime.now().isoformat(),
         }
 
         # Optimize AvatarArts
         print("\n📝 Optimizing AvatarArts.org...")
-        results['avatararts'] = self.generate_metadata_pack('avatararts')
+        results["avatararts"] = self.generate_metadata_pack("avatararts")
 
         # Create top content for AvatarArts
         avatararts_keywords = [
-            'Generative Automation',
-            'AI Art Workflow',
-            'Image Prompt Generator'
+            "Generative Automation",
+            "AI Art Workflow",
+            "Image Prompt Generator",
         ]
 
         for keyword in avatararts_keywords[:2]:  # Limit for demo
             print(f"\n   Creating content for: {keyword}")
-            results['avatararts'][f'content_{keyword.lower().replace(" ", "_")}'] = \
-                self.create_seo_content(keyword, 'avatararts', 2000)
+            results["avatararts"][f"content_{keyword.lower().replace(' ', '_')}"] = (
+                self.create_seo_content(keyword, "avatararts", 2000)
+            )
 
         # Optimize QuantumForge
         print("\n📝 Optimizing QuantumForgeLabs.org...")
-        results['quantumforge'] = self.generate_metadata_pack('quantumforge')
+        results["quantumforge"] = self.generate_metadata_pack("quantumforge")
 
         # Create top content for QuantumForge
         quantumforge_keywords = [
-            'AI Workflow Automation',
-            'Python AI Pipelines',
-            'Agentic Workflows'
+            "AI Workflow Automation",
+            "Python AI Pipelines",
+            "Agentic Workflows",
         ]
 
         for keyword in quantumforge_keywords[:2]:  # Limit for demo
             print(f"\n   Creating content for: {keyword}")
-            results['quantumforge'][f'content_{keyword.lower().replace(" ", "_")}'] = \
-                self.create_seo_content(keyword, 'quantumforge', 2000)
+            results["quantumforge"][f"content_{keyword.lower().replace(' ', '_')}"] = (
+                self.create_seo_content(keyword, "quantumforge", 2000)
+            )
 
         # Save full results
-        results_file = self.output_dir / 'full_optimization_results_v2.json'
-        with open(results_file, 'w', encoding='utf-8') as f:
+        results_file = self.output_dir / "full_optimization_results_v2.json"
+        with open(results_file, "w", encoding="utf-8") as f:
             json.dump(results, f, indent=2, ensure_ascii=False)
 
-        print(f"\n✅ Full optimization complete!")
+        print("\n✅ Full optimization complete!")
         print(f"✅ Results saved to: {results_file}")
 
         return results
@@ -1122,30 +1304,36 @@ class AdvancedSEODominationEngine:
     def _get_domain_config(self, domain: str) -> Dict[str, Any]:
         """Get domain configuration"""
         configs = {
-            'avatararts': {
-                'name': 'AvatarArts',
-                'url': 'https://avatararts.org',
-                'description': 'Creative AI & Generative Automation Alchemy',
-                'focus': 'AI Art, Creative Automation, Generative Tools',
-                'target_keywords': [
-                    'AI Art Workflow', 'Generative Automation', 'Image Prompt Generator',
-                    'Creative Automation Tools', 'AI Art Generation'
+            "avatararts": {
+                "name": "AvatarArts",
+                "url": "https://avatararts.org",
+                "description": "Creative AI & Generative Automation Alchemy",
+                "focus": "AI Art, Creative Automation, Generative Tools",
+                "target_keywords": [
+                    "AI Art Workflow",
+                    "Generative Automation",
+                    "Image Prompt Generator",
+                    "Creative Automation Tools",
+                    "AI Art Generation",
                 ],
-                'pages': ['/alchemy', '/gallery', '/tutorials', '/blog']
+                "pages": ["/alchemy", "/gallery", "/tutorials", "/blog"],
             },
-            'quantumforge': {
-                'name': 'QuantumForge Labs',
-                'url': 'https://quantumforgelabs.org',
-                'description': 'AI Workflow Automation & Python AI Research',
-                'focus': 'AI Workflow Automation, Python AI, Research',
-                'target_keywords': [
-                    'AI Workflow Automation', 'Python AI Pipelines', 'Agentic Workflows',
-                    'Quantum Machine Learning', 'API Automation Toolkit'
+            "quantumforge": {
+                "name": "QuantumForge Labs",
+                "url": "https://quantumforgelabs.org",
+                "description": "AI Workflow Automation & Python AI Research",
+                "focus": "AI Workflow Automation, Python AI, Research",
+                "target_keywords": [
+                    "AI Workflow Automation",
+                    "Python AI Pipelines",
+                    "Agentic Workflows",
+                    "Quantum Machine Learning",
+                    "API Automation Toolkit",
                 ],
-                'pages': ['/research', '/labs', '/docs', '/community']
-            }
+                "pages": ["/research", "/labs", "/docs", "/community"],
+            },
         }
-        return configs.get(domain, configs['avatararts'])
+        return configs.get(domain, configs["avatararts"])
 
     def _analyze_existing_content(self, domain: str) -> Optional[Dict[str, Any]]:
         """Analyze existing content for the domain"""
@@ -1153,34 +1341,38 @@ class AdvancedSEODominationEngine:
         # For now, return None to indicate no existing content
         return None
 
-    def _generate_site_wide_metadata(
+    def _generate_site_wide_metadata(:
         self, config: Dict, content_analysis: Optional[Dict]
     ) -> Dict[str, Any]:
         """Generate site-wide metadata"""
-        primary_keyword = config['target_keywords'][0] if config['target_keywords'] else 'AI Automation'
+        primary_keyword = (
+            config["target_keywords"][0]
+            if config["target_keywords"]
+            else "AI Automation"
+        )
 
         return {
-            'title': f"{config['name']} | {primary_keyword} & {config['focus']}",
-            'description': f"{config['description']}. Expert guides on {primary_keyword.lower()} and {config['focus'].lower()}.",
-            'og_title': f"{config['name']} - {primary_keyword}",
-            'og_description': config['description'],
-            'twitter_title': f"{config['name']} | {primary_keyword}",
-            'twitter_description': config['description'][:200]
+            "title": f"{config['name']} | {primary_keyword} & {config['focus']}",
+            "description": f"{config['description']}. Expert guides on {primary_keyword.lower()} and {config['focus'].lower()}.",
+            "og_title": f"{config['name']} - {primary_keyword}",
+            "og_description": config["description"],
+            "twitter_title": f"{config['name']} | {primary_keyword}",
+            "twitter_description": config["description"][:200],
         }
 
-    def _generate_page_metadata(
+    def _generate_page_metadata(:
         self, config: Dict, content_analysis: Optional[Dict]
     ) -> Dict[str, List[Dict[str, str]]]:
         """Generate page-specific metadata"""
         page_metadata = {}
 
-        for page in config['pages']:
-            page_name = page.replace('/', '').title() or 'Home'
+        for page in config["pages"]:
+            page_name = page.replace("/", "").title() or "Home"
             page_metadata[page] = {
-                'title': f"{page_name} | {config['name']} - {config['target_keywords'][0]}",
-                'description': f"Explore {page_name.lower()} on {config['name']}. {config['description']}",
-                'h1': f"{page_name} - {config['target_keywords'][0]}",
-                'slug': page
+                "title": f"{page_name} | {config['name']} - {config['target_keywords'][0]}",
+                "description": f"Explore {page_name.lower()} on {config['name']}. {config['description']}",
+                "h1": f"{page_name} - {config['target_keywords'][0]}",
+                "slug": page,
             }
 
         return page_metadata
@@ -1188,116 +1380,110 @@ class AdvancedSEODominationEngine:
     def _generate_schema_markup(self, config: Dict) -> Dict[str, Any]:
         """Generate Schema.org JSON-LD markup"""
         return {
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            'name': config['name'],
-            'url': config['url'],
-            'description': config['description'],
-            'sameAs': [
-                config['url']
-            ]
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": config["name"],
+            "url": config["url"],
+            "description": config["description"],
+            "sameAs": [config["url"]],
         }
 
-    def _generate_content_briefs(
+    def _generate_content_briefs(:
         self, config: Dict, content_analysis: Optional[Dict]
     ) -> Dict[str, Dict[str, Any]]:
         """Generate content briefs for top keywords"""
         briefs = {}
 
-        for keyword in config['target_keywords'][:5]:
+        for keyword in config["target_keywords"][:5]:
             intelligence = self.keyword_engine.analyze_keyword(keyword)
 
             briefs[keyword] = {
-                'primary_keyword': keyword,
-                'secondary_keywords': intelligence.semantic_variations[:5],
-                'search_intent': intelligence.search_intent,
-                'content_angle': intelligence.content_angle,
-                'target_audience': intelligence.target_audience,
-                'target_word_count': 2000,
-                'key_points': self._generate_key_points(keyword, intelligence),
-                'cta_suggestions': self._generate_cta_suggestions(intelligence.search_intent)
+                "primary_keyword": keyword,
+                "secondary_keywords": intelligence.semantic_variations[:5],
+                "search_intent": intelligence.search_intent,
+                "content_angle": intelligence.content_angle,
+                "target_audience": intelligence.target_audience,
+                "target_word_count": 2000,
+                "key_points": self._generate_key_points(keyword, intelligence),
+                "cta_suggestions": self._generate_cta_suggestions(
+                    intelligence.search_intent
+                ),
             }
 
         return briefs
 
-    def _generate_key_points(self, keyword: str, intelligence: KeywordIntelligence) -> List[str]:
+    def _generate_key_points(:
+        self, keyword: str, intelligence: KeywordIntelligence
+    ) -> List[str]:
         """Generate key points for content brief"""
         points = [
             f"Comprehensive explanation of {keyword}",
-            f"Real-world applications and use cases",
-            f"Best practices and implementation strategies",
+            "Real-world applications and use cases",
+            "Best practices and implementation strategies",
             f"Tools and resources for {keyword.lower()}",
-            f"Future trends and developments"
+            "Future trends and developments",
         ]
         return points
 
     def _generate_cta_suggestions(self, search_intent: str) -> List[str]:
         """Generate CTA suggestions based on intent"""
-        if search_intent == 'transactional':
-            return [
-                'Get Started Today',
-                'Request a Demo',
-                'Download Free Guide'
-            ]
-        elif search_intent == 'commercial':
-            return [
-                'Compare Solutions',
-                'View Pricing',
-                'See Case Studies'
-            ]
+        if search_intent == "transactional":
+            return ["Get Started Today", "Request a Demo", "Download Free Guide"]
+        elif search_intent == "commercial":
+            return ["Compare Solutions", "View Pricing", "See Case Studies"]
         else:
-            return [
-                'Learn More',
-                'Explore Resources',
-                'Join Community'
-            ]
+            return ["Learn More", "Explore Resources", "Join Community"]
 
     def _generate_alt_text_templates(self, config: Dict) -> List[str]:
         """Generate alt text templates"""
         templates = []
-        primary_keyword = config['target_keywords'][0] if config['target_keywords'] else 'AI Automation'
+        primary_keyword = (
+            config["target_keywords"][0]
+            if config["target_keywords"]
+            else "AI Automation"
+        )
 
         for i in range(20):
-            templates.append(
-                f"{primary_keyword} example {i+1} - {config['name']}"
-            )
+            templates.append(f"{primary_keyword} example {i + 1} - {config['name']}")
 
         return templates
 
     def _generate_implementation_guide(self, config: Dict) -> Dict[str, Any]:
         """Generate implementation guide"""
         return {
-            'steps': [
-                'Add site-wide metadata to <head> section',
-                'Implement Schema.org JSON-LD markup',
-                'Update page-specific metadata',
-                'Add alt text to all images',
-                'Create content based on briefs',
-                'Set up internal linking structure',
-                'Submit sitemap to Google Search Console'
+            "steps": [
+                "Add site-wide metadata to <head> section",
+                "Implement Schema.org JSON-LD markup",
+                "Update page-specific metadata",
+                "Add alt text to all images",
+                "Create content based on briefs",
+                "Set up internal linking structure",
+                "Submit sitemap to Google Search Console",
             ],
-            'priority': 'high',
-            'estimated_time': '2-3 hours'
+            "priority": "high",
+            "estimated_time": "2-3 hours",
         }
 
-    def _write_implementation_guide(
+    def _write_implementation_guide(:
         self, file_path: Path, metadata_pack: Dict, config: Dict
     ):
         """Write implementation guide to file"""
-        with open(file_path, 'w', encoding='utf-8') as f:
+        with open(file_path, "w", encoding="utf-8") as f:
             f.write(f"# SEO Implementation Guide - {config['name']}\n\n")
             f.write(f"Generated: {metadata_pack['generated_at']}\n\n")
             f.write("## Site-Wide Metadata\n\n")
             f.write("```html\n")
             f.write(f"<title>{metadata_pack['site_wide_metadata']['title']}</title>\n")
-            f.write(f"<meta name=\"description\" content=\"{metadata_pack['site_wide_metadata']['description']}\">\n")
+            f.write(
+                f'<meta name="description" content="{metadata_pack["site_wide_metadata"]["description"]}">\n'
+            )
             f.write("```\n\n")
             f.write("## Schema.org Markup\n\n")
             f.write("```json\n")
-            f.write(json.dumps(metadata_pack['schema_markup'], indent=2))
+            f.write(json.dumps(metadata_pack["schema_markup"], indent=2))
             f.write("\n```\n\n")
             f.write("## Content Briefs\n\n")
-            for keyword, brief in metadata_pack['content_briefs'].items():
+            for keyword, brief in metadata_pack["content_briefs"].items():
                 f.write(f"### {keyword}\n\n")
                 f.write(f"- **Intent**: {brief['search_intent']}\n")
                 f.write(f"- **Angle**: {brief['content_angle']}\n")
@@ -1307,20 +1493,25 @@ class AdvancedSEODominationEngine:
         """Get existing content for domain/keyword (placeholder)"""
         return None
 
-    def _generate_ai_content(
-        self, keyword: str, intelligence: KeywordIntelligence,
+    def _generate_ai_content(:
+        self,
+        keyword: str,
+        intelligence: KeywordIntelligence,
         content_analysis: Optional[ContentSemanticAnalysis],
-        word_count: int, domain: str
+        word_count: int,
+        domain: str,
     ) -> str:
         """Generate AI-powered content"""
         # Use AI client if available, otherwise generate template
         if self.anthropic_client:
             try:
-                prompt = self._build_content_prompt(keyword, intelligence, word_count, domain)
+                prompt = self._build_content_prompt(
+                    keyword, intelligence, word_count, domain
+                )
                 response = self.anthropic_client.messages.create(
                     model="claude-3-5-sonnet-20241022",
                     max_tokens=8000,
-                    messages=[{"role": "user", "content": prompt}]
+                    messages=[{"role": "user", "content": prompt}],
                 )
                 return response.content[0].text
             except Exception as e:
@@ -1329,9 +1520,12 @@ class AdvancedSEODominationEngine:
         # Fallback template
         return self._generate_template_content(keyword, intelligence, word_count)
 
-    def _build_content_prompt(
-        self, keyword: str, intelligence: KeywordIntelligence,
-        word_count: int, domain: str
+    def _build_content_prompt(:
+        self,
+        keyword: str,
+        intelligence: KeywordIntelligence,
+        word_count: int,
+        domain: str,
     ) -> str:
         """Build prompt for AI content generation"""
         return f"""Write a comprehensive, SEO-optimized article about "{keyword}".
@@ -1340,8 +1534,8 @@ Requirements:
 - Word count: {word_count} words
 - Search intent: {intelligence.search_intent}
 - Content angle: {intelligence.content_angle}
-- Target audience: {', '.join(intelligence.target_audience)}
-- Include these semantic variations: {', '.join(intelligence.semantic_variations[:5])}
+- Target audience: {", ".join(intelligence.target_audience)}
+- Include these semantic variations: {", ".join(intelligence.semantic_variations[:5])}
 
 Structure:
 1. Compelling introduction with keyword in first paragraph
@@ -1353,7 +1547,7 @@ Structure:
 
 Make it engaging, informative, and optimized for search engines while maintaining natural readability."""
 
-    def _generate_template_content(
+    def _generate_template_content(:
         self, keyword: str, intelligence: KeywordIntelligence, word_count: int
     ) -> str:
         """Generate template content (fallback)"""
@@ -1361,41 +1555,46 @@ Make it engaging, informative, and optimized for search engines while maintainin
             f"# {keyword}: Complete Guide",
             f"\n## Introduction\n\n{keyword} is revolutionizing how we approach automation and AI workflows...",
             f"\n## What is {keyword}?\n\n{keyword} represents a paradigm shift in...",
-            f"\n## Key Benefits\n\n- Efficiency improvements\n- Cost reduction\n- Scalability",
+            "\n## Key Benefits\n\n- Efficiency improvements\n- Cost reduction\n- Scalability",
             f"\n## Implementation Strategies\n\nImplementing {keyword} requires careful planning...",
-            f"\n## Best Practices\n\n- Start with clear objectives\n- Choose the right tools\n- Monitor performance",
-            f"\n## Conclusion\n\n{keyword} offers tremendous potential for organizations looking to..."
+            "\n## Best Practices\n\n- Start with clear objectives\n- Choose the right tools\n- Monitor performance",
+            f"\n## Conclusion\n\n{keyword} offers tremendous potential for organizations looking to...",
         ]
         return "\n".join(sections)
 
-    def _generate_content_seo_metadata(
-        self, keyword: str, content: str,
-        intelligence: KeywordIntelligence, analysis: ContentSemanticAnalysis
+    def _generate_content_seo_metadata(:
+        self,
+        keyword: str,
+        content: str,
+        intelligence: KeywordIntelligence,
+        analysis: ContentSemanticAnalysis,
     ) -> Dict[str, Any]:
         """Generate SEO metadata for content"""
         return {
-            'title': f"{keyword} | Complete Guide 2025",
-            'meta_description': content[:155] + '...' if len(content) > 155 else content,
-            'focus_keyword': keyword,
-            'secondary_keywords': intelligence.semantic_variations[:5],
-            'og_title': f"{keyword} - Complete Guide",
-            'og_description': content[:200] + '...' if len(content) > 200 else content,
-            'schema_markup': {
-                '@context': 'https://schema.org',
-                '@type': 'Article',
-                'headline': keyword,
-                'description': content[:300]
-            }
+            "title": f"{keyword} | Complete Guide 2025",
+            "meta_description": content[:155] + "..."
+            if len(content) > 155
+            else content,
+            "focus_keyword": keyword,
+            "secondary_keywords": intelligence.semantic_variations[:5],
+            "og_title": f"{keyword} - Complete Guide",
+            "og_description": content[:200] + "..." if len(content) > 200 else content,
+            "schema_markup": {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": keyword,
+                "description": content[:300],
+            },
         }
 
     def _write_content_markdown(self, file_path: Path, package: Dict):
         """Write content to markdown file"""
-        with open(file_path, 'w', encoding='utf-8') as f:
+        with open(file_path, "w", encoding="utf-8") as f:
             f.write(f"# {package['keyword']}\n\n")
             f.write(f"**Domain**: {package['domain']}\n")
             f.write(f"**Generated**: {package['generated_at']}\n\n")
             f.write("---\n\n")
-            f.write(package['content'])
+            f.write(package["content"])
             f.write("\n\n---\n\n")
             f.write("## SEO Metadata\n\n")
             f.write(f"**Title**: {package['seo_metadata']['title']}\n")
@@ -1405,26 +1604,36 @@ Make it engaging, informative, and optimized for search engines while maintainin
 def main():
     """Main CLI interface"""
     parser = argparse.ArgumentParser(
-        description='Advanced SEO Domination Engine v2.0 with Content-Aware Intelligence'
+        description="Advanced SEO Domination Engine v2.0 with Content-Aware Intelligence"
     )
 
-    subparsers = parser.add_subparsers(dest='command', help='Commands')
+    subparsers = parser.add_subparsers(dest="command", help="Commands")
 
     # Generate metadata command
-    metadata_parser = subparsers.add_parser('generate-metadata', help='Generate metadata pack')
-    metadata_parser.add_argument('--domain', required=True, choices=['avatararts', 'quantumforge'],
-                                help='Domain to optimize')
+    metadata_parser = subparsers.add_parser(
+        "generate-metadata", help="Generate metadata pack"
+    )
+    metadata_parser.add_argument(
+        "--domain",
+        required=True,
+        choices=["avatararts", "quantumforge"],
+        help="Domain to optimize",
+    )
 
     # Create content command
-    content_parser = subparsers.add_parser('create-content', help='Create SEO content')
-    content_parser.add_argument('--keyword', required=True, help='Target keyword')
-    content_parser.add_argument('--domain', required=True, choices=['avatararts', 'quantumforge'],
-                               help='Domain')
-    content_parser.add_argument('--word-count', type=int, default=2500,
-                               help='Target word count (default: 2500)')
+    content_parser = subparsers.add_parser("create-content", help="Create SEO content")
+    content_parser.add_argument("--keyword", required=True, help="Target keyword")
+    content_parser.add_argument(
+        "--domain", required=True, choices=["avatararts", "quantumforge"], help="Domain"
+    )
+    content_parser.add_argument(
+        "--word-count", type=int, default=2500, help="Target word count (default: 2500)"
+    )
 
     # Full optimization command
-    full_parser = subparsers.add_parser('full-optimization', help='Full site optimization')
+    full_parser = subparsers.add_parser(
+        "full-optimization", help="Full site optimization"
+    )
 
     args = parser.parse_args()
 
@@ -1434,16 +1643,15 @@ def main():
 
     engine = AdvancedSEODominationEngine()
 
-    if args.command == 'generate-metadata':
+    if args.command == "generate-metadata":
         engine.generate_metadata_pack(args.domain)
-    elif args.command == 'create-content':
+    elif args.command == "create-content":
         engine.create_seo_content(args.keyword, args.domain, args.word_count)
-    elif args.command == 'full-optimization':
+    elif args.command == "full-optimization":
         engine.full_optimization()
     else:
         parser.print_help()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

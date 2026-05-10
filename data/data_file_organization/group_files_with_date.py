@@ -84,7 +84,7 @@ def sanitize_string(value: str) -> str:
         raise ValueError("Input must be a string")
 
     # Remove potentially dangerous characters
-    dangerous_chars = ['<', '>', '"', "'", '&', ';', '(', ')', '{', '}']
+    dangerous_chars = ['<', '>', '\'', "\'", '&', ';', '(', ')', '{', '}']
     for char in dangerous_chars:
         value = value.replace(char, '')
 
@@ -147,7 +147,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     logger = logging.getLogger(__name__)
-    directory = input("Enter the directory containing the files: ").strip()
     root_folder = os.path.basename(os.path.normpath(directory))
     current_date = datetime.now().strftime("%m%d%y")
     output_csv = os.path.join(directory, f"{root_folder}-{current_date}.csv")
@@ -177,6 +176,7 @@ class Config:
 # Step 1: Group files by song title (ignoring version indicators)
 
 try:
+    pass
 # Check if the directory exists
 if not os.path.isdir(directory):
     raise FileNotFoundError(f"Directory '{directory}' does not exist.")

@@ -1,0 +1,295 @@
+"""
+Summary of 9mb.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
+# TODO: Resolve circular dependencies by restructuring imports
+
+# String constants
+DEFAULT_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+ERROR_MESSAGE = "An error occurred"
+SUCCESS_MESSAGE = "Operation completed successfully"
+
+
+# Constants
+DEFAULT_TIMEOUT = 30
+MAX_RETRIES = 3
+DEFAULT_PORT = 8080
+
+# TODO: Extract common code into reusable functions
+
+import asyncio
+import aiohttp
+
+async def async_request(url: str, session: aiohttp.ClientSession) -> str:
+    """Async HTTP request."""
+    try:
+        async with session.get(url) as response:
+            return await response.text()
+    except Exception as e:
+        logger.error(f"Async request failed: {e}")
+        return None
+
+async def process_urls(urls: List[str]) -> List[str]:
+    """Process multiple URLs asynchronously."""
+    logger = logging.getLogger(__name__)
+    async with aiohttp.ClientSession() as session:
+        tasks = [async_request(url, session) for url in urls]
+        results = await asyncio.gather(*tasks)
+        return [result for result in results if result is not None]
+
+
+from functools import wraps
+
+def timing_decorator(func):
+    """Decorator to measure function execution time."""
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        import time
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        logger.info(f"{func.__name__} executed in {end_time - start_time:.2f} seconds")
+        return result
+    return wrapper
+
+def retry_decorator(max_retries = 3):
+    """Decorator to retry function on failure."""
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for attempt in range(max_retries):
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    if attempt == max_retries - 1:
+                        raise e
+                    logger.warning(f"Attempt {attempt + 1} failed: {e}")
+            return None
+        return wrapper
+    return decorator
+
+
+from abc import ABC, abstractmethod
+
+@dataclass
+class BaseProcessor(ABC):
+    """Abstract base @dataclass
+    class for processors."""
+
+    @abstractmethod
+    def process(self, data: Any) -> Any:
+        """Process data."""
+        pass
+
+    @abstractmethod
+    def validate(self, data: Any) -> bool:
+        """Validate data."""
+        pass
+
+
+class SingletonMeta(type):
+    """Thread-safe singleton metaclass."""
+    _instances = {}
+    _lock = threading.Lock()
+
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            with cls._lock:
+                if cls not in cls._instances:
+                    cls._instances[cls] = super().__call__(*args, **kwargs)
+        return cls._instances[cls]
+
+from PIL import Image
+from functools import lru_cache
+from typing import Any, Dict, List, Optional, Union, Tuple, Callable
+import asyncio
+import logging
+import os
+import threading
+from dataclasses import dataclass
+
+# Initialize logger
+logger = logging.getLogger(__name__)
+
+@dataclass
+class Config:
+    """Configuration @dataclass
+    class for global variables."""
+    DPI_300: int = 300
+    DPI_72: int = 72
+    KB_SIZE: int = 1024
+    MB_SIZE: int = 1024 * 1024
+    GB_SIZE: int = 1024 * 1024 * 1024
+    DEFAULT_TIMEOUT: int = 30
+    MAX_RETRIES: int = 3
+    DEFAULT_BATCH_SIZE: int = 100
+    MAX_FILE_SIZE: int = 9 * 1024 * 1024  # 9MB
+    DEFAULT_QUALITY: int = 85
+    DEFAULT_WIDTH: int = 1920
+    DEFAULT_HEIGHT: int = 1080
+    cache: dict = None
+
+    def __post_init__(self):
+        if self.cache is None:
+            self.cache = {}
+
+
+# Constants
+
+
+
+def validate_input(data, validators) -> Any:
+    """Validate input data."""
+    for field, validator in validators.items():
+        if field in data:
+            if not validator(data[field]):
+                raise ValueError(f"Invalid {field}: {data[field]}")
+    return True
+
+
+def memoize(func) -> Any:
+    """Memoization decorator."""
+    cache = {}
+
+    def wrapper(*args, **kwargs):
+        # Create a key from args and kwargs
+        key = str(args) + str(sorted(kwargs.items()))
+
+        if key not in cache:
+            cache[key] = func(*args, **kwargs)
+        return cache[key]
+
+    return wrapper
+
+
+
+
+
+
+
+
+def resize_image_to_max_size(image_path: str, max_size_mb: float = 9, upscale: bool = False) -> None:
+    """
+    Resize a PNG image to ensure it doesn't exceed the specified max size (in MB) and optionally upscale.
+
+    :param image_path: Path to the input PNG image.
+    :param max_size_mb: Maximum allowed size for the image in megabytes (default is 9MB).
+    :param upscale: Whether to upscale the image if it's smaller than the max size (default is False).
+    """
+    logger = logging.getLogger(__name__)
+    KB_SIZE = 1024
+    MB_SIZE = 1024 * 1024
+    max_size_bytes = max_size_mb * MB_SIZE
+
+    try:
+        from PIL import Image
+        import os
+
+        # Open the image
+        with Image.open(image_path) as img:
+            width, height = img.size
+            current_size = os.path.getsize(image_path)
+
+            # If the image is smaller than the limit and upscaling is allowed, upscale it
+            if current_size < max_size_bytes and upscale:
+                upscale_factor = 1.5  # Upscale factor, adjust as needed
+                new_width = int(width * upscale_factor)
+                new_height = int(height * upscale_factor)
+
+                # Resize the image
+                resized_img = img.resize((new_width, new_height), Image.LANCZOS)
+
+                # Save the image with appropriate format
+                resized_img.save(image_path, format=img.format, dpi=(300, 300))
+                new_size = os.path.getsize(image_path)
+                logger.info(f"Upscaled {os.path.basename(image_path)} to {new_width}x{new_height}. Size: {new_size / MB_SIZE:.2f} MB")
+                return
+
+            elif current_size <= max_size_bytes:
+                logger.info(
+                    f"{os.path.basename(image_path)} is already under {max_size_mb}MB and does not need resizing."
+                )
+                return
+
+            # Reduce image size by lowering resolution if it exceeds the size limit
+            reduction_factor = 0.9  # Start with a 10% reduction factor
+
+            while current_size > max_size_bytes:
+                new_width = int(width * reduction_factor)
+                new_height = int(height * reduction_factor)
+
+                # Resize the image
+                resized_img = img.resize((new_width, new_height), Image.LANCZOS)
+
+                # Save temporarily to check size
+                temp_path = image_path + ".tmp"
+                resized_img.save(temp_path, format=img.format, dpi=(300, 300))
+                current_size = os.path.getsize(temp_path)
+
+                if current_size <= max_size_bytes:
+                    # Replace the original with the resized version
+                    os.replace(temp_path, image_path)
+                    logger.info(f"Resized {os.path.basename(image_path)} to {current_size / MB_SIZE:.2f} MB.")
+                    break
+                else:
+                    # Remove temporary file and try with lower resolution
+                    os.remove(temp_path)
+
+                    if reduction_factor <= 0.1:  # Stop if the reduction becomes too aggressive
+                        logger.info(
+                            f"Cannot resize {os.path.basename(image_path)} further without significant quality loss."
+                        )
+                        break
+
+                    reduction_factor -= 0.1  # Decrease the reduction factor for the next iteration
+
+    except (ValueError, TypeError, RuntimeError, OSError) as e:
+        logger.error(f"Error processing {image_path}: {e}")
+        raise
+
+
+def resize_images_in_directory(directory: str, max_size_mb: float = 9, upscale: bool = False) -> None:
+    """
+    Resizes all PNG images in the specified directory if they exceed max_size_mb or optionally upscales smaller ones.
+
+    :param directory: Directory containing PNG images to resize.
+    :param max_size_mb: Maximum allowed size for each image in megabytes.
+    :param upscale: Whether to upscale images if they are smaller than max_size_mb.
+    """
+    logger = logging.getLogger(__name__)
+
+    if not os.path.exists(directory):
+        logger.info(f"The directory {directory} does not exist.")
+        return
+
+    # Process each PNG file in the directory
+    for filename in os.listdir(directory):
+        if filename.lower().endswith(".png"):
+            image_path = os.path.join(directory, filename)
+            resize_image_to_max_size(image_path, max_size_mb, upscale)
+
+
+# Main function to prompt for the directory and options
+def main() -> None:
+    # Prompt the user for the directory path
+    directory = input("Enter the directory path containing PNG images: ")
+
+    # Prompt for maximum file size (default to 9MB)
+    max_size_input = input("Enter the maximum file size in MB (default is 9MB): ")
+    max_size_mb = float(max_size_input) if max_size_input else 9
+
+    # Prompt for whether to upscale smaller images
+    upscale_choice = input(
+        "Do you want to upscale smaller images? (yes/no, default is no): "
+    ).lower()
+    upscale = True if upscale_choice in ['yes', 'y', 'true'] else False
+
+    # Resize images in the directory
+    resize_images_in_directory(directory, max_size_mb, upscale)
+
+
+if __name__ == "__main__":
+    main()

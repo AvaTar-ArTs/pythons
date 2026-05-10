@@ -117,13 +117,9 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     CONFIG_DIR = Path(__file__).parent.parent / "config"
     EXCLUSIONS = load_config()
     SETTINGS = load_settings()
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
 
 
 # Constants
@@ -131,7 +127,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -141,13 +138,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -164,8 +162,9 @@ class Config:
 
 
 
-async def load_config(): -> Any
-def load_config(): -> Any
+async def load_config() -> Any:
+    pass
+def load_config() -> Any:
     """
     TODO: Add function documentation
     """
@@ -180,8 +179,9 @@ with open(CONFIG_DIR / "exclusions.json") as f:
     return json.load(f)
 
 
-async def load_settings(): -> Any
-def load_settings(): -> Any
+async def load_settings() -> Any:
+    pass
+def load_settings() -> Any:
     """
     TODO: Add function documentation
     """

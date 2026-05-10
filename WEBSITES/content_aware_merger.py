@@ -7,12 +7,10 @@ Intelligently merges similar content and removes duplicates while preserving the
 import difflib
 import hashlib
 import json
-import os
 import shutil
-from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 
 
 class ContentAwareMerger:
@@ -128,7 +126,7 @@ class ContentAwareMerger:
 
         return score
 
-    def find_best_file(
+    def find_best_file(:
         self, files: List[Dict], strategy: str = "newest_largest"
     ) -> Dict:
         """Find the best file to keep based on strategy"""
@@ -274,7 +272,6 @@ class ContentAwareMerger:
                 similarities = []
                 for i in range(len(contents)):
                     for j in range(i + 1, len(contents)):
-                        sim = self.calculate_similarity(contents[i], contents[j])
                         similarities.append(sim)
 
                 if similarities:
@@ -338,7 +335,7 @@ class ContentAwareMerger:
             print(f"❌ Error executing action: {e}")
             return False
 
-    def process_content_type(
+    def process_content_type(:
         self, content_type: str, duplicate_groups: List[Dict]
     ) -> Dict:
         """Process all duplicate groups for a content type"""
@@ -353,7 +350,7 @@ class ContentAwareMerger:
         }
 
         for i, group in enumerate(duplicate_groups):
-            print(f"   Processing group {i+1}/{len(duplicate_groups)}...")
+            print(f"   Processing group {i + 1}/{len(duplicate_groups)}...")
 
             action = self.process_duplicate_group(group, content_type)
 
@@ -378,7 +375,7 @@ class ContentAwareMerger:
         report_lines.append(
             f"\n**Merge Date:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         )
-        report_lines.append(f"\n---\n")
+        report_lines.append("\n---\n")
 
         # Summary
         total_space_saved = sum(
@@ -416,7 +413,7 @@ class ContentAwareMerger:
             report_lines.append("## 📝 ACTION LOG\n")
             for entry in self.merge_log:
                 report_lines.append(
-                    f"- **{entry['timestamp']}**: {entry['action']} - Kept `{Path(entry['kept_file']).name}`, removed {entry['removed_count']} files, saved {round(entry['space_saved']/(1024*1024), 2)} MB"
+                    f"- **{entry['timestamp']}**: {entry['action']} - Kept `{Path(entry['kept_file']).name}`, removed {entry['removed_count']} files, saved {round(entry['space_saved'] / (1024 * 1024), 2)} MB"
                 )
 
         # Save report
@@ -480,7 +477,7 @@ class ContentAwareMerger:
             stats.get("total_files_removed", 0) for stats in all_stats.values()
         )
 
-        print(f"\n🎯 RESULTS:")
+        print("\n🎯 RESULTS:")
         print(
             f"   💾 Total space saved: {round(total_space_saved / (1024 * 1024), 2)} MB"
         )

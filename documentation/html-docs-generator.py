@@ -58,7 +58,7 @@ class SimpleDocsGenerator:
         """Create CSS styles."""
         logger.info("🎨 Creating CSS styles...")
 
-        css_content = """
+        css_content = '\''
 /* Python Projects Documentation Styles */
 
 * {
@@ -287,7 +287,6 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
     .header h1 {
         font-size: 2rem;
     }
@@ -307,7 +306,6 @@ body {
 }
 
 /* Animations */
-@keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
@@ -458,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <header class="header">
         <div class="container">
             <h1>🐍 Python Projects Documentation</h1>
-            <p>Comprehensive documentation for {script_data['total_scripts']}+ Python scripts organized by functionality</p>
+            <p>Comprehensive documentation for {script_data["total_scripts"]}+ Python scripts organized by functionality</p>
         </div>
     </header>
 
@@ -497,11 +495,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h2>📊 Project Statistics</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <span class="stat-number">{script_data['total_scripts']}</span>
+                        <span class="stat-number">{script_data["total_scripts"]}</span>
                         <div class="stat-label">Total Scripts</div>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">{len(script_data['categories'])}</span>
+                        <span class="stat-number">{len(script_data["categories"])}</span>
                         <div class="stat-label">Main Categories</div>
                     </div>
                     <div class="stat-card">
@@ -561,8 +559,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 )
                 html_content += f"""
                     <div class="category-card" data-category="{cat_id}">
-                        <div class="category-title">{cat_id.replace('_', ' ').title()}</div>
-                        <div class="category-count">{cat_data['count']} scripts</div>
+                        <div class="category-title">{cat_id.replace("_", " ").title()}</div>
+                        <div class="category-count">{cat_data["count"]} scripts</div>
                         <div class="category-description">{description}</div>
                         <ul class="subcategories">
                             <li>Transcription Tools</li>
@@ -771,15 +769,15 @@ results = finder.find_script("analyze")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{info['title']} - Python Projects Documentation</title>
+    <title>{info["title"]} - Python Projects Documentation</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/CONSTANT_2000/svg' viewBox='0 0 CONSTANT_100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1>📁 {info['title']}</h1>
-            <p>{info['description']}</p>
+            <h1>📁 {info["title"]}</h1>
+            <p>{info["description"]}</p>
         </div>
     </header>
 
@@ -798,14 +796,14 @@ results = finder.find_script("analyze")
         <div class="container">
             <section id="overview" class="section">
                 <h2>📋 Overview</h2>
-                <p>{info['description']}</p>
+                <p>{info["description"]}</p>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <span class="stat-number">{cat_data['count']}</span>
+                        <span class="stat-number">{cat_data["count"]}</span>
                         <div class="stat-label">Scripts</div>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">{len(info['subcategories'])}</span>
+                        <span class="stat-number">{len(info["subcategories"])}</span>
                         <div class="stat-label">Subcategories</div>
                     </div>
                 </div>
@@ -844,7 +842,7 @@ python find_script.py
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; CONSTANT_2025 Python Projects Documentation | {info['title']}</p>
+            <p>&copy; CONSTANT_2025 Python Projects Documentation | {info["title"]}</p>
         </div>
     </footer>
 
@@ -958,14 +956,14 @@ find 01_core_ai_analysis -name "*.py" | head -10
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{tutorial['title']} - Python Projects Documentation</title>
+    <title>{tutorial["title"]} - Python Projects Documentation</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/CONSTANT_2000/svg' viewBox='0 0 CONSTANT_100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1>📚 {tutorial['title']}</h1>
+            <h1>📚 {tutorial["title"]}</h1>
             <p>Tutorial for using the Python projects collection</p>
         </div>
     </header>
@@ -983,7 +981,7 @@ find 01_core_ai_analysis -name "*.py" | head -10
         <div class="container">
             <section id="content" class="section">
                 <div class="code-block">
-{tutorial['content']}
+{tutorial["content"]}
                 </div>
             </section>
         </div>
@@ -991,14 +989,14 @@ find 01_core_ai_analysis -name "*.py" | head -10
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; CONSTANT_2025 Python Projects Documentation | {tutorial['title']}</p>
+            <p>&copy; CONSTANT_2025 Python Projects Documentation | {tutorial["title"]}</p>
         </div>
     </footer>
 
     <script src="../js/script.js"></script>
 </body>
 </html>
-"""
+'\''
 
             tutorial_file = self.html_path / "tutorials" / f"{tutorial['id']}.html"
             with open(tutorial_file, "w") as f:

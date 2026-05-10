@@ -1,3 +1,10 @@
+"""
+Summary of RedditScrape.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
 # RedditScrape.py
 # Last edited: June 28th 2021
 #
@@ -29,7 +36,6 @@ gtts.tokenizer.symbols.SUB_PAIRS.append(("fuck", "*uck"))
 
 
 class RedditScrape:
-
     def __init__(self, url, num_replies):
         """url: the link of the reddit post to scrape comments/title from
         num_replies: the number of top replies program will take to make video
@@ -52,9 +58,7 @@ class RedditScrape:
             user_agent=config.PRAW_CONFIG["user_agent"],
         )
 
-        text_used = (
-            []
-        )  # Creating list filled with strings of the title and all comment text
+        text_used = []  # Creating list filled with strings of the title and all comment text
         authors = []  # Creating a list of authors from the post strings
 
         submission = reddit.submission(url=self.url)  # Getting submission post

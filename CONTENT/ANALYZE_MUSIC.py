@@ -3,11 +3,11 @@
 Intelligent Music Analysis
 Uses your APIs and tools to analyze music collection
 """
+
 import os
 import json
 from pathlib import Path
-from collections import defaultdict
-import subprocess
+
 
 # Load APIs
 def load_env():
@@ -16,14 +16,15 @@ def load_env():
     if master.exists():
         with open(master) as f:
             for line in f:
-                if 'export ' in line and '=' in line:
-                    line = line.replace('export ', '').strip()
-                    if line and not line.startswith('#'):
+                if "export " in line and "=" in line:
+                    line = line.replace("export ", "").strip()
+                    if line and not line.startswith("#"):
                         try:
-                            key, val = line.split('=', 1)
-                            os.environ[key] = val.strip('"').strip("'").strip()
+                            key, val = line.split("=", 1)
+                            os.environ[key] = val.strip("'").strip("'").strip()
                         except:
                             pass
+
 
 load_env()
 
@@ -39,34 +40,28 @@ print("?? Scanning ~/Music...")
 print()
 
 # File types
-audio_files = {
-    '.mp3': [],
-    '.m4a': [],
-    '.wav': [],
-    '.flac': [],
-    '.m4r': []
-}
+audio_files = {".mp3": [], ".m4a": [], ".wav": [], ".flac": [], ".m4r": []}
 
 # Projects
 projects = {}
 
 # Scan
-for file in music_dir.rglob('*'):
+for file in music_dir.rglob("*"):
     if file.is_file():
         ext = file.suffix.lower()
         if ext in audio_files:
             audio_files[ext].append(file)
     elif file.is_dir() and file != music_dir:
         # Check if it's a music project
-        py_files = list(file.glob('*.py'))
-        audio_in_dir = list(file.glob('*.mp3')) + list(file.glob('*.m4a'))
-        
+        py_files = list(file.glob("*.py"))
+        audio_in_dir = list(file.glob("*.mp3")) + list(file.glob("*.m4a"))
+
         if len(py_files) > 5 or len(audio_in_dir) > 10:
             projects[file.name] = {
-                'path': str(file),
-                'python_files': len(py_files),
-                'audio_files': len(audio_in_dir),
-                'size': sum(f.stat().st_size for f in file.rglob('*') if f.is_file())
+                "path": str(file),
+                "python_files": len(py_files),
+                "audio_files": len(audio_in_dir),
+                "size": sum(f.stat().st_size for f in file.rglob("*") if f.is_file()),
             }
 
 # Report
@@ -84,8 +79,8 @@ print()
 
 # Projects
 print(f"?? Music Projects: {len(projects)}")
-for name, info in sorted(projects.items(), key=lambda x: x[1]['size'], reverse=True):
-    size_mb = info['size'] / 1024 / 1024
+for name, info in sorted(projects.items(), key=lambda x: x[1]["size"], reverse=True):
+    size_mb = info["size"] / 1024 / 1024
     print(f"\n   ?? {name}")
     print(f"      Python scripts: {info['python_files']}")
     print(f"      Audio files: {info['audio_files']}")
@@ -100,15 +95,15 @@ print()
 
 # Check music APIs
 music_apis = {
-    'ELEVENLABS_API_KEY': 'ElevenLabs (Voice AI)',
-    'SUNO_COOKIE': 'Suno AI (Music Generation)',
-    'ASSEMBLYAI_API_KEY': 'AssemblyAI (Transcription)',
-    'DEEPGRAM_API_KEY': 'Deepgram (Speech-to-Text)',
-    'MURF_API_KEY': 'Murf AI (Voice)',
-    'RESEMBLE_API_KEY': 'Resemble AI (Voice)',
-    'REVAI_API_KEY': 'Rev AI (Transcription)',
-    'UDIO_API_KEY': 'Udio (Music - Suno alternative)',
-    'SORAI_API_KEY': 'Sora AI (Audio/Video)'
+    "ELEVENLABS_API_KEY": "ElevenLabs (Voice AI)",
+    "SUNO_COOKIE": "Suno AI (Music Generation)",
+    "ASSEMBLYAI_API_KEY": "AssemblyAI (Transcription)",
+    "DEEPGRAM_API_KEY": "Deepgram (Speech-to-Text)",
+    "MURF_API_KEY": "Murf AI (Voice)",
+    "RESEMBLE_API_KEY": "Resemble AI (Voice)",
+    "REVAI_API_KEY": "Rev AI (Transcription)",
+    "UDIO_API_KEY": "Udio (Music - Suno alternative)",
+    "SORAI_API_KEY": "Sora AI (Audio/Video)",
 }
 
 available = []
@@ -132,21 +127,21 @@ print()
 print("?? What You Can Do:")
 print()
 
-if 'SUNO_COOKIE' in [k for k in music_apis.keys() if os.getenv(k)]:
+if "SUNO_COOKIE" in [k for k in music_apis.keys() if os.getenv(k)]:
     print("1. ? GENERATE MORE MUSIC")
     print("   - You have Suno AI configured!")
     print("   - Use: ~/Music/SUNO/ scripts")
     print("   - Or: ~/suno-api/")
     print()
 
-if 'ASSEMBLYAI_API_KEY' in [k for k in music_apis.keys() if os.getenv(k)]:
+if "ASSEMBLYAI_API_KEY" in [k for k in music_apis.keys() if os.getenv(k)]:
     print("2. ? TRANSCRIBE AUDIO")
     print("   - AssemblyAI can transcribe your 933 audio files")
     print("   - Create lyrics, podcasts transcripts")
     print("   - SEO-optimize content")
     print()
 
-if 'ELEVENLABS_API_KEY' in [k for k in music_apis.keys() if os.getenv(k)]:
+if "ELEVENLABS_API_KEY" in [k for k in music_apis.keys() if os.getenv(k)]:
     print("3. ? GENERATE VOICE CONTENT")
     print("   - Create podcasts with ElevenLabs")
     print("   - Voice-over for videos")
@@ -197,23 +192,25 @@ print("=" * 70)
 print()
 
 # Save report
-report_path = Path.home() / "workspace" / "music-analysis" / "MUSIC_ANALYSIS_REPORT.json"
+report_path = (
+    Path.home() / "workspace" / "music-analysis" / "MUSIC_ANALYSIS_REPORT.json"
+)
 report_path.parent.mkdir(exist_ok=True)
 
 report = {
-    'total_audio_files': total_audio,
-    'by_type': {ext: len(files) for ext, files in audio_files.items() if files},
-    'projects': projects,
-    'apis_available': available,
-    'recommendations': [
-        'Organize music projects to workspace',
-        'Deploy Suno API',
-        'Upload music to streaming platforms',
-        'Create music licensing platform'
-    ]
+    "total_audio_files": total_audio,
+    "by_type": {ext: len(files) for ext, files in audio_files.items() if files},
+    "projects": projects,
+    "apis_available": available,
+    "recommendations": [
+        "Organize music projects to workspace",
+        "Deploy Suno API",
+        "Upload music to streaming platforms",
+        "Create music licensing platform",
+    ],
 }
 
-with open(report_path, 'w') as f:
+with open(report_path, "w") as f:
     json.dump(report, f, indent=2)
 
 print(f"?? Report saved: {report_path}")

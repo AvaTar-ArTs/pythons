@@ -1,0 +1,37 @@
+# Data Utils Scripts
+
+- `data_utils_CREATE_RELATED_ITEMS_CSV.py` – Auto-categorized script
+- `data_utils_analyze-json-writer.py` – Auto-categorized script
+- `data_utils_backup-documents-to-csv.py` – Auto-categorized script
+- `data_utils_backup-to-csv.py` – Auto-categorized script
+- `data_utils_backupcsv.py` – Auto-categorized script
+- `data_utils_catalog-to-csv.py` – Auto-categorized script
+- `data_utils_convert-conversations-to-csv.py` – Auto-categorized script
+- `data_utils_csv-extract-webm-files.py` – Auto-categorized script
+- `data_utils_csv-file-lister.py` – Auto-categorized script
+- `data_utils_csv-image-file-mover.py` – Auto-categorized script
+- `data_utils_csv-media-catalog-helper.py` – Auto-categorized script
+- `data_utils_csv-print-on-demand-catalog.py` – Auto-categorized script
+- `data_utils_csv-prompt-analyzer.py` – Auto-categorized script
+- `data_utils_csvmerge.py` – Auto-categorized script
+- `data_utils_dallecsv.py` – Auto-categorized script
+- `data_utils_development-utils-jsonutil.py` – Auto-categorized script
+- `data_utils_download-images-from-csv.py` – Auto-categorized script
+- `data_utils_etsy-printify-download-csv.py` – Auto-categorized script
+- `data_utils_execute-excel-organization.py` – Auto-categorized script
+- `data_utils_export-analysis-to-csv.py` – Auto-categorized script
+- `data_utils_generate_all_csvs.py` – Auto-categorized script
+- `data_utils_leonardo-convert-json-writer.py` – Auto-categorized script
+- `data_utils_load-brand-json.py` – Auto-categorized script
+- `data_utils_merge-doc-csvs.py` – Auto-categorized script
+- `data_utils_pdfcsv.py` – Auto-categorized script
+- `data_utils_process-csv-docs.py` – Auto-categorized script
+- `data_utils_process-json.py` – Auto-categorized script
+- `data_utils_scancsv.py` – Auto-categorized script
+- `data_utils_sheets.py` – Auto-categorized script
+- `data_utils_sufflecsv.py` – Auto-categorized script
+- `data_utils_suno-merge-csv.py` – Auto-categorized script
+- `data_utils_suno-merge-suno-csv.py` – Auto-categorized script
+- `data_utils_util-json-handler.py` – Auto-categorized script
+- `data_utils_validate-json-reader.py` – Auto-categorized script
+- `data_utils_youtube-ytcsv.py` – Auto-categorized script

@@ -1,0 +1,58 @@
+Dir,Path,Type,Contents_Summary,Key_Items,Notes
+ROOT,/Volumes/macBaks/diVinePyTHon,Backup Consolidation,Multi-source Python product ecosystem backup — 11889 files,5.8 GB total,77 top-level items
+01_AI_ML_PRODUCTS,/Volumes/macBaks/diVinePyTHon/01_AI_ML_PRODUCTS,Product Vertical,AI/ML product scripts organized by subdomain,"ai_agents, llm_tools, content_generation, fine_tuning, voice_speech, nft_crypto_ai",56 MB, 742 files
+02_AUTOMATION_PRODUCTS,/Volumes/macBaks/diVinePyTHon/02_AUTOMATION_PRODUCTS,Product Vertical,Automation scripts for marketing and social media,"marketing_suite, social_media_automation, web_scraping, workflow_automation",12 MB, 320 files
+03_MEDIA_PRODUCTS,/Volumes/macBaks/diVinePyTHon/03_MEDIA_PRODUCTS,Product Vertical,Media processing tools,"audio_tools, image_tools, video_tools, gallery_systems, music_audio_gen",16 MB, 307 files
+04_DEVELOPER_TOOLS,/Volumes/macBaks/diVinePyTHon/04_DEVELOPER_TOOLS,Product Vertical,Developer utility scripts,,28 MB, 108 files
+05_WEB_PRODUCTS,/Volumes/macBaks/diVinePyTHon/05_WEB_PRODUCTS,Product Vertical,Web apps and services,"api_services, ecommerce, templates, web_apps",34 MB, 715 files
+06_DATA_PRODUCTS,/Volumes/macBaks/diVinePyTHon/06_DATA_PRODUCTS,Product Vertical,Data analysis and insight scripts,,3.4 MB, 160 files
+07_MARKETING_SEO_PRODUCTS,/Volumes/macBaks/diVinePyTHon/07_MARKETING_SEO_PRODUCTS,Product Vertical,SEO and marketing tools,,2.6 MB, 105 files
+08_3D_GAME_PRODUCTS,/Volumes/macBaks/diVinePyTHon/08_3D_GAME_PRODUCTS,Product Vertical,3D and game asset scripts,,48 KB, 8 files
+09_BUSINESS_PRODUCTS,/Volumes/macBaks/diVinePyTHon/09_BUSINESS_PRODUCTS,Product Vertical,Business operations tools,,1.4 MB, 61 files
+10_NFT_CRYPTO_PRODUCTS,/Volumes/macBaks/diVinePyTHon/10_NFT_CRYPTO_PRODUCTS,Product Vertical,NFT and crypto scripts,,32 KB, 6 files
+01-devflow-pro,/Volumes/macBaks/diVinePyTHon/01-devflow-pro,Product Repo,DevFlow Pro product package,,384 KB, 48 files
+02-mcp-forge,/Volumes/macBaks/diVinePyTHon/02-mcp-forge,Product Repo,MCP Forge product package,,276 KB, 53 files
+03-plugin-dev-toolkit,/Volumes/macBaks/diVinePyTHon/03-plugin-dev-toolkit,Product Repo,Plugin dev toolkit package,,180 KB, 13 files
+04-codester-products,/Volumes/macBaks/diVinePyTHon/04-codester-products,Product Bundle,Codester marketplace products (10 categories),"01-python-automation through 10-seo-repo-optimizer",560 KB, 98 files
+05-fiverr-upwork-gigs,/Volumes/macBaks/diVinePyTHon/05-fiverr-upwork-gigs,Product Bundle,Freelance gig listings,,36 KB, 7 files
+06-bioinsight-platform,/Volumes/macBaks/diVinePyTHon/06-bioinsight-platform,Product Repo,BioInsight platform package,,80 KB, 14 files
+07-sorty-seo,/Volumes/macBaks/diVinePyTHon/07-sorty-seo,Product Repo,Sorty SEO product package,,36 KB, 7 files
+08-superpowers-saas,/Volumes/macBaks/diVinePyTHon/08-superpowers-saas,Product Repo,Superpowers SaaS package,,68 KB, 14 files
+09-training-courses,/Volumes/macBaks/diVinePyTHon/09-training-courses,Product Bundle,Training and course materials,,60 KB, 13 files
+10-gumroad-bundles,/Volumes/macBaks/diVinePyTHon/10-gumroad-bundles,Product Bundle,7 Gumroad bundle packages + sub-bundles,"bundle_1 through bundle_7, pricing_strategy.txt",636 KB, 71 files
+11-consulting-packages,/Volumes/macBaks/diVinePyTHon/11-consulting-packages,Product Bundle,Consulting service packages,,36 KB, 8 files
+12-marketplace-assets,/Volumes/macBaks/diVinePyTHon/12-marketplace-assets,Product Bundle,Marketplace listing assets,,40 KB, 8 files
+13-launch-plan,/Volumes/macBaks/diVinePyTHon/13-launch-plan,Planning,Product launch planning documents,,116 KB, 16 files
+3D & Game Asset Forge,/Volumes/macBaks/diVinePyTHon/3D & Game Asset Forge,Branded Product,3D/game asset product suite (boilerplate scaffolding),"src, tests, docs, Dockerfile, pyproject.toml",204 KB, 45 files
+ANALYTICS,/Volumes/macBaks/diVinePyTHon/ANALYTICS,Empty,Placeholder directory — no contents,,0 B
+ASSETS,/Volumes/macBaks/diVinePyTHon/ASSETS,Empty,Placeholder directory — no contents,,0 B
+AutoPilot Social Engine,/Volumes/macBaks/diVinePyTHon/AutoPilot Social Engine,Branded Product,Social media automation suite,"src, tests, docs, Dockerfile",6.5 MB, 331 files
+BizOps Command Center,/Volumes/macBaks/diVinePyTHon/BizOps Command Center,Branded Product,Business operations suite,"src, tests, docs, Dockerfile",1.6 MB, 96 files
+CryptoVault NFT Suite,/Volumes/macBaks/diVinePyTHon/CryptoVault NFT Suite,Branded Product,NFT/crypto product suite,"src, tests, docs, Dockerfile",172 KB, 41 files
+data_exports,/Volumes/macBaks/diVinePyTHon/data_exports,Data Export,Airtable and Notion import data,"AIRTABLE_IMPORT.csv, NOTION_IMPORT.csv, MASTER_PRODUCT_CATALOG.csv",744 KB, 2 files
+DataInsight Analytics,/Volumes/macBaks/diVinePyTHon/DataInsight Analytics,Branded Product,Data analytics product suite,"src, tests, docs, Dockerfile",3.5 MB, 195 files
+DevToolkit Ultimate,/Volumes/macBaks/diVinePyTHon/DevToolkit Ultimate,Branded Product,Developer toolkit (boilerplate scaffolding),"src, tests, docs, Dockerfile, pyproject.toml",28 MB, 140 files
+docs,/Volumes/macBaks/diVinePyTHon/docs,Documentation,Analysis reports and indexes,"ACTION_SUMMARY, ANALYSIS_REPORT, GUMROAD_MASTER_INDEX, LINTING_REPORT",56 KB, 7 files
+examples_snippets,/Volumes/macBaks/diVinePyTHon/examples_snippets,Examples,Code examples and snippets,,20 KB, 4 files
+general,/Volumes/macBaks/diVinePyTHon/general,Archive,Generic archive zip files (1.0 GB),"Archive.zip, Archive 2-5.zip (720 MB largest)",1.0 GB, 5 files
+logs,/Volumes/macBaks/diVinePyTHon/logs,Empty,Placeholder directory — no contents,,0 B
+MARKETPLACE_LISTINGS,/Volumes/macBaks/diVinePyTHon/MARKETPLACE_LISTINGS,Marketplace,Multi-platform marketplace listings (15 platforms),"codecanyon, codester, etsy, fiverr, gumroad, sellfy, upwork + consolidated/",404 MB, 3097 files
+MediaForge Pro,/Volumes/macBaks/diVinePyTHon/MediaForge Pro,Branded Product,Media processing suite (boilerplate scaffolding),"src, tests, docs, Dockerfile",16 MB, 342 files
+MiniForge-Setup-Optimize-script,/Volumes/macBaks/diVinePyTHon/MiniForge-Setup-Optimize-script,Script,Setup/optimization scripts,,36 KB, 7 files
+NeuralForge AI Suite,/Volumes/macBaks/diVinePyTHon/NeuralForge AI Suite,Branded Product,AI suite product (boilerplate scaffolding),"src, tests, docs, Dockerfile",56 MB, 780 files
+planning_data,/Volumes/macBaks/diVinePyTHon/planning_data,Planning,"Organize subfolder + EXECUTABLE_SCRIPTS_RANKED.csv","organize/, EXECUTABLE_SCRIPTS_RANKED.csv",368 KB, 3 files
+products,/Volumes/macBaks/diVinePyTHon/products,Product Bundle,3 product bundles,"bundle-1-code-quality, bundle-2-social-media, bundle-3-ai-toolkit",400 KB, 33 files
+PROPRIETARY_PRODUCTS,/Volumes/macBaks/diVinePyTHon/PROPRIETARY_PRODUCTS,Empty,Placeholder directory — no contents,,8 KB, 1 file
+projects,/Volumes/macBaks/diVinePyTHon/projects,Archive,Large project archives (3.4 GB),"MasterxEo.zip (1.9 GB), iterm2.zip (1.6 GB), notebooklm archive (24 MB)",3.4 GB, 5 files
+SEO_OPTIMIZED_LISTINGS,/Volumes/macBaks/diVinePyTHon/SEO_OPTIMIZED_LISTINGS,Marketplace,SEO-optimized listing descriptions,,1.2 MB, 205 files
+SEOMaster Pro,/Volumes/macBaks/diVinePyTHon/SEOMaster Pro,Branded Product,SEO product suite (boilerplate scaffolding),"src, tests, docs, Dockerfile",2.7 MB, 138 files
+tests,/Volumes/macBaks/diVinePyTHon/tests,Tests,Product bundle unit tests,test_product_bundles.py,36 KB, 3 files
+TOOLS_UTILITIES,/Volumes/macBaks/diVinePyTHon/TOOLS_UTILITIES,Utilities,Shared utility scripts,,4.0 MB, 99 files
+upWork,/Volumes/macBaks/diVinePyTHon/upWork,Freelance,Upwork/freelance materials + AEO-SEO research,"upwork-jobs-etc.txt (24 MB), CONSOLIDATION_MAP.md, AEO-SEO/",83 MB, 216 files
+userscripts,/Volumes/macBaks/diVinePyTHon/userscripts,Scripts,Browser userscripts archive (tar.gz),scripts_20260204_010622.tar.gz (30 MB),41 MB, 715 files
+WebForge Studio,/Volumes/macBaks/diVinePyTHon/WebForge Studio,Branded Product,Web dev suite (boilerplate scaffolding),"src, tests, docs, Dockerfile",32 MB, 490 files
+⭐_EMPIRE_COMMAND_CENTER,/Volumes/macBaks/diVinePyTHon/⭐_EMPIRE_COMMAND_CENTER,Strategy,Business empire strategy docs and playbooks,"START_HERE, ACTIVATION_PLAYBOOK, EMPIRE_MAP, TRANSFORMATION_BLUEPRINT",196 KB, 12 files
+_ARCHIVE,/Volumes/macBaks/diVinePyTHon/_ARCHIVE,Archive,Full documentation archive + heavy docs,"DOCUMENTATION_full (reports, reviews, listings_database.db), heavy_docs",555 MB, 2620 files
+analysis,/Volumes/macBaks/diVinePyTHon/analysis,Empty,Placeholder directory — no contents,,0 B
+ai-tools,/Volumes/macBaks/diVinePyTHon/ai-tools,Empty,Placeholder directory — no contents,,0 B
+conversations,/Volumes/macBaks/diVinePyTHon/conversations,Empty,Placeholder directory — no contents,,0 B

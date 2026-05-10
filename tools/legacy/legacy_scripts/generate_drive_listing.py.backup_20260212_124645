@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+import os
+import csv
+from pathlib import Path
+
+base_path = Path(
+    "/Users/steven/Library/CloudStorage/GoogleDrive-sjchaplinski@gmail.com"
+)
+output_file = Path("/Users/steven/Google_Drive_File_Listing.csv")
+
+
+def format_size(size_bytes):
+    """Format bytes to human readable size"""
+    if size_bytes == 0:
+        return "0 B"
+    for unit in ["B", "KB", "MB", "GB", "TB"]:
+        if size_bytes < 1024.0:
+            return f"{size_bytes:.2f} {unit}"
+        size_bytes /= 1024.0
+    return f"{size_bytes:.2f} PB"
+
+
+files_data = []
+count = 0
+
+print("Scanning 'My Drive' files...")
+for root, dirs, files in os.walk(base_path / "My Drive"):
+    for file in files:
+        file_path = Path(root) / file
+        try:
+            size = file_path.stat().st_size
+            folder = str(file_path.parent.relative_to(base_path))
+            full_path = str(file_path.relative_to(base_path))
+            files_data.append(
+                {
+                    "Name": file,
+                    "Size": format_size(size),
+                    "Size_Bytes": size,
+                    "Folder": folder,
+                    "Full_Path": full_path,
+                }
+            )
+            count += 1
+            if count % 1000 == 0:
+                print(f"Processed {count} files...")
+        except Exception:
+            continue
+
+print("\nScanning 'Other computers' files...")
+other_count = count
+for root, dirs, files in os.walk(base_path / "Other computers"):
+    for file in files:
+        file_path = Path(root) / file
+        try:
+            size = file_path.stat().st_size
+            folder = str(file_path.parent.relative_to(base_path))
+            full_path = str(file_path.relative_to(base_path))
+            files_data.append(
+                {
+                    "Name": file,
+                    "Size": format_size(size),
+                    "Size_Bytes": size,
+                    "Folder": folder,
+                    "Full_Path": full_path,
+                }
+            )
+            count += 1
+            if count % 1000 == 0:
+                print(f"Processed {count} files...")
+        except Exception:
+            continue
+
+print(f"\nTotal files found: {count}")
+print(f"  - My Drive: {other_count}")
+print(f"  - Other computers: {count - other_count}")
+
+# Sort by size descending
+files_data.sort(key=lambda x: x["Size_Bytes"], reverse=True)
+
+# Write to CSV
+print(f"\nWriting {len(files_data)} files to CSV...")
+with open(output_file, "w", newline="", encoding="utf-8") as f:
+    writer = csv.DictWriter(f, fieldnames=["Name", "Size", "Folder", "Download_Link"])
+    writer.writeheader()
+    for item in files_data:
+        # Create download link - using file path that can be converted to Google Drive link
+        # Format: https://drive.google.com/file/d/[FILE_ID]/view
+        # For now, using path-based identifier
+        download_link = f"https://drive.google.com/drive/folders/{item['Full_Path'].replace(' ', '%20')}"
+        writer.writerow(
+            {
+                "Name": item["Name"],
+                "Size": item["Size"],
+                "Folder": item["Folder"],
+                "Download_Link": download_link,
+            }
+        )
+
+print(f"Done! Created {output_file} with {len(files_data)} files")

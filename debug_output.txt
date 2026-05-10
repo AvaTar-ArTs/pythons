@@ -1,0 +1,5 @@
+--- DEBUG INFO ---
+Total Python files found by rglob: 4067
+Number of files in processed_files set: 288
+all_python_files_from_rglob.txt and processed_files_from_csv.txt generated for comparison.
+--- END DEBUG INFO ---

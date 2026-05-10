@@ -1,0 +1,21 @@
+# Music Tools Scripts
+
+- `music_tools_analyze-suno-exports.py` – Auto-categorized script
+- `music_tools_comprehensive-music-content-scan.py` – Auto-categorized script
+- `music_tools_deep-music-directory-analyzer.py` – Auto-categorized script
+- `music_tools_lyrics-storyboards.py` – Auto-categorized script
+- `music_tools_music-catalog.py` – Auto-categorized script
+- `music_tools_scan-all-suno-data.py` – Auto-categorized script
+- `music_tools_suno-analytics-tools.py` – Auto-categorized script
+- `music_tools_suno-card-html.py` – Auto-categorized script
+- `music_tools_suno-content-creation-suno.py` – Auto-categorized script
+- `music_tools_suno-data-processor.py` – Auto-categorized script
+- `music_tools_suno-discography.py` – Auto-categorized script
+- `music_tools_suno-extract-songs.py` – Auto-categorized script
+- `music_tools_suno-extract-suno-html.py` – Auto-categorized script
+- `music_tools_suno-generator.py` – Auto-categorized script
+- `music_tools_suno-html-scraper.py` – Auto-categorized script
+- `music_tools_suno-html-splitter.py` – Auto-categorized script
+- `music_tools_suno-model.py` – Auto-categorized script
+- `music_tools_suno-music-catalog.py` – Auto-categorized script
+- `music_tools_suno-prompt-analyzer.py` – Auto-categorized script

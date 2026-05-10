@@ -10,7 +10,8 @@ import difflib
 from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, Optional
+
 
 class ComprehensiveDiffMerger:
     def __init__(self, base_path: str):
@@ -19,7 +20,7 @@ class ComprehensiveDiffMerger:
             "analysis": {},
             "diff_reports": [],
             "merge_actions": [],
-            "removal_actions": []
+            "removal_actions": [],
         }
 
     def calculate_hash(self, filepath: Path) -> Optional[str]:
@@ -53,20 +54,22 @@ class ComprehensiveDiffMerger:
         similarity = difflib.SequenceMatcher(None, content1, content2).ratio()
 
         # Generate unified diff
-        diff = list(difflib.unified_diff(
-            content1.splitlines(keepends=True),
-            content2.splitlines(keepends=True),
-            fromfile=str(file1.name),
-            tofile=str(file2.name),
-            lineterm=""
-        ))
+        diff = list(
+            difflib.unified_diff(
+                content1.splitlines(keepends=True),
+                content2.splitlines(keepends=True),
+                fromfile=str(file1.name),
+                tofile=str(file2.name),
+                lineterm="",
+            )
+        )
 
         return {
             "file1": str(file1),
             "file2": str(file2),
             "similarity": round(similarity * 100, 2),
             "diff_lines": len(diff),
-            "diff": diff[:50] if len(diff) > 50 else diff  # Limit for display
+            "diff": diff[:50] if len(diff) > 50 else diff,  # Limit for display
         }
 
     def find_all_duplicates(self) -> Dict:
@@ -76,7 +79,7 @@ class ComprehensiveDiffMerger:
         all_duplicates = {
             "documents": {"exact": [], "similar": []},
             "html_files": {"exact": [], "similar": []},
-            "images": {"exact": []}
+            "images": {"exact": []},
         }
 
         # Scan each folder
@@ -117,7 +120,9 @@ class ComprehensiveDiffMerger:
                         "path": str(filepath),
                         "name": filepath.name,
                         "size": filepath.stat().st_size,
-                        "modified": datetime.fromtimestamp(filepath.stat().st_mtime).isoformat()
+                        "modified": datetime.fromtimestamp(
+                            filepath.stat().st_mtime
+                        ).isoformat(),
                     }
                     hash_to_files[file_hash].append(file_info)
 
@@ -126,24 +131,32 @@ class ComprehensiveDiffMerger:
                         content = self.read_text(filepath)
                         if content:
                             normalized = " ".join(content.lower().split())
-                            content_hash = hashlib.sha256(normalized.encode()).hexdigest()
+                            content_hash = hashlib.sha256(
+                                normalized.encode()
+                            ).hexdigest()
                             content_hash_to_files[content_hash].append(file_info)
 
             # Find exact duplicates
             for file_hash, file_list in hash_to_files.items():
                 if len(file_list) > 1:
-                    all_duplicates[folder_name]["exact"].append({
-                        "hash": file_hash,
-                        "count": len(file_list),
-                        "files": file_list,
-                        "total_size": sum(f["size"] for f in file_list),
-                        "wasted_space": sum(f["size"] for f in file_list[1:])
-                    })
+                    all_duplicates[folder_name]["exact"].append(
+                        {
+                            "hash": file_hash,
+                            "count": len(file_list),
+                            "files": file_list,
+                            "total_size": sum(f["size"] for f in file_list),
+                            "wasted_space": sum(f["size"] for f in file_list[1:]),
+                        }
+                    )
 
             # Find similar content (for text files)
             if folder_name != "images" and len(content_hash_to_files) > 0:
-                print(f"   Checking for similar content...")
-                file_paths = [Path(f["path"]) for files in content_hash_to_files.values() for f in files[:1]]
+                print("   Checking for similar content...")
+                file_paths = [
+                    Path(f["path"])
+                    for files in content_hash_to_files.values()
+                    for f in files[:1]
+                ]
 
                 checked = set()
                 for i, path1 in enumerate(file_paths[:50]):  # Limit for speed
@@ -151,11 +164,10 @@ class ComprehensiveDiffMerger:
                     if not content1:
                         continue
 
-                    for path2 in file_paths[i+1:i+20]:  # Check next 20 files
+                    for path2 in file_paths[i + 1 : i + 20]:  # Check next 20 files
                         if path1 == path2:
                             continue
 
-                        pair_key = tuple(sorted([str(path1), str(path2)]))
                         if pair_key in checked:
                             continue
                         checked.add(pair_key)
@@ -164,14 +176,18 @@ class ComprehensiveDiffMerger:
                         if not content2:
                             continue
 
-                        similarity = difflib.SequenceMatcher(None, content1, content2).ratio()
+                        similarity = difflib.SequenceMatcher(
+                            None, content1, content2
+                        ).ratio()
 
                         if 0.80 <= similarity < 0.99:  # Similar but not exact
-                            all_duplicates[folder_name]["similar"].append({
-                                "file1": str(path1),
-                                "file2": str(path2),
-                                "similarity": round(similarity * 100, 2)
-                            })
+                            all_duplicates[folder_name]["similar"].append(
+                                {
+                                    "file1": str(path1),
+                                    "file2": str(path2),
+                                    "similarity": round(similarity * 100, 2),
+                                }
+                            )
 
         self.results["analysis"] = all_duplicates
         return all_duplicates
@@ -182,7 +198,9 @@ class ComprehensiveDiffMerger:
 
         report_lines = []
         report_lines.append("# 🔀 COMPREHENSIVE DIFF REPORT\n")
-        report_lines.append(f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        report_lines.append(
+            f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        )
         report_lines.append("---\n")
 
         # Statistics
@@ -201,10 +219,14 @@ class ComprehensiveDiffMerger:
 
                 for i, group in enumerate(data["exact"][:10], 1):
                     report_lines.append(f"### Group {i}: {group['count']} copies")
-                    report_lines.append(f"- **Wasted Space:** {round(group['wasted_space'] / 1024, 2)} KB")
+                    report_lines.append(
+                        f"- **Wasted Space:** {round(group['wasted_space'] / 1024, 2)} KB"
+                    )
                     report_lines.append("- **Files:**")
                     for file in group["files"]:
-                        report_lines.append(f"  - `{file['name']}` ({round(file['size']/1024, 2)} KB)")
+                        report_lines.append(
+                            f"  - `{file['name']}` ({round(file['size'] / 1024, 2)} KB)"
+                        )
                     report_lines.append("")
 
         # Similar content with diffs
@@ -213,12 +235,16 @@ class ComprehensiveDiffMerger:
                 report_lines.append(f"## 📄 {folder.upper()} - SIMILAR CONTENT\n")
 
                 for i, pair in enumerate(data["similar"][:5], 1):
-                    report_lines.append(f"### Similarity Pair {i}: {pair['similarity']}% match")
+                    report_lines.append(
+                        f"### Similarity Pair {i}: {pair['similarity']}% match"
+                    )
                     report_lines.append(f"- File 1: `{Path(pair['file1']).name}`")
                     report_lines.append(f"- File 2: `{Path(pair['file2']).name}`")
 
                     # Generate diff
-                    diff_result = self.generate_diff(Path(pair['file1']), Path(pair['file2']))
+                    diff_result = self.generate_diff(
+                        Path(pair["file1"]), Path(pair["file2"])
+                    )
                     if "diff" in diff_result and diff_result["diff"]:
                         report_lines.append("\n**Differences:**")
                         report_lines.append("```diff")
@@ -266,12 +292,14 @@ class ComprehensiveDiffMerger:
                             total_removed += 1
                             total_space_saved += file_info["size"]
 
-                            self.results["removal_actions"].append({
-                                "removed": str(filepath),
-                                "kept": keep_file["path"],
-                                "reason": "exact_duplicate",
-                                "timestamp": datetime.now().isoformat()
-                            })
+                            self.results["removal_actions"].append(
+                                {
+                                    "removed": str(filepath),
+                                    "kept": keep_file["path"],
+                                    "reason": "exact_duplicate",
+                                    "timestamp": datetime.now().isoformat(),
+                                }
+                            )
                     except Exception as e:
                         print(f"   ❌ Error removing {filepath}: {e}")
 
@@ -301,53 +329,66 @@ class ComprehensiveDiffMerger:
 
                 try:
                     remove_file.unlink()
-                    print(f"   🔀 Merged similar: kept {keep_file.name}, removed {remove_file.name}")
+                    print(
+                        f"   🔀 Merged similar: kept {keep_file.name}, removed {remove_file.name}"
+                    )
                     total_removed += 1
-                    total_space_saved += remove_file.stat().st_size if remove_file.exists() else 0
+                    total_space_saved += (
+                        remove_file.stat().st_size if remove_file.exists() else 0
+                    )
 
                     processed_similar.add(str(remove_file))
 
-                    self.results["merge_actions"].append({
-                        "removed": str(remove_file),
-                        "kept": str(keep_file),
-                        "similarity": pair["similarity"],
-                        "reason": "similar_content",
-                        "timestamp": datetime.now().isoformat()
-                    })
+                    self.results["merge_actions"].append(
+                        {
+                            "removed": str(remove_file),
+                            "kept": str(keep_file),
+                            "similarity": pair["similarity"],
+                            "reason": "similar_content",
+                            "timestamp": datetime.now().isoformat(),
+                        }
+                    )
                 except Exception as e:
                     print(f"   ❌ Error: {e}")
 
-        return {
-            "total_removed": total_removed,
-            "total_space_saved": total_space_saved
-        }
+        return {"total_removed": total_removed, "total_space_saved": total_space_saved}
 
     def generate_final_report(self, stats: Dict):
         """Generate final summary report"""
         report_lines = []
         report_lines.append("# ✅ FINAL MERGE & REMOVE REPORT\n")
-        report_lines.append(f"**Completed:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        report_lines.append(
+            f"**Completed:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        )
         report_lines.append("---\n")
 
         report_lines.append("## 📊 FINAL STATISTICS\n")
         report_lines.append(f"- **Total Files Removed:** {stats['total_removed']}")
-        report_lines.append(f"- **Total Space Saved:** {round(stats['total_space_saved'] / (1024 * 1024), 2)} MB")
+        report_lines.append(
+            f"- **Total Space Saved:** {round(stats['total_space_saved'] / (1024 * 1024), 2)} MB"
+        )
         report_lines.append("")
 
         # Removal log
         if self.results["removal_actions"]:
             report_lines.append("## 🗑️  EXACT DUPLICATES REMOVED\n")
             for action in self.results["removal_actions"]:
-                report_lines.append(f"- Removed `{Path(action['removed']).name}` (kept `{Path(action['kept']).name}`)")
+                report_lines.append(
+                    f"- Removed `{Path(action['removed']).name}` (kept `{Path(action['kept']).name}`)"
+                )
 
         # Merge log
         if self.results["merge_actions"]:
             report_lines.append("\n## 🔀 SIMILAR CONTENT MERGED\n")
             for action in self.results["merge_actions"]:
-                report_lines.append(f"- Merged `{Path(action['removed']).name}` into `{Path(action['kept']).name}` ({action['similarity']}% similar)")
+                report_lines.append(
+                    f"- Merged `{Path(action['removed']).name}` into `{Path(action['kept']).name}` ({action['similarity']}% similar)"
+                )
 
         report_lines.append("\n## ✨ OPERATION COMPLETE!\n")
-        report_lines.append("All duplicates have been removed and similar content has been merged.")
+        report_lines.append(
+            "All duplicates have been removed and similar content has been merged."
+        )
         report_lines.append("The best versions of all files have been preserved.")
 
         # Save report
@@ -384,10 +425,12 @@ class ComprehensiveDiffMerger:
         print("\n" + "=" * 70)
         print("✅ OPERATION COMPLETE!")
         print("=" * 70)
-        print(f"\n🎯 RESULTS:")
+        print("\n🎯 RESULTS:")
         print(f"   🗑️  Files removed: {stats['total_removed']}")
-        print(f"   💾 Space saved: {round(stats['total_space_saved'] / (1024 * 1024), 2)} MB")
-        print(f"\n✨ All duplicates removed! Best versions preserved.")
+        print(
+            f"   💾 Space saved: {round(stats['total_space_saved'] / (1024 * 1024), 2)} MB"
+        )
+        print("\n✨ All duplicates removed! Best versions preserved.")
 
 
 if __name__ == "__main__":

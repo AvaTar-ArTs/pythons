@@ -1,3 +1,13 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+"""
+Summary of query_expanison.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
 import opik
 from langchain_openai import ChatOpenAI
 from loguru import logger
@@ -12,9 +22,9 @@ from .prompt_templates import QueryExpansionTemplate
 class QueryExpansion(RAGStep):
     @opik.track(name="QueryExpansion.generate")
     def generate(self, query: Query, expand_to_n: int) -> list[Query]:
-        assert (
-            expand_to_n > 0
-        ), f"'expand_to_n' should be greater than 0. Got {expand_to_n}."
+        assert expand_to_n > 0, (
+            f"'expand_to_n' should be greater than 0. Got {expand_to_n}."
+        )
 
         if self._mock:
             return [query for _ in range(expand_to_n)]
@@ -44,11 +54,17 @@ class QueryExpansion(RAGStep):
         return queries
 
 
-if __name__ == "__main__":
-    query = Query.from_str(
-        "Write an article about the best types of advanced RAG methods.",
-    )
-    query_expander = QueryExpansion()
-    expanded_queries = query_expander.generate(query, expand_to_n=3)
-    for expanded_query in expanded_queries:
-        logger.info(expanded_query.content)
+try:
+        query = Query.from_str(
+            "Write an article about the best types of advanced RAG methods.",
+        )
+        query_expander = QueryExpansion()
+        expanded_queries = query_expander.generate(query, expand_to_n=3)
+        for expanded_query in expanded_queries:
+            logger.info(expanded_query.content)
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)

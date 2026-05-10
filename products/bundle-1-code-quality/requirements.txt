@@ -1,0 +1,8 @@
+ast
+pytest
+flake8
+black
+isort
+ruff
+pandas
+numpy

@@ -7,7 +7,6 @@ Analyzes documents, HTML files, and images for duplicates using content-awarenes
 import difflib
 import hashlib
 import json
-import os
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -230,7 +229,6 @@ class DeepDuplicateAnalyzer:
         file_paths = list(file_contents.keys())
         for i, path1 in enumerate(file_paths):
             for path2 in file_paths[i + 1 :]:
-                pair_key = tuple(sorted([path1, path2]))
                 if pair_key in checked_pairs:
                     continue
                 checked_pairs.add(pair_key)
@@ -351,7 +349,6 @@ class DeepDuplicateAnalyzer:
         file_paths = list(file_contents.keys())
         for i, path1 in enumerate(file_paths):
             for path2 in file_paths[i + 1 :]:
-                pair_key = tuple(sorted([path1, path2]))
                 if pair_key in checked_pairs:
                     continue
                 checked_pairs.add(pair_key)
@@ -430,7 +427,7 @@ class DeepDuplicateAnalyzer:
         report_lines.append(
             f"\n**Analysis Date:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         )
-        report_lines.append(f"\n---\n")
+        report_lines.append("\n---\n")
 
         # Executive Summary
         report_lines.append("## 📊 EXECUTIVE SUMMARY\n")
@@ -466,7 +463,7 @@ class DeepDuplicateAnalyzer:
             )
             for i, group in enumerate(self.results["images"]["duplicates"][:10], 1):
                 report_lines.append(
-                    f"\n**{i}. Group {i}** - {group['count']} copies, {round(group['total_wasted']/(1024*1024), 2)} MB wasted"
+                    f"\n**{i}. Group {i}** - {group['count']} copies, {round(group['total_wasted'] / (1024 * 1024), 2)} MB wasted"
                 )
                 for file in group["files"][:3]:  # Show first 3 files
                     report_lines.append(f"   - `{Path(file['path']).name}`")
@@ -580,14 +577,14 @@ class DeepDuplicateAnalyzer:
         print("\n" + "=" * 60)
         print("✅ ANALYSIS COMPLETE!")
         print("=" * 60)
-        print(f"\n🎯 RESULTS:")
+        print("\n🎯 RESULTS:")
         print(
             f"   💾 Total wasted space: {self.results['summary']['total_wasted_space_mb']} MB"
         )
         print(
             f"   📁 Total duplicate files: {self.results['summary']['total_duplicate_files']}"
         )
-        print(f"\n📊 Check the reports for detailed information!")
+        print("\n📊 Check the reports for detailed information!")
 
 
 if __name__ == "__main__":

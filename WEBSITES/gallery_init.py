@@ -6,11 +6,8 @@ Following the dark architectural patterns of simplegallery
 import argparse
 import os
 import sys
-import json
 import glob
 import shutil
-from distutils.dir_util import copy_tree
-from typing import Dict, Any
 import common as cg_common
 
 
@@ -112,7 +109,9 @@ def check_if_gallery_already_exists(gallery_root: str) -> bool:
     return False
 
 
-def create_gallery_folder_structure(gallery_root: str, image_source: str = None) -> None:
+def create_gallery_folder_structure(:
+    gallery_root: str, image_source: str = None
+) -> None:
     """
     Creates the gallery folder structure by copying all the gallery templates
     :param gallery_root: Path to the gallery root
@@ -128,13 +127,13 @@ def create_gallery_folder_structure(gallery_root: str, image_source: str = None)
         os.path.join(gallery_root, "public", "images", "photos"),
         os.path.join(gallery_root, "public", "images", "thumbnails"),
     ]
-    
+
     for directory in directories:
         cg_common.ensure_directory_exists(directory)
 
     # Copy template files (we'll create them)
     cg_common.log("Setting up gallery template files...")
-    
+
     # Move all images and videos to the correct subfolder under public
     photos_dir = os.path.join(gallery_root, "public", "images", "photos")
     cg_common.log(f"Moving all photos and videos to {photos_dir}...")
@@ -143,7 +142,7 @@ def create_gallery_folder_structure(gallery_root: str, image_source: str = None)
     if not image_source:
         image_source = gallery_root
         only_copy = False
-        
+
     for path in glob.glob(os.path.join(image_source, "*")):
         basename_lower = os.path.basename(path).lower()
         if (
@@ -160,7 +159,9 @@ def create_gallery_folder_structure(gallery_root: str, image_source: str = None)
                 shutil.move(path, os.path.join(photos_dir, os.path.basename(path)))
 
 
-def create_gallery_json(gallery_root: str, remote_link: str = "", use_defaults: bool = False) -> None:
+def create_gallery_json(:
+    gallery_root: str, remote_link: str = "", use_defaults: bool = False
+) -> None:
     """
     Creates a new gallery.json file with dark urban theme defaults
     :param gallery_root: Path to the gallery root
@@ -168,7 +169,7 @@ def create_gallery_json(gallery_root: str, remote_link: str = "", use_defaults: 
     :param use_defaults: If set to True, there will be no questions asked
     """
     cg_common.log("Creating the gallery config...")
-    
+
     # Initialize the gallery config with dark urban theme
     gallery_config = {
         "images_data_file": os.path.join(gallery_root, "images_data.json"),
@@ -196,7 +197,7 @@ def create_gallery_json(gallery_root: str, remote_link: str = "", use_defaults: 
             gallery_config["remote_gallery_type"] = "google"
         else:
             gallery_config["remote_gallery_type"] = "unknown"
-        
+
         gallery_config["remote_link"] = remote_link
 
     # Set configuration defaults
@@ -218,12 +219,10 @@ def create_gallery_json(gallery_root: str, remote_link: str = "", use_defaults: 
         )
 
         gallery_config["background_photo"] = input(
-            f'Which image should be used as background for the header? (default: "")\n'
+            'Which image should be used as background for the header? (default: "")\n'
         )
 
-        gallery_config["url"] = input(
-            f'What is your site URL? (default: "")\n'
-        )
+        gallery_config["url"] = input('What is your site URL? (default: "")\n')
 
     # Save the configuration to a file
     gallery_config_path = os.path.join(gallery_root, "gallery.json")
@@ -262,7 +261,7 @@ def main():
             cg_common.log(
                 "A City 16-9 Gallery already exists at the specified location, but will be overwritten."
             )
-    
+
     cg_common.log("Creating a City 16-9 Gallery...")
 
     # Create the gallery json file

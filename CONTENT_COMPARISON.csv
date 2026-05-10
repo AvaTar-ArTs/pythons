@@ -1,0 +1,3 @@
+type,folder,file1,file2,similarity,action,details
+exact_duplicate,upscale,upscale.py,upscale--.py,95.0%,remove_duplicate,Exact content match
+exact_duplicate,upscale,upscale copy.py,upscale--_media_image.py,95.0%,remove_duplicate,Exact content match

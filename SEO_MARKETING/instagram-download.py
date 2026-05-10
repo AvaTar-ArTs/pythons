@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 #!/usr/bin/env python3
 """from datetime import datetime
 from pathlib import Path
@@ -374,7 +377,7 @@ class ContentAwareOrganizer:
         recommendations = []
 
         # Analyze project distribution
-        total_projects = sum(len(proj) for proj in projects.values())
+        sum(len(proj) for proj in projects.values())
 
         if len(projects["gallery_projects"]) > 20:
             recommendations.append(
@@ -481,7 +484,7 @@ def main():
     logger.info("✓ Content index generated")
 
     # Create navigation system
-    nav = organizer.create_navigation_system()
+    organizer.create_navigation_system()
     logger.info("✓ Navigation system created")
 
     logger.info("\nOrganization complete!")
@@ -499,5 +502,11 @@ def main():
     )
 
 
-if __name__ == "__main__":
-    main()
+try:
+        main()
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)

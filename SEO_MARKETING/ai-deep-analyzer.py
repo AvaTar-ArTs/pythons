@@ -25,7 +25,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -102,10 +102,6 @@ class AICodeAnalyzer:
 
     def __init__(self):
         # Load API keys
-        self.openai_key = os.getenv("OPENAI_API_KEY")
-        self.gemini_key = os.getenv("GEMINI_API_KEY")
-        self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
-        self.deepseek_key = os.getenv("DEEPSEEK_API_KEY")
 
         self.use_openai = bool(self.openai_key)
         self.use_gemini = bool(self.gemini_key) and not self.use_openai
@@ -113,7 +109,7 @@ class AICodeAnalyzer:
             self.use_openai or self.use_gemini
         )
 
-    def analyze_with_ai(
+    def analyze_with_ai(:
         self,
         code: str,
         filepath: str,
@@ -123,9 +119,9 @@ class AICodeAnalyzer:
         prompt = f"""Analyze this Python code with deep understanding:
 
 File: {Path(filepath).name}
-Functions: {len(ast_data.get('functions', []))}
-Classes: {len(ast_data.get('classes', []))}
-Imports: {', '.join(ast_data.get('imports', [])[:10])}
+Functions: {len(ast_data.get("functions", []))}
+Classes: {len(ast_data.get("classes", []))}
+Imports: {", ".join(ast_data.get("imports", [])[:10])}
 
 Code sample:
 ```python
@@ -247,13 +243,11 @@ class VectorEmbeddingAnalyzer:
     """Semantic similarity using embeddings"""
 
     def __init__(self):
-        self.openai_key = os.getenv("OPENAI_API_KEY")
         self.cache = {}
 
     def get_embedding(self, code: str, identifier: str) -> list[float] | None:
         """Get embedding vector for code"""
         if identifier in self.cache:
-            return self.cache[identifier]
 
         if not self.openai_key:
             return None
@@ -261,7 +255,6 @@ class VectorEmbeddingAnalyzer:
         try:
             import openai
 
-            openai.api_key = self.openai_key
 
             response = openai.embeddings.create(
                 model="text-embedding-3-small",
@@ -269,7 +262,6 @@ class VectorEmbeddingAnalyzer:
             )
 
             embedding = response.data[0].embedding
-            self.cache[identifier] = embedding
             return embedding
         except (IndexError, KeyError):
             return None
@@ -301,7 +293,7 @@ class ArchitecturalPatternDetector:
         "Microservice": ["service", "grpc", "microservice"],
     }
 
-    def detect(
+    def detect(:
         self,
         code: str,
         imports: list[str],
@@ -410,9 +402,9 @@ class AIDeepIntelligentAnalyzer:
 
     def print_header(self, text: str, emoji=""):
         """Print fancy header"""
-        logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'='*80}")
+        logger.info(f"\n{Colors.CYAN}{Colors.BOLD}{'=' * 80}")
         logger.info(f"{emoji} {text}")
-        logger.info(f"{'='*80}{Colors.END}\n")
+        logger.info(f"{'=' * 80}{Colors.END}\n")
 
     def analyze_file(self, filepath: Path) -> dict[str, Any]:
         """Comprehensive file analysis"""
@@ -603,7 +595,7 @@ def main():
                 line = line.replace("export ", "").strip()
                 if "=" in line:
                     key, value = line.split("=", 1)
-                    value = value.strip('"').strip("'").split("#")[0].strip()
+                    value = value.strip('\'').strip("\'").split("#")[0].strip()
                     os.environ[key] = value
 
     target_dir = Path(str(Path.home()) + "/GitHub/AvaTarArTs-Suite")

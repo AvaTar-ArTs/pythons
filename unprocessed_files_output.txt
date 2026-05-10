@@ -1,0 +1,20 @@
+/Users/steven/pythons/ECOSYSTEM_MANAGEMENT_AGENT.py
+/Users/steven/pythons/XEO_ELITE_ANALYZER.py
+/Users/steven/pythons/YouTubeBot.py
+/Users/steven/pythons/apis/Instagram Report Bot2.py
+/Users/steven/pythons/apis/csvsort.py
+/Users/steven/pythons/apis/domination-engine.py
+/Users/steven/pythons/apis/download_file_from_file-organizer.py
+/Users/steven/pythons/apis/download_json_from_file-organizer.py
+/Users/steven/pythons/apis/download_missing_songs.py
+/Users/steven/pythons/apis/dualdomainstrategy-v1.py
+/Users/steven/pythons/apis/emotional.py
+/Users/steven/pythons/apis/enhanced_utilities.py
+/Users/steven/pythons/apis/etsy-printify-download-csv.py
+/Users/steven/pythons/apis/etsy-product-images.py
+/Users/steven/pythons/apis/ex.py
+/Users/steven/pythons/apis/execute_comprehensive_cleanup.py
+/Users/steven/pythons/apis/extract_streams.py
+/Users/steven/pythons/apis/extract_vid_from_file-organizer.py
+/Users/steven/pythons/apis/goapi-midjourney-imagine.py
+/Users/steven/pythons/apis/hashes.py

@@ -1,0 +1,83 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+#!/usr/bin/env python3
+"""
+Surface map for /Users/steven/pythons
+
+- Ignores .git, .venv, __pycache__, .ruff_cache, node_modules, .aider.tags.cache.*
+- Limits depth (default: 4)
+- Helps you see the real structure without 6+ level noise
+"""
+
+import os
+from pathlib import Path
+
+ROOT = Path("/Users/steven/pythons").resolve()
+
+IGNORE_DIR_NAMES = {
+    ".git",
+    ".venv",
+    "__pycache__",
+    ".ruff_cache",
+    "node_modules",
+}
+IGNORE_DIR_PREFIXES = (
+    ".aider.tags.cache",  # any .aider.tags.cache.*
+)
+
+MAX_DEPTH = 4  # 0 = root itself, 1 = children, etc.
+
+
+def should_ignore_dir(path: Path) -> bool:
+    name = path.name
+    if name in IGNORE_DIR_NAMES:
+        return True
+    return any(name.startswith(pfx) for pfx in IGNORE_DIR_PREFIXES)
+
+
+def depth_from_root(path: Path) -> int:
+    rel = path.relative_to(ROOT)
+    if rel == Path("."):
+        return 0
+    return len(rel.parts)
+
+
+def build_surface_map():
+    buckets: dict[int, list[Path]] = {}
+    for dirpath, dirnames, filenames in os.walk(ROOT):
+        p = Path(dirpath)
+        # prune ignored dirs in-place for walk
+        dirnames[:] = [d for d in dirnames if not should_ignore_dir(p / d)]
+
+        depth = depth_from_root(p)
+        if depth > MAX_DEPTH:
+            # don't descend further, but we've already pruned subdirs
+            continue
+
+        buckets.setdefault(depth, []).append(p)
+
+    return buckets
+
+
+def main():
+    buckets = build_surface_map()
+    print(f"Surface map of {ROOT} (depth <= {MAX_DEPTH})\n")
+    for depth in sorted(buckets):
+        print(f"DEPTH {depth} ({len(buckets[depth])} dirs)")
+        for path in sorted(buckets[depth])[:30]:
+            rel = path.relative_to(ROOT)
+            print("  ", "." if rel == Path(".") else rel)
+        if len(buckets[depth]) > 30:
+            print(f"  ... (+{len(buckets[depth]) - 30} more)")
+        print()
+
+
+try:
+        main()
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)

@@ -11,13 +11,11 @@ Date: 2025-01-27
 Version: 2.0.0
 """
 
-import os
 import sys
 import subprocess
-import platform
 from pathlib import Path
-import json
 import yaml
+
 
 def check_python_version():
     """Check if Python version is compatible."""
@@ -27,48 +25,44 @@ def check_python_version():
         sys.exit(1)
     print(f"✅ Python version: {sys.version}")
 
+
 def install_requirements():
     """Install required packages."""
     print("📦 Installing required packages...")
-    
+
     try:
-        subprocess.check_call([
-            sys.executable, "-m", "pip", "install", "-r", "requirements_simple.txt"
-        ])
+        subprocess.check_call(
+            [sys.executable, "-m", "pip", "install", "-r", "requirements_simple.txt"]
+        )
         print("✅ Requirements installed successfully")
     except subprocess.CalledProcessError as e:
         print(f"❌ Failed to install requirements: {e}")
         sys.exit(1)
 
+
 def setup_directories():
     """Create necessary directories."""
     print("📁 Setting up directories...")
-    
-    directories = [
-        "vector_indices",
-        "logs",
-        "screenshots",
-        "backups",
-        "temp",
-        "data"
-    ]
-    
+
+    directories = ["vector_indices", "logs", "screenshots", "backups", "temp", "data"]
+
     for directory in directories:
         Path(directory).mkdir(exist_ok=True)
         print(f"  ✅ Created directory: {directory}")
 
+
 def setup_database():
     """Initialize SQLite database."""
     print("🗄️ Setting up database...")
-    
+
     try:
         import sqlite3
-        
+
         # Create database
         db_path = "intelligent_org.db"
         conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
-        
+
         # Create tables
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS project_analysis (
@@ -78,7 +72,7 @@ def setup_database():
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
+
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS vector_embeddings (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -89,8 +83,8 @@ def setup_database():
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
-        cursor.execute("""
+
+        cursor.execute('\''
             CREATE TABLE IF NOT EXISTS automation_tasks (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 task_id TEXT UNIQUE NOT NULL,
@@ -103,7 +97,7 @@ def setup_database():
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
+
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS agentic_workflows (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -116,35 +110,38 @@ def setup_database():
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
+
         conn.commit()
         conn.close()
-        
+
         print("✅ Database initialized successfully")
-        
+
     except Exception as e:
         print(f"❌ Failed to setup database: {e}")
         sys.exit(1)
 
+
 def download_nltk_data():
     """Download required NLTK data."""
     print("📚 Downloading NLTK data...")
-    
+
     try:
         import nltk
-        nltk.download('punkt', quiet=True)
-        nltk.download('stopwords', quiet=True)
-        nltk.download('wordnet', quiet=True)
+
+        nltk.download("punkt", quiet=True)
+        nltk.download("stopwords", quiet=True)
+        nltk.download("wordnet", quiet=True)
         print("✅ NLTK data downloaded")
     except ImportError:
         print("⚠️ NLTK not available, skipping data download")
     except Exception as e:
         print(f"⚠️ Failed to download NLTK data: {e}")
 
+
 def create_sample_config():
     """Create sample configuration files."""
     print("⚙️ Creating configuration files...")
-    
+
     # Create automation config
     automation_config = {
         "automation": {
@@ -152,22 +149,15 @@ def create_sample_config():
             "task_timeout": 300,
             "retry_attempts": 3,
             "platforms": {
-                "web": {
-                    "enabled": True,
-                    "browser": "chrome",
-                    "headless": True
-                },
-                "api": {
-                    "enabled": True,
-                    "timeout": 30
-                }
-            }
+                "web": {"enabled": True, "browser": "chrome", "headless": True},
+                "api": {"enabled": True, "timeout": 30},
+            },
         }
     }
-    
+
     with open("automation_config.yaml", "w") as f:
         yaml.dump(automation_config, f, default_flow_style=False)
-    
+
     # Create agentic config
     agentic_config = {
         "agentic": {
@@ -175,32 +165,24 @@ def create_sample_config():
             "learning_enabled": True,
             "optimization_interval": 3600,
             "agents": {
-                "planner": {
-                    "enabled": True,
-                    "max_planning_time": 60
-                },
-                "executor": {
-                    "enabled": True,
-                    "max_execution_time": 300
-                },
-                "monitor": {
-                    "enabled": True,
-                    "check_interval": 30
-                }
-            }
+                "planner": {"enabled": True, "max_planning_time": 60},
+                "executor": {"enabled": True, "max_execution_time": 300},
+                "monitor": {"enabled": True, "check_interval": 30},
+            },
         }
     }
-    
+
     with open("agentic_config.yaml", "w") as f:
         yaml.dump(agentic_config, f, default_flow_style=False)
-    
+
     print("✅ Configuration files created")
 
+
 def create_launcher_script():
-    """Create launcher script."""
+    """Create launcher script.'\''
     print("🚀 Creating launcher script...")
-    
-    launcher_content = '''#!/usr/bin/env python3
+
+    launcher_content = "\'"#!/usr/bin/env python3
 """
 Intelligent Organization System Launcher
 =======================================
@@ -271,17 +253,18 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
-    
+"\'"
+
     with open("launch_system.py", "w") as f:
         f.write(launcher_content)
-    
+
     print("✅ Launcher script created")
+
 
 def create_readme():
     """Create README file."""
     print("📖 Creating README...")
-    
+
     readme_content = """# 🧠 Intelligent Organization System
 ## Advanced Content-Aware Intelligence for Creative Automation
 
@@ -369,41 +352,42 @@ For questions and support, please refer to the documentation or contact the deve
 **Version**: 2.0.0  
 **Status**: ✅ Production Ready
 """
-    
+
     with open("README.md", "w") as f:
         f.write(readme_content)
-    
+
     print("✅ README created")
+
 
 def main():
     """Main setup function."""
     print("🚀 Setting up Intelligent Organization System...")
     print("=" * 60)
-    
+
     # Check Python version
     check_python_version()
-    
+
     # Install requirements
     install_requirements()
-    
+
     # Setup directories
     setup_directories()
-    
+
     # Setup database
     setup_database()
-    
+
     # Download NLTK data
     download_nltk_data()
-    
+
     # Create configuration files
     create_sample_config()
-    
+
     # Create launcher script
     create_launcher_script()
-    
+
     # Create README
     create_readme()
-    
+
     print("\n" + "=" * 60)
     print("✅ Setup complete!")
     print("\n🎉 Intelligent Organization System is ready!")
@@ -411,6 +395,7 @@ def main():
     print("  python launch_system.py")
     print("\nOr enhance the Heavenly Hands project:")
     print("  python enhance_heavenly_hands.py")
+
 
 if __name__ == "__main__":
     main()

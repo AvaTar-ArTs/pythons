@@ -29,7 +29,6 @@ Date: 2025-01-27
 Version: 3.0.0
 """
 
-import os
 import sys
 import argparse
 import logging
@@ -37,15 +36,13 @@ import signal
 import time
 import threading
 from pathlib import Path
-from datetime import datetime
-import json
 
 # Add the current directory to Python path
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Import our enhanced system
 from enhanced_integration_system import EnhancedIntelligentOrganizationSystem
-from integration_system import IntelligentOrganizationSystem
+
 
 # Configure logging
 def setup_logging(verbose=False, log_file=None):
@@ -54,7 +51,7 @@ def setup_logging(verbose=False, log_file=None):
 
     # Create formatter
     formatter = logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
 
     # Setup console handler
@@ -74,8 +71,9 @@ def setup_logging(verbose=False, log_file=None):
     logging.basicConfig(
         level=log_level,
         handlers=handlers,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     )
+
 
 class EnhancedSystemLauncher:
     """Enhanced system launcher with advanced capabilities."""
@@ -110,12 +108,16 @@ class EnhancedSystemLauncher:
 
             # Get system status
             status = self.system.get_enhanced_system_status()
-            logging.info(f"📊 System Status:")
+            logging.info("📊 System Status:")
             logging.info(f"  Running: {status['is_running']}")
             logging.info(f"  Creative Projects: {status['creative_projects']['total']}")
             logging.info(f"  Semantic Insights: {status['semantic_insights']['total']}")
-            logging.info(f"  Multi-Platform Workflows: {status['multi_platform_workflows']['total']}")
-            logging.info(f"  Agentic Creative Workflows: {status['agentic_creative_workflows']['total']}")
+            logging.info(
+                f"  Multi-Platform Workflows: {status['multi_platform_workflows']['total']}"
+            )
+            logging.info(
+                f"  Agentic Creative Workflows: {status['agentic_creative_workflows']['total']}"
+            )
 
             # Run mode-specific operations
             if self.mode == "demo":
@@ -200,20 +202,22 @@ class EnhancedSystemLauncher:
                 "performance optimization",
                 "seo enhancement",
                 "content management automation",
-                "user experience improvement"
+                "user experience improvement",
             ],
             content_requirements={
                 "target_audience": "homeowners and businesses",
                 "content_types": ["service_pages", "testimonials", "blog_posts"],
-                "quality_standards": "professional"
-            }
+                "quality_standards": "professional",
+            },
         )
 
         logging.info(f"✅ Created demo project: {project_id}")
 
         # Execute the project
         execution_result = self.system.execute_creative_automation_project(project_id)
-        logging.info(f"✅ Project execution initiated: {len(execution_result['workflows_created'])} workflows")
+        logging.info(
+            f"✅ Project execution initiated: {len(execution_result['workflows_created'])} workflows"
+        )
 
         # Creative Content Generation Project
         content_project_id = self.system.create_creative_project(
@@ -224,20 +228,24 @@ class EnhancedSystemLauncher:
             automation_goals=[
                 "content generation",
                 "design optimization",
-                "performance monitoring"
+                "performance monitoring",
             ],
             content_requirements={
                 "content_types": ["blog_posts", "social_media", "marketing_materials"],
                 "brand_guidelines": "professional_cleaning_service",
-                "target_audience": "homeowners_and_businesses"
-            }
+                "target_audience": "homeowners_and_businesses",
+            },
         )
 
         logging.info(f"✅ Created content project: {content_project_id}")
 
         # Execute content project
-        content_execution = self.system.execute_creative_automation_project(content_project_id)
-        logging.info(f"✅ Content project execution initiated: {len(content_execution['workflows_created'])} workflows")
+        content_execution = self.system.execute_creative_automation_project(
+            content_project_id
+        )
+        logging.info(
+            f"✅ Content project execution initiated: {len(content_execution['workflows_created'])} workflows"
+        )
 
     def _demonstrate_enhanced_capabilities(self):
         """Demonstrate enhanced capabilities."""
@@ -245,12 +253,18 @@ class EnhancedSystemLauncher:
 
         # Enhanced semantic search
         logging.info("📚 Testing enhanced semantic search...")
-        search_results = self.system.search_content("website optimization creative design", limit=3)
+        search_results = self.system.search_content(
+            "website optimization creative design", limit=3
+        )
         logging.info(f"  Found {len(search_results)} enhanced results")
 
         for i, result in enumerate(search_results, 1):
-            creative_tags = [tag for tag in result.semantic_tags if tag.startswith('creative:')]
-            logging.info(f"    {i}. {result.file_path} (Score: {result.similarity_score:.3f})")
+            creative_tags = [
+                tag for tag in result.semantic_tags if tag.startswith("creative:")
+            ]
+            logging.info(
+                f"    {i}. {result.file_path} (Score: {result.similarity_score:.3f})"
+            )
             if creative_tags:
                 logging.info(f"       Creative Tags: {creative_tags}")
 
@@ -264,16 +278,16 @@ class EnhancedSystemLauncher:
                     "name": "Content Generation",
                     "description": "Generate creative content",
                     "task_type": "content_automation",
-                    "parameters": {"content_type": "blog_posts"}
+                    "parameters": {"content_type": "blog_posts"},
                 },
                 {
                     "name": "Performance Testing",
                     "description": "Test performance across platforms",
                     "task_type": "performance_testing",
-                    "parameters": {"target_performance": 0.9}
-                }
+                    "parameters": {"target_performance": 0.9},
+                },
             ],
-            coordination_strategy="parallel"
+            coordination_strategy="parallel",
         )
 
         logging.info(f"✅ Created multi-platform workflow: {workflow_id}")
@@ -286,15 +300,15 @@ class EnhancedSystemLauncher:
                 "planner": ["content_strategy", "workflow_planning"],
                 "executor": ["content_generation", "quality_assurance"],
                 "monitor": ["performance_tracking", "quality_metrics"],
-                "optimizer": ["content_optimization", "learning_integration"]
+                "optimizer": ["content_optimization", "learning_integration"],
             },
             adaptive_planning=True,
             learning_enabled=True,
             creative_constraints={
                 "brand_guidelines": "professional_cleaning_service",
                 "target_audience": "homeowners_and_businesses",
-                "content_tone": "friendly_professional"
-            }
+                "content_tone": "friendly_professional",
+            },
         )
 
         logging.info(f"✅ Created agentic creative workflow: {agentic_workflow_id}")
@@ -309,7 +323,7 @@ class EnhancedSystemLauncher:
             "performance_tracking": True,
             "error_monitoring": True,
             "user_analytics": True,
-            "business_metrics": True
+            "business_metrics": True,
         }
 
         logging.info(f"✅ Production monitoring configured: {production_metrics}")
@@ -323,7 +337,7 @@ class EnhancedSystemLauncher:
             "heavenly_hands_website",
             "customer_management_system",
             "content_management_platform",
-            "analytics_dashboard"
+            "analytics_dashboard",
         ]
 
         for project_name in production_projects:
@@ -341,7 +355,7 @@ class EnhancedSystemLauncher:
             "performance_optimization",
             "content_management",
             "customer_communication",
-            "analytics_processing"
+            "analytics_processing",
         ]
 
         for workflow_name in critical_workflows:
@@ -358,7 +372,7 @@ class EnhancedSystemLauncher:
             "test_mode",
             "mock_data",
             "development_apis",
-            "hot_reload"
+            "hot_reload",
         ]
 
         for feature in development_features:
@@ -375,7 +389,7 @@ class EnhancedSystemLauncher:
             "unit_test_project",
             "integration_test_project",
             "performance_test_project",
-            "ui_test_project"
+            "ui_test_project",
         ]
 
         for project_name in test_projects:
@@ -392,7 +406,7 @@ class EnhancedSystemLauncher:
             "code_analysis",
             "test_execution",
             "performance_benchmarking",
-            "quality_assurance"
+            "quality_assurance",
         ]
 
         for workflow_name in dev_workflows:
@@ -455,12 +469,16 @@ Available commands:
         """Show system status."""
         if self.system:
             status = self.system.get_enhanced_system_status()
-            logging.info(f"System Status:")
+            logging.info("System Status:")
             logging.info(f"  Running: {status['is_running']}")
             logging.info(f"  Creative Projects: {status['creative_projects']['total']}")
             logging.info(f"  Semantic Insights: {status['semantic_insights']['total']}")
-            logging.info(f"  Multi-Platform Workflows: {status['multi_platform_workflows']['total']}")
-            logging.info(f"  Agentic Creative Workflows: {status['agentic_creative_workflows']['total']}")
+            logging.info(
+                f"  Multi-Platform Workflows: {status['multi_platform_workflows']['total']}"
+            )
+            logging.info(
+                f"  Agentic Creative Workflows: {status['agentic_creative_workflows']['total']}"
+            )
 
     def _show_projects(self):
         """Show creative projects."""
@@ -485,7 +503,9 @@ Available commands:
             results = self.system.search_content(query, limit=5)
             logging.info(f"Found {len(results)} results:")
             for i, result in enumerate(results, 1):
-                logging.info(f"  {i}. {result.file_path} (Score: {result.similarity_score:.3f})")
+                logging.info(
+                    f"  {i}. {result.file_path} (Score: {result.similarity_score:.3f})"
+                )
 
     def _interactive_create(self):
         """Interactive project/workflow creation."""
@@ -494,7 +514,9 @@ Available commands:
         if create_type == "project":
             name = input("Project name: ").strip()
             description = input("Project description: ").strip()
-            project_type = input("Project type (website/mobile_app/content_creation): ").strip()
+            project_type = input(
+                "Project type (website/mobile_app/content_creation): "
+            ).strip()
 
             if name and description and project_type:
                 project_id = self.system.create_creative_project(
@@ -502,7 +524,7 @@ Available commands:
                     description=description,
                     project_type=project_type,
                     target_platforms=["web", "api"],
-                    automation_goals=["optimization", "automation"]
+                    automation_goals=["optimization", "automation"],
                 )
                 logging.info(f"Created project: {project_id}")
 
@@ -518,8 +540,10 @@ Available commands:
 
                     # Log periodic status updates
                     if int(time.time()) % 300 == 0:  # Every 5 minutes
-                        logging.info(f"📊 System Status Update:")
-                        logging.info(f"  Creative Projects: {status['creative_projects']['active']} active")
+                        logging.info("📊 System Status Update:")
+                        logging.info(
+                            f"  Creative Projects: {status['creative_projects']['active']} active"
+                        )
                         logging.info(f"  System Load: {status['system_load']:.2f}")
 
                 time.sleep(1)
@@ -537,6 +561,7 @@ Available commands:
 
         logging.info("✅ Cleanup complete")
 
+
 def main():
     """Main function."""
     parser = argparse.ArgumentParser(
@@ -548,54 +573,33 @@ Examples:
   python launch_enhanced_system.py --mode production --config production_config.yaml
   python launch_enhanced_system.py --mode development --verbose
   python launch_enhanced_system.py --mode interactive
-        """
+        """,
     )
 
     parser.add_argument(
         "--config",
         type=str,
         default="./enhanced_intelligent_org_config.yaml",
-        help="Path to configuration file"
+        help="Path to configuration file",
     )
 
-    parser.add_argument(
-        "--project",
-        type=str,
-        help="Path to project to analyze"
-    )
+    parser.add_argument("--project", type=str, help="Path to project to analyze")
 
     parser.add_argument(
         "--mode",
         type=str,
         choices=["demo", "production", "development", "interactive"],
         default="demo",
-        help="Launch mode"
+        help="Launch mode",
     )
 
-    parser.add_argument(
-        "--port",
-        type=int,
-        default=8080,
-        help="Port for web interface"
-    )
+    parser.add_argument("--port", type=int, default=8080, help="Port for web interface")
 
-    parser.add_argument(
-        "--daemon",
-        action="store_true",
-        help="Run as daemon process"
-    )
+    parser.add_argument("--daemon", action="store_true", help="Run as daemon process")
 
-    parser.add_argument(
-        "--verbose",
-        action="store_true",
-        help="Enable verbose logging"
-    )
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
 
-    parser.add_argument(
-        "--log-file",
-        type=str,
-        help="Log file path"
-    )
+    parser.add_argument("--log-file", type=str, help="Log file path")
 
     args = parser.parse_args()
 
@@ -603,10 +607,7 @@ Examples:
     setup_logging(args.verbose, args.log_file)
 
     # Create launcher
-    launcher = EnhancedSystemLauncher(
-        config_path=args.config,
-        mode=args.mode
-    )
+    launcher = EnhancedSystemLauncher(config_path=args.config, mode=args.mode)
 
     # Launch system
     try:
@@ -614,6 +615,7 @@ Examples:
     except Exception as e:
         logging.error(f"Failed to launch system: {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

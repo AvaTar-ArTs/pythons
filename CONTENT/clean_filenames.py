@@ -4,10 +4,10 @@ Filename Cleaner for ai-ml-notes Repository
 Removes numeric timestamp prefixes and hash suffixes from markdown files
 """
 
-import os
 import re
 from pathlib import Path
 from typing import List, Tuple
+
 
 def clean_filename(filename: str) -> str:
     """
@@ -25,21 +25,21 @@ def clean_filename(filename: str) -> str:
     name = filename
 
     # Pattern 1: Remove timestamp prefixes like "12-53-7-" or "0-15-18-"
-    name = re.sub(r'^\d{1,2}-\d{1,2}-\d{1,2}-', '', name)
+    name = re.sub(r"^\d{1,2}-\d{1,2}-\d{1,2}-", "", name)
 
     # Pattern 2: Remove date prefixes like "20251024_" or "20250909_"
-    name = re.sub(r'^\d{8}_', '', name)
+    name = re.sub(r"^\d{8}_", "", name)
 
     # Pattern 3: Remove hash suffixes (32 hex characters) with optional leading space/underscore
-    name = re.sub(r'[\s_][0-9a-f]{32}$', '', name)
+    name = re.sub(r"[\s_][0-9a-f]{32}$", "", name)
 
     # Pattern 4: Remove "Untitled_" followed by hash
-    name = re.sub(r'^Untitled_\d+[a-f0-9]+_', '', name)
+    name = re.sub(r"^Untitled_\d+[a-f0-9]+_", "", name)
 
     # Clean up extra underscores and spaces
-    name = re.sub(r'_+', '_', name)  # Multiple underscores to single
-    name = re.sub(r'\s+', ' ', name)  # Multiple spaces to single
-    name = name.strip('_- ')  # Remove leading/trailing separators
+    name = re.sub(r"_+", "_", name)  # Multiple underscores to single
+    name = re.sub(r"\s+", " ", name)  # Multiple spaces to single
+    name = name.strip("_- ")  # Remove leading/trailing separators
 
     return name
 
@@ -56,7 +56,7 @@ def get_rename_operations(directory: Path) -> List[Tuple[Path, Path]]:
     """
     operations = []
 
-    for md_file in directory.glob('*.md'):
+    for md_file in directory.glob("*.md"):
         # Get filename without extension
         stem = md_file.stem
 
@@ -94,9 +94,9 @@ def preview_renames(operations: List[Tuple[Path, Path]]) -> None:
         print("✓ No files need renaming!")
         return
 
-    print(f"\n{'='*80}")
+    print(f"\n{'=' * 80}")
     print(f"RENAME PREVIEW - {len(operations)} files will be renamed:")
-    print(f"{'='*80}\n")
+    print(f"{'=' * 80}\n")
 
     for old_path, new_path in operations:
         print(f"OLD: {old_path.name}")
@@ -134,11 +134,11 @@ def execute_renames(operations: List[Tuple[Path, Path]], dry_run: bool = True) -
             print(f"✗ Error renaming {old_path.name}: {e}")
             error_count += 1
 
-    print(f"\n{'='*80}")
+    print(f"\n{'=' * 80}")
     print(f"✓ Successfully renamed: {success_count} files")
     if error_count > 0:
         print(f"✗ Errors: {error_count} files")
-    print(f"{'='*80}")
+    print(f"{'=' * 80}")
 
 
 def main():
@@ -146,18 +146,18 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description='Clean numeric timestamps and hashes from markdown filenames'
+        description="Clean numeric timestamps and hashes from markdown filenames"
     )
     parser.add_argument(
-        '--directory',
+        "--directory",
         type=Path,
-        default=Path('/Users/steven/Documents/markD/ai-ml-notes'),
-        help='Directory containing markdown files (default: current directory)'
+        default=Path("/Users/steven/Documents/markD/ai-ml-notes"),
+        help="Directory containing markdown files (default: current directory)",
     )
     parser.add_argument(
-        '--execute',
-        action='store_true',
-        help='Actually rename files (default is dry-run mode)'
+        "--execute",
+        action="store_true",
+        help="Actually rename files (default is dry-run mode)",
     )
 
     args = parser.parse_args()
@@ -176,5 +176,5 @@ def main():
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     exit(main())

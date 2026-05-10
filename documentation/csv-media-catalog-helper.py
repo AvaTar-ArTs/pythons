@@ -9,7 +9,7 @@ from pathlib import Path
 import pandas as pd
 
 
-def read_catalog_csvs(
+def read_catalog_csvs(:
     base_dir: Path,
     filenames: dict[str, str],
 ) -> dict[str, pd.DataFrame]:
@@ -55,7 +55,7 @@ def clean_catalog(df: pd.DataFrame, sort_columns: Iterable[str]) -> pd.DataFrame
     return df_clean
 
 
-def save_catalogs(
+def save_catalogs(:
     cleaned: dict[str, pd.DataFrame],
     output_dir: Path,
     filenames: dict[str, str],

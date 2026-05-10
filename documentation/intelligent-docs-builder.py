@@ -37,7 +37,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -81,7 +81,6 @@ class IntelligentDocsBuilder:
 
         if self.env_loaded and HAS_AI:
             try:
-                api_key = os.getenv("OPENAI_API_KEY")
                 if api_key and len(api_key) > 20:
                     self.openai = OpenAIClient(api_key=api_key)
                     print("? OpenAI client initialized")
@@ -89,7 +88,6 @@ class IntelligentDocsBuilder:
                     self.openai = None
                     print("??  OpenAI API key not found")
 
-                anthropic_key = os.getenv("ANTHROPIC_API_KEY")
                 if anthropic_key and len(anthropic_key) > 20:
                     self.anthropic = Anthropic(api_key=anthropic_key)
                     print("? Anthropic client initialized")
@@ -117,7 +115,7 @@ class IntelligentDocsBuilder:
                         line = line.removeprefix("export ")
                         key, value = line.split("=", 1)
                         # Remove quotes
-                        value = value.strip("\"'")
+                        value = value.strip("\"\'")
                         # Remove comments
                         if "#" in value:
                             value = value.split("#")[0].strip()
@@ -147,8 +145,8 @@ class IntelligentDocsBuilder:
 
             # Find docstring
             docstring = ""
-            if content.startswith('"""') or content.startswith("'''"):
-                end_marker = '"""' if content.startswith('"""') else "'''"
+            if content.startswith('\"\'"') or content.startswith("\'"'""):
+                end_marker = '\"\'"' if content.startswith('\"\'"') else "\'"'"
                 try:
                     docstring = content.split(end_marker)[1][:200]
                 except:
@@ -178,9 +176,9 @@ class IntelligentDocsBuilder:
 
             prompt = f"""Analyze this Python script and provide a JSON response:
 
-Filename: {script_data['filename']}
-Category: {script_data['category']}
-Lines: {script_data['lines']}
+Filename: {script_data["filename"]}
+Category: {script_data["category"]}
+Lines: {script_data["lines"]}
 
 Code sample:
 ```python
@@ -262,14 +260,14 @@ Provide:
         """Generate comprehensive markdown documentation"""
         doc = f"""# ?? Python Automation Arsenal - Intelligent Documentation
 
-> **AI-Powered Analysis** - Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+> **AI-Powered Analysis** - Generated on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 > Using: GPT-4, Claude, and comprehensive API ecosystem analysis
 
 ## ?? Repository Overview
 
-- **Total Scripts**: {self.results['analyzed']}
-- **Categories**: {len(self.results['categorized'])}
-- **AI-Analyzed**: {sum(1 for s in self.results['scripts'] if s.get('ai_analyzed', False))}
+- **Total Scripts**: {self.results["analyzed"]}
+- **Categories**: {len(self.results["categorized"])}
+- **AI-Analyzed**: {sum(1 for s in self.results["scripts"] if s.get("ai_analyzed", False))}
 
 ### ?? Categories
 

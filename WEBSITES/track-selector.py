@@ -6,12 +6,10 @@ Analyzes Suno database and selects best tracks for AudioJungle/Spotify
 Usage: python3 track-selector.py
 """
 
-import os
 import csv
 import json
 from pathlib import Path
 from collections import defaultdict, Counter
-import shutil
 
 # Configuration
 MUSIC_DIR = Path.home() / "Music"
@@ -28,6 +26,7 @@ CATEGORIES = {
     "electronic": ["electronic", "techno", "house", "synth", "edm"],
     "acoustic": ["acoustic", "guitar", "piano", "folk", "organic"],
 }
+
 
 def analyze_suno_database():
     """Analyze Suno master CSV and extract metadata"""
@@ -50,42 +49,39 @@ def analyze_suno_database():
     moods = Counter()
 
     try:
-        with open(SUNO_CSV, 'r', encoding='utf-8') as f:
+        with open(SUNO_CSV, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 track = {
-                    'title': row.get('title', ''),
-                    'genre': row.get('genre', row.get('style', '')),
-                    'mood': row.get('mood', row.get('tags', '')),
-                    'duration': row.get('duration', ''),
-                    'created_date': row.get('created_at', row.get('date', '')),
-                    'file_path': row.get('file_path', row.get('path', '')),
+                    "title": row.get("title", ""),
+                    "genre": row.get("genre", row.get("style", "")),
+                    "mood": row.get("mood", row.get("tags", "")),
+                    "duration": row.get("duration", ""),
+                    "created_date": row.get("created_at", row.get("date", "")),
+                    "file_path": row.get("file_path", row.get("path", "")),
                 }
                 tracks.append(track)
 
                 # Track statistics
-                if track['genre']:
-                    genres[track['genre'].lower()] += 1
-                if track['mood']:
-                    for mood in track['mood'].lower().split(','):
+                if track["genre"]:
+                    genres[track["genre"].lower()] += 1
+                if track["mood"]:
+                    for mood in track["mood"].lower().split(","):
                         moods[mood.strip()] += 1
 
-        print(f"\n📊 Database Analysis:")
+        print("\n📊 Database Analysis:")
         print(f"   Total tracks: {len(tracks):,}")
         print(f"   Unique genres: {len(genres)}")
-        print(f"   Top 5 genres:")
+        print("   Top 5 genres:")
         for genre, count in genres.most_common(5):
             print(f"      • {genre}: {count}")
 
-        return {
-            'tracks': tracks,
-            'genres': genres,
-            'moods': moods
-        }
+        return {"tracks": tracks, "genres": genres, "moods": moods}
 
     except Exception as e:
         print(f"❌ Error reading CSV: {e}")
         return None
+
 
 def categorize_tracks(database):
     """Categorize tracks by commercial viability"""
@@ -96,7 +92,7 @@ def categorize_tracks(database):
 
     categorized = defaultdict(list)
 
-    for track in database['tracks']:
+    for track in database["tracks"]:
         track_text = f"{track['title']} {track['genre']} {track['mood']}".lower()
 
         # Categorize
@@ -108,7 +104,7 @@ def categorize_tracks(database):
                 break
 
         if not matched:
-            categorized['other'].append(track)
+            categorized["other"].append(track)
 
     print("\n📂 Categorization Results:")
     for category in sorted(categorized.keys()):
@@ -118,6 +114,7 @@ def categorize_tracks(database):
 
     return categorized
 
+
 def select_top_tracks(categorized, per_category=20):
     """Select top tracks from each category"""
     print(f"\n⭐ Selecting top {per_category} tracks per category...")
@@ -126,14 +123,12 @@ def select_top_tracks(categorized, per_category=20):
     total = 0
 
     for category, tracks in categorized.items():
-        if category == 'other':
+        if category == "other":
             continue
 
         # Sort by most recent first (assuming more polished)
         sorted_tracks = sorted(
-            tracks,
-            key=lambda x: x.get('created_date', ''),
-            reverse=True
+            tracks, key=lambda x: x.get("created_date", ""), reverse=True
         )[:per_category]
 
         selected[category] = sorted_tracks
@@ -142,6 +137,7 @@ def select_top_tracks(categorized, per_category=20):
 
     print(f"\n   📦 Total selected: {total} tracks")
     return selected
+
 
 def generate_audiojungle_metadata(selected):
     """Generate AudioJungle-optimized metadata"""
@@ -152,12 +148,12 @@ def generate_audiojungle_metadata(selected):
     for category, tracks in selected.items():
         for track in tracks:
             metadata = {
-                'title': track['title'],
-                'category': category.title(),
-                'description': f"{category.title()} music track perfect for {get_use_cases(category)}",
-                'tags': generate_tags(track, category),
-                'price_tier': suggest_price_tier(category),
-                'file_path': track.get('file_path', ''),
+                "title": track["title"],
+                "category": category.title(),
+                "description": f"{category.title()} music track perfect for {get_use_cases(category)}",
+                "tags": generate_tags(track, category),
+                "price_tier": suggest_price_tier(category),
+                "file_path": track.get("file_path", ""),
             }
             aj_metadata.append(metadata)
 
@@ -165,87 +161,120 @@ def generate_audiojungle_metadata(selected):
     metadata_path = OUTPUT_DIR / "audiojungle-metadata.json"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    with open(metadata_path, 'w') as f:
+    with open(metadata_path, "w") as f:
         json.dump(aj_metadata, f, indent=2)
 
     print(f"   ✅ Saved: {metadata_path}")
     return aj_metadata
 
+
 def get_use_cases(category):
     """Get use cases for each category"""
     use_cases = {
-        'background': "videos, podcasts, presentations, vlogs",
-        'energetic': "ads, sports videos, workout content, upbeat projects",
-        'corporate': "business presentations, explainer videos, corporate ads",
-        'cinematic': "movie trailers, dramatic scenes, epic content",
-        'electronic': "tech videos, gaming content, modern ads",
-        'acoustic': "wedding videos, indie films, organic content",
+        "background": "videos, podcasts, presentations, vlogs",
+        "energetic": "ads, sports videos, workout content, upbeat projects",
+        "corporate": "business presentations, explainer videos, corporate ads",
+        "cinematic": "movie trailers, dramatic scenes, epic content",
+        "electronic": "tech videos, gaming content, modern ads",
+        "acoustic": "wedding videos, indie films, organic content",
     }
     return use_cases.get(category, "various projects")
+
 
 def generate_tags(track, category):
     """Generate SEO-optimized tags for AudioJungle"""
     base_tags = {
-        'background': ['ambient', 'background', 'chill', 'calm', 'relaxing', 'atmospheric'],
-        'energetic': ['upbeat', 'energetic', 'positive', 'happy', 'motivational', 'inspiring'],
-        'corporate': ['corporate', 'business', 'professional', 'success', 'technology'],
-        'cinematic': ['cinematic', 'epic', 'dramatic', 'emotional', 'powerful', 'orchestral'],
-        'electronic': ['electronic', 'modern', 'tech', 'futuristic', 'digital', 'synth'],
-        'acoustic': ['acoustic', 'guitar', 'organic', 'natural', 'folk', 'indie'],
+        "background": [
+            "ambient",
+            "background",
+            "chill",
+            "calm",
+            "relaxing",
+            "atmospheric",
+        ],
+        "energetic": [
+            "upbeat",
+            "energetic",
+            "positive",
+            "happy",
+            "motivational",
+            "inspiring",
+        ],
+        "corporate": ["corporate", "business", "professional", "success", "technology"],
+        "cinematic": [
+            "cinematic",
+            "epic",
+            "dramatic",
+            "emotional",
+            "powerful",
+            "orchestral",
+        ],
+        "electronic": [
+            "electronic",
+            "modern",
+            "tech",
+            "futuristic",
+            "digital",
+            "synth",
+        ],
+        "acoustic": ["acoustic", "guitar", "organic", "natural", "folk", "indie"],
     }
 
     tags = base_tags.get(category, [])
 
     # Add generic commercial tags
-    tags.extend(['royalty-free', 'commercial-use', 'background-music'])
+    tags.extend(["royalty-free", "commercial-use", "background-music"])
 
     return tags[:15]  # AudioJungle limits tags
+
 
 def suggest_price_tier(category):
     """Suggest pricing tier based on category"""
     tiers = {
-        'background': '$19',
-        'energetic': '$25',
-        'corporate': '$35',
-        'cinematic': '$49',
-        'electronic': '$29',
-        'acoustic': '$25',
+        "background": "$19",
+        "energetic": "$25",
+        "corporate": "$35",
+        "cinematic": "$49",
+        "electronic": "$29",
+        "acoustic": "$25",
     }
-    return tiers.get(category, '$25')
+    return tiers.get(category, "$25")
+
 
 def generate_spotify_strategy(selected):
     """Generate Spotify distribution strategy"""
     print("\n🎵 Generating Spotify strategy...")
 
     strategy = {
-        'album_suggestions': [],
-        'playlist_strategy': {},
-        'release_schedule': []
+        "album_suggestions": [],
+        "playlist_strategy": {},
+        "release_schedule": [],
     }
 
     # Suggest albums by category
     for category, tracks in selected.items():
         if len(tracks) >= 10:
             album = {
-                'name': f"Focus {category.title()} - AvaTarArTs",
-                'track_count': min(len(tracks), 15),
-                'description': f"Collection of {category} music perfect for focus and productivity",
+                "name": f"Focus {category.title()} - AvaTarArTs",
+                "track_count": min(len(tracks), 15),
+                "description": f"Collection of {category} music perfect for focus and productivity",
             }
-            strategy['album_suggestions'].append(album)
+            strategy["album_suggestions"].append(album)
 
     # Save strategy
     strategy_path = OUTPUT_DIR / "spotify-strategy.json"
-    with open(strategy_path, 'w') as f:
+    with open(strategy_path, "w") as f:
         json.dump(strategy, f, indent=2)
 
     print(f"   ✅ Saved: {strategy_path}")
     return strategy
 
+
 def print_next_steps(selected, aj_metadata):
     """Print actionable next steps"""
-    print("\n" + "="*60)
+    print("\n" + "=" * 60)
     print("🚀 NEXT STEPS FOR MUSIC LICENSING")
-    print("="*60)
+    print("=" * 60)
 
     total_tracks = sum(len(tracks) for tracks in selected.values())
 
@@ -299,11 +328,12 @@ def print_next_steps(selected, aj_metadata):
     guide_path = Path(__file__).parent / "audiojungle-setup.md"
     print(f"   open {guide_path}")
 
-    print("\n" + "="*60)
+    print("\n" + "=" * 60)
+
 
 def main():
     print("🎵 MUSIC LICENSING TRACK SELECTOR")
-    print("="*60)
+    print("=" * 60)
 
     # Step 1: Analyze Suno database
     database = analyze_suno_database()
@@ -323,13 +353,14 @@ def main():
     aj_metadata = generate_audiojungle_metadata(selected)
 
     # Step 5: Generate Spotify strategy
-    spotify_strategy = generate_spotify_strategy(selected)
+    generate_spotify_strategy(selected)
 
     # Step 6: Next steps
     print_next_steps(selected, aj_metadata)
 
     print("\n✅ Music licensing setup complete!")
     print(f"📁 Check output: {OUTPUT_DIR}")
+
 
 if __name__ == "__main__":
     main()

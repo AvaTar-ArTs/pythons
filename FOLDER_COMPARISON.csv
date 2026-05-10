@@ -1,0 +1,392 @@
+folder,file_name,file_size,file_type,issue_type,issue_details,suggestion
+MEDIA_PROCESSING/audio,[FOLDER SUMMARY],,,summary,"12 files, 1 types",
+audio,tts_main.py,5554,.py,none,,
+audio,mp3_processor.py,7561,.py,none,,
+audio,webm-to-mp3.py,5988,.py,none,,
+audio,convert_to_audio.py,10707,.py,none,,
+audio,aws_polly.py,7622,.py,none,,
+audio,ORGANIZE_AUDIOBOOK.py,2375,.py,none,,
+audio,text_to_speech.py,5082,.py,none,,
+audio,audio_test.py,4661,.py,none,,
+audio,mp3_to_mp4.py,4994,.py,none,,
+audio,audiometadata.py,8175,.py,none,,
+audio,audiodownload.py,7880,.py,none,,
+audio,streamlabs_polly.py,8399,.py,none,,
+MEDIA_PROCESSING/image,[FOLDER SUMMARY],,,summary,"35 files, 1 types",
+image,ImageCreator.py,,,similar_name,Similar to imagenarator.py (83.3%),Review if these are duplicates or should be merged
+image,gallery_upload.py,,,similar_name,Similar to gallery_logic.py (74.1%),Review if these are duplicates or should be merged
+image,gallery_upload.py,,,similar_name,Similar to test_gallery_upload.py (84.8%),Review if these are duplicates or should be merged
+image,image_utils.py,,,similar_name,Similar to test_image_utils.py (81.5%),Review if these are duplicates or should be merged
+image,image_utils.py,,,similar_name,Similar to image_test.py (76.2%),Review if these are duplicates or should be merged
+image,repost_photo.py,,,similar_name,Similar to bot_photo.py (76.2%),Review if these are duplicates or should be merged
+image,scan_images.py,,,similar_name,Similar to scan_images--.py (91.7%),Review if these are duplicates or should be merged
+image,img-img.py,,,similar_name,Similar to img2img.py (85.7%),Review if these are duplicates or should be merged
+image,download_photos_by_user.py,,,similar_name,Similar to download_photos_by_hashtag.py (81.6%),Review if these are duplicates or should be merged
+image,html-auto-img-gallery.py,,,similar_name,Similar to auto-image-gallery.py (82.1%),Review if these are duplicates or should be merged
+image,img2img.py,,,similar_name,Similar to img2img copy.py (73.7%),Review if these are duplicates or should be merged
+image,gallery_logic.py,,,similar_name,Similar to test_gallery_logic.py (83.9%),Review if these are duplicates or should be merged
+image,upload_photos.py,,,similar_name,Similar to upload_story_photo.py (77.4%),Review if these are duplicates or should be merged
+image,test_gallery_init.py,,,similar_name,Similar to test_gallery_logic.py (80.0%),Review if these are duplicates or should be merged
+image,test_gallery_init.py,,,similar_name,Similar to test_gallery_upload.py (72.2%),Review if these are duplicates or should be merged
+image,test_gallery_logic.py,,,similar_name,Similar to test_gallery_upload.py (81.1%),Review if these are duplicates or should be merged
+image,imgmove.py,6806,.py,none,,
+image,direct_send_photo.py,5012,.py,none,,
+image,ImageCreator.py,9962,.py,similar_name,,review
+image,gallery_upload.py,7389,.py,similar_name,,review
+image,image_utils.py,16200,.py,similar_name,,review
+image,repost_best_photos_from_users.py,10339,.py,none,,
+image,repost_photo.py,8637,.py,similar_name,,review
+image,download_your_photos.py,4745,.py,none,,
+image,scan_images.py,5421,.py,similar_name,,review
+image,img-img.py,7029,.py,similar_name,,review
+image,Telegraph Image Downloader [RUS].py,25089,.py,none,,
+image,test_image_utils.py,2466,.py,similar_name,,review
+image,download_photos_by_user.py,5011,.py,similar_name,,review
+image,html-auto-img-gallery.py,6872,.py,similar_name,,review
+image,img2img.py,6875,.py,similar_name,,review
+image,imagenarator.py,7772,.py,similar_name,,review
+image,img.py,5711,.py,none,,
+image,gallery_logic.py,6793,.py,similar_name,,review
+image,upload_photos.py,7543,.py,similar_name,,review
+image,img2pdf.py,8167,.py,none,,
+image,scan_images--.py,5425,.py,similar_name,,review
+image,image_test.py,5081,.py,similar_name,,review
+image,pdf2img.py,5278,.py,none,,
+image,test_gallery_init.py,13446,.py,similar_name,,review
+image,test_gallery_logic.py,5464,.py,similar_name,,review
+image,imgsearch.py,5591,.py,none,,
+image,__init___2T-Xx-python_image_upscaling.py,49,.py,none,,
+image,img-to-pdf-folder.py,5696,.py,none,,
+image,api_photo.py,22672,.py,none,,
+image,upload_story_photo.py,5001,.py,similar_name,,review
+image,img2img copy.py,6681,.py,similar_name,,review
+image,bot_photo.py,8308,.py,similar_name,,review
+image,auto-image-gallery.py,6893,.py,similar_name,,review
+image,test_gallery_upload.py,11525,.py,similar_name,,review
+image,download_photos_by_hashtag.py,5110,.py,similar_name,,review
+MEDIA_PROCESSING/video,[FOLDER SUMMARY],,,summary,"28 files, 1 types",
+video,youtube.py,,,similar_name,Similar to youtube 4.py (87.5%),Review if these are duplicates or should be merged
+video,youtube.py,,,similar_name,Similar to ytube.py (83.3%),Review if these are duplicates or should be merged
+video,youtube.py,,,similar_name,Similar to YouTubeBot.py (82.4%),Review if these are duplicates or should be merged
+video,youtube.py,,,similar_name,Similar to youtube2.py (93.3%),Review if these are duplicates or should be merged
+video,youtube.py,,,similar_name,Similar to YouTubeBot 3.py (73.7%),Review if these are duplicates or should be merged
+video,youtube.py,,,similar_name,Similar to YouTubeBot 2.py (73.7%),Review if these are duplicates or should be merged
+video,clips.py,,,similar_name,Similar to Clip.py (88.9%),Review if these are duplicates or should be merged
+video,YouTube_VIEWBOT.py,,,similar_name,Similar to YouTubeBot.py (80.0%),Review if these are duplicates or should be merged
+video,YouTube_VIEWBOT.py,,,similar_name,Similar to YouTubeBot 3.py (74.1%),Review if these are duplicates or should be merged
+video,YouTube_VIEWBOT.py,,,similar_name,Similar to YouTubeBot 2.py (74.1%),Review if these are duplicates or should be merged
+video,DownloadVideos.py,,,similar_name,Similar to download_user_videos.py (82.4%),Review if these are duplicates or should be merged
+video,bot_video.py,,,similar_name,Similar to video.py (71.4%),Review if these are duplicates or should be merged
+video,youtube 4.py,,,similar_name,Similar to ytube.py (71.4%),Review if these are duplicates or should be merged
+video,youtube 4.py,,,similar_name,Similar to YouTubeBot.py (73.7%),Review if these are duplicates or should be merged
+video,youtube 4.py,,,similar_name,Similar to youtube2.py (82.4%),Review if these are duplicates or should be merged
+video,youtube 4.py,,,similar_name,Similar to YouTubeBot 3.py (76.2%),Review if these are duplicates or should be merged
+video,youtube 4.py,,,similar_name,Similar to YouTubeBot 2.py (76.2%),Review if these are duplicates or should be merged
+video,ytube.py,,,similar_name,Similar to youtube2.py (76.9%),Review if these are duplicates or should be merged
+video,YouTubeBot.py,,,similar_name,Similar to youtube2.py (77.8%),Review if these are duplicates or should be merged
+video,YouTubeBot.py,,,similar_name,Similar to YouTubeBot 3.py (90.9%),Review if these are duplicates or should be merged
+video,YouTubeBot.py,,,similar_name,Similar to YouTubeBot 2.py (90.9%),Review if these are duplicates or should be merged
+video,youtube2.py,,,similar_name,Similar to YouTubeBot 2.py (80.0%),Review if these are duplicates or should be merged
+video,YouTubeBot 3.py,,,similar_name,Similar to YouTubeBot 2.py (91.7%),Review if these are duplicates or should be merged
+video,video.py,,,similar_name,Similar to videos.py (90.9%),Review if these are duplicates or should be merged
+video,youtube.py,5505,.py,similar_name,,review
+video,cache_media_video.py,12907,.py,none,,
+video,ytcsv.py,5168,.py,none,,
+video,clips.py,10266,.py,similar_name,,review
+video,youtube_analytics.py,9377,.py,none,,
+video,convert_to_video.py,10519,.py,none,,
+video,YouTube_VIEWBOT.py,20932,.py,similar_name,,review
+video,uploadYT.py,12209,.py,none,,
+video,DownloadVideos.py,5282,.py,similar_name,,review
+video,create_video.py,8939,.py,none,,
+video,twitchClips.py,14240,.py,none,,
+video,bot_video.py,5966,.py,similar_name,,review
+video,youtube 4.py,7824,.py,similar_name,,review
+video,ytube.py,7654,.py,similar_name,,review
+video,YouTubeBot.py,10643,.py,similar_name,,review
+video,yt_studio.py,9693,.py,none,,
+video,upload_video.py,12758,.py,none,,
+video,download_user_videos.py,5658,.py,similar_name,,review
+video,youtube2.py,8453,.py,similar_name,,review
+video,video-downloader.py,6215,.py,none,,
+video,YouTubeBot 3.py,10566,.py,similar_name,,review
+video,dedupe_python.py,6727,.py,none,,
+video,scrape-youtube-channel-videos-url.py,5797,.py,none,,
+video,Clip.py,4793,.py,similar_name,,review
+video,yt_auto_main.py,15261,.py,none,,
+video,video.py,14301,.py,similar_name,,review
+video,YouTubeBot 2.py,10750,.py,similar_name,,review
+video,videos.py,6651,.py,similar_name,,review
+MEDIA_PROCESSING/social_media,[FOLDER SUMMARY],,,summary,"55 files, 1 types",
+social_media,bot_comment.py,,,similar_name,Similar to botComment.py (95.2%),Review if these are duplicates or should be merged
+social_media,test_bot_get.py,,,similar_name,Similar to bot_get.py (73.7%),Review if these are duplicates or should be merged
+social_media,test_bot_get.py,,,similar_name,Similar to test_bot_support.py (71.4%),Review if these are duplicates or should be merged
+social_media,test_bot_get.py,,,similar_name,Similar to test_bot_like.py (80.0%),Review if these are duplicates or should be merged
+social_media,test_bot_get.py,,,similar_name,Similar to test_bot_unlike.py (74.1%),Review if these are duplicates or should be merged
+social_media,AskReddit_loop.py,,,similar_name,Similar to askreddit.py (78.3%),Review if these are duplicates or should be merged
+social_media,AskReddit_loop.py,,,similar_name,Similar to AskRedditBot.py (76.9%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607131031.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607131227.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607130507.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607131212.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607131221.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607131205.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607130440.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607124913.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607131028.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607125012.py,,,similar_name,Similar to NewUpload_20250607125040.py (91.7%),Review if these are duplicates or should be merged
+social_media,bot_get.py,,,similar_name,Similar to bot_direct.py (70.6%),Review if these are duplicates or should be merged
+social_media,like_hashtags.py,,,similar_name,Similar to like_hashtags_from_file.py (72.2%),Review if these are duplicates or should be merged
+social_media,botStories.py,,,similar_name,Similar to bot_story.py (73.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607131227.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607130507.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607131212.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607131221.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607131205.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607130440.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607124913.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607131028.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131031.py,,,similar_name,Similar to NewUpload_20250607125040.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131227.py,,,similar_name,Similar to NewUpload_20250607130507.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131227.py,,,similar_name,Similar to NewUpload_20250607131212.py (95.8%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131227.py,,,similar_name,Similar to NewUpload_20250607131221.py (95.8%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131227.py,,,similar_name,Similar to NewUpload_20250607131205.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131227.py,,,similar_name,Similar to NewUpload_20250607130440.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131227.py,,,similar_name,Similar to NewUpload_20250607124913.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131227.py,,,similar_name,Similar to NewUpload_20250607131028.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131227.py,,,similar_name,Similar to NewUpload_20250607125040.py (83.3%),Review if these are duplicates or should be merged
+social_media,test_bot_follow.py,,,similar_name,Similar to test_bot_like.py (71.4%),Review if these are duplicates or should be merged
+social_media,test_bot_follow.py,,,similar_name,Similar to bot_follow.py (80.0%),Review if these are duplicates or should be merged
+social_media,test_bot_follow.py,,,similar_name,Similar to bot_unfollow.py (74.1%),Review if these are duplicates or should be merged
+social_media,test_bot_like.py,,,similar_name,Similar to test_bot_unlike.py (92.9%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130507.py,,,similar_name,Similar to NewUpload_20250607131212.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130507.py,,,similar_name,Similar to NewUpload_20250607131221.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130507.py,,,similar_name,Similar to NewUpload_20250607131205.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130507.py,,,similar_name,Similar to NewUpload_20250607130440.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130507.py,,,similar_name,Similar to NewUpload_20250607124913.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130507.py,,,similar_name,Similar to NewUpload_20250607131028.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130507.py,,,similar_name,Similar to NewUpload_20250607125040.py (87.5%),Review if these are duplicates or should be merged
+social_media,botLike.py,,,similar_name,Similar to bot_unlike.py (82.4%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131212.py,,,similar_name,Similar to NewUpload_20250607131221.py (95.8%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131212.py,,,similar_name,Similar to NewUpload_20250607131205.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131212.py,,,similar_name,Similar to NewUpload_20250607130440.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131212.py,,,similar_name,Similar to NewUpload_20250607124913.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131212.py,,,similar_name,Similar to NewUpload_20250607131028.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131212.py,,,similar_name,Similar to NewUpload_20250607125040.py (83.3%),Review if these are duplicates or should be merged
+social_media,bot_unlike.py,,,similar_name,Similar to test_bot_unlike.py (80.0%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131221.py,,,similar_name,Similar to NewUpload_20250607131205.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131221.py,,,similar_name,Similar to NewUpload_20250607130440.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131221.py,,,similar_name,Similar to NewUpload_20250607124913.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131221.py,,,similar_name,Similar to NewUpload_20250607131028.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131221.py,,,similar_name,Similar to NewUpload_20250607125040.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131205.py,,,similar_name,Similar to NewUpload_20250607130440.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131205.py,,,similar_name,Similar to NewUpload_20250607124913.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131205.py,,,similar_name,Similar to NewUpload_20250607131028.py (91.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131205.py,,,similar_name,Similar to NewUpload_20250607125040.py (87.5%),Review if these are duplicates or should be merged
+social_media,bot_follow.py,,,similar_name,Similar to bot_unfollow.py (90.9%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130440.py,,,similar_name,Similar to NewUpload_20250607124913.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130440.py,,,similar_name,Similar to NewUpload_20250607131028.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607130440.py,,,similar_name,Similar to NewUpload_20250607125040.py (91.7%),Review if these are duplicates or should be merged
+social_media,askreddit.py,,,similar_name,Similar to AskRedditBot.py (85.7%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607124913.py,,,similar_name,Similar to NewUpload_20250607131028.py (83.3%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607124913.py,,,similar_name,Similar to NewUpload_20250607125040.py (87.5%),Review if these are duplicates or should be merged
+social_media,NewUpload_20250607131028.py,,,similar_name,Similar to NewUpload_20250607125040.py (83.3%),Review if these are duplicates or should be merged
+social_media,watch_user_likers_stories.py,7973,.py,none,,
+social_media,bot_comment.py,11103,.py,similar_name,,review
+social_media,test_bot_get.py,44259,.py,similar_name,,review
+social_media,AskReddit_loop.py,11117,.py,similar_name,,review
+social_media,gmupload.py,9264,.py,none,,
+social_media,help_uploadbot.py,7322,.py,none,,
+social_media,bot_filter.py,14121,.py,none,,
+social_media,NewUpload_20250607125012.py,7116,.py,similar_name,,review
+social_media,society6-upload.py,5448,.py,none,,
+social_media,friends_last_post_likes_and_interact_with_user_based_on_hashtahs.py,11975,.py,none,,
+social_media,bot_get.py,21742,.py,similar_name,,review
+social_media,UploadCompilation.py,6639,.py,none,,
+social_media,like_hashtags.py,5058,.py,similar_name,,review
+social_media,botStories.py,10408,.py,similar_name,,review
+social_media,NewUpload_20250607131031.py,8937,.py,similar_name,,review
+social_media,downloadupload.py,10308,.py,none,,
+social_media,NewUpload_20250607131227.py,8085,.py,similar_name,,review
+social_media,reset_following.py,7238,.py,none,,
+social_media,like_hashtags_from_file.py,5133,.py,similar_name,,review
+social_media,test_bot_follow.py,24332,.py,similar_name,,review
+social_media,test_bot_support.py,4206,.py,similar_name,,review
+social_media,target_followers_of_similar_accounts_and_influencers.py,8789,.py,none,,
+social_media,test_bot_like.py,48696,.py,similar_name,,review
+social_media,infinity_hashtags_liker.py,5753,.py,none,,
+social_media,NewUpload_20250607130507.py,7200,.py,similar_name,,review
+social_media,bot_direct.py,14858,.py,similar_name,,review
+social_media,stylish_unfollow_tips_and_like_by_tags.py,10187,.py,none,,
+social_media,botLike.py,10769,.py,similar_name,,review
+social_media,NewUpload_20250607131212.py,7564,.py,similar_name,,review
+social_media,bot_unlike.py,7384,.py,similar_name,,review
+social_media,basic_follow-unfollow_activity.py,7870,.py,none,,
+social_media,bot_story.py,7542,.py,similar_name,,review
+social_media,like_by_tag_interact_unfollow.py,7788,.py,none,,
+social_media,botComment.py,12176,.py,similar_name,,review
+social_media,NewUpload_20250607131221.py,8096,.py,similar_name,,review
+social_media,upload (1).py,9423,.py,none,,
+social_media,NewUpload_20250607131205.py,8251,.py,similar_name,,review
+social_media,bot_follow.py,13442,.py,similar_name,,review
+social_media,NewUpload_20250607130440.py,7183,.py,similar_name,,review
+social_media,bot.py,7129,.py,none,,
+social_media,bulk_upload.py,27972,.py,none,,
+social_media,test_bot_unlike.py,9398,.py,similar_name,,review
+social_media,botError.py,27120,.py,none,,
+social_media,askreddit.py,15086,.py,similar_name,,review
+social_media,instagram.py,94021,.py,none,,
+social_media,bot_stats.py,6961,.py,none,,
+social_media,NewUpload_20250607124913.py,7089,.py,similar_name,,review
+social_media,bot_unfollow.py,9922,.py,similar_name,,review
+social_media,AskRedditBot.py,5211,.py,similar_name,,review
+social_media,botDraw.py,11905,.py,none,,
+social_media,googleapi-upload.py,9581,.py,none,,
+social_media,NewUpload_20250607131028.py,8897,.py,similar_name,,review
+social_media,ReportBot.py,23103,.py,none,,
+social_media,massive_follow_then_unfollow_works-non-stop.py,6901,.py,none,,
+social_media,NewUpload_20250607125040.py,7191,.py,similar_name,,review
+MEDIA_PROCESSING/upscale,[FOLDER SUMMARY],,,summary,"33 files, 1 types",
+upscale,upscaled_media_image.py,,,similar_name,Similar to upscale_media_image.py (97.4%),Review if these are duplicates or should be merged
+upscale,upscaled_media_image.py,,,similar_name,Similar to upscale-dl_media_image.py (95.2%),Review if these are duplicates or should be merged
+upscale,upscaled_media_image.py,,,similar_name,Similar to upscale2_media_image.py (95.0%),Review if these are duplicates or should be merged
+upscale,upscaled_media_image.py,,,similar_name,Similar to upscale--_media_image.py (92.7%),Review if these are duplicates or should be merged
+upscale,upscale_media_image.py,,,similar_name,Similar to upscale-dl_media_image.py (92.7%),Review if these are duplicates or should be merged
+upscale,upscale_media_image.py,,,similar_name,Similar to upscale2_media_image.py (97.4%),Review if these are duplicates or should be merged
+upscale,upscale_media_image.py,,,similar_name,Similar to upscale--_media_image.py (95.0%),Review if these are duplicates or should be merged
+upscale,upscale copy 2.py,,,similar_name,Similar to upscale copy.py (92.3%),Review if these are duplicates or should be merged
+upscale,upscale copy 2.py,,,similar_name,Similar to upscale 2 copy.py (85.7%),Review if these are duplicates or should be merged
+upscale,upscale copy 2.py,,,similar_name,Similar to upscale2.py (72.7%),Review if these are duplicates or should be merged
+upscale,auto_upscale.py,,,similar_name,Similar to upscale.py (73.7%),Review if these are duplicates or should be merged
+upscale,auto_upscale.py,,,similar_name,Similar to batch_upscaler.py (76.9%),Review if these are duplicates or should be merged
+upscale,auto_upscale.py,,,similar_name,Similar to batch_upscale.py (80.0%),Review if these are duplicates or should be merged
+upscale,upscalerr.py,,,similar_name,Similar to upscale-dl.py (73.7%),Review if these are duplicates or should be merged
+upscale,upscalerr.py,,,similar_name,Similar to upscale.py (87.5%),Review if these are duplicates or should be merged
+upscale,upscalerr.py,,,similar_name,Similar to upscale--.py (77.8%),Review if these are duplicates or should be merged
+upscale,upscalerr.py,,,similar_name,Similar to imgupscale.py (73.7%),Review if these are duplicates or should be merged
+upscale,upscalerr.py,,,similar_name,Similar to upscale2.py (82.4%),Review if these are duplicates or should be merged
+upscale,upscalerr.py,,,similar_name,Similar to upscaled.py (82.4%),Review if these are duplicates or should be merged
+upscale,unified_image_upscaler.py,,,similar_name,Similar to enhanced_image_upscaler.py (80.0%),Review if these are duplicates or should be merged
+upscale,upscale-dl.py,,,similar_name,Similar to upscale-dl 2.py (90.9%),Review if these are duplicates or should be merged
+upscale,upscale-dl.py,,,similar_name,Similar to upscale_file.py (72.7%),Review if these are duplicates or should be merged
+upscale,upscale-dl.py,,,similar_name,Similar to upscale.py (82.4%),Review if these are duplicates or should be merged
+upscale,upscale-dl.py,,,similar_name,Similar to upscale-sub.py (76.2%),Review if these are duplicates or should be merged
+upscale,upscale-dl.py,,,similar_name,Similar to upscale--.py (84.2%),Review if these are duplicates or should be merged
+upscale,upscale-dl.py,,,similar_name,Similar to upscale2.py (77.8%),Review if these are duplicates or should be merged
+upscale,upscale-dl.py,,,similar_name,Similar to upscaled.py (88.9%),Review if these are duplicates or should be merged
+upscale,upscale-dl 2.py,,,similar_name,Similar to upscale.py (73.7%),Review if these are duplicates or should be merged
+upscale,upscale-dl 2.py,,,similar_name,Similar to upscale--.py (76.2%),Review if these are duplicates or should be merged
+upscale,upscale-dl 2.py,,,similar_name,Similar to upscale2.py (80.0%),Review if these are duplicates or should be merged
+upscale,upscale-dl 2.py,,,similar_name,Similar to upscaled.py (80.0%),Review if these are duplicates or should be merged
+upscale,upscale-dl_media_image.py,,,similar_name,Similar to upscale2_media_image.py (90.5%),Review if these are duplicates or should be merged
+upscale,upscale-dl_media_image.py,,,similar_name,Similar to upscale--_media_image.py (93.0%),Review if these are duplicates or should be merged
+upscale,upscale_file.py,,,similar_name,Similar to upscale.py (73.7%),Review if these are duplicates or should be merged
+upscale,upscale.py,,,similar_name,Similar to upscale copy.py (73.7%),Review if these are duplicates or should be merged
+upscale,upscale.py,,,similar_name,Similar to upscale-sub.py (77.8%),Review if these are duplicates or should be merged
+upscale,upscale.py,,,similar_name,Similar to upscale--.py (87.5%),Review if these are duplicates or should be merged
+upscale,upscale.py,,,similar_name,Similar to imgupscale.py (82.4%),Review if these are duplicates or should be merged
+upscale,upscale.py,,,similar_name,Similar to loop-upscale.py (73.7%),Review if these are duplicates or should be merged
+upscale,upscale.py,,,similar_name,Similar to upscale2.py (93.3%),Review if these are duplicates or should be merged
+upscale,upscale.py,,,similar_name,Similar to upscaled.py (93.3%),Review if these are duplicates or should be merged
+upscale,upscale copy.py,,,similar_name,Similar to upscale 2 copy.py (92.3%),Review if these are duplicates or should be merged
+upscale,batch_upscaler.py,,,similar_name,Similar to improved_batch_upscaler.py (75.7%),Review if these are duplicates or should be merged
+upscale,batch_upscaler.py,,,similar_name,Similar to batch_upscale.py (96.3%),Review if these are duplicates or should be merged
+upscale,upscale-sub.py,,,similar_name,Similar to upscale--.py (80.0%),Review if these are duplicates or should be merged
+upscale,upscale-sub.py,,,similar_name,Similar to upscale2.py (73.7%),Review if these are duplicates or should be merged
+upscale,upscale-sub.py,,,similar_name,Similar to upscaled.py (73.7%),Review if these are duplicates or should be merged
+upscale,improved_batch_upscaler_2_1.py,,,similar_name,Similar to improved_batch_upscaler.py (92.0%),Review if these are duplicates or should be merged
+upscale,upscale--.py,,,similar_name,Similar to imgupscale.py (73.7%),Review if these are duplicates or should be merged
+upscale,upscale--.py,,,similar_name,Similar to upscale2.py (82.4%),Review if these are duplicates or should be merged
+upscale,upscale--.py,,,similar_name,Similar to upscaled.py (82.4%),Review if these are duplicates or should be merged
+upscale,imgupscale.py,,,similar_name,Similar to simple_upscaler.py (72.0%),Review if these are duplicates or should be merged
+upscale,imgupscale.py,,,similar_name,Similar to upscale2.py (77.8%),Review if these are duplicates or should be merged
+upscale,imgupscale.py,,,similar_name,Similar to img-img-upscale.py (80.0%),Review if these are duplicates or should be merged
+upscale,imgupscale.py,,,similar_name,Similar to upscaled.py (77.8%),Review if these are duplicates or should be merged
+upscale,upscale2_media_image.py,,,similar_name,Similar to upscale--_media_image.py (92.7%),Review if these are duplicates or should be merged
+upscale,improved_batch_upscaler.py,,,similar_name,Similar to batch_upscale.py (72.2%),Review if these are duplicates or should be merged
+upscale,upscale 2 copy.py,,,similar_name,Similar to upscale2.py (72.7%),Review if these are duplicates or should be merged
+upscale,upscale2.py,,,similar_name,Similar to upscaled.py (87.5%),Review if these are duplicates or should be merged
+upscale,upscaled_media_image.py,13622,.py,similar_name,,review
+upscale,upscale_media_image.py,8109,.py,similar_name,,review
+upscale,upscale copy 2.py,7853,.py,similar_name,,review
+upscale,auto_upscale.py,8425,.py,similar_name,,review
+upscale,upscalerr.py,5931,.py,similar_name,,review
+upscale,upscale_system.py,10610,.py,none,,
+upscale,unified_image_upscaler.py,33746,.py,similar_name,,review
+upscale,upscale-dl.py,3966,.py,similar_name,,review
+upscale,upscale-dl 2.py,10038,.py,similar_name,,review
+upscale,upscale-dl_media_image.py,10379,.py,similar_name,,review
+upscale,processor_cli_from_upscaler.py,2829,.py,none,,
+upscale,upscale_file.py,3118,.py,similar_name,,review
+upscale,upscale.py,2021,.py,similar_name,,review
+upscale,upscale copy.py,7708,.py,similar_name,,review
+upscale,batch_upscaler.py,10943,.py,similar_name,,review
+upscale,upscale-sub.py,2651,.py,similar_name,,review
+upscale,improved_batch_upscaler_2_1.py,24117,.py,similar_name,,review
+upscale,upscale--.py,2017,.py,similar_name,,review
+upscale,web-png-upscale.py,6440,.py,none,,
+upscale,imgupscale.py,3005,.py,similar_name,,review
+upscale,upscale2_media_image.py,7841,.py,similar_name,,review
+upscale,loop-upscale.py,2353,.py,similar_name,,review
+upscale,improved_batch_upscaler.py,25642,.py,similar_name,,review
+upscale,simple_upscaler.py,8427,.py,similar_name,,review
+upscale,upscale 2 copy.py,8407,.py,similar_name,,review
+upscale,batch_upscale.py,6995,.py,similar_name,,review
+upscale,upscale2.py,2862,.py,similar_name,,review
+upscale,upscale_with_sips.py,9089,.py,none,,
+upscale,enhanced_image_upscaler.py,20076,.py,similar_name,,review
+upscale,img-img-upscale.py,6177,.py,similar_name,,review
+upscale,upscale--_media_image.py,7756,.py,similar_name,,review
+upscale,web_upscaler_v2.py,9851,.py,none,,
+upscale,upscaled.py,6169,.py,similar_name,,review
+MEDIA_PROCESSING/organize,[FOLDER SUMMARY],,,summary,"27 files, 1 types",
+organize,cleanups.py,,,similar_name,Similar to cleanupd.py (87.5%),Review if these are duplicates or should be merged
+organize,imove.py,,,similar_name,Similar to imove--.py (83.3%),Review if these are duplicates or should be merged
+organize,imove.py,,,similar_name,Similar to remove.py (72.7%),Review if these are duplicates or should be merged
+organize,imove.py,,,similar_name,Similar to move.py (88.9%),Review if these are duplicates or should be merged
+organize,imove--.py,,,similar_name,Similar to move.py (72.7%),Review if these are duplicates or should be merged
+organize,remove.py,,,similar_name,Similar to removebg2.py (80.0%),Review if these are duplicates or should be merged
+organize,remove.py,,,similar_name,Similar to move.py (80.0%),Review if these are duplicates or should be merged
+organize,organize_albums 2.py,,,similar_name,Similar to organize_albums 1.py (94.1%),Review if these are duplicates or should be merged
+organize,organize_albums 2.py,,,similar_name,Similar to organize_albums 4.py (94.1%),Review if these are duplicates or should be merged
+organize,organize_albums 2.py,,,similar_name,Similar to organize_albums1.py (90.9%),Review if these are duplicates or should be merged
+organize,organize_albums 2.py,,,similar_name,Similar to organize_albums 14.py (91.4%),Review if these are duplicates or should be merged
+organize,organize_albums 1.py,,,similar_name,Similar to organize_albums 4.py (94.1%),Review if these are duplicates or should be merged
+organize,organize_albums 1.py,,,similar_name,Similar to organize_albums1.py (97.0%),Review if these are duplicates or should be merged
+organize,organize_albums 1.py,,,similar_name,Similar to organize_albums 14.py (97.1%),Review if these are duplicates or should be merged
+organize,sort2.py,,,similar_name,Similar to sort2 (1).py (71.4%),Review if these are duplicates or should be merged
+organize,organize_albums 4.py,,,similar_name,Similar to organize_albums1.py (90.9%),Review if these are duplicates or should be merged
+organize,organize_albums 4.py,,,similar_name,Similar to organize_albums 14.py (97.1%),Review if these are duplicates or should be merged
+organize,organize_albums1.py,,,similar_name,Similar to organize_albums 14.py (94.1%),Review if these are duplicates or should be merged
+organize,consolidated_media_processor.py,24696,.py,none,,
+organize,cleanups.py,6329,.py,similar_name,,review
+organize,file-sort.py,5468,.py,none,,
+organize,organize (1).py,5355,.py,none,,
+organize,imove.py,5487,.py,similar_name,,review
+organize,imove--.py,5500,.py,similar_name,,review
+organize,REMOVE_DUPLICATE_CHAPTERS.py,2610,.py,none,,
+organize,CLEANUP_LOOSE_FILES.py,2257,.py,none,,
+organize,vanceai-removebg.py,9246,.py,none,,
+organize,remove.py,5303,.py,similar_name,,review
+organize,organize_albums 2.py,8434,.py,similar_name,,review
+organize,cleanupd.py,6225,.py,similar_name,,review
+organize,organize_albums 1.py,6983,.py,similar_name,,review
+organize,sort copy.py,6823,.py,none,,
+organize,move-date.py,5394,.py,none,,
+organize,sort2.py,8210,.py,similar_name,,review
+organize,removebg2.py,5069,.py,similar_name,,review
+organize,organize_albums 4.py,6727,.py,similar_name,,review
+organize,organize_albums1.py,7346,.py,similar_name,,review
+organize,move.py,4972,.py,similar_name,,review
+organize,100sort.py,6015,.py,none,,
+organize,CONSOLIDATE_TO_TRUE_CHAPTERS.py,4111,.py,none,,
+organize,organize_music_library.py,6571,.py,none,,
+organize,sort2 (1).py,7022,.py,similar_name,,review
+organize,organize_albums 14.py,6723,.py,similar_name,,review
+organize,organize_media.py,8830,.py,none,,
+organize,clean-album.py,10164,.py,none,,
+MEDIA_PROCESSING/utilities,[FOLDER SUMMARY],,,summary,"4 files, 1 types",
+utilities,util.py,15024,.py,none,,
+utilities,direct_url_helpers.py,7832,.py,none,,
+utilities,common.py,5482,.py,none,,
+utilities,gui_utils.py,11768,.py,none,,

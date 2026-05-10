@@ -122,8 +122,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -155,10 +153,8 @@ class for global variables."""
     tmp = (
     estimated_total_time if estimated_total_time ! = "" else "0 s", 
     await client.edit_message_text(chat_id, message_id, text = "{}\\\n {}".format(ud_type, tmp))
-    @lru_cache(maxsize = 128)
-    size / = power
-    n + = 1
-    @lru_cache(maxsize = 128)
+    size /= power
+    n += 1
     seconds, milliseconds = divmod(int(milliseconds), 1000)
     minutes, seconds = divmod(seconds, 60)
     hours, minutes = divmod(minutes, 60)
@@ -169,12 +165,12 @@ class for global variables."""
 
 
 
-def sanitize_html(html_content): -> Any
+def sanitize_html(html_content) -> Any:
     """Sanitize HTML content to prevent XSS."""
     return html.escape(html_content)
 
 
-def validate_input(data, validators): -> Any
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -183,12 +179,11 @@ def validate_input(data, validators): -> Any
     return True
 
 
-def memoize(func): -> Any
+def memoize(func) -> Any:
     """Memoization decorator."""
 
-    def wrapper(*args, **kwargs): -> Any
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -228,13 +223,15 @@ async def progress_for_pyrogram(client, current, total, ud_type, message_id, cha
             # elapsed_time if elapsed_time != '' else "0 s", 
         )
         try:
+            pass
     except (ValueError, TypeError, RuntimeError) as e:
         logger.error(f"Specific error occurred: {e}")
         raise
             pass
 
 
-def humanbytes(size): -> Any
+def humanbytes(size) -> Any:
+    pass
  """
  TODO: Add function documentation
  """
@@ -247,6 +244,7 @@ def humanbytes(size): -> Any
 
 
 def TimeFormatter(milliseconds: int) -> str:
+    pass
  """
  TODO: Add function documentation
  """

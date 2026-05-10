@@ -41,7 +41,7 @@ def load_env_d():
                             line = line.removeprefix("export ")
                             key, value = line.split("=", 1)
                             key = key.strip()
-                            value = value.strip().strip('"').strip("'")
+                            value = value.strip().strip('\'').strip("\'")
                             # Skip source statements
                             if not key.startswith("source"):
                                 os.environ[key] = value
@@ -180,7 +180,7 @@ class SphinxDocsGenerator:
         self.docs_dir.mkdir(exist_ok=True)
 
         # Create conf.py
-        conf_content = """# Configuration file for Sphinx documentation
+        conf_content = '\''# Configuration file for Sphinx documentation
 
 import os
 import sys
@@ -406,20 +406,20 @@ Next Steps
 
         for system in self.systems:
             api_doc = f"""
-{system['name']} API
-{'='*len(system['name'] + ' API')}
+{system["name"]} API
+{"=" * len(system["name"] + " API")}
 
-{system['description']}
+{system["description"]}
 
 Key Features
 ------------
 
-{chr(10).join([f'- {feature}' for feature in system['key_features']])}
+{chr(10).join([f"- {feature}" for feature in system["key_features"]])}
 
 Module Reference
 ----------------
 
-.. automodule:: {system['module']}
+.. automodule:: {system["module"]}
    :members:
    :undoc-members:
    :show-inheritance:
@@ -428,7 +428,7 @@ Module Reference
 Classes
 -------
 
-.. autoclass:: {system['module']}.{self._get_main_class(system['module'])}
+.. autoclass:: {system["module"]}.{self._get_main_class(system["module"])}
    :members:
    :special-members: __init__
 
@@ -440,7 +440,7 @@ Basic Usage
 
 .. code-block:: python
 
-   from {system['module']} import *
+   from {system["module"]} import *
    
    # Example usage here
 
@@ -700,7 +700,7 @@ clean:
 
 
 def main():
-    """Generate all documentation"""
+    """Generate all documentation'\''
     generator = SphinxDocsGenerator()
     generator.create_full_documentation()
     generator.create_makefile()

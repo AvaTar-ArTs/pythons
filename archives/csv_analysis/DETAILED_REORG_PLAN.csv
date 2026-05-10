@@ -1,0 +1,144 @@
+folder,current_path,proposed_path,subfolder,reason,priority,file_count
+MEDIA_PROCESSING/audio,MEDIA_PROCESSING/audio/convert_to_audio.py,MEDIA_PROCESSING/audio/audio/convert_to_audio.py,audio,"5 files with ""audio"" keyword",low,5
+MEDIA_PROCESSING/audio,MEDIA_PROCESSING/audio/ORGANIZE_AUDIOBOOK.py,MEDIA_PROCESSING/audio/audio/ORGANIZE_AUDIOBOOK.py,audio,"5 files with ""audio"" keyword",low,5
+MEDIA_PROCESSING/audio,MEDIA_PROCESSING/audio/audio_test.py,MEDIA_PROCESSING/audio/audio/audio_test.py,audio,"5 files with ""audio"" keyword",low,5
+MEDIA_PROCESSING/audio,MEDIA_PROCESSING/audio/audiometadata.py,MEDIA_PROCESSING/audio/audio/audiometadata.py,audio,"5 files with ""audio"" keyword",low,5
+MEDIA_PROCESSING/audio,MEDIA_PROCESSING/audio/audiodownload.py,MEDIA_PROCESSING/audio/audio/audiodownload.py,audio,"5 files with ""audio"" keyword",low,5
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_image_utils.py,MEDIA_PROCESSING/image/tests/test_image_utils.py,tests,5 test files,high,5
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/image_test.py,MEDIA_PROCESSING/image/tests/image_test.py,tests,5 test files,high,5
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_gallery_init.py,MEDIA_PROCESSING/image/tests/test_gallery_init.py,tests,5 test files,high,5
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_gallery_logic.py,MEDIA_PROCESSING/image/tests/test_gallery_logic.py,tests,5 test files,high,5
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_gallery_upload.py,MEDIA_PROCESSING/image/tests/test_gallery_upload.py,tests,5 test files,high,5
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/download_your_photos.py,MEDIA_PROCESSING/image/download/download_your_photos.py,download,"3 files with ""download"" prefix",low,3
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/download_photos_by_user.py,MEDIA_PROCESSING/image/download/download_photos_by_user.py,download,"3 files with ""download"" prefix",low,3
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/download_photos_by_hashtag.py,MEDIA_PROCESSING/image/download/download_photos_by_hashtag.py,download,"3 files with ""download"" prefix",low,3
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_image_utils.py,MEDIA_PROCESSING/image/test/test_image_utils.py,test,"4 files with ""test"" prefix",low,4
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_gallery_init.py,MEDIA_PROCESSING/image/test/test_gallery_init.py,test,"4 files with ""test"" prefix",low,4
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_gallery_logic.py,MEDIA_PROCESSING/image/test/test_gallery_logic.py,test,"4 files with ""test"" prefix",low,4
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_gallery_upload.py,MEDIA_PROCESSING/image/test/test_gallery_upload.py,test,"4 files with ""test"" prefix",low,4
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/ImageCreator.py,MEDIA_PROCESSING/image/image/ImageCreator.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/image_utils.py,MEDIA_PROCESSING/image/image/image_utils.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/scan_images.py,MEDIA_PROCESSING/image/image/scan_images.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/Telegraph Image Downloader [RUS].py,MEDIA_PROCESSING/image/image/Telegraph Image Downloader [RUS].py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/test_image_utils.py,MEDIA_PROCESSING/image/image/test_image_utils.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/imagenarator.py,MEDIA_PROCESSING/image/image/imagenarator.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/scan_images--.py,MEDIA_PROCESSING/image/image/scan_images--.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/image_test.py,MEDIA_PROCESSING/image/image/image_test.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/__init___2T-Xx-python_image_upscaling.py,MEDIA_PROCESSING/image/image/__init___2T-Xx-python_image_upscaling.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/image,MEDIA_PROCESSING/image/auto-image-gallery.py,MEDIA_PROCESSING/image/image/auto-image-gallery.py,image,"10 files with ""image"" keyword",low,10
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/youtube.py,MEDIA_PROCESSING/video/youtube/youtube.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/youtube_analytics.py,MEDIA_PROCESSING/video/youtube/youtube_analytics.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/YouTube_VIEWBOT.py,MEDIA_PROCESSING/video/youtube/YouTube_VIEWBOT.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/youtube 4.py,MEDIA_PROCESSING/video/youtube/youtube 4.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/YouTubeBot.py,MEDIA_PROCESSING/video/youtube/YouTubeBot.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/youtube2.py,MEDIA_PROCESSING/video/youtube/youtube2.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/YouTubeBot 3.py,MEDIA_PROCESSING/video/youtube/YouTubeBot 3.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/scrape-youtube-channel-videos-url.py,MEDIA_PROCESSING/video/youtube/scrape-youtube-channel-videos-url.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/YouTubeBot 2.py,MEDIA_PROCESSING/video/youtube/YouTubeBot 2.py,youtube,"9 files with ""youtube"" keyword",low,9
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/cache_media_video.py,MEDIA_PROCESSING/video/video/cache_media_video.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/convert_to_video.py,MEDIA_PROCESSING/video/video/convert_to_video.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/DownloadVideos.py,MEDIA_PROCESSING/video/video/DownloadVideos.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/create_video.py,MEDIA_PROCESSING/video/video/create_video.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/bot_video.py,MEDIA_PROCESSING/video/video/bot_video.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/upload_video.py,MEDIA_PROCESSING/video/video/upload_video.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/download_user_videos.py,MEDIA_PROCESSING/video/video/download_user_videos.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/video-downloader.py,MEDIA_PROCESSING/video/video/video-downloader.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/scrape-youtube-channel-videos-url.py,MEDIA_PROCESSING/video/video/scrape-youtube-channel-videos-url.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/video.py,MEDIA_PROCESSING/video/video/video.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/video,MEDIA_PROCESSING/video/videos.py,MEDIA_PROCESSING/video/video/videos.py,video,"11 files with ""video"" keyword",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_get.py,MEDIA_PROCESSING/social_media/tests/test_bot_get.py,tests,5 test files,high,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_follow.py,MEDIA_PROCESSING/social_media/tests/test_bot_follow.py,tests,5 test files,high,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_support.py,MEDIA_PROCESSING/social_media/tests/test_bot_support.py,tests,5 test files,high,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_like.py,MEDIA_PROCESSING/social_media/tests/test_bot_like.py,tests,5 test files,high,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_unlike.py,MEDIA_PROCESSING/social_media/tests/test_bot_unlike.py,tests,5 test files,high,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_comment.py,MEDIA_PROCESSING/social_media/bot/bot_comment.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_filter.py,MEDIA_PROCESSING/social_media/bot/bot_filter.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_get.py,MEDIA_PROCESSING/social_media/bot/bot_get.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_direct.py,MEDIA_PROCESSING/social_media/bot/bot_direct.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_unlike.py,MEDIA_PROCESSING/social_media/bot/bot_unlike.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_story.py,MEDIA_PROCESSING/social_media/bot/bot_story.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_follow.py,MEDIA_PROCESSING/social_media/bot/bot_follow.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_stats.py,MEDIA_PROCESSING/social_media/bot/bot_stats.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/bot_unfollow.py,MEDIA_PROCESSING/social_media/bot/bot_unfollow.py,bot,"9 files with ""bot"" prefix",low,9
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_get.py,MEDIA_PROCESSING/social_media/test/test_bot_get.py,test,"5 files with ""test"" prefix",low,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_follow.py,MEDIA_PROCESSING/social_media/test/test_bot_follow.py,test,"5 files with ""test"" prefix",low,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_support.py,MEDIA_PROCESSING/social_media/test/test_bot_support.py,test,"5 files with ""test"" prefix",low,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_like.py,MEDIA_PROCESSING/social_media/test/test_bot_like.py,test,"5 files with ""test"" prefix",low,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/test_bot_unlike.py,MEDIA_PROCESSING/social_media/test/test_bot_unlike.py,test,"5 files with ""test"" prefix",low,5
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607125012.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607125012.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607131031.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607131031.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607131227.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607131227.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607130507.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607130507.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607131212.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607131212.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607131221.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607131221.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607131205.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607131205.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607130440.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607130440.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607124913.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607124913.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607131028.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607131028.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/NewUpload_20250607125040.py,MEDIA_PROCESSING/social_media/newupload/NewUpload_20250607125040.py,newupload,"11 files with ""newupload"" prefix",low,11
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/like_hashtags.py,MEDIA_PROCESSING/social_media/like/like_hashtags.py,like,"3 files with ""like"" prefix",low,3
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/like_hashtags_from_file.py,MEDIA_PROCESSING/social_media/like/like_hashtags_from_file.py,like,"3 files with ""like"" prefix",low,3
+MEDIA_PROCESSING/social_media,MEDIA_PROCESSING/social_media/like_by_tag_interact_unfollow.py,MEDIA_PROCESSING/social_media/like/like_by_tag_interact_unfollow.py,like,"3 files with ""like"" prefix",low,3
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_media_image.py,MEDIA_PROCESSING/upscale/upscale/upscale_media_image.py,upscale,"4 files with ""upscale"" prefix",low,4
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_system.py,MEDIA_PROCESSING/upscale/upscale/upscale_system.py,upscale,"4 files with ""upscale"" prefix",low,4
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_file.py,MEDIA_PROCESSING/upscale/upscale/upscale_file.py,upscale,"4 files with ""upscale"" prefix",low,4
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_with_sips.py,MEDIA_PROCESSING/upscale/upscale/upscale_with_sips.py,upscale,"4 files with ""upscale"" prefix",low,4
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscaled_media_image.py,MEDIA_PROCESSING/upscale/upscale/upscaled_media_image.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_media_image.py,MEDIA_PROCESSING/upscale/upscale/upscale_media_image.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale copy 2.py,MEDIA_PROCESSING/upscale/upscale/upscale copy 2.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/auto_upscale.py,MEDIA_PROCESSING/upscale/upscale/auto_upscale.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscalerr.py,MEDIA_PROCESSING/upscale/upscale/upscalerr.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_system.py,MEDIA_PROCESSING/upscale/upscale/upscale_system.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/unified_image_upscaler.py,MEDIA_PROCESSING/upscale/upscale/unified_image_upscaler.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale-dl.py,MEDIA_PROCESSING/upscale/upscale/upscale-dl.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale-dl 2.py,MEDIA_PROCESSING/upscale/upscale/upscale-dl 2.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale-dl_media_image.py,MEDIA_PROCESSING/upscale/upscale/upscale-dl_media_image.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/processor_cli_from_upscaler.py,MEDIA_PROCESSING/upscale/upscale/processor_cli_from_upscaler.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_file.py,MEDIA_PROCESSING/upscale/upscale/upscale_file.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale.py,MEDIA_PROCESSING/upscale/upscale/upscale.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale copy.py,MEDIA_PROCESSING/upscale/upscale/upscale copy.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/batch_upscaler.py,MEDIA_PROCESSING/upscale/upscale/batch_upscaler.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale-sub.py,MEDIA_PROCESSING/upscale/upscale/upscale-sub.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/improved_batch_upscaler_2_1.py,MEDIA_PROCESSING/upscale/upscale/improved_batch_upscaler_2_1.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale--.py,MEDIA_PROCESSING/upscale/upscale/upscale--.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/web-png-upscale.py,MEDIA_PROCESSING/upscale/upscale/web-png-upscale.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/imgupscale.py,MEDIA_PROCESSING/upscale/upscale/imgupscale.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale2_media_image.py,MEDIA_PROCESSING/upscale/upscale/upscale2_media_image.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/loop-upscale.py,MEDIA_PROCESSING/upscale/upscale/loop-upscale.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/improved_batch_upscaler.py,MEDIA_PROCESSING/upscale/upscale/improved_batch_upscaler.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/simple_upscaler.py,MEDIA_PROCESSING/upscale/upscale/simple_upscaler.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale 2 copy.py,MEDIA_PROCESSING/upscale/upscale/upscale 2 copy.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/batch_upscale.py,MEDIA_PROCESSING/upscale/upscale/batch_upscale.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale2.py,MEDIA_PROCESSING/upscale/upscale/upscale2.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_with_sips.py,MEDIA_PROCESSING/upscale/upscale/upscale_with_sips.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/enhanced_image_upscaler.py,MEDIA_PROCESSING/upscale/upscale/enhanced_image_upscaler.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/img-img-upscale.py,MEDIA_PROCESSING/upscale/upscale/img-img-upscale.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale--_media_image.py,MEDIA_PROCESSING/upscale/upscale/upscale--_media_image.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/web_upscaler_v2.py,MEDIA_PROCESSING/upscale/upscale/web_upscaler_v2.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscaled.py,MEDIA_PROCESSING/upscale/upscale/upscaled.py,upscale,"33 files with ""upscale"" keyword",low,33
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscaled_media_image.py,MEDIA_PROCESSING/upscale/image/upscaled_media_image.py,image,"7 files with ""image"" keyword",low,7
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale_media_image.py,MEDIA_PROCESSING/upscale/image/upscale_media_image.py,image,"7 files with ""image"" keyword",low,7
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/unified_image_upscaler.py,MEDIA_PROCESSING/upscale/image/unified_image_upscaler.py,image,"7 files with ""image"" keyword",low,7
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale-dl_media_image.py,MEDIA_PROCESSING/upscale/image/upscale-dl_media_image.py,image,"7 files with ""image"" keyword",low,7
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale2_media_image.py,MEDIA_PROCESSING/upscale/image/upscale2_media_image.py,image,"7 files with ""image"" keyword",low,7
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/enhanced_image_upscaler.py,MEDIA_PROCESSING/upscale/image/enhanced_image_upscaler.py,image,"7 files with ""image"" keyword",low,7
+MEDIA_PROCESSING/upscale,MEDIA_PROCESSING/upscale/upscale--_media_image.py,MEDIA_PROCESSING/upscale/image/upscale--_media_image.py,image,"7 files with ""image"" keyword",low,7
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums 2.py,MEDIA_PROCESSING/organize/organize/organize_albums 2.py,organize,"7 files with ""organize"" prefix",low,7
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums 1.py,MEDIA_PROCESSING/organize/organize/organize_albums 1.py,organize,"7 files with ""organize"" prefix",low,7
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums 4.py,MEDIA_PROCESSING/organize/organize/organize_albums 4.py,organize,"7 files with ""organize"" prefix",low,7
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums1.py,MEDIA_PROCESSING/organize/organize/organize_albums1.py,organize,"7 files with ""organize"" prefix",low,7
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_music_library.py,MEDIA_PROCESSING/organize/organize/organize_music_library.py,organize,"7 files with ""organize"" prefix",low,7
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums 14.py,MEDIA_PROCESSING/organize/organize/organize_albums 14.py,organize,"7 files with ""organize"" prefix",low,7
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_media.py,MEDIA_PROCESSING/organize/organize/organize_media.py,organize,"7 files with ""organize"" prefix",low,7
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize (1).py,MEDIA_PROCESSING/organize/organize/organize (1).py,organize,"8 files with ""organize"" keyword",low,8
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums 2.py,MEDIA_PROCESSING/organize/organize/organize_albums 2.py,organize,"8 files with ""organize"" keyword",low,8
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums 1.py,MEDIA_PROCESSING/organize/organize/organize_albums 1.py,organize,"8 files with ""organize"" keyword",low,8
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums 4.py,MEDIA_PROCESSING/organize/organize/organize_albums 4.py,organize,"8 files with ""organize"" keyword",low,8
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums1.py,MEDIA_PROCESSING/organize/organize/organize_albums1.py,organize,"8 files with ""organize"" keyword",low,8
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_music_library.py,MEDIA_PROCESSING/organize/organize/organize_music_library.py,organize,"8 files with ""organize"" keyword",low,8
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_albums 14.py,MEDIA_PROCESSING/organize/organize/organize_albums 14.py,organize,"8 files with ""organize"" keyword",low,8
+MEDIA_PROCESSING/organize,MEDIA_PROCESSING/organize/organize_media.py,MEDIA_PROCESSING/organize/organize/organize_media.py,organize,"8 files with ""organize"" keyword",low,8
+MEDIA_PROCESSING/utilities,MEDIA_PROCESSING/utilities/util.py,MEDIA_PROCESSING/utilities/utils/util.py,utils,4 utility files,medium,4
+MEDIA_PROCESSING/utilities,MEDIA_PROCESSING/utilities/direct_url_helpers.py,MEDIA_PROCESSING/utilities/utils/direct_url_helpers.py,utils,4 utility files,medium,4
+MEDIA_PROCESSING/utilities,MEDIA_PROCESSING/utilities/common.py,MEDIA_PROCESSING/utilities/utils/common.py,utils,4 utility files,medium,4
+MEDIA_PROCESSING/utilities,MEDIA_PROCESSING/utilities/gui_utils.py,MEDIA_PROCESSING/utilities/utils/gui_utils.py,utils,4 utility files,medium,4

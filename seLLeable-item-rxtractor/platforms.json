@@ -1,0 +1,130 @@
+{
+  "platforms": {
+    "gumroad": {
+      "name": "Gumroad",
+      "type": "api",
+      "api_base": "https://api.gumroad.com/v2",
+      "auth": "bearer",
+      "env_var": "GUMROAD_ACCESS_TOKEN",
+      "endpoints": {
+        "list": "/products",
+        "create": "/products",
+        "update": "/products/:id"
+      },
+      "fields": {
+        "name": "name",
+        "price_cents": "price_cents",
+        "description": "description",
+        "url": "custom_permalink",
+        "file": "file"
+      },
+      "dedup_by": ["name", "custom_permalink"],
+      "browser_fallback": {
+        "new_url": "https://gumroad.com/products/new",
+        "selectors": {
+          "name": "input[name=\"name\"], input[placeholder*=\"Name\" i]",
+          "price": "input[name*=\"price\" i], input[type=\"number\"]",
+          "description": "textarea[name=\"description\"], [contenteditable=\"true\"][role=\"textbox\"]",
+          "permalink": "input[name*=\"permalink\" i], input[name*=\"url\" i]",
+          "file": "input[type=\"file\"]",
+          "submit": "button:has-text(\"Create\"), button:has-text(\"Save\"), button:has-text(\"Publish\")"
+        }
+      }
+    },
+    "lemonsqueezy": {
+      "name": "Lemon Squeezy",
+      "type": "api",
+      "api_base": "https://api.lemonsqueezy.com/v1",
+      "auth": "bearer",
+      "env_var": "LEMONSQUEEZY_API_KEY",
+      "endpoints": {
+        "list": "/products",
+        "create": "/products",
+        "update": "/products/:id"
+      },
+      "fields": {
+        "name": "data.attributes.name",
+        "price_cents": "data.attributes.price",
+        "description": "data.attributes.description"
+      },
+      "dedup_by": ["name"],
+      "browser_fallback": {
+        "new_url": "https://app.lemonsqueezy.com/products/new",
+        "selectors": {
+          "name": "input[name=\"name\"], input[placeholder*=\"name\" i]",
+          "price": "input[name*=\"price\" i], input[type=\"number\"]",
+          "description": "textarea[name=\"description\"], [contenteditable=\"true\"]",
+          "submit": "button:has-text(\"Create\"), button:has-text(\"Save\")"
+        }
+      }
+    },
+    "sellfy": {
+      "name": "Sellfy",
+      "type": "browser",
+      "browser_only": true,
+      "new_url": "https://sellfy.com/products/new",
+      "selectors": {
+        "name": "input[name=\"name\"], input[placeholder*=\"name\" i], input[placeholder*=\"title\" i]",
+        "price": "input[name*=\"price\" i], input[type=\"number\"]",
+        "description": "textarea[name=\"description\"], [contenteditable=\"true\"]",
+        "file": "input[type=\"file\"]",
+        "submit": "button:has-text(\"Save\"), button:has-text(\"Publish\")"
+      },
+      "dedup_by": ["name"]
+    },
+    "fiverr": {
+      "name": "Fiverr",
+      "type": "browser",
+      "browser_only": true,
+      "new_url": "https://www.fiverr.com/gigs/new",
+      "selectors": {
+        "title": "input[name=\"title\"], input[placeholder*=\"title\" i], input[placeholder*=\"gig\" i]",
+        "description": "textarea[name=\"description\"], [contenteditable=\"true\"]",
+        "price": "input[name*=\"price\" i], input[type=\"number\"]",
+        "file": "input[type=\"file\"]",
+        "submit": "button:has-text(\"Continue\"), button:has-text(\"Publish\"), button:has-text(\"Save\")"
+      },
+      "dedup_by": ["title", "name"]
+    },
+    "upwork": {
+      "name": "Upwork (Project Catalog)",
+      "type": "browser",
+      "browser_only": true,
+      "new_url": "https://www.upwork.com/services/create",
+      "selectors": {
+        "title": "input[name=\"title\"], input[placeholder*=\"title\" i]",
+        "description": "textarea[name=\"description\"], [contenteditable=\"true\"]",
+        "price": "input[name*=\"price\" i], input[type=\"number\"]",
+        "submit": "button:has-text(\"Continue\"), button:has-text(\"Publish\")"
+      },
+      "dedup_by": ["title", "name"]
+    },
+    "payhip": {
+      "name": "Payhip",
+      "type": "api",
+      "api_base": "https://payhip.com/api/v1",
+      "auth": "basic",
+      "env_var": "PAYHIP_API_KEY",
+      "endpoints": {
+        "list": "/products",
+        "create": "/products",
+        "update": "/products/:id"
+      },
+      "fields": {
+        "name": "title",
+        "price_cents": "price",
+        "description": "description"
+      },
+      "dedup_by": ["title", "name"],
+      "browser_fallback": {
+        "new_url": "https://payhip.com/add-product",
+        "selectors": {
+          "name": "input[name=\"title\"], input[placeholder*=\"name\" i]",
+          "price": "input[name*=\"price\" i], input[type=\"number\"]",
+          "description": "textarea[name=\"description\"], [contenteditable=\"true\"]",
+          "submit": "button:has-text(\"Save\"), button:has-text(\"Add Product\")"
+        }
+      }
+    }
+  }
+}

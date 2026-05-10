@@ -24,23 +24,6 @@ def quick_catalog():
 
     # Use find command to get all images quickly
 
-    cmd = [
-        "find",
-        VOLUMES_DIR,
-        "-type",
-        "f",
-        "(",
-        "-iname",
-        "*.jpg",
-        "-o",
-        "-iname",
-        "*.jpeg",
-        "-o",
-        "-iname",
-        "*.png",
-        ")",
-        "2>/dev/null",
-    ]
 
     print("Running find command...")
     result = subprocess.run(
@@ -155,7 +138,7 @@ def quick_catalog():
 
             if (idx + 1) % 10000 == 0:
                 print(
-                    f"  Processed {idx + 1:,}/{len(all_images):,} ({(idx+1)/len(all_images)*100:.1f}%)",
+                    f"  Processed {idx + 1:,}/{len(all_images):,} ({(idx + 1) / len(all_images) * 100:.1f}%)",
                 )
 
         except Exception:

@@ -8,15 +8,15 @@ import multiprocessing
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from typing import Callable, List, Optional, Tuple, TypeVar
 
-T = TypeVar('T')
-R = TypeVar('R')
+T = TypeVar("T")
+R = TypeVar("R")
 
 
-def process_batch_parallel(
+def process_batch_parallel(:
     items: List[T],
     process_func: Callable[[T], R],
     max_workers: Optional[int] = None,
-    show_progress: bool = False
+    show_progress: bool = False,
 ) -> List[R]:
     """
     Process items in parallel using multiprocessing.
@@ -44,15 +44,13 @@ def process_batch_parallel(
     results = []
     with ProcessPoolExecutor(max_workers=max_workers) as executor:
         # Submit all tasks
-        future_to_item = {
-            executor.submit(process_func, item): item
-            for item in items
-        }
+        future_to_item = {executor.submit(process_func, item): item for item in items}
 
         # Collect results with optional progress
         if show_progress:
             try:
                 from tqdm import tqdm
+
                 with tqdm(total=len(items), desc="Processing") as pbar:
                     for future in as_completed(future_to_item):
                         results.append((future_to_item[future], future.result()))
@@ -70,11 +68,11 @@ def process_batch_parallel(
     return [item_to_result[item] for item in items]
 
 
-def process_images_parallel(
+def process_images_parallel(:
     image_files: List[str],
     process_func: Callable[[str], Tuple[bool, dict]],
     max_workers: Optional[int] = None,
-    show_progress: bool = True
+    show_progress: bool = True,
 ) -> List[Tuple[bool, dict]]:
     """
     Process images in parallel.
@@ -89,9 +87,5 @@ def process_images_parallel(
         List of (success, result) tuples
     """
     return process_batch_parallel(
-        image_files,
-        process_func,
-        max_workers=max_workers,
-        show_progress=show_progress
+        image_files, process_func, max_workers=max_workers, show_progress=show_progress
     )
-

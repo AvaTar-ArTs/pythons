@@ -1,0 +1,49 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+#!/usr/bin/env python3
+"""
+Auto-run Python Cleanup
+Automatically runs the Python cleanup without user input
+"""
+
+import sys
+from pathlib import Path
+
+# Import the PythonDuplicateCleaner
+sys.path.append(str(Path(__file__).parent))
+from Python_Duplicate_Cleaner import PythonDuplicateCleaner
+
+
+def main():
+    print("🐍 Auto-running Python Duplicate Cleanup")
+    print("=" * 50)
+
+    # Run dry run first
+    print("\n🔍 STEP 1: DRY RUN...")
+    cleaner_dry = PythonDuplicateCleaner("/Users/steven/Documents", dry_run=True)
+    dry_results = cleaner_dry.run_cleanup(dry_run=True)
+
+    print("\n📋 DRY RUN RESULTS:")
+    print(f"   - {dry_results['files_removed']:,} Python files would be removed")
+    print(f"   - {dry_results['space_saved_mb']:.1f} MB would be saved")
+
+    # Run actual cleanup
+    print("\n🚀 STEP 2: LIVE CLEANUP...")
+    cleaner_live = PythonDuplicateCleaner("/Users/steven/Documents", dry_run=False)
+    live_results = cleaner_live.run_cleanup(dry_run=False)
+
+    print("\n🎉 PYTHON CLEANUP COMPLETE!")
+    print(f"   - {live_results['files_removed']:,} Python files removed")
+    print(f"   - {live_results['space_saved_mb']:.1f} MB saved")
+    print("   - Backup created in: 00_PYTHON_CLEANUP_BACKUP/")
+
+
+try:
+        main()
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)

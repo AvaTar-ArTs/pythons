@@ -1,10 +1,12 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 #!/usr/bin/env python3
 """
 📊 FINAL SUMMARY REPORT
 Shows the complete before/after state of the content-aware duplicate removal
 """
 
-import json
 from datetime import datetime
 from pathlib import Path
 
@@ -21,7 +23,7 @@ def generate_final_summary():
     summary_lines.append(
         f"\n**Completed:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
     )
-    summary_lines.append(f"\n---\n")
+    summary_lines.append("\n---\n")
 
     # Current state
     summary_lines.append("## 📁 CURRENT FOLDER STATE\n")
@@ -150,5 +152,11 @@ def generate_final_summary():
     print("   All duplicates removed while preserving the best content versions.")
 
 
-if __name__ == "__main__":
-    generate_final_summary()
+try:
+        generate_final_summary()
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)

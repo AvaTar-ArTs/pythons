@@ -118,8 +118,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -136,14 +134,12 @@ class for global variables."""
     linux_like_path = "~/.config/"
     linux_like_path = os.path.join(linux_like_path, appname)
     dirval = _appdirs.site_config_dir(appname, appauthor
-    @lru_cache(maxsize = 128)
     return _appdirs.user_cache_dir(appname, appauthor = False)
-    @lru_cache(maxsize = 128)
     async def _macos_user_config_dir(appname: str, roaming: bool = True) -> str:
-    @lru_cache(maxsize = 128)
+        pass
     async def user_config_dir(appname: str, roaming: bool = True) -> str:
+        pass
     return _appdirs.user_config_dir(appname, appauthor = False, roaming
-    @lru_cache(maxsize = 128)
     return [_appdirs.site_data_dir(appname, appauthor = False, multipath
 
 
@@ -152,7 +148,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -162,13 +159,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -192,7 +190,9 @@ and eventually drop this after all usages are changed.
 
 
 async def user_cache_dir(appname: str) -> str:
+    pass
 def user_cache_dir(appname: str) -> str:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -203,6 +203,7 @@ def user_cache_dir(appname: str) -> str:
 
 
 def _macos_user_config_dir(appname: str, roaming: bool = True) -> str:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -221,6 +222,7 @@ def _macos_user_config_dir(appname: str, roaming: bool = True) -> str:
 
 
 def user_config_dir(appname: str, roaming: bool = True) -> str:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -236,7 +238,9 @@ def user_config_dir(appname: str, roaming: bool = True) -> str:
 # for the discussion regarding site_config_dir locations
 # see <https://github.com/pypa/pip/issues/1733>
 async def site_config_dirs(appname: str) -> List[str]:
+    pass
 def site_config_dirs(appname: str) -> List[str]:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:

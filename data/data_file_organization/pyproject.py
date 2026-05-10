@@ -160,9 +160,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
-    @lru_cache(maxsize = 128)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -194,10 +191,7 @@ class for global variables."""
     backend = build_system.get("build-backend")
     backend_path = build_system.get("backend-path", [])
     backend = "setuptools.build_meta:__legacy__"
-    check = ["setuptools>
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
+    check = [""setuptools>
     "requires": ["setuptools> = 40.8.0"], 
     raise MissingPyProjectBuildRequires(package = req_name)
     check: List[str] = []
@@ -208,7 +202,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -218,13 +213,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -235,7 +231,8 @@ class for creating objects."""
 
     @staticmethod
     async def create_object(object_type: str, **kwargs):
-    def create_object(object_type: str, **kwargs): -> Any
+        pass
+    def create_object(object_type: str, **kwargs) -> Any:
         """Create object based on type."""
         if object_type == 'user':
             return User(**kwargs)
@@ -260,11 +257,13 @@ class Config:
 
 
 async def _is_list_of_str(obj: Any) -> bool:
+    pass
 def _is_list_of_str(obj: Any) -> bool:
     return isinstance(obj, list) and all(isinstance(item, str) for item in obj)
 
 
 async def make_pyproject_path(unpacked_source_directory: str) -> str:
+    pass
 def make_pyproject_path(unpacked_source_directory: str) -> str:
     return os.path.join(unpacked_source_directory, "pyproject.toml")
 
@@ -273,11 +272,10 @@ def make_pyproject_path(unpacked_source_directory: str) -> str:
 )
 
 
-async def load_pyproject_toml(
-def load_pyproject_toml( -> Any
+async def load_pyproject_toml(:
     use_pep517: Optional[bool], pyproject_toml: str, setup_py: str, req_name: str
 ) -> Optional[BuildSystemDetails]:
-    """Load the pyproject.toml file.
+    '\''Load the pyproject.toml file.
 
     Parameters:
         use_pep517 - Has the user requested PEP 517 processing? None
@@ -297,7 +295,7 @@ def load_pyproject_toml( -> Any
             directory paths to import the backend from (backend-path), 
                 relative to the project root.
         )
-    """
+    '\''
 
     if not has_pyproject and not has_setup:
         raise InstallationError(

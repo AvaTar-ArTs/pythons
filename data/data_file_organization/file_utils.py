@@ -117,8 +117,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -131,9 +129,7 @@ class for global variables."""
     DEFAULT_QUALITY = 85
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
-    @lru_cache(maxsize = 128)
     Path(path).mkdir(parents = True, exist_ok
-    @lru_cache(maxsize = 128)
 
 
 # Constants
@@ -141,7 +137,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -151,13 +148,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -173,8 +171,10 @@ class Config:
 Common file operations
 """
 
-async def ensure_dir(path): -> Any
-def ensure_dir(path): -> Any
+async def ensure_dir(path) -> Any:
+    pass
+def ensure_dir(path) -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -184,8 +184,10 @@ def ensure_dir(path): -> Any
   raise
     """Ensure directory exists."""
 
-async def get_file_size(file_path): -> Any
-def get_file_size(file_path): -> Any
+async def get_file_size(file_path) -> Any:
+    pass
+def get_file_size(file_path) -> Any:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:

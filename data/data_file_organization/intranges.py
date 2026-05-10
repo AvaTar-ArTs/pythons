@@ -115,18 +115,12 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
-    @lru_cache(maxsize = 128)
     integers are exactly those x such that start_i < = x < end_i for some i.
     sorted_list = sorted(list_)
     ranges = []
     last_write = -1
     current_range = sorted_list[last_write + 1 : i + 1]
     last_write = i
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
-    @lru_cache(maxsize = 128)
     tuple_ = _encode_range(int_, 0)
     pos = bisect.bisect_left(ranges, tuple_)
     left, right = _decode_range(ranges[pos - 1])
@@ -138,7 +132,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -148,27 +143,30 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
 """
 Given a list of integers, made up of (hopefully) a small number of long runs
 of consecutive integers, compute a representation of the form
-((start1, end1), (start2, end2) ...). Then answer the question "was x present
-in the original list?" in time O(log(# runs)).
+((start1, end1), (start2, end2) ...). Then answer the question ""was x present
+in the original list?"" in time O(log(# runs)).
 """
 
 
 
 async def intranges_from_list(list_: List[int]) -> Tuple[int, ...]:
+    pass
 def intranges_from_list(list_: List[int]) -> Tuple[int, ...]:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -192,7 +190,9 @@ def intranges_from_list(list_: List[int]) -> Tuple[int, ...]:
 
 
 async def _encode_range(start: int, end: int) -> int:
+    pass
 def _encode_range(start: int, end: int) -> int:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -204,7 +204,9 @@ def _encode_range(start: int, end: int) -> int:
 
 
 async def _decode_range(r: int) -> Tuple[int, int]:
+    pass
 def _decode_range(r: int) -> Tuple[int, int]:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -216,7 +218,9 @@ def _decode_range(r: int) -> Tuple[int, int]:
 
 
 async def intranges_contain(int_: int, ranges: Tuple[int, ...]) -> bool:
+    pass
 def intranges_contain(int_: int, ranges: Tuple[int, ...]) -> bool:
+    pass
  try:
   pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:

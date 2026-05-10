@@ -1,0 +1,258 @@
+{
+  "timestamp": "2026-01-16T15:46:00.394174",
+  "root_path": "/Users/steven/pythons",
+  "categories": {
+    "apis": {
+      "path": "/Users/steven/pythons/apis",
+      "file_count": 215,
+      "files": [
+        "rename-files-utility.py",
+        "audio-thinketh.py",
+        "leonardo.py",
+        "onedrive-gallery-logic.py",
+        "smart-conservative-renamer.py",
+        "system-monitor.py",
+        "multi_platform_content_extractor.py",
+        "research-assistant.py",
+        "firebase-api-processor.py",
+        "organize-files-intelligent.py"
+      ]
+    },
+    "data_processing": {
+      "path": "/Users/steven/pythons/data_processing",
+      "file_count": 365,
+      "files": [
+        "enhanced_next_gen_content_analyzer.py",
+        "batch_dupe_content_analyzer.py",
+        "instagram-download.py",
+        "cross-directory-merger.py",
+        "file-dedup-scanner.py",
+        "execute_reorg_priority.py",
+        "ecosystem_analyzer.py",
+        "auto_cleanup.py",
+        "build.py",
+        "cleanup-external-volumes.py"
+      ]
+    },
+    "file_operations": {
+      "path": "/Users/steven/pythons/file_operations",
+      "file_count": 212,
+      "files": [
+        "instagram-scan-leonardo-comprehensive.py",
+        "instagram-like-user-followers.py",
+        "setuptools.py",
+        "cleanups.py",
+        "compare-files.py",
+        "setuptools-bootstrap.py",
+        "test_transcribe_5.py",
+        "organize_project2025_subdirs.py",
+        "merge_zips.py",
+        "get-simple.py"
+      ]
+    },
+    "audio_processing": {
+      "path": "/Users/steven/pythons/audio_processing",
+      "file_count": 30,
+      "files": [
+        "simplify.py",
+        "convert-video-segments.py",
+        "simple-flat-organizer.py",
+        "webm.py",
+        "reorganize-by-service.py",
+        "video-compressor.py",
+        "intelligent_script_reorganizer.py",
+        "subject.py",
+        "convert-aiff-to-mp3.py",
+        "docs-reorganizer.py"
+      ]
+    },
+    "image_processing": {
+      "path": "/Users/steven/pythons/image_processing",
+      "file_count": 32,
+      "files": [
+        "openai-gpt4o-image-metadata.py",
+        "truly-intelligent-renamer.py",
+        "pydescribe.py",
+        "automation-discovery-engine.py",
+        "create-strip.py",
+        "utilities-async.py",
+        "gpt-vision-image-analyzer.py",
+        "extract-python-structure.py",
+        "conversion.py",
+        "scanpythons.py"
+      ]
+    },
+    "automation": {
+      "path": "/Users/steven/pythons/automation",
+      "file_count": 17,
+      "files": [
+        "merge_and_dedupe_directories.py",
+        "system.py",
+        "compare_content_and_functions.py",
+        "photo-gallery-batch-generator.py",
+        "groq-cli.py",
+        "periodic.py",
+        "analyze-writer.py",
+        "cli-config-manager.py",
+        "openai-script.py",
+        "compare_duplicates_detail.py"
+      ]
+    },
+    "testing": {
+      "path": "/Users/steven/pythons/testing",
+      "file_count": 30,
+      "files": [
+        "save-ai-outputs.py",
+        "apply-improvements.py",
+        "application-query-expanison.py",
+        "multi-llm-orchestrator.py",
+        "aws-polly-tts.py",
+        "query.py",
+        "adaptive-content-awareness.py",
+        "database.py",
+        "test_openai_transcribe.py",
+        "model-evaluation-sagemaker.py"
+      ]
+    },
+    "config": {
+      "path": "/Users/steven/pythons/config",
+      "file_count": 98,
+      "files": [
+        "stylish-unfollow-tips.py",
+        "openai-text-to-speech.py",
+        "song-process.py",
+        "rename-by-purpose.py",
+        "crawl.py",
+        "avatararts-flatten.py",
+        "storykeytrans.py",
+        "analyze-mp3-transcript-prompts.py",
+        "ai-docs-generator.py",
+        "comprehensive-file-analyzer.py"
+      ]
+    },
+    "llm": {
+      "path": "/Users/steven/pythons/llm",
+      "file_count": 12,
+      "files": [
+        "quant-agent.py",
+        "delete-endpoint.py",
+        "cloud-services-sagemaker.py",
+        "start-with.py",
+        "social-platforms-instagram.py",
+        "claude-script.py",
+        "resource-manager.py",
+        "fundamental-analysis.py",
+        "cloud-services-delete.py",
+        "check-1.py"
+      ]
+    },
+    "other": {
+      "path": "/Users/steven/pythons/other",
+      "file_count": 59,
+      "files": [
+        "delete.py",
+        "setup-simple.py",
+        "massive.py",
+        "simple-effective.py",
+        "gtts-text-to-speech.py",
+        "instagram-bot-template.py",
+        "sound.py",
+        "video-clip-editor.py",
+        "scraper.py",
+        "reddit-scrape.py"
+      ]
+    }
+  },
+  "tools_structure": {
+    "misc": {
+      "path": "/Users/steven/pythons/tools/misc",
+      "file_count": 0
+    },
+    "apis": {
+      "path": "/Users/steven/pythons/tools/apis",
+      "file_count": 108
+    },
+    "core_shared_libs": {
+      "path": "/Users/steven/pythons/tools/core_shared_libs",
+      "file_count": 2
+    },
+    "legacy": {
+      "path": "/Users/steven/pythons/tools/legacy",
+      "file_count": 0
+    },
+    "utils": {
+      "path": "/Users/steven/pythons/tools/utils",
+      "file_count": 48
+    },
+    "info": {
+      "path": "/Users/steven/pythons/tools/info",
+      "file_count": 0
+    },
+    "utilities": {
+      "path": "/Users/steven/pythons/tools/utilities",
+      "file_count": 0
+    },
+    "testing": {
+      "path": "/Users/steven/pythons/tools/testing",
+      "file_count": 6
+    },
+    "scripts": {
+      "path": "/Users/steven/pythons/tools/scripts",
+      "file_count": 9
+    },
+    "dev": {
+      "path": "/Users/steven/pythons/tools/dev",
+      "file_count": 0
+    },
+    "automation": {
+      "path": "/Users/steven/pythons/tools/automation",
+      "file_count": 0
+    },
+    "advanced_toolkit": {
+      "path": "/Users/steven/pythons/tools/advanced_toolkit",
+      "file_count": 3
+    },
+    "data": {
+      "path": "/Users/steven/pythons/tools/data",
+      "file_count": 71
+    }
+  },
+  "media_processing_structure": {
+    "video": {
+      "path": "/Users/steven/pythons/MEDIA_PROCESSING/video",
+      "file_count": 28
+    },
+    "organize": {
+      "path": "/Users/steven/pythons/MEDIA_PROCESSING/organize",
+      "file_count": 26
+    },
+    "social_media": {
+      "path": "/Users/steven/pythons/MEDIA_PROCESSING/social_media",
+      "file_count": 1
+    },
+    "upscale": {
+      "path": "/Users/steven/pythons/MEDIA_PROCESSING/upscale",
+      "file_count": 31
+    },
+    "image": {
+      "path": "/Users/steven/pythons/MEDIA_PROCESSING/image",
+      "file_count": 35
+    },
+    "utilities": {
+      "path": "/Users/steven/pythons/MEDIA_PROCESSING/utilities",
+      "file_count": 4
+    },
+    "audio": {
+      "path": "/Users/steven/pythons/MEDIA_PROCESSING/audio",
+      "file_count": 12
+    }
+  },
+  "statistics": {
+    "root_categories": 10,
+    "root_files": 1070,
+    "tools_subfolders": 13,
+    "tools_files": 247,
+    "media_subfolders": 7,
+    "media_files": 137
+  }
+}

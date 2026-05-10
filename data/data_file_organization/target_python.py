@@ -136,8 +136,6 @@ class for global variables."""
     DEFAULT_WIDTH = 1920
     DEFAULT_HEIGHT = 1080
     cache = {}
-    key = str(args) + str(kwargs)
-    cache[key] = func(*args, **kwargs)
     DPI_300 = 300
     DPI_72 = 72
     KB_SIZE = 1024
@@ -165,7 +163,6 @@ class for global variables."""
     platforms = self.platforms, 
     abis = self.abis, 
     impl = self.implementation, 
-    @lru_cache(maxsize = 128)
     self._lazy_loaded = {}
     platforms: Optional[List[str]] = None, 
     py_version_info: Optional[Tuple[int, ...]] = None, 
@@ -189,7 +186,8 @@ class for global variables."""
 
 
 async def validate_input(data, validators):
-def validate_input(data, validators): -> Any
+    pass
+def validate_input(data, validators) -> Any:
     """Validate input data."""
     for field, validator in validators.items():
         if field in data:
@@ -199,13 +197,14 @@ def validate_input(data, validators): -> Any
 
 
 async def memoize(func):
-def memoize(func): -> Any
+    pass
+def memoize(func) -> Any:
     """Memoization decorator."""
 
     async def wrapper(*args, **kwargs):
-    def wrapper(*args, **kwargs): -> Any
+        pass
+    def wrapper(*args, **kwargs) -> Any:
         if key not in cache:
-        return cache[key]
 
     return wrapper
 
@@ -237,8 +236,8 @@ class TargetPython:
         "_valid_tags_set", 
     ]
 
-    async def __init__(
-    def __init__( -> Any
+    def __init__(:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -248,7 +247,7 @@ class TargetPython:
       raise
         self, 
     ) -> None:
-        """
+        '\''
         :param platforms: A list of strings or None. If None, searches for
             packages that are supported by the current system. Otherwise, will
             find packages that can be built on the platforms passed in. These
@@ -272,7 +271,9 @@ class TargetPython:
         # This is used to cache the return value of get_(un)sorted_tags.
 
     async def format_given(self) -> str:
+        pass
     def format_given(self) -> str:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -292,7 +293,9 @@ class TargetPython:
         ]
 
     async def get_sorted_tags(self) -> List[Tag]:
+        pass
     def get_sorted_tags(self) -> List[Tag]:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -316,7 +319,9 @@ class TargetPython:
         return self._valid_tags
 
     async def get_unsorted_tags(self) -> Set[Tag]:
+        pass
     def get_unsorted_tags(self) -> Set[Tag]:
+        pass
      try:
       pass  # TODO: Add actual implementation
     except (ValueError, TypeError, RuntimeError) as e:
@@ -327,7 +332,7 @@ class TargetPython:
         """Exactly the same as get_sorted_tags, but returns a set.
 
         This is important for performance.
-        """
+        '\''
         if self._valid_tags_set is None:
 
         return self._valid_tags_set

@@ -1,3 +1,13 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+"""
+Summary of self_query.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
 import opik
 from langchain_openai import ChatOpenAI
 from loguru import logger
@@ -41,11 +51,17 @@ class SelfQuery(RAGStep):
         return query
 
 
-if __name__ == "__main__":
-    query = Query.from_str(
-        "I am Paul Iusztin. Write an article about the best types of advanced RAG methods.",
-    )
-    self_query = SelfQuery()
-    query = self_query.generate(query)
-    logger.info(f"Extracted author_id: {query.author_id}")
-    logger.info(f"Extracted author_full_name: {query.author_full_name}")
+try:
+        query = Query.from_str(
+            "I am Paul Iusztin. Write an article about the best types of advanced RAG methods.",
+        )
+        self_query = SelfQuery()
+        query = self_query.generate(query)
+        logger.info(f"Extracted author_id: {query.author_id}")
+        logger.info(f"Extracted author_full_name: {query.author_full_name}")
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)

@@ -1,0 +1,32 @@
+Dir,Path,Size,Total_Files,Python_Files,JS_Files,TS_Files,JSON_Files,MD_Files,Image_Files,Media_Files,Zip_Files,Has_Git,Category,Original_Work,Sellable,Notes
+zombot-simple-gallery,/Users/steven/zombot-simple-gallery,148K,31,6,1,0,0,1,0,0,0,No,Product,Yes,Yes,Zombie-themed gallery variant
+simplegallery,/Users/steven/simplegallery,6.0M,77,35,3,0,0,0,3,0,0,No,Product,Yes,Yes,Static gallery builder with upload
+scripts,/Users/steven/scripts,23M,500,5,1,0,4,58,3,0,1,Yes,Product,Yes,Yes,Shell automation suite (Carbon cleanup batch)
+pythons,/Users/steven/pythons,1.2G,15864,8345,135,147,559,1225,158,12,28,Yes,Product,Yes,Yes,PRIMARY Python library (8345 .py)
+PYTHON_MARKETPLACE_MASTER,/Users/steven/PYTHON_MARKETPLACE_MASTER,1.5G,14517,5502,0,10,4018,2683,10,0,8,Yes,Product,Yes,Yes,Marketplace-organized Python products
+p-market,/Users/steven/p-market,2.3G,19925,3635,269,142,2397,7714,70,18,49,No,Product,Yes,Yes,10-vertical product catalog
+MasterxEo,/Users/steven/MasterxEo,3.0G,18880,12496,145,45,568,3193,7,0,18,No,Product,Yes,Yes,Mega Python collection (12496 .py)
+MarketMaster,/Users/steven/MarketMaster,797M,4909,0,124,45,494,2688,5,0,5,Yes,Product,Yes,Yes,Marketplace listings (Gumroad/Codester/Payhip)
+mcPHooker,/Users/steven/mcPHooker,452K,69,26,0,0,3,20,0,0,0,No,Product,Yes,Yes,MCP hook framework
+Master CodeSnip dev,/Users/steven/Master CodeSnip dev,28K,20,9,0,0,1,1,0,0,0,No,Product,Yes,Yes,Code snippet utilities
+ice-tracker,/Users/steven/ice-tracker,9.4M,677,2,42,86,56,81,2,0,1,Yes,Product,Yes,Yes,Next.js ICE Tracker app (10 versions)
+nocTurneMeLoDieS,/Users/steven/nocTurneMeLoDieS,46M,45,0,0,0,16,0,0,0,0,No,Product,Yes,No,AI music memory/tagging system
+nocTurneMeLoDieS_HTML_Archive,/Users/steven/nocTurneMeLoDieS_HTML_Archive,1.7G,312,0,0,0,0,1,0,0,0,Yes,Product,No,No,HTML archive of Nocturne content
+my-simple,/Users/steven/my-simple,56K,17,2,0,0,0,1,0,0,0,No,Product,Yes,No,Minimal utility
+file-tracker,/Users/steven/file-tracker,20K,3,1,0,0,0,1,0,0,0,No,Product,Yes,No,Minimal file tracker
+fuzzy-finder,/Users/steven/fuzzy-finder,8K,2,0,0,0,0,0,0,0,0,No,Product,No,No,Empty stub
+Pictures,/Users/steven/Pictures,19G,57375,3,54,0,50,44,44677,562,2,No,Personal_Media,No,No,Photos + AI art (Adobe 4.5GB etsy 2.8GB)
+Movies,/Users/steven/Movies,19G,19403,5,305,0,1025,6,1358,850,73,No,Personal_Media,No,No,Videos (HeKaTe-saLome 5.9GB Ai-Art-Mp4 2.8GB)
+Music,/Users/steven/Music,8.9G,5535,245,35,0,38,476,411,1906,5,No,Personal_Media,No,No,nocturneMelodies 6.3GB Loose_MP3s 2.3GB
+iterm2,/Users/steven/iterm2,4.0G,13269,6610,1012,96,791,2879,537,1,9,Yes,Dev_Infrastructure,No,Yes,AI ecosystem (Codex/Gemini/Claude configs)
+iterm2-fix,/Users/steven/iterm2-fix,45M,4171,162,32,8,235,1629,195,0,3,No,Dev_Infrastructure,No,Yes,iTerm2 prompt fixes
+iterm2_prompt-exploration,/Users/steven/iterm2_prompt-engineering-exploration,28K,7,0,0,0,0,1,0,0,0,No,Dev_Infrastructure,No,No,Prompt engineering notes
+grok,/Users/steven/grok,224M,829,2,10,10,606,35,8,12,11,No,Downloads,No,No,Grok AI conversation exports + browser backups
+github,/Users/steven/github,7.8G,94024,6225,1653,7603,4286,1110,15936,259,13,Yes,Mixed,Mixed,Mixed,58 repos - own + cloned third-party
+Development,/Users/steven/Development,206M,1860,147,379,255,103,30,39,3,0,No,Dev_Infrastructure,No,No,Active projects (eigent hyper)
+Documents,/Users/steven/Documents,3.3G,7301,3,54,0,1355,252,47,10,15,No,Personal,No,No,Personal docs and configs
+Downloads,/Users/steven/Downloads,24G,67815,15330,474,566,6524,17772,4115,213,253,No,Downloads,Mixed,Mixed,LARGEST but messiest - needs curation
+Epstein,/Users/steven/Epstein,159M,83,19,0,0,6,17,0,2,1,Yes,Research,No,No,Epstein research + YouTube metadata
+Fancy-Advanced-Med-journals,/Users/steven/Fancy-Advanced-Med-journals,2.4M,189,15,0,0,3,130,0,0,0,No,Product,Yes,Yes,ToolUniverse medical skills (19 domains)
+Fixes,/Users/steven/Fixes,40K,5,0,0,0,0,4,0,0,0,No,Notes,No,No,Fix notes only
+kimi,/Users/steven/kimi,608K,17,0,0,0,1,0,0,0,0,No,Downloads,No,No,Single Kimi conversation export

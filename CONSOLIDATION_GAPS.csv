@@ -1,0 +1,69 @@
+Role,Present_In,Missing_From,Priority,Script,Size,Lines
+70-Dir Organizer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,comprehensive_organize_70.py,8821,278
+AI CLI Ensemble,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,enhanced_ai_cli.py,15439,432
+AI Receptionist,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,ai_receptionist.py,28932,863
+AI Receptionist,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,ai_receptionist_web.py,13825,363
+AI Receptionist,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,ai_receptionist_demo.py,11024,342
+Archive Comparator,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,compare_archives.py,7472,188
+Art Director Loop,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,convert-loop2.py,5868,177
+CSV Insight Continuer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,continue_from_csv_analysis.py,8370,227
+Cleanup Coordinator,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,cleanup_and_organize.py,5841,209
+Clipboard Archaeologist,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,improve_paste_export.py,7891,258
+Clipboard Archaeologist,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,improve_paste_export_v2.py,6891,246
+Code Quality Auditor,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,advanced_code_analyzer.py,31043,814
+Consolidation Surgeon,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,smart_consolidation.py,12061,298
+Consolidation Tool,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,avatararts_consolidation_tool.py,9698,242
+Content Factory,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,ai_recipe_generator.py,27767,783
+Content Factory,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,content_automation_system.py,21983,628
+Content Organizer Agent,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,content_organizer_agent.py,17688,407
+Content Organizer Examples,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,content_organizer_examples.py,9355,234
+Content-Aware Organizer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,content-aware-organization-agent.py,9875,266
+Cross-Volume Scanner,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,comprehensive_python_search.py,12516,303
+DS_Store Eraser,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,cleanup_dsstore_and_empty.py,3168,110
+Dedup Detective,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,identify_duplicates.py,13357,356
+Dedup Detective,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,remove_exact_dupe_pythons.py,5788,196
+Dedup File Engine,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,advanced_file_deduplicator.py,16569,393
+Digital Dive Builder,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,build_digital_dive.py,3957,85
+Directory Optimizer Agent,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,avatararts_directory_optimizer_agent_fixed.py,14926,315
+Directory Optimizer Agent,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,avatararts_directory_optimizer_agent_final.py,14894,318
+Directory Optimizer Agent,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,avatararts_directory_optimizer_agent_v3.py,14718,314
+Directory Optimizer Agent,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,avatararts_directory_optimizer_agent.py,14327,312
+Directory Optimizer Simple,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,avatararts_directory_optimizer_simple.py,13310,288
+Ecosystem Brain,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,ecosystem_orchestrator.py,17483,440
+Ecosystem Indexer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,create_advanced_avatars_db_final.py,21699,528
+Ecosystem Indexer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,create_advanced_avatars_db_fixed.py,21531,526
+Ecosystem Indexer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,create_advanced_avatars_db.py,21416,526
+Ecosystem Indexer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,create_avatararts_index.py,12011,300
+Ecosystem Indexer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,create_avatars_db.py,9240,282
+Ecosystem Navigator,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,navigator.py,10502,265
+Enhanced Content Categorizer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,enhanced_content_aware_categorization.py,14146,326
+Enhanced File Organizer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,enhanced_file_organizer.py,15132,407
+Enhanced Orchestrator,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,enhanced_automation_orchestrator.py,17829,495
+Environment Loader,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,avatar_utils.py,3960,134
+File Time Machine,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,universal_file_toolkit.py,27170,632
+Gallery Curator,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,catalog_art.py,3317,101
+Home Review Mirror,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,review_home_with_progress.py,2624,82
+Image Upscaler,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,web-png-upscale.py,2248,50
+MCP Computer Use Server,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,computer_use_mcp.py,16636,470
+Marketplace Deployer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,deploy_to_marketplaces.py,12438,413
+Memory Index,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,memory_system.py,19872,530
+Meta Refactoring Agent,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,meta_agent.py,5203,164
+Narrative Film Analyst,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,vid-transcribe-storytell.py,6606,114
+Numbered Dir Cleaner,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,cleanup_numbered_dirs.py,4335,117
+Photo Lab Manager,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,vance.py,4431,118
+Scattered Script Scout,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,find_scattered_pythons.py,8153,254
+Song-to-Visual Translator,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,song-transcribe-dalle.py,4970,114
+Sora Video Studio,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,sora_integration.py,4127,144
+Strategic Planner,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,advanced_consolidation_strategy.py,14486,377
+Task Orchestrator,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,universal_automation_hub.py,27339,676
+Truth-Seeker,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,content_based_dedupe_report.py,3887,112
+Unified AI Manager,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,unified_ai_manager.py,7201,201
+Unified File Processor,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,unified_file_processor.py,11624,287
+Visual Feedback Performer,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,progress_indicators_ascii_emoji.py,3235,114
+Voice Quiz Actor,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,quiz-choice-break.py,2920,85
+Voice Quiz Actor,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,quiz-speech-timed-speak.py,2200,71
+Voice Quiz Actor,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),MEDIUM,quiz-speech-pauses.py,1399,47
+Whisper Transcriber,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,whisper_json_csv_processor.py,11284,345
+Whisper Transcriber,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,mp4-transcript.py,7448,182
+Whisper Transcriber,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,mp4-trans.py,5693,164
+Whisper Transcriber,Creative Studio (~/pythons),Marketplace Repo (diVinePyTHon),HIGH,whisper-json-csv.py,2083,78

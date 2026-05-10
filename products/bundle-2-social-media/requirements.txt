@@ -1,0 +1,6 @@
+instapy
+selenium
+requests
+pandas
+pillow
+moviepy

@@ -1,24 +1,28 @@
 #!/usr/bin/env python3
 """Vapi.ai Demo Agent Generator - Create demo AI receptionists"""
-import os, sys, json, requests
+
+import os
+import sys
+import requests
 from pathlib import Path
 
 # Load API key
-sys.path.insert(0, str(Path.home() / '.env.d'))
+sys.path.insert(0, str(Path.home() / ".env.d"))
 try:
     from loader import load_env
+
     load_env()
 except:
     pass
 
-VAPI_API_KEY = os.getenv('VAPI_API_KEY', '')
+VAPI_API_KEY = os.getenv("VAPI_API_KEY", "")
 
 # Demo agent templates by industry
 DEMO_TEMPLATES = {
-    'dentist': {
-        'name': 'Dental Office AI Receptionist',
-        'first_message': "Thank you for calling! How can I help you today?",
-        'system_prompt': """You are a friendly AI receptionist for a dental office. Your role is to:
+    "dentist": {
+        "name": "Dental Office AI Receptionist",
+        "first_message": "Thank you for calling! How can I help you today?",
+        "system_prompt": """You are a friendly AI receptionist for a dental office. Your role is to:
 1. Answer common questions about services (cleanings, fillings, whitening, emergencies)
 2. Provide office hours and location
 3. Book appointments
@@ -35,14 +39,13 @@ Hours: Mon-Fri 8am-6pm, Sat 9am-2pm
 Location: 123 Main St, Downtown
 
 Be warm, professional, and efficient. Always confirm appointment details.""",
-        'voice': 'jennifer',
-        'functions': ['book_appointment', 'transfer_call']
+        "voice": "jennifer",
+        "functions": ["book_appointment", "transfer_call"],
     },
-
-    'plumber': {
-        'name': 'Plumbing Service AI Receptionist',
-        'first_message': "Thanks for calling! Do you have a plumbing emergency or need to schedule service?",
-        'system_prompt': """You are an AI receptionist for a plumbing company. Your role is to:
+    "plumber": {
+        "name": "Plumbing Service AI Receptionist",
+        "first_message": "Thanks for calling! Do you have a plumbing emergency or need to schedule service?",
+        "system_prompt": """You are an AI receptionist for a plumbing company. Your role is to:
 1. Determine urgency (emergency vs routine)
 2. Describe services (repairs, installations, drain cleaning, water heaters)
 3. Provide pricing estimates
@@ -59,14 +62,13 @@ For emergencies, get address and transfer immediately.
 For routine, book next available slot.
 
 Be helpful and understand their stress level.""",
-        'voice': 'mark',
-        'functions': ['book_appointment', 'transfer_call', 'send_text']
+        "voice": "mark",
+        "functions": ["book_appointment", "transfer_call", "send_text"],
     },
-
-    'salon': {
-        'name': 'Hair Salon AI Receptionist',
-        'first_message': "Hi! Thanks for calling the salon. What service are you interested in today?",
-        'system_prompt': """You are a friendly AI receptionist for a hair salon. Your role is to:
+    "salon": {
+        "name": "Hair Salon AI Receptionist",
+        "first_message": "Hi! Thanks for calling the salon. What service are you interested in today?",
+        "system_prompt": """You are a friendly AI receptionist for a hair salon. Your role is to:
 1. Book appointments for various services
 2. Recommend services based on needs
 3. Provide pricing
@@ -84,10 +86,11 @@ Hours: Tue-Sat 9am-7pm, Sun 10am-5pm
 Stylists: Sarah (color specialist), Mike (cuts), Lisa (extensions)
 
 Be bubbly, friendly, and enthusiastic about their beauty goals!""",
-        'voice': 'jennifer',
-        'functions': ['book_appointment']
-    }
+        "voice": "jennifer",
+        "functions": ["book_appointment"],
+    },
 }
+
 
 def create_vapi_agent(template_name):
     """Create a Vapi.ai agent from template"""
@@ -109,22 +112,19 @@ def create_vapi_agent(template_name):
     url = "https://api.vapi.ai/assistant"
     headers = {
         "Authorization": f"Bearer {VAPI_API_KEY}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
 
     payload = {
-        "name": template['name'],
-        "firstMessage": template['first_message'],
+        "name": template["name"],
+        "firstMessage": template["first_message"],
         "model": {
             "provider": "openai",
             "model": "gpt-4",
             "temperature": 0.7,
-            "systemPrompt": template['system_prompt']
+            "systemPrompt": template["system_prompt"],
         },
-        "voice": {
-            "provider": "11labs",
-            "voiceId": template['voice']
-        }
+        "voice": {"provider": "11labs", "voiceId": template["voice"]},
     }
 
     try:
@@ -133,22 +133,23 @@ def create_vapi_agent(template_name):
         agent_data = response.json()
 
         return {
-            'id': agent_data.get('id'),
-            'name': agent_data.get('name'),
-            'template': template_name,
-            'created': True
+            "id": agent_data.get("id"),
+            "name": agent_data.get("name"),
+            "template": template_name,
+            "created": True,
         }
 
     except requests.exceptions.RequestException as e:
         print(f"❌ API Error: {e}")
-        if hasattr(e.response, 'text'):
+        if hasattr(e.response, "text"):
             print(f"   Response: {e.response.text}")
         return None
+
 
 def generate_demo_script(industry):
     """Generate a demo call script"""
     scripts = {
-        'dentist': """
+        "dentist": '\''
 🎙️ Demo Call Script - Dentist
 
 YOU: "Hi, I'd like to schedule a cleaning"
@@ -175,8 +176,7 @@ AI: "Thanks John! You're all set for Thursday at 10am. You'll receive a confirma
 - Sends confirmation
 - Professional and warm tone
 """,
-
-        'plumber': """
+        "plumber": """
 🎙️ Demo Call Script - Plumber
 
 YOU: "I have a leaking pipe under my kitchen sink"
@@ -203,8 +203,7 @@ AI: "Perfect. You'll get a text when the plumber is 15 minutes away. His name is
 - Sets expectations
 - Builds trust (experienced plumber)
 """,
-
-        'salon': """
+        "salon": """
 🎙️ Demo Call Script - Salon
 
 YOU: "I need a haircut for Saturday"
@@ -230,12 +229,13 @@ AI: "Thanks Mary! You're booked for Saturday at 2pm with Lisa. You'll get a remi
 - Offers stylist options
 - Creates excitement
 - Sends reminder
-"""
+""",
     }
 
     return scripts.get(industry, "No script available for this industry")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("""Vapi.ai Demo Agent Generator
 
@@ -258,12 +258,12 @@ Setup:
   2. Get your API key
   3. Add to ~/.env.d/automation-agents.env:
      VAPI_API_KEY=your_key_here
-""")
+'\'')
         sys.exit(1)
 
     command = sys.argv[1]
 
-    if command == 'list':
+    if command == "list":
         print("📋 Available Demo Templates:\n")
         for name, template in DEMO_TEMPLATES.items():
             print(f"🎙️  {name.upper()}")
@@ -272,7 +272,7 @@ Setup:
             print(f"   Voice: {template['voice']}")
             print()
 
-    elif command == 'create':
+    elif command == "create":
         if len(sys.argv) < 3:
             print("Usage: vapi_demo_generator.py create <industry>")
             print(f"Industries: {', '.join(DEMO_TEMPLATES.keys())}")
@@ -284,12 +284,14 @@ Setup:
         result = create_vapi_agent(industry)
 
         if result:
-            print(f"✅ Agent created successfully!")
+            print("✅ Agent created successfully!")
             print(f"   ID: {result['id']}")
             print(f"   Name: {result['name']}")
-            print(f"\n💡 Next: Go to vapi.ai dashboard to test and configure phone number")
+            print(
+                "\n💡 Next: Go to vapi.ai dashboard to test and configure phone number"
+            )
 
-    elif command == 'script':
+    elif command == "script":
         if len(sys.argv) < 3:
             print("Usage: vapi_demo_generator.py script <industry>")
             print(f"Industries: {', '.join(DEMO_TEMPLATES.keys())}")

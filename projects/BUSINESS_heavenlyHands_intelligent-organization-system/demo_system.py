@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 #!/usr/bin/env python3
 """
 Intelligent Organization System - Demo Script
@@ -11,17 +14,14 @@ Date: 2025-01-27
 Version: 2.0.0
 """
 
-import os
 import sys
-import json
-import time
 from pathlib import Path
-from datetime import datetime
 
 # Add current directory to Python path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from integration_system_working import IntelligentOrganizationSystem
+
 
 def main():
     """Main demo function."""
@@ -29,38 +29,42 @@ def main():
     print("=" * 60)
     print("🎯 Demonstrating all capabilities with your API keys")
     print("=" * 60)
-    
+
     # Initialize system
     print("\n1️⃣ Initializing Intelligent Organization System...")
     system = IntelligentOrganizationSystem()
-    
+
     # Show system status
     print("\n2️⃣ System Status:")
     status = system.get_system_status()
     print(f"   ✅ Running: {status.is_running}")
     print(f"   ✅ Components: {status.components_status}")
     print(f"   ✅ Uptime: {status.uptime:.2f} seconds")
-    
+
     # Analyze project
     print("\n3️⃣ Analyzing Heavenly Hands Project...")
     analysis = system.analyze_project()
     print(f"   📊 Content Awareness Score: {analysis.content_awareness_score:.2f}")
     print(f"   📊 Overall Health Score: {analysis.overall_health_score:.2f}")
     print(f"   📊 Automation Opportunities: {len(analysis.automation_opportunities)}")
-    print(f"   📊 Optimization Recommendations: {len(analysis.optimization_recommendations)}")
-    
+    print(
+        f"   📊 Optimization Recommendations: {len(analysis.optimization_recommendations)}"
+    )
+
     # Show top recommendations
     print("\n4️⃣ Top Recommendations:")
     for i, rec in enumerate(analysis.optimization_recommendations[:5], 1):
         print(f"   {i}. {rec}")
-    
+
     # Demonstrate content search
     print("\n5️⃣ Content Search Demo:")
     search_results = system.search_content("cleaning service", limit=3)
     print(f"   Found {len(search_results)} relevant files:")
     for result in search_results:
-        print(f"   📄 {result['file_path']} (similarity: {result['similarity_score']:.3f})")
-    
+        print(
+            f"   📄 {result['file_path']} (similarity: {result['similarity_score']:.3f})"
+        )
+
     # Create automation workflows
     print("\n6️⃣ Creating Automation Workflows...")
     automation_workflow_id = system.create_automation_workflow(
@@ -71,18 +75,18 @@ def main():
                 "name": "Website Performance Test",
                 "platform": "web",
                 "task_type": "performance_testing",
-                "parameters": {"url": "https://heavenlyhandsfl.com"}
+                "parameters": {"url": "https://heavenlyhandsfl.com"},
             },
             {
                 "name": "SEO Analysis",
-                "platform": "web", 
+                "platform": "web",
                 "task_type": "seo_analysis",
-                "parameters": {"keywords": ["cleaning service", "Gainesville FL"]}
-            }
-        ]
+                "parameters": {"keywords": ["cleaning service", "Gainesville FL"]},
+            },
+        ],
     )
     print(f"   ✅ Created automation workflow: {automation_workflow_id}")
-    
+
     # Create agentic workflow
     print("\n7️⃣ Creating Agentic Workflow...")
     agentic_workflow_id = system.create_agentic_workflow(
@@ -91,11 +95,11 @@ def main():
         requirements={
             "goals": ["optimization", "automation", "intelligence"],
             "context": "cleaning_service_website",
-            "target_metrics": {"performance": "high", "seo": "excellent"}
-        }
+            "target_metrics": {"performance": "high", "seo": "excellent"},
+        },
     )
     print(f"   ✅ Created agentic workflow: {agentic_workflow_id}")
-    
+
     # Execute agentic workflow
     print("\n8️⃣ Executing Agentic Workflow...")
     execution_result = system.execute_agentic_workflow(agentic_workflow_id)
@@ -105,32 +109,32 @@ def main():
         print(f"   {execution_result[:200]}...")
     else:
         print("   ⚠️ Agentic workflow execution failed (API issue)")
-    
+
     # Show database statistics
     print("\n9️⃣ Database Statistics:")
     import sqlite3
-    
+
     # Automation database
-    conn = sqlite3.connect('automation.db')
+    conn = sqlite3.connect("automation.db")
     cursor = conn.cursor()
-    cursor.execute('SELECT COUNT(*) FROM workflows')
+    cursor.execute("SELECT COUNT(*) FROM workflows")
     workflow_count = cursor.fetchone()[0]
-    cursor.execute('SELECT COUNT(*) FROM tasks')
+    cursor.execute("SELECT COUNT(*) FROM tasks")
     task_count = cursor.fetchone()[0]
     conn.close()
-    
+
     print(f"   📊 Total Workflows: {workflow_count}")
     print(f"   📊 Total Tasks: {task_count}")
-    
+
     # Agentic workflows database
-    conn = sqlite3.connect('agentic_workflows.db')
+    conn = sqlite3.connect("agentic_workflows.db")
     cursor = conn.cursor()
-    cursor.execute('SELECT COUNT(*) FROM workflows')
+    cursor.execute("SELECT COUNT(*) FROM workflows")
     agentic_count = cursor.fetchone()[0]
     conn.close()
-    
+
     print(f"   📊 Agentic Workflows: {agentic_count}")
-    
+
     # Show system capabilities
     print("\n🔟 System Capabilities Summary:")
     print("   ✅ AST-based code analysis and pattern recognition")
@@ -141,7 +145,7 @@ def main():
     print("   ✅ Real-time monitoring and analytics")
     print("   ✅ Database persistence and workflow management")
     print("   ✅ Heavenly Hands specific optimizations")
-    
+
     # Show next steps
     print("\n🎯 Next Steps:")
     print("   1. Review generated workflows and tasks")
@@ -149,11 +153,11 @@ def main():
     print("   3. Monitor system performance and metrics")
     print("   4. Iterate and improve based on results")
     print("   5. Scale to additional projects and use cases")
-    
+
     print("\n" + "=" * 60)
     print("🎉 Demo Complete! Your Intelligent Organization System is ready!")
     print("=" * 60)
-    
+
     # Show file locations
     print("\n📁 Key Files Created:")
     print("   📄 .env - Environment configuration")
@@ -164,5 +168,12 @@ def main():
     print("   📄 intelligent_org.db - Main system database")
     print("   📄 enhancement_report.json - Detailed enhancement report")
 
-if __name__ == "__main__":
-    main()
+
+try:
+        main()
+except KeyboardInterrupt:
+    logger.info("Execution interrupted by user")
+    sys.exit(1)
+except Exception as e:
+    logger.error(f"An error occurred: {e}", exc_info=True)
+    sys.exit(1)
