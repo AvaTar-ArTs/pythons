@@ -1,0 +1,81 @@
+option_c_batch3_move.py
+  aa4a19044bcef81f 1-261
+progress_indicators_ascii_emoji.py
+  ef1fb6e22c5092c5 1-3,105,109-115
+  aa4a19044bcef81f 4-104,106-108
+debug_unprocessed_files.py
+  ef1fb6e22c5092c5 1-7
+  6965007c7df94cd7 8-56
+MEMORY_SYSTEM_README.md
+  aa4a19044bcef81f 1-245
+content_based_dedupe_report.py
+  aa4a19044bcef81f 1-112
+CONVENTION_PYTHON_SCRIPTS.md
+  aa4a19044bcef81f 1-7
+advanced_consolidation_strategy.py
+  aa4a19044bcef81f 1-377
+option_c_batch2_move.py
+  aa4a19044bcef81f 1-225
+restore_consolidation_from_csv.py
+  ef1fb6e22c5092c5 1-3,63-70
+  aa4a19044bcef81f 4-62
+memory_system.py
+  aa4a19044bcef81f 1-531
+pyproject.toml
+  ef1fb6e22c5092c5 14
+generate_summary_report.py
+  6965007c7df94cd7 1-104
+memory_launcher.py
+  aa4a19044bcef81f 1-117
+review_home_with_progress.py
+  aa4a19044bcef81f 4-75
+  ef1fb6e22c5092c5 1-3,76-83
+comprehensive_meta.csv
+  ef1fb6e22c5092c5 499-518
+  6965007c7df94cd7 1-498
+meta_agent.py
+  6965007c7df94cd7 1-164
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "67b3fe35eb17631336e77bb65567797f21ba2353",
+  "prompts": {
+    "6965007c7df94cd7": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "bd64c2a3-8e94-4c7c-b7f6-71d7ff3ae0ea",
+        "model": "gemini-2.5-pro"
+      },
+      "human_author": "GPTJunkie <info@gptjunkie.com>",
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 815,
+      "overriden_lines": 0
+    },
+    "aa4a19044bcef81f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d4b47ac8-c2a1-43d0-b0d8-81c5381216d5",
+        "model": "unknown"
+      },
+      "human_author": "GPTJunkie <info@gptjunkie.com>",
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 2110,
+      "overriden_lines": 0
+    },
+    "ef1fb6e22c5092c5": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "f771fa9a-0759-403a-bc81-61a9678e2e0b",
+        "model": "gemini-2.5-pro"
+      },
+      "human_author": "GPTJunkie <info@gptjunkie.com>",
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 61,
+      "overriden_lines": 0
+    }
+  }
+}
