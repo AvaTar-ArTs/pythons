@@ -265,7 +265,9 @@ class TestDomainExceptions:
 
     def test_artifact_download_error_has_details(self):
         """ArtifactDownloadError stores details and cause."""
-        e = ArtifactDownloadError("audio", details="404 Not Found", artifact_id="art_789")
+        e = ArtifactDownloadError(
+            "audio", details="404 Not Found", artifact_id="art_789"
+        )
         assert e.artifact_type == "audio"
         assert e.details == "404 Not Found"
         assert e.artifact_id == "art_789"
@@ -276,7 +278,13 @@ class TestCatchAllPattern:
 
     def test_catch_all_rpc_errors(self):
         """Catching NotebookLMError catches all RPC exceptions."""
-        for exc_class in [RPCError, AuthError, RateLimitError, ServerError, ClientError]:
+        for exc_class in [
+            RPCError,
+            AuthError,
+            RateLimitError,
+            ServerError,
+            ClientError,
+        ]:
             with pytest.raises(NotebookLMError):
                 raise exc_class("test")
 

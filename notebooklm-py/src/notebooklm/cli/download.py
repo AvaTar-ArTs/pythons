@@ -52,10 +52,26 @@ class ArtifactConfig(TypedDict):
 
 # Artifact type configurations for download commands
 ARTIFACT_CONFIGS: dict[str, ArtifactConfig] = {
-    "audio": {"kind": ArtifactType.AUDIO, "extension": ".mp3", "default_dir": "./audio"},
-    "video": {"kind": ArtifactType.VIDEO, "extension": ".mp4", "default_dir": "./video"},
-    "report": {"kind": ArtifactType.REPORT, "extension": ".md", "default_dir": "./reports"},
-    "mind-map": {"kind": ArtifactType.MIND_MAP, "extension": ".json", "default_dir": "./mind-maps"},
+    "audio": {
+        "kind": ArtifactType.AUDIO,
+        "extension": ".mp3",
+        "default_dir": "./audio",
+    },
+    "video": {
+        "kind": ArtifactType.VIDEO,
+        "extension": ".mp4",
+        "default_dir": "./video",
+    },
+    "report": {
+        "kind": ArtifactType.REPORT,
+        "extension": ".md",
+        "default_dir": "./reports",
+    },
+    "mind-map": {
+        "kind": ArtifactType.MIND_MAP,
+        "extension": ".json",
+        "default_dir": "./mind-maps",
+    },
     "infographic": {
         "kind": ArtifactType.INFOGRAPHIC,
         "extension": ".png",
@@ -198,7 +214,9 @@ async def _download_artifacts_generic(
 
             # For slide-deck with PPTX format, bind output_format="pptx"
             if artifact_type_name == "slide-deck" and slide_format == "pptx":
-                download_fn = partial(client.artifacts.download_slide_deck, output_format="pptx")
+                download_fn = partial(
+                    client.artifacts.download_slide_deck, output_format="pptx"
+                )
 
             # Fetch and filter artifacts by type and completed status
             type_artifacts = await _get_completed_artifacts_as_dicts(
@@ -237,7 +255,9 @@ async def _download_artifacts_generic(
 
             # Handle --all flag
             if download_all:
-                output_dir = Path(output_path) if output_path else Path(default_output_dir)
+                output_dir = (
+                    Path(output_path) if output_path else Path(default_output_dir)
+                )
 
                 if dry_run:
                     return {
@@ -268,7 +288,9 @@ async def _download_artifacts_generic(
                 for i, artifact in enumerate(type_artifacts, 1):
                     # Progress indicator
                     if not json_output:
-                        console.print(f"[dim]Downloading {i}/{total}:[/dim] {artifact['title']}")
+                        console.print(
+                            f"[dim]Downloading {i}/{total}:[/dim] {artifact['title']}"
+                        )
 
                     # Generate safe name
                     item_name = artifact_title_to_filename(
@@ -289,7 +311,10 @@ async def _download_artifacts_generic(
                                 "filename": item_name,
                                 **(
                                     skip_info
-                                    or {"status": "skipped", "reason": "conflict resolution failed"}
+                                    or {
+                                        "status": "skipped",
+                                        "reason": "conflict resolution failed",
+                                    }
                                 ),
                             }
                         )
@@ -303,7 +328,9 @@ async def _download_artifacts_generic(
                     try:
                         # Download using dispatch
                         await download_fn(
-                            nb_id_resolved, str(item_path), artifact_id=str(artifact["id"])
+                            nb_id_resolved,
+                            str(item_path),
+                            artifact_id=str(artifact["id"]),
                         )
 
                         results.append(
@@ -814,16 +841,30 @@ async def _download_interactive(
 
         resolved_artifact_id = artifact_id
         if artifact_id:
-            kind = ArtifactType.QUIZ if artifact_type == "quiz" else ArtifactType.FLASHCARDS
-            type_artifacts = await _get_completed_artifacts_as_dicts(client, nb_id_resolved, kind)
-            resolved_artifact_id = resolve_partial_artifact_id(type_artifacts, artifact_id)
+            kind = (
+                ArtifactType.QUIZ
+                if artifact_type == "quiz"
+                else ArtifactType.FLASHCARDS
+            )
+            type_artifacts = await _get_completed_artifacts_as_dicts(
+                client, nb_id_resolved, kind
+            )
+            resolved_artifact_id = resolve_partial_artifact_id(
+                type_artifacts, artifact_id
+            )
 
         if artifact_type == "quiz":
             return await client.artifacts.download_quiz(
-                nb_id_resolved, path, artifact_id=resolved_artifact_id, output_format=output_format
+                nb_id_resolved,
+                path,
+                artifact_id=resolved_artifact_id,
+                output_format=output_format,
             )
         return await client.artifacts.download_flashcards(
-            nb_id_resolved, path, artifact_id=resolved_artifact_id, output_format=output_format
+            nb_id_resolved,
+            path,
+            artifact_id=resolved_artifact_id,
+            output_format=output_format,
         )
 
 
@@ -850,7 +891,9 @@ def download_quiz_cmd(ctx, output_path, notebook, output_format, artifact_id):
     """
     try:
         result = run_async(
-            _download_interactive(ctx, "quiz", output_path, notebook, output_format, artifact_id)
+            _download_interactive(
+                ctx, "quiz", output_path, notebook, output_format, artifact_id
+            )
         )
         console.print(f"[green]Downloaded quiz to:[/green] {result}")
     except Exception as e:

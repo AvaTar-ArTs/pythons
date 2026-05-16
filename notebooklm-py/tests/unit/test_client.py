@@ -202,7 +202,9 @@ class TestRefreshAuth:
             assert client.auth.session_id == "new_session_id_456"
 
     @pytest.mark.asyncio
-    async def test_refresh_auth_redirect_to_login(self, mock_auth, httpx_mock: HTTPXMock):
+    async def test_refresh_auth_redirect_to_login(
+        self, mock_auth, httpx_mock: HTTPXMock
+    ):
         """Test refresh_auth raises error on redirect to login - by final URL check."""
         client = NotebookLMClient(mock_auth)
 
@@ -237,7 +239,9 @@ class TestRefreshAuth:
                 await client.refresh_auth()
 
     @pytest.mark.asyncio
-    async def test_refresh_auth_missing_session_id(self, mock_auth, httpx_mock: HTTPXMock):
+    async def test_refresh_auth_missing_session_id(
+        self, mock_auth, httpx_mock: HTTPXMock
+    ):
         """Test refresh_auth raises error when session ID not found."""
         client = NotebookLMClient(mock_auth)
 
@@ -322,7 +326,9 @@ class TestIsAuthError:
 
         request = httpx.Request("POST", "https://example.com")
         response = httpx.Response(401, request=request)
-        error = httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+        error = httpx.HTTPStatusError(
+            "Unauthorized", request=request, response=response
+        )
         assert is_auth_error(error) is True
 
     def test_http_403_is_auth_error(self):
@@ -338,7 +344,9 @@ class TestIsAuthError:
 
         request = httpx.Request("POST", "https://example.com")
         response = httpx.Response(500, request=request)
-        error = httpx.HTTPStatusError("Server Error", request=request, response=response)
+        error = httpx.HTTPStatusError(
+            "Server Error", request=request, response=response
+        )
         assert is_auth_error(error) is False
 
     def test_rpc_error_with_auth_message_is_auth_error(self):
@@ -470,7 +478,9 @@ class TestRpcCallAutoRetry:
                 # First call fails with HTTP 401
                 request = httpx.Request("POST", args[0])
                 response = httpx.Response(401, request=request)
-                raise httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+                raise httpx.HTTPStatusError(
+                    "Unauthorized", request=request, response=response
+                )
             # Second call succeeds
             response = MagicMock()
             response.text = ')]}\'\\n[["wrb.fr","wXbhsf",[["result"]]]]'
@@ -529,7 +539,9 @@ class TestRpcCallAutoRetry:
             result = await core.rpc_call(RPCMethod.LIST_NOTEBOOKS, [])
 
         assert len(refresh_called) == 1, "refresh_callback should be called once"
-        assert decode_call_count[0] == 2, "decode should be called twice (original + retry)"
+        assert (
+            decode_call_count[0] == 2
+        ), "decode should be called twice (original + retry)"
         assert result == ["result"]
 
     @pytest.mark.asyncio
@@ -549,7 +561,9 @@ class TestRpcCallAutoRetry:
             call_count[0] += 1
             request = httpx.Request("POST", args[0])
             response = httpx.Response(401, request=request)
-            raise httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+            raise httpx.HTTPStatusError(
+                "Unauthorized", request=request, response=response
+            )
 
         core._http_client = MagicMock()
         core._http_client.post = mock_post
@@ -583,7 +597,9 @@ class TestRpcCallAutoRetry:
             call_count[0] += 1
             request = httpx.Request("POST", args[0])
             response = httpx.Response(401, request=request)
-            raise httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+            raise httpx.HTTPStatusError(
+                "Unauthorized", request=request, response=response
+            )
 
         core._http_client = MagicMock()
         core._http_client.post = mock_post
@@ -618,7 +634,9 @@ class TestRpcCallAutoRetry:
             call_count[0] += 1
             request = httpx.Request("POST", args[0])
             response = httpx.Response(500, request=request)
-            raise httpx.HTTPStatusError("Server Error", request=request, response=response)
+            raise httpx.HTTPStatusError(
+                "Server Error", request=request, response=response
+            )
 
         core._http_client = MagicMock()
         core._http_client.post = mock_post
@@ -646,7 +664,9 @@ class TestRpcCallAutoRetry:
         async def mock_post(*args, **kwargs):
             request = httpx.Request("POST", args[0])
             response = httpx.Response(401, request=request)
-            raise httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+            raise httpx.HTTPStatusError(
+                "Unauthorized", request=request, response=response
+            )
 
         core._http_client = MagicMock()
         core._http_client.post = mock_post
@@ -684,7 +704,9 @@ class TestRpcCallAutoRetry:
                 # First two calls fail with HTTP 401
                 request = httpx.Request("POST", args[0])
                 response = httpx.Response(401, request=request)
-                raise httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+                raise httpx.HTTPStatusError(
+                    "Unauthorized", request=request, response=response
+                )
             # After that, succeed
             response = MagicMock()
             response.text = ')]}\'\\n[["wrb.fr","wXbhsf",[["result"]]]]'

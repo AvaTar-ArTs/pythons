@@ -7,7 +7,12 @@ import pytest
 
 from notebooklm.notebooklm_cli import cli
 
-from .conftest import assert_command_success, notebooklm_vcr, parse_json_output, skip_no_cassettes
+from .conftest import (
+    assert_command_success,
+    notebooklm_vcr,
+    parse_json_output,
+    skip_no_cassettes,
+)
 
 pytestmark = [pytest.mark.vcr, skip_no_cassettes]
 
@@ -64,7 +69,9 @@ class TestGetConversationTurnsCommand:
     def test_history_shows_qa_previews(self, runner, mock_auth_for_vcr, mock_context):
         """history command shows Q&A preview columns populated from khqZz turns API."""
         # Use the full UUID directly so resolve_notebook_id skips LIST_NOTEBOOKS
-        result = runner.invoke(cli, ["history", "-n", "f59447f4-2a13-4d64-9df8-bc89c615c7bd"])
+        result = runner.invoke(
+            cli, ["history", "-n", "f59447f4-2a13-4d64-9df8-bc89c615c7bd"]
+        )
         assert result.exit_code == 0, result.output
         assert "What question should I" in result.output
         assert "Based on the sources" in result.output
@@ -98,6 +105,8 @@ class TestAskSaveAsNoteCommand:
     def test_ask_save_as_note(self, runner, mock_auth_for_vcr, mock_context):
         """'ask --save-as-note' saves the answer as a note."""
         with notebooklm_vcr.use_cassette("chat_ask_save_as_note.yaml"):
-            result = runner.invoke(cli, ["ask", "What is this about?", "--save-as-note"])
+            result = runner.invoke(
+                cli, ["ask", "What is this about?", "--save-as-note"]
+            )
             assert result.exit_code == 0
             assert "Saved as note" in result.output

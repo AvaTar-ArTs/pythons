@@ -182,7 +182,11 @@ class ResearchAPI:
             return {"status": "no_research", "tasks": []}
 
         # Unwrap if needed
-        if isinstance(result[0], list) and len(result[0]) > 0 and isinstance(result[0][0], list):
+        if (
+            isinstance(result[0], list)
+            and len(result[0]) > 0
+            and isinstance(result[0][0], list)
+        ):
             result = result[0]
 
         parsed_tasks = []
@@ -206,9 +210,13 @@ class ResearchAPI:
 
             if isinstance(sources_and_summary, list) and len(sources_and_summary) >= 1:
                 sources_data = (
-                    sources_and_summary[0] if isinstance(sources_and_summary[0], list) else []
+                    sources_and_summary[0]
+                    if isinstance(sources_and_summary[0], list)
+                    else []
                 )
-                if len(sources_and_summary) >= 2 and isinstance(sources_and_summary[1], str):
+                if len(sources_and_summary) >= 2 and isinstance(
+                    sources_and_summary[1], str
+                ):
                     summary = sources_and_summary[1]
 
             parsed_sources = []
@@ -319,7 +327,9 @@ class ResearchAPI:
             To reliably verify imports, check the notebook's source list using
             `client.sources.list(notebook_id)` after calling this method.
         """
-        logger.debug("Importing %d research sources into notebook %s", len(sources), notebook_id)
+        logger.debug(
+            "Importing %d research sources into notebook %s", len(sources), notebook_id
+        )
         if not sources:
             return []
 
@@ -344,7 +354,9 @@ class ResearchAPI:
             and source.get("report_markdown")
         ]
         report_source_ids = {id(source) for source in report_sources}
-        valid_sources = [s for s in sources if s.get("url") and id(s) not in report_source_ids]
+        valid_sources = [
+            s for s in sources if s.get("url") and id(s) not in report_source_ids
+        ]
         skipped_count = len(sources) - len(valid_sources) - len(report_sources)
         if skipped_count > 0:
             logger.warning(
@@ -387,7 +399,9 @@ class ResearchAPI:
             for src_data in result:
                 if isinstance(src_data, list) and len(src_data) >= 2:
                     src_id = (
-                        src_data[0][0] if src_data[0] and isinstance(src_data[0], list) else None
+                        src_data[0][0]
+                        if src_data[0] and isinstance(src_data[0], list)
+                        else None
                     )
                     if src_id:
                         imported.append({"id": src_id, "title": src_data[1]})

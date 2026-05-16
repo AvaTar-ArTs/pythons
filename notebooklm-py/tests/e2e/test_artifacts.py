@@ -46,7 +46,9 @@ class TestArtifactRetrieval:
     @pytest.mark.readonly
     async def test_get_artifact_not_found(self, client, read_only_notebook_id):
         """Test getting a non-existent artifact returns None."""
-        artifact = await client.artifacts.get(read_only_notebook_id, "nonexistent_artifact_id")
+        artifact = await client.artifacts.get(
+            read_only_notebook_id, "nonexistent_artifact_id"
+        )
         assert artifact is None
 
 

@@ -44,7 +44,9 @@ class TestGenerateAudio:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123"])
 
@@ -59,7 +61,9 @@ class TestGenerateAudio:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["generate", "audio", "--format", "debate", "-n", "nb_123"]
@@ -76,7 +80,9 @@ class TestGenerateAudio:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["generate", "audio", "--length", "long", "-n", "nb_123"]
@@ -95,12 +101,18 @@ class TestGenerateAudio:
             completed_status.is_failed = False
             completed_status.url = "https://example.com/audio.mp3"
             completed_status.artifact_id = "audio_123"
-            mock_client.artifacts.wait_for_completion = AsyncMock(return_value=completed_status)
+            mock_client.artifacts.wait_for_completion = AsyncMock(
+                return_value=completed_status
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["generate", "audio", "--wait", "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["generate", "audio", "--wait", "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
             assert "Audio ready" in result.output or "example.com" in result.output
@@ -111,7 +123,9 @@ class TestGenerateAudio:
             mock_client.artifacts.generate_audio = AsyncMock(return_value=None)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123"])
 
@@ -133,7 +147,9 @@ class TestGenerateVideo:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "video", "-n", "nb_123"])
 
@@ -147,7 +163,9 @@ class TestGenerateVideo:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["generate", "video", "--style", "kawaii", "-n", "nb_123"]
@@ -170,9 +188,13 @@ class TestGenerateCinematicVideo:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["generate", "cinematic-video", "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["generate", "cinematic-video", "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
 
@@ -184,7 +206,9 @@ class TestGenerateCinematicVideo:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -208,7 +232,9 @@ class TestGenerateCinematicVideo:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -234,7 +260,9 @@ class TestGenerateQuiz:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "quiz", "-n", "nb_123"])
 
@@ -248,7 +276,9 @@ class TestGenerateQuiz:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -281,7 +311,9 @@ class TestGenerateFlashcards:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "flashcards", "-n", "nb_123"])
 
@@ -302,7 +334,9 @@ class TestGenerateSlideDeck:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "slide-deck", "-n", "nb_123"])
 
@@ -316,7 +350,9 @@ class TestGenerateSlideDeck:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -349,7 +385,9 @@ class TestGenerateInfographic:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "infographic", "-n", "nb_123"])
 
@@ -363,7 +401,9 @@ class TestGenerateInfographic:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -403,10 +443,13 @@ class TestGenerateDataTable:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
-                    cli, ["generate", "data-table", "Compare key concepts", "-n", "nb_123"]
+                    cli,
+                    ["generate", "data-table", "Compare key concepts", "-n", "nb_123"],
                 )
 
             assert result.exit_code == 0
@@ -422,11 +465,16 @@ class TestGenerateMindMap:
         with patch_client_for_module("generate") as mock_client_cls:
             mock_client = create_mock_client()
             mock_client.artifacts.generate_mind_map = AsyncMock(
-                return_value={"mind_map": {"name": "Root", "children": []}, "note_id": "n1"}
+                return_value={
+                    "mind_map": {"name": "Root", "children": []},
+                    "note_id": "n1",
+                }
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "mind-map", "-n", "nb_123"])
 
@@ -447,7 +495,9 @@ class TestGenerateReport:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "report", "-n", "nb_123"])
 
@@ -461,10 +511,13 @@ class TestGenerateReport:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
-                    cli, ["generate", "report", "--format", "study-guide", "-n", "nb_123"]
+                    cli,
+                    ["generate", "report", "--format", "study-guide", "-n", "nb_123"],
                 )
 
             assert result.exit_code == 0
@@ -477,7 +530,9 @@ class TestGenerateReport:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["generate", "report", "Create a white paper", "-n", "nb_123"]
@@ -504,7 +559,9 @@ class TestGenerateReport:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -535,7 +592,9 @@ class TestGenerateReport:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -566,11 +625,21 @@ class TestGenerateReport:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
-                    ["generate", "report", "My custom prompt", "--append", "extra", "-n", "nb_123"],
+                    [
+                        "generate",
+                        "report",
+                        "My custom prompt",
+                        "--append",
+                        "extra",
+                        "-n",
+                        "nb_123",
+                    ],
                 )
 
             assert result.exit_code == 0
@@ -612,7 +681,9 @@ class TestGenerateJsonOutput:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", cmd, "--json", "-n", "nb_123"])
 
@@ -629,10 +700,20 @@ class TestGenerateJsonOutput:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
-                    cli, ["generate", "data-table", "Compare concepts", "--json", "-n", "nb_123"]
+                    cli,
+                    [
+                        "generate",
+                        "data-table",
+                        "Compare concepts",
+                        "--json",
+                        "-n",
+                        "nb_123",
+                    ],
                 )
 
             assert result.exit_code == 0
@@ -644,13 +725,20 @@ class TestGenerateJsonOutput:
         with patch_client_for_module("generate") as mock_client_cls:
             mock_client = create_mock_client()
             mock_client.artifacts.generate_mind_map = AsyncMock(
-                return_value={"mind_map": {"name": "Root", "children": []}, "note_id": "n1"}
+                return_value={
+                    "mind_map": {"name": "Root", "children": []},
+                    "note_id": "n1",
+                }
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["generate", "mind-map", "--json", "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["generate", "mind-map", "--json", "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
             data = json.loads(result.output)
@@ -708,7 +796,9 @@ class TestGenerateLanguageValidation:
             mock_client = create_mock_client()
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -728,7 +818,9 @@ class TestGenerateLanguageValidation:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["generate", "audio", "-n", "nb_123", "--language", "ja"]
@@ -789,7 +881,9 @@ class TestGenerateWithRetry:
         )
         generate_fn = AsyncMock(return_value=success_result)
 
-        result = await generate_with_retry(generate_fn, max_retries=3, artifact_type="audio")
+        result = await generate_with_retry(
+            generate_fn, max_retries=3, artifact_type="audio"
+        )
 
         assert result == success_result
         assert generate_fn.call_count == 1
@@ -801,7 +895,10 @@ class TestGenerateWithRetry:
         from notebooklm.types import GenerationStatus
 
         rate_limited = GenerationStatus(
-            task_id="", status="failed", error="Rate limited", error_code="USER_DISPLAYABLE_ERROR"
+            task_id="",
+            status="failed",
+            error="Rate limited",
+            error_code="USER_DISPLAYABLE_ERROR",
         )
         success_result = GenerationStatus(
             task_id="task_123", status="pending", error=None, error_code=None
@@ -824,7 +921,10 @@ class TestGenerateWithRetry:
         from notebooklm.types import GenerationStatus
 
         rate_limited = GenerationStatus(
-            task_id="", status="failed", error="Rate limited", error_code="USER_DISPLAYABLE_ERROR"
+            task_id="",
+            status="failed",
+            error="Rate limited",
+            error_code="USER_DISPLAYABLE_ERROR",
         )
         generate_fn = AsyncMock(return_value=rate_limited)
 
@@ -843,7 +943,10 @@ class TestGenerateWithRetry:
         from notebooklm.types import GenerationStatus
 
         rate_limited = GenerationStatus(
-            task_id="", status="failed", error="Rate limited", error_code="USER_DISPLAYABLE_ERROR"
+            task_id="",
+            status="failed",
+            error="Rate limited",
+            error_code="USER_DISPLAYABLE_ERROR",
         )
         generate_fn = AsyncMock(return_value=rate_limited)
 
@@ -861,7 +964,10 @@ class TestGenerateWithRetry:
         from notebooklm.types import GenerationStatus
 
         rate_limited = GenerationStatus(
-            task_id="", status="failed", error="Rate limited", error_code="USER_DISPLAYABLE_ERROR"
+            task_id="",
+            status="failed",
+            error="Rate limited",
+            error_code="USER_DISPLAYABLE_ERROR",
         )
         generate_fn = AsyncMock(return_value=rate_limited)
 
@@ -881,7 +987,10 @@ class TestGenerateWithRetry:
         from notebooklm.types import GenerationStatus
 
         rate_limited = GenerationStatus(
-            task_id="", status="failed", error="Rate limited", error_code="USER_DISPLAYABLE_ERROR"
+            task_id="",
+            status="failed",
+            error="Rate limited",
+            error_code="USER_DISPLAYABLE_ERROR",
         )
         generate_fn = AsyncMock(return_value=rate_limited)
 
@@ -941,7 +1050,10 @@ class TestRateLimitDetection:
         from notebooklm.types import GenerationStatus
 
         rate_limited = GenerationStatus(
-            task_id="", status="failed", error="Rate limited", error_code="USER_DISPLAYABLE_ERROR"
+            task_id="",
+            status="failed",
+            error="Rate limited",
+            error_code="USER_DISPLAYABLE_ERROR",
         )
 
         with patch_client_for_module("generate") as mock_client_cls:
@@ -949,7 +1061,9 @@ class TestRateLimitDetection:
             mock_client.artifacts.generate_audio = AsyncMock(return_value=rate_limited)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123"])
 
@@ -961,7 +1075,10 @@ class TestRateLimitDetection:
         from notebooklm.types import GenerationStatus
 
         rate_limited = GenerationStatus(
-            task_id="", status="failed", error="Rate limited", error_code="USER_DISPLAYABLE_ERROR"
+            task_id="",
+            status="failed",
+            error="Rate limited",
+            error_code="USER_DISPLAYABLE_ERROR",
         )
 
         with patch_client_for_module("generate") as mock_client_cls:
@@ -969,9 +1086,13 @@ class TestRateLimitDetection:
             mock_client.artifacts.generate_audio = AsyncMock(return_value=rate_limited)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123", "--json"])
+                result = runner.invoke(
+                    cli, ["generate", "audio", "-n", "nb_123", "--json"]
+                )
 
             data = json.loads(result.output)
             assert data["error"] is True
@@ -1047,23 +1168,33 @@ class TestOutputGenerationStatusDirect:
             is_complete=True, task_id="task_123", url="https://example.com/audio.mp3"
         )
         with patch.object(self.generate_module, "json_output_response") as mock_json:
-            self.generate_module._output_generation_status(status, "audio", json_output=True)
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=True
+            )
         mock_json.assert_called_once_with(
-            {"task_id": "task_123", "status": "completed", "url": "https://example.com/audio.mp3"}
+            {
+                "task_id": "task_123",
+                "status": "completed",
+                "url": "https://example.com/audio.mp3",
+            }
         )
 
     def test_json_failed(self):
         """Line 251: JSON output for failed status."""
         status = self._make_status(is_failed=True, error="Something went wrong")
         with patch.object(self.generate_module, "json_error_response") as mock_err:
-            self.generate_module._output_generation_status(status, "audio", json_output=True)
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=True
+            )
         mock_err.assert_called_once_with("GENERATION_FAILED", "Something went wrong")
 
     def test_json_failed_no_error_message(self):
         """Line 251: JSON failed output falls back to default message when error is None."""
         status = self._make_status(is_failed=True, error=None)
         with patch.object(self.generate_module, "json_error_response") as mock_err:
-            self.generate_module._output_generation_status(status, "audio", json_output=True)
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=True
+            )
         mock_err.assert_called_once_with("GENERATION_FAILED", "Audio generation failed")
 
     def test_json_pending_with_task_id(self):
@@ -1075,7 +1206,9 @@ class TestOutputGenerationStatusDirect:
         status.is_failed = False
         status.task_id = "task_456"
         with patch.object(self.generate_module, "json_output_response") as mock_json:
-            self.generate_module._output_generation_status(status, "audio", json_output=True)
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=True
+            )
         mock_json.assert_called_once_with({"task_id": "task_456", "status": "pending"})
 
     def test_text_completed_with_url(self):
@@ -1084,7 +1217,9 @@ class TestOutputGenerationStatusDirect:
             is_complete=True, task_id="task_123", url="https://example.com/audio.mp3"
         )
         with patch.object(self.generate_module, "console") as mock_console:
-            self.generate_module._output_generation_status(status, "audio", json_output=False)
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=False
+            )
         mock_console.print.assert_called_once_with(
             "[green]Audio ready:[/green] https://example.com/audio.mp3"
         )
@@ -1093,21 +1228,29 @@ class TestOutputGenerationStatusDirect:
         """Line 264: Text output for completed status without URL."""
         status = self._make_status(is_complete=True, task_id="task_123", url=None)
         with patch.object(self.generate_module, "console") as mock_console:
-            self.generate_module._output_generation_status(status, "audio", json_output=False)
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=False
+            )
         mock_console.print.assert_called_once_with("[green]Audio ready[/green]")
 
     def test_text_failed(self):
         """Line 266: Text output for failed status."""
         status = self._make_status(is_failed=True, error="Transcription error")
         with patch.object(self.generate_module, "console") as mock_console:
-            self.generate_module._output_generation_status(status, "audio", json_output=False)
-        mock_console.print.assert_called_once_with("[red]Failed:[/red] Transcription error")
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=False
+            )
+        mock_console.print.assert_called_once_with(
+            "[red]Failed:[/red] Transcription error"
+        )
 
     def test_text_pending_with_task_id(self):
         """Line 268: Text output for pending status shows task_id."""
         status = self._make_status(task_id="task_789")
         with patch.object(self.generate_module, "console") as mock_console:
-            self.generate_module._output_generation_status(status, "audio", json_output=False)
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=False
+            )
         mock_console.print.assert_called_once_with("[yellow]Started:[/yellow] task_789")
 
     def test_text_pending_without_task_id_shows_status(self):
@@ -1121,7 +1264,9 @@ class TestOutputGenerationStatusDirect:
             patch.object(self.generate_module, "_extract_task_id", return_value=None),
             patch.object(self.generate_module, "console") as mock_console,
         ):
-            self.generate_module._output_generation_status(status, "audio", json_output=False)
+            self.generate_module._output_generation_status(
+                status, "audio", json_output=False
+            )
         mock_console.print.assert_called_once()
         call_args = mock_console.print.call_args[0][0]
         assert "[yellow]Started:[/yellow]" in call_args
@@ -1152,7 +1297,9 @@ class TestExtractTaskIdDirect:
 
     def test_extract_from_dict_task_id(self):
         """Line 228: dict with task_id key."""
-        result = self.generate_module._extract_task_id({"task_id": "t1", "status": "pending"})
+        result = self.generate_module._extract_task_id(
+            {"task_id": "t1", "status": "pending"}
+        )
         assert result == "t1"
 
     def test_extract_from_dict_artifact_id(self):
@@ -1185,7 +1332,9 @@ class TestOutputMindMapResultDirect:
         """Lines 624-626: falsy result with json_output → json_error_response."""
         with patch.object(self.generate_module, "json_error_response") as mock_err:
             self.generate_module._output_mind_map_result(None, json_output=True)
-        mock_err.assert_called_once_with("GENERATION_FAILED", "Mind map generation failed")
+        mock_err.assert_called_once_with(
+            "GENERATION_FAILED", "Mind map generation failed"
+        )
 
     def test_falsy_result_no_json_prints_message(self):
         """Lines 627-628: falsy result without json_output → console.print yellow."""
@@ -1204,7 +1353,10 @@ class TestOutputMindMapResultDirect:
         """Lines 633-635: truthy result dict with text output prints note_id and children count."""
         result_data = {
             "note_id": "n1",
-            "mind_map": {"name": "Root", "children": [{"label": "Child1"}, {"label": "Child2"}]},
+            "mind_map": {
+                "name": "Root",
+                "children": [{"label": "Child1"}, {"label": "Child2"}],
+            },
         }
         with patch.object(self.generate_module, "console") as mock_console:
             self.generate_module._output_mind_map_result(result_data, json_output=False)
@@ -1240,7 +1392,9 @@ class TestGenerateReviseSlide:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -1269,7 +1423,9 @@ class TestGenerateReviseSlide:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -1299,7 +1455,9 @@ class TestGenerateReviseSlide:
             mock_client = create_mock_client()
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -1322,7 +1480,9 @@ class TestGenerateReviseSlide:
             mock_client = create_mock_client()
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -1348,7 +1508,9 @@ class TestGenerateReviseSlide:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -1392,7 +1554,9 @@ class TestGenerateReportWithNonBriefingFormat:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -1422,7 +1586,9 @@ class TestGenerateReportWithNonBriefingFormat:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -1464,7 +1630,9 @@ class TestHandleGenerationResultPaths:
             mock_client.artifacts.generate_audio = AsyncMock(return_value=status)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123"])
 
@@ -1475,10 +1643,14 @@ class TestHandleGenerationResultPaths:
         """Lines 205-207: result is a list → task_id from first element."""
         with patch_client_for_module("generate") as mock_client_cls:
             mock_client = create_mock_client()
-            mock_client.artifacts.generate_audio = AsyncMock(return_value=["task_list_1", "extra"])
+            mock_client.artifacts.generate_audio = AsyncMock(
+                return_value=["task_list_1", "extra"]
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123"])
 
@@ -1492,7 +1664,9 @@ class TestHandleGenerationResultPaths:
             mock_client.artifacts.generate_audio = AsyncMock(return_value=None)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123"])
 
@@ -1506,9 +1680,13 @@ class TestHandleGenerationResultPaths:
             mock_client.artifacts.generate_audio = AsyncMock(return_value=None)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123", "--json"])
+                result = runner.invoke(
+                    cli, ["generate", "audio", "-n", "nb_123", "--json"]
+                )
 
         # json_error_response calls sys.exit(1), so exit_code is 1
         data = json.loads(result.output)
@@ -1532,13 +1710,21 @@ class TestHandleGenerationResultPaths:
 
         with patch_client_for_module("generate") as mock_client_cls:
             mock_client = create_mock_client()
-            mock_client.artifacts.generate_audio = AsyncMock(return_value=initial_status)
-            mock_client.artifacts.wait_for_completion = AsyncMock(return_value=completed_status)
+            mock_client.artifacts.generate_audio = AsyncMock(
+                return_value=initial_status
+            )
+            mock_client.artifacts.wait_for_completion = AsyncMock(
+                return_value=completed_status
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123", "--wait"])
+                result = runner.invoke(
+                    cli, ["generate", "audio", "-n", "nb_123", "--wait"]
+                )
 
         assert result.exit_code == 0
         mock_client.artifacts.wait_for_completion.assert_called_once()
@@ -1562,7 +1748,10 @@ class TestGenerateWithRetryConsoleOutput:
         generate_module = importlib.import_module("notebooklm.cli.generate")
 
         rate_limited = GenerationStatus(
-            task_id="", status="failed", error="Rate limited", error_code="USER_DISPLAYABLE_ERROR"
+            task_id="",
+            status="failed",
+            error="Rate limited",
+            error_code="USER_DISPLAYABLE_ERROR",
         )
         success_result = GenerationStatus(
             task_id="task_123", status="pending", error=None, error_code=None
@@ -1604,13 +1793,21 @@ class TestHandleGenerationResultListPathAndWait:
 
         with patch_client_for_module("generate") as mock_client_cls:
             mock_client = create_mock_client()
-            mock_client.artifacts.generate_audio = AsyncMock(return_value=initial_status)
-            mock_client.artifacts.wait_for_completion = AsyncMock(return_value=completed_status)
+            mock_client.artifacts.generate_audio = AsyncMock(
+                return_value=initial_status
+            )
+            mock_client.artifacts.wait_for_completion = AsyncMock(
+                return_value=completed_status
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123", "--wait"])
+                result = runner.invoke(
+                    cli, ["generate", "audio", "-n", "nb_123", "--wait"]
+                )
 
         assert result.exit_code == 0
         # The console message "Generating audio... Task: task_console_1" should appear
@@ -1634,12 +1831,18 @@ class TestHandleGenerationResultListPathAndWait:
             mock_client.artifacts.generate_audio = AsyncMock(
                 return_value=["task_list_wait", "extra"]
             )
-            mock_client.artifacts.wait_for_completion = AsyncMock(return_value=completed_status)
+            mock_client.artifacts.wait_for_completion = AsyncMock(
+                return_value=completed_status
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["generate", "audio", "-n", "nb_123", "--wait"])
+                result = runner.invoke(
+                    cli, ["generate", "audio", "-n", "nb_123", "--wait"]
+                )
 
         assert result.exit_code == 0
         mock_client.artifacts.wait_for_completion.assert_called_once()

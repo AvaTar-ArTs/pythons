@@ -24,7 +24,9 @@ class TestAgentShow:
     def test_agent_show_codex_displays_content(self, runner):
         """Test that agent show codex displays the bundled instructions."""
         with patch.object(
-            agent_module, "get_agent_source_content", return_value="# Repository Guidelines"
+            agent_module,
+            "get_agent_source_content",
+            return_value="# Repository Guidelines",
         ):
             result = runner.invoke(cli, ["agent", "show", "codex"])
 
@@ -33,7 +35,9 @@ class TestAgentShow:
 
     def test_agent_show_claude_displays_content(self, runner):
         """Test that agent show claude displays the bundled instructions."""
-        with patch.object(agent_module, "get_agent_source_content", return_value="# Claude Skill"):
+        with patch.object(
+            agent_module, "get_agent_source_content", return_value="# Claude Skill"
+        ):
             result = runner.invoke(cli, ["agent", "show", "claude"])
 
         assert result.exit_code == 0
@@ -54,7 +58,9 @@ class TestAgentTemplates:
     def test_codex_template_falls_back_to_package_data(self, tmp_path):
         """Test that codex content falls back to packaged data outside repo root."""
         with (
-            patch.object(agent_templates_module, "REPO_ROOT_AGENTS", tmp_path / "AGENTS.md"),
+            patch.object(
+                agent_templates_module, "REPO_ROOT_AGENTS", tmp_path / "AGENTS.md"
+            ),
             patch.object(
                 agent_templates_module,
                 "_read_package_data",

@@ -66,7 +66,9 @@ class TestResearchAPI:
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.research.start("nb_123", "AI ethics", source="web", mode="deep")
+            result = await client.research.start(
+                "nb_123", "AI ethics", source="web", mode="deep"
+            )
 
         assert result is not None
         assert result["mode"] == "deep"
@@ -84,8 +86,12 @@ class TestResearchAPI:
         from notebooklm.exceptions import ValidationError
 
         async with NotebookLMClient(auth_tokens) as client:
-            with pytest.raises(ValidationError, match="Deep Research only supports Web"):
-                await client.research.start("nb_123", "query", source="drive", mode="deep")
+            with pytest.raises(
+                ValidationError, match="Deep Research only supports Web"
+            ):
+                await client.research.start(
+                    "nb_123", "query", source="drive", mode="deep"
+                )
 
     @pytest.mark.asyncio
     async def test_start_invalid_source_raises(
@@ -224,10 +230,15 @@ class TestResearchAPI:
 
         async with NotebookLMClient(auth_tokens) as client:
             sources_to_import = [
-                {"url": "https://example.com/quantum", "title": "Quantum Computing Guide"},
+                {
+                    "url": "https://example.com/quantum",
+                    "title": "Quantum Computing Guide",
+                },
                 {"url": "https://example.com/ai", "title": "AI Research Paper"},
             ]
-            result = await client.research.import_sources("nb_123", "task_123", sources_to_import)
+            result = await client.research.import_sources(
+                "nb_123", "task_123", sources_to_import
+            )
 
         assert len(result) == 2
         assert result[0]["id"] == "src_001"
@@ -519,7 +530,12 @@ class TestPollEdgeCases:
                         None,
                         [
                             [
-                                ["https://fast.example.com", "Fast Title", "desc", "web"],
+                                [
+                                    "https://fast.example.com",
+                                    "Fast Title",
+                                    "desc",
+                                    "web",
+                                ],
                             ],
                             "Fast summary",
                         ],
@@ -641,7 +657,11 @@ class TestImportSourcesEdgeCases:
                 "task_123",
                 [
                     {"url": "https://web.com", "title": "Web Source", "result_type": 1},
-                    {"url": "https://report.com", "title": "Report Entry", "result_type": 5},
+                    {
+                        "url": "https://report.com",
+                        "title": "Report Entry",
+                        "result_type": 5,
+                    },
                 ],
             )
 

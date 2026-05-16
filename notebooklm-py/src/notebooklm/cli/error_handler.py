@@ -53,7 +53,9 @@ def _output_error(
 
 
 @contextmanager
-def handle_errors(verbose: bool = False, json_output: bool = False) -> Generator[None, None, None]:
+def handle_errors(
+    verbose: bool = False, json_output: bool = False
+) -> Generator[None, None, None]:
     """Context manager for consistent CLI error handling.
 
     Catches library exceptions and converts them to user-friendly
@@ -120,7 +122,9 @@ def handle_errors(verbose: bool = False, json_output: bool = False) -> Generator
         extra_info: dict[str, Any] | None = None
         if verbose and isinstance(e, RPCError) and e.method_id:
             extra_info = {"method_id": e.method_id}
-        _output_error(f"Error: {e}", "NOTEBOOKLM_ERROR", json_output, 1, extra=extra_info)
+        _output_error(
+            f"Error: {e}", "NOTEBOOKLM_ERROR", json_output, 1, extra=extra_info
+        )
     except click.ClickException:
         # Let Click handle its own exceptions (--help, bad args, etc.)
         raise

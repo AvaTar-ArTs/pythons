@@ -56,7 +56,9 @@ class TestChatE2E:
         assert result.turn_number >= 1
 
     @pytest.mark.asyncio
-    async def test_ask_returns_references_with_source_ids(self, client, multi_source_notebook_id):
+    async def test_ask_returns_references_with_source_ids(
+        self, client, multi_source_notebook_id
+    ):
         """Test that ask returns references with valid source IDs."""
         # Ask a question likely to generate citations
         result = await client.chat.ask(
@@ -80,7 +82,9 @@ class TestChatE2E:
                 assert ref.source_id.count("-") == 4
 
     @pytest.mark.asyncio
-    async def test_ask_returns_references_with_cited_text(self, client, multi_source_notebook_id):
+    async def test_ask_returns_references_with_cited_text(
+        self, client, multi_source_notebook_id
+    ):
         """Test that references include cited text when available."""
         result = await client.chat.ask(
             multi_source_notebook_id,
@@ -158,7 +162,9 @@ class TestChatE2E:
         assert result.answer
 
     @pytest.mark.asyncio
-    async def test_references_have_citation_numbers(self, client, multi_source_notebook_id):
+    async def test_references_have_citation_numbers(
+        self, client, multi_source_notebook_id
+    ):
         """Test that references have sequential citation numbers."""
         result = await client.chat.ask(
             multi_source_notebook_id,
@@ -184,7 +190,9 @@ class TestChatHistoryE2E:
 
     @pytest.mark.asyncio
     @pytest.mark.readonly
-    async def test_get_conversation_turns_returns_qa(self, client, read_only_notebook_id):
+    async def test_get_conversation_turns_returns_qa(
+        self, client, read_only_notebook_id
+    ):
         """get_conversation_turns returns Q&A turns for an existing conversation."""
         conv_id = await client.chat.get_conversation_id(read_only_notebook_id)
         if not conv_id:
@@ -206,12 +214,16 @@ class TestChatHistoryE2E:
         turns = turns_data[0]
         assert len(turns) >= 1
 
-        turn_types = [turn[2] for turn in turns if isinstance(turn, list) and len(turn) > 2]
+        turn_types = [
+            turn[2] for turn in turns if isinstance(turn, list) and len(turn) > 2
+        ]
         assert any(t in (1, 2) for t in turn_types), "Expected question or answer turns"
 
     @pytest.mark.asyncio
     @pytest.mark.readonly
-    async def test_get_conversation_turns_question_text(self, client, read_only_notebook_id):
+    async def test_get_conversation_turns_question_text(
+        self, client, read_only_notebook_id
+    ):
         """get_conversation_turns includes question text in an existing conversation."""
         conv_id = await client.chat.get_conversation_id(read_only_notebook_id)
         if not conv_id:
@@ -230,14 +242,18 @@ class TestChatHistoryE2E:
                 "cannot verify question text. Seed the notebook with chat messages to enable this test."
             )
         turns = turns_data[0]
-        question_turns = [t for t in turns if isinstance(t, list) and len(t) > 3 and t[2] == 1]
+        question_turns = [
+            t for t in turns if isinstance(t, list) and len(t) > 3 and t[2] == 1
+        ]
         assert question_turns, "No question turn found in response"
         assert isinstance(question_turns[0][3], str)
         assert len(question_turns[0][3]) > 0
 
     @pytest.mark.asyncio
     @pytest.mark.readonly
-    async def test_get_conversation_turns_answer_text(self, client, read_only_notebook_id):
+    async def test_get_conversation_turns_answer_text(
+        self, client, read_only_notebook_id
+    ):
         """get_conversation_turns includes AI answer text in an existing conversation."""
         conv_id = await client.chat.get_conversation_id(read_only_notebook_id)
         if not conv_id:
@@ -256,7 +272,9 @@ class TestChatHistoryE2E:
                 "cannot verify answer text. Seed the notebook with chat messages to enable this test."
             )
         turns = turns_data[0]
-        answer_turns = [t for t in turns if isinstance(t, list) and len(t) > 4 and t[2] == 2]
+        answer_turns = [
+            t for t in turns if isinstance(t, list) and len(t) > 4 and t[2] == 2
+        ]
         assert answer_turns, "No answer turn found in response"
         answer_text = answer_turns[0][4][0][0]
         assert isinstance(answer_text, str)
@@ -293,7 +311,9 @@ class TestChatReferencesE2E:
     """E2E tests specifically for chat references and citations."""
 
     @pytest.mark.asyncio
-    async def test_reference_source_ids_exist_in_notebook(self, client, multi_source_notebook_id):
+    async def test_reference_source_ids_exist_in_notebook(
+        self, client, multi_source_notebook_id
+    ):
         """Test that reference source IDs correspond to actual sources."""
         # Get all sources in the notebook
         sources = await client.sources.list(multi_source_notebook_id)
@@ -312,7 +332,9 @@ class TestChatReferencesE2E:
             ), f"Reference source_id {ref.source_id} not found in notebook sources"
 
     @pytest.mark.asyncio
-    async def test_cited_text_matches_source_content(self, client, multi_source_notebook_id):
+    async def test_cited_text_matches_source_content(
+        self, client, multi_source_notebook_id
+    ):
         """Test that cited text comes from the actual source content."""
         result = await client.chat.ask(
             multi_source_notebook_id,

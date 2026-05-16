@@ -45,9 +45,15 @@ def _determine_conversation_id(
 
     # Check if user switched notebooks via --notebook flag
     cached_notebook = get_current_notebook()
-    if explicit_notebook_id and cached_notebook and resolved_notebook_id != cached_notebook:
+    if (
+        explicit_notebook_id
+        and cached_notebook
+        and resolved_notebook_id != cached_notebook
+    ):
         if not json_output:
-            console.print("[dim]Different notebook specified, starting new conversation...[/dim]")
+            console.print(
+                "[dim]Different notebook specified, starting new conversation...[/dim]"
+            )
         return None
 
     return get_current_conversation()
@@ -89,7 +95,9 @@ def register_chat_commands(cli):
         default=None,
         help="Notebook ID (uses current if not set)",
     )
-    @click.option("--conversation-id", "-c", default=None, help="Continue a specific conversation")
+    @click.option(
+        "--conversation-id", "-c", default=None, help="Continue a specific conversation"
+    )
     @click.option(
         "--source",
         "-s",
@@ -98,10 +106,15 @@ def register_chat_commands(cli):
         help="Limit to specific source IDs (can be repeated)",
     )
     @click.option(
-        "--json", "json_output", is_flag=True, help="Output as JSON (includes references)"
+        "--json",
+        "json_output",
+        is_flag=True,
+        help="Output as JSON (includes references)",
     )
     @click.option("--save-as-note", is_flag=True, help="Save response as a note")
-    @click.option("--note-title", default=None, help="Note title (use with --save-as-note)")
+    @click.option(
+        "--note-title", default=None, help="Note title (use with --save-as-note)"
+    )
     @with_client
     def ask_cmd(
         ctx,
@@ -181,20 +194,28 @@ def register_chat_commands(cli):
                             f"\n[dim]Conversation: {result.conversation_id} (turn {result.turn_number or '?'})[/dim]"
                         )
                     else:
-                        console.print(f"\n[dim]New conversation: {result.conversation_id}[/dim]")
+                        console.print(
+                            f"\n[dim]New conversation: {result.conversation_id}[/dim]"
+                        )
 
                 if save_as_note:
                     if not result.answer:
-                        console.print("[yellow]Warning: No answer to save as note[/yellow]")
+                        console.print(
+                            "[yellow]Warning: No answer to save as note[/yellow]"
+                        )
                         return
                     try:
                         title = note_title or f"Chat: {question[:50]}"
-                        note = await client.notes.create(nb_id_resolved, title, result.answer)
+                        note = await client.notes.create(
+                            nb_id_resolved, title, result.answer
+                        )
                         console.print(
                             f"\n[dim]Saved as note: {note.title} ({note.id[:8]}...)[/dim]"
                         )
                     except Exception as e:
-                        console.print(f"[yellow]Warning: Failed to save note: {e}[/yellow]")
+                        console.print(
+                            f"[yellow]Warning: Failed to save note: {e}[/yellow]"
+                        )
 
         return _run()
 
@@ -213,7 +234,9 @@ def register_chat_commands(cli):
         default=None,
         help="Predefined chat mode",
     )
-    @click.option("--persona", default=None, help="Custom persona prompt (up to 10,000 chars)")
+    @click.option(
+        "--persona", default=None, help="Custom persona prompt (up to 10,000 chars)"
+    )
     @click.option(
         "--response-length",
         type=click.Choice(["default", "longer", "shorter"]),
@@ -221,7 +244,9 @@ def register_chat_commands(cli):
         help="Response verbosity",
     )
     @with_client
-    def configure_cmd(ctx, notebook_id, chat_mode, persona, response_length, client_auth):
+    def configure_cmd(
+        ctx, notebook_id, chat_mode, persona, response_length, client_auth
+    ):
         """Configure chat persona and response settings.
 
         \b
@@ -266,7 +291,10 @@ def register_chat_commands(cli):
                     length = length_map[response_length]
 
                 await client.chat.configure(
-                    nb_id_resolved, goal=goal, response_length=length, custom_prompt=persona
+                    nb_id_resolved,
+                    goal=goal,
+                    response_length=length,
+                    custom_prompt=persona,
                 )
 
                 parts = []
@@ -295,12 +323,24 @@ def register_chat_commands(cli):
         default=None,
         help="Notebook ID (uses current if not set)",
     )
-    @click.option("--limit", "-l", default=100, help="Maximum number of Q&A turns to show")
-    @click.option("--clear", "clear_cache", is_flag=True, help="Clear local conversation cache")
+    @click.option(
+        "--limit", "-l", default=100, help="Maximum number of Q&A turns to show"
+    )
+    @click.option(
+        "--clear", "clear_cache", is_flag=True, help="Clear local conversation cache"
+    )
     @click.option("--save", "save_as_note", is_flag=True, help="Save history as a note")
-    @click.option("-t", "--note-title", "note_title", default=None, help="Note title (with --save)")
+    @click.option(
+        "-t",
+        "--note-title",
+        "note_title",
+        default=None,
+        help="Note title (with --save)",
+    )
     @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
-    @click.option("--show-all", is_flag=True, help="Show full Q&A content instead of preview")
+    @click.option(
+        "--show-all", is_flag=True, help="Show full Q&A content instead of preview"
+    )
     @with_client
     def history_cmd(
         ctx,
@@ -353,7 +393,9 @@ def register_chat_commands(cli):
                     content = _format_history(qa_pairs)
                     title = note_title or "Chat History"
                     note = await client.notes.create(nb_id_resolved, title, content)
-                    console.print(f"[green]Saved as note: {note.title} ({note.id[:8]}...)[/green]")
+                    console.print(
+                        f"[green]Saved as note: {note.title} ({note.id[:8]}...)[/green]"
+                    )
                     return
 
                 if json_output:
@@ -392,7 +434,9 @@ def register_chat_commands(cli):
                 for i, (question, answer) in enumerate(qa_pairs, 1):
                     table.add_row(str(i), question[:50], answer[:50])
                 console.print(table)
-                console.print("\n[dim]Use 'notebooklm history --save' to save as a note.[/dim]")
+                console.print(
+                    "\n[dim]Use 'notebooklm history --save' to save as a note.[/dim]"
+                )
 
         return _run()
 

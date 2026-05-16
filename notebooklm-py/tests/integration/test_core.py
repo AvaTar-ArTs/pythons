@@ -63,19 +63,25 @@ class TestIsAuthError:
     def test_returns_true_for_401_http_status_error(self):
         mock_response = MagicMock()
         mock_response.status_code = 401
-        error = httpx.HTTPStatusError("401", request=MagicMock(), response=mock_response)
+        error = httpx.HTTPStatusError(
+            "401", request=MagicMock(), response=mock_response
+        )
         assert is_auth_error(error) is True
 
     def test_returns_true_for_403_http_status_error(self):
         mock_response = MagicMock()
         mock_response.status_code = 403
-        error = httpx.HTTPStatusError("403", request=MagicMock(), response=mock_response)
+        error = httpx.HTTPStatusError(
+            "403", request=MagicMock(), response=mock_response
+        )
         assert is_auth_error(error) is True
 
     def test_returns_false_for_500_http_status_error(self):
         mock_response = MagicMock()
         mock_response.status_code = 500
-        error = httpx.HTTPStatusError("500", request=MagicMock(), response=mock_response)
+        error = httpx.HTTPStatusError(
+            "500", request=MagicMock(), response=mock_response
+        )
         assert is_auth_error(error) is False
 
     def test_returns_true_for_rpc_error_with_auth_message(self):
@@ -100,7 +106,9 @@ class TestRPCCallHTTPErrors:
             mock_response.status_code = 429
             mock_response.headers = {"retry-after": "60"}
             mock_response.reason_phrase = "Too Many Requests"
-            error = httpx.HTTPStatusError("429", request=MagicMock(), response=mock_response)
+            error = httpx.HTTPStatusError(
+                "429", request=MagicMock(), response=mock_response
+            )
 
             with (
                 patch.object(core._http_client, "post", side_effect=error),
@@ -118,7 +126,9 @@ class TestRPCCallHTTPErrors:
             mock_response.status_code = 429
             mock_response.headers = {}
             mock_response.reason_phrase = "Too Many Requests"
-            error = httpx.HTTPStatusError("429", request=MagicMock(), response=mock_response)
+            error = httpx.HTTPStatusError(
+                "429", request=MagicMock(), response=mock_response
+            )
 
             with (
                 patch.object(core._http_client, "post", side_effect=error),
@@ -136,7 +146,9 @@ class TestRPCCallHTTPErrors:
             mock_response.status_code = 429
             mock_response.headers = {"retry-after": "not-a-number"}
             mock_response.reason_phrase = "Too Many Requests"
-            error = httpx.HTTPStatusError("429", request=MagicMock(), response=mock_response)
+            error = httpx.HTTPStatusError(
+                "429", request=MagicMock(), response=mock_response
+            )
 
             with (
                 patch.object(core._http_client, "post", side_effect=error),
@@ -153,7 +165,9 @@ class TestRPCCallHTTPErrors:
             mock_response = MagicMock()
             mock_response.status_code = 400
             mock_response.reason_phrase = "Bad Request"
-            error = httpx.HTTPStatusError("400", request=MagicMock(), response=mock_response)
+            error = httpx.HTTPStatusError(
+                "400", request=MagicMock(), response=mock_response
+            )
 
             with (
                 patch.object(core._http_client, "post", side_effect=error),
@@ -169,7 +183,9 @@ class TestRPCCallHTTPErrors:
             mock_response = MagicMock()
             mock_response.status_code = 500
             mock_response.reason_phrase = "Internal Server Error"
-            error = httpx.HTTPStatusError("500", request=MagicMock(), response=mock_response)
+            error = httpx.HTTPStatusError(
+                "500", request=MagicMock(), response=mock_response
+            )
 
             with (
                 patch.object(core._http_client, "post", side_effect=error),
@@ -379,7 +395,10 @@ class TestGetSourceIds:
             ]
 
             with patch.object(
-                core, "rpc_call", new_callable=AsyncMock, return_value=mock_notebook_data
+                core,
+                "rpc_call",
+                new_callable=AsyncMock,
+                return_value=mock_notebook_data,
             ):
                 ids = await core.get_source_ids("nb_123")
 
@@ -390,7 +409,9 @@ class TestGetSourceIds:
         async with NotebookLMClient(auth_tokens) as client:
             core = client._core
 
-            with patch.object(core, "rpc_call", new_callable=AsyncMock, return_value=None):
+            with patch.object(
+                core, "rpc_call", new_callable=AsyncMock, return_value=None
+            ):
                 ids = await core.get_source_ids("nb_123")
 
             assert ids == []
@@ -400,7 +421,9 @@ class TestGetSourceIds:
         async with NotebookLMClient(auth_tokens) as client:
             core = client._core
 
-            with patch.object(core, "rpc_call", new_callable=AsyncMock, return_value=[]):
+            with patch.object(
+                core, "rpc_call", new_callable=AsyncMock, return_value=[]
+            ):
                 ids = await core.get_source_ids("nb_123")
 
             assert ids == []
@@ -414,7 +437,10 @@ class TestGetSourceIds:
             mock_notebook_data = [["notebook_title", []]]
 
             with patch.object(
-                core, "rpc_call", new_callable=AsyncMock, return_value=mock_notebook_data
+                core,
+                "rpc_call",
+                new_callable=AsyncMock,
+                return_value=mock_notebook_data,
             ):
                 ids = await core.get_source_ids("nb_123")
 
@@ -426,14 +452,19 @@ class TestGetSourceIds:
             core = client._core
 
             with patch.object(
-                core, "rpc_call", new_callable=AsyncMock, return_value="unexpected_string"
+                core,
+                "rpc_call",
+                new_callable=AsyncMock,
+                return_value="unexpected_string",
             ):
                 ids = await core.get_source_ids("nb_123")
 
             assert ids == []
 
     @pytest.mark.asyncio
-    async def test_returns_empty_list_when_notebook_info_missing_sources(self, auth_tokens):
+    async def test_returns_empty_list_when_notebook_info_missing_sources(
+        self, auth_tokens
+    ):
         async with NotebookLMClient(auth_tokens) as client:
             core = client._core
 
@@ -441,7 +472,10 @@ class TestGetSourceIds:
             mock_notebook_data = [["notebook_title_only"]]
 
             with patch.object(
-                core, "rpc_call", new_callable=AsyncMock, return_value=mock_notebook_data
+                core,
+                "rpc_call",
+                new_callable=AsyncMock,
+                return_value=mock_notebook_data,
             ):
                 ids = await core.get_source_ids("nb_123")
 

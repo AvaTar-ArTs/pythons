@@ -265,12 +265,16 @@ def language_get(ctx, local, json_output):
     if current:
         name = SUPPORTED_LANGUAGES.get(current, "Unknown")
         console.print(f"Language: [cyan]{current}[/cyan] ({name})")
-        console.print("[dim]This is a global setting that applies to all notebooks.[/dim]")
+        console.print(
+            "[dim]This is a global setting that applies to all notebooks.[/dim]"
+        )
         if synced:
             console.print("[dim](synced from server)[/dim]")
     else:
         console.print("Language: [dim]not set[/dim] (defaults to 'en')")
-        console.print("\n[dim]Use 'notebooklm language set <code>' to set a default.[/dim]")
+        console.print(
+            "\n[dim]Use 'notebooklm language set <code>' to set a default.[/dim]"
+        )
 
 
 @language.command("set")
@@ -304,7 +308,9 @@ def language_set(ctx, code, local, json_output):
             )
         else:
             console.print(f"[red]Unknown language code: {code}[/red]")
-            console.print("\nRun [cyan]notebooklm language list[/cyan] to see supported codes.")
+            console.print(
+                "\nRun [cyan]notebooklm language list[/cyan] to see supported codes."
+            )
         raise SystemExit(1)
 
     # Save locally first
@@ -328,7 +334,9 @@ def language_set(ctx, code, local, json_output):
         )
         return
 
-    console.print("\n[yellow]⚠️  This is a GLOBAL setting that affects all notebooks.[/yellow]")
+    console.print(
+        "\n[yellow]⚠️  This is a GLOBAL setting that affects all notebooks.[/yellow]"
+    )
     console.print(f"\nLanguage set to: [cyan]{code}[/cyan] ({name})")
     if synced:
         console.print("[dim](synced to server)[/dim]")

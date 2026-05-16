@@ -276,7 +276,8 @@ class SourcesAPI:
             )
         """
         tasks = [
-            self.wait_until_ready(notebook_id, sid, timeout=timeout, **kwargs) for sid in source_ids
+            self.wait_until_ready(notebook_id, sid, timeout=timeout, **kwargs)
+            for sid in source_ids
         ]
         return list(await asyncio.gather(*tasks))
 
@@ -333,7 +334,9 @@ class SourcesAPI:
         source = Source.from_api_response(result)
 
         if wait:
-            return await self.wait_until_ready(notebook_id, source.id, timeout=wait_timeout)
+            return await self.wait_until_ready(
+                notebook_id, source.id, timeout=wait_timeout
+            )
 
         return source
 
@@ -379,12 +382,16 @@ class SourcesAPI:
             ) from e
 
         if result is None:
-            raise SourceAddError(title, message=f"API returned no data for text source: {title}")
+            raise SourceAddError(
+                title, message=f"API returned no data for text source: {title}"
+            )
 
         source = Source.from_api_response(result)
 
         if wait:
-            return await self.wait_until_ready(notebook_id, source.id, timeout=wait_timeout)
+            return await self.wait_until_ready(
+                notebook_id, source.id, timeout=wait_timeout
+            )
 
         return source
 
@@ -437,7 +444,9 @@ class SourcesAPI:
         source_id = await self._register_file_source(notebook_id, filename)
 
         # Step 2: Start resumable upload with the SOURCE_ID from step 1
-        upload_url = await self._start_resumable_upload(notebook_id, filename, file_size, source_id)
+        upload_url = await self._start_resumable_upload(
+            notebook_id, filename, file_size, source_id
+        )
 
         # Step 3: Stream upload file content (memory-efficient)
         await self._upload_file_streaming(upload_url, file_path)
@@ -453,7 +462,9 @@ class SourcesAPI:
         )
 
         if wait:
-            return await self.wait_until_ready(notebook_id, source.id, timeout=wait_timeout)
+            return await self.wait_until_ready(
+                notebook_id, source.id, timeout=wait_timeout
+            )
 
         return source
 
@@ -524,7 +535,9 @@ class SourcesAPI:
         source = Source.from_api_response(result)
 
         if wait:
-            return await self.wait_until_ready(notebook_id, source.id, timeout=wait_timeout)
+            return await self.wait_until_ready(
+                notebook_id, source.id, timeout=wait_timeout
+            )
 
         return source
 
@@ -567,7 +580,11 @@ class SourcesAPI:
             source_path=f"/notebook/{notebook_id}",
             allow_null=True,
         )
-        return Source.from_api_response(result) if result else Source(id=source_id, title=new_title)
+        return (
+            Source.from_api_response(result)
+            if result
+            else Source(id=source_id, title=new_title)
+        )
 
     async def refresh(self, notebook_id: str, source_id: str) -> bool:
         """Refresh a source to get updated content (for URL/Drive sources).
@@ -659,10 +676,18 @@ class SourcesAPI:
                 inner = outer[0]
                 if isinstance(inner, list):
                     # Summary at [1][0]
-                    if len(inner) > 1 and isinstance(inner[1], list) and len(inner[1]) > 0:
+                    if (
+                        len(inner) > 1
+                        and isinstance(inner[1], list)
+                        and len(inner[1]) > 0
+                    ):
                         summary = inner[1][0] if isinstance(inner[1][0], str) else ""
                     # Keywords at [2][0]
-                    if len(inner) > 2 and isinstance(inner[2], list) and len(inner[2]) > 0:
+                    if (
+                        len(inner) > 2
+                        and isinstance(inner[2], list)
+                        and len(inner[2]) > 0
+                    ):
                         keywords = inner[2][0] if isinstance(inner[2][0], list) else []
 
         return {"summary": summary, "keywords": keywords}
@@ -698,7 +723,9 @@ class SourcesAPI:
 
         # Validate response - raise if source not found
         if not result or not isinstance(result, list):
-            raise SourceNotFoundError(f"Source {source_id} not found in notebook {notebook_id}")
+            raise SourceNotFoundError(
+                f"Source {source_id} not found in notebook {notebook_id}"
+            )
 
         # Parse response structure
         title = ""
@@ -751,7 +778,9 @@ class SourcesAPI:
     # Private helper methods
     # =========================================================================
 
-    def _extract_all_text(self, data: builtins.list, max_depth: int = 100) -> builtins.list[str]:
+    def _extract_all_text(
+        self, data: builtins.list, max_depth: int = 100
+    ) -> builtins.list[str]:
         """Recursively extract all text strings from nested arrays.
 
         Args:
@@ -819,7 +848,9 @@ class SourcesAPI:
             logger.debug("Failed to parse YouTube URL '%s': %s", url[:100], e)
             return None
 
-    def _extract_video_id_from_parsed_url(self, parsed: Any, hostname: str) -> str | None:
+    def _extract_video_id_from_parsed_url(
+        self, parsed: Any, hostname: str
+    ) -> str | None:
         """Extract video ID from a parsed YouTube URL.
 
         Args:
@@ -929,7 +960,9 @@ class SourcesAPI:
             if source_id:
                 return source_id
 
-        raise SourceAddError(filename, message="Failed to get SOURCE_ID from registration response")
+        raise SourceAddError(
+            filename, message="Failed to get SOURCE_ID from registration response"
+        )
 
     async def _start_resumable_upload(
         self,
@@ -1003,5 +1036,7 @@ class SourcesAPI:
                     yield chunk
 
         async with httpx.AsyncClient(timeout=300.0) as client:
-            response = await client.post(upload_url, headers=headers, content=file_stream())
+            response = await client.post(
+                upload_url, headers=headers, content=file_stream()
+            )
             response.raise_for_status()

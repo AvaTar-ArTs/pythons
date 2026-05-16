@@ -28,7 +28,9 @@ class TestSkillInstall:
 
         with (
             patch.object(
-                skill_module, "get_skill_source_content", return_value=mock_source_content
+                skill_module,
+                "get_skill_source_content",
+                return_value=mock_source_content,
             ),
             patch.object(skill_module.Path, "home", return_value=home),
         ):
@@ -47,7 +49,9 @@ class TestSkillInstall:
 
         with (
             patch.object(
-                skill_module, "get_skill_source_content", return_value=mock_source_content
+                skill_module,
+                "get_skill_source_content",
+                return_value=mock_source_content,
             ),
             patch.object(skill_module.Path, "home", return_value=home),
             patch.object(skill_module.Path, "cwd", return_value=project),
@@ -67,7 +71,9 @@ class TestSkillInstall:
 
         with (
             patch.object(
-                skill_module, "get_skill_source_content", return_value=mock_source_content
+                skill_module,
+                "get_skill_source_content",
+                return_value=mock_source_content,
             ),
             patch.object(skill_module.Path, "cwd", return_value=project),
         ):
@@ -97,7 +103,9 @@ class TestSkillInstall:
 
         with (
             patch.object(
-                skill_module, "get_skill_source_content", return_value=mock_source_content
+                skill_module,
+                "get_skill_source_content",
+                return_value=mock_source_content,
             ),
             patch.object(skill_module.Path, "home", return_value=home),
         ):
@@ -265,7 +273,9 @@ class TestSkillVersionExtraction:
         from notebooklm.cli.skill import get_skill_version
 
         skill_file = tmp_path / "SKILL.md"
-        skill_file.write_text("---\nname: test\n---\n<!-- notebooklm-py v1.2.3 -->\n# Test")
+        skill_file.write_text(
+            "---\nname: test\n---\n<!-- notebooklm-py v1.2.3 -->\n# Test"
+        )
 
         version = get_skill_version(skill_file)
         assert version == "1.2.3"
@@ -314,7 +324,10 @@ class TestAddVersionComment:
 
         content = "---\nname: notebooklm\n---\n# Body"
         result = add_version_comment(content, "1.2.3")
-        assert result == "---\nname: notebooklm\n---\n<!-- notebooklm-py v1.2.3 -->\n# Body"
+        assert (
+            result
+            == "---\nname: notebooklm\n---\n<!-- notebooklm-py v1.2.3 -->\n# Body"
+        )
 
     def test_prepends_when_no_frontmatter(self):
         """Version comment is prepended when no frontmatter delimiters exist."""
@@ -369,7 +382,9 @@ class TestRemoveEmptyParents:
         with patch.object(skill_module.Path, "home", return_value=home):
             remove_empty_parents(skill_path.parent, "user")
 
-        assert (home / ".agents" / "skills").exists()  # non-empty, should not be removed
+        assert (
+            home / ".agents" / "skills"
+        ).exists()  # non-empty, should not be removed
 
     def test_scope_root_is_never_removed(self, tmp_path):
         """The scope root directory itself is never deleted."""

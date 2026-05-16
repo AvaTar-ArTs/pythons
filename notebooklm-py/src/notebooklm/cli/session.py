@@ -143,7 +143,9 @@ def _login_with_browser_cookies(storage_path: Path, browser_name: str) -> None:
             domains.append(domain)
 
     if browser_name == "auto":
-        console.print("[yellow]Reading cookies from installed browser (auto-detect)...[/yellow]")
+        console.print(
+            "[yellow]Reading cookies from installed browser (auto-detect)...[/yellow]"
+        )
         try:
             raw_cookies = rookiepy.load(domains=domains)
         except (OSError, RuntimeError) as e:
@@ -177,7 +179,9 @@ def _login_with_browser_cookies(storage_path: Path, browser_name: str) -> None:
 
     storage_state = convert_rookiepy_cookies_to_storage_state(raw_cookies)
     try:
-        cookies = extract_cookies_from_storage(storage_state)  # validates SID is present
+        cookies = extract_cookies_from_storage(
+            storage_state
+        )  # validates SID is present
     except ValueError as e:
         console.print(
             "[red]No valid Google authentication cookies found.[/red]\n"
@@ -199,7 +203,8 @@ def _login_with_browser_cookies(storage_path: Path, browser_name: str) -> None:
     except OSError as e:
         logger.error("Failed to save authentication to %s: %s", storage_path, e)
         console.print(
-            f"[red]Failed to save authentication to {storage_path}.[/red]\n" f"Details: {e}"
+            f"[red]Failed to save authentication to {storage_path}.[/red]\n"
+            f"Details: {e}"
         )
         raise SystemExit(1) from None
 
@@ -229,7 +234,9 @@ def _login_with_browser_cookies(storage_path: Path, browser_name: str) -> None:
         )
     except Exception as e:
         # Unexpected error - log it fully
-        logger.warning("Unexpected error verifying cookies: %s: %s", type(e).__name__, e)
+        logger.warning(
+            "Unexpected error verifying cookies: %s: %s", type(e).__name__, e
+        )
         console.print(
             f"[yellow]Warning: Unexpected error during verification: {e}[/yellow]\n"
             "Cookies saved but please verify with 'notebooklm auth check --test'"
@@ -317,7 +324,9 @@ def _ensure_chromium_installed() -> None:
         if "chromium" not in stdout_lower or "will download" not in stdout_lower:
             return
 
-        console.print("[yellow]Chromium browser not installed. Installing now...[/yellow]")
+        console.print(
+            "[yellow]Chromium browser not installed. Installing now...[/yellow]"
+        )
         install_result = subprocess.run(
             ["playwright", "install", "chromium"],
             capture_output=True,
@@ -419,7 +428,9 @@ def register_session_commands(cli):
             if browser == "msedge":
                 install_hint = "  pip install notebooklm[browser]"
             else:
-                install_hint = "  pip install notebooklm[browser]\n  playwright install chromium"
+                install_hint = (
+                    "  pip install notebooklm[browser]\n  playwright install chromium"
+                )
             console.print(f"[red]Playwright not installed. Run:[/red]\n{install_hint}")
             raise SystemExit(1) from None
 
@@ -513,7 +524,9 @@ def register_session_commands(cli):
 
                 current_url = page.url
                 if NOTEBOOKLM_HOST not in current_url:
-                    console.print(f"[yellow]Warning: Current URL is {current_url}[/yellow]")
+                    console.print(
+                        f"[yellow]Warning: Current URL is {current_url}[/yellow]"
+                    )
                     if not click.confirm("Save authentication anyway?"):
                         raise SystemExit(1)
 
@@ -620,7 +633,9 @@ def register_session_commands(cli):
 
     @cli.command("status")
     @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
-    @click.option("--paths", "show_paths", is_flag=True, help="Show resolved file paths")
+    @click.option(
+        "--paths", "show_paths", is_flag=True, help="Show resolved file paths"
+    )
     def status(json_output, show_paths):
         """Show current context (active notebook and conversation).
 
@@ -647,7 +662,9 @@ def register_session_commands(cli):
                 path_info.get("profile", "default"),
                 path_info.get("profile_source", ""),
             )
-            table.add_row("Home Directory", path_info["home_dir"], path_info["home_source"])
+            table.add_row(
+                "Home Directory", path_info["home_dir"], path_info["home_source"]
+            )
             table.add_row("Profile Directory", path_info.get("profile_dir", ""), "")
             table.add_row("Storage State", path_info["storage_path"], "")
             table.add_row("Context", path_info["context_path"], "")
@@ -695,7 +712,9 @@ def register_session_commands(cli):
                 if conversation_id:
                     table.add_row("Conversation", conversation_id)
                 else:
-                    table.add_row("Conversation", "[dim]None (will auto-select on next ask)[/dim]")
+                    table.add_row(
+                        "Conversation", "[dim]None (will auto-select on next ask)[/dim]"
+                    )
                 console.print(table)
             except (OSError, json.JSONDecodeError):
                 if json_output:
@@ -747,7 +766,10 @@ def register_session_commands(cli):
 
     @auth_group.command("check")
     @click.option(
-        "--test", "test_fetch", is_flag=True, help="Test token fetch (makes network request)"
+        "--test",
+        "test_fetch",
+        is_flag=True,
+        help="Test token fetch (makes network request)",
     )
     @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
     def auth_check(test_fetch, json_output):
@@ -897,7 +919,11 @@ def register_session_commands(cli):
         table.add_row(
             "Cookies present",
             status_icon(checks["cookies_present"]),
-            f"{len(details.get('cookies_found', []))} cookies" if checks["cookies_present"] else "",
+            (
+                f"{len(details.get('cookies_found', []))} cookies"
+                if checks["cookies_present"]
+                else ""
+            ),
         )
         table.add_row(
             "SID cookie",

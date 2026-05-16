@@ -22,7 +22,6 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SITE_ROOT = ROOT / "site"
 VERSIONS_ROOT = SITE_ROOT / "versions"
@@ -58,7 +57,10 @@ def update_latest_symlink(site_dir: Path, build_id: str) -> None:
     try:
         link.symlink_to(target, target_is_directory=True)
     except OSError as e:
-        print(f"Warning: could not create symlink {link} -> {target}: {e}", file=sys.stderr)
+        print(
+            f"Warning: could not create symlink {link} -> {target}: {e}",
+            file=sys.stderr,
+        )
 
 
 def write_versions_catalog(versions_root: Path, current_id: str) -> None:
@@ -99,6 +101,7 @@ def write_versions_catalog(versions_root: Path, current_id: str) -> None:
 </html>
 """
     write_text(versions_root / "index.html", catalog)
+
 
 AUDIO_EXT = {".wav", ".mp3", ".m4a", ".aac", ".ogg", ".flac"}
 VIDEO_EXT = {".mp4", ".webm", ".mov", ".mkv"}
@@ -216,7 +219,9 @@ def group_episodes(files: list[Path], notebook_root: Path) -> list[dict]:
         by_key[key].append(f)
 
     episodes: list[dict] = []
-    for (parent, stem), group in sorted(by_key.items(), key=lambda x: (x[0][0], x[0][1].lower())):
+    for (parent, stem), group in sorted(
+        by_key.items(), key=lambda x: (x[0][0], x[0][1].lower())
+    ):
         meta: dict | None = None
         meta_path: Path | None = None
         title = stem
@@ -257,9 +262,7 @@ def render_episode(page_path: Path, ep: dict) -> str:
     parts.append(f'<article class="episode" id="{html.escape(eid)}">')
     parts.append(f'<h3 class="episode-title">{html.escape(ep["title"])}</h3>')
     if ep["parent"] and ep["parent"] != ".":
-        parts.append(
-            f'<p class="muted path-hint">{html.escape(ep["parent"])}</p>'
-        )
+        parts.append(f'<p class="muted path-hint">{html.escape(ep["parent"])}</p>')
 
     # Media first
     for f in ep["files"]:
@@ -270,7 +273,9 @@ def render_episode(page_path: Path, ep: dict) -> str:
         if kind == "audio":
             parts.append('<div class="media audio">')
             parts.append(f'<audio controls preload="metadata" src="{u}"></audio>')
-            parts.append(f'<p class="muted"><a href="{u}">Open audio file ({name})</a></p>')
+            parts.append(
+                f'<p class="muted"><a href="{u}">Open audio file ({name})</a></p>'
+            )
             parts.append("</div>")
         elif kind == "video":
             parts.append('<div class="media video">')
@@ -293,9 +298,7 @@ def render_episode(page_path: Path, ep: dict) -> str:
             parts.append("</div>")
         elif kind == "html":
             parts.append('<div class="media html">')
-            parts.append(
-                f'<p><a class="button" href="{u}">Open HTML: {name}</a></p>'
-            )
+            parts.append(f'<p><a class="button" href="{u}">Open HTML: {name}</a></p>')
             parts.append("</div>")
 
     # Text / json / md / remaining
@@ -309,7 +312,9 @@ def render_episode(page_path: Path, ep: dict) -> str:
         ext = f.suffix.lower()
 
         if ext == ".json" and f == ep.get("meta_path"):
-            parts.append('<details class="json-meta"><summary>Artifact metadata (JSON)</summary>')
+            parts.append(
+                '<details class="json-meta"><summary>Artifact metadata (JSON)</summary>'
+            )
             raw = f.read_text(encoding="utf-8", errors="replace")
             parts.append(f'<pre class="code"><code>{html.escape(raw)}</code></pre>')
             parts.append("</details>")
@@ -519,9 +524,7 @@ def main() -> None:
         href = f"notebooks/{slug}.html"
         acount = len(episodes)
         if acount:
-            subtitle = (
-                f"{acount} episode{'s' if acount != 1 else ''} · audio, video, JSON, and docs"
-            )
+            subtitle = f"{acount} episode{'s' if acount != 1 else ''} · audio, video, JSON, and docs"
         else:
             subtitle = "No Artifacts folder yet — Sources / chat may still exist"
         th = themes[i % len(themes)]

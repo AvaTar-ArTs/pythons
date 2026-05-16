@@ -22,8 +22,14 @@ class TestNotesAPI:
             RPCMethod.GET_NOTES_AND_MIND_MAPS,
             [
                 [
-                    ["note_001", ["note_001", "Note content 1", None, None, "My First Note"]],
-                    ["note_002", ["note_002", "Note content 2", None, None, "My Second Note"]],
+                    [
+                        "note_001",
+                        ["note_001", "Note content 1", None, None, "My First Note"],
+                    ],
+                    [
+                        "note_002",
+                        ["note_002", "Note content 2", None, None, "My Second Note"],
+                    ],
                 ]
             ],
         )
@@ -67,10 +73,25 @@ class TestNotesAPI:
             RPCMethod.GET_NOTES_AND_MIND_MAPS,
             [
                 [
-                    ["note_001", ["note_001", "Regular note content", None, None, "Regular Note"]],
+                    [
+                        "note_001",
+                        [
+                            "note_001",
+                            "Regular note content",
+                            None,
+                            None,
+                            "Regular Note",
+                        ],
+                    ],
                     [
                         "mm_001",
-                        ["mm_001", '{"title":"Mind Map","children":[]}', None, None, "Mind Map"],
+                        [
+                            "mm_001",
+                            '{"title":"Mind Map","children":[]}',
+                            None,
+                            None,
+                            "Mind Map",
+                        ],
                     ],
                 ]
             ],
@@ -170,7 +191,9 @@ class TestNotesAPI:
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            await client.notes.update("nb_123", "note_001", "Updated content", "Updated title")
+            await client.notes.update(
+                "nb_123", "note_001", "Updated content", "Updated title"
+            )
 
         request = httpx_mock.get_request()
         assert RPCMethod.UPDATE_NOTE in str(request.url)
@@ -209,7 +232,13 @@ class TestNotesAPI:
                     ["note_001", ["note_001", "Regular note", None, None, "Note"]],
                     [
                         "mm_001",
-                        ["mm_001", '{"title":"Mind Map 1","children":[]}', None, None, "MM1"],
+                        [
+                            "mm_001",
+                            '{"title":"Mind Map 1","children":[]}',
+                            None,
+                            None,
+                            "MM1",
+                        ],
                     ],
                     ["mm_002", ["mm_002", '{"nodes":[{"id":"1"}]}', None, None, "MM2"]],
                 ]

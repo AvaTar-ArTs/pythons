@@ -374,7 +374,10 @@ class TestListNotes:
         """Test mind map detection in nested format."""
         mock_core.rpc_call.return_value = [
             [
-                ["mm_1", ["mm_1", '{"children": [], "title": "Mind Map"}', None, None, "MM"]],
+                [
+                    "mm_1",
+                    ["mm_1", '{"children": [], "title": "Mind Map"}', None, None, "MM"],
+                ],
                 ["note_1", ["note_1", "Just text", None, None, "Note"]],
             ]
         ]

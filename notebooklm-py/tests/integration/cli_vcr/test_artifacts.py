@@ -7,7 +7,12 @@ import pytest
 
 from notebooklm.notebooklm_cli import cli
 
-from .conftest import assert_command_success, notebooklm_vcr, parse_json_output, skip_no_cassettes
+from .conftest import (
+    assert_command_success,
+    notebooklm_vcr,
+    parse_json_output,
+    skip_no_cassettes,
+)
 
 pytestmark = [pytest.mark.vcr, skip_no_cassettes]
 
@@ -45,7 +50,10 @@ class TestArtifactListByType:
             ("infographic", "artifacts_list_infographics.yaml"),
             ("slide-deck", "artifacts_list_slide_decks.yaml"),
             ("data-table", "artifacts_list_data_tables.yaml"),
-            ("mind-map", "artifacts_list_audio.yaml"),  # Uses audio cassette as fallback
+            (
+                "mind-map",
+                "artifacts_list_audio.yaml",
+            ),  # Uses audio cassette as fallback
         ],
     )
     def test_artifact_list_by_type(

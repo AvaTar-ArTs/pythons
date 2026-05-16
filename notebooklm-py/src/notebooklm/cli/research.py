@@ -95,7 +95,9 @@ def research_status(ctx, notebook_id, json_output, client_auth):
 
                 display_report(status.get("report", ""))
 
-                console.print("\n[dim]Use 'research wait --import-all' to import sources[/dim]")
+                console.print(
+                    "\n[dim]Use 'research wait --import-all' to import sources[/dim]"
+                )
             else:
                 console.print(f"[yellow]Status: {status_val}[/yellow]")
 
@@ -125,7 +127,9 @@ def research_status(ctx, notebook_id, json_output, client_auth):
 @click.option("--import-all", is_flag=True, help="Import all found sources when done")
 @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
 @with_client
-def research_wait(ctx, notebook_id, timeout, interval, import_all, json_output, client_auth):
+def research_wait(
+    ctx, notebook_id, timeout, interval, import_all, json_output, client_auth
+):
     """Wait for research to complete.
 
     Blocks until research is completed or timeout is reached.
@@ -157,7 +161,10 @@ def research_wait(ctx, notebook_id, timeout, interval, import_all, json_output, 
                     elif status_val == "no_research":
                         if json_output:
                             json_output_response(
-                                {"status": "no_research", "error": "No research running"}
+                                {
+                                    "status": "no_research",
+                                    "error": "No research running",
+                                }
                             )
                         else:
                             console.print("[red]No research running[/red]")
@@ -167,10 +174,15 @@ def research_wait(ctx, notebook_id, timeout, interval, import_all, json_output, 
                 else:
                     if json_output:
                         json_output_response(
-                            {"status": "timeout", "error": f"Timed out after {timeout}s"}
+                            {
+                                "status": "timeout",
+                                "error": f"Timed out after {timeout}s",
+                            }
                         )
                     else:
-                        console.print(f"[yellow]Timed out after {timeout} seconds[/yellow]")
+                        console.print(
+                            f"[yellow]Timed out after {timeout} seconds[/yellow]"
+                        )
                     raise SystemExit(1)
 
             # Research completed

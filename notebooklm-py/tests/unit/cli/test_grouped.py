@@ -94,10 +94,18 @@ class TestSectionedHelp:
             if line.strip().endswith(":")
             and any(
                 s in line
-                for s in ["Session", "Notebooks", "Chat", "Command Groups", "Artifact Actions"]
+                for s in [
+                    "Session",
+                    "Notebooks",
+                    "Chat",
+                    "Command Groups",
+                    "Artifact Actions",
+                ]
             )
         )
-        assert section_count >= 4  # At least 4 of our sections should appear (no Insights anymore)
+        assert (
+            section_count >= 4
+        )  # At least 4 of our sections should appear (no Insights anymore)
 
 
 class TestSectionedHelpOrder:

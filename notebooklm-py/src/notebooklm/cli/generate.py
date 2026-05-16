@@ -225,8 +225,12 @@ async def handle_generation_result(
     # Wait for completion if requested
     if wait and task_id:
         if not json_output:
-            console.print(f"[yellow]Generating {artifact_type}...[/yellow] Task: {task_id}")
-        status = await client.artifacts.wait_for_completion(notebook_id, task_id, timeout=timeout)
+            console.print(
+                f"[yellow]Generating {artifact_type}...[/yellow] Task: {task_id}"
+            )
+        status = await client.artifacts.wait_for_completion(
+            notebook_id, task_id, timeout=timeout
+        )
 
     # Output status
     _output_generation_status(status, artifact_type, json_output)
@@ -249,7 +253,9 @@ def _extract_task_id(status: Any) -> str | None:
     return None
 
 
-def _output_generation_status(status: Any, artifact_type: str, json_output: bool) -> None:
+def _output_generation_status(
+    status: Any, artifact_type: str, json_output: bool
+) -> None:
     """Output generation status in appropriate format."""
     is_complete = hasattr(status, "is_complete") and status.is_complete
     is_failed = hasattr(status, "is_failed") and status.is_failed
@@ -266,7 +272,8 @@ def _output_generation_status(status: Any, artifact_type: str, json_output: bool
         elif is_failed:
             json_error_response(
                 "GENERATION_FAILED",
-                getattr(status, "error", None) or f"{artifact_type.title()} generation failed",
+                getattr(status, "error", None)
+                or f"{artifact_type.title()} generation failed",
             )
         else:
             task_id = _extract_task_id(status)
@@ -279,7 +286,9 @@ def _output_generation_status(status: Any, artifact_type: str, json_output: bool
             else:
                 console.print(f"[green]{artifact_type.title()} ready[/green]")
         elif is_failed:
-            console.print(f"[red]Failed:[/red] {getattr(status, 'error', 'Unknown error')}")
+            console.print(
+                f"[red]Failed:[/red] {getattr(status, 'error', 'Unknown error')}"
+            )
         else:
             task_id = _extract_task_id(status)
             console.print(f"[yellow]Started:[/yellow] {task_id or status}")
@@ -335,9 +344,15 @@ def generate():
     type=click.Choice(["short", "default", "long"]),
     default="default",
 )
-@click.option("--language", default=None, help="Output language (default: from config or 'en')")
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--language", default=None, help="Output language (default: from config or 'en')"
+)
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -393,7 +408,9 @@ def generate_audio(
                     audio_length=length_map[audio_length],
                 )
 
-            result = await generate_with_retry(_generate, max_retries, "audio", json_output)
+            result = await generate_with_retry(
+                _generate, max_retries, "audio", json_output
+            )
             await handle_generation_result(
                 client, nb_id_resolved, result, "audio", wait, json_output
             )
@@ -433,9 +450,15 @@ def generate_audio(
     ),
     default="auto",
 )
-@click.option("--language", default=None, help="Output language (default: from config or 'en')")
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--language", default=None, help="Output language (default: from config or 'en')"
+)
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -513,9 +536,17 @@ def generate_video(
                 )
 
             timeout = 1800.0 if is_cinematic else 600.0
-            result = await generate_with_retry(_generate, max_retries, "video", json_output)
+            result = await generate_with_retry(
+                _generate, max_retries, "video", json_output
+            )
             await handle_generation_result(
-                client, nb_id_resolved, result, "video", wait, json_output, timeout=timeout
+                client,
+                nb_id_resolved,
+                result,
+                "video",
+                wait,
+                json_output,
+                timeout=timeout,
             )
 
     return _run()
@@ -559,9 +590,15 @@ generate.add_command(_cinematic_video_gen_cmd)
     type=click.Choice(["default", "short"]),
     default="default",
 )
-@click.option("--language", default=None, help="Output language (default: from config or 'en')")
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--language", default=None, help="Output language (default: from config or 'en')"
+)
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -613,7 +650,9 @@ def generate_slide_deck(
                     slide_length=length_map[deck_length],
                 )
 
-            result = await generate_with_retry(_generate, max_retries, "slide deck", json_output)
+            result = await generate_with_retry(
+                _generate, max_retries, "slide deck", json_output
+            )
             await handle_generation_result(
                 client, nb_id_resolved, result, "slide deck", wait, json_output
             )
@@ -644,7 +683,9 @@ def generate_slide_deck(
     required=True,
     help="Zero-based index of the slide to revise (0 = first slide)",
 )
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -702,10 +743,18 @@ def generate_revise_slide(
     default=None,
     help="Notebook ID (uses current if not set)",
 )
-@click.option("--quantity", type=click.Choice(["fewer", "standard", "more"]), default="standard")
-@click.option("--difficulty", type=click.Choice(["easy", "medium", "hard"]), default="medium")
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--quantity", type=click.Choice(["fewer", "standard", "more"]), default="standard"
+)
+@click.option(
+    "--difficulty", type=click.Choice(["easy", "medium", "hard"]), default="medium"
+)
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -757,7 +806,9 @@ def generate_quiz(
                     difficulty=difficulty_map[difficulty],
                 )
 
-            result = await generate_with_retry(_generate, max_retries, "quiz", json_output)
+            result = await generate_with_retry(
+                _generate, max_retries, "quiz", json_output
+            )
             await handle_generation_result(
                 client, nb_id_resolved, result, "quiz", wait, json_output
             )
@@ -774,10 +825,18 @@ def generate_quiz(
     default=None,
     help="Notebook ID (uses current if not set)",
 )
-@click.option("--quantity", type=click.Choice(["fewer", "standard", "more"]), default="standard")
-@click.option("--difficulty", type=click.Choice(["easy", "medium", "hard"]), default="medium")
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--quantity", type=click.Choice(["fewer", "standard", "more"]), default="standard"
+)
+@click.option(
+    "--difficulty", type=click.Choice(["easy", "medium", "hard"]), default="medium"
+)
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -829,7 +888,9 @@ def generate_flashcards(
                     difficulty=difficulty_map[difficulty],
                 )
 
-            result = await generate_with_retry(_generate, max_retries, "flashcards", json_output)
+            result = await generate_with_retry(
+                _generate, max_retries, "flashcards", json_output
+            )
             await handle_generation_result(
                 client, nb_id_resolved, result, "flashcards", wait, json_output
             )
@@ -861,9 +922,15 @@ def generate_flashcards(
     type=click.Choice(list(_INFOGRAPHIC_STYLE_MAP)),
     default="auto",
 )
-@click.option("--language", default=None, help="Output language (default: from config or 'en')")
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--language", default=None, help="Output language (default: from config or 'en')"
+)
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -919,7 +986,9 @@ def generate_infographic(
                     style=_INFOGRAPHIC_STYLE_MAP[style],
                 )
 
-            result = await generate_with_retry(_generate, max_retries, "infographic", json_output)
+            result = await generate_with_retry(
+                _generate, max_retries, "infographic", json_output
+            )
             await handle_generation_result(
                 client, nb_id_resolved, result, "infographic", wait, json_output
             )
@@ -936,9 +1005,15 @@ def generate_infographic(
     default=None,
     help="Notebook ID (uses current if not set)",
 )
-@click.option("--language", default=None, help="Output language (default: from config or 'en')")
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--language", default=None, help="Output language (default: from config or 'en')"
+)
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -978,7 +1053,9 @@ def generate_data_table(
                     instructions=description,
                 )
 
-            result = await generate_with_retry(_generate, max_retries, "data table", json_output)
+            result = await generate_with_retry(
+                _generate, max_retries, "data table", json_output
+            )
             await handle_generation_result(
                 client, nb_id_resolved, result, "data table", wait, json_output
             )
@@ -994,7 +1071,9 @@ def generate_data_table(
     default=None,
     help="Notebook ID (uses current if not set)",
 )
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
 @json_option
 @with_client
 def generate_mind_map(ctx, notebook_id, source_ids, json_output, client_auth):
@@ -1066,15 +1145,21 @@ def _output_mind_map_result(result: Any, json_output: bool) -> None:
     default=None,
     help="Notebook ID (uses current if not set)",
 )
-@click.option("--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs")
-@click.option("--language", default=None, help="Output language (default: from config or 'en')")
+@click.option(
+    "--source", "-s", "source_ids", multiple=True, help="Limit to specific source IDs"
+)
+@click.option(
+    "--language", default=None, help="Output language (default: from config or 'en')"
+)
 @click.option(
     "--append",
     "append_instructions",
     default=None,
     help="Append extra instructions to the built-in prompt for non-custom formats. Has no effect with --format custom.",
 )
-@click.option("--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)")
+@click.option(
+    "--wait/--no-wait", default=False, help="Wait for completion (default: no-wait)"
+)
 @retry_option
 @json_option
 @with_client
@@ -1154,7 +1239,9 @@ def generate_report_cmd(
                     extra_instructions=append_instructions,
                 )
 
-            result = await generate_with_retry(_generate, max_retries, format_display, json_output)
+            result = await generate_with_retry(
+                _generate, max_retries, format_display, json_output
+            )
             await handle_generation_result(
                 client, nb_id_resolved, result, format_display, wait, json_output
             )

@@ -21,10 +21,16 @@ class TestGenerateCommands:
             ("quiz", "artifacts_generate_quiz.yaml", []),
             ("flashcards", "artifacts_generate_flashcards.yaml", []),
             ("report", "artifacts_generate_report.yaml", ["--format", "briefing-doc"]),
-            ("report", "artifacts_generate_study_guide.yaml", ["--format", "study-guide"]),
+            (
+                "report",
+                "artifacts_generate_study_guide.yaml",
+                ["--format", "study-guide"],
+            ),
         ],
     )
-    def test_generate(self, runner, mock_auth_for_vcr, mock_context, command, cassette, extra_args):
+    def test_generate(
+        self, runner, mock_auth_for_vcr, mock_context, command, cassette, extra_args
+    ):
         """Generate commands work with real client."""
         with notebooklm_vcr.use_cassette(cassette):
             result = runner.invoke(cli, ["generate", command, *extra_args])

@@ -34,7 +34,9 @@ class TestSharingGetStatus:
         assert len(status.shared_users) >= 1
 
         # Check that owner has OWNER permission
-        owners = [u for u in status.shared_users if u.permission == SharePermission.OWNER]
+        owners = [
+            u for u in status.shared_users if u.permission == SharePermission.OWNER
+        ]
         assert len(owners) >= 1
 
 
@@ -97,7 +99,9 @@ class TestSharingSetViewLevel:
     @pytest.mark.e2e
     async def test_set_view_level_full_notebook(self, client, temp_notebook):
         """Test setting view level to full notebook."""
-        await client.sharing.set_view_level(temp_notebook.id, ShareViewLevel.FULL_NOTEBOOK)
+        await client.sharing.set_view_level(
+            temp_notebook.id, ShareViewLevel.FULL_NOTEBOOK
+        )
 
         # The test passes if no exception is raised
 

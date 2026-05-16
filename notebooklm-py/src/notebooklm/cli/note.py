@@ -180,7 +180,9 @@ def note_save(ctx, note_id, notebook_id, title, content, client_auth):
         async with NotebookLMClient(client_auth) as client:
             nb_id_resolved = await resolve_notebook_id(client, nb_id)
             resolved_id = await resolve_note_id(client, nb_id_resolved, note_id)
-            await client.notes.update(nb_id_resolved, resolved_id, content=content, title=title)
+            await client.notes.update(
+                nb_id_resolved, resolved_id, content=content, title=title
+            )
             console.print(f"[green]Note updated:[/green] {resolved_id}")
 
     return _run()

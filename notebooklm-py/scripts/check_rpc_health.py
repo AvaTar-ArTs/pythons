@@ -257,7 +257,9 @@ async def make_rpc_call(
     Returns:
         Tuple of (list of RPC IDs found in response, error message or None)
     """
-    response_text, error = await make_rpc_request(client, auth, method, params, source_path)
+    response_text, error = await make_rpc_request(
+        client, auth, method, params, source_path
+    )
     if error:
         return [], error
     if response_text is None:
@@ -336,23 +338,31 @@ async def test_rpc_method_with_data(
     """
     expected_id = method.value
 
-    response_text, error = await make_rpc_request(client, auth, method, params, source_path)
+    response_text, error = await make_rpc_request(
+        client, auth, method, params, source_path
+    )
     if error:
-        return CheckResult(
-            method=method,
-            status=CheckStatus.ERROR,
-            expected_id=expected_id,
-            found_ids=[],
-            error=error,
-        ), None
+        return (
+            CheckResult(
+                method=method,
+                status=CheckStatus.ERROR,
+                expected_id=expected_id,
+                found_ids=[],
+                error=error,
+            ),
+            None,
+        )
     if response_text is None:
-        return CheckResult(
-            method=method,
-            status=CheckStatus.ERROR,
-            expected_id=expected_id,
-            found_ids=[],
-            error="Empty response from server",
-        ), None
+        return (
+            CheckResult(
+                method=method,
+                status=CheckStatus.ERROR,
+                expected_id=expected_id,
+                found_ids=[],
+                error="Empty response from server",
+            ),
+            None,
+        )
 
     try:
         cleaned = strip_anti_xssi(response_text)
@@ -360,23 +370,29 @@ async def test_rpc_method_with_data(
         found_ids = collect_rpc_ids(chunks)
         data = decode_response(response_text, method.value)
     except (json.JSONDecodeError, ValueError, IndexError, TypeError, RPCError) as e:
-        return CheckResult(
-            method=method,
-            status=CheckStatus.ERROR,
-            expected_id=expected_id,
-            found_ids=[],
-            error=f"Parse error: {e}",
-        ), None
+        return (
+            CheckResult(
+                method=method,
+                status=CheckStatus.ERROR,
+                expected_id=expected_id,
+                found_ids=[],
+                error=f"Parse error: {e}",
+            ),
+            None,
+        )
 
     status = CheckStatus.OK if expected_id in found_ids else CheckStatus.ERROR
     error_msg = None if status == CheckStatus.OK else "RPC ID not found in response"
-    return CheckResult(
-        method=method,
-        status=status,
-        expected_id=expected_id,
-        found_ids=found_ids,
-        error=error_msg,
-    ), data
+    return (
+        CheckResult(
+            method=method,
+            status=status,
+            expected_id=expected_id,
+            found_ids=found_ids,
+            error=error_msg,
+        ),
+        data,
+    )
 
 
 def format_check_output(result: CheckResult, suffix: str | None = None) -> str:
@@ -596,7 +612,11 @@ async def check_method(
 
     # Check if expected ID is in response
     status = CheckStatus.OK if expected_id in found_ids else CheckStatus.MISMATCH
-    error_msg = None if status == CheckStatus.OK else f"Expected '{expected_id}' not in response"
+    error_msg = (
+        None
+        if status == CheckStatus.OK
+        else f"Expected '{expected_id}' not in response"
+    )
     return CheckResult(
         method=method,
         status=status,
@@ -672,7 +692,9 @@ async def setup_temp_resources(
     if result.status == CheckStatus.OK:
         temp.source_id = extract_id(data, 0, 0)
         if not temp.source_id:
-            print(f"  WARNING: ADD_SOURCE ID extraction failed. Response: {repr(data)[:200]}")
+            print(
+                f"  WARNING: ADD_SOURCE ID extraction failed. Response: {repr(data)[:200]}"
+            )
 
     # Test ADD_SOURCE_FILE - registers file source intent (no actual upload needed)
     # Params format: [[[filename]], notebook_id, [2], [1, None, ...]]
@@ -786,7 +808,11 @@ async def setup_temp_resources(
                     client,
                     auth,
                     RPCMethod.LIST_ARTIFACTS,
-                    [[2], temp.notebook_id, 'NOT artifact.status = "ARTIFACT_STATUS_SUGGESTED"'],
+                    [
+                        [2],
+                        temp.notebook_id,
+                        'NOT artifact.status = "ARTIFACT_STATUS_SUGGESTED"',
+                    ],
                     source_path=f"/notebook/{temp.notebook_id}",
                 )
                 # Check if status indicates completion (status code 3 = ready)
@@ -796,14 +822,18 @@ async def setup_temp_resources(
                     break
 
             if artifact_ready:
-                print(f"  Artifact ready after {polls_done * poll_interval:.0f}s polling")
+                print(
+                    f"  Artifact ready after {polls_done * poll_interval:.0f}s polling"
+                )
             else:
                 print(
                     f"  Artifact not ready after {max_polls * poll_interval:.0f}s (continuing anyway)"
                 )
     else:
         # Skip artifact tests - no source_id available
-        print("SKIP     CREATE_ARTIFACT - No source_id available (source extraction failed)")
+        print(
+            "SKIP     CREATE_ARTIFACT - No source_id available (source extraction failed)"
+        )
 
     return temp
 
@@ -873,12 +903,17 @@ async def cleanup_temp_resources(
     # ALWAYS delete notebook - this is critical to avoid orphaned notebooks
     try:
         await asyncio.sleep(CALL_DELAY)
-        result = await test_rpc_method(client, auth, RPCMethod.DELETE_NOTEBOOK, [temp.notebook_id])
+        result = await test_rpc_method(
+            client, auth, RPCMethod.DELETE_NOTEBOOK, [temp.notebook_id]
+        )
         results.append(result)
         print(format_check_with_success(result, "temp notebook deleted"))
     except Exception as e:
         print(f"ERROR    DELETE_NOTEBOOK - {e}")
-        print(f"WARNING: Notebook {temp.notebook_id} may need manual cleanup", file=sys.stderr)
+        print(
+            f"WARNING: Notebook {temp.notebook_id} may need manual cleanup",
+            file=sys.stderr,
+        )
 
 
 async def run_health_check(full_mode: bool = False) -> list[CheckResult]:
@@ -890,7 +925,10 @@ async def run_health_check(full_mode: bool = False) -> list[CheckResult]:
     )
 
     if not notebook_id and not full_mode:
-        print("WARNING: No notebook ID provided. Some methods will be skipped.", file=sys.stderr)
+        print(
+            "WARNING: No notebook ID provided. Some methods will be skipped.",
+            file=sys.stderr,
+        )
 
     results: list[CheckResult] = []
     temp_resources = TempResources()
@@ -924,7 +962,9 @@ async def run_health_check(full_mode: bool = False) -> list[CheckResult]:
             print("=" * 60)
 
             for i, method in enumerate(methods, 1):
-                result = await check_method(client, auth, method, notebook_id, full_mode)
+                result = await check_method(
+                    client, auth, method, notebook_id, full_mode
+                )
                 results.append(result)
 
                 status_icon = STATUS_ICONS[result.status]
@@ -971,7 +1011,9 @@ def print_summary(results: list[CheckResult]) -> int:
             print(f"  {r.method.name}:")
             print(f"    Expected: '{r.expected_id}'")
             print(f"    Found:    {r.found_ids}")
-            print(f"    Action:   Update RPCMethod.{r.method.name} in src/notebooklm/rpc/types.py")
+            print(
+                f"    Action:   Update RPCMethod.{r.method.name} in src/notebooklm/rpc/types.py"
+            )
             print()
 
     # Print details for errors

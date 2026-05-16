@@ -97,7 +97,9 @@ class TestChatAPI:
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.chat.get_conversation_turns("nb_123", "conv_001", limit=2)
+            result = await client.chat.get_conversation_turns(
+                "nb_123", "conv_001", limit=2
+            )
 
         assert result is not None
         turns = result[0]
@@ -535,7 +537,10 @@ class TestChatReferences:
                 source_ids=["src_001"],
             )
 
-        assert result.answer == "This is a valid answer returned without the answer marker."
+        assert (
+            result.answer
+            == "This is a valid answer returned without the answer marker."
+        )
         assert result.conversation_id is not None
         assert result.is_follow_up is False
 
@@ -909,7 +914,9 @@ class TestGetHistoryErrorHandling:
         """Test get_history returns [] when get_conversation_turns raises ChatError."""
         from notebooklm.exceptions import ChatError
 
-        id_response = build_rpc_response(RPCMethod.GET_LAST_CONVERSATION_ID, [[["conv_001"]]])
+        id_response = build_rpc_response(
+            RPCMethod.GET_LAST_CONVERSATION_ID, [[["conv_001"]]]
+        )
         httpx_mock.add_response(content=id_response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -933,7 +940,9 @@ class TestGetHistoryErrorHandling:
         """Test get_history returns [] when get_conversation_turns raises NetworkError."""
         from notebooklm.exceptions import NetworkError
 
-        id_response = build_rpc_response(RPCMethod.GET_LAST_CONVERSATION_ID, [[["conv_001"]]])
+        id_response = build_rpc_response(
+            RPCMethod.GET_LAST_CONVERSATION_ID, [[["conv_001"]]]
+        )
         httpx_mock.add_response(content=id_response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -971,7 +980,9 @@ class TestGetHistoryErrorHandling:
         build_rpc_response,
     ):
         """Test get_history reverses turns_data when turns_data[0][0] is a list (lines 272-279)."""
-        id_response = build_rpc_response(RPCMethod.GET_LAST_CONVERSATION_ID, [[["conv_001"]]])
+        id_response = build_rpc_response(
+            RPCMethod.GET_LAST_CONVERSATION_ID, [[["conv_001"]]]
+        )
         # Newest-first: [A1, Q1]
         turns_response = build_rpc_response(
             RPCMethod.GET_CONVERSATION_TURNS,
@@ -1011,7 +1022,9 @@ class TestGetHistoryErrorHandling:
         httpx_mock.add_response(content=turns_response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.chat.get_history("nb_123", conversation_id="conv_direct")
+            result = await client.chat.get_history(
+                "nb_123", conversation_id="conv_direct"
+            )
 
         assert len(result) == 1
         assert result[0] == ("Direct question?", "Direct answer.")
@@ -1020,13 +1033,17 @@ class TestGetHistoryErrorHandling:
 class TestBuildConversationHistory:
     """Tests for _build_conversation_history (line 422)."""
 
-    def test_build_conversation_history_returns_none_when_no_cached_turns(self, auth_tokens):
+    def test_build_conversation_history_returns_none_when_no_cached_turns(
+        self, auth_tokens
+    ):
         """Test _build_conversation_history returns None for unknown conversation_id."""
         client = NotebookLMClient(auth_tokens)
         result = client.chat._build_conversation_history("nonexistent-conv-id")
         assert result is None
 
-    def test_build_conversation_history_returns_list_when_turns_cached(self, auth_tokens):
+    def test_build_conversation_history_returns_list_when_turns_cached(
+        self, auth_tokens
+    ):
         """Test _build_conversation_history returns history list when turns exist."""
         client = NotebookLMClient(auth_tokens)
         # Manually cache a turn
@@ -1054,7 +1071,9 @@ class TestParseAskResponseEdgeCases:
         chunk_json = json.dumps([["wrb.fr", None, inner_json]])
         response_body = f")]}}'\n{len(chunk_json)}\n{chunk_json}\n"
 
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(response_body)
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            response_body
+        )
         assert answer == "Answer text."
         assert conv_id is None
 
@@ -1063,19 +1082,25 @@ class TestParseAskResponseEdgeCases:
         import json
 
         client = NotebookLMClient(auth_tokens)
-        inner_data = [["Answer without prefix.", None, [12345], None, [[], None, None, [], 1]]]
+        inner_data = [
+            ["Answer without prefix.", None, [12345], None, [[], None, None, [], 1]]
+        ]
         inner_json = json.dumps(inner_data)
         chunk_json = json.dumps([["wrb.fr", None, inner_json]])
         response_body = f"{len(chunk_json)}\n{chunk_json}\n"
 
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(response_body)
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            response_body
+        )
         assert answer == "Answer without prefix."
         assert conv_id is None
 
     def test_parse_empty_response_returns_empty_string(self, auth_tokens):
         """Test that completely empty response returns empty string (line 489)."""
         client = NotebookLMClient(auth_tokens)
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(")]}'\n")
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            ")]}'\n"
+        )
         assert answer == ""
         assert refs == []
         assert conv_id is None
@@ -1099,7 +1124,9 @@ class TestParseAskResponseEdgeCases:
         chunk_json = json.dumps([["wrb.fr", None, inner_json]])
         response_body = f")]}}'\n{len(chunk_json)}\n{chunk_json}\n"
 
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(response_body)
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            response_body
+        )
         assert answer == "This is unmarked text content."
         assert conv_id is None
 
@@ -1140,7 +1167,9 @@ class TestParseAskResponseEdgeCases:
         chunk_json = json.dumps([["wrb.fr", None, inner_json]])
         response_body = f")]}}'\n{len(chunk_json)}\n{chunk_json}\n"
 
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(response_body)
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            response_body
+        )
         assert len(refs) == 1
         assert refs[0].citation_number == 1
         assert conv_id is None
@@ -1152,8 +1181,8 @@ class TestExtractAnswerAndRefsFromChunk:
     def test_invalid_json_returns_none(self, auth_tokens):
         """Test that invalid JSON input returns (None, False, []) (line 496-527)."""
         client = NotebookLMClient(auth_tokens)
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            "not-valid-json"
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk("not-valid-json")
         )
         assert text is None
         assert is_answer is False
@@ -1165,8 +1194,10 @@ class TestExtractAnswerAndRefsFromChunk:
         import json
 
         client = NotebookLMClient(auth_tokens)
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps("a string value")
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(
+                json.dumps("a string value")
+            )
         )
         assert text is None
         assert is_answer is False
@@ -1179,8 +1210,8 @@ class TestExtractAnswerAndRefsFromChunk:
 
         client = NotebookLMClient(auth_tokens)
         data = [["other.fr", "method_id", json.dumps([[["answer"]]])]]
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps(data)
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(json.dumps(data))
         )
         assert text is None
         assert conv_id is None
@@ -1192,8 +1223,8 @@ class TestExtractAnswerAndRefsFromChunk:
         client = NotebookLMClient(auth_tokens)
         # item[2] is an integer, not a string
         data = [["wrb.fr", "method_id", 42, None, None]]
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps(data)
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(json.dumps(data))
         )
         assert text is None
         assert conv_id is None
@@ -1206,8 +1237,8 @@ class TestExtractAnswerAndRefsFromChunk:
         # inner_data[0] is a string, not a list
         inner_data = ["not a list"]
         data = [["wrb.fr", "method_id", json.dumps(inner_data)]]
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps(data)
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(json.dumps(data))
         )
         assert text is None
         assert conv_id is None
@@ -1220,8 +1251,8 @@ class TestExtractAnswerAndRefsFromChunk:
         # first[0] is None, not a string
         inner_data = [[[None, None, [12345]]]]
         data = [["wrb.fr", "method_id", json.dumps(inner_data)]]
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps(data)
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(json.dumps(data))
         )
         assert text is None
         assert conv_id is None
@@ -1233,8 +1264,8 @@ class TestExtractAnswerAndRefsFromChunk:
         client = NotebookLMClient(auth_tokens)
         # item[2] is a string but not valid JSON
         data = [["wrb.fr", "method_id", "{not valid json}"]]
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps(data)
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(json.dumps(data))
         )
         assert text is None
         assert refs == []
@@ -1245,8 +1276,8 @@ class TestExtractAnswerAndRefsFromChunk:
         import json
 
         client = NotebookLMClient(auth_tokens)
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps([])
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(json.dumps([]))
         )
         assert text is None
         assert is_answer is False
@@ -1259,8 +1290,8 @@ class TestExtractAnswerAndRefsFromChunk:
 
         client = NotebookLMClient(auth_tokens)
         data = [["wrb.fr", "only_two"]]
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps(data)
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(json.dumps(data))
         )
         assert text is None
         assert conv_id is None
@@ -1313,7 +1344,9 @@ class TestParseSingleCitationEdgeCases:
         result = client.chat._parse_single_citation(["only_one"])
         assert result is None
 
-    def test_parse_single_citation_returns_none_when_cite_inner_not_list(self, auth_tokens):
+    def test_parse_single_citation_returns_none_when_cite_inner_not_list(
+        self, auth_tokens
+    ):
         """Test _parse_single_citation returns None when cite[1] is not a list (line 621)."""
         client = NotebookLMClient(auth_tokens)
         result = client.chat._parse_single_citation([["chunk-id"], "not_a_list"])
@@ -1536,7 +1569,9 @@ class TestGetConversationIdNullRaw:
     ):
         """Test get_conversation_id returns None when groups in raw are not lists (arc 231->230)."""
         # Response has non-list items in the outer array (valid decode but no conv_id)
-        response = build_rpc_response(RPCMethod.GET_LAST_CONVERSATION_ID, ["not_a_list"])
+        response = build_rpc_response(
+            RPCMethod.GET_LAST_CONVERSATION_ID, ["not_a_list"]
+        )
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -1556,7 +1591,9 @@ class TestGetHistoryTurnsDataNotReversed:
         build_rpc_response,
     ):
         """Test get_history returns [] when turns_data is empty (skips reversal, arc 272->279)."""
-        id_response = build_rpc_response(RPCMethod.GET_LAST_CONVERSATION_ID, [[["conv_001"]]])
+        id_response = build_rpc_response(
+            RPCMethod.GET_LAST_CONVERSATION_ID, [[["conv_001"]]]
+        )
         # turns_data is an empty outer list, so turns_data[0] is falsy
         turns_response = build_rpc_response(
             RPCMethod.GET_CONVERSATION_TURNS,
@@ -1586,7 +1623,9 @@ class TestParseAskResponseNumericLengthPrefix:
         # Append a dangling numeric line at the end with no content following
         response_body = f")]}}'\n{len(chunk_json)}\n{chunk_json}\n99\n"
 
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(response_body)
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            response_body
+        )
         # The valid chunk should still be parsed
         assert answer == "Valid answer."
         assert conv_id is None
@@ -1597,13 +1636,17 @@ class TestParseAskResponseNumericLengthPrefix:
 
         client = NotebookLMClient(auth_tokens)
         # Response with direct JSON chunk (no length prefix)
-        inner_data = [["Direct JSON answer.", None, [12345], None, [[], None, None, [], 1]]]
+        inner_data = [
+            ["Direct JSON answer.", None, [12345], None, [[], None, None, [], 1]]
+        ]
         inner_json = json.dumps(inner_data)
         chunk_json = json.dumps([["wrb.fr", None, inner_json]])
         # No length prefix - just direct JSON
         response_body = f")]}}'\n{chunk_json}\n"
 
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(response_body)
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            response_body
+        )
         assert answer == "Direct JSON answer."
         assert conv_id is None
 
@@ -1619,8 +1662,8 @@ class TestExtractAnswerEmptyInnerData:
         # inner_data is an empty list -> len(inner_data) == 0, skips the processing
         inner_data: list = []
         data = [["wrb.fr", "method_id", json.dumps(inner_data)]]
-        text, is_answer, refs, conv_id = client.chat._extract_answer_and_refs_from_chunk(
-            json.dumps(data)
+        text, is_answer, refs, conv_id = (
+            client.chat._extract_answer_and_refs_from_chunk(json.dumps(data))
         )
         assert text is None
         assert is_answer is False
@@ -1630,7 +1673,9 @@ class TestExtractAnswerEmptyInnerData:
 class TestExtractTextPassagesMultiplePassages:
     """Tests for _extract_text_passages with multiple passages (lines 676-682)."""
 
-    def test_extract_text_passages_multiple_passages_updates_end_char(self, auth_tokens):
+    def test_extract_text_passages_multiple_passages_updates_end_char(
+        self, auth_tokens
+    ):
         """Test that end_char is updated for each valid passage (lines 678-682)."""
         client = NotebookLMClient(auth_tokens)
         # Two passage_wrappers: first sets start_char and end_char, second updates end_char
@@ -1646,11 +1691,15 @@ class TestExtractTextPassagesMultiplePassages:
                 [[300, 400, [[[250, 380, "second text"]]]]],
             ],
         ]
-        cited_text, start_char, end_char = client.chat._extract_text_passages(cite_inner)
+        cited_text, start_char, end_char = client.chat._extract_text_passages(
+            cite_inner
+        )
         assert start_char == 100  # from first passage
         assert end_char == 400  # updated by second passage
 
-    def test_extract_text_passages_start_char_not_reset_on_second_passage(self, auth_tokens):
+    def test_extract_text_passages_start_char_not_reset_on_second_passage(
+        self, auth_tokens
+    ):
         """Test start_char is only set once from the first valid passage (arc 676->678)."""
         client = NotebookLMClient(auth_tokens)
         cite_inner = [
@@ -1711,7 +1760,13 @@ class TestParseAskResponseBranchCoverage:
         # First chunk: longer marked answer becomes best_marked_answer
         # Second chunk: shorter marked answer - should NOT overwrite (arc 454->456)
         longer_inner = [
-            ["This is the longer marked answer text.", None, [12345], None, [[], None, None, [], 1]]
+            [
+                "This is the longer marked answer text.",
+                None,
+                [12345],
+                None,
+                [[], None, None, [], 1],
+            ]
         ]
         shorter_inner = [["Short.", None, [12346], None, [[], None, None, [], 1]]]
 
@@ -1723,9 +1778,13 @@ class TestParseAskResponseBranchCoverage:
             return f"{len(chunk_json)}\n{chunk_json}"
 
         # Both chunks with marked answers
-        response_body = f")]}}'\n{make_chunk(longer_json)}\n{make_chunk(shorter_json)}\n"
+        response_body = (
+            f")]}}'\n{make_chunk(longer_json)}\n{make_chunk(shorter_json)}\n"
+        )
 
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(response_body)
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            response_body
+        )
         # Longer marked answer wins
         assert answer == "This is the longer marked answer text."
         assert conv_id is None
@@ -1783,7 +1842,9 @@ class TestParseAskResponseBranchCoverage:
         # this arc may not be reachable in normal flow - it's a defensive check.
         # Let's verify the assignment logic works correctly with multiple refs.
         response_body = f")]}}'\n{len(chunk_json)}\n{chunk_json}\n"
-        answer, refs, conv_id = client.chat._parse_ask_response_with_references(response_body)
+        answer, refs, conv_id = client.chat._parse_ask_response_with_references(
+            response_body
+        )
         assert len(refs) == 1
         assert refs[0].citation_number == 1
         assert conv_id is None
@@ -1805,6 +1866,8 @@ class TestExtractTextPassagesNonIntEndChar:
                 [[100, "not_an_int", [[[50, 150, "some text"]]]]],
             ],
         ]
-        cited_text, start_char, end_char = client.chat._extract_text_passages(cite_inner)
+        cited_text, start_char, end_char = client.chat._extract_text_passages(
+            cite_inner
+        )
         assert start_char == 100
         assert end_char is None  # not set since passage_data[1] was not int

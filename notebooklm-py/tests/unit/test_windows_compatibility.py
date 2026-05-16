@@ -165,7 +165,8 @@ class TestWindowsUTF8Mode:
 
         # Check if UTF-8 mode is active (either via flag or env var)
         utf8_enabled = (
-            getattr(sys.flags, "utf8_mode", 0) == 1 or os.environ.get("PYTHONUTF8") == "1"
+            getattr(sys.flags, "utf8_mode", 0) == 1
+            or os.environ.get("PYTHONUTF8") == "1"
         )
         assert utf8_enabled, (
             "UTF-8 mode must be enabled on Windows to prevent encoding errors. "

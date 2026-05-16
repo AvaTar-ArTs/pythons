@@ -294,7 +294,10 @@ class ArtifactsAPI:
                 for mm_data in mind_maps:
                     mind_map_artifact = Artifact.from_mind_map(mm_data)
                     if mind_map_artifact is not None:  # None means deleted (status=2)
-                        if artifact_type is None or mind_map_artifact.kind == artifact_type:
+                        if (
+                            artifact_type is None
+                            or mind_map_artifact.kind == artifact_type
+                        ):
                             artifacts.append(mind_map_artifact)
             except (RPCError, httpx.HTTPError) as e:
                 # Network/API errors - log and continue with studio artifacts
@@ -596,7 +599,8 @@ class ArtifactsAPI:
             ReportFormat.CUSTOM: {
                 "title": "Custom Report",
                 "description": "Custom format",
-                "prompt": custom_prompt or "Create a report based on the provided sources.",
+                "prompt": custom_prompt
+                or "Create a report based on the provided sources.",
             },
         }
 
@@ -825,7 +829,16 @@ class ArtifactsAPI:
                 None,
                 None,
                 None,
-                [[instructions, language, None, orientation_code, detail_code, style_code]],
+                [
+                    [
+                        instructions,
+                        language,
+                        None,
+                        orientation_code,
+                        detail_code,
+                        style_code,
+                    ]
+                ],
             ],
         ]
         return await self._call_generate(notebook_id, params)
@@ -922,7 +935,9 @@ class ArtifactsAPI:
                 allow_null=True,
             )
             if result is None:
-                logger.warning("REVISE_SLIDE returned null result for artifact %s", artifact_id)
+                logger.warning(
+                    "REVISE_SLIDE returned null result for artifact %s", artifact_id
+                )
             return self._parse_generation_result(result)
         except RPCError as e:
             if e.rpc_code == "USER_DISPLAYABLE_ERROR":
@@ -1049,7 +1064,9 @@ class ArtifactsAPI:
 
                 # The GENERATE_MIND_MAP RPC generates content but does NOT persist it.
                 # We must explicitly create a note to save the mind map.
-                note = await self._notes.create(notebook_id, title=title, content=mind_map_json)
+                note = await self._notes.create(
+                    notebook_id, title=title, content=mind_map_json
+                )
                 note_id = note.id if note else None
 
                 return {
@@ -1213,7 +1230,9 @@ class ArtifactsAPI:
                 url = media_list[0][0]
 
             if not url:
-                raise ArtifactDownloadError("media", details="Could not extract download URL")
+                raise ArtifactDownloadError(
+                    "media", details="Could not extract download URL"
+                )
 
             return await self._download_url(url, output_path)
 
@@ -1263,7 +1282,9 @@ class ArtifactsAPI:
         try:
             url = self._find_infographic_url(info_art)
             if not url:
-                raise ArtifactParseError("infographic", details="Could not find metadata")
+                raise ArtifactParseError(
+                    "infographic", details="Could not find metadata"
+                )
             return await self._download_url(url, output_path)
 
         except (IndexError, TypeError) as e:
@@ -1290,7 +1311,9 @@ class ArtifactsAPI:
             The output path.
         """
         if output_format not in ("pdf", "pptx"):
-            raise ValidationError(f"Invalid format '{output_format}'. Must be 'pdf' or 'pptx'.")
+            raise ValidationError(
+                f"Invalid format '{output_format}'. Must be 'pdf' or 'pptx'."
+            )
 
         artifacts_data = await self._list_raw(notebook_id)
 
@@ -1318,11 +1341,15 @@ class ArtifactsAPI:
         # Structure: artifact[16] = [config, title, slides_list, pdf_url, pptx_url]
         try:
             if len(slide_art) <= 16:
-                raise ArtifactParseError("slide_deck_artifact", details="Invalid structure")
+                raise ArtifactParseError(
+                    "slide_deck_artifact", details="Invalid structure"
+                )
 
             metadata = slide_art[16]
             if not isinstance(metadata, list):
-                raise ArtifactParseError("slide_deck_metadata", details="Invalid structure")
+                raise ArtifactParseError(
+                    "slide_deck_metadata", details="Invalid structure"
+                )
 
             if output_format == "pptx":
                 if len(metadata) < 5:
@@ -1332,7 +1359,9 @@ class ArtifactsAPI:
                 url = metadata[4]
             else:
                 if len(metadata) < 4:
-                    raise ArtifactParseError("slide_deck_metadata", details="Invalid structure")
+                    raise ArtifactParseError(
+                        "slide_deck_metadata", details="Invalid structure"
+                    )
                 url = metadata[3]
 
             if not isinstance(url, str) or not url.startswith("http"):
@@ -1348,7 +1377,9 @@ class ArtifactsAPI:
 
         return await self._download_url(url, output_path)
 
-    async def _get_artifact_content(self, notebook_id: str, artifact_id: str) -> str | None:
+    async def _get_artifact_content(
+        self, notebook_id: str, artifact_id: str
+    ) -> str | None:
         """Fetch artifact HTML content for quiz/flashcard types."""
         result = await self._core.rpc_call(
             RPCMethod.GET_INTERACTIVE_HTML,
@@ -1408,7 +1439,9 @@ class ArtifactsAPI:
             raise ArtifactNotReadyError(artifact_type)
 
         # Sort by creation date to ensure we get the latest by default
-        completed.sort(key=lambda a: a.created_at.timestamp() if a.created_at else 0, reverse=True)
+        completed.sort(
+            key=lambda a: a.created_at.timestamp() if a.created_at else 0, reverse=True
+        )
 
         # Select artifact
         if artifact_id:
@@ -1421,7 +1454,9 @@ class ArtifactsAPI:
         # Fetch and parse HTML content
         html_content = await self._get_artifact_content(notebook_id, artifact.id)
         if not html_content:
-            raise ArtifactDownloadError(artifact_type, details="Failed to fetch content")
+            raise ArtifactDownloadError(
+                artifact_type, details="Failed to fetch content"
+            )
 
         try:
             app_data = _extract_app_data(html_content)
@@ -1509,7 +1544,9 @@ class ArtifactsAPI:
             and a[4] == ArtifactStatus.COMPLETED
         ]
 
-        report_art = self._select_artifact(report_candidates, artifact_id, "Report", "report")
+        report_art = self._select_artifact(
+            report_candidates, artifact_id, "Report", "report"
+        )
 
         try:
             content_wrapper = report_art[7]
@@ -1564,13 +1601,17 @@ class ArtifactsAPI:
         try:
             json_string = mind_map[1][1]
             if not isinstance(json_string, str):
-                raise ArtifactParseError("mind_map_content", details="Invalid structure")
+                raise ArtifactParseError(
+                    "mind_map_content", details="Invalid structure"
+                )
 
             json_data = json.loads(json_string)
 
             output = Path(output_path)
             output.parent.mkdir(parents=True, exist_ok=True)
-            output.write_text(json.dumps(json_data, indent=2, ensure_ascii=False), encoding="utf-8")
+            output.write_text(
+                json.dumps(json_data, indent=2, ensure_ascii=False), encoding="utf-8"
+            )
             return str(output)
 
         except (IndexError, TypeError, json.JSONDecodeError) as e:
@@ -1605,7 +1646,9 @@ class ArtifactsAPI:
             and a[4] == ArtifactStatus.COMPLETED
         ]
 
-        table_art = self._select_artifact(table_candidates, artifact_id, "Data table", "data table")
+        table_art = self._select_artifact(
+            table_candidates, artifact_id, "Data table", "data table"
+        )
 
         try:
             raw_data = table_art[18]
@@ -2049,8 +2092,12 @@ class ArtifactsAPI:
             GenerationStatus with task_id on success, or error info on failure.
         """
         # Extract artifact type from params for logging
-        artifact_type = params[2][2] if len(params) > 2 and len(params[2]) > 2 else "unknown"
-        logger.debug("Generating artifact type=%s in notebook %s", artifact_type, notebook_id)
+        artifact_type = (
+            params[2][2] if len(params) > 2 and len(params[2]) > 2 else "unknown"
+        )
+        logger.debug(
+            "Generating artifact type=%s in notebook %s", artifact_type, notebook_id
+        )
         try:
             result = await self._core.rpc_call(
                 RPCMethod.CREATE_ARTIFACT,
@@ -2117,7 +2164,9 @@ class ArtifactsAPI:
         # Sort by creation timestamp (descending) to get the latest.
         # Timestamp is at index 15, position 0.
         candidates.sort(
-            key=lambda a: a[15][0] if len(a) > 15 and isinstance(a[15], list) and a[15] else 0,
+            key=lambda a: (
+                a[15][0] if len(a) > 15 and isinstance(a[15], list) and a[15] else 0
+            ),
             reverse=True,
         )
 
@@ -2152,12 +2201,18 @@ class ArtifactsAPI:
                         raise ArtifactDownloadError(
                             "media", details=f"Download URL must use HTTPS: {url[:80]}"
                         )
-                    trusted = (".google.com", ".googleusercontent.com", ".googleapis.com")
+                    trusted = (
+                        ".google.com",
+                        ".googleusercontent.com",
+                        ".googleapis.com",
+                    )
                     if not any(
-                        parsed.netloc == d.lstrip(".") or parsed.netloc.endswith(d) for d in trusted
+                        parsed.netloc == d.lstrip(".") or parsed.netloc.endswith(d)
+                        for d in trusted
                     ):
                         raise ArtifactDownloadError(
-                            "media", details=f"Untrusted download domain: {parsed.netloc}"
+                            "media",
+                            details=f"Untrusted download domain: {parsed.netloc}",
                         )
 
                     response = await client.get(url)
@@ -2173,7 +2228,9 @@ class ArtifactsAPI:
                     output_file.parent.mkdir(parents=True, exist_ok=True)
                     output_file.write_bytes(response.content)
                     downloaded.append(output_path)
-                    logger.debug("Downloaded %s (%d bytes)", url[:60], len(response.content))
+                    logger.debug(
+                        "Downloaded %s (%d bytes)", url[:60], len(response.content)
+                    )
 
                 except (httpx.HTTPError, ValueError) as e:
                     logger.warning("Download failed for %s: %s", url[:60], e)
@@ -2202,9 +2259,13 @@ class ArtifactsAPI:
         # domain, so we must ensure the URL belongs to a trusted Google domain.
         parsed = urlparse(url)
         if parsed.scheme != "https":
-            raise ArtifactDownloadError("media", details=f"Download URL must use HTTPS: {url[:80]}")
+            raise ArtifactDownloadError(
+                "media", details=f"Download URL must use HTTPS: {url[:80]}"
+            )
         trusted = (".google.com", ".googleusercontent.com", ".googleapis.com")
-        if not any(parsed.netloc == d.lstrip(".") or parsed.netloc.endswith(d) for d in trusted):
+        if not any(
+            parsed.netloc == d.lstrip(".") or parsed.netloc.endswith(d) for d in trusted
+        ):
             raise ArtifactDownloadError(
                 "media", details=f"Untrusted download domain: {parsed.netloc}"
             )
@@ -2286,12 +2347,16 @@ class ArtifactsAPI:
 
             if artifact_id:
                 status = (
-                    artifact_status_to_str(status_code) if status_code is not None else "pending"
+                    artifact_status_to_str(status_code)
+                    if status_code is not None
+                    else "pending"
                 )
                 return GenerationStatus(task_id=artifact_id, status=status)
 
         return GenerationStatus(
-            task_id="", status="failed", error="Generation failed - no artifact_id returned"
+            task_id="",
+            status="failed",
+            error="Generation failed - no artifact_id returned",
         )
 
     @staticmethod
@@ -2471,4 +2536,6 @@ class ArtifactsAPI:
                 is_media,
                 e,
             )
-            return not is_media  # False for media (continue polling), True for non-media
+            return (
+                not is_media
+            )  # False for media (continue polling), True for non-media

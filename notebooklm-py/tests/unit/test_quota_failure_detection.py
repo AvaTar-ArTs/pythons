@@ -36,7 +36,9 @@ def _make_api():
     return ArtifactsAPI(core, notes_api=notes)
 
 
-def _art(artifact_id: str, status: int, artifact_type: int = 1, error_at_3: str | None = None):
+def _art(
+    artifact_id: str, status: int, artifact_type: int = 1, error_at_3: str | None = None
+):
     """Build a minimal raw artifact list entry."""
     entry = [artifact_id, "Title", artifact_type, error_at_3, status]
     return entry
@@ -54,7 +56,9 @@ class TestPollStatusNotFound:
     async def test_missing_artifact_returns_not_found(self):
         """Artifact absent from list → status 'not_found', not 'pending'."""
         api = _make_api()
-        api._list_raw = AsyncMock(return_value=[_art("other_id", ArtifactStatus.PROCESSING)])
+        api._list_raw = AsyncMock(
+            return_value=[_art("other_id", ArtifactStatus.PROCESSING)]
+        )
 
         result = await api.poll_status("nb1", "missing_task_id")
 
@@ -77,7 +81,9 @@ class TestPollStatusNotFound:
     async def test_found_artifact_returns_correct_status(self):
         """Artifact present in list → actual status propagated."""
         api = _make_api()
-        api._list_raw = AsyncMock(return_value=[_art("task_abc", ArtifactStatus.PROCESSING)])
+        api._list_raw = AsyncMock(
+            return_value=[_art("task_abc", ArtifactStatus.PROCESSING)]
+        )
 
         result = await api.poll_status("nb1", "task_abc")
 
@@ -102,7 +108,9 @@ class TestPollStatusNotFound:
     async def test_failed_artifact_returns_failed_status(self):
         """Artifact with status=FAILED returns 'failed'."""
         api = _make_api()
-        api._list_raw = AsyncMock(return_value=[_art("task_abc", ArtifactStatus.FAILED)])
+        api._list_raw = AsyncMock(
+            return_value=[_art("task_abc", ArtifactStatus.FAILED)]
+        )
 
         result = await api.poll_status("nb1", "task_abc")
 
@@ -123,7 +131,11 @@ class TestPollStatusErrorExtraction:
         """When art[3] is a non-empty string, it becomes error in GenerationStatus."""
         api = _make_api()
         api._list_raw = AsyncMock(
-            return_value=[_art("task_abc", ArtifactStatus.FAILED, error_at_3="Daily limit reached")]
+            return_value=[
+                _art(
+                    "task_abc", ArtifactStatus.FAILED, error_at_3="Daily limit reached"
+                )
+            ]
         )
 
         result = await api.poll_status("nb1", "task_abc")
@@ -135,7 +147,9 @@ class TestPollStatusErrorExtraction:
     async def test_no_error_at_index_3_error_is_none(self):
         """When art[3] is None, error field remains None."""
         api = _make_api()
-        api._list_raw = AsyncMock(return_value=[_art("task_abc", ArtifactStatus.FAILED)])
+        api._list_raw = AsyncMock(
+            return_value=[_art("task_abc", ArtifactStatus.FAILED)]
+        )
 
         result = await api.poll_status("nb1", "task_abc")
 
@@ -147,7 +161,14 @@ class TestPollStatusErrorExtraction:
         """Error in art[5] is surfaced through poll_status (end-to-end, not just helper)."""
         api = _make_api()
         # art[3] is None, error is in art[5] nested list
-        art = ["task_abc", "Title", 1, None, ArtifactStatus.FAILED, ["Veo daily limit hit"]]
+        art = [
+            "task_abc",
+            "Title",
+            1,
+            None,
+            ArtifactStatus.FAILED,
+            ["Veo daily limit hit"],
+        ]
         api._list_raw = AsyncMock(return_value=[art])
 
         result = await api.poll_status("nb1", "task_abc")
@@ -339,7 +360,9 @@ class TestWaitForCompletionQuotaDetection:
                     GenerationStatus(task_id="task_abc", status="not_found")
                 )
             else:
-                responses_flickering.append(GenerationStatus(task_id="task_abc", status="pending"))
+                responses_flickering.append(
+                    GenerationStatus(task_id="task_abc", status="pending")
+                )
 
         api.poll_status = AsyncMock(side_effect=responses_flickering)
 

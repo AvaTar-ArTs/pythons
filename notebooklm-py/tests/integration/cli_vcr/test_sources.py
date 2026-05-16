@@ -7,7 +7,12 @@ import pytest
 
 from notebooklm.notebooklm_cli import cli
 
-from .conftest import assert_command_success, notebooklm_vcr, parse_json_output, skip_no_cassettes
+from .conftest import (
+    assert_command_success,
+    notebooklm_vcr,
+    parse_json_output,
+    skip_no_cassettes,
+)
 
 pytestmark = [pytest.mark.vcr, skip_no_cassettes]
 
@@ -40,7 +45,11 @@ class TestSourceAddCommand:
         [
             (
                 "sources_add_url.yaml",
-                ["source", "add", "https://en.wikipedia.org/wiki/Artificial_intelligence"],
+                [
+                    "source",
+                    "add",
+                    "https://en.wikipedia.org/wiki/Artificial_intelligence",
+                ],
             ),
             (
                 "sources_add_text.yaml",
@@ -73,7 +82,9 @@ class TestSourceContentCommands:
             ("fulltext", "sources_get_fulltext.yaml"),
         ],
     )
-    def test_source_content(self, runner, mock_auth_for_vcr, mock_context, command, cassette):
+    def test_source_content(
+        self, runner, mock_auth_for_vcr, mock_context, command, cassette
+    ):
         """Get source content works with real client."""
         with notebooklm_vcr.use_cassette(cassette):
             result = runner.invoke(cli, ["source", command, "test_source_id"])

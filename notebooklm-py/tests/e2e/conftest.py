@@ -126,7 +126,8 @@ def pytest_runtest_teardown(item, nextitem):
         if "generation_notebook_id" not in item.fixturenames:
             return
         logging.info(
-            "Delaying %ss between generation tests to avoid rate limiting", GENERATION_TEST_DELAY
+            "Delaying %ss between generation tests to avoid rate limiting",
+            GENERATION_TEST_DELAY,
         )
         time.sleep(GENERATION_TEST_DELAY)
         return
@@ -134,7 +135,9 @@ def pytest_runtest_teardown(item, nextitem):
     if item.path.name == "test_chat.py":
         if "multi_source_notebook_id" not in item.fixturenames:
             return
-        logging.info("Delaying %ss between chat tests to avoid rate limiting", CHAT_TEST_DELAY)
+        logging.info(
+            "Delaying %ss between chat tests to avoid rate limiting", CHAT_TEST_DELAY
+        )
         time.sleep(CHAT_TEST_DELAY)
 
 
@@ -222,7 +225,9 @@ async def cleanup_notebooks(created_notebooks, auth_tokens):
                 try:
                     await client.notebooks.delete(nb_id)
                 except Exception as e:
-                    warnings.warn(f"Failed to cleanup notebook {nb_id}: {e}", stacklevel=2)
+                    warnings.warn(
+                        f"Failed to cleanup notebook {nb_id}: {e}", stacklevel=2
+                    )
 
 
 # =============================================================================
@@ -351,7 +356,9 @@ async def _create_generation_notebook(client: NotebookLMClient) -> str:
     return notebook.id
 
 
-async def _cleanup_generation_notebook(client: NotebookLMClient, notebook_id: str) -> None:
+async def _cleanup_generation_notebook(
+    client: NotebookLMClient, notebook_id: str
+) -> None:
     """Clean up existing artifacts and notes from generation notebook.
 
     This runs BEFORE tests to ensure a clean starting state.
@@ -475,7 +482,9 @@ async def generation_notebook_id(client):
         try:
             await client.notebooks.delete(notebook_id)
         except Exception as e:
-            warnings.warn(f"Failed to delete generation notebook {notebook_id}: {e}", stacklevel=2)
+            warnings.warn(
+                f"Failed to delete generation notebook {notebook_id}: {e}", stacklevel=2
+            )
 
 
 # =============================================================================
@@ -597,7 +606,9 @@ async def _create_multi_source_notebook(client: NotebookLMClient) -> str:
     return notebook.id
 
 
-async def _cleanup_multi_source_notebook(client: NotebookLMClient, notebook_id: str) -> None:
+async def _cleanup_multi_source_notebook(
+    client: NotebookLMClient, notebook_id: str
+) -> None:
     """Clean up existing artifacts from multi-source notebook.
 
     This runs BEFORE tests to ensure a clean starting state.
@@ -671,5 +682,6 @@ async def multi_source_notebook_id(client):
             await client.notebooks.delete(notebook_id)
         except Exception as e:
             warnings.warn(
-                f"Failed to delete multi-source notebook {notebook_id}: {e}", stacklevel=2
+                f"Failed to delete multi-source notebook {notebook_id}: {e}",
+                stacklevel=2,
             )

@@ -64,7 +64,9 @@ class NotesAPI:
                 continue
 
             content = self._extract_content(item)
-            is_mind_map = content and ('"children":' in content or '"nodes":' in content)
+            is_mind_map = content and (
+                '"children":' in content or '"nodes":' in content
+            )
             if not is_mind_map:
                 notes.append(self._parse_note(item, notebook_id))
 
@@ -233,7 +235,9 @@ class NotesAPI:
     # Private Helpers
     # =========================================================================
 
-    async def _get_all_notes_and_mind_maps(self, notebook_id: str) -> builtins.list[Any]:
+    async def _get_all_notes_and_mind_maps(
+        self, notebook_id: str
+    ) -> builtins.list[Any]:
         """Fetch all notes and mind maps from the API."""
         params = [notebook_id]
         result = await self._core.rpc_call(
@@ -242,11 +246,20 @@ class NotesAPI:
             source_path=f"/notebook/{notebook_id}",
             allow_null=True,
         )
-        if result and isinstance(result, list) and len(result) > 0 and isinstance(result[0], list):
+        if (
+            result
+            and isinstance(result, list)
+            and len(result) > 0
+            and isinstance(result[0], list)
+        ):
             notes_list = result[0]
             valid_notes = []
             for item in notes_list:
-                if isinstance(item, list) and len(item) > 0 and isinstance(item[0], str):
+                if (
+                    isinstance(item, list)
+                    and len(item) > 0
+                    and isinstance(item[0], str)
+                ):
                     valid_notes.append(item)
             return valid_notes
         return []
@@ -274,7 +287,11 @@ class NotesAPI:
 
         if isinstance(item[1], str):
             return item[1]
-        elif isinstance(item[1], list) and len(item[1]) > 1 and isinstance(item[1][1], str):
+        elif (
+            isinstance(item[1], list)
+            and len(item[1]) > 1
+            and isinstance(item[1][1], str)
+        ):
             return item[1][1]
         return None
 

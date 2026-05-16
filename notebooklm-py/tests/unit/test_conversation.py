@@ -132,7 +132,9 @@ class TestAsk:
 
         async with NotebookLMClient(auth_tokens) as client:
             with pytest.raises(ChatError, match="rate limited"):
-                await client.chat.ask("nb_123", "What is this?", source_ids=["test_source"])
+                await client.chat.ask(
+                    "nb_123", "What is this?", source_ids=["test_source"]
+                )
 
     @pytest.mark.asyncio
     async def test_ask_returns_server_conversation_id(self, auth_tokens, httpx_mock):
@@ -158,6 +160,8 @@ class TestAsk:
         )
 
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.chat.ask("nb_123", "What is this?", source_ids=["test_source"])
+            result = await client.chat.ask(
+                "nb_123", "What is this?", source_ids=["test_source"]
+            )
 
         assert result.conversation_id == server_conv_id

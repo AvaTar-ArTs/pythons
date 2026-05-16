@@ -23,7 +23,11 @@ _real_cassettes = (
 )
 
 # Skip VCR tests if no real cassettes exist (unless in record mode)
-_vcr_record_mode = os.environ.get("NOTEBOOKLM_VCR_RECORD", "").lower() in ("1", "true", "yes")
+_vcr_record_mode = os.environ.get("NOTEBOOKLM_VCR_RECORD", "").lower() in (
+    "1",
+    "true",
+    "yes",
+)
 _cassettes_available = bool(_real_cassettes) or _vcr_record_mode
 
 # Marker for skipping VCR tests when cassettes are not available

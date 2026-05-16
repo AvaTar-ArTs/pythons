@@ -162,7 +162,9 @@ class TestResolveProfile:
     def test_env_var(self):
         """NOTEBOOKLM_PROFILE env var is used if no active profile."""
         with patch.dict(
-            os.environ, {**_clean_env(), "NOTEBOOKLM_PROFILE": "env-profile"}, clear=True
+            os.environ,
+            {**_clean_env(), "NOTEBOOKLM_PROFILE": "env-profile"},
+            clear=True,
         ):
             assert resolve_profile() == "env-profile"
 
@@ -187,7 +189,9 @@ class TestResolveProfile:
         """Explicit > active > env > config > default."""
         home = tmp_path / "home"
         home.mkdir()
-        (home / "config.json").write_text(json.dumps({"default_profile": "from-config"}))
+        (home / "config.json").write_text(
+            json.dumps({"default_profile": "from-config"})
+        )
 
         with patch.dict(
             os.environ,

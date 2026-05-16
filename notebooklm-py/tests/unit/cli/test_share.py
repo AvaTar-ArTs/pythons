@@ -28,7 +28,11 @@ def create_mock_share_status(
         access=ShareAccess.ANYONE_WITH_LINK if is_public else ShareAccess.RESTRICTED,
         view_level=ShareViewLevel.FULL_NOTEBOOK,
         shared_users=shared_users or [],
-        share_url=f"https://notebooklm.google.com/notebook/{notebook_id}" if is_public else None,
+        share_url=(
+            f"https://notebooklm.google.com/notebook/{notebook_id}"
+            if is_public
+            else None
+        ),
     )
 
 
@@ -43,7 +47,9 @@ class TestShareStatus:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             mock_client.sharing.get_status = AsyncMock(
@@ -51,7 +57,9 @@ class TestShareStatus:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["share", "status", "-n", "nb_123"])
 
@@ -64,7 +72,9 @@ class TestShareStatus:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             mock_client.sharing.get_status = AsyncMock(
@@ -72,7 +82,9 @@ class TestShareStatus:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["share", "status", "-n", "nb_123"])
 
@@ -92,7 +104,9 @@ class TestSharePublic:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             mock_client.sharing.set_public = AsyncMock(
@@ -100,9 +114,13 @@ class TestSharePublic:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["share", "public", "-n", "nb_123", "--enable"])
+                result = runner.invoke(
+                    cli, ["share", "public", "-n", "nb_123", "--enable"]
+                )
 
             assert result.exit_code == 0
             assert "Public sharing enabled" in result.output
@@ -114,7 +132,9 @@ class TestSharePublic:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             mock_client.sharing.set_public = AsyncMock(
@@ -122,9 +142,13 @@ class TestSharePublic:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["share", "public", "-n", "nb_123", "--disable"])
+                result = runner.invoke(
+                    cli, ["share", "public", "-n", "nb_123", "--disable"]
+                )
 
             assert result.exit_code == 0
             assert "Public sharing disabled" in result.output
@@ -142,15 +166,23 @@ class TestShareAdd:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
-            mock_client.sharing.add_user = AsyncMock(return_value=create_mock_share_status())
+            mock_client.sharing.add_user = AsyncMock(
+                return_value=create_mock_share_status()
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["share", "add", "user@example.com", "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["share", "add", "user@example.com", "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
             assert "Shared with user@example.com" in result.output
@@ -168,17 +200,31 @@ class TestShareAdd:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
-            mock_client.sharing.add_user = AsyncMock(return_value=create_mock_share_status())
+            mock_client.sharing.add_user = AsyncMock(
+                return_value=create_mock_share_status()
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
-                    ["share", "add", "user@example.com", "-n", "nb_123", "-p", "editor"],
+                    [
+                        "share",
+                        "add",
+                        "user@example.com",
+                        "-n",
+                        "nb_123",
+                        "-p",
+                        "editor",
+                    ],
                 )
 
             assert result.exit_code == 0
@@ -203,13 +249,19 @@ class TestShareRemove:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
-            mock_client.sharing.remove_user = AsyncMock(return_value=create_mock_share_status())
+            mock_client.sharing.remove_user = AsyncMock(
+                return_value=create_mock_share_status()
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["share", "remove", "user@example.com", "-n", "nb_123", "-y"]
@@ -217,23 +269,32 @@ class TestShareRemove:
 
             assert result.exit_code == 0
             assert "Removed access for user@example.com" in result.output
-            mock_client.sharing.remove_user.assert_called_once_with("nb_123", "user@example.com")
+            mock_client.sharing.remove_user.assert_called_once_with(
+                "nb_123", "user@example.com"
+            )
 
     def test_share_remove_json(self, runner, mock_auth):
         with patch_main_cli_client() as mock_client_cls:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
-            mock_client.sharing.remove_user = AsyncMock(return_value=create_mock_share_status())
+            mock_client.sharing.remove_user = AsyncMock(
+                return_value=create_mock_share_status()
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
-                    cli, ["share", "remove", "user@example.com", "-n", "nb_123", "--json"]
+                    cli,
+                    ["share", "remove", "user@example.com", "-n", "nb_123", "--json"],
                 )
 
             assert result.exit_code == 0
@@ -251,7 +312,9 @@ class TestShareViewLevel:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             # set_view_level now returns ShareStatus with the view_level that was set
@@ -266,9 +329,13 @@ class TestShareViewLevel:
             mock_client.sharing.set_view_level = AsyncMock(return_value=mock_status)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["share", "view-level", "full", "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["share", "view-level", "full", "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
             assert "Full Notebook" in result.output
@@ -281,7 +348,9 @@ class TestShareViewLevel:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             # set_view_level now returns ShareStatus with the view_level that was set
@@ -296,9 +365,13 @@ class TestShareViewLevel:
             mock_client.sharing.set_view_level = AsyncMock(return_value=mock_status)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["share", "view-level", "chat", "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["share", "view-level", "chat", "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
             assert "Chat Only" in result.output
@@ -311,7 +384,9 @@ class TestShareViewLevel:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             # set_view_level now returns ShareStatus with the view_level that was set
@@ -326,7 +401,9 @@ class TestShareViewLevel:
             mock_client.sharing.set_view_level = AsyncMock(return_value=mock_status)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["share", "view-level", "full", "-n", "nb_123", "--json"]
@@ -347,17 +424,31 @@ class TestShareUpdate:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
-            mock_client.sharing.update_user = AsyncMock(return_value=create_mock_share_status())
+            mock_client.sharing.update_user = AsyncMock(
+                return_value=create_mock_share_status()
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
-                    ["share", "update", "user@example.com", "-n", "nb_123", "-p", "editor"],
+                    [
+                        "share",
+                        "update",
+                        "user@example.com",
+                        "-n",
+                        "nb_123",
+                        "-p",
+                        "editor",
+                    ],
                 )
 
             assert result.exit_code == 0
@@ -372,13 +463,19 @@ class TestShareUpdate:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
-            mock_client.sharing.update_user = AsyncMock(return_value=create_mock_share_status())
+            mock_client.sharing.update_user = AsyncMock(
+                return_value=create_mock_share_status()
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -410,7 +507,9 @@ class TestShareJsonOutput:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             mock_client.sharing.get_status = AsyncMock(
@@ -418,9 +517,13 @@ class TestShareJsonOutput:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["share", "status", "-n", "nb_123", "--json"])
+                result = runner.invoke(
+                    cli, ["share", "status", "-n", "nb_123", "--json"]
+                )
 
             assert result.exit_code == 0
             assert '"notebook_id": "nb_123"' in result.output
@@ -431,7 +534,9 @@ class TestShareJsonOutput:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             mock_client.sharing.set_public = AsyncMock(
@@ -439,9 +544,13 @@ class TestShareJsonOutput:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["share", "public", "-n", "nb_123", "--json"])
+                result = runner.invoke(
+                    cli, ["share", "public", "-n", "nb_123", "--json"]
+                )
 
             assert result.exit_code == 0
             assert '"is_public": true' in result.output
@@ -452,13 +561,19 @@ class TestShareJsonOutput:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
-            mock_client.sharing.add_user = AsyncMock(return_value=create_mock_share_status())
+            mock_client.sharing.add_user = AsyncMock(
+                return_value=create_mock_share_status()
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["share", "add", "user@example.com", "-n", "nb_123", "--json"]
@@ -480,7 +595,9 @@ class TestShareStatusWithUsers:
             mock_client = create_mock_client()
             mock_client.notebooks.list = AsyncMock(
                 return_value=[
-                    Notebook(id="nb_123", title="Test", created_at=datetime(2024, 1, 1)),
+                    Notebook(
+                        id="nb_123", title="Test", created_at=datetime(2024, 1, 1)
+                    ),
                 ]
             )
             shared_users = [
@@ -496,11 +613,15 @@ class TestShareStatusWithUsers:
                 ),
             ]
             mock_client.sharing.get_status = AsyncMock(
-                return_value=create_mock_share_status(is_public=False, shared_users=shared_users)
+                return_value=create_mock_share_status(
+                    is_public=False, shared_users=shared_users
+                )
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["share", "status", "-n", "nb_123"])
 

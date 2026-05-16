@@ -113,12 +113,16 @@ def share_status(ctx, notebook_id, json_output, client_auth):
 
             # Display status
             access_status = (
-                "[green]Public[/green]" if status.is_public else "[yellow]Private[/yellow]"
+                "[green]Public[/green]"
+                if status.is_public
+                else "[yellow]Private[/yellow]"
             )
             console.print(f"[bold]Sharing Status:[/bold] {access_status}")
 
             if status.share_url:
-                console.print(f"[bold]Share URL:[/bold] [blue]{status.share_url}[/blue]")
+                console.print(
+                    f"[bold]Share URL:[/bold] [blue]{status.share_url}[/blue]"
+                )
 
             console.print(
                 f"[bold]View Level:[/bold] {_view_level_display(status.view_level)} "
@@ -153,7 +157,9 @@ def share_status(ctx, notebook_id, json_output, client_auth):
     default=None,
     help="Notebook ID (uses current if not set). Supports partial IDs.",
 )
-@click.option("--enable/--disable", default=True, help="Enable or disable public sharing")
+@click.option(
+    "--enable/--disable", default=True, help="Enable or disable public sharing"
+)
 @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
 @with_client
 def share_public(ctx, notebook_id, enable, json_output, client_auth):
@@ -187,7 +193,9 @@ def share_public(ctx, notebook_id, enable, json_output, client_auth):
             if status.is_public:
                 console.print("[green]Public sharing enabled[/green]")
                 if status.share_url:
-                    console.print(f"[bold]Share URL:[/bold] [blue]{status.share_url}[/blue]")
+                    console.print(
+                        f"[bold]Share URL:[/bold] [blue]{status.share_url}[/blue]"
+                    )
             else:
                 console.print("[yellow]Public sharing disabled[/yellow]")
 
@@ -220,7 +228,9 @@ def share_view_level(ctx, level, notebook_id, json_output, client_auth):
     """
     nb_id = require_notebook(notebook_id)
     view_level = (
-        ShareViewLevel.FULL_NOTEBOOK if level.lower() == "full" else ShareViewLevel.CHAT_ONLY
+        ShareViewLevel.FULL_NOTEBOOK
+        if level.lower() == "full"
+        else ShareViewLevel.CHAT_ONLY
     )
 
     async def _run():
@@ -263,7 +273,9 @@ def share_view_level(ctx, level, notebook_id, json_output, client_auth):
 @click.option("--message", "-m", default="", help="Welcome message for the user")
 @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
 @with_client
-def share_add(ctx, email, notebook_id, permission, no_notify, message, json_output, client_auth):
+def share_add(
+    ctx, email, notebook_id, permission, no_notify, message, json_output, client_auth
+):
     """Share notebook with a user.
 
     Adds a user with the specified permission level. By default, sends
@@ -300,7 +312,9 @@ def share_add(ctx, email, notebook_id, permission, no_notify, message, json_outp
                 json_output_response(data)
                 return
 
-            console.print(f"[green]Shared with {email}[/green] as {_permission_name(perm)}")
+            console.print(
+                f"[green]Shared with {email}[/green] as {_permission_name(perm)}"
+            )
             if not no_notify:
                 console.print("[dim]Email notification sent[/dim]")
 

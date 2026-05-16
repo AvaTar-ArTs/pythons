@@ -48,7 +48,8 @@ class TestStudioContent:
         httpx_mock.add_response(content=notebook_response.encode())
 
         audio_response = build_rpc_response(
-            RPCMethod.CREATE_ARTIFACT, [["artifact_123", "Audio Overview", "2024-01-05", None, 1]]
+            RPCMethod.CREATE_ARTIFACT,
+            [["artifact_123", "Audio Overview", "2024-01-05", None, 1]],
         )
         httpx_mock.add_response(content=audio_response.encode())
 
@@ -85,7 +86,8 @@ class TestStudioContent:
         httpx_mock.add_response(content=notebook_response.encode())
 
         response = build_rpc_response(
-            RPCMethod.CREATE_ARTIFACT, [["artifact_123", "Audio Overview", "2024-01-05", None, 1]]
+            RPCMethod.CREATE_ARTIFACT,
+            [["artifact_123", "Audio Overview", "2024-01-05", None, 1]],
         )
         httpx_mock.add_response(content=response.encode())
 
@@ -120,7 +122,8 @@ class TestStudioContent:
             ],
         )
         video_response = build_rpc_response(
-            RPCMethod.CREATE_ARTIFACT, [["artifact_456", "Video Overview", "2024-01-05", None, 1]]
+            RPCMethod.CREATE_ARTIFACT,
+            [["artifact_456", "Video Overview", "2024-01-05", None, 1]],
         )
         httpx_mock.add_response(content=notebook_response.encode())
         httpx_mock.add_response(content=video_response.encode())
@@ -192,7 +195,8 @@ class TestStudioContent:
             ],
         )
         slide_deck_response = build_rpc_response(
-            RPCMethod.CREATE_ARTIFACT, [["artifact_456", "Slide Deck", "2024-01-05", None, 1]]
+            RPCMethod.CREATE_ARTIFACT,
+            [["artifact_456", "Slide Deck", "2024-01-05", None, 1]],
         )
         httpx_mock.add_response(content=notebook_response.encode())
         httpx_mock.add_response(content=slide_deck_response.encode())
@@ -395,7 +399,9 @@ class TestArtifactsAPI:
         build_rpc_response,
     ):
         """Test exporting an artifact."""
-        response = build_rpc_response(RPCMethod.EXPORT_ARTIFACT, ["export_content_here"])
+        response = build_rpc_response(
+            RPCMethod.EXPORT_ARTIFACT, ["export_content_here"]
+        )
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -460,7 +466,8 @@ class TestArtifactsAPI:
             ],
         )
         guide_response = build_rpc_response(
-            RPCMethod.CREATE_ARTIFACT, [["sg_123", "Study Guide", "2024-01-05", None, 1]]
+            RPCMethod.CREATE_ARTIFACT,
+            [["sg_123", "Study Guide", "2024-01-05", None, 1]],
         )
         httpx_mock.add_response(content=notebook_response.encode())
         httpx_mock.add_response(content=guide_response.encode())
@@ -493,7 +500,8 @@ class TestArtifactsAPI:
             ],
         )
         infographic_response = build_rpc_response(
-            RPCMethod.CREATE_ARTIFACT, [["ig_123", "Infographic", "2024-01-05", None, 1]]
+            RPCMethod.CREATE_ARTIFACT,
+            [["ig_123", "Infographic", "2024-01-05", None, 1]],
         )
         httpx_mock.add_response(content=notebook_response.encode())
         httpx_mock.add_response(content=infographic_response.encode())
@@ -526,7 +534,8 @@ class TestArtifactsAPI:
             ],
         )
         infographic_response = build_rpc_response(
-            RPCMethod.CREATE_ARTIFACT, [["ig_456", "Infographic", "2024-01-05", None, 1]]
+            RPCMethod.CREATE_ARTIFACT,
+            [["ig_456", "Infographic", "2024-01-05", None, 1]],
         )
         httpx_mock.add_response(content=notebook_response.encode())
         httpx_mock.add_response(content=infographic_response.encode())
@@ -648,7 +657,15 @@ class TestArtifactsAPI:
         response = build_rpc_response(
             RPCMethod.LIST_ARTIFACTS,
             [
-                ["art_001", "Quiz", 4, None, 3, None, [None, None, None, None, None, None, 2]],
+                [
+                    "art_001",
+                    "Quiz",
+                    4,
+                    None,
+                    3,
+                    None,
+                    [None, None, None, None, None, None, 2],
+                ],
                 [
                     "art_002",
                     "Flashcards",
@@ -696,7 +713,15 @@ class TestArtifactsAPI:
         response = build_rpc_response(
             RPCMethod.LIST_ARTIFACTS,
             [
-                ["art_001", "Quiz", 4, None, 3, None, [None, None, None, None, None, None, 2]],
+                [
+                    "art_001",
+                    "Quiz",
+                    4,
+                    None,
+                    3,
+                    None,
+                    [None, None, None, None, None, None, 2],
+                ],
                 [
                     "art_002",
                     "Flashcards",
@@ -832,7 +857,9 @@ class TestArtifactErrorPaths:
 
         async with NotebookLMClient(auth_tokens) as client:
             with pytest.raises(ArtifactNotReadyError):
-                await client.artifacts.download_infographic("nb_123", "/tmp/infographic.png")
+                await client.artifacts.download_infographic(
+                    "nb_123", "/tmp/infographic.png"
+                )
 
     @pytest.mark.asyncio
     async def test_download_slide_deck_no_completed(
@@ -884,7 +911,9 @@ class TestArtifactErrorPaths:
         httpx_mock.add_response(content=b"pptx-content")
 
         output = str(tmp_path / "slides.pptx")
-        with patch("notebooklm._artifacts.load_httpx_cookies", return_value=MagicMock()):
+        with patch(
+            "notebooklm._artifacts.load_httpx_cookies", return_value=MagicMock()
+        ):
             async with NotebookLMClient(auth_tokens) as client:
                 result = await client.artifacts.download_slide_deck(
                     "nb_123", output, output_format="pptx"
@@ -1007,7 +1036,9 @@ class TestDownloadReport:
                         3,  # status (completed)
                         None,
                         None,
-                        ["# Test Report\n\nThis is markdown content."],  # content at index 7
+                        [
+                            "# Test Report\n\nThis is markdown content."
+                        ],  # content at index 7
                     ]
                 ]
             ],
@@ -1070,7 +1101,9 @@ class TestDownloadMindMap:
 
         output_path = tmp_path / "mindmap.json"
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.artifacts.download_mind_map("nb_123", str(output_path))
+            result = await client.artifacts.download_mind_map(
+                "nb_123", str(output_path)
+            )
 
         assert result == str(output_path)
         assert output_path.exists()
@@ -1136,7 +1169,9 @@ class TestDownloadDataTable:
 
         output_path = tmp_path / "data.csv"
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.artifacts.download_data_table("nb_123", str(output_path))
+            result = await client.artifacts.download_data_table(
+                "nb_123", str(output_path)
+            )
 
         assert result == str(output_path)
         assert output_path.exists()
@@ -1470,7 +1505,9 @@ class TestGenerateMindMapParsing:
             ],
         )
         # RPC response: [[json_string]]
-        mindmap_response = build_rpc_response(RPCMethod.GENERATE_MIND_MAP, [[mind_map_json_str]])
+        mindmap_response = build_rpc_response(
+            RPCMethod.GENERATE_MIND_MAP, [[mind_map_json_str]]
+        )
         httpx_mock.add_response(content=notebook_response.encode())
         httpx_mock.add_response(content=mindmap_response.encode())
 
@@ -1512,7 +1549,9 @@ class TestGenerateMindMapParsing:
             ],
         )
         # RPC response: [[dict_object]] — not a string, already parsed
-        mindmap_response = build_rpc_response(RPCMethod.GENERATE_MIND_MAP, [[mind_map_dict]])
+        mindmap_response = build_rpc_response(
+            RPCMethod.GENERATE_MIND_MAP, [[mind_map_dict]]
+        )
         httpx_mock.add_response(content=notebook_response.encode())
         httpx_mock.add_response(content=mindmap_response.encode())
 
@@ -1629,7 +1668,9 @@ class TestDownloadAudioErrorPaths:
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            with pytest.raises(ArtifactParseError, match="Invalid audio metadata structure"):
+            with pytest.raises(
+                ArtifactParseError, match="Invalid audio metadata structure"
+            ):
                 await client.artifacts.download_audio("nb_123", "/tmp/audio.mp4")
 
     @pytest.mark.asyncio
@@ -1679,7 +1720,9 @@ class TestDownloadAudioErrorPaths:
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            with pytest.raises(ArtifactParseError, match="Failed to parse audio artifact"):
+            with pytest.raises(
+                ArtifactParseError, match="Failed to parse audio artifact"
+            ):
                 await client.artifacts.download_audio("nb_123", "/tmp/audio.mp4")
 
 
@@ -1746,7 +1789,9 @@ class TestGenerateMindMapSourceIdsNone:
         httpx_mock.add_response(content=table_response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.artifacts.generate_data_table("nb_123", source_ids=None)
+            result = await client.artifacts.generate_data_table(
+                "nb_123", source_ids=None
+            )
 
         assert result.task_id == "dt_new"
 
@@ -1894,7 +1939,9 @@ class TestCallGenerateErrorHandling:
                 "rpc_call",
                 AsyncMock(side_effect=err),
             ):
-                result = await client.artifacts.generate_audio("nb_123", source_ids=["src_001"])
+                result = await client.artifacts.generate_audio(
+                    "nb_123", source_ids=["src_001"]
+                )
 
         assert result.status == "failed"
         assert result.error_code == "USER_DISPLAYABLE_ERROR"
@@ -1990,7 +2037,9 @@ class TestDownloadUrlValidation:
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            with pytest.raises(ArtifactDownloadError, match="Untrusted download domain"):
+            with pytest.raises(
+                ArtifactDownloadError, match="Untrusted download domain"
+            ):
                 await client.artifacts.download_audio("nb_123", "/tmp/audio.mp4")
 
 
@@ -2210,7 +2259,9 @@ class TestGetArtifactTypeNameAndIsMediaReady:
             None,
             3,  # COMPLETED — but no nested URL structure
         ]
-        response = build_rpc_response(RPCMethod.LIST_ARTIFACTS, [[infographic_artifact]])
+        response = build_rpc_response(
+            RPCMethod.LIST_ARTIFACTS, [[infographic_artifact]]
+        )
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -2243,7 +2294,12 @@ class TestGetArtifactTypeNameAndIsMediaReady:
             None,
             None,
             None,
-            [None, "Title", None, "https://docs.googleusercontent.com/slides.pdf"],  # art[16]
+            [
+                None,
+                "Title",
+                None,
+                "https://docs.googleusercontent.com/slides.pdf",
+            ],  # art[16]
         ]
         response = build_rpc_response(RPCMethod.LIST_ARTIFACTS, [[slide_artifact]])
         httpx_mock.add_response(content=response.encode())
@@ -2318,7 +2374,9 @@ class TestDownloadQuizFlashcardParsing:
                 AsyncMock(return_value=html_without_data),
             ):
                 with pytest.raises(ArtifactParseError, match="data-app-data"):
-                    await client.artifacts.download_flashcards("nb_123", "/tmp/flashcards.json")
+                    await client.artifacts.download_flashcards(
+                        "nb_123", "/tmp/flashcards.json"
+                    )
 
     @pytest.mark.asyncio
     async def test_download_quiz_invalid_output_format_raises_validation_error(
@@ -2330,7 +2388,9 @@ class TestDownloadQuizFlashcardParsing:
         """download_quiz raises ValidationError for invalid output_format."""
         async with NotebookLMClient(auth_tokens) as client:
             with pytest.raises(ValidationError, match="Invalid output_format"):
-                await client.artifacts.download_quiz("nb_123", "/tmp/quiz.xyz", output_format="xyz")
+                await client.artifacts.download_quiz(
+                    "nb_123", "/tmp/quiz.xyz", output_format="xyz"
+                )
 
     @pytest.mark.asyncio
     async def test_download_flashcards_invalid_output_format_raises_validation_error(
@@ -2392,7 +2452,9 @@ class TestDownloadQuizFlashcardParsing:
         list_response = build_rpc_response(RPCMethod.LIST_ARTIFACTS, [[artifact_data]])
         httpx_mock.add_response(content=list_response.encode())
 
-        raw_html = '<html><body data-app-data="{&quot;quiz&quot;:[]}">content</body></html>'
+        raw_html = (
+            '<html><body data-app-data="{&quot;quiz&quot;:[]}">content</body></html>'
+        )
 
         output_path = str(tmp_path / "quiz.html")
         async with NotebookLMClient(auth_tokens) as client:
@@ -2435,6 +2497,8 @@ class TestWaitForCompletionDeprecated:
                 result = await client.artifacts.wait_for_completion(
                     "nb_123", "task_dep", poll_interval=1.0
                 )
-                assert any(issubclass(warning.category, DeprecationWarning) for warning in w)
+                assert any(
+                    issubclass(warning.category, DeprecationWarning) for warning in w
+                )
 
         assert result.status == "completed"
