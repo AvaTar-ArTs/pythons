@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0c" />
+  <title>NotebookLM — Artifacts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="gptj home">
+  <nav class="variant-nav" aria-label="View variants">
+    <a href="../../../index.html">Hub</a>
+    <span class="variant-sep" aria-hidden="true">·</span>
+    <span class="variant-current" aria-current="page">Grid</span>
+    <span class="variant-sep" aria-hidden="true">·</span>
+    <a href="index-compact.html">List</a>
+  </nav>
+  <header class="hero">
+    <p class="terminal-prefix">notebooklm · build 0001</p>
+    <h1 aria-label="NotebookLM Artifacts">
+      <span class="brand-line">NotebookLM</span>
+      <span class="junkie">Artifacts</span>
+    </h1>
+    <p class="hero-sub">Podcast-style index inspired by <a class="inline-link" href="https://gptjunkie.com/" rel="noopener noreferrer">gptjunkie.com</a>. Open a notebook to browse <strong>Artifacts</strong> as episodes (audio, video, docs).</p>
+    <div class="stats-bar" role="presentation">
+      <div class="stat">
+        <div class="stat-num green">9</div>
+        <div class="stat-label">Notebooks</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num gold">0</div>
+        <div class="stat-label">Artifact episodes</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num pink">3</div>
+        <div class="stat-label">Accent themes</div>
+      </div>
+    </div>
+    <p class="scroll-hint">Scroll to explore</p>
+  </header>
+
+  <section class="theme-section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Notebook index</h2>
+      <span class="section-count">9 notebooks</span>
+    </div>
+    <div class="index-toolbar">
+      <label class="sr-only" for="nb-search">Filter notebooks by name</label>
+      <input type="search" id="nb-search" class="search-input" placeholder="Filter notebooks…" autocomplete="off" />
+      <span class="filter-count" id="nb-filter-count" aria-live="polite"></span>
+    </div>
+    <div class="repo-grid" id="repo-grid">
+<a class="repo-card ai" href="notebooks/conversation-logs.html" data-search="conversation_logs"><div class="card-name">conversation_logs</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+<a class="repo-card biz" href="notebooks/data.html" data-search="data"><div class="card-name">data</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+<a class="repo-card creative" href="notebooks/docs.html" data-search="docs"><div class="card-name">docs</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+<a class="repo-card ai" href="notebooks/exports.html" data-search="exports"><div class="card-name">exports</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+<a class="repo-card biz" href="notebooks/extracted-sources.html" data-search="extracted_sources"><div class="card-name">extracted_sources</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+<a class="repo-card creative" href="notebooks/gol-ia-newq.html" data-search="gol-ia-newq"><div class="card-name">gol-ia-newq</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+<a class="repo-card ai" href="notebooks/images.html" data-search="images"><div class="card-name">images</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+<a class="repo-card biz" href="notebooks/notebooklm-skill.html" data-search="notebooklm-skill"><div class="card-name">notebooklm-skill</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+<a class="repo-card creative" href="notebooks/references.html" data-search="references"><div class="card-name">references</div><div class="card-desc">No Artifacts folder yet — Sources / chat may still exist</div></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-text">
+      <a class="inline-link" href="index-compact.html">Compact list view</a>
+      ·
+      <a class="inline-link" href="../../../index.html">Export hub</a>
+      ·
+      New builds go to <code>site/versions/</code> (this is build <strong>0001</strong>).
+      Regenerate with <code>python3 scripts/generate_notebooklm_artifacts_site.py</code>
+    </p>
+  </footer>
+  <script>
+(function () {
+  var input = document.getElementById("nb-search");
+  var grid = document.getElementById("repo-grid");
+  var countEl = document.getElementById("nb-filter-count");
+  if (!input || !grid) return;
+  var cards = grid.querySelectorAll("a.repo-card");
+  function apply() {
+    var q = (input.value || "").trim().toLowerCase();
+    var n = 0;
+    for (var i = 0; i < cards.length; i++) {
+      var a = cards[i];
+      var hay = (a.getAttribute("data-search") || "").toLowerCase();
+      var show = !q || hay.indexOf(q) !== -1;
+      a.style.display = show ? "" : "none";
+      if (show) n++;
+    }
+    if (countEl) {
+      if (!q) countEl.textContent = "";
+      else countEl.textContent = n + (n === 1 ? " match" : " matches");
+    }
+  }
+  input.addEventListener("input", apply);
+  input.addEventListener("search", apply);
+})();
+  </script>
+</body>
+</html>

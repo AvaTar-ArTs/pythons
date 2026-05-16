@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0c" />
+  <title>NotebookLM — Compact index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="gptj compact-variant">
+  <nav class="variant-nav" aria-label="View variants">
+    <a href="../../../index.html">Hub</a>
+    <span class="variant-sep" aria-hidden="true">·</span>
+    <a href="index.html">Grid</a>
+    <span class="variant-sep" aria-hidden="true">·</span>
+    <span class="variant-current" aria-current="page">List</span>
+  </nav>
+
+  <header class="hero hero-compact">
+    <p class="terminal-prefix">notebooklm · build 0001 · list</p>
+    <h1 aria-label="NotebookLM compact index">
+      <span class="brand-line">NotebookLM</span>
+      <span class="junkie">List</span>
+    </h1>
+    <p class="hero-sub">Dense directory view — same links as the grid, faster to scan. <strong>9</strong> notebooks · <strong>0</strong> artifact episodes.</p>
+  </header>
+
+  <section class="theme-section compact-section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Notebook directory</h2>
+      <span class="section-count">9 notebooks</span>
+    </div>
+    <div class="index-toolbar">
+      <label class="sr-only" for="nb-search-compact">Filter notebooks by name</label>
+      <input type="search" id="nb-search-compact" class="search-input" placeholder="Filter notebooks…" autocomplete="off" />
+      <span class="filter-count" id="nb-filter-count-compact" aria-live="polite"></span>
+    </div>
+    <ol class="compact-list" id="compact-list">
+<li class="dir-row" data-search="conversation_logs"><a class="dir-link" href="notebooks/conversation-logs.html">conversation_logs</a><span class="dir-meta">—</span></li>
+<li class="dir-row" data-search="data"><a class="dir-link" href="notebooks/data.html">data</a><span class="dir-meta">—</span></li>
+<li class="dir-row" data-search="docs"><a class="dir-link" href="notebooks/docs.html">docs</a><span class="dir-meta">—</span></li>
+<li class="dir-row" data-search="exports"><a class="dir-link" href="notebooks/exports.html">exports</a><span class="dir-meta">—</span></li>
+<li class="dir-row" data-search="extracted_sources"><a class="dir-link" href="notebooks/extracted-sources.html">extracted_sources</a><span class="dir-meta">—</span></li>
+<li class="dir-row" data-search="gol-ia-newq"><a class="dir-link" href="notebooks/gol-ia-newq.html">gol-ia-newq</a><span class="dir-meta">—</span></li>
+<li class="dir-row" data-search="images"><a class="dir-link" href="notebooks/images.html">images</a><span class="dir-meta">—</span></li>
+<li class="dir-row" data-search="notebooklm-skill"><a class="dir-link" href="notebooks/notebooklm-skill.html">notebooklm-skill</a><span class="dir-meta">—</span></li>
+<li class="dir-row" data-search="references"><a class="dir-link" href="notebooks/references.html">references</a><span class="dir-meta">—</span></li>
+    </ol>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-text">Build <strong>0001</strong> · Regenerate with <code>python3 scripts/generate_notebooklm_artifacts_site.py</code></p>
+  </footer>
+  <script>
+(function () {
+  var input = document.getElementById("nb-search-compact");
+  var list = document.getElementById("compact-list");
+  var countEl = document.getElementById("nb-filter-count-compact");
+  if (!input || !list) return;
+  var rows = list.querySelectorAll("li.dir-row");
+  function apply() {
+    var q = (input.value || "").trim().toLowerCase();
+    var n = 0;
+    for (var i = 0; i < rows.length; i++) {
+      var row = rows[i];
+      var hay = (row.getAttribute("data-search") || "").toLowerCase();
+      var show = !q || hay.indexOf(q) !== -1;
+      row.style.display = show ? "" : "none";
+      if (show) n++;
+    }
+    if (countEl) {
+      if (!q) countEl.textContent = "";
+      else countEl.textContent = n + (n === 1 ? " match" : " matches");
+    }
+  }
+  input.addEventListener("input", apply);
+  input.addEventListener("search", apply);
+})();
+  </script>
+</body>
+</html>
