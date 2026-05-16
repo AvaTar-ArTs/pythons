@@ -6,7 +6,8 @@ dynamic = ["readme"]
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "Teng Lin", email = "teng.lin@gmail.com"}
+    {name = "Teng Lin", email = "teng.lin@gmail.com"},
+    {name = "Steven Chaplinski / AvaTar-ArTs"},
 ]
 keywords = ["notebooklm", "google", "ai", "automation", "rpc", "client", "api"]
 classifiers = [
@@ -28,10 +29,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/teng-lin/notebooklm-py"
-Repository = "https://github.com/teng-lin/notebooklm-py"
-Documentation = "https://github.com/teng-lin/notebooklm-py#readme"
-Issues = "https://github.com/teng-lin/notebooklm-py/issues"
+Homepage = "https://github.com/AvaTar-ArTs/pythons/tree/main/notebooklm-py"
+Repository = "https://github.com/AvaTar-ArTs/pythons"
+Documentation = "https://github.com/AvaTar-ArTs/pythons/tree/main/notebooklm-py#readme"
+Issues = "https://github.com/AvaTar-ArTs/pythons/issues"
 
 [project.optional-dependencies]
 browser = ["playwright>=1.40.0"]
@@ -67,23 +68,23 @@ path = "README.md"
 # Convert relative doc links to version-tagged absolute URLs
 [[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
 pattern = '\]\(docs/'
-replacement = '](https://github.com/teng-lin/notebooklm-py/blob/v$HFPR_VERSION/docs/'
+replacement = '](https://github.com/AvaTar-ArTs/pythons/blob/main/notebooklm-py/v$HFPR_VERSION/docs/'
 
 [[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
 pattern = '\]\(CHANGELOG\.md\)'
-replacement = '](https://github.com/teng-lin/notebooklm-py/blob/v$HFPR_VERSION/CHANGELOG.md)'
+replacement = '](https://github.com/AvaTar-ArTs/pythons/blob/main/notebooklm-py/v$HFPR_VERSION/CHANGELOG.md)'
 
 [[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
 pattern = '\]\(SECURITY\.md\)'
-replacement = '](https://github.com/teng-lin/notebooklm-py/blob/v$HFPR_VERSION/SECURITY.md)'
+replacement = '](https://github.com/AvaTar-ArTs/pythons/blob/main/notebooklm-py/v$HFPR_VERSION/SECURITY.md)'
 
 [[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
 pattern = '\]\(LICENSE\)'
-replacement = '](https://github.com/teng-lin/notebooklm-py/blob/v$HFPR_VERSION/LICENSE)'
+replacement = '](https://github.com/AvaTar-ArTs/pythons/blob/main/notebooklm-py/v$HFPR_VERSION/LICENSE)'
 
 [[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
 pattern = '\]\(SKILL\.md\)'
-replacement = '](https://github.com/teng-lin/notebooklm-py/blob/v$HFPR_VERSION/SKILL.md)'
+replacement = '](https://github.com/AvaTar-ArTs/pythons/blob/main/notebooklm-py/v$HFPR_VERSION/SKILL.md)'
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/notebooklm"]
