@@ -1,6 +1,6 @@
 # notebooklm-py
 <p align="left">
-  <img src="https://raw.githubusercontent.com/teng-lin/notebooklm-py/main/notebooklm-py.png" alt="notebooklm-py logo" width="128">
+  <img src="https://raw.githubusercontent.com/AvaTar-ArTs/pythons/main/notebooklm-py/notebooklm-py.png" alt="notebooklm-py logo" width="128">
 </p>
 
 **A Comprehensive NotebookLM Skill & Unofficial Python API.** Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.
@@ -8,12 +8,12 @@
 [![PyPI version](https://img.shields.io/pypi/v/notebooklm-py.svg)](https://pypi.org/project/notebooklm-py/)
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue)](https://pypi.org/project/notebooklm-py/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/teng-lin/notebooklm-py/actions/workflows/test.yml/badge.svg)](https://github.com/teng-lin/notebooklm-py/actions/workflows/test.yml)
+[![Tests](https://github.com/AvaTar-ArTs/pythons/actions/workflows/test.yml/badge.svg)](https://github.com/AvaTar-ArTs/pythons/actions/workflows/test.yml)
 <p>
   <a href="https://trendshift.io/repositories/19116" target="_blank"><img src="https://trendshift.io/api/badge/repositories/19116" alt="teng-lin%2Fnotebooklm-py | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
-**Source & Development**: <https://github.com/teng-lin/notebooklm-py>
+**Source & Development**: <https://github.com/AvaTar-ArTs/pythons/tree/main/notebooklm-py> (maintained fork of [teng-lin/notebooklm-py](https://github.com/teng-lin/notebooklm-py))
 
 > **⚠️ Unofficial Library - Use at Your Own Risk**
 >
