@@ -121,7 +121,9 @@ class TestVideoGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_video_brief_whiteboard(self, client, generation_notebook_id):
+    async def test_generate_video_brief_whiteboard(
+        self, client, generation_notebook_id
+    ):
         result = await client.artifacts.generate_video(
             generation_notebook_id,
             video_format=VideoFormat.BRIEF,
@@ -131,7 +133,9 @@ class TestVideoGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_video_with_instructions(self, client, generation_notebook_id):
+    async def test_generate_video_with_instructions(
+        self, client, generation_notebook_id
+    ):
         result = await client.artifacts.generate_video(
             generation_notebook_id,
             video_format=VideoFormat.EXPLAINER,
@@ -151,7 +155,9 @@ class TestVideoGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_video_watercolor_style(self, client, generation_notebook_id):
+    async def test_generate_video_watercolor_style(
+        self, client, generation_notebook_id
+    ):
         result = await client.artifacts.generate_video(
             generation_notebook_id,
             video_style=VideoStyle.WATERCOLOR,
@@ -177,14 +183,18 @@ class TestCinematicVideoGeneration:
     """
 
     @pytest.mark.asyncio
-    async def test_generate_cinematic_video_default(self, client, generation_notebook_id):
+    async def test_generate_cinematic_video_default(
+        self, client, generation_notebook_id
+    ):
         """Test cinematic video generation with defaults."""
         result = await client.artifacts.generate_cinematic_video(generation_notebook_id)
         assert_generation_started(result)
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_cinematic_video_with_instructions(self, client, generation_notebook_id):
+    async def test_generate_cinematic_video_with_instructions(
+        self, client, generation_notebook_id
+    ):
         """Test cinematic video generation with custom instructions."""
         result = await client.artifacts.generate_cinematic_video(
             generation_notebook_id,
@@ -194,7 +204,9 @@ class TestCinematicVideoGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_cinematic_video_with_language(self, client, generation_notebook_id):
+    async def test_generate_cinematic_video_with_language(
+        self, client, generation_notebook_id
+    ):
         """Test cinematic video generation with explicit language."""
         result = await client.artifacts.generate_cinematic_video(
             generation_notebook_id,
@@ -253,7 +265,9 @@ class TestFlashcardsGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_flashcards_with_options(self, client, generation_notebook_id):
+    async def test_generate_flashcards_with_options(
+        self, client, generation_notebook_id
+    ):
         result = await client.artifacts.generate_flashcards(
             generation_notebook_id,
             quantity=QuizQuantity.STANDARD,
@@ -278,7 +292,9 @@ class TestInfographicGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_infographic_portrait_detailed(self, client, generation_notebook_id):
+    async def test_generate_infographic_portrait_detailed(
+        self, client, generation_notebook_id
+    ):
         result = await client.artifacts.generate_infographic(
             generation_notebook_id,
             orientation=InfographicOrientation.PORTRAIT,
@@ -289,7 +305,9 @@ class TestInfographicGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_infographic_square_concise(self, client, generation_notebook_id):
+    async def test_generate_infographic_square_concise(
+        self, client, generation_notebook_id
+    ):
         result = await client.artifacts.generate_infographic(
             generation_notebook_id,
             orientation=InfographicOrientation.SQUARE,
@@ -333,7 +351,9 @@ class TestSlideDeckGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_slide_deck_presenter_short(self, client, generation_notebook_id):
+    async def test_generate_slide_deck_presenter_short(
+        self, client, generation_notebook_id
+    ):
         result = await client.artifacts.generate_slide_deck(
             generation_notebook_id,
             slide_format=SlideDeckFormat.PRESENTER_SLIDES,
@@ -357,7 +377,9 @@ class TestDataTableGeneration:
 
     @pytest.mark.asyncio
     @pytest.mark.variants
-    async def test_generate_data_table_with_instructions(self, client, generation_notebook_id):
+    async def test_generate_data_table_with_instructions(
+        self, client, generation_notebook_id
+    ):
         result = await client.artifacts.generate_data_table(
             generation_notebook_id,
             instructions="Create a comparison table of key concepts",

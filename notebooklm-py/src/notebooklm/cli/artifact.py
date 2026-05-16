@@ -91,7 +91,9 @@ def artifact_list(ctx, notebook_id, artifact_type, json_output, client_auth):
         async with NotebookLMClient(client_auth) as client:
             nb_id_resolved = await resolve_notebook_id(client, nb_id)
             # artifacts.list() already includes mind maps from notes system
-            artifacts = await client.artifacts.list(nb_id_resolved, artifact_type=type_filter)
+            artifacts = await client.artifacts.list(
+                nb_id_resolved, artifact_type=type_filter
+            )
 
             if json_output:
                 nb = await client.notebooks.get(nb_id_resolved)
@@ -107,7 +109,9 @@ def artifact_list(ctx, notebook_id, artifact_type, json_output, client_auth):
                             "type_id": art.kind.value,
                             "status": art.status_str,
                             "status_id": art.status,
-                            "created_at": art.created_at.isoformat() if art.created_at else None,
+                            "created_at": (
+                                art.created_at.isoformat() if art.created_at else None
+                            ),
                         }
                         for i, art in enumerate(artifacts, 1)
                     ],
@@ -129,7 +133,9 @@ def artifact_list(ctx, notebook_id, artifact_type, json_output, client_auth):
 
             for art in artifacts:
                 type_display = get_artifact_type_display(art)
-                created = art.created_at.strftime("%Y-%m-%d %H:%M") if art.created_at else "-"
+                created = (
+                    art.created_at.strftime("%Y-%m-%d %H:%M") if art.created_at else "-"
+                )
                 table.add_row(art.id, art.title, type_display, created, art.status_str)
 
             console.print(table)
@@ -265,7 +271,9 @@ def artifact_delete(ctx, artifact_id, notebook_id, yes, client_auth):
     help="Notebook ID (uses current if not set). Supports partial IDs.",
 )
 @click.option("--title", required=True, help="Title for exported document")
-@click.option("--type", "export_type", type=click.Choice(["docs", "sheets"]), default="docs")
+@click.option(
+    "--type", "export_type", type=click.Choice(["docs", "sheets"]), default="docs"
+)
 @with_client
 def artifact_export(ctx, artifact_id, notebook_id, title, export_type, client_auth):
     """Export artifact to Google Docs/Sheets.
@@ -279,13 +287,17 @@ def artifact_export(ctx, artifact_id, notebook_id, title, export_type, client_au
             nb_id_resolved = await resolve_notebook_id(client, nb_id)
             resolved_id = await resolve_artifact_id(client, nb_id_resolved, artifact_id)
             # Convert export_type string to ExportType enum
-            export_type_enum = ExportType.SHEETS if export_type == "sheets" else ExportType.DOCS
+            export_type_enum = (
+                ExportType.SHEETS if export_type == "sheets" else ExportType.DOCS
+            )
             # Pass None for content - backend retrieves content from artifact_id
             result = await client.artifacts.export(
                 nb_id_resolved, resolved_id, None, title, export_type_enum
             )
             if result:
-                console.print(f"[green]Exported to Google {export_type.title()}[/green]")
+                console.print(
+                    f"[green]Exported to Google {export_type.title()}[/green]"
+                )
                 console.print(result)
             else:
                 console.print("[yellow]Export may have failed[/yellow]")
@@ -340,7 +352,9 @@ def artifact_poll(ctx, task_id, notebook_id, client_auth):
 )
 @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
 @with_client
-def artifact_wait(ctx, artifact_id, notebook_id, timeout, interval, json_output, client_auth):
+def artifact_wait(
+    ctx, artifact_id, notebook_id, timeout, interval, json_output, client_auth
+):
     """Wait for artifact generation to complete.
 
     Blocks until the artifact is completed, failed, or timeout is reached.
@@ -376,7 +390,9 @@ def artifact_wait(ctx, artifact_id, notebook_id, timeout, interval, json_output,
                     json_output_response(data)
                 else:
                     if status.status == "completed":
-                        console.print(f"[green]✓ Artifact completed:[/green] {resolved_id}")
+                        console.print(
+                            f"[green]✓ Artifact completed:[/green] {resolved_id}"
+                        )
                         if status.url:
                             console.print(f"[dim]URL:[/dim] {status.url}")
                     elif status.error:
@@ -441,6 +457,8 @@ def artifact_suggestions(ctx, notebook_id, json_output, client_auth):
                 table.add_row(str(i), suggestion.title, suggestion.description)
 
             console.print(table)
-            console.print('\n[dim]Use the prompt with: notebooklm generate report "<prompt>"[/dim]')
+            console.print(
+                '\n[dim]Use the prompt with: notebooklm generate report "<prompt>"[/dim]'
+            )
 
     return _run()

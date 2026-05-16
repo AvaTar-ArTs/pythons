@@ -62,7 +62,9 @@ class TestAskSaveAsNote:
             mock_client.notes.create = AsyncMock(return_value=make_note())
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli, ["ask", "What is 42?", "--save-as-note", "-n", "nb_123"]
@@ -79,10 +81,14 @@ class TestAskSaveAsNote:
             mock_client = create_mock_client()
             mock_client.chat.ask = AsyncMock(return_value=make_ask_result())
             mock_client.chat.get_conversation_id = AsyncMock(return_value=None)
-            mock_client.notes.create = AsyncMock(return_value=make_note(title="My Title"))
+            mock_client.notes.create = AsyncMock(
+                return_value=make_note(title="My Title")
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
                     cli,
@@ -110,7 +116,9 @@ class TestAskSaveAsNote:
             mock_client.notes.create = AsyncMock(return_value=make_note())
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["ask", "What is 42?", "-n", "nb_123"])
 
@@ -126,7 +134,9 @@ class TestHistoryCommand:
             mock_client.chat.get_conversation_id = AsyncMock(return_value=MOCK_CONV_ID)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["history", "-n", "nb_123"])
 
@@ -142,7 +152,9 @@ class TestHistoryCommand:
             mock_client.notes.create = AsyncMock(return_value=make_note())
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["history", "--save", "-n", "nb_123"])
 
@@ -156,7 +168,9 @@ class TestHistoryCommand:
             mock_client.chat.get_history = AsyncMock(return_value=[])
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["history", "-n", "nb_123"])
 
@@ -170,7 +184,9 @@ class TestHistoryCommand:
             mock_client.chat.get_conversation_id = AsyncMock(return_value=MOCK_CONV_ID)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["history", "--json", "-n", "nb_123"])
 
@@ -193,7 +209,9 @@ class TestHistoryCommand:
             mock_client.chat.get_conversation_id = AsyncMock(return_value=None)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["history", "--json", "-n", "nb_123"])
 
@@ -215,7 +233,9 @@ class TestHistoryCommand:
             mock_client.chat.get_conversation_id = AsyncMock(return_value=MOCK_CONV_ID)
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["history", "--show-all", "-n", "nb_123"])
 
@@ -247,12 +267,18 @@ class TestAskServerResumed:
         with patch_client_for_module("chat") as mock_client_cls:
             mock_client = create_mock_client()
             mock_client.chat.ask = AsyncMock(return_value=ask_result)
-            mock_client.chat.get_conversation_id = AsyncMock(return_value="conv-server-abc")
+            mock_client.chat.get_conversation_id = AsyncMock(
+                return_value="conv-server-abc"
+            )
             mock_client_cls.return_value = mock_client
 
             with (
-                patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch,
-                patch("notebooklm.cli.helpers.get_context_path", return_value=context_file),
+                patch(
+                    "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
+                patch(
+                    "notebooklm.cli.helpers.get_context_path", return_value=context_file
+                ),
             ):
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["ask", "-n", "nb_123", "question"])
@@ -261,10 +287,14 @@ class TestAskServerResumed:
         assert "Resumed conversation:" in result.output
         assert "(turn 1)" not in result.output
 
-    def test_ask_shows_turn_number_for_local_follow_up(self, runner, mock_auth, tmp_path):
+    def test_ask_shows_turn_number_for_local_follow_up(
+        self, runner, mock_auth, tmp_path
+    ):
         """When context has a local conv ID, follow-up should show turn number."""
         context_file = tmp_path / "context.json"
-        context_file.write_text('{"notebook_id": "nb_123", "conversation_id": "conv-local-abc"}')
+        context_file.write_text(
+            '{"notebook_id": "nb_123", "conversation_id": "conv-local-abc"}'
+        )
 
         ask_result = AskResult(
             answer="The answer.",
@@ -281,11 +311,17 @@ class TestAskServerResumed:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch,
-                patch("notebooklm.cli.helpers.get_context_path", return_value=context_file),
+                patch(
+                    "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
+                patch(
+                    "notebooklm.cli.helpers.get_context_path", return_value=context_file
+                ),
             ):
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["ask", "-n", "nb_123", "follow-up question"])
+                result = runner.invoke(
+                    cli, ["ask", "-n", "nb_123", "follow-up question"]
+                )
 
         assert result.exit_code == 0, result.output
         assert "Conversation: conv-local-abc (turn 2)" in result.output

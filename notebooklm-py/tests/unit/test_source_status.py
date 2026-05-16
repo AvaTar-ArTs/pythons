@@ -246,7 +246,9 @@ class TestWaitForSources:
             raise SourceNotFoundError(source_id)
 
         with patch.object(sources_api, "wait_until_ready", side_effect=mock_wait):
-            results = await sources_api.wait_for_sources("nb_1", ["src_1", "src_2"], timeout=10.0)
+            results = await sources_api.wait_for_sources(
+                "nb_1", ["src_1", "src_2"], timeout=10.0
+            )
 
             assert len(results) == 2
             assert all(s.is_ready for s in results)

@@ -78,16 +78,24 @@ class TestExtractLegacyReportChunks:
     """Tests for _extract_legacy_report_chunks static method."""
 
     def test_missing_index_6(self):
-        assert ResearchAPI._extract_legacy_report_chunks([None, "t", None, 5, None, None]) == ""
+        assert (
+            ResearchAPI._extract_legacy_report_chunks([None, "t", None, 5, None, None])
+            == ""
+        )
 
     def test_index_6_not_list(self):
         assert (
-            ResearchAPI._extract_legacy_report_chunks([None, "t", None, 5, None, None, "str"]) == ""
+            ResearchAPI._extract_legacy_report_chunks(
+                [None, "t", None, 5, None, None, "str"]
+            )
+            == ""
         )
 
     def test_single_chunk(self):
         assert (
-            ResearchAPI._extract_legacy_report_chunks([None, "t", None, 5, None, None, ["chunk"]])
+            ResearchAPI._extract_legacy_report_chunks(
+                [None, "t", None, 5, None, None, ["chunk"]]
+            )
             == "chunk"
         )
 
@@ -101,15 +109,21 @@ class TestExtractLegacyReportChunks:
 
     def test_all_empty_returns_empty(self):
         assert (
-            ResearchAPI._extract_legacy_report_chunks([None, "t", None, 5, None, None, ["", None]])
+            ResearchAPI._extract_legacy_report_chunks(
+                [None, "t", None, 5, None, None, ["", None]]
+            )
             == ""
         )
 
 
 class TestResearch:
     @pytest.mark.asyncio
-    async def test_start_fast_research(self, auth_tokens, httpx_mock, build_rpc_response):
-        response_body = build_rpc_response(RPCMethod.START_FAST_RESEARCH, ["task_123", None])
+    async def test_start_fast_research(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
+        response_body = build_rpc_response(
+            RPCMethod.START_FAST_RESEARCH, ["task_123", None]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -121,7 +135,9 @@ class TestResearch:
         assert result["mode"] == "fast"
 
     @pytest.mark.asyncio
-    async def test_poll_research_completed(self, auth_tokens, httpx_mock, build_rpc_response):
+    async def test_poll_research_completed(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
         sources = [["http://example.com", "Example Title", "Description", 1]]
         task_info = [
             None,
@@ -130,7 +146,9 @@ class TestResearch:
             [sources, "Summary text"],
             2,  # status: completed
         ]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -162,7 +180,9 @@ class TestResearch:
         assert result[0]["id"] == "src_new"
 
     @pytest.mark.asyncio
-    async def test_start_deep_research(self, auth_tokens, httpx_mock, build_rpc_response):
+    async def test_start_deep_research(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
         """Test starting deep web research."""
         response_body = build_rpc_response(
             RPCMethod.START_DEEP_RESEARCH, ["task_456", "report_123"]
@@ -185,7 +205,9 @@ class TestResearch:
 
         async with NotebookLMClient(auth_tokens) as client:
             with pytest.raises(ValidationError, match="Invalid source"):
-                await client.research.start(notebook_id="nb_123", query="test", source="invalid")
+                await client.research.start(
+                    notebook_id="nb_123", query="test", source="invalid"
+                )
 
     @pytest.mark.asyncio
     async def test_start_research_invalid_mode(self, auth_tokens):
@@ -194,7 +216,9 @@ class TestResearch:
 
         async with NotebookLMClient(auth_tokens) as client:
             with pytest.raises(ValidationError, match="Invalid mode"):
-                await client.research.start(notebook_id="nb_123", query="test", mode="invalid")
+                await client.research.start(
+                    notebook_id="nb_123", query="test", mode="invalid"
+                )
 
     @pytest.mark.asyncio
     async def test_start_deep_drive_invalid(self, auth_tokens):
@@ -202,19 +226,25 @@ class TestResearch:
         from notebooklm.exceptions import ValidationError
 
         async with NotebookLMClient(auth_tokens) as client:
-            with pytest.raises(ValidationError, match="Deep Research only supports Web"):
+            with pytest.raises(
+                ValidationError, match="Deep Research only supports Web"
+            ):
                 await client.research.start(
                     notebook_id="nb_123", query="test", source="drive", mode="deep"
                 )
 
     @pytest.mark.asyncio
-    async def test_start_research_returns_none(self, auth_tokens, httpx_mock, build_rpc_response):
+    async def test_start_research_returns_none(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
         """Test start returns None on empty response."""
         response_body = build_rpc_response(RPCMethod.START_FAST_RESEARCH, [])
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.research.start(notebook_id="nb_123", query="test", mode="fast")
+            result = await client.research.start(
+                notebook_id="nb_123", query="test", mode="fast"
+            )
 
         assert result is None
 
@@ -239,7 +269,9 @@ class TestResearch:
             [[], ""],
             1,  # status: in_progress
         ]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -249,11 +281,17 @@ class TestResearch:
         assert result["query"] == "research query"
 
     @pytest.mark.asyncio
-    async def test_poll_deep_research_sources(self, auth_tokens, httpx_mock, build_rpc_response):
+    async def test_poll_deep_research_sources(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
         """Test poll parses deep research sources (title only, no URL)."""
-        sources = [[None, "Deep Research Finding", None, 5, None, None, ["# Report markdown"]]]
+        sources = [
+            [None, "Deep Research Finding", None, 5, None, None, ["# Report markdown"]]
+        ]
         task_info = [None, ["deep query", 1], 1, [sources, "Deep summary"], 2]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -269,11 +307,19 @@ class TestResearch:
         assert result["report"] == "# Report markdown"
 
     @pytest.mark.asyncio
-    async def test_poll_returns_all_tasks(self, auth_tokens, httpx_mock, build_rpc_response):
+    async def test_poll_returns_all_tasks(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
         """Test poll preserves all parsed research tasks in an additive tasks field."""
         latest_sources = [["http://example.com/latest", "Latest", "Description", 1]]
         older_sources = [["http://example.com/older", "Older", "Description", 1]]
-        latest_task = [None, ["latest query", 1], 1, [latest_sources, "Latest summary"], 2]
+        latest_task = [
+            None,
+            ["latest query", 1],
+            1,
+            [latest_sources, "Latest summary"],
+            2,
+        ]
         older_task = [None, ["older query", 1], 1, [older_sources, "Older summary"], 2]
         response_body = build_rpc_response(
             RPCMethod.POLL_RESEARCH,
@@ -296,9 +342,21 @@ class TestResearch:
         self, auth_tokens, httpx_mock, build_rpc_response
     ):
         """Test poll joins multiple legacy report chunks instead of truncating to the first one."""
-        sources = [[None, "Deep Research Finding", None, 5, None, None, ["chunk one", "chunk two"]]]
+        sources = [
+            [
+                None,
+                "Deep Research Finding",
+                None,
+                5,
+                None,
+                None,
+                ["chunk one", "chunk two"],
+            ]
+        ]
         task_info = [None, ["deep query", 1], 1, [sources, "Deep summary"], 2]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -324,7 +382,9 @@ class TestResearch:
             ]
         ]
         task_info = [None, ["deep query", 1], 1, [sources, "Deep summary"], 6]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["report_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["report_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -342,9 +402,13 @@ class TestResearch:
         self, auth_tokens, httpx_mock, build_rpc_response
     ):
         """Test poll preserves legacy string-encoded source types semantically."""
-        sources = [["https://drive.example.com/doc", "Drive Doc", "Description", "drive"]]
+        sources = [
+            ["https://drive.example.com/doc", "Drive Doc", "Description", "drive"]
+        ]
         task_info = [None, ["drive query", 1], 1, [sources, "Drive summary"], 2]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -356,10 +420,14 @@ class TestResearch:
         assert result["sources"][0]["result_type"] == 2
 
     @pytest.mark.asyncio
-    async def test_poll_status_code_6_completed(self, auth_tokens, httpx_mock, build_rpc_response):
+    async def test_poll_status_code_6_completed(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
         """Test that status code 6 (deep research) is treated as completed."""
         task_info = [None, ["query", 1], 1, [[], ""], 6]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -422,7 +490,12 @@ class TestResearch:
         """Test that deep research imports prepend the report entry and use the polled task id."""
         response_body = build_rpc_response(
             RPCMethod.IMPORT_RESEARCH,
-            [[[["report_src_001"], "Deep Research Report"], [["src_001"], "Web Source"]]],
+            [
+                [
+                    [["report_src_001"], "Deep Research Report"],
+                    [["src_001"], "Web Source"],
+                ]
+            ],
         )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
@@ -547,7 +620,9 @@ class TestResearch:
         assert params[4][2][2] == ["http://example.com", "Web Source"]
 
     @pytest.mark.asyncio
-    async def test_import_sources_empty_response(self, auth_tokens, httpx_mock, build_rpc_response):
+    async def test_import_sources_empty_response(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
         """Test import_sources handles empty API response."""
         response_body = build_rpc_response(RPCMethod.IMPORT_RESEARCH, [])
         httpx_mock.add_response(content=response_body.encode(), method="POST")
@@ -565,7 +640,9 @@ class TestResearch:
         self, auth_tokens, httpx_mock, build_rpc_response
     ):
         """Test import_sources handles malformed response gracefully."""
-        response_body = build_rpc_response(RPCMethod.IMPORT_RESEARCH, [[["not_a_list", "Title"]]])
+        response_body = build_rpc_response(
+            RPCMethod.IMPORT_RESEARCH, [[["not_a_list", "Title"]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -577,7 +654,9 @@ class TestResearch:
         assert result == []
 
     @pytest.mark.asyncio
-    async def test_full_workflow_poll_to_import(self, auth_tokens, httpx_mock, build_rpc_response):
+    async def test_full_workflow_poll_to_import(
+        self, auth_tokens, httpx_mock, build_rpc_response
+    ):
         """Test complete workflow: start -> poll -> import.
 
         Validates that poll() output format is compatible with import_sources() input.
@@ -591,7 +670,9 @@ class TestResearch:
         task_info = [None, ["AI research query", 1], 1, [poll_sources, "Summary"], 2]
 
         httpx_mock.add_response(
-            content=build_rpc_response(RPCMethod.START_FAST_RESEARCH, ["task_123", None]).encode(),
+            content=build_rpc_response(
+                RPCMethod.START_FAST_RESEARCH, ["task_123", None]
+            ).encode(),
             method="POST",
         )
         httpx_mock.add_response(
@@ -644,9 +725,27 @@ class TestResearch:
         """
         # Deep research format includes a special report entry and web sources.
         poll_sources = [
-            [None, ["Deep Research Report", "# Deep report body"], None, 5, None, None, None],
-            ["https://example.com/ai-ethics", "Deep Finding: AI Ethics", "Description", 2],
-            ["https://example.com/ml-trends", "Deep Finding: ML Trends", "Description", 2],
+            [
+                None,
+                ["Deep Research Report", "# Deep report body"],
+                None,
+                5,
+                None,
+                None,
+                None,
+            ],
+            [
+                "https://example.com/ai-ethics",
+                "Deep Finding: AI Ethics",
+                "Description",
+                2,
+            ],
+            [
+                "https://example.com/ml-trends",
+                "Deep Finding: ML Trends",
+                "Description",
+                2,
+            ],
             [None, "Synthetic Summary", "No URL", 2],  # This will be filtered out
         ]
         task_info = [None, ["deep AI research", 1], 1, [poll_sources, "Summary"], 2]
@@ -726,7 +825,9 @@ class TestResearch:
         self, auth_tokens, httpx_mock, build_rpc_response
     ):
         """Late no_research return (all tasks invalid) also includes 'tasks' key."""
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[42, "not_a_list"]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[42, "not_a_list"]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -742,7 +843,9 @@ class TestResearch:
         """Unknown string result_type tags are preserved as-is in source dicts."""
         sources = [["http://example.com", "Video Source", "desc", "video"]]
         task_info = [None, ["query", 1], 1, [sources, "Summary"], 2]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -755,9 +858,13 @@ class TestResearch:
         self, auth_tokens, httpx_mock, build_rpc_response
     ):
         """Legacy report chunks filter out non-string and empty values."""
-        sources = [[None, "Report Title", None, 5, None, None, ["chunk1", None, "", "chunk2"]]]
+        sources = [
+            [None, "Report Title", None, 5, None, None, ["chunk1", None, "", "chunk2"]]
+        ]
         task_info = [None, ["query", 1], 1, [sources, ""], 2]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -772,7 +879,9 @@ class TestResearch:
         """Deep source with src[1] as single-element list is correctly dropped."""
         sources = [[None, ["title_only"], None, 5]]
         task_info = [None, ["query", 1], 1, [sources, ""], 2]
-        response_body = build_rpc_response(RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]])
+        response_body = build_rpc_response(
+            RPCMethod.POLL_RESEARCH, [[["task_123", task_info]]]
+        )
         httpx_mock.add_response(content=response_body.encode(), method="POST")
 
         async with NotebookLMClient(auth_tokens) as client:

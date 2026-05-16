@@ -48,7 +48,9 @@ class TestNotebookOperations:
 class TestNotebookAsk:
     @pytest.mark.asyncio
     async def test_ask_notebook(self, client, read_only_notebook_id):
-        result = await client.chat.ask(read_only_notebook_id, "What is this notebook about?")
+        result = await client.chat.ask(
+            read_only_notebook_id, "What is this notebook about?"
+        )
         assert result.answer is not None
         assert result.conversation_id is not None
 

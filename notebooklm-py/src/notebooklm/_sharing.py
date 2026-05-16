@@ -237,7 +237,14 @@ class SharingAPI:
         """
         logger.debug("Removing user %s from notebook %s", email, notebook_id)
         params = [
-            [[notebook_id, [[email, None, SharePermission._REMOVE.value]], None, [0, ""]]],
+            [
+                [
+                    notebook_id,
+                    [[email, None, SharePermission._REMOVE.value]],
+                    None,
+                    [0, ""],
+                ]
+            ],
             0,
             None,
             [2],

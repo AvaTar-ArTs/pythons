@@ -54,12 +54,17 @@ class TestLoginCommand:
     def test_login_playwright_import_error_handling(self, runner):
         """Test that ImportError for playwright is handled gracefully."""
         # Patch the import inside the login function to raise ImportError
-        with patch.dict("sys.modules", {"playwright": None, "playwright.sync_api": None}):
+        with patch.dict(
+            "sys.modules", {"playwright": None, "playwright.sync_api": None}
+        ):
             result = runner.invoke(cli, ["login"])
 
             # Should exit with code 1 and show helpful message
             assert result.exit_code == 1
-            assert "Playwright not installed" in result.output or "pip install" in result.output
+            assert (
+                "Playwright not installed" in result.output
+                or "pip install" in result.output
+            )
 
     def test_login_help_message(self, runner):
         """Test login command shows help information."""
@@ -74,7 +79,9 @@ class TestLoginCommand:
         result = runner.invoke(cli, ["login", "--help"])
 
         assert result.exit_code == 0
-        assert "storage_state.json" in result.output or "storage" in result.output.lower()
+        assert (
+            "storage_state.json" in result.output or "storage" in result.output.lower()
+        )
 
     def test_login_blocked_when_notebooklm_auth_json_set(self, runner, monkeypatch):
         """Test login command blocks when NOTEBOOKLM_AUTH_JSON is set."""
@@ -111,7 +118,8 @@ class TestLoginCommand:
             patch("notebooklm.cli.session._ensure_chromium_installed") as mock_ensure,
             patch("playwright.sync_api.sync_playwright") as mock_pw,
             patch(
-                "notebooklm.cli.session.get_storage_path", return_value=tmp_path / "storage.json"
+                "notebooklm.cli.session.get_storage_path",
+                return_value=tmp_path / "storage.json",
             ),
             patch(
                 "notebooklm.cli.session.get_browser_profile_dir",
@@ -156,7 +164,8 @@ class TestLoginCommand:
             patch("notebooklm.cli.session._ensure_chromium_installed"),
             patch("playwright.sync_api.sync_playwright") as mock_pw,
             patch(
-                "notebooklm.cli.session.get_storage_path", return_value=tmp_path / "storage.json"
+                "notebooklm.cli.session.get_storage_path",
+                return_value=tmp_path / "storage.json",
             ),
             patch(
                 "notebooklm.cli.session.get_browser_profile_dir",
@@ -200,7 +209,9 @@ class TestLoginCommand:
             mock_page.url = "https://notebooklm.google.com/"
             mock_context.pages = [mock_page]
             # Make storage_state create the file so chmod succeeds
-            mock_context.storage_state.side_effect = lambda path: Path(path).write_text("{}")
+            mock_context.storage_state.side_effect = lambda path: Path(path).write_text(
+                "{}"
+            )
             mock_launch = (
                 mock_pw.return_value.__enter__.return_value.chromium.launch_persistent_context
             )
@@ -224,7 +235,9 @@ class TestLoginCommand:
             # First goto (NOTEBOOKLM_URL before login) succeeds
             # Second and third (cookie-forcing) raise navigation interrupted
             if call_count >= 2:
-                raise PlaywrightError("Page.goto: Navigation interrupted by another one")
+                raise PlaywrightError(
+                    "Page.goto: Navigation interrupted by another one"
+                )
 
         mock_page.goto.side_effect = goto_side_effect
         mock_page.url = original_url
@@ -255,7 +268,9 @@ class TestLoginCommand:
 
         assert result.exit_code != 0
 
-    def test_login_uses_commit_wait_strategy(self, runner, mock_login_browser_with_storage):
+    def test_login_uses_commit_wait_strategy(
+        self, runner, mock_login_browser_with_storage
+    ):
         """Test login uses wait_until='commit' for cookie-forcing navigation."""
         mock_page = mock_login_browser_with_storage
 
@@ -297,7 +312,9 @@ class TestLoginCommand:
         # Verify that goto was called more than once (retried)
         assert mock_page.goto.call_count >= 2
 
-    def test_login_retries_on_connection_reset_error(self, runner, mock_login_browser_with_storage):
+    def test_login_retries_on_connection_reset_error(
+        self, runner, mock_login_browser_with_storage
+    ):
         """Test login retries when initial navigation fails with ERR_CONNECTION_RESET (#243)."""
         mock_page = mock_login_browser_with_storage
         from playwright.sync_api import Error as PlaywrightError
@@ -322,7 +339,9 @@ class TestLoginCommand:
         assert result.exit_code == 0
         assert "Authentication saved" in result.output
 
-    def test_login_exits_after_max_retries(self, runner, mock_login_browser_with_storage):
+    def test_login_exits_after_max_retries(
+        self, runner, mock_login_browser_with_storage
+    ):
         """Test login exits with error message after 3 failed connection attempts (#243)."""
         mock_page = mock_login_browser_with_storage
         from playwright.sync_api import Error as PlaywrightError
@@ -413,7 +432,9 @@ class TestUseCommand:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
 
                 # Patch in session module where it's imported
@@ -441,7 +462,9 @@ class TestUseCommand:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
 
                 # Patch in session module where it's imported
@@ -482,7 +505,9 @@ class TestUseCommand:
             )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
 
                 # Patch in session module where it's imported
@@ -660,7 +685,9 @@ class TestStatusPaths:
         assert output_data["paths"]["home_dir"] == "/custom/path/.notebooklm"
         assert output_data["paths"]["home_source"] == "NOTEBOOKLM_HOME"
 
-    def test_status_paths_shows_auth_json_note(self, runner, mock_context_file, monkeypatch):
+    def test_status_paths_shows_auth_json_note(
+        self, runner, mock_context_file, monkeypatch
+    ):
         """Test status --paths shows note when NOTEBOOKLM_AUTH_JSON is set."""
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", '{"cookies":[]}')
 
@@ -691,7 +718,9 @@ class TestAuthCheckCommand:
     def mock_storage_path(self, tmp_path):
         """Provide a temporary storage path for testing."""
         storage_file = tmp_path / "storage_state.json"
-        with patch("notebooklm.cli.session.get_storage_path", return_value=storage_file):
+        with patch(
+            "notebooklm.cli.session.get_storage_path", return_value=storage_file
+        ):
             yield storage_file
 
     def test_auth_check_storage_not_found(self, runner, mock_storage_path):
@@ -804,7 +833,9 @@ class TestAuthCheckCommand:
         }
         mock_storage_path.write_text(json.dumps(storage_data))
 
-        with patch("notebooklm.auth.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+        with patch(
+            "notebooklm.auth.fetch_tokens", new_callable=AsyncMock
+        ) as mock_fetch:
             mock_fetch.return_value = ("csrf_token_abc", "session_id_xyz")
 
             result = runner.invoke(cli, ["auth", "check", "--test"])
@@ -822,7 +853,9 @@ class TestAuthCheckCommand:
         }
         mock_storage_path.write_text(json.dumps(storage_data))
 
-        with patch("notebooklm.auth.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+        with patch(
+            "notebooklm.auth.fetch_tokens", new_callable=AsyncMock
+        ) as mock_fetch:
             mock_fetch.side_effect = ValueError("Authentication expired")
 
             result = runner.invoke(cli, ["auth", "check", "--test"])
@@ -841,7 +874,9 @@ class TestAuthCheckCommand:
         }
         mock_storage_path.write_text(json.dumps(storage_data))
 
-        with patch("notebooklm.auth.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+        with patch(
+            "notebooklm.auth.fetch_tokens", new_callable=AsyncMock
+        ) as mock_fetch:
             mock_fetch.return_value = ("csrf_12345", "sess_67890")
 
             result = runner.invoke(cli, ["auth", "check", "--test", "--json"])
@@ -853,7 +888,9 @@ class TestAuthCheckCommand:
         assert output["details"]["csrf_length"] == 10
         assert output["details"]["session_id_length"] == 10
 
-    def test_auth_check_env_var_takes_precedence(self, runner, mock_storage_path, monkeypatch):
+    def test_auth_check_env_var_takes_precedence(
+        self, runner, mock_storage_path, monkeypatch
+    ):
         """Test auth check uses NOTEBOOKLM_AUTH_JSON when set."""
         # Even if storage file doesn't exist, env var should work
         if mock_storage_path.exists():
@@ -966,7 +1003,9 @@ class TestLoginLanguageSync:
 
         with (
             patch("notebooklm.cli.session.NotebookLMClient") as mock_client_cls,
-            patch.object(self.language_mod, "get_config_path", return_value=config_path),
+            patch.object(
+                self.language_mod, "get_config_path", return_value=config_path
+            ),
             patch.object(self.language_mod, "get_home_dir"),
         ):
             mock_client = create_mock_client()
@@ -988,7 +1027,9 @@ class TestLoginLanguageSync:
 
         with (
             patch("notebooklm.cli.session.NotebookLMClient") as mock_client_cls,
-            patch.object(self.language_mod, "get_config_path", return_value=config_path),
+            patch.object(
+                self.language_mod, "get_config_path", return_value=config_path
+            ),
         ):
             mock_client = create_mock_client()
             mock_client.settings = MagicMock()
@@ -1008,7 +1049,9 @@ class TestLoginLanguageSync:
             patch("notebooklm.cli.session.NotebookLMClient") as mock_client_cls,
             patch("notebooklm.cli.session.console") as mock_console,
         ):
-            mock_client_cls.from_storage = AsyncMock(side_effect=Exception("Network error"))
+            mock_client_cls.from_storage = AsyncMock(
+                side_effect=Exception("Network error")
+            )
 
             # Should not raise
             _sync_server_language_to_config()
@@ -1025,14 +1068,20 @@ class TestLoginLanguageSync:
 
 
 class TestSessionEdgeCases:
-    def test_use_handles_api_error_gracefully(self, runner, mock_auth, mock_context_file):
+    def test_use_handles_api_error_gracefully(
+        self, runner, mock_auth, mock_context_file
+    ):
         """Test 'use' command handles API errors gracefully."""
         with patch_main_cli_client() as mock_client_cls:
             mock_client = create_mock_client()
-            mock_client.notebooks.get = AsyncMock(side_effect=Exception("API Error: Rate limited"))
+            mock_client.notebooks.get = AsyncMock(
+                side_effect=Exception("API Error: Rate limited")
+            )
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
 
                 # Patch in session module where it's imported
@@ -1046,7 +1095,11 @@ class TestSessionEdgeCases:
         # Should still set context with warning, not crash
         assert result.exit_code == 0
         # Error message should be shown
-        assert "Warning" in result.output or "Error" in result.output or "nb_error" in result.output
+        assert (
+            "Warning" in result.output
+            or "Error" in result.output
+            or "nb_error" in result.output
+        )
 
     def test_status_shows_shared_notebook_correctly(self, runner, mock_context_file):
         """Test status correctly shows shared (non-owner) notebooks."""
@@ -1069,14 +1122,18 @@ class TestSessionEdgeCases:
             mock_client = create_mock_client()
             mock_client_cls.return_value = mock_client
 
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
 
                 # Patch resolve_notebook_id to raise ClickException (e.g., ambiguous ID)
                 with patch(
                     "notebooklm.cli.session.resolve_notebook_id", new_callable=AsyncMock
                 ) as mock_resolve:
-                    mock_resolve.side_effect = click.ClickException("Multiple notebooks match 'nb'")
+                    mock_resolve.side_effect = click.ClickException(
+                        "Multiple notebooks match 'nb'"
+                    )
 
                     result = runner.invoke(cli, ["use", "nb"])
 
@@ -1125,14 +1182,18 @@ class TestLoginWindowsPermissions:
         storage_path = tmp_path / "home" / "storage_state.json"
         browser_profile = tmp_path / "profile"
 
-        monkeypatch.setattr("notebooklm.cli.session.get_storage_path", lambda: storage_path)
+        monkeypatch.setattr(
+            "notebooklm.cli.session.get_storage_path", lambda: storage_path
+        )
         monkeypatch.setattr(
             "notebooklm.cli.session.get_browser_profile_dir", lambda: browser_profile
         )
         self.storage_parent = storage_path.parent
         self.browser_profile = browser_profile
 
-    def test_windows_login_skips_mode_and_chmod(self, monkeypatch, _patch_login_deps, runner):
+    def test_windows_login_skips_mode_and_chmod(
+        self, monkeypatch, _patch_login_deps, runner
+    ):
         """On Windows, login mkdir calls omit mode= and chmod is never called."""
         import notebooklm.cli.session as session_mod
 
@@ -1153,7 +1214,9 @@ class TestLoginWindowsPermissions:
         monkeypatch.setattr(Path, "chmod", _track_chmod)
 
         # Trigger the login command but abort early at playwright import
-        with patch.dict("sys.modules", {"playwright": None, "playwright.sync_api": None}):
+        with patch.dict(
+            "sys.modules", {"playwright": None, "playwright.sync_api": None}
+        ):
             runner.invoke(cli, ["login"])
 
         # mkdir should NOT receive mode= on Windows
@@ -1167,7 +1230,9 @@ class TestLoginWindowsPermissions:
             len(chmod_calls) == 0
         ), f"chmod called {len(chmod_calls)} time(s) on Windows: {chmod_calls}"
 
-    def test_unix_login_sets_mode_and_chmod(self, monkeypatch, _patch_login_deps, runner):
+    def test_unix_login_sets_mode_and_chmod(
+        self, monkeypatch, _patch_login_deps, runner
+    ):
         """On Unix, login mkdir calls include mode=0o700 and chmod is called."""
         import notebooklm.cli.session as session_mod
 
@@ -1188,7 +1253,9 @@ class TestLoginWindowsPermissions:
         monkeypatch.setattr(Path, "chmod", _track_chmod)
 
         # Trigger the login command but abort early at playwright import
-        with patch.dict("sys.modules", {"playwright": None, "playwright.sync_api": None}):
+        with patch.dict(
+            "sys.modules", {"playwright": None, "playwright.sync_api": None}
+        ):
             runner.invoke(cli, ["login"])
 
         # mkdir should receive mode=0o700 on Unix (2 calls: storage_parent + browser_profile)
@@ -1199,7 +1266,9 @@ class TestLoginWindowsPermissions:
 
         # chmod(0o700) should be called on Unix (2 calls: storage_parent + browser_profile)
         chmod_700 = [c for c in chmod_calls if c["args"] == (0o700,)]
-        assert len(chmod_700) >= 2, f"Expected ≥2 chmod(0o700) calls on Unix, got {len(chmod_700)}"
+        assert (
+            len(chmod_700) >= 2
+        ), f"Expected ≥2 chmod(0o700) calls on Unix, got {len(chmod_700)}"
 
     def test_windows_storage_chmod_skipped(self, monkeypatch, _patch_login_deps):
         """On Windows, storage_state.json chmod(0o600) is also skipped."""
@@ -1358,7 +1427,9 @@ class TestLoginBrowserCookies:
         ):
             runner.invoke(cli, ["login", "--browser-cookies", "auto"])
         data = json.loads(storage_file.read_text())
-        assert any(c["name"] == "SID" and c["value"] == "mysid" for c in data["cookies"])
+        assert any(
+            c["name"] == "SID" and c["value"] == "mysid" for c in data["cookies"]
+        )
 
     def test_unknown_browser_shows_error(self, runner, tmp_path):
         """Unknown browser name shows a clear error."""

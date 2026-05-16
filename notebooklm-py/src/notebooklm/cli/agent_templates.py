@@ -15,7 +15,9 @@ REPO_ROOT_CLAUDE_SKILL = Path(__file__).resolve().parents[3] / "SKILL.md"
 def _read_package_data(filename: str) -> str | None:
     """Read a packaged agent template file."""
     try:
-        return (resources.files("notebooklm") / "data" / filename).read_text(encoding="utf-8")
+        return (resources.files("notebooklm") / "data" / filename).read_text(
+            encoding="utf-8"
+        )
     except (FileNotFoundError, TypeError, ModuleNotFoundError):
         return None
 

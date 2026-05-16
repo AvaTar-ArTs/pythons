@@ -298,7 +298,9 @@ class TestAnswerExtraction:
         answer, refs, _ = chat_api._parse_ask_response_with_references(
             self._build_response(inner_data)
         )
-        assert answer == "The answer text that should be extracted regardless of marker."
+        assert (
+            answer == "The answer text that should be extracted regardless of marker."
+        )
 
     def test_extract_short_answer(self, chat_api):
         """Test that short answers (< 20 chars) are extracted.

@@ -53,12 +53,15 @@ class TestAddSource:
         build_rpc_response,
     ):
         response = build_rpc_response(
-            RPCMethod.ADD_SOURCE, [[[["source_id"], "My Document", [None, 11], [None, 2]]]]
+            RPCMethod.ADD_SOURCE,
+            [[[["source_id"], "My Document", [None, 11], [None, 2]]]],
         )
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            source = await client.sources.add_text("nb_123", "My Document", "This is the content")
+            source = await client.sources.add_text(
+                "nb_123", "My Document", "This is the content"
+            )
 
         assert isinstance(source, Source)
         assert source.id == "source_id"
@@ -431,7 +434,9 @@ class TestSourcesAPI:
     ):
         """Test getting guide for source with no AI analysis."""
         # Real API returns 3 levels of nesting even for empty responses
-        response = build_rpc_response(RPCMethod.GET_SOURCE_GUIDE, [[[None, [], [], []]]])
+        response = build_rpc_response(
+            RPCMethod.GET_SOURCE_GUIDE, [[[None, [], [], []]]]
+        )
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -542,10 +547,14 @@ class TestAddFileSource:
             RPCMethod.ADD_SOURCE_FILE,
             [[[[" src_id"], "my_file.pdf", [None, None, None, None, 0]]]],
         )
-        httpx_mock.add_response(url=re.compile(r".*batchexecute.*"), content=rpc_response.encode())
+        httpx_mock.add_response(
+            url=re.compile(r".*batchexecute.*"), content=rpc_response.encode()
+        )
         httpx_mock.add_response(
             url=re.compile(r".*upload/_/\?authuser=0$"),
-            headers={"x-goog-upload-url": "https://notebooklm.google.com/upload/_/?upload_id=x"},
+            headers={
+                "x-goog-upload-url": "https://notebooklm.google.com/upload/_/?upload_id=x"
+            },
         )
         httpx_mock.add_response(url=re.compile(r".*upload_id=.*"), content=b"OK")
 
@@ -561,7 +570,9 @@ class TestAddFileSource:
         # The params are JSON-encoded inside the RPC wrapper, so quotes are escaped
         # Verify 3 brackets (correct) not 4 brackets (bug)
         assert '[[[\\"my_file.pdf\\"]]' in body, f"Expected 3 brackets, got: {body}"
-        assert '[[[[\\"my_file.pdf\\"]]' not in body, "Should not have 4 brackets (old bug)"
+        assert (
+            '[[[[\\"my_file.pdf\\"]]' not in body
+        ), "Should not have 4 brackets (old bug)"
 
     @pytest.mark.asyncio
     async def test_add_file_not_found(
@@ -593,10 +604,14 @@ class TestAddFileSource:
             RPCMethod.ADD_SOURCE_FILE,
             [[[["src_abc"], "document.txt", [None, None, None, None, 0]]]],
         )
-        httpx_mock.add_response(url=re.compile(r".*batchexecute.*"), content=rpc_response.encode())
+        httpx_mock.add_response(
+            url=re.compile(r".*batchexecute.*"), content=rpc_response.encode()
+        )
         httpx_mock.add_response(
             url=re.compile(r".*upload/_/\?authuser=0$"),
-            headers={"x-goog-upload-url": "https://notebooklm.google.com/upload/_/?upload_id=y"},
+            headers={
+                "x-goog-upload-url": "https://notebooklm.google.com/upload/_/?upload_id=y"
+            },
         )
         httpx_mock.add_response(url=re.compile(r".*upload_id=.*"), content=b"OK")
 
@@ -608,7 +623,9 @@ class TestAddFileSource:
 
         # Verify headers
         assert start_request.headers["x-goog-upload-protocol"] == "resumable"
-        assert start_request.headers["x-goog-upload-header-content-length"] == str(len(content))
+        assert start_request.headers["x-goog-upload-header-content-length"] == str(
+            len(content)
+        )
 
         # Verify body contains metadata
         import json
@@ -635,10 +652,14 @@ class TestAddFileSource:
             RPCMethod.ADD_SOURCE_FILE,
             [[[["src_bin"], "binary_file.bin", [None, None, None, None, 0]]]],
         )
-        httpx_mock.add_response(url=re.compile(r".*batchexecute.*"), content=rpc_response.encode())
+        httpx_mock.add_response(
+            url=re.compile(r".*batchexecute.*"), content=rpc_response.encode()
+        )
         httpx_mock.add_response(
             url=re.compile(r".*upload/_/\?authuser=0$"),
-            headers={"x-goog-upload-url": "https://notebooklm.google.com/upload/_/?upload_id=z"},
+            headers={
+                "x-goog-upload-url": "https://notebooklm.google.com/upload/_/?upload_id=z"
+            },
         )
         httpx_mock.add_response(url=re.compile(r".*upload_id=.*"), content=b"OK")
 
@@ -670,7 +691,9 @@ class TestAddEpubFileSource:
         test_epub = tmp_path / "test_book.epub"
         buffer = BytesIO()
         with zipfile.ZipFile(buffer, "w") as zf:
-            zf.writestr("mimetype", "application/epub+zip", compress_type=zipfile.ZIP_STORED)
+            zf.writestr(
+                "mimetype", "application/epub+zip", compress_type=zipfile.ZIP_STORED
+            )
             zf.writestr("OEBPS/chapter1.xhtml", "<html><body><p>Test</p></body></html>")
         test_epub.write_bytes(buffer.getvalue())
 
@@ -877,7 +900,9 @@ class TestListSourcesMalformedResponse:
     ):
         """Test list() returns [] when sources_list is not a list (lines 89-95)."""
         # nb_info[1] is a string - fails isinstance(sources_list, list)
-        response = build_rpc_response(RPCMethod.GET_NOTEBOOK, [["Notebook Title", "not_a_list"]])
+        response = build_rpc_response(
+            RPCMethod.GET_NOTEBOOK, [["Notebook Title", "not_a_list"]]
+        )
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
@@ -1077,8 +1102,12 @@ class TestWaitForSources:
                     return ready_source_1
                 return ready_source_2
 
-            with patch.object(client.sources, "wait_until_ready", side_effect=mock_wait):
-                results = await client.sources.wait_for_sources("nb_123", ["src_1", "src_2"])
+            with patch.object(
+                client.sources, "wait_until_ready", side_effect=mock_wait
+            ):
+                results = await client.sources.wait_for_sources(
+                    "nb_123", ["src_1", "src_2"]
+                )
 
         assert len(results) == 2
         assert call_count == 2
@@ -1181,7 +1210,9 @@ class TestAddUrlErrorPaths:
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            with patch("notebooklm._sources.is_youtube_url", return_value=True) as mock_is_yt:
+            with patch(
+                "notebooklm._sources.is_youtube_url", return_value=True
+            ) as mock_is_yt:
                 with patch.object(
                     client.sources,
                     "_extract_youtube_video_id",
@@ -1298,7 +1329,9 @@ class TestAddFileWait:
                             new_callable=AsyncMock,
                             return_value=ready_source,
                         ) as mock_wait:
-                            result = await client.sources.add_file("nb_123", test_file, wait=True)
+                            result = await client.sources.add_file(
+                                "nb_123", test_file, wait=True
+                            )
 
         mock_wait.assert_called_once_with("nb_123", "file_src_001", timeout=120.0)
         assert result.id == "file_src_001"
@@ -1627,7 +1660,9 @@ class TestExtractAllText:
     ):
         """Test _extract_all_text() recursively extracts text from nested arrays."""
         async with NotebookLMClient(auth_tokens) as client:
-            result = client.sources._extract_all_text([["hello", ["world"]], "foo", [[], "bar"]])
+            result = client.sources._extract_all_text(
+                [["hello", ["world"]], "foo", [[], "bar"]]
+            )
 
         assert result == ["hello", "world", "foo", "bar"]
 
@@ -1653,7 +1688,9 @@ class TestExtractYoutubeVideoId:
     ):
         """Test _extract_youtube_video_id() returns None for non-YouTube URL."""
         async with NotebookLMClient(auth_tokens) as client:
-            result = client.sources._extract_youtube_video_id("https://example.com/video")
+            result = client.sources._extract_youtube_video_id(
+                "https://example.com/video"
+            )
 
         assert result is None
 
@@ -1679,7 +1716,9 @@ class TestExtractYoutubeVideoId:
         """Test _extract_youtube_video_id() handles exceptions gracefully (lines 817-819)."""
         async with NotebookLMClient(auth_tokens) as client:
             # Patching urlparse to raise ValueError covers the except block
-            with patch("notebooklm._sources.urlparse", side_effect=ValueError("parse error")):
+            with patch(
+                "notebooklm._sources.urlparse", side_effect=ValueError("parse error")
+            ):
                 result = client.sources._extract_youtube_video_id(
                     "https://youtube.com/watch?v=abc123"
                 )
@@ -1850,7 +1889,9 @@ class TestWaitUntilReady:
 
         async with NotebookLMClient(auth_tokens) as client:
             with pytest.raises(SourceTimeoutError):
-                await client.sources.wait_until_ready("nb_123", "src_timeout", timeout=0.0)
+                await client.sources.wait_until_ready(
+                    "nb_123", "src_timeout", timeout=0.0
+                )
 
 
 class TestAddFileValidation:
@@ -2016,7 +2057,9 @@ class TestExtractVideoIdFromParsedUrl:
     ):
         """Test _extract_youtube_video_id() extracts ID from youtu.be short URL (line 835)."""
         async with NotebookLMClient(auth_tokens) as client:
-            result = client.sources._extract_youtube_video_id("https://youtu.be/dQw4w9WgXcQ")
+            result = client.sources._extract_youtube_video_id(
+                "https://youtu.be/dQw4w9WgXcQ"
+            )
 
         assert result == "dQw4w9WgXcQ"
 

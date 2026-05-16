@@ -105,7 +105,10 @@ def get_error_message_for_code(code: int | None) -> tuple[str, bool]:
     if 400 <= code < 500:
         return (f"Client error {code}. Check your request parameters.", False)
     if 500 <= code < 600:
-        return (f"Server error {code}. This is usually temporary - try again later.", True)
+        return (
+            f"Server error {code}. This is usually temporary - try again later.",
+            True,
+        )
     return (f"Error code: {code}", False)
 
 

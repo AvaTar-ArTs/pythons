@@ -32,7 +32,9 @@ def mock_auth():
                 "SAPISID": "test",
             },
         ),
-        patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+        patch(
+            "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+        ) as mock_fetch,
     ):
         mock_fetch.return_value = ("csrf_token", "session_id")
         yield

@@ -41,7 +41,9 @@ class RPCMethod(str, Enum):
     QUERY_ENDPOINT = "/_/LabsTailwindUi/data/google.internal.labs.tailwind.orchestration.v1.LabsTailwindOrchestrationService/GenerateFreeFormStreamed"
 
     # Artifact operations
-    CREATE_ARTIFACT = "R7cb6c"  # Generate any artifact (audio, video, report, quiz, etc.)
+    CREATE_ARTIFACT = (
+        "R7cb6c"  # Generate any artifact (audio, video, report, quiz, etc.)
+    )
     LIST_ARTIFACTS = "gArtLc"  # List all artifacts in a notebook
     DELETE_ARTIFACT = "V5N4be"
     RENAME_ARTIFACT = "rc3d8d"
@@ -91,9 +93,7 @@ class ArtifactTypeCode(int, Enum):
     """
 
     AUDIO = 1
-    REPORT = (
-        2  # Includes: Briefing Doc, Study Guide, Blog Post, White Paper, Research Proposal, etc.
-    )
+    REPORT = 2  # Includes: Briefing Doc, Study Guide, Blog Post, White Paper, Research Proposal, etc.
     VIDEO = 3
     QUIZ = 4  # Also used for flashcards
     QUIZ_FLASHCARD = 4  # Alias for backward compatibility

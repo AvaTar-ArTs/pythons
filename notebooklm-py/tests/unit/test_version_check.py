@@ -7,14 +7,16 @@ import textwrap
 
 def test_version_check_exits_on_old_python():
     """Verify that _version_check produces a clear error on unsupported Python."""
-    script = textwrap.dedent("""\
+    script = textwrap.dedent(
+        """\
         import sys
         from unittest.mock import patch
 
         with patch.object(sys, "version_info", (3, 9, 0)):
             from notebooklm._version_check import check_python_version
             check_python_version()
-    """)
+    """
+    )
     result = subprocess.run(
         [sys.executable, "-c", script],
         capture_output=True,

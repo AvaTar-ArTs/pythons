@@ -395,7 +395,9 @@ class Notebook:
         if len(data) > 5 and isinstance(data[5], list) and len(data[5]) > 1:
             is_owner = data[5][1] is False
 
-        return cls(id=notebook_id, title=title, created_at=created_at, is_owner=is_owner)
+        return cls(
+            id=notebook_id, title=title, created_at=created_at, is_owner=is_owner
+        )
 
 
 @dataclass
@@ -549,7 +551,9 @@ class Source:
         return self.status == SourceStatus.ERROR
 
     @classmethod
-    def from_api_response(cls, data: list[Any], notebook_id: str | None = None) -> "Source":
+    def from_api_response(
+        cls, data: list[Any], notebook_id: str | None = None
+    ) -> "Source":
         """Parse source data from various API response formats.
 
         The API returns different structures for different operations:
@@ -599,7 +603,9 @@ class Source:
                         if isinstance(url_list, list) and len(url_list) > 0:
                             url = url_list[0]
                     if not url and len(entry[2]) > 0:
-                        if isinstance(entry[2][0], str) and entry[2][0].startswith("http"):
+                        if isinstance(entry[2][0], str) and entry[2][0].startswith(
+                            "http"
+                        ):
                             url = entry[2][0]
                     # Extract type code at entry[2][4] if available
                     if len(entry[2]) > 4 and isinstance(entry[2][4], int):
@@ -743,7 +749,9 @@ class Artifact:
     status: int  # 1=processing, 2=pending, 3=completed, 4=failed
     created_at: datetime | None = None
     url: str | None = None
-    _variant: int | None = field(default=None, repr=False)  # For type 4: 1=flashcards, 2=quiz
+    _variant: int | None = field(
+        default=None, repr=False
+    )  # For type 4: 1=flashcards, 2=quiz
 
     @property
     def kind(self) -> ArtifactType:
@@ -1229,7 +1237,11 @@ class ShareStatus:
         view_level = ShareViewLevel.FULL_NOTEBOOK
 
         # Construct share URL if public
-        share_url = f"https://notebooklm.google.com/notebook/{notebook_id}" if is_public else None
+        share_url = (
+            f"https://notebooklm.google.com/notebook/{notebook_id}"
+            if is_public
+            else None
+        )
 
         return cls(
             notebook_id=notebook_id,

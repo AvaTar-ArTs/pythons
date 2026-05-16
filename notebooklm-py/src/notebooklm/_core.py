@@ -116,7 +116,9 @@ class ClientCore:
         self._connect_timeout = connect_timeout
         self._refresh_callback = refresh_callback
         self._refresh_retry_delay = refresh_retry_delay
-        self._refresh_lock: asyncio.Lock | None = asyncio.Lock() if refresh_callback else None
+        self._refresh_lock: asyncio.Lock | None = (
+            asyncio.Lock() if refresh_callback else None
+        )
         self._refresh_task: asyncio.Task[AuthTokens] | None = None
         self._http_client: httpx.AsyncClient | None = None
         # Request ID counter for chat API (must be unique per request)
@@ -418,7 +420,9 @@ class ClientCore:
         logger.info("Token refresh successful, retrying RPC %s", method.name)
 
         # Retry with refreshed tokens
-        return await self.rpc_call(method, params, source_path, allow_null, _is_retry=True)
+        return await self.rpc_call(
+            method, params, source_path, allow_null, _is_retry=True
+        )
 
     def get_http_client(self) -> httpx.AsyncClient:
         """Get the underlying HTTP client for direct requests.

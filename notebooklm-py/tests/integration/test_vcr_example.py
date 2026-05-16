@@ -121,9 +121,7 @@ class TestVCRWithNotebookLMPatterns:
         import httpx
 
         # Simulate the request format from notebooklm._core.ClientCore.rpc_call()
-        fake_rpc_body = (
-            'f.req=[[["methodId",null,null,[[["notebook_id","data"]]]]]]&at=fake_csrf_token'
-        )
+        fake_rpc_body = 'f.req=[[["methodId",null,null,[[["notebook_id","data"]]]]]]&at=fake_csrf_token'
 
         async with httpx.AsyncClient() as client:
             response = await client.post(

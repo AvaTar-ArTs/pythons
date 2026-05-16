@@ -218,7 +218,9 @@ def get_profile_dir(profile: str | None = None, create: bool = False) -> Path:
     return path
 
 
-def _legacy_fallback(profile_path: Path, legacy_name: str, resolved_profile: str) -> Path:
+def _legacy_fallback(
+    profile_path: Path, legacy_name: str, resolved_profile: str
+) -> Path:
     """Return legacy path if profile path doesn't exist and profile is "default".
 
     This ensures pre-migration users (and library users who never trigger CLI
@@ -341,7 +343,9 @@ def get_path_info(profile: str | None = None) -> dict[str, str]:
 
     return {
         "home_dir": str(get_home_dir()),
-        "home_source": "NOTEBOOKLM_HOME" if home_from_env else "default (~/.notebooklm)",
+        "home_source": (
+            "NOTEBOOKLM_HOME" if home_from_env else "default (~/.notebooklm)"
+        ),
         "profile": resolved,
         "profile_source": profile_source,
         "profile_dir": str(get_profile_dir(resolved)),

@@ -19,7 +19,9 @@ class TestResearchStatus:
     def test_status_no_research(self, runner, mock_auth, mock_fetch_tokens):
         with patch_client_for_module("research") as mock_client_cls:
             mock_client = create_mock_client()
-            mock_client.research.poll = AsyncMock(return_value={"status": "no_research"})
+            mock_client.research.poll = AsyncMock(
+                return_value={"status": "no_research"}
+            )
             mock_client_cls.return_value = mock_client
 
             result = runner.invoke(cli, ["research", "status", "-n", "nb_123"])
@@ -66,12 +68,15 @@ class TestResearchStatus:
         assert "Source 1" in result.output
         assert "Research Report" in result.output
 
-    def test_status_completed_with_many_sources(self, runner, mock_auth, mock_fetch_tokens):
+    def test_status_completed_with_many_sources(
+        self, runner, mock_auth, mock_fetch_tokens
+    ):
         """Test that more than 10 sources shows truncation message."""
         with patch_client_for_module("research") as mock_client_cls:
             mock_client = create_mock_client()
             sources = [
-                {"title": f"Source {i}", "url": f"http://example.com/{i}"} for i in range(15)
+                {"title": f"Source {i}", "url": f"http://example.com/{i}"}
+                for i in range(15)
             ]
             mock_client.research.poll = AsyncMock(
                 return_value={
@@ -92,7 +97,9 @@ class TestResearchStatus:
     def test_status_unknown(self, runner, mock_auth, mock_fetch_tokens):
         with patch_client_for_module("research") as mock_client_cls:
             mock_client = create_mock_client()
-            mock_client.research.poll = AsyncMock(return_value={"status": "unknown_status"})
+            mock_client.research.poll = AsyncMock(
+                return_value={"status": "unknown_status"}
+            )
             mock_client_cls.return_value = mock_client
 
             result = runner.invoke(cli, ["research", "status", "-n", "nb_123"])
@@ -113,7 +120,9 @@ class TestResearchStatus:
             )
             mock_client_cls.return_value = mock_client
 
-            result = runner.invoke(cli, ["research", "status", "-n", "nb_123", "--json"])
+            result = runner.invoke(
+                cli, ["research", "status", "-n", "nb_123", "--json"]
+            )
 
         assert result.exit_code == 0
         data = json.loads(result.output)
@@ -151,7 +160,9 @@ class TestResearchWait:
     def test_wait_no_research(self, runner, mock_auth, mock_fetch_tokens):
         with patch_client_for_module("research") as mock_client_cls:
             mock_client = create_mock_client()
-            mock_client.research.poll = AsyncMock(return_value={"status": "no_research"})
+            mock_client.research.poll = AsyncMock(
+                return_value={"status": "no_research"}
+            )
             mock_client_cls.return_value = mock_client
 
             result = runner.invoke(cli, ["research", "wait", "-n", "nb_123"])
@@ -168,7 +179,17 @@ class TestResearchWait:
             mock_client_cls.return_value = mock_client
 
             result = runner.invoke(
-                cli, ["research", "wait", "-n", "nb_123", "--timeout", "1", "--interval", "1"]
+                cli,
+                [
+                    "research",
+                    "wait",
+                    "-n",
+                    "nb_123",
+                    "--timeout",
+                    "1",
+                    "--interval",
+                    "1",
+                ],
             )
 
         assert result.exit_code == 1
@@ -193,7 +214,9 @@ class TestResearchWait:
             mock_import.return_value = [{"id": "src_1", "title": "Source 1"}]
             mock_client_cls.return_value = mock_client
 
-            result = runner.invoke(cli, ["research", "wait", "-n", "nb_123", "--import-all"])
+            result = runner.invoke(
+                cli, ["research", "wait", "-n", "nb_123", "--import-all"]
+            )
 
         assert result.exit_code == 0
         assert "Imported 1 sources" in result.output
@@ -267,7 +290,9 @@ class TestResearchWait:
     def test_wait_json_no_research(self, runner, mock_auth, mock_fetch_tokens):
         with patch_client_for_module("research") as mock_client_cls:
             mock_client = create_mock_client()
-            mock_client.research.poll = AsyncMock(return_value={"status": "no_research"})
+            mock_client.research.poll = AsyncMock(
+                return_value={"status": "no_research"}
+            )
             mock_client_cls.return_value = mock_client
 
             result = runner.invoke(cli, ["research", "wait", "-n", "nb_123", "--json"])
@@ -287,7 +312,17 @@ class TestResearchWait:
 
             result = runner.invoke(
                 cli,
-                ["research", "wait", "-n", "nb_123", "--json", "--timeout", "1", "--interval", "1"],
+                [
+                    "research",
+                    "wait",
+                    "-n",
+                    "nb_123",
+                    "--json",
+                    "--timeout",
+                    "1",
+                    "--interval",
+                    "1",
+                ],
             )
 
         assert result.exit_code == 1

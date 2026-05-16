@@ -106,7 +106,9 @@ class TestRegisterFileSource:
         mock_core.rpc_call.assert_called_once()
 
     @pytest.mark.asyncio
-    async def test_register_file_source_parses_deeply_nested(self, sources_api, mock_core):
+    async def test_register_file_source_parses_deeply_nested(
+        self, sources_api, mock_core
+    ):
         """Test parsing deeply nested response."""
         mock_core.rpc_call.return_value = [[[["my_source_id"]]]]
 
@@ -115,7 +117,9 @@ class TestRegisterFileSource:
         assert result == "my_source_id"
 
     @pytest.mark.asyncio
-    async def test_register_file_source_raises_on_null_response(self, sources_api, mock_core):
+    async def test_register_file_source_raises_on_null_response(
+        self, sources_api, mock_core
+    ):
         """Test that null response raises SourceAddError."""
         from notebooklm.exceptions import SourceAddError
 
@@ -125,7 +129,9 @@ class TestRegisterFileSource:
             await sources_api._register_file_source("nb_123", "test.pdf")
 
     @pytest.mark.asyncio
-    async def test_register_file_source_raises_on_empty_response(self, sources_api, mock_core):
+    async def test_register_file_source_raises_on_empty_response(
+        self, sources_api, mock_core
+    ):
         """Test that empty response raises SourceAddError."""
         from notebooklm.exceptions import SourceAddError
 
@@ -135,7 +141,9 @@ class TestRegisterFileSource:
             await sources_api._register_file_source("nb_123", "test.pdf")
 
     @pytest.mark.asyncio
-    async def test_register_file_source_extracts_id_from_nested_lists(self, sources_api, mock_core):
+    async def test_register_file_source_extracts_id_from_nested_lists(
+        self, sources_api, mock_core
+    ):
         """Test that ID is extracted from arbitrarily nested lists."""
         # The flexible parser should extract "source_id_123" from any nesting depth
         mock_core.rpc_call.return_value = [[["source_id_123"]]]
@@ -144,7 +152,9 @@ class TestRegisterFileSource:
         assert result == "source_id_123"
 
     @pytest.mark.asyncio
-    async def test_register_file_source_raises_on_non_string_id(self, sources_api, mock_core):
+    async def test_register_file_source_raises_on_non_string_id(
+        self, sources_api, mock_core
+    ):
         """Test that non-string source ID raises SourceAddError."""
         from notebooklm.exceptions import SourceAddError
 
@@ -166,7 +176,9 @@ class TestStartResumableUpload:
     async def test_start_resumable_upload_success(self, sources_api, mock_core):
         """Test successful upload start."""
         mock_response = MagicMock()
-        mock_response.headers = {"x-goog-upload-url": "https://upload.example.com/session123"}
+        mock_response.headers = {
+            "x-goog-upload-url": "https://upload.example.com/session123"
+        }
 
         with patch("httpx.AsyncClient") as mock_client_cls:
             mock_client = AsyncMock()
@@ -182,7 +194,9 @@ class TestStartResumableUpload:
         assert result == "https://upload.example.com/session123"
 
     @pytest.mark.asyncio
-    async def test_start_resumable_upload_includes_correct_headers(self, sources_api, mock_core):
+    async def test_start_resumable_upload_includes_correct_headers(
+        self, sources_api, mock_core
+    ):
         """Test that upload start includes correct headers."""
         mock_response = MagicMock()
         mock_response.headers = {"x-goog-upload-url": "https://upload.example.com"}
@@ -194,7 +208,9 @@ class TestStartResumableUpload:
             mock_client.post.return_value = mock_response
             mock_client_cls.return_value = mock_client
 
-            await sources_api._start_resumable_upload("nb_123", "test.pdf", 2048, "src_789")
+            await sources_api._start_resumable_upload(
+                "nb_123", "test.pdf", 2048, "src_789"
+            )
 
             call_kwargs = mock_client.post.call_args[1]
             headers = call_kwargs["headers"]
@@ -205,7 +221,9 @@ class TestStartResumableUpload:
             assert "Cookie" in headers
 
     @pytest.mark.asyncio
-    async def test_start_resumable_upload_includes_json_body(self, sources_api, mock_core):
+    async def test_start_resumable_upload_includes_json_body(
+        self, sources_api, mock_core
+    ):
         """Test that upload start includes correct JSON body."""
         import json
 
@@ -219,7 +237,9 @@ class TestStartResumableUpload:
             mock_client.post.return_value = mock_response
             mock_client_cls.return_value = mock_client
 
-            await sources_api._start_resumable_upload("nb_test", "myfile.pdf", 1000, "src_abc")
+            await sources_api._start_resumable_upload(
+                "nb_test", "myfile.pdf", 1000, "src_abc"
+            )
 
             call_kwargs = mock_client.post.call_args[1]
             body = json.loads(call_kwargs["content"])
@@ -246,10 +266,14 @@ class TestStartResumableUpload:
             mock_client_cls.return_value = mock_client
 
             with pytest.raises(SourceAddError, match="Failed to get upload URL"):
-                await sources_api._start_resumable_upload("nb_123", "test.pdf", 1024, "src_456")
+                await sources_api._start_resumable_upload(
+                    "nb_123", "test.pdf", 1024, "src_456"
+                )
 
     @pytest.mark.asyncio
-    async def test_start_resumable_upload_raises_on_http_error(self, sources_api, mock_core):
+    async def test_start_resumable_upload_raises_on_http_error(
+        self, sources_api, mock_core
+    ):
         """Test that HTTP error raises exception."""
         import httpx
 
@@ -263,7 +287,9 @@ class TestStartResumableUpload:
             mock_client_cls.return_value = mock_client
 
             with pytest.raises(httpx.HTTPStatusError):
-                await sources_api._start_resumable_upload("nb_123", "test.pdf", 1024, "src_456")
+                await sources_api._start_resumable_upload(
+                    "nb_123", "test.pdf", 1024, "src_456"
+                )
 
 
 # =============================================================================
@@ -275,7 +301,9 @@ class TestUploadFileStreaming:
     """Tests for streaming file upload."""
 
     @pytest.mark.asyncio
-    async def test_upload_file_streaming_success(self, sources_api, mock_core, tmp_path):
+    async def test_upload_file_streaming_success(
+        self, sources_api, mock_core, tmp_path
+    ):
         """Test successful streaming file upload."""
         test_file = tmp_path / "test.txt"
         test_file.write_bytes(b"file content here")
@@ -323,7 +351,9 @@ class TestUploadFileStreaming:
             assert "Cookie" in headers
 
     @pytest.mark.asyncio
-    async def test_upload_file_streaming_uses_generator(self, sources_api, mock_core, tmp_path):
+    async def test_upload_file_streaming_uses_generator(
+        self, sources_api, mock_core, tmp_path
+    ):
         """Test that file content is streamed via generator."""
         test_file = tmp_path / "test.txt"
         test_content = b"This is my file content"
@@ -337,7 +367,9 @@ class TestUploadFileStreaming:
             mock_client.post.return_value = mock_response
             mock_client_cls.return_value = mock_client
 
-            await sources_api._upload_file_streaming("https://upload.example.com", test_file)
+            await sources_api._upload_file_streaming(
+                "https://upload.example.com", test_file
+            )
 
             call_kwargs = mock_client.post.call_args[1]
             # Content should be a generator, not bytes
@@ -366,7 +398,9 @@ class TestUploadFileStreaming:
             mock_client_cls.return_value = mock_client
 
             with pytest.raises(httpx.HTTPStatusError):
-                await sources_api._upload_file_streaming("https://upload.example.com", test_file)
+                await sources_api._upload_file_streaming(
+                    "https://upload.example.com", test_file
+                )
 
 
 # =============================================================================
@@ -389,7 +423,9 @@ class TestAddFile:
 
         # Mock HTTP calls
         mock_start_response = MagicMock()
-        mock_start_response.headers = {"x-goog-upload-url": "https://upload.example.com/session"}
+        mock_start_response.headers = {
+            "x-goog-upload-url": "https://upload.example.com/session"
+        }
 
         mock_upload_response = MagicMock()
 
@@ -421,7 +457,9 @@ class TestAddFile:
         mock_core.rpc_call.return_value = [[[["src_txt"]]]]
 
         mock_start_response = MagicMock()
-        mock_start_response.headers = {"x-goog-upload-url": "https://upload.example.com"}
+        mock_start_response.headers = {
+            "x-goog-upload-url": "https://upload.example.com"
+        }
         mock_upload_response = MagicMock()
 
         with patch("httpx.AsyncClient") as mock_client_cls:
@@ -446,7 +484,9 @@ class TestAddUrlWithYouTube:
     """Tests for add_url() with YouTube auto-detection."""
 
     @pytest.mark.asyncio
-    async def test_add_url_detects_youtube_and_uses_youtube_method(self, sources_api, mock_core):
+    async def test_add_url_detects_youtube_and_uses_youtube_method(
+        self, sources_api, mock_core
+    ):
         """Test that YouTube URLs are detected and routed correctly."""
         mock_core.rpc_call.return_value = [[["src_yt"], "YouTube Video"]]
 
@@ -459,7 +499,9 @@ class TestAddUrlWithYouTube:
         assert params[0][0][7] == ["https://youtu.be/dQw4w9WgXcQ"]
 
     @pytest.mark.asyncio
-    async def test_add_url_uses_regular_method_for_non_youtube(self, sources_api, mock_core):
+    async def test_add_url_uses_regular_method_for_non_youtube(
+        self, sources_api, mock_core
+    ):
         """Test that non-YouTube URLs use regular add method."""
         mock_core.rpc_call.return_value = [[["src_url"], "Example Site"]]
 

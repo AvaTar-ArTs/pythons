@@ -221,11 +221,15 @@ class TestLoadAuthFromEnvVar:
     def test_explicit_path_takes_precedence_over_env_var(self, tmp_path, monkeypatch):
         """Test that explicit path argument overrides NOTEBOOKLM_AUTH_JSON."""
         # Set env var
-        env_storage = {"cookies": [{"name": "SID", "value": "from_env", "domain": ".google.com"}]}
+        env_storage = {
+            "cookies": [{"name": "SID", "value": "from_env", "domain": ".google.com"}]
+        }
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", json.dumps(env_storage))
 
         # Create file with different value
-        file_storage = {"cookies": [{"name": "SID", "value": "from_file", "domain": ".google.com"}]}
+        file_storage = {
+            "cookies": [{"name": "SID", "value": "from_file", "domain": ".google.com"}]
+        }
         storage_file = tmp_path / "storage_state.json"
         storage_file.write_text(json.dumps(file_storage))
 
@@ -251,13 +255,17 @@ class TestLoadAuthFromEnvVar:
     def test_env_var_takes_precedence_over_file(self, tmp_path, monkeypatch):
         """Test that NOTEBOOKLM_AUTH_JSON takes precedence over default file."""
         # Set env var
-        env_storage = {"cookies": [{"name": "SID", "value": "from_env", "domain": ".google.com"}]}
+        env_storage = {
+            "cookies": [{"name": "SID", "value": "from_env", "domain": ".google.com"}]
+        }
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", json.dumps(env_storage))
 
         # Set NOTEBOOKLM_HOME to tmp_path and create a file there
         monkeypatch.setenv("NOTEBOOKLM_HOME", str(tmp_path))
         file_storage = {
-            "cookies": [{"name": "SID", "value": "from_home_file", "domain": ".google.com"}]
+            "cookies": [
+                {"name": "SID", "value": "from_home_file", "domain": ".google.com"}
+            ]
         }
         storage_file = tmp_path / "storage_state.json"
         storage_file.write_text(json.dumps(file_storage))
@@ -271,7 +279,8 @@ class TestLoadAuthFromEnvVar:
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", "")
 
         with pytest.raises(
-            ValueError, match="NOTEBOOKLM_AUTH_JSON environment variable is set but empty"
+            ValueError,
+            match="NOTEBOOKLM_AUTH_JSON environment variable is set but empty",
         ):
             load_auth_from_storage()
 
@@ -280,7 +289,8 @@ class TestLoadAuthFromEnvVar:
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", "   \n\t  ")
 
         with pytest.raises(
-            ValueError, match="NOTEBOOKLM_AUTH_JSON environment variable is set but empty"
+            ValueError,
+            match="NOTEBOOKLM_AUTH_JSON environment variable is set but empty",
         ):
             load_auth_from_storage()
 
@@ -289,7 +299,8 @@ class TestLoadAuthFromEnvVar:
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", '{"origins": []}')
 
         with pytest.raises(
-            ValueError, match="must contain valid Playwright storage state with a 'cookies' key"
+            ValueError,
+            match="must contain valid Playwright storage state with a 'cookies' key",
         ):
             load_auth_from_storage()
 
@@ -298,7 +309,8 @@ class TestLoadAuthFromEnvVar:
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", '["not", "a", "dict"]')
 
         with pytest.raises(
-            ValueError, match="must contain valid Playwright storage state with a 'cookies' key"
+            ValueError,
+            match="must contain valid Playwright storage state with a 'cookies' key",
         ):
             load_auth_from_storage()
 
@@ -315,8 +327,16 @@ class TestLoadHttpxCookiesWithEnvVar:
                 {"name": "SSID", "value": "ssid_val", "domain": ".google.com"},
                 {"name": "APISID", "value": "apisid_val", "domain": ".google.com"},
                 {"name": "SAPISID", "value": "sapisid_val", "domain": ".google.com"},
-                {"name": "__Secure-1PSID", "value": "psid1_val", "domain": ".google.com"},
-                {"name": "__Secure-3PSID", "value": "psid3_val", "domain": ".google.com"},
+                {
+                    "name": "__Secure-1PSID",
+                    "value": "psid1_val",
+                    "domain": ".google.com",
+                },
+                {
+                    "name": "__Secure-3PSID",
+                    "value": "psid3_val",
+                    "domain": ".google.com",
+                },
             ]
         }
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", json.dumps(storage_state))
@@ -340,7 +360,8 @@ class TestLoadHttpxCookiesWithEnvVar:
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", "")
 
         with pytest.raises(
-            ValueError, match="NOTEBOOKLM_AUTH_JSON environment variable is set but empty"
+            ValueError,
+            match="NOTEBOOKLM_AUTH_JSON environment variable is set but empty",
         ):
             load_httpx_cookies()
 
@@ -366,8 +387,16 @@ class TestLoadHttpxCookiesWithEnvVar:
                 {"name": "SSID", "value": "ssid_val", "domain": ".google.com"},
                 {"name": "APISID", "value": "apisid_val", "domain": ".google.com"},
                 {"name": "SAPISID", "value": "sapisid_val", "domain": ".google.com"},
-                {"name": "__Secure-1PSID", "value": "psid1_val", "domain": ".google.com"},
-                {"name": "__Secure-3PSID", "value": "psid3_val", "domain": ".google.com"},
+                {
+                    "name": "__Secure-1PSID",
+                    "value": "psid1_val",
+                    "domain": ".google.com",
+                },
+                {
+                    "name": "__Secure-3PSID",
+                    "value": "psid3_val",
+                    "domain": ".google.com",
+                },
                 {"name": "evil_cookie", "value": "evil_val", "domain": ".evil.com"},
             ]
         }
@@ -385,7 +414,9 @@ class TestLoadHttpxCookiesWithEnvVar:
         storage_state = {"origins": []}  # Valid JSON but no cookies key
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", json.dumps(storage_state))
 
-        with pytest.raises(ValueError, match="must contain valid Playwright storage state"):
+        with pytest.raises(
+            ValueError, match="must contain valid Playwright storage state"
+        ):
             load_httpx_cookies()
 
     def test_env_var_malformed_cookie_objects_skipped(self, monkeypatch):
@@ -396,7 +427,11 @@ class TestLoadHttpxCookiesWithEnvVar:
                 {"name": "HSID"},  # Missing value and domain - should be skipped
                 {"value": "val"},  # Missing name - should be skipped
                 {},  # Empty object - should be skipped
-                {"name": "", "value": "val", "domain": ".google.com"},  # Empty name - skipped
+                {
+                    "name": "",
+                    "value": "val",
+                    "domain": ".google.com",
+                },  # Empty name - skipped
             ]
         }
         monkeypatch.setenv("NOTEBOOKLM_AUTH_JSON", json.dumps(storage_state))
@@ -476,7 +511,11 @@ class TestExtractCookiesEdgeCases:
             "cookies": [
                 {"name": "SID", "value": "sid_value", "domain": ".google.com"},
                 {"value": "no_name_value", "domain": ".google.com"},  # Missing name
-                {"name": "", "value": "empty_name", "domain": ".google.com"},  # Empty name
+                {
+                    "name": "",
+                    "value": "empty_name",
+                    "domain": ".google.com",
+                },  # Empty name
             ]
         }
 
@@ -663,7 +702,9 @@ class TestDefaultStoragePath:
             assert isinstance(DEFAULT_STORAGE_PATH, Path)
             assert DEFAULT_STORAGE_PATH.name == "storage_state.json"
             # Should have emitted a deprecation warning
-            deprecation_warnings = [x for x in w if issubclass(x.category, DeprecationWarning)]
+            deprecation_warnings = [
+                x for x in w if issubclass(x.category, DeprecationWarning)
+            ]
             assert len(deprecation_warnings) >= 1
             assert "deprecated" in str(deprecation_warnings[0].message).lower()
 
@@ -944,7 +985,11 @@ class TestExtractCookiesRegionalDomains:
         storage_state = {
             "cookies": [
                 {"name": "SID", "value": sid_value, "domain": domain},
-                {"name": "OSID", "value": "osid_value", "domain": "notebooklm.google.com"},
+                {
+                    "name": "OSID",
+                    "value": "osid_value",
+                    "domain": "notebooklm.google.com",
+                },
             ]
         }
 

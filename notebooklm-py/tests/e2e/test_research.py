@@ -251,7 +251,9 @@ class TestResearchImport:
                 assert "id" in src, f"Imported source missing 'id': {src}"
                 assert "title" in src, f"Imported source missing 'title': {src}"
             # At least one source should have been imported
-            assert len(imported) > 0, "No sources were imported despite sources being available"
+            assert (
+                len(imported) > 0
+            ), "No sources were imported despite sources being available"
         else:
             # If nothing was imported, log for investigation but don't fail
             # (could be rate limiting or source validity issues)

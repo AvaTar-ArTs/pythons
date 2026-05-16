@@ -19,7 +19,12 @@ class TestDownloadCommands:
         ("command", "filename", "cassette", "extra_args"),
         [
             ("quiz", "quiz.json", "artifacts_download_quiz.yaml", []),
-            ("quiz", "quiz.md", "artifacts_download_quiz_markdown.yaml", ["--format", "markdown"]),
+            (
+                "quiz",
+                "quiz.md",
+                "artifacts_download_quiz_markdown.yaml",
+                ["--format", "markdown"],
+            ),
             ("flashcards", "flashcards.json", "artifacts_download_flashcards.yaml", []),
             (
                 "flashcards",
@@ -46,5 +51,7 @@ class TestDownloadCommands:
         """Download commands work with real client."""
         output_file = tmp_path / filename
         with notebooklm_vcr.use_cassette(cassette):
-            result = runner.invoke(cli, ["download", command, *extra_args, str(output_file)])
+            result = runner.invoke(
+                cli, ["download", command, *extra_args, str(output_file)]
+            )
             assert_command_success(result)

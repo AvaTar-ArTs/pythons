@@ -19,8 +19,12 @@ class SkillTarget:
 
 
 TARGETS = {
-    "claude": SkillTarget("Claude Code", Path(".claude") / "skills" / "notebooklm" / "SKILL.md"),
-    "agents": SkillTarget("Agent Skills", Path(".agents") / "skills" / "notebooklm" / "SKILL.md"),
+    "claude": SkillTarget(
+        "Claude Code", Path(".claude") / "skills" / "notebooklm" / "SKILL.md"
+    ),
+    "agents": SkillTarget(
+        "Agent Skills", Path(".agents") / "skills" / "notebooklm" / "SKILL.md"
+    ),
 }
 SCOPES = ("user", "project")
 
@@ -152,7 +156,9 @@ def install(scope: str, target_name: str):
         for target, skill_path in installed_paths:
             console.print(f"  {TARGETS[target].label}: {skill_path}")
         console.print("")
-        console.print("NotebookLM commands are now available in the selected skill directories.")
+        console.print(
+            "NotebookLM commands are now available in the selected skill directories."
+        )
 
     for target, err in failed_targets:
         console.print(f"[red]Failed[/red] to install {TARGETS[target].label}: {err}")
@@ -190,7 +196,9 @@ def status(scope: str, target_name: str):
         skill_path = get_skill_path(target, scope)
         skill_version = get_skill_version(skill_path)
         status_label = (
-            "[green]Installed[/green]" if skill_path.exists() else "[yellow]Not installed[/yellow]"
+            "[green]Installed[/green]"
+            if skill_path.exists()
+            else "[yellow]Not installed[/yellow]"
         )
         console.print(f"  {TARGETS[target].label}: {status_label}")
         console.print(f"    Path: {skill_path}")

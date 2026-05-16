@@ -19,10 +19,15 @@ class TestNoteCommands:
         ("cassette", "args"),
         [
             ("notes_list.yaml", ["note", "list"]),
-            ("notes_create.yaml", ["note", "create", "-t", "Test Note", "This is test content."]),
+            (
+                "notes_create.yaml",
+                ["note", "create", "-t", "Test Note", "This is test content."],
+            ),
         ],
     )
-    def test_note_command(self, runner, mock_auth_for_vcr, mock_context, cassette, args):
+    def test_note_command(
+        self, runner, mock_auth_for_vcr, mock_context, cassette, args
+    ):
         """Note commands work with real client."""
         with notebooklm_vcr.use_cassette(cassette):
             result = runner.invoke(cli, args)

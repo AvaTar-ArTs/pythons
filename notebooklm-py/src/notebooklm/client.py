@@ -88,14 +88,18 @@ class NotebookLMClient:
         """
         # Pass refresh_auth as callback for automatic retry on auth failures
         # Note: refresh_auth calls update_auth_headers internally
-        self._core = ClientCore(auth, timeout=timeout, refresh_callback=self.refresh_auth)
+        self._core = ClientCore(
+            auth, timeout=timeout, refresh_callback=self.refresh_auth
+        )
 
         # Initialize sub-client APIs
         # Note: notes must be initialized before artifacts (artifacts uses notes API)
         self.notebooks = NotebooksAPI(self._core)
         self.sources = SourcesAPI(self._core)
         self.notes = NotesAPI(self._core)
-        self.artifacts = ArtifactsAPI(self._core, notes_api=self.notes, storage_path=storage_path)
+        self.artifacts = ArtifactsAPI(
+            self._core, notes_api=self.notes, storage_path=storage_path
+        )
         self.chat = ChatAPI(self._core)
         self.research = ResearchAPI(self._core)
         self.settings = SettingsAPI(self._core)
@@ -181,7 +185,9 @@ class NotebookLMClient:
         # Check for redirect to login page
         final_url = str(response.url)
         if is_google_auth_redirect(final_url):
-            raise ValueError("Authentication expired. Run 'notebooklm login' to re-authenticate.")
+            raise ValueError(
+                "Authentication expired. Run 'notebooklm login' to re-authenticate."
+            )
 
         # Extract SNlM0e (CSRF token) - REQUIRED
         csrf_match = re.search(r'"SNlM0e":"([^"]+)"', response.text)

@@ -61,7 +61,9 @@ class TestAutoRefreshIntegration:
                 # First call: simulate HTTP 401
                 request = httpx.Request("POST", args[0])
                 response = httpx.Response(401, request=request)
-                raise httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+                raise httpx.HTTPStatusError(
+                    "Unauthorized", request=request, response=response
+                )
             # Second call: success
             response = MagicMock()
             response.text = ')]}\'\\n[["wrb.fr","wXbhsf",[[[["nb1"],["Notebook 1"]]]]]]'
@@ -148,7 +150,9 @@ class TestAutoRefreshIntegration:
             if call_count[0] == 1:
                 request = httpx.Request("POST", args[0])
                 response = httpx.Response(401, request=request)
-                raise httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+                raise httpx.HTTPStatusError(
+                    "Unauthorized", request=request, response=response
+                )
             response = MagicMock()
             response.text = "mock"
             response.raise_for_status = MagicMock()
@@ -181,14 +185,18 @@ class TestAutoRefreshIntegration:
 
         async def failing_refresh():
             # Simulates refresh_auth detecting redirect to login
-            raise ValueError("Authentication expired. Run 'notebooklm login' to re-authenticate.")
+            raise ValueError(
+                "Authentication expired. Run 'notebooklm login' to re-authenticate."
+            )
 
         client._core._refresh_callback = failing_refresh
 
         async def mock_post(*args, **kwargs):
             request = httpx.Request("POST", args[0])
             response = httpx.Response(401, request=request)
-            raise httpx.HTTPStatusError("Unauthorized", request=request, response=response)
+            raise httpx.HTTPStatusError(
+                "Unauthorized", request=request, response=response
+            )
 
         async with client:
             client._core._http_client.post = mock_post

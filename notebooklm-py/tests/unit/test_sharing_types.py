@@ -227,7 +227,9 @@ class TestSharingAPIValidation:
         )
         api = SharingAPI(mock_core)
 
-        status = await api.add_user("nb_123", "test@example.com", SharePermission.EDITOR)
+        status = await api.add_user(
+            "nb_123", "test@example.com", SharePermission.EDITOR
+        )
 
         assert mock_core.rpc_call.call_count == 2
         assert len(status.shared_users) == 1

@@ -57,7 +57,9 @@ async def main(topic: str):
         # 4. Import discovered sources
         if sources:
             print("Importing sources...")
-            await client.research.import_sources(nb.id, task_id, sources[:10])  # Limit to 10
+            await client.research.import_sources(
+                nb.id, task_id, sources[:10]
+            )  # Limit to 10
             print(f"  Imported {min(len(sources), 10)} sources\n")
 
         # 5. Generate podcast
@@ -67,7 +69,9 @@ async def main(topic: str):
         )
 
         print("Waiting for audio generation...")
-        final = await client.artifacts.wait_for_completion(nb.id, gen_status.task_id, timeout=600)
+        final = await client.artifacts.wait_for_completion(
+            nb.id, gen_status.task_id, timeout=600
+        )
 
         if final.is_complete:
             print(f"\n  Success! Audio URL: {final.url}")

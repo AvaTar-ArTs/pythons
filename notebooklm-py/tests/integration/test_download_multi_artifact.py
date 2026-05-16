@@ -17,7 +17,11 @@ class TestArtifactSelection:
         artifacts = [
             {"id": "a1", "title": "Debate Round 1", "created_at": 1000},
             {"id": "a2", "title": "Meeting Notes", "created_at": 2000},
-            {"id": "a3", "title": "Debate Round 3", "created_at": 3000},  # Latest "debate"
+            {
+                "id": "a3",
+                "title": "Debate Round 3",
+                "created_at": 3000,
+            },  # Latest "debate"
             {"id": "a4", "title": "Debate Round 2", "created_at": 2500},
             {"id": "a5", "title": "Overview", "created_at": 4000},  # Latest overall
         ]
@@ -32,14 +36,24 @@ class TestArtifactSelection:
     def test_filter_then_select_earliest(self):
         """Should apply name filter BEFORE selecting earliest."""
         artifacts = [
-            {"id": "a1", "title": "Introduction", "created_at": 1000},  # Earliest overall
+            {
+                "id": "a1",
+                "title": "Introduction",
+                "created_at": 1000,
+            },  # Earliest overall
             {"id": "a2", "title": "Chapter 2", "created_at": 3000},
-            {"id": "a3", "title": "Chapter 1", "created_at": 2000},  # Earliest "chapter"
+            {
+                "id": "a3",
+                "title": "Chapter 1",
+                "created_at": 2000,
+            },  # Earliest "chapter"
             {"id": "a4", "title": "Chapter 3", "created_at": 4000},
             {"id": "a5", "title": "Conclusion", "created_at": 5000},
         ]
 
-        selected, reason = select_artifact(artifacts, latest=False, earliest=True, name="chapter")
+        selected, reason = select_artifact(
+            artifacts, latest=False, earliest=True, name="chapter"
+        )
 
         # Should select a3 (earliest of the 3 "chapter" matches, NOT a1)
         assert selected["id"] == "a3"
@@ -253,11 +267,17 @@ class TestIntegrationScenarios:
         filenames = []
 
         for artifact in artifacts:
-            filename = artifact_title_to_filename(artifact["title"], ".mp3", existing_names)
+            filename = artifact_title_to_filename(
+                artifact["title"], ".mp3", existing_names
+            )
             existing_names.add(filename)
             filenames.append(filename)
 
-        assert sorted(filenames) == ["Overview (2).mp3", "Overview (3).mp3", "Overview.mp3"]
+        assert sorted(filenames) == [
+            "Overview (2).mp3",
+            "Overview (3).mp3",
+            "Overview.mp3",
+        ]
 
     def test_download_all_with_name_filter_scenario(self):
         """Simulate downloading all artifacts matching a name filter."""

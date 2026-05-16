@@ -196,7 +196,9 @@ def _set_context_value(key: str, value: str | None) -> None:
             data[key] = value
         elif key in data:
             del data[key]
-        context_file.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+        context_file.write_text(
+            json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
     except json.JSONDecodeError:
         logger.warning(
             "Context file %s is corrupted; cannot update '%s'. Run 'notebooklm clear' to reset.",
@@ -204,7 +206,9 @@ def _set_context_value(key: str, value: str | None) -> None:
             key,
         )
     except OSError as e:
-        logger.warning("Failed to write context file %s for key '%s': %s", context_file, key, e)
+        logger.warning(
+            "Failed to write context file %s for key '%s': %s", context_file, key, e
+        )
 
 
 def get_current_notebook() -> str | None:
@@ -234,7 +238,9 @@ def set_current_notebook(
     if created_at:
         data["created_at"] = created_at
 
-    context_file.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    context_file.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
 
 
 def clear_context():
@@ -451,7 +457,9 @@ def handle_auth_error(json_output: bool = False):
         console.print(f"  • Storage file: [cyan]{storage_path}[/cyan]")
         if has_home_env:
             console.print("    [dim](via $NOTEBOOKLM_HOME)[/dim]")
-        env_status = "[yellow]set but invalid[/yellow]" if has_env_var else "[dim]not set[/dim]"
+        env_status = (
+            "[yellow]set but invalid[/yellow]" if has_env_var else "[dim]not set[/dim]"
+        )
         console.print(f"  • NOTEBOOKLM_AUTH_JSON: {env_status}")
         console.print("\n[bold]Options to authenticate:[/bold]")
         console.print("  1. Run: [green]notebooklm login[/green]")
@@ -506,7 +514,9 @@ def with_client(f):
         def log_result(status: str, detail: str = "") -> float:
             elapsed = time.monotonic() - start
             if detail:
-                logger.debug("CLI command %s: %s (%.3fs) - %s", status, cmd_name, elapsed, detail)
+                logger.debug(
+                    "CLI command %s: %s (%.3fs) - %s", status, cmd_name, elapsed, detail
+                )
             else:
                 logger.debug("CLI command %s: %s (%.3fs)", status, cmd_name, elapsed)
             return elapsed
@@ -621,7 +631,9 @@ def display_report(report: str, max_chars: int = 1000, json_hint: bool = True) -
     if len(report) > max_chars:
         hint = " use --json for full report" if json_hint else ""
         console.print(
-            f"[dim]... (truncated,{hint})[/dim]" if hint else "[dim]... (truncated)[/dim]"
+            f"[dim]... (truncated,{hint})[/dim]"
+            if hint
+            else "[dim]... (truncated)[/dim]"
         )
 
 

@@ -35,13 +35,18 @@ class SectionedGroup(click.Group):
                 "Command Groups (use: notebooklm <group> <command>)",
                 ["source", "artifact", "note", "share", "research", "profile"],
             ),
-            ("Artifact Actions (use: notebooklm <action> <type>)", ["generate", "download"]),
+            (
+                "Artifact Actions (use: notebooklm <action> <type>)",
+                ["generate", "download"],
+            ),
         ]
     )
 
     def format_commands(self, ctx, formatter):
         """Override to display commands in sections."""
-        commands = {name: self.get_command(ctx, name) for name in self.list_commands(ctx)}
+        commands = {
+            name: self.get_command(ctx, name) for name in self.list_commands(ctx)
+        }
 
         # Regular command sections (show help text)
         for section, cmd_names in self.command_sections.items():
@@ -79,5 +84,8 @@ class SectionedGroup(click.Group):
         if unlisted:
             with formatter.section("Other"):
                 formatter.write_dl(
-                    [(n, c.get_short_help_str(limit=formatter.width)) for n, c in unlisted]
+                    [
+                        (n, c.get_short_help_str(limit=formatter.width))
+                        for n, c in unlisted
+                    ]
                 )

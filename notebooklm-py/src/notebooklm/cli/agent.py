@@ -18,7 +18,9 @@ def show_agent(target: str):
     """Display instructions for Codex or Claude Code."""
     content = get_agent_source_content(target)
     if content is None:
-        console.print(f"[red]Error:[/red] {target} instructions not found in package data.")
+        console.print(
+            f"[red]Error:[/red] {target} instructions not found in package data."
+        )
         raise SystemExit(1)
 
     console.print(content)

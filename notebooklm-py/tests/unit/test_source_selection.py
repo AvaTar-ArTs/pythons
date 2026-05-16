@@ -67,7 +67,15 @@ class TestChatSourceSelection:
         # Mock HTTP response for ask
         mock_response = MagicMock()
         inner_json = json.dumps(
-            [["Answer text here that is definitely long enough.", None, None, None, [1]]]
+            [
+                [
+                    "Answer text here that is definitely long enough.",
+                    None,
+                    None,
+                    None,
+                    [1],
+                ]
+            ]
         )
         chunk_json = json.dumps([["wrb.fr", None, inner_json]])
         mock_response.text = f")]}}'\n{len(chunk_json)}\n{chunk_json}\n"
@@ -87,7 +95,9 @@ class TestChatSourceSelection:
 
         # Verify HTTP call was made with correct source encoding
         call_args = mock_http_client.post.call_args
-        body = call_args.kwargs.get("content", call_args.args[1] if len(call_args.args) > 1 else "")
+        body = call_args.kwargs.get(
+            "content", call_args.args[1] if len(call_args.args) > 1 else ""
+        )
 
         # The body should contain the encoded sources_array
         # sources_array = [[[sid]] for sid in source_ids]
@@ -182,7 +192,9 @@ class TestArtifactsSourceSelection:
     """Tests for source selection in ArtifactsAPI generation methods."""
 
     @pytest.mark.asyncio
-    async def test_generate_audio_with_explicit_source_ids(self, mock_core, mock_notes_api):
+    async def test_generate_audio_with_explicit_source_ids(
+        self, mock_core, mock_notes_api
+    ):
         """Test generate_audio with explicitly provided source_ids."""
         api = ArtifactsAPI(mock_core, mock_notes_api)
 
@@ -223,7 +235,9 @@ class TestArtifactsSourceSelection:
         assert source_ids_double == [["src_001"], ["src_002"]]
 
     @pytest.mark.asyncio
-    async def test_generate_audio_with_none_fetches_all_sources(self, mock_core, mock_notes_api):
+    async def test_generate_audio_with_none_fetches_all_sources(
+        self, mock_core, mock_notes_api
+    ):
         """Test generate_audio with source_ids=None fetches all sources."""
         api = ArtifactsAPI(mock_core, mock_notes_api)
 
@@ -311,7 +325,9 @@ class TestArtifactsSourceSelection:
         assert source_ids_double == [["src_x"], ["src_y"], ["src_z"]]
 
     @pytest.mark.asyncio
-    async def test_generate_report_extra_instructions_appended(self, mock_core, mock_notes_api):
+    async def test_generate_report_extra_instructions_appended(
+        self, mock_core, mock_notes_api
+    ):
         """extra_instructions is appended to the built-in prompt with \\n\\n separator."""
         api = ArtifactsAPI(mock_core, mock_notes_api)
         mock_core.rpc_call.return_value = [["artifact_789", "Report", 2, None, 1]]
@@ -400,7 +416,9 @@ class TestArtifactsSourceSelection:
         assert source_ids_triple == [[["src_flash"]]]
 
     @pytest.mark.asyncio
-    async def test_generate_infographic_source_encoding(self, mock_core, mock_notes_api):
+    async def test_generate_infographic_source_encoding(
+        self, mock_core, mock_notes_api
+    ):
         """Test generate_infographic has correct source encoding format."""
         api = ArtifactsAPI(mock_core, mock_notes_api)
 
@@ -510,7 +528,9 @@ class TestArtifactsSourceSelection:
         assert source_ids_nested == [[["src_mm_1"]], [["src_mm_2"]]]
 
     @pytest.mark.asyncio
-    async def test_suggest_reports_uses_get_suggested_reports(self, mock_core, mock_notes_api):
+    async def test_suggest_reports_uses_get_suggested_reports(
+        self, mock_core, mock_notes_api
+    ):
         """Test suggest_reports uses GET_SUGGESTED_REPORTS RPC."""
         from notebooklm.rpc.types import RPCMethod
 

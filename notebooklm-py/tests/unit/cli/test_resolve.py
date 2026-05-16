@@ -68,7 +68,9 @@ class TestResolveNotebookId:
         mock_console.print.assert_called()
 
     @pytest.mark.asyncio
-    async def test_ambiguous_prefix_raises_exception(self, mock_client, sample_notebooks):
+    async def test_ambiguous_prefix_raises_exception(
+        self, mock_client, sample_notebooks
+    ):
         """Ambiguous prefix (matches multiple) raises ClickException."""
         mock_client.notebooks.list = AsyncMock(return_value=sample_notebooks)
 
@@ -186,7 +188,9 @@ class TestResolveNotebookIdAmbiguityDisplay:
         assert "... and 2 more" in error_msg
 
     @pytest.mark.asyncio
-    async def test_shows_notebook_titles_in_ambiguous_error(self, mock_client, sample_notebooks):
+    async def test_shows_notebook_titles_in_ambiguous_error(
+        self, mock_client, sample_notebooks
+    ):
         """Ambiguous error includes notebook titles."""
         mock_client.notebooks.list = AsyncMock(return_value=sample_notebooks)
 
@@ -225,15 +229,21 @@ class TestResolveSourceId:
     """Test partial source ID resolution."""
 
     @pytest.mark.asyncio
-    async def test_exact_match_returns_unchanged(self, mock_client_with_sources, sample_sources):
+    async def test_exact_match_returns_unchanged(
+        self, mock_client_with_sources, sample_sources
+    ):
         """Exact full ID match returns the ID unchanged."""
         mock_client_with_sources.sources.list = AsyncMock(return_value=sample_sources)
 
-        result = await resolve_source_id(mock_client_with_sources, "nb_123", "src123def456ghi789")
+        result = await resolve_source_id(
+            mock_client_with_sources, "nb_123", "src123def456ghi789"
+        )
         assert result == "src123def456ghi789"
 
     @pytest.mark.asyncio
-    async def test_unique_prefix_returns_full_id(self, mock_client_with_sources, sample_sources):
+    async def test_unique_prefix_returns_full_id(
+        self, mock_client_with_sources, sample_sources
+    ):
         """Unique prefix returns the full matched ID."""
         mock_client_with_sources.sources.list = AsyncMock(return_value=sample_sources)
 
@@ -261,7 +271,9 @@ class TestResolveSourceId:
         assert "src999" in str(exc_info.value)
 
     @pytest.mark.asyncio
-    async def test_no_match_raises_exception(self, mock_client_with_sources, sample_sources):
+    async def test_no_match_raises_exception(
+        self, mock_client_with_sources, sample_sources
+    ):
         """No matching prefix raises ClickException with helpful message."""
         mock_client_with_sources.sources.list = AsyncMock(return_value=sample_sources)
 
@@ -306,7 +318,9 @@ class TestResolveSourceId:
         mock_client_with_sources.sources.list.assert_not_called()
 
     @pytest.mark.asyncio
-    async def test_case_insensitive_matching(self, mock_client_with_sources, sample_sources):
+    async def test_case_insensitive_matching(
+        self, mock_client_with_sources, sample_sources
+    ):
         """Prefix matching should be case-insensitive."""
         mock_client_with_sources.sources.list = AsyncMock(return_value=sample_sources)
 
@@ -317,7 +331,9 @@ class TestResolveSourceId:
         assert result == "xyz789uvw456rst123"
 
     @pytest.mark.asyncio
-    async def test_passes_notebook_id_to_list(self, mock_client_with_sources, sample_sources):
+    async def test_passes_notebook_id_to_list(
+        self, mock_client_with_sources, sample_sources
+    ):
         """Should pass the notebook ID to sources.list."""
         mock_client_with_sources.sources.list = AsyncMock(return_value=sample_sources)
 
@@ -333,7 +349,9 @@ class TestResolveSourceIdAmbiguityDisplay:
     @pytest.mark.asyncio
     async def test_shows_up_to_five_matches(self, mock_client_with_sources):
         """Ambiguous error shows up to 5 matching sources."""
-        sources = [Source(id=f"src{i}00000000000000", title=f"Source {i}") for i in range(7)]
+        sources = [
+            Source(id=f"src{i}00000000000000", title=f"Source {i}") for i in range(7)
+        ]
         mock_client_with_sources.sources.list = AsyncMock(return_value=sources)
 
         with pytest.raises(click.ClickException) as exc_info:

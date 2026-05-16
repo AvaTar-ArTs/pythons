@@ -95,10 +95,14 @@ class TestDownloadAudio:
     async def test_download_audio_specific_id_not_found(self, mock_artifacts_api):
         """Test error when specific audio ID not found."""
         api, mock_core = mock_artifacts_api
-        mock_core.rpc_call.return_value = [[["other_id", "Audio", 1, None, 3, None, [None] * 6]]]
+        mock_core.rpc_call.return_value = [
+            [["other_id", "Audio", 1, None, 3, None, [None] * 6]]
+        ]
 
         with pytest.raises(ArtifactNotReadyError):
-            await api.download_audio("nb_123", "/tmp/audio.mp4", artifact_id="audio_001")
+            await api.download_audio(
+                "nb_123", "/tmp/audio.mp4", artifact_id="audio_001"
+            )
 
     @pytest.mark.asyncio
     async def test_download_audio_invalid_metadata(self, mock_artifacts_api):
@@ -106,7 +110,15 @@ class TestDownloadAudio:
         api, mock_core = mock_artifacts_api
         mock_core.rpc_call.return_value = [
             [
-                ["audio_001", "Audio", 1, None, 3, None, "not_a_list"]  # metadata should be list
+                [
+                    "audio_001",
+                    "Audio",
+                    1,
+                    None,
+                    3,
+                    None,
+                    "not_a_list",
+                ]  # metadata should be list
             ]
         ]
 
@@ -143,7 +155,10 @@ class TestDownloadVideo:
                 ]
 
                 with patch.object(
-                    api, "_download_url", new_callable=AsyncMock, return_value=output_path
+                    api,
+                    "_download_url",
+                    new_callable=AsyncMock,
+                    return_value=output_path,
                 ):
                     result = await api.download_video("nb_123", output_path)
 
@@ -166,10 +181,14 @@ class TestDownloadVideo:
         api, mock_core = mock_artifacts_api
 
         with patch.object(api, "_list_raw", new_callable=AsyncMock) as mock_list:
-            mock_list.return_value = [["other_id", "Video", 3, None, 3, None, None, None, []]]
+            mock_list.return_value = [
+                ["other_id", "Video", 3, None, 3, None, None, None, []]
+            ]
 
             with pytest.raises(ArtifactNotReadyError):
-                await api.download_video("nb_123", "/tmp/video.mp4", artifact_id="video_001")
+                await api.download_video(
+                    "nb_123", "/tmp/video.mp4", artifact_id="video_001"
+                )
 
 
 class TestDownloadInfographic:
@@ -202,7 +221,10 @@ class TestDownloadInfographic:
                 ]
 
                 with patch.object(
-                    api, "_download_url", new_callable=AsyncMock, return_value=output_path
+                    api,
+                    "_download_url",
+                    new_callable=AsyncMock,
+                    return_value=output_path,
                 ):
                     result = await api.download_infographic("nb_123", output_path)
 
@@ -220,7 +242,9 @@ class TestDownloadInfographic:
                 await api.download_infographic("nb_123", "/tmp/info.png")
 
     @pytest.mark.asyncio
-    async def test_download_infographic_prefers_first_matching_url(self, mock_artifacts_api):
+    async def test_download_infographic_prefers_first_matching_url(
+        self, mock_artifacts_api
+    ):
         """When multiple URL fields exist, the first (lowest-index) one is used."""
         api, _mock_core = mock_artifacts_api
         canonical_url = "https://example.com/canonical.png"
@@ -248,7 +272,10 @@ class TestDownloadInfographic:
                 ]
 
                 with patch.object(
-                    api, "_download_url", new_callable=AsyncMock, return_value=output_path
+                    api,
+                    "_download_url",
+                    new_callable=AsyncMock,
+                    return_value=output_path,
                 ) as mock_dl:
                     result = await api.download_infographic("nb_123", output_path)
 
@@ -286,7 +313,10 @@ class TestDownloadSlideDeck:
                 mock_list.return_value = [artifact]
 
                 with patch.object(
-                    api, "_download_url", new_callable=AsyncMock, return_value=output_path
+                    api,
+                    "_download_url",
+                    new_callable=AsyncMock,
+                    return_value=output_path,
                 ):
                     result = await api.download_slide_deck("nb_123", output_path)
 
@@ -316,7 +346,9 @@ class TestDownloadSlideDeck:
             mock_list.return_value = [artifact]
 
             with pytest.raises(ArtifactNotReadyError):
-                await api.download_slide_deck("nb_123", "/tmp/slides.pdf", artifact_id="slides_001")
+                await api.download_slide_deck(
+                    "nb_123", "/tmp/slides.pdf", artifact_id="slides_001"
+                )
 
     @pytest.mark.asyncio
     async def test_download_slide_deck_invalid_metadata(self, mock_artifacts_api):
@@ -348,7 +380,9 @@ class TestMindMapGeneration:
             [
                 '{"nodes": [{"id": "1", "text": "Root"}]}',  # JSON string
                 None,
-                ["note_123"],  # note info (not used anymore, note is created explicitly)
+                [
+                    "note_123"
+                ],  # note info (not used anymore, note is created explicitly)
             ]
         ]
 
@@ -430,7 +464,10 @@ class TestDownloadUrl:
             mock_cookies = MagicMock()
             with (
                 patch.object(real_httpx, "AsyncClient", return_value=mock_client),
-                patch("notebooklm._artifacts.load_httpx_cookies", return_value=mock_cookies),
+                patch(
+                    "notebooklm._artifacts.load_httpx_cookies",
+                    return_value=mock_cookies,
+                ),
             ):
                 result = await api._download_url(
                     "https://storage.googleapis.com/file.mp4", output_path
@@ -471,10 +508,15 @@ class TestDownloadUrl:
             mock_cookies = MagicMock()
             with (
                 patch.object(real_httpx, "AsyncClient", return_value=mock_client),
-                patch("notebooklm._artifacts.load_httpx_cookies", return_value=mock_cookies),
+                patch(
+                    "notebooklm._artifacts.load_httpx_cookies",
+                    return_value=mock_cookies,
+                ),
                 pytest.raises(ArtifactDownloadError, match="0 bytes"),
             ):
-                await api._download_url("https://storage.googleapis.com/file.mp4", output_path)
+                await api._download_url(
+                    "https://storage.googleapis.com/file.mp4", output_path
+                )
 
             # Verify no file was left behind
             assert not os.path.exists(output_path)
@@ -503,7 +545,9 @@ class TestDownloadReport:
                         3,  # status (completed)
                         None,
                         None,
-                        ["# Test Report\n\nThis is the report content."],  # markdown in list
+                        [
+                            "# Test Report\n\nThis is the report content."
+                        ],  # markdown in list
                     ]
                 ]
 
@@ -532,10 +576,14 @@ class TestDownloadReport:
         api, mock_core = mock_artifacts_api
 
         with patch.object(api, "_list_raw", new_callable=AsyncMock) as mock_list:
-            mock_list.return_value = [["other_id", "Report", 2, None, 3, None, None, ["content"]]]
+            mock_list.return_value = [
+                ["other_id", "Report", 2, None, 3, None, None, ["content"]]
+            ]
 
             with pytest.raises(ArtifactNotReadyError):
-                await api.download_report("nb_123", "/tmp/report.md", artifact_id="report_001")
+                await api.download_report(
+                    "nb_123", "/tmp/report.md", artifact_id="report_001"
+                )
 
     @pytest.mark.asyncio
     async def test_download_report_direct_string_content(self, mock_artifacts_api):
@@ -623,7 +671,9 @@ class TestDownloadMindMap:
         )
 
         with pytest.raises(ArtifactNotFoundError):
-            await api.download_mind_map("nb_123", "/tmp/mindmap.json", artifact_id="mindmap_001")
+            await api.download_mind_map(
+                "nb_123", "/tmp/mindmap.json", artifact_id="mindmap_001"
+            )
 
 
 class TestDownloadDataTable:
@@ -708,7 +758,9 @@ class TestDownloadDataTable:
             mock_list.return_value = [artifact]
 
             with pytest.raises(ArtifactNotReadyError):
-                await api.download_data_table("nb_123", "/tmp/data.csv", artifact_id="table_001")
+                await api.download_data_table(
+                    "nb_123", "/tmp/data.csv", artifact_id="table_001"
+                )
 
     @pytest.mark.asyncio
     async def test_download_data_table_empty_headers(self, mock_artifacts_api):

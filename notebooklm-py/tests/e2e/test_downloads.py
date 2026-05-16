@@ -48,7 +48,9 @@ class TestDownloadAudio:
         with tempfile.TemporaryDirectory() as tmpdir:
             output_path = os.path.join(tmpdir, "audio.mp4")
             try:
-                result = await client.artifacts.download_audio(read_only_notebook_id, output_path)
+                result = await client.artifacts.download_audio(
+                    read_only_notebook_id, output_path
+                )
                 assert result == output_path
                 assert os.path.exists(output_path)
                 assert os.path.getsize(output_path) > 0
@@ -66,7 +68,9 @@ class TestDownloadVideo:
         with tempfile.TemporaryDirectory() as tmpdir:
             output_path = os.path.join(tmpdir, "video.mp4")
             try:
-                result = await client.artifacts.download_video(read_only_notebook_id, output_path)
+                result = await client.artifacts.download_video(
+                    read_only_notebook_id, output_path
+                )
                 assert result == output_path
                 assert os.path.exists(output_path)
                 assert os.path.getsize(output_path) > 0
@@ -90,7 +94,9 @@ class TestDownloadInfographic:
                 assert result == output_path
                 assert os.path.exists(output_path)
                 assert os.path.getsize(output_path) > 0
-                assert is_png(output_path), "Downloaded infographic is not a valid PNG file"
+                assert is_png(
+                    output_path
+                ), "Downloaded infographic is not a valid PNG file"
             except ArtifactNotReadyError:
                 pytest.skip("No completed infographic artifact available")
 
@@ -110,7 +116,9 @@ class TestDownloadSlideDeck:
                 assert result == output_path
                 assert os.path.exists(output_path)
                 assert os.path.getsize(output_path) > 0
-                assert is_pdf(output_path), "Downloaded slide deck is not a valid PDF file"
+                assert is_pdf(
+                    output_path
+                ), "Downloaded slide deck is not a valid PDF file"
             except ArtifactNotReadyError:
                 pytest.skip("No completed slide deck artifact available")
 
@@ -172,11 +180,15 @@ class TestDownloadReport:
         with tempfile.TemporaryDirectory() as tmpdir:
             output_path = os.path.join(tmpdir, "report.md")
             try:
-                result = await client.artifacts.download_report(read_only_notebook_id, output_path)
+                result = await client.artifacts.download_report(
+                    read_only_notebook_id, output_path
+                )
                 assert result == output_path
                 assert os.path.exists(output_path)
                 assert os.path.getsize(output_path) > 0
-                assert is_valid_markdown(output_path), "Downloaded report is not valid markdown"
+                assert is_valid_markdown(
+                    output_path
+                ), "Downloaded report is not valid markdown"
             except ArtifactNotReadyError:
                 pytest.skip("No completed report artifact available")
 
@@ -196,7 +208,9 @@ class TestDownloadMindMap:
                 assert result == output_path
                 assert os.path.exists(output_path)
                 assert os.path.getsize(output_path) > 0
-                assert is_valid_json(output_path), "Downloaded mind map is not valid JSON"
+                assert is_valid_json(
+                    output_path
+                ), "Downloaded mind map is not valid JSON"
 
                 # Verify structure
                 with open(output_path, encoding="utf-8") as f:
@@ -221,6 +235,8 @@ class TestDownloadDataTable:
                 assert result == output_path
                 assert os.path.exists(output_path)
                 assert os.path.getsize(output_path) > 0
-                assert is_valid_csv(output_path), "Downloaded data table is not valid CSV"
+                assert is_valid_csv(
+                    output_path
+                ), "Downloaded data table is not valid CSV"
             except ArtifactNotReadyError:
                 pytest.skip("No completed data table artifact available")

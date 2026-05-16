@@ -244,7 +244,10 @@ class TestDetermineConversationId:
 
         with (
             patch("notebooklm.cli.chat.get_current_notebook", return_value="nb_123"),
-            patch("notebooklm.cli.chat.get_current_conversation", return_value="conv_cached"),
+            patch(
+                "notebooklm.cli.chat.get_current_conversation",
+                return_value="conv_cached",
+            ),
         ):
             result = _determine_conversation_id(
                 explicit_conversation_id=None,
@@ -257,7 +260,9 @@ class TestDetermineConversationId:
     def test_no_explicit_notebook_uses_cached(self):
         from notebooklm.cli.chat import _determine_conversation_id
 
-        with patch("notebooklm.cli.chat.get_current_conversation", return_value="conv_cached"):
+        with patch(
+            "notebooklm.cli.chat.get_current_conversation", return_value="conv_cached"
+        ):
             result = _determine_conversation_id(
                 explicit_conversation_id=None,
                 explicit_notebook_id=None,
@@ -277,7 +282,9 @@ class TestGetLatestConversationFromServer:
         client = MagicMock()
         client.chat.get_conversation_id = AsyncMock(return_value="conv_from_server")
 
-        result = await _get_latest_conversation_from_server(client, "nb_123", json_output=True)
+        result = await _get_latest_conversation_from_server(
+            client, "nb_123", json_output=True
+        )
         assert result == "conv_from_server"
 
     @pytest.mark.asyncio
@@ -287,7 +294,9 @@ class TestGetLatestConversationFromServer:
         client = MagicMock()
         client.chat.get_conversation_id = AsyncMock(return_value=None)
 
-        result = await _get_latest_conversation_from_server(client, "nb_123", json_output=True)
+        result = await _get_latest_conversation_from_server(
+            client, "nb_123", json_output=True
+        )
         assert result is None
 
     @pytest.mark.asyncio
@@ -295,7 +304,11 @@ class TestGetLatestConversationFromServer:
         from notebooklm.cli.chat import _get_latest_conversation_from_server
 
         client = MagicMock()
-        client.chat.get_conversation_id = AsyncMock(side_effect=RuntimeError("Network error"))
+        client.chat.get_conversation_id = AsyncMock(
+            side_effect=RuntimeError("Network error")
+        )
 
-        result = await _get_latest_conversation_from_server(client, "nb_123", json_output=True)
+        result = await _get_latest_conversation_from_server(
+            client, "nb_123", json_output=True
+        )
         assert result is None

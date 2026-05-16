@@ -135,7 +135,16 @@ class TestSource:
                 [
                     ["src_789"],
                     "Deep Source",
-                    [None, None, None, None, None, None, None, ["https://deep.example.com"]],
+                    [
+                        None,
+                        None,
+                        None,
+                        None,
+                        None,
+                        None,
+                        None,
+                        ["https://deep.example.com"],
+                    ],
                 ]
             ]
         ]
@@ -152,7 +161,16 @@ class TestSource:
                 [
                     ["src_yt"],
                     "YouTube Video",
-                    [None, None, None, None, 9, None, None, ["https://youtube.com/watch?v=abc"]],
+                    [
+                        None,
+                        None,
+                        None,
+                        None,
+                        9,
+                        None,
+                        None,
+                        ["https://youtube.com/watch?v=abc"],
+                    ],
                 ]
             ]
         ]
@@ -168,7 +186,16 @@ class TestSource:
                 [
                     ["src_web"],
                     "Web Article",
-                    [None, None, None, None, 5, None, None, ["https://example.com/article"]],
+                    [
+                        None,
+                        None,
+                        None,
+                        None,
+                        5,
+                        None,
+                        None,
+                        ["https://example.com/article"],
+                    ],
                 ]
             ]
         ]
@@ -202,7 +229,16 @@ class TestSource:
                 [
                     ["src_test"],
                     "Test Source",
-                    [None, None, None, None, type_code, None, None, ["https://example.com"]],
+                    [
+                        None,
+                        None,
+                        None,
+                        None,
+                        type_code,
+                        None,
+                        None,
+                        ["https://example.com"],
+                    ],
                 ]
             ]
         ]
@@ -458,7 +494,11 @@ class TestArtifactKindProperty:
     def test_kind_mapping(self, artifact_type, variant, expected_kind):
         """Test that artifact types are correctly mapped to ArtifactType enum."""
         artifact = Artifact(
-            id="x", title="Test", _artifact_type=artifact_type, status=3, _variant=variant
+            id="x",
+            title="Test",
+            _artifact_type=artifact_type,
+            status=3,
+            _variant=variant,
         )
         assert artifact.kind == expected_kind
 
@@ -483,7 +523,9 @@ class TestArtifactKindProperty:
 
         _warned_artifact_types.clear()
 
-        artifact = Artifact(id="x", title="Test", _artifact_type=4, status=3, _variant=99)
+        artifact = Artifact(
+            id="x", title="Test", _artifact_type=4, status=3, _variant=99
+        )
         with warnings.catch_warnings(record=True) as w:
             warnings.simplefilter("always")
             result = artifact.kind
@@ -856,7 +898,10 @@ class TestSourceFulltext:
         fulltext = SourceFulltext(
             source_id="src-123",
             title="Test",
-            content="Prefix " + "A" * 40 + "B" * 10 + " Suffix",  # Only first 40 As match
+            content="Prefix "
+            + "A" * 40
+            + "B" * 10
+            + " Suffix",  # Only first 40 As match
         )
 
         matches = fulltext.find_citation_context(long_citation, context_chars=5)
@@ -952,7 +997,12 @@ class TestNotebookMetadata:
         """Test serialization to dictionary format."""
         from datetime import datetime
 
-        from notebooklm.types import Notebook, NotebookMetadata, SourceSummary, SourceType
+        from notebooklm.types import (
+            Notebook,
+            NotebookMetadata,
+            SourceSummary,
+            SourceType,
+        )
 
         notebook = Notebook(
             id="nb_123",
@@ -964,7 +1014,9 @@ class TestNotebookMetadata:
             notebook=notebook,
             sources=[
                 SourceSummary(kind=SourceType.PDF, title="test.pdf"),
-                SourceSummary(kind=SourceType.WEB_PAGE, title="Example", url="https://example.com"),
+                SourceSummary(
+                    kind=SourceType.WEB_PAGE, title="Example", url="https://example.com"
+                ),
             ],
         )
 

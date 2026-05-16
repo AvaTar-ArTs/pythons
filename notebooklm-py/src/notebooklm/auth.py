@@ -375,7 +375,9 @@ def extract_cookies_from_storage(storage_state: dict[str, Any]) -> dict[str, str
     if cookie_domains:
         unique_domains = sorted(set(cookie_domains.values()))
         logger.debug(
-            "Extracted %d cookies from domains: %s", len(cookies), ", ".join(unique_domains)
+            "Extracted %d cookies from domains: %s",
+            len(cookies),
+            ", ".join(unique_domains),
         )
         if "SID" in cookie_domains:
             logger.debug("SID cookie from domain: %s", cookie_domains["SID"])
@@ -389,7 +391,9 @@ def extract_cookies_from_storage(storage_state: dict[str, Any]) -> dict[str, str
 
         error_parts = [f"Missing required cookies: {missing}"]
         if found_names:
-            error_parts.append(f"Found cookies: {found_names}{'...' if len(cookies) > 5 else ''}")
+            error_parts.append(
+                f"Found cookies: {found_names}{'...' if len(cookies) > 5 else ''}"
+            )
         if google_domains:
             error_parts.append(f"Google domains in storage: {google_domains}")
         error_parts.append("Run 'notebooklm login' to authenticate.")

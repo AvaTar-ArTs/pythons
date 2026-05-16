@@ -116,7 +116,9 @@ def diagnose_response(label: str, raw: str, rpc_id: str) -> tuple[list, list, An
             cid = chunk[1] if len(chunk) > 1 else "?"
             has_data = chunk[2] is not None if len(chunk) > 2 else False
             data_type = type(chunk[2]).__name__ if len(chunk) > 2 else "N/A"
-            print(f"  Chunk {i}: tag={tag}, id={cid}, has_data={has_data}, data_type={data_type}")
+            print(
+                f"  Chunk {i}: tag={tag}, id={cid}, has_data={has_data}, data_type={data_type}"
+            )
         else:
             preview = repr(chunk)[:100]
             print(f"  Chunk {i}: {preview}")
@@ -163,11 +165,15 @@ async def run_diagnosis(notebook_id: str | None = None) -> None:
                     if isinstance(first_nb, list):
                         # Nested: [[notebook_data, ...], ...]
                         if isinstance(first_nb[0], list):
-                            notebook_id = first_nb[0][2] if len(first_nb[0]) > 2 else None
+                            notebook_id = (
+                                first_nb[0][2] if len(first_nb[0]) > 2 else None
+                            )
                         else:
                             notebook_id = first_nb[2] if len(first_nb) > 2 else None
             except (IndexError, TypeError) as e:
-                print(f"  Warning: Could not extract notebook ID from LIST_NOTEBOOKS result: {e}")
+                print(
+                    f"  Warning: Could not extract notebook ID from LIST_NOTEBOOKS result: {e}"
+                )
 
             if not notebook_id:
                 print("\nERROR: Could not extract notebook ID from LIST_NOTEBOOKS.")
@@ -197,7 +203,9 @@ async def run_diagnosis(notebook_id: str | None = None) -> None:
         print(
             f"  LIST_NOTEBOOKS: {len(list_raw)} bytes, {len(list_chunks)} chunks, IDs: {list_ids}"
         )
-        print(f"  GET_NOTEBOOK:   {len(get_raw)} bytes, {len(get_chunks)} chunks, IDs: {get_ids}")
+        print(
+            f"  GET_NOTEBOOK:   {len(get_raw)} bytes, {len(get_chunks)} chunks, IDs: {get_ids}"
+        )
 
         list_ok = RPCMethod.LIST_NOTEBOOKS.value in list_ids
         get_ok = RPCMethod.GET_NOTEBOOK.value in get_ids
@@ -209,7 +217,9 @@ async def run_diagnosis(notebook_id: str | None = None) -> None:
             print("  This matches Issue #114. The GET_NOTEBOOK RPC may be:")
             print("    - Returning null result data (server-side issue)")
             print("    - Requiring different parameters than expected")
-            print("    - Affected by a server-side change not yet reflected in method IDs")
+            print(
+                "    - Affected by a server-side change not yet reflected in method IDs"
+            )
         elif list_ok and get_ok:
             print("\n  DIAGNOSIS: Both RPCs are working. Issue may be intermittent.")
         else:

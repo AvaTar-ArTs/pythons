@@ -60,8 +60,14 @@ class TestDownloadUrlsBatch:
             mock_client_cls.return_value = mock_client
 
             urls_and_paths = [
-                ("https://storage.googleapis.com/file1.mp4", str(tmp_path / "file1.mp4")),
-                ("https://storage.googleapis.com/file2.mp4", str(tmp_path / "file2.mp4")),
+                (
+                    "https://storage.googleapis.com/file1.mp4",
+                    str(tmp_path / "file1.mp4"),
+                ),
+                (
+                    "https://storage.googleapis.com/file2.mp4",
+                    str(tmp_path / "file2.mp4"),
+                ),
             ]
 
             result = await api._download_urls_batch(urls_and_paths)
@@ -71,7 +77,9 @@ class TestDownloadUrlsBatch:
         assert str(tmp_path / "file2.mp4") in result
 
     @pytest.mark.asyncio
-    async def test_batch_download_html_response_rejected(self, mock_artifacts_api, tmp_path):
+    async def test_batch_download_html_response_rejected(
+        self, mock_artifacts_api, tmp_path
+    ):
         """Test that HTML responses raise ArtifactDownloadError (auth expired)."""
         api, _ = mock_artifacts_api
 
@@ -96,7 +104,9 @@ class TestDownloadUrlsBatch:
             ]
 
             # HTML response should raise ArtifactDownloadError
-            with pytest.raises(ArtifactDownloadError, match="Received HTML instead of media"):
+            with pytest.raises(
+                ArtifactDownloadError, match="Received HTML instead of media"
+            ):
                 await api._download_urls_batch(urls_and_paths)
 
     @pytest.mark.asyncio
@@ -114,14 +124,23 @@ class TestDownloadUrlsBatch:
             patch("httpx.AsyncClient") as mock_client_cls,
         ):
             mock_client = AsyncMock()
-            mock_client.get.side_effect = [success_response, httpx.HTTPError("Network error")]
+            mock_client.get.side_effect = [
+                success_response,
+                httpx.HTTPError("Network error"),
+            ]
             mock_client.__aenter__ = AsyncMock(return_value=mock_client)
             mock_client.__aexit__ = AsyncMock(return_value=None)
             mock_client_cls.return_value = mock_client
 
             urls_and_paths = [
-                ("https://storage.googleapis.com/file1.mp4", str(tmp_path / "file1.mp4")),
-                ("https://storage.googleapis.com/file2.mp4", str(tmp_path / "file2.mp4")),
+                (
+                    "https://storage.googleapis.com/file1.mp4",
+                    str(tmp_path / "file1.mp4"),
+                ),
+                (
+                    "https://storage.googleapis.com/file2.mp4",
+                    str(tmp_path / "file2.mp4"),
+                ),
             ]
 
             result = await api._download_urls_batch(urls_and_paths)
@@ -161,7 +180,9 @@ class TestCallGenerateRateLimit:
         """Test that non-rate-limit RPC errors propagate."""
         api, mock_core = mock_artifacts_api
 
-        mock_core.rpc_call.side_effect = RPCError("Server error", rpc_code="INTERNAL_ERROR")
+        mock_core.rpc_call.side_effect = RPCError(
+            "Server error", rpc_code="INTERNAL_ERROR"
+        )
 
         with pytest.raises(RPCError, match="Server error"):
             await api.generate_video("nb_123")
@@ -250,7 +271,9 @@ class TestWaitForCompletion:
         assert result.status == "completed"
 
     @pytest.mark.asyncio
-    async def test_poll_returns_not_found_when_artifact_not_in_list(self, mock_artifacts_api):
+    async def test_poll_returns_not_found_when_artifact_not_in_list(
+        self, mock_artifacts_api
+    ):
         """Test poll_status returns not_found when artifact ID not in list.
 
         Previously this returned status='pending', but 'not_found' is now
@@ -570,7 +593,11 @@ class TestIsMediaReady:
             None,
             None,
             None,
-            [None, None, [["dummy", ["https://infographic.url/image.png"]]]],  # Valid structure
+            [
+                None,
+                None,
+                [["dummy", ["https://infographic.url/image.png"]]],
+            ],  # Valid structure
         ]
         assert api._is_media_ready(art, 7) is True
 
@@ -631,7 +658,9 @@ class TestIsMediaReady:
         art = ["artifact_id", "title", 9, None, 3]
         assert api._is_media_ready(art, 9) is True
 
-    def test_unexpected_structure_returns_false_for_media_types(self, mock_artifacts_api):
+    def test_unexpected_structure_returns_false_for_media_types(
+        self, mock_artifacts_api
+    ):
         """Test that malformed structure returns False for media types (not ready)."""
         api, _ = mock_artifacts_api
         # Malformed structure - doesn't have the expected nested structure
@@ -642,7 +671,9 @@ class TestIsMediaReady:
         assert api._is_media_ready(art, 7) is False  # INFOGRAPHIC
         assert api._is_media_ready(art, 8) is False  # SLIDE_DECK
 
-    def test_unexpected_structure_returns_true_for_non_media_types(self, mock_artifacts_api):
+    def test_unexpected_structure_returns_true_for_non_media_types(
+        self, mock_artifacts_api
+    ):
         """Test that malformed structure returns True for non-media types."""
         api, _ = mock_artifacts_api
         # Malformed structure - but non-media types don't need URLs
@@ -753,7 +784,9 @@ class TestPollStatusMediaReadiness:
         assert status.status == "in_progress"
 
     @pytest.mark.asyncio
-    async def test_poll_status_quiz_completed_without_url_check(self, mock_artifacts_api):
+    async def test_poll_status_quiz_completed_without_url_check(
+        self, mock_artifacts_api
+    ):
         """Test poll_status returns completed for quiz (no URL check needed)."""
         api, mock_core = mock_artifacts_api
 

@@ -252,23 +252,31 @@ class TestJsonErrorResponse:
 class TestContextManagement:
     def test_get_current_notebook_no_file(self, tmp_path):
         with patch(
-            "notebooklm.cli.helpers.get_context_path", return_value=tmp_path / "nonexistent.json"
+            "notebooklm.cli.helpers.get_context_path",
+            return_value=tmp_path / "nonexistent.json",
         ):
             result = get_current_notebook()
             assert result is None
 
     def test_set_and_get_current_notebook(self, tmp_path):
         context_file = tmp_path / "context.json"
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             set_current_notebook("nb_test123", title="Test Notebook")
             result = get_current_notebook()
             assert result == "nb_test123"
 
     def test_set_notebook_with_all_fields(self, tmp_path):
         context_file = tmp_path / "context.json"
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             set_current_notebook(
-                "nb_test123", title="Test Notebook", is_owner=True, created_at="2024-01-01T00:00:00"
+                "nb_test123",
+                title="Test Notebook",
+                is_owner=True,
+                created_at="2024-01-01T00:00:00",
             )
             data = json.loads(context_file.read_text())
             assert data["notebook_id"] == "nb_test123"
@@ -279,19 +287,24 @@ class TestContextManagement:
     def test_clear_context(self, tmp_path):
         context_file = tmp_path / "context.json"
         context_file.write_text('{"notebook_id": "test"}')
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             clear_context()
             assert not context_file.exists()
 
     def test_clear_context_no_file(self, tmp_path):
         """clear_context should not raise if file doesn't exist"""
         context_file = tmp_path / "nonexistent.json"
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             clear_context()  # Should not raise
 
     def test_get_current_conversation_no_file(self, tmp_path):
         with patch(
-            "notebooklm.cli.helpers.get_context_path", return_value=tmp_path / "nonexistent.json"
+            "notebooklm.cli.helpers.get_context_path",
+            return_value=tmp_path / "nonexistent.json",
         ):
             result = get_current_conversation()
             assert result is None
@@ -300,15 +313,21 @@ class TestContextManagement:
         context_file = tmp_path / "context.json"
         context_file.parent.mkdir(parents=True, exist_ok=True)
         context_file.write_text('{"notebook_id": "nb_123"}')
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             set_current_conversation("conv_456")
             result = get_current_conversation()
             assert result == "conv_456"
 
     def test_clear_conversation(self, tmp_path):
         context_file = tmp_path / "context.json"
-        context_file.write_text('{"notebook_id": "nb_123", "conversation_id": "conv_456"}')
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        context_file.write_text(
+            '{"notebook_id": "nb_123", "conversation_id": "conv_456"}'
+        )
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             set_current_conversation(None)
             result = get_current_conversation()
             assert result is None
@@ -316,14 +335,20 @@ class TestContextManagement:
     def test_get_notebook_invalid_json(self, tmp_path):
         context_file = tmp_path / "context.json"
         context_file.write_text("invalid json")
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             result = get_current_notebook()
             assert result is None
 
     def test_set_current_notebook_clears_conversation_on_switch(self, tmp_path):
         context_file = tmp_path / "context.json"
-        context_file.write_text('{"notebook_id": "nb_old", "conversation_id": "conv_1"}')
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        context_file.write_text(
+            '{"notebook_id": "nb_old", "conversation_id": "conv_1"}'
+        )
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             set_current_notebook("nb_new", title="New Notebook")
             data = json.loads(context_file.read_text())
             assert data["notebook_id"] == "nb_new"
@@ -333,7 +358,8 @@ class TestContextManagement:
 class TestRequireNotebook:
     def test_returns_provided_notebook_id(self, tmp_path):
         with patch(
-            "notebooklm.cli.helpers.get_context_path", return_value=tmp_path / "context.json"
+            "notebooklm.cli.helpers.get_context_path",
+            return_value=tmp_path / "context.json",
         ):
             result = require_notebook("nb_provided")
             assert result == "nb_provided"
@@ -341,7 +367,9 @@ class TestRequireNotebook:
     def test_returns_context_notebook_when_none_provided(self, tmp_path):
         context_file = tmp_path / "context.json"
         context_file.write_text('{"notebook_id": "nb_context"}')
-        with patch("notebooklm.cli.helpers.get_context_path", return_value=context_file):
+        with patch(
+            "notebooklm.cli.helpers.get_context_path", return_value=context_file
+        ):
             result = require_notebook(None)
             assert result == "nb_context"
 
@@ -383,7 +411,9 @@ class TestHandleAuthError:
             # Enhanced error message makes multiple print calls
             assert mock_console.print.call_count >= 1
             # Verify key messages are present across all calls
-            all_output = " ".join(str(call[0][0]) for call in mock_console.print.call_args_list)
+            all_output = " ".join(
+                str(call[0][0]) for call in mock_console.print.call_args_list
+            )
             assert "not logged in" in all_output.lower()
             assert "login" in all_output.lower()
 
@@ -429,14 +459,20 @@ class TestDisplayReport:
         with patch("notebooklm.cli.helpers.console") as mock_console:
             display_report(report, max_chars=3, json_hint=False)
 
-        assert mock_console.print.call_args_list[2].args[0] == "[dim]... (truncated)[/dim]"
+        assert (
+            mock_console.print.call_args_list[2].args[0] == "[dim]... (truncated)[/dim]"
+        )
 
 
 class TestDisplayResearchSources:
     def test_shows_string_result_type_labels(self):
         sources = [
             {"title": "Web Result", "url": "https://example.com", "result_type": "web"},
-            {"title": "Drive Result", "url": "https://drive.example.com", "result_type": "drive"},
+            {
+                "title": "Drive Result",
+                "url": "https://drive.example.com",
+                "result_type": "drive",
+            },
         ]
 
         with patch("notebooklm.cli.helpers.console") as mock_console:
@@ -472,7 +508,9 @@ class TestWithClientDecorator:
         runner = CliRunner()
         with patch("notebooklm.cli.helpers.load_auth_from_storage") as mock_load:
             mock_load.return_value = {"SID": "test"}
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(test_cmd)
 
@@ -521,7 +559,9 @@ class TestWithClientDecorator:
         runner = CliRunner()
         with patch("notebooklm.cli.helpers.load_auth_from_storage") as mock_load:
             mock_load.return_value = {"SID": "test"}
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(test_cmd)
 
@@ -546,7 +586,9 @@ class TestWithClientDecorator:
         runner = CliRunner()
         with patch("notebooklm.cli.helpers.load_auth_from_storage") as mock_load:
             mock_load.return_value = {"SID": "test"}
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(test_cmd)
 
@@ -570,7 +612,9 @@ class TestWithClientDecorator:
         runner = CliRunner()
         with patch("notebooklm.cli.helpers.load_auth_from_storage") as mock_load:
             mock_load.return_value = {"SID": "test"}
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(test_cmd, ["--json"])
 
@@ -592,7 +636,9 @@ class TestGetClient:
 
         with patch("notebooklm.cli.helpers.load_auth_from_storage") as mock_load:
             mock_load.return_value = {"SID": "test_sid"}
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf_token", "session_id")
 
                 cookies, csrf, session = get_client(ctx)
@@ -607,7 +653,9 @@ class TestGetClient:
 
         with patch("notebooklm.cli.helpers.load_auth_from_storage") as mock_load:
             mock_load.return_value = {"SID": "test"}
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf", "session")
 
                 get_client(ctx)
@@ -622,7 +670,9 @@ class TestGetAuthTokens:
 
         with patch("notebooklm.cli.helpers.load_auth_from_storage") as mock_load:
             mock_load.return_value = {"SID": "test_sid"}
-            with patch("notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock) as mock_fetch:
+            with patch(
+                "notebooklm.cli.helpers.fetch_tokens", new_callable=AsyncMock
+            ) as mock_fetch:
                 mock_fetch.return_value = ("csrf_token", "session_id")
 
                 auth = get_auth_tokens(ctx)
@@ -653,7 +703,9 @@ class TestImportWithRetry:
         )
 
         with (
-            patch("notebooklm.cli.helpers.asyncio.sleep", new_callable=AsyncMock) as mock_sleep,
+            patch(
+                "notebooklm.cli.helpers.asyncio.sleep", new_callable=AsyncMock
+            ) as mock_sleep,
             patch("notebooklm.cli.helpers.console") as mock_console,
         ):
             imported = await import_with_retry(
@@ -702,7 +754,9 @@ class TestImportWithRetry:
 
         with (
             patch("notebooklm.cli.helpers.time.monotonic", side_effect=[0.0, 1801.0]),
-            patch("notebooklm.cli.helpers.asyncio.sleep", new_callable=AsyncMock) as mock_sleep,
+            patch(
+                "notebooklm.cli.helpers.asyncio.sleep", new_callable=AsyncMock
+            ) as mock_sleep,
             pytest.raises(RPCTimeoutError),
         ):
             await import_with_retry(
@@ -721,7 +775,9 @@ class TestImportWithRetry:
         client.research.import_sources = AsyncMock(side_effect=ValueError("boom"))
 
         with (
-            patch("notebooklm.cli.helpers.asyncio.sleep", new_callable=AsyncMock) as mock_sleep,
+            patch(
+                "notebooklm.cli.helpers.asyncio.sleep", new_callable=AsyncMock
+            ) as mock_sleep,
             pytest.raises(ValueError, match="boom"),
         ):
             await import_with_retry(

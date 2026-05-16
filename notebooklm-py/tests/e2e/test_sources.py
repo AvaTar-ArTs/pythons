@@ -30,7 +30,9 @@ class TestSourceOperations:
     @pytest.mark.asyncio
     async def test_add_url_source(self, client, temp_notebook):
         """Test adding a URL source to an owned notebook."""
-        source = await client.sources.add_url(temp_notebook.id, "https://httpbin.org/html")
+        source = await client.sources.add_url(
+            temp_notebook.id, "https://httpbin.org/html"
+        )
         assert isinstance(source, Source)
         assert source.id is not None
         # URL may or may not be returned in response
@@ -60,7 +62,9 @@ class TestSourceOperations:
         assert isinstance(source, Source)
 
         # Rename
-        renamed = await client.sources.rename(temp_notebook.id, source.id, "Renamed Test Source")
+        renamed = await client.sources.rename(
+            temp_notebook.id, source.id, "Renamed Test Source"
+        )
         assert isinstance(renamed, Source)
         assert renamed.title == "Renamed Test Source"
         # No need to restore - temp_notebook is deleted after test
@@ -89,7 +93,9 @@ class TestSourceRetrieval:
     @pytest.mark.asyncio
     async def test_get_source_not_found(self, client, read_only_notebook_id):
         """Test getting a non-existent source returns None."""
-        source = await client.sources.get(read_only_notebook_id, "nonexistent_source_id")
+        source = await client.sources.get(
+            read_only_notebook_id, "nonexistent_source_id"
+        )
         assert source is None
 
     @pytest.mark.asyncio
@@ -107,7 +113,9 @@ class TestSourceRetrieval:
         # Verify values are actually populated (not empty due to parsing bugs)
         assert guide["summary"], "Expected non-empty summary from source guide"
         assert isinstance(guide["keywords"], list)
-        assert len(guide["keywords"]) > 0, "Expected non-empty keywords from source guide"
+        assert (
+            len(guide["keywords"]) > 0
+        ), "Expected non-empty keywords from source guide"
 
 
 @requires_auth
@@ -138,7 +146,9 @@ class TestSourceMutations:
     async def test_refresh_source(self, client, temp_notebook):
         """Test refreshing a URL source."""
         # Add a URL source
-        source = await client.sources.add_url(temp_notebook.id, "https://httpbin.org/html")
+        source = await client.sources.add_url(
+            temp_notebook.id, "https://httpbin.org/html"
+        )
         assert source.id is not None
 
         # Refresh it
@@ -152,7 +162,9 @@ class TestSourceMutations:
     async def test_check_freshness(self, client, temp_notebook):
         """Test checking source freshness."""
         # Add a URL source
-        source = await client.sources.add_url(temp_notebook.id, "https://httpbin.org/html")
+        source = await client.sources.add_url(
+            temp_notebook.id, "https://httpbin.org/html"
+        )
         assert source.id is not None
 
         await asyncio.sleep(2)  # Wait for processing
@@ -192,7 +204,9 @@ class TestSourceStatus:
 
         # At least one source in an existing notebook should be ready
         ready_sources = [s for s in sources if s.is_ready]
-        assert len(ready_sources) > 0, "Expected at least one ready source in test notebook"
+        assert (
+            len(ready_sources) > 0
+        ), "Expected at least one ready source in test notebook"
 
     @pytest.mark.asyncio
     async def test_add_text_with_wait(self, client, temp_notebook):

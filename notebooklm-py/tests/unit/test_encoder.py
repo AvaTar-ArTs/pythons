@@ -2,7 +2,11 @@
 
 import json
 
-from notebooklm.rpc.encoder import build_request_body, build_url_params, encode_rpc_request
+from notebooklm.rpc.encoder import (
+    build_request_body,
+    build_url_params,
+    encode_rpc_request,
+)
 from notebooklm.rpc.types import RPCMethod
 
 
@@ -132,7 +136,9 @@ class TestBuildUrlParams:
 
     def test_with_source_path(self):
         """Test URL params with custom source path."""
-        result = build_url_params(RPCMethod.GET_NOTEBOOK, source_path="/notebook/abc123")
+        result = build_url_params(
+            RPCMethod.GET_NOTEBOOK, source_path="/notebook/abc123"
+        )
 
         assert result["rpcids"] == RPCMethod.GET_NOTEBOOK.value
         assert result["source-path"] == "/notebook/abc123"

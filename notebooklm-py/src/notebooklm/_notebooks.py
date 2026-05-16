@@ -88,7 +88,9 @@ class NotebooksAPI:
             source_path=f"/notebook/{notebook_id}",
         )
         # get_notebook returns [nb_info, ...] where nb_info contains the notebook data
-        nb_info = result[0] if result and isinstance(result, list) and len(result) > 0 else []
+        nb_info = (
+            result[0] if result and isinstance(result, list) and len(result) > 0 else []
+        )
         return Notebook.from_api_response(nb_info)
 
     async def delete(self, notebook_id: str) -> bool:

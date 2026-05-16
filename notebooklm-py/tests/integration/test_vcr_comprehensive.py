@@ -149,7 +149,9 @@ class TestSourcesAPI:
         # Verify values are actually populated (catches parsing bugs like issue #70)
         assert guide["summary"], "Expected non-empty summary from source guide"
         assert isinstance(guide["keywords"], list)
-        assert len(guide["keywords"]) > 0, "Expected non-empty keywords from source guide"
+        assert (
+            len(guide["keywords"]) > 0
+        ), "Expected non-empty keywords from source guide"
 
     @pytest.mark.vcr
     @pytest.mark.asyncio
@@ -160,7 +162,9 @@ class TestSourcesAPI:
             sources = await client.sources.list(READONLY_NOTEBOOK_ID)
             if not sources:
                 pytest.skip("No sources available")
-            fulltext = await client.sources.get_fulltext(READONLY_NOTEBOOK_ID, sources[0].id)
+            fulltext = await client.sources.get_fulltext(
+                READONLY_NOTEBOOK_ID, sources[0].id
+            )
         assert fulltext is not None
         assert fulltext.source_id == sources[0].id
         # Verify content is actually populated (catches parsing bugs like issue #70)
@@ -394,7 +398,9 @@ class TestArtifactsDownloadAPI:
         async with vcr_client() as client:
             output_path = tmp_path / "quiz.json"
             try:
-                path = await client.artifacts.download_quiz(READONLY_NOTEBOOK_ID, str(output_path))
+                path = await client.artifacts.download_quiz(
+                    READONLY_NOTEBOOK_ID, str(output_path)
+                )
                 assert os.path.exists(path)
                 data = json.loads(output_path.read_text(encoding="utf-8"))
                 assert "title" in data
@@ -676,7 +682,9 @@ class TestSourcesAdditionalAPI:
             sources = await client.sources.list(READONLY_NOTEBOOK_ID)
             if not sources:
                 pytest.skip("No sources available")
-            is_fresh = await client.sources.check_freshness(READONLY_NOTEBOOK_ID, sources[0].id)
+            is_fresh = await client.sources.check_freshness(
+                READONLY_NOTEBOOK_ID, sources[0].id
+            )
         assert isinstance(is_fresh, bool)
         # The cassette shows API returns [] which should be interpreted as fresh
         assert is_fresh is True, "Source in cassette should be fresh (API returned [])"
@@ -693,10 +701,14 @@ class TestSourcesAdditionalAPI:
             if not sources:
                 pytest.skip("No sources available")
             # Find a GOOGLE_DOCS source
-            drive_source = next((s for s in sources if s.kind == SourceType.GOOGLE_DOCS), None)
+            drive_source = next(
+                (s for s in sources if s.kind == SourceType.GOOGLE_DOCS), None
+            )
             if not drive_source:
                 pytest.skip("No GOOGLE_DOCS source available")
-            is_fresh = await client.sources.check_freshness(MUTABLE_NOTEBOOK_ID, drive_source.id)
+            is_fresh = await client.sources.check_freshness(
+                MUTABLE_NOTEBOOK_ID, drive_source.id
+            )
         assert isinstance(is_fresh, bool)
         # Drive sources return [[null, true, [source_id]]] when fresh
         assert is_fresh is True, "Drive source should be fresh"
@@ -713,7 +725,9 @@ class TestSourcesAdditionalAPI:
             if not sources:
                 pytest.skip("No sources available")
             # Find a WEB_PAGE source (text sources can't be refreshed)
-            url_source = next((s for s in sources if s.kind == SourceType.WEB_PAGE), None)
+            url_source = next(
+                (s for s in sources if s.kind == SourceType.WEB_PAGE), None
+            )
             if not url_source:
                 pytest.skip("No WEB_PAGE source available for refresh")
             result = await client.sources.refresh(MUTABLE_NOTEBOOK_ID, url_source.id)
@@ -848,9 +862,13 @@ class TestArtifactsAdditionalAPI:
             artifact = artifacts[0]
             original_title = artifact.title
             # Rename
-            await client.artifacts.rename(MUTABLE_NOTEBOOK_ID, artifact.id, "VCR Renamed Artifact")
+            await client.artifacts.rename(
+                MUTABLE_NOTEBOOK_ID, artifact.id, "VCR Renamed Artifact"
+            )
             # Restore original name
-            await client.artifacts.rename(MUTABLE_NOTEBOOK_ID, artifact.id, original_title)
+            await client.artifacts.rename(
+                MUTABLE_NOTEBOOK_ID, artifact.id, original_title
+            )
 
     @pytest.mark.vcr
     @pytest.mark.asyncio

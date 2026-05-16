@@ -60,7 +60,9 @@ class TestChatWithSourceSelection:
 
     @pytest.mark.asyncio
     @pytest.mark.e2e
-    async def test_ask_with_random_subset_of_sources(self, client, multi_source_notebook_id):
+    async def test_ask_with_random_subset_of_sources(
+        self, client, multi_source_notebook_id
+    ):
         """Test asking a question using a random subset of sources."""
         # Get all sources
         sources = await client.sources.list(multi_source_notebook_id)
@@ -82,7 +84,9 @@ class TestChatWithSourceSelection:
 
     @pytest.mark.asyncio
     @pytest.mark.e2e
-    async def test_ask_follow_up_with_different_sources(self, client, multi_source_notebook_id):
+    async def test_ask_follow_up_with_different_sources(
+        self, client, multi_source_notebook_id
+    ):
         """Test follow-up question can use different source selection."""
         sources = await client.sources.list(multi_source_notebook_id)
         assert len(sources) >= 2, "Expected at least 2 sources"
@@ -121,7 +125,9 @@ class TestArtifactGenerationWithSourceSelection:
 
     @pytest.mark.asyncio
     @pytest.mark.e2e
-    async def test_generate_report_with_all_sources(self, client, multi_source_notebook_id):
+    async def test_generate_report_with_all_sources(
+        self, client, multi_source_notebook_id
+    ):
         """Test report generation using all sources."""
         result = await client.artifacts.generate_report(
             multi_source_notebook_id,
@@ -131,7 +137,9 @@ class TestArtifactGenerationWithSourceSelection:
 
     @pytest.mark.asyncio
     @pytest.mark.e2e
-    async def test_generate_report_with_single_source(self, client, multi_source_notebook_id):
+    async def test_generate_report_with_single_source(
+        self, client, multi_source_notebook_id
+    ):
         """Test report generation using only one source."""
         sources = await client.sources.list(multi_source_notebook_id)
         assert len(sources) >= 1
@@ -144,7 +152,9 @@ class TestArtifactGenerationWithSourceSelection:
 
     @pytest.mark.asyncio
     @pytest.mark.e2e
-    async def test_generate_report_with_subset_of_sources(self, client, multi_source_notebook_id):
+    async def test_generate_report_with_subset_of_sources(
+        self, client, multi_source_notebook_id
+    ):
         """Test report generation using a random subset of sources."""
         sources = await client.sources.list(multi_source_notebook_id)
         assert len(sources) >= 2
@@ -162,7 +172,9 @@ class TestArtifactGenerationWithSourceSelection:
     @pytest.mark.asyncio
     @pytest.mark.e2e
     @pytest.mark.variants
-    async def test_generate_quiz_with_single_source(self, client, multi_source_notebook_id):
+    async def test_generate_quiz_with_single_source(
+        self, client, multi_source_notebook_id
+    ):
         """Test quiz generation using only one source."""
         sources = await client.sources.list(multi_source_notebook_id)
         assert len(sources) >= 1
@@ -176,7 +188,9 @@ class TestArtifactGenerationWithSourceSelection:
     @pytest.mark.asyncio
     @pytest.mark.e2e
     @pytest.mark.variants
-    async def test_generate_flashcards_with_subset(self, client, multi_source_notebook_id):
+    async def test_generate_flashcards_with_subset(
+        self, client, multi_source_notebook_id
+    ):
         """Test flashcard generation using a subset of sources."""
         sources = await client.sources.list(multi_source_notebook_id)
         assert len(sources) >= 2
@@ -193,7 +207,9 @@ class TestArtifactGenerationWithSourceSelection:
     @pytest.mark.asyncio
     @pytest.mark.e2e
     @pytest.mark.variants
-    async def test_generate_audio_with_single_source(self, client, multi_source_notebook_id):
+    async def test_generate_audio_with_single_source(
+        self, client, multi_source_notebook_id
+    ):
         """Test audio generation using only one source."""
         sources = await client.sources.list(multi_source_notebook_id)
         assert len(sources) >= 1
@@ -211,7 +227,9 @@ class TestSourceListingAndSelection:
 
     @pytest.mark.asyncio
     @pytest.mark.e2e
-    async def test_notebook_has_multiple_sources(self, client, multi_source_notebook_id):
+    async def test_notebook_has_multiple_sources(
+        self, client, multi_source_notebook_id
+    ):
         """Verify the test notebook has at least 3 sources."""
         sources = await client.sources.list(multi_source_notebook_id)
 
@@ -242,7 +260,9 @@ class TestEdgeCases:
 
     @pytest.mark.asyncio
     @pytest.mark.e2e
-    async def test_ask_with_explicit_all_sources(self, client, multi_source_notebook_id):
+    async def test_ask_with_explicit_all_sources(
+        self, client, multi_source_notebook_id
+    ):
         """Test asking with explicitly listing all source IDs (same as None)."""
         sources = await client.sources.list(multi_source_notebook_id)
         all_source_ids = [s.id for s in sources]
@@ -257,7 +277,9 @@ class TestEdgeCases:
 
     @pytest.mark.asyncio
     @pytest.mark.e2e
-    async def test_sources_appear_in_different_order(self, client, multi_source_notebook_id):
+    async def test_sources_appear_in_different_order(
+        self, client, multi_source_notebook_id
+    ):
         """Test that source order doesn't affect results."""
         sources = await client.sources.list(multi_source_notebook_id)
         assert len(sources) >= 2

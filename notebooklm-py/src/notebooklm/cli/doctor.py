@@ -26,7 +26,9 @@ def register_doctor_command(cli):
     """Register the doctor command on the main CLI group."""
 
     @cli.command("doctor")
-    @click.option("--fix", "fix_issues", is_flag=True, help="Attempt to fix detected issues")
+    @click.option(
+        "--fix", "fix_issues", is_flag=True, help="Attempt to fix detected issues"
+    )
     @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
     def doctor(fix_issues, json_output):
         """Check profile setup, auth status, and migration.
@@ -64,7 +66,10 @@ def register_doctor_command(cli):
                 "detail": "legacy files remain alongside profiles",
             }
         else:
-            checks["migration"] = {"status": "pass", "detail": "clean (no legacy files)"}
+            checks["migration"] = {
+                "status": "pass",
+                "detail": "clean (no legacy files)",
+            }
 
         # Check 2: Profile directory
         profile_dir = get_profile_dir()
@@ -103,7 +108,10 @@ def register_doctor_command(cli):
                         "detail": "SID cookie missing",
                     }
             except (json.JSONDecodeError, OSError) as e:
-                checks["auth"] = {"status": "fail", "detail": f"invalid storage file: {e}"}
+                checks["auth"] = {
+                    "status": "fail",
+                    "detail": f"invalid storage file: {e}",
+                }
         else:
             checks["auth"] = {"status": "fail", "detail": "not authenticated"}
 
@@ -136,7 +144,10 @@ def register_doctor_command(cli):
             except (json.JSONDecodeError, OSError) as e:
                 checks["config"] = {"status": "fail", "detail": f"invalid: {e}"}
         else:
-            checks["config"] = {"status": "pass", "detail": "not present (using defaults)"}
+            checks["config"] = {
+                "status": "pass",
+                "detail": "not present (using defaults)",
+            }
 
         # Apply fixes if requested
         fixes_applied = []
@@ -168,7 +179,10 @@ def _apply_fixes(checks: dict, home, profile_dir) -> list[str]:
 
         if migrate_to_profiles():
             fixes.append("Migrated legacy layout to profiles/default/")
-            checks["migration"] = {"status": "pass", "detail": "complete (just migrated)"}
+            checks["migration"] = {
+                "status": "pass",
+                "detail": "complete (just migrated)",
+            }
             if profile_dir.exists():
                 checks["profile_dir"] = {"status": "pass", "detail": str(profile_dir)}
 
@@ -206,7 +220,9 @@ def _display_results(
             return "[yellow]! warn[/yellow]"
         return "[red]\u2717 fail[/red]"
 
-    table.add_row("Profile", f"[bold]{profile_name}[/bold]", f"source: {profile_source}")
+    table.add_row(
+        "Profile", f"[bold]{profile_name}[/bold]", f"source: {profile_source}"
+    )
 
     for name, check in checks.items():
         label = name.replace("_", " ").title()

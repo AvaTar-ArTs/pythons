@@ -115,7 +115,14 @@ class TestCreateNotebook:
     ):
         response = build_rpc_response(
             RPCMethod.CREATE_NOTEBOOK,
-            ["Test Title", [], "id", "📓", None, [None, None, None, None, None, [1704067200, 0]]],
+            [
+                "Test Title",
+                [],
+                "id",
+                "📓",
+                None,
+                [None, None, None, None, None, [1704067200, 0]],
+            ],
         )
         httpx_mock.add_response(content=response.encode())
 
@@ -165,7 +172,16 @@ class TestGetNotebook:
     ):
         response = build_rpc_response(
             RPCMethod.GET_NOTEBOOK,
-            [["Name", [], "nb_123", "📘", None, [None, None, None, None, None, [1704067200, 0]]]],
+            [
+                [
+                    "Name",
+                    [],
+                    "nb_123",
+                    "📘",
+                    None,
+                    [None, None, None, None, None, [1704067200, 0]],
+                ]
+            ],
         )
         httpx_mock.add_response(content=response.encode())
 
@@ -652,10 +668,15 @@ class TestShareEdgeCases:
         httpx_mock.add_response(content=response.encode())
 
         async with NotebookLMClient(auth_tokens) as client:
-            result = await client.notebooks.share("nb_123", public=True, artifact_id="art_456")
+            result = await client.notebooks.share(
+                "nb_123", public=True, artifact_id="art_456"
+            )
 
         assert result["public"] is True
-        assert result["url"] == "https://notebooklm.google.com/notebook/nb_123?artifactId=art_456"
+        assert (
+            result["url"]
+            == "https://notebooklm.google.com/notebook/nb_123?artifactId=art_456"
+        )
         assert result["artifact_id"] == "art_456"
 
     @pytest.mark.asyncio

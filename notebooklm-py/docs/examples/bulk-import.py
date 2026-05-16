@@ -79,7 +79,9 @@ async def main():
         print("\nImporting text content...")
         for item in SOURCES["text"]:
             try:
-                source = await client.sources.add_text(nb.id, item["title"], item["content"])
+                source = await client.sources.add_text(
+                    nb.id, item["title"], item["content"]
+                )
                 results["success"].append(f"Text: {source.title}")
                 print(f"  + {source.title}")
             except Exception as e:

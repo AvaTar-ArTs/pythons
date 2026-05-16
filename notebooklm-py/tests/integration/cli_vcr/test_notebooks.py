@@ -10,7 +10,12 @@ import pytest
 
 from notebooklm.notebooklm_cli import cli
 
-from .conftest import assert_command_success, notebooklm_vcr, parse_json_output, skip_no_cassettes
+from .conftest import (
+    assert_command_success,
+    notebooklm_vcr,
+    parse_json_output,
+    skip_no_cassettes,
+)
 
 pytestmark = [pytest.mark.vcr, skip_no_cassettes]
 

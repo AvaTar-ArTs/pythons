@@ -17,7 +17,11 @@ download_module = get_cli_module("download")
 
 
 def make_artifact(
-    id: str, title: str, _artifact_type: int, status: int = 3, created_at: datetime = None
+    id: str,
+    title: str,
+    _artifact_type: int,
+    status: int = 3,
+    created_at: datetime = None,
 ) -> Artifact:
     """Create an Artifact for testing."""
     return Artifact(
@@ -55,7 +59,9 @@ def mock_fetch_tokens():
     level where they're imported (not at helpers where they're defined).
     """
     with (
-        patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+        patch.object(
+            download_module, "fetch_tokens", new_callable=AsyncMock
+        ) as mock_fetch,
         patch.object(download_module, "load_auth_from_storage") as mock_load,
     ):
         mock_load.return_value = {"SID": "test", "HSID": "test", "SSID": "test"}
@@ -87,12 +93,16 @@ class TestDownloadAudio:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test", "HSID": "test", "SSID": "test"}
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["download", "audio", str(output_file), "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["download", "audio", str(output_file), "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
             assert output_file.exists()
@@ -106,12 +116,16 @@ class TestDownloadAudio:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test", "HSID": "test", "SSID": "test"}
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["download", "audio", "--dry-run", "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["download", "audio", "--dry-run", "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
             assert "DRY RUN" in result.output
@@ -123,14 +137,19 @@ class TestDownloadAudio:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test", "HSID": "test", "SSID": "test"}
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(cli, ["download", "audio", "-n", "nb_123"])
 
-            assert "No completed audio artifacts found" in result.output or result.exit_code != 0
+            assert (
+                "No completed audio artifacts found" in result.output
+                or result.exit_code != 0
+            )
 
 
 # =============================================================================
@@ -157,12 +176,16 @@ class TestDownloadVideo:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test", "HSID": "test", "SSID": "test"}
                 mock_fetch.return_value = ("csrf", "session")
-                result = runner.invoke(cli, ["download", "video", str(output_file), "-n", "nb_123"])
+                result = runner.invoke(
+                    cli, ["download", "video", str(output_file), "-n", "nb_123"]
+                )
 
             assert result.exit_code == 0
             assert output_file.exists()
@@ -180,7 +203,9 @@ class TestDownloadInfographic:
 
             output_file = tmp_path / "infographic.png"
 
-            async def mock_download_infographic(notebook_id, output_path, artifact_id=None):
+            async def mock_download_infographic(
+                notebook_id, output_path, artifact_id=None
+            ):
                 Path(output_path).write_bytes(b"fake image content")
                 return output_path
 
@@ -192,7 +217,9 @@ class TestDownloadInfographic:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test", "HSID": "test", "SSID": "test"}
@@ -217,7 +244,9 @@ class TestDownloadSlideDeck:
 
             output_dir = tmp_path / "slides"
 
-            async def mock_download_slide_deck(notebook_id, output_path, artifact_id=None):
+            async def mock_download_slide_deck(
+                notebook_id, output_path, artifact_id=None
+            ):
                 Path(output_path).mkdir(parents=True, exist_ok=True)
                 (Path(output_path) / "slide_1.png").write_bytes(b"fake slide")
                 return output_path
@@ -230,7 +259,9 @@ class TestDownloadSlideDeck:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test", "HSID": "test", "SSID": "test"}
@@ -263,10 +294,16 @@ class TestDownloadFlags:
             mock_client.artifacts.list = AsyncMock(
                 return_value=[
                     make_artifact(
-                        "audio_old", "Old Audio", 1, created_at=datetime.fromtimestamp(1000000000)
+                        "audio_old",
+                        "Old Audio",
+                        1,
+                        created_at=datetime.fromtimestamp(1000000000),
                     ),
                     make_artifact(
-                        "audio_new", "New Audio", 1, created_at=datetime.fromtimestamp(2000000000)
+                        "audio_new",
+                        "New Audio",
+                        1,
+                        created_at=datetime.fromtimestamp(2000000000),
                     ),
                 ]
             )
@@ -274,13 +311,16 @@ class TestDownloadFlags:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test"}
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
-                    cli, ["download", "audio", str(output_file), "--latest", "-n", "nb_123"]
+                    cli,
+                    ["download", "audio", str(output_file), "--latest", "-n", "nb_123"],
                 )
 
             assert result.exit_code == 0
@@ -300,10 +340,16 @@ class TestDownloadFlags:
             mock_client.artifacts.list = AsyncMock(
                 return_value=[
                     make_artifact(
-                        "audio_old", "Old Audio", 1, created_at=datetime.fromtimestamp(1000000000)
+                        "audio_old",
+                        "Old Audio",
+                        1,
+                        created_at=datetime.fromtimestamp(1000000000),
                     ),
                     make_artifact(
-                        "audio_new", "New Audio", 1, created_at=datetime.fromtimestamp(2000000000)
+                        "audio_new",
+                        "New Audio",
+                        1,
+                        created_at=datetime.fromtimestamp(2000000000),
                     ),
                 ]
             )
@@ -311,13 +357,23 @@ class TestDownloadFlags:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test"}
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
-                    cli, ["download", "audio", str(output_file), "--earliest", "-n", "nb_123"]
+                    cli,
+                    [
+                        "download",
+                        "audio",
+                        str(output_file),
+                        "--earliest",
+                        "-n",
+                        "nb_123",
+                    ],
                 )
 
             assert result.exit_code == 0
@@ -342,13 +398,16 @@ class TestDownloadFlags:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test"}
                 mock_fetch.return_value = ("csrf", "session")
                 result = runner.invoke(
-                    cli, ["download", "audio", str(output_file), "--force", "-n", "nb_123"]
+                    cli,
+                    ["download", "audio", str(output_file), "--force", "-n", "nb_123"],
                 )
 
             assert result.exit_code == 0
@@ -368,13 +427,23 @@ class TestDownloadFlags:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test"}
                 mock_fetch.return_value = ("csrf", "session")
                 runner.invoke(
-                    cli, ["download", "audio", str(output_file), "--no-clobber", "-n", "nb_123"]
+                    cli,
+                    [
+                        "download",
+                        "audio",
+                        str(output_file),
+                        "--no-clobber",
+                        "-n",
+                        "nb_123",
+                    ],
                 )
 
             # File should remain unchanged
@@ -423,7 +492,9 @@ class TestDownloadCommandsExist:
             mock_client_cls.return_value = mock_client
 
             with (
-                patch.object(download_module, "fetch_tokens", new_callable=AsyncMock) as mock_fetch,
+                patch.object(
+                    download_module, "fetch_tokens", new_callable=AsyncMock
+                ) as mock_fetch,
                 patch.object(download_module, "load_auth_from_storage") as mock_load,
             ):
                 mock_load.return_value = {"SID": "test", "HSID": "test", "SSID": "test"}
@@ -503,7 +574,9 @@ class TestDownloadFlagConflicts:
 class TestDownloadAutoRename:
     """Test auto-rename functionality when file exists and --force not specified."""
 
-    def test_auto_renames_on_conflict(self, runner, mock_auth, mock_fetch_tokens, tmp_path):
+    def test_auto_renames_on_conflict(
+        self, runner, mock_auth, mock_fetch_tokens, tmp_path
+    ):
         """When file exists without --force or --no-clobber, should auto-rename."""
         with patch_client_for_module("download") as mock_client_cls:
             mock_client = create_mock_client()
@@ -521,7 +594,9 @@ class TestDownloadAutoRename:
             mock_client.artifacts.download_audio = mock_download_audio
             mock_client_cls.return_value = mock_client
 
-            result = runner.invoke(cli, ["download", "audio", str(output_file), "-n", "nb_123"])
+            result = runner.invoke(
+                cli, ["download", "audio", str(output_file), "-n", "nb_123"]
+            )
 
         assert result.exit_code == 0
         # Original file unchanged
@@ -587,7 +662,15 @@ class TestDownloadAll:
 
             result = runner.invoke(
                 cli,
-                ["download", "audio", "--all", "--dry-run", str(output_dir), "-n", "nb_123"],
+                [
+                    "download",
+                    "audio",
+                    "--all",
+                    "--dry-run",
+                    str(output_dir),
+                    "-n",
+                    "nb_123",
+                ],
             )
 
         assert result.exit_code == 0
@@ -596,7 +679,9 @@ class TestDownloadAll:
         # Directory should NOT be created
         assert not output_dir.exists()
 
-    def test_download_all_with_failures(self, runner, mock_auth, mock_fetch_tokens, tmp_path):
+    def test_download_all_with_failures(
+        self, runner, mock_auth, mock_fetch_tokens, tmp_path
+    ):
         """Test --all continues on individual artifact failures."""
         with patch_client_for_module("download") as mock_client_cls:
             mock_client = create_mock_client()
@@ -633,7 +718,9 @@ class TestDownloadAll:
         # Output should mention failure
         assert "failed" in result.output.lower() or "1" in result.output
 
-    def test_download_all_with_no_clobber(self, runner, mock_auth, mock_fetch_tokens, tmp_path):
+    def test_download_all_with_no_clobber(
+        self, runner, mock_auth, mock_fetch_tokens, tmp_path
+    ):
         """Test --all --no-clobber skips existing files."""
         with patch_client_for_module("download") as mock_client_cls:
             mock_client = create_mock_client()
@@ -658,7 +745,15 @@ class TestDownloadAll:
 
             result = runner.invoke(
                 cli,
-                ["download", "audio", "--all", "--no-clobber", str(output_dir), "-n", "nb_123"],
+                [
+                    "download",
+                    "audio",
+                    "--all",
+                    "--no-clobber",
+                    str(output_dir),
+                    "-n",
+                    "nb_123",
+                ],
             )
 
         assert result.exit_code == 0
@@ -676,7 +771,9 @@ class TestDownloadAll:
 class TestDownloadArtifactFlag:
     """Test -a / --artifact flag for selecting by artifact ID."""
 
-    def test_download_by_full_artifact_id(self, runner, mock_auth, mock_fetch_tokens, tmp_path):
+    def test_download_by_full_artifact_id(
+        self, runner, mock_auth, mock_fetch_tokens, tmp_path
+    ):
         """Full artifact ID (20+ chars) bypasses prefix search and selects correctly."""
         with patch_client_for_module("download") as mock_client_cls:
             mock_client = create_mock_client()
@@ -733,7 +830,9 @@ class TestDownloadArtifactFlag:
         assert result.exit_code != 0
         assert "not found" in result.output.lower()
 
-    def test_download_by_partial_artifact_id(self, runner, mock_auth, mock_fetch_tokens, tmp_path):
+    def test_download_by_partial_artifact_id(
+        self, runner, mock_auth, mock_fetch_tokens, tmp_path
+    ):
         """Partial artifact ID prefix resolves and selects the correct artifact."""
         with patch_client_for_module("download") as mock_client_cls:
             mock_client = create_mock_client()
@@ -756,7 +855,15 @@ class TestDownloadArtifactFlag:
 
             result = runner.invoke(
                 cli,
-                ["download", "audio", str(output_file), "-a", "audio_bbb", "-n", "nb_123"],
+                [
+                    "download",
+                    "audio",
+                    str(output_file),
+                    "-a",
+                    "audio_bbb",
+                    "-n",
+                    "nb_123",
+                ],
             )
 
         assert result.exit_code == 0
@@ -809,7 +916,9 @@ class TestDownloadArtifactFlag:
 class TestDownloadErrorHandling:
     """Test error handling during downloads."""
 
-    def test_download_single_failure(self, runner, mock_auth, mock_fetch_tokens, tmp_path):
+    def test_download_single_failure(
+        self, runner, mock_auth, mock_fetch_tokens, tmp_path
+    ):
         """When download fails, should return error gracefully."""
         with patch_client_for_module("download") as mock_client_cls:
             mock_client = create_mock_client()
@@ -825,7 +934,9 @@ class TestDownloadErrorHandling:
             mock_client.artifacts.download_audio = mock_download_audio
             mock_client_cls.return_value = mock_client
 
-            result = runner.invoke(cli, ["download", "audio", str(output_file), "-n", "nb_123"])
+            result = runner.invoke(
+                cli, ["download", "audio", str(output_file), "-n", "nb_123"]
+            )
 
         assert result.exit_code != 0
         assert "Connection refused" in result.output or "error" in result.output.lower()

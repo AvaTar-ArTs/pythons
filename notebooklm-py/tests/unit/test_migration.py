@@ -54,7 +54,9 @@ class TestMigrateToProfiles:
         default_dir = tmp_path / "profiles" / "default"
         # Files moved to profile dir
         assert (default_dir / "storage_state.json").exists()
-        assert json.loads((default_dir / "storage_state.json").read_text()) == {"cookies": []}
+        assert json.loads((default_dir / "storage_state.json").read_text()) == {
+            "cookies": []
+        }
         assert (default_dir / "context.json").exists()
         assert (default_dir / "browser_profile" / "data").exists()
         # Migration marker present
@@ -176,7 +178,9 @@ class TestExplicitAuthBypassesProfileSetup:
             env={"NOTEBOOKLM_HOME": str(ro_home)},
         )
         # Should not crash with PermissionError from profiles dir creation
-        assert result.exit_code != 1 or "PermissionError" not in str(result.exception or "")
+        assert result.exit_code != 1 or "PermissionError" not in str(
+            result.exception or ""
+        )
 
     def test_auth_json_env_skips_profile_setup(self, tmp_path):
         """CLI with NOTEBOOKLM_AUTH_JSON should not call ensure_profiles_dir."""
@@ -196,4 +200,6 @@ class TestExplicitAuthBypassesProfileSetup:
                 "NOTEBOOKLM_AUTH_JSON": '{"cookies": [{"name": "SID", "value": "x", "domain": ".google.com"}]}',
             },
         )
-        assert result.exit_code != 1 or "PermissionError" not in str(result.exception or "")
+        assert result.exit_code != 1 or "PermissionError" not in str(
+            result.exception or ""
+        )

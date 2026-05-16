@@ -98,7 +98,9 @@ async def _resolve_source_for_delete(client, notebook_id: str, source_id: str) -
         return source_id
 
     sources = await client.sources.list(notebook_id)
-    matches = [item for item in sources if item.id.lower().startswith(source_id.lower())]
+    matches = [
+        item for item in sources if item.id.lower().startswith(source_id.lower())
+    ]
 
     if len(matches) == 1:
         if matches[0].id != source_id:
@@ -137,7 +139,9 @@ async def _resolve_source_by_exact_title(client, notebook_id: str, title: str):
         return matches[0]
 
     if len(matches) > 1:
-        lines = [f"Title '{title}' matches {len(matches)} sources. Delete by ID instead:"]
+        lines = [
+            f"Title '{title}' matches {len(matches)} sources. Delete by ID instead:"
+        ]
         for item in matches[:5]:
             lines.append(f"  {item.id[:12]}... {item.title}")
         if len(matches) > 5:
@@ -185,7 +189,9 @@ def source_list(ctx, notebook_id, json_output, client_auth):
                             "url": src.url,
                             "status": source_status_to_str(src.status),
                             "status_id": src.status,
-                            "created_at": src.created_at.isoformat() if src.created_at else None,
+                            "created_at": (
+                                src.created_at.isoformat() if src.created_at else None
+                            ),
                         }
                         for i, src in enumerate(sources, 1)
                     ],
@@ -203,7 +209,9 @@ def source_list(ctx, notebook_id, json_output, client_auth):
 
             for src in sources:
                 type_display = get_source_type_display(src.kind)
-                created = src.created_at.strftime("%Y-%m-%d %H:%M") if src.created_at else "-"
+                created = (
+                    src.created_at.strftime("%Y-%m-%d %H:%M") if src.created_at else "-"
+                )
                 status = source_status_to_str(src.status)
                 table.add_row(src.id, src.title or "-", type_display, created, status)
 
@@ -232,7 +240,9 @@ def source_list(ctx, notebook_id, json_output, client_auth):
 @click.option("--mime-type", help="MIME type for file sources")
 @click.option("--json", "json_output", is_flag=True, help="Output as JSON")
 @with_client
-def source_add(ctx, content, notebook_id, source_type, title, mime_type, json_output, client_auth):
+def source_add(
+    ctx, content, notebook_id, source_type, title, mime_type, json_output, client_auth
+):
     """Add a source to a notebook.
 
     \b
@@ -279,7 +289,9 @@ def source_add(ctx, content, notebook_id, source_type, title, mime_type, json_ou
             elif detected_type == "text":
                 text_content = file_content if file_content is not None else content
                 text_title = file_title or "Untitled"
-                src = await client.sources.add_text(nb_id_resolved, text_title, text_content)
+                src = await client.sources.add_text(
+                    nb_id_resolved, text_title, text_content
+                )
             elif detected_type == "file":
                 src = await client.sources.add_file(nb_id_resolved, content, mime_type)
 
@@ -363,7 +375,9 @@ def source_delete(ctx, source_id, notebook_id, yes, client_auth):
     async def _run():
         async with NotebookLMClient(client_auth) as client:
             nb_id_resolved = await resolve_notebook_id(client, nb_id)
-            resolved_id = await _resolve_source_for_delete(client, nb_id_resolved, source_id)
+            resolved_id = await _resolve_source_for_delete(
+                client, nb_id_resolved, source_id
+            )
 
             if not yes and not click.confirm(f"Delete source {resolved_id}?"):
                 return
@@ -397,7 +411,9 @@ def source_delete_by_title(ctx, title, notebook_id, yes, client_auth):
             nb_id_resolved = await resolve_notebook_id(client, nb_id)
             source = await _resolve_source_by_exact_title(client, nb_id_resolved, title)
 
-            if not yes and not click.confirm(f"Delete source '{source.title}' ({source.id})?"):
+            if not yes and not click.confirm(
+                f"Delete source '{source.title}' ({source.id})?"
+            ):
                 return
 
             success = await client.sources.delete(nb_id_resolved, source.id)
@@ -509,7 +525,9 @@ def source_add_drive(ctx, file_id, title, notebook_id, mime_type, client_auth):
         async with NotebookLMClient(client_auth) as client:
             nb_id_resolved = await resolve_notebook_id(client, nb_id)
             with console.status("Adding Drive source..."):
-                src = await client.sources.add_drive(nb_id_resolved, file_id, title, mime)
+                src = await client.sources.add_drive(
+                    nb_id_resolved, file_id, title, mime
+                )
 
             console.print(f"[green]Added Drive source:[/green] {src.id}")
             console.print(f"[bold]Title:[/bold] {src.title}")
@@ -564,8 +582,12 @@ def source_add_research(
     async def _run():
         async with NotebookLMClient(client_auth) as client:
             nb_id_resolved = await resolve_notebook_id(client, nb_id)
-            console.print(f"[yellow]Starting {mode} research on {search_source}...[/yellow]")
-            result = await client.research.start(nb_id_resolved, query, search_source, mode)
+            console.print(
+                f"[yellow]Starting {mode} research on {search_source}...[/yellow]"
+            )
+            result = await client.research.start(
+                nb_id_resolved, query, search_source, mode
+            )
             if not result:
                 console.print("[red]Research failed to start[/red]")
                 raise SystemExit(1)
@@ -609,7 +631,9 @@ def source_add_research(
                     )
                     console.print(f"[green]Imported {len(imported)} sources[/green]")
             else:
-                console.print(f"[yellow]Status: {status.get('status', 'unknown')}[/yellow]")
+                console.print(
+                    f"[yellow]Status: {status.get('status', 'unknown')}[/yellow]"
+                )
 
     return _run()
 
@@ -648,7 +672,9 @@ def source_fulltext(ctx, source_id, notebook_id, json_output, output, client_aut
             resolved_id = await resolve_source_id(client, nb_id_resolved, source_id)
 
             with console.status("Fetching fulltext content..."):
-                fulltext = await client.sources.get_fulltext(nb_id_resolved, resolved_id)
+                fulltext = await client.sources.get_fulltext(
+                    nb_id_resolved, resolved_id
+                )
 
             if json_output:
                 from dataclasses import asdict
@@ -658,7 +684,9 @@ def source_fulltext(ctx, source_id, notebook_id, json_output, output, client_aut
 
             if output:
                 Path(output).write_text(fulltext.content, encoding="utf-8")
-                console.print(f"[green]Saved {fulltext.char_count} chars to {output}[/green]")
+                console.print(
+                    f"[green]Saved {fulltext.char_count} chars to {output}[/green]"
+                )
                 return
 
             console.print(f"[bold cyan]Source:[/bold cyan] {fulltext.source_id}")
@@ -881,7 +909,9 @@ def source_wait(ctx, source_id, notebook_id, timeout, json_output, client_auth):
                     }
                     json_output_response(data)
                 else:
-                    console.print(f"[red]✗ Source processing failed:[/red] {e.source_id}")
+                    console.print(
+                        f"[red]✗ Source processing failed:[/red] {e.source_id}"
+                    )
                 raise SystemExit(1) from None
 
             except SourceTimeoutError as e:
@@ -895,7 +925,9 @@ def source_wait(ctx, source_id, notebook_id, timeout, json_output, client_auth):
                     }
                     json_output_response(data)
                 else:
-                    console.print(f"[yellow]⚠ Timeout waiting for source:[/yellow] {e.source_id}")
+                    console.print(
+                        f"[yellow]⚠ Timeout waiting for source:[/yellow] {e.source_id}"
+                    )
                     console.print(f"[dim]Last status: {e.last_status}[/dim]")
                 raise SystemExit(2) from None
 

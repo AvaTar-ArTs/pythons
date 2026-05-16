@@ -153,15 +153,17 @@ class ChatAPI:
                 original_error=e,
             ) from e
         except httpx.HTTPStatusError as e:
-            raise ChatError(f"Chat request failed with HTTP {e.response.status_code}: {e}") from e
+            raise ChatError(
+                f"Chat request failed with HTTP {e.response.status_code}: {e}"
+            ) from e
         except httpx.RequestError as e:
             raise NetworkError(
                 f"Chat request failed: {e}",
                 original_error=e,
             ) from e
 
-        answer_text, references, server_conv_id = self._parse_ask_response_with_references(
-            response.text
+        answer_text, references, server_conv_id = (
+            self._parse_ask_response_with_references(response.text)
         )
         # Prefer the conversation ID returned by the server over our locally generated UUID,
         # so that get_conversation_id() and get_conversation_turns() stay in sync.
@@ -171,7 +173,9 @@ class ChatAPI:
         turns = self._core.get_cached_conversation(conversation_id)
         if answer_text:
             turn_number = len(turns) + 1
-            self._core.cache_conversation_turn(conversation_id, question, answer_text, turn_number)
+            self._core.cache_conversation_turn(
+                conversation_id, question, answer_text, turn_number
+            )
         else:
             turn_number = len(turns)
 
@@ -262,15 +266,23 @@ class ChatAPI:
             List of (question, answer) pairs, oldest-first.
             Returns an empty list if no conversations exist.
         """
-        logger.debug("Getting conversation history for notebook %s (limit=%d)", notebook_id, limit)
+        logger.debug(
+            "Getting conversation history for notebook %s (limit=%d)",
+            notebook_id,
+            limit,
+        )
         conv_id = conversation_id or await self.get_conversation_id(notebook_id)
         if not conv_id:
             return []
 
         try:
-            turns_data = await self.get_conversation_turns(notebook_id, conv_id, limit=limit)
+            turns_data = await self.get_conversation_turns(
+                notebook_id, conv_id, limit=limit
+            )
         except (ChatError, NetworkError) as e:
-            logger.warning("Failed to fetch conversation turns for %s: %s", notebook_id, e)
+            logger.warning(
+                "Failed to fetch conversation turns for %s: %s", notebook_id, e
+            )
             return []
         # API returns individual turns newest-first: [A2, Q2, A1, Q1, ...]
         # Reverse to chronological order [Q1, A1, Q2, A2, ...] so the
@@ -313,7 +325,11 @@ class ChatAPI:
                 # Look for the answer immediately following
                 if i + 1 < len(turns):
                     next_turn = turns[i + 1]
-                    if isinstance(next_turn, list) and len(next_turn) > 4 and next_turn[2] == 2:
+                    if (
+                        isinstance(next_turn, list)
+                        and len(next_turn) > 4
+                        and next_turn[2] == 2
+                    ):
                         try:
                             a = str(next_turn[4][0][0] or "")
                         except (IndexError, TypeError):
@@ -382,7 +398,9 @@ class ChatAPI:
         if goal == ChatGoal.CUSTOM and not custom_prompt:
             raise ValidationError("custom_prompt is required when goal is CUSTOM")
 
-        goal_array = [goal.value, custom_prompt] if goal == ChatGoal.CUSTOM else [goal.value]
+        goal_array = (
+            [goal.value, custom_prompt] if goal == ChatGoal.CUSTOM else [goal.value]
+        )
 
         chat_settings = [goal_array, [response_length.value]]
         params = [
@@ -409,7 +427,11 @@ class ChatAPI:
 
         mode_configs = {
             ChatMode.DEFAULT: (ChatGoal.DEFAULT, ChatResponseLength.DEFAULT, None),
-            ChatMode.LEARNING_GUIDE: (ChatGoal.LEARNING_GUIDE, ChatResponseLength.LONGER, None),
+            ChatMode.LEARNING_GUIDE: (
+                ChatGoal.LEARNING_GUIDE,
+                ChatResponseLength.LONGER,
+                None,
+            ),
             ChatMode.CONCISE: (ChatGoal.DEFAULT, ChatResponseLength.SHORTER, None),
             ChatMode.DETAILED: (ChatGoal.DEFAULT, ChatResponseLength.LONGER, None),
         }
@@ -455,7 +477,9 @@ class ChatAPI:
         def process_chunk(json_str: str) -> None:
             """Process a JSON chunk, updating best answers and all_references."""
             nonlocal best_marked_answer, best_unmarked_answer, server_conv_id
-            text, is_answer, refs, conv_id = self._extract_answer_and_refs_from_chunk(json_str)
+            text, is_answer, refs, conv_id = self._extract_answer_and_refs_from_chunk(
+                json_str
+            )
             if text:
                 if is_answer and len(text) > len(best_marked_answer):
                     best_marked_answer = text
@@ -694,7 +718,9 @@ class ChatAPI:
             chunk_id=chunk_id,
         )
 
-    def _extract_text_passages(self, cite_inner: list) -> tuple[str | None, int | None, int | None]:
+    def _extract_text_passages(
+        self, cite_inner: list
+    ) -> tuple[str | None, int | None, int | None]:
         """Extract cited text and character positions from citation data.
 
         Structure (discovered via analysis):

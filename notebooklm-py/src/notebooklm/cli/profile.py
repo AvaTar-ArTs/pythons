@@ -56,7 +56,9 @@ def list_cmd(json_output):
         if json_output:
             json_output_response({"profiles": [], "active": active})
             return
-        console.print("[yellow]No profiles found. Run 'notebooklm login' to create one.[/yellow]")
+        console.print(
+            "[yellow]No profiles found. Run 'notebooklm login' to create one.[/yellow]"
+        )
         return
 
     profile_data = []
@@ -85,7 +87,9 @@ def list_cmd(json_output):
     for p in profile_data:
         marker = "[green]*[/green]" if p["active"] else ""
         auth_status = (
-            "[green]authenticated[/green]" if p["authenticated"] else "[dim]not authenticated[/dim]"
+            "[green]authenticated[/green]"
+            if p["authenticated"]
+            else "[dim]not authenticated[/dim]"
         )
         table.add_row(marker, str(p["name"]), auth_status)
 
@@ -241,7 +245,9 @@ def rename_cmd(old_name, new_name):
                 encoding="utf-8",
             )
             config_path.chmod(0o600)
-            console.print(f"[dim]Updated default profile in config: {old_name} → {new_name}[/dim]")
+            console.print(
+                f"[dim]Updated default profile in config: {old_name} → {new_name}[/dim]"
+            )
     except (json.JSONDecodeError, OSError) as e:
         console.print(
             f"[yellow]Warning: profile renamed but config.json update failed: {e}[/yellow]\n"

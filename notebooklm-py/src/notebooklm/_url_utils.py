@@ -23,7 +23,9 @@ def is_youtube_url(url: str) -> bool:
     try:
         hostname = (urlparse(url).hostname or "").lower()
         return (
-            hostname == "youtube.com" or hostname.endswith(".youtube.com") or hostname == "youtu.be"
+            hostname == "youtube.com"
+            or hostname.endswith(".youtube.com")
+            or hostname == "youtu.be"
         )
     except (AttributeError, TypeError, ValueError):
         return False
@@ -43,7 +45,9 @@ def is_google_auth_redirect(url: str) -> bool:
     """
     try:
         hostname = (urlparse(url).hostname or "").lower()
-        return hostname == "accounts.google.com" or hostname.endswith(".accounts.google.com")
+        return hostname == "accounts.google.com" or hostname.endswith(
+            ".accounts.google.com"
+        )
     except (AttributeError, TypeError, ValueError):
         return False
 

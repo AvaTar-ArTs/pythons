@@ -404,8 +404,12 @@ class SourceTimeoutError(SourceError):
         self.source_id = source_id
         self.timeout = timeout
         self.last_status = last_status
-        status_info = f" (last status: {last_status})" if last_status is not None else ""
-        super().__init__(f"Source {source_id} not ready after {timeout:.1f}s{status_info}")
+        status_info = (
+            f" (last status: {last_status})" if last_status is not None else ""
+        )
+        super().__init__(
+            f"Source {source_id} not ready after {timeout:.1f}s{status_info}"
+        )
 
 
 # =============================================================================
