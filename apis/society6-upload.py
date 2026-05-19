@@ -9,8 +9,8 @@ driver.get("https://www.society6.com/login")
 
 # Log in to Society6
 # Note: Replace 'your_username' and 'your_password' with your actual login credentials
-driver.find_element_by_id("sjchaplinski@gmail.com").send_keys("sjchaplinski@gmail.com")
-driver.find_element_by_id("Zhil*0IPLma#").send_keys("Zhil*0IPLma#")
+driver.find_element_by_id("your_username").send_keys("your_username")
+driver.find_element_by_id("your_password").send_keys("your-password")
 driver.find_element_by_id("login-button").click()
 time.sleep(5)  # Wait for the login process to complete
 
