@@ -1,0 +1,9 @@
+"""
+Summary of config.py
+
+This module is part of the AVATARARTS ecosystem.
+For more information about the AVATARARTS project, see the main documentation.
+"""
+
+assemblyai = "90ffeea3a8074df8911d0f4f99a269d5"
+pexelKey = "563492ad6f917000010000014fd7bc93cefd4e2d8b85f93b6a236b65"

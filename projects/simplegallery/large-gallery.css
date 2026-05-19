@@ -1,0 +1,210 @@
+/**
+ * SimpleGallery 2.1 - Large Gallery Styles
+ * Optimized for galleries with 2,500+ images
+ */
+
+/* Search Bar */
+.search-bar-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.search-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-stats {
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+/* Album Selector */
+.album-selector-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.album-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content: center;
+}
+
+.album-tab {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.album-tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.album-tab.active {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+}
+
+/* Gallery Stats */
+.gallery-stats {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
+.loading-indicator .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3em;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-right-color: white;
+}
+
+/* Load More Button */
+#loadMoreBtn {
+    margin: 30px 0;
+    padding: 15px 40px;
+    font-size: 16px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#loadMoreBtn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Pagination Info */
+.pagination-info {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+/* Gallery Grid Optimizations */
+#gallery-grid {
+    min-height: 400px;
+}
+
+#gallery-grid .gallery-photo {
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Lazy Loading Placeholder */
+.thumbnail[data-src] {
+    background: rgba(255, 255, 255, 0.1);
+    min-height: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-controls {
+        flex-direction: column;
+    }
+    
+    .search-stats {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .album-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .album-tab {
+        flex-shrink: 0;
+    }
+}
+
+/* Performance Optimizations */
+.gallery-photo {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading States */
+.gallery-photo.loading {
+    opacity: 0.5;
+}
+
+.gallery-photo.loaded {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+

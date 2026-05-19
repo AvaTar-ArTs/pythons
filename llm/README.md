@@ -1,0 +1,34 @@
+# Ai Tools Scripts
+
+- `ai_tools_4_bit_LLM_Quantization_with_GPTQ.py` – Auto-categorized script
+- `ai_tools_Fine_tune_LLMs_with_Axolotl.py` – Auto-categorized script
+- `ai_tools_chatgpt-conversation-exporter.py` – Auto-categorized script
+- `ai_tools_chatgpt.py` – Auto-categorized script
+- `ai_tools_gpt-script-categorizer.py` – Auto-categorized script
+- `ai_tools_gpt-vision-image-analyzer.py` – Auto-categorized script
+- `ai_tools_gpt-vision-image-describer.py` – Auto-categorized script
+- `ai_tools_lora_embeddings.py` – Auto-categorized script
+- `ai_tools_multi-llm-orchestrator.py` – Auto-categorized script
+- `ai_tools_openai-batch-image-seo-pipeline.py` – Auto-categorized script
+- `ai_tools_openai-content-analyzer.py` – Auto-categorized script
+- `ai_tools_openai-content-creation-nocturne.py` – Auto-categorized script
+- `ai_tools_openai-csv-metadata-filler.py` – Auto-categorized script
+- `ai_tools_openai-download.py` – Auto-categorized script
+- `ai_tools_openai-generate.py` – Auto-categorized script
+- `ai_tools_openai-gpt4o-image-metadata.py` – Auto-categorized script
+- `ai_tools_openai-image-enrichment.py` – Auto-categorized script
+- `ai_tools_openai-image-generater.py` – Auto-categorized script
+- `ai_tools_openai-media-processing-image.py` – Auto-categorized script
+- `ai_tools_openai-missingapikeyerror.py` – Auto-categorized script
+- `ai_tools_openai-script.py` – Auto-categorized script
+- `ai_tools_openai-song-lyrics-analyzer.py` – Auto-categorized script
+- `ai_tools_openai-text-generator.py` – Auto-categorized script
+- `ai_tools_openai-text-to-speech.py` – Auto-categorized script
+- `ai_tools_openai-vision-image-reader.py` – Auto-categorized script
+- `ai_tools_openai-wikipedia-data-downloader.py` – Auto-categorized script
+- `ai_tools_test_embeddings_lr.py` – Auto-categorized script
+- `ai_tools_test_process_reward_model_smollm2.py` – Auto-categorized script
+- `ai_tools_test_reward_model_smollm2.py` – Auto-categorized script
+- `ai_tools_vllm.py` – Auto-categorized script
+- `ai_tools_vllm_serve.py` – Auto-categorized script
+- `ai_tools_ygpt-utils-textgenerator.py` – Auto-categorized script

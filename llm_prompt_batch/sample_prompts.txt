@@ -1,0 +1,2 @@
+Say hello in one sentence.
+Summarize the benefits of a CLI tool in two bullet points.

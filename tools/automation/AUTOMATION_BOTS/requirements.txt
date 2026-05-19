@@ -1,0 +1,7 @@
+beautifulsoup4
+Pillow
+moviepy
+configparser
+requests
+selenium
+urllib3

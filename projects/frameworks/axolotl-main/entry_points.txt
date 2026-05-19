@@ -1,0 +1,3 @@
+[console_scripts]
+pythons-sort = pythons_sort:main
+pythons_sort = pythons_sort:main

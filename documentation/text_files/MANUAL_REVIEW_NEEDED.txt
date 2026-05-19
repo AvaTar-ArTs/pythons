@@ -1,0 +1,371 @@
+======================================================================
+📋 FILES NEEDING MANUAL REVIEW
+======================================================================
+
+Total: 73 files
+
+• audio-thinketh.py
+  Root:      /Users/steven/pythons/audio-thinketh.py
+  Organized: /Users/steven/pythons/audio_generation/audio-thinketh.py
+  Reason:    Moderate change: Root 147 vs Org 190
+
+• analyze-mp3-transcript-prompts.py
+  Root:      /Users/steven/pythons/analyze-mp3-transcript-prompts.py
+  Organized: /Users/steven/pythons/audio_generation/analyze-mp3-transcript-prompts.py
+  Reason:    Moderate change: Root 498 vs Org 342
+
+• typography.py
+  Root:      /Users/steven/pythons/typography.py
+  Organized: /Users/steven/pythons/utilities/typography.py
+  Reason:    Moderate change: Root 370 vs Org 357
+
+• refresolver-v1.py
+  Root:      /Users/steven/pythons/refresolver-v1.py
+  Organized: /Users/steven/pythons/utilities/refresolver-v1.py
+  Reason:    Moderate change: Root 186 vs Org 168
+
+• api-key-inventory.py
+  Root:      /Users/steven/pythons/api-key-inventory.py
+  Organized: /Users/steven/pythons/utilities/api-key-inventory.py
+  Reason:    Moderate change: Root 344 vs Org 443
+
+• project-consolidator.py
+  Root:      /Users/steven/pythons/project-consolidator.py
+  Organized: /Users/steven/pythons/utilities/project-consolidator.py
+  Reason:    Moderate change: Root 267 vs Org 289
+
+• contacts.py
+  Root:      /Users/steven/pythons/contacts.py
+  Organized: /Users/steven/pythons/Python/contacts.py
+  Reason:    Moderate change: Root 63 vs Org 49
+
+• automation-discovery-engine.py
+  Root:      /Users/steven/pythons/automation-discovery-engine.py
+  Organized: /Users/steven/pythons/utilities/automation-discovery-engine.py
+  Reason:    Moderate change: Root 545 vs Org 593
+
+• analyze_home_directory.py
+  Root:      /Users/steven/pythons/analyze_home_directory.py
+  Organized: /Users/steven/pythons/utilities/analyze_home_directory.py
+  Reason:    Moderate change: Root 379 vs Org 460
+
+• adaptive-content-awareness.py
+  Root:      /Users/steven/pythons/adaptive-content-awareness.py
+  Organized: /Users/steven/pythons/utilities/adaptive-content-awareness.py
+  Reason:    Moderate change: Root 723 vs Org 712
+
+• generate-rich-docs.py
+  Root:      /Users/steven/pythons/generate-rich-docs.py
+  Organized: /Users/steven/pythons/documentation/generate-rich-docs.py
+  Reason:    Moderate change: Root 741 vs Org 839
+
+• snoopplugins.py
+  Root:      /Users/steven/pythons/snoopplugins.py
+  Organized: /Users/steven/pythons/utilities/snoopplugins.py
+  Reason:    Moderate change: Root 563 vs Org 644
+
+• pip-installer-bootstrap.py
+  Root:      /Users/steven/pythons/pip-installer-bootstrap.py
+  Organized: /Users/steven/pythons/utilities/pip-installer-bootstrap.py
+  Reason:    Moderate change: Root 33354 vs Org 33328
+
+• clientUI.py
+  Root:      /Users/steven/pythons/clientUI.py
+  Organized: /Users/steven/pythons/Instagram-Bot/TikTok-Compilation-Video-Generator/TikTok Client/clientUI.py
+  Reason:    Moderate change: Root 901 vs Org 868
+
+• advanced-content-pipeline.py
+  Root:      /Users/steven/pythons/advanced-content-pipeline.py
+  Organized: /Users/steven/pythons/utilities/advanced-content-pipeline.py
+  Reason:    Moderate change: Root 361 vs Org 433
+
+• consolidation.py
+  Root:      /Users/steven/pythons/consolidation.py
+  Organized: /Users/steven/pythons/utilities/consolidation.py
+  Reason:    Moderate change: Root 428 vs Org 451
+
+• quantumforgelabs.py
+  Root:      /Users/steven/pythons/quantumforgelabs.py
+  Organized: /Users/steven/pythons/utilities/quantumforgelabs.py
+  Reason:    Moderate change: Root 364 vs Org 353
+
+• ANALYZE_FOLDER_DEPTHS.py
+  Root:      /Users/steven/pythons/ANALYZE_FOLDER_DEPTHS.py
+  Organized: /Users/steven/pythons/utilities/ANALYZE_FOLDER_DEPTHS.py
+  Reason:    Moderate change: Root 186 vs Org 205
+
+• multi.py
+  Root:      /Users/steven/pythons/multi.py
+  Organized: /Users/steven/pythons/utilities/multi.py
+  Reason:    Moderate change: Root 625 vs Org 671
+
+• emoji-morph-animation.py
+  Root:      /Users/steven/pythons/emoji-morph-animation.py
+  Organized: /Users/steven/pythons/utilities/emoji-morph-animation.py
+  Reason:    Moderate change: Root 350 vs Org 360
+
+• render-text.py
+  Root:      /Users/steven/pythons/render-text.py
+  Organized: /Users/steven/pythons/utilities/render-text.py
+  Reason:    Moderate change: Root 400 vs Org 413
+
+• emotional.py
+  Root:      /Users/steven/pythons/emotional.py
+  Organized: /Users/steven/pythons/utilities/emotional.py
+  Reason:    Moderate change: Root 265 vs Org 294
+
+• dualdomainstrategy-v1.py
+  Root:      /Users/steven/pythons/dualdomainstrategy-v1.py
+  Organized: /Users/steven/pythons/utilities/dualdomainstrategy-v1.py
+  Reason:    Moderate change: Root 872 vs Org 883
+
+• advanced_batch_volume_analyzer.py
+  Root:      /Users/steven/pythons/advanced_batch_volume_analyzer.py
+  Organized: /Users/steven/pythons/utilities/advanced_batch_volume_analyzer.py
+  Reason:    Moderate change: Root 628 vs Org 791
+
+• deep_multi_volume_analyzer.py
+  Root:      /Users/steven/pythons/deep_multi_volume_analyzer.py
+  Organized: /Users/steven/pythons/utilities/deep_multi_volume_analyzer.py
+  Reason:    Moderate change: Root 905 vs Org 1021
+
+• ai-deep-analyzer.py
+  Root:      /Users/steven/pythons/ai-deep-analyzer.py
+  Organized: /Users/steven/pythons/social_media/ai-deep-analyzer.py
+  Reason:    Moderate change: Root 571 vs Org 474
+
+• csv-file-lister.py
+  Root:      /Users/steven/pythons/csv-file-lister.py
+  Organized: /Users/steven/pythons/data_processing/csv-file-lister.py
+  Reason:    Moderate change: Root 105 vs Org 120
+
+• get-file.py
+  Root:      /Users/steven/pythons/get-file.py
+  Organized: /Users/steven/pythons/utilities/get-file.py
+  Reason:    Moderate change: Root 145 vs Org 155
+
+• prepare-missing-song-folders.py
+  Root:      /Users/steven/pythons/prepare-missing-song-folders.py
+  Organized: /Users/steven/pythons/utilities/prepare-missing-song-folders.py
+  Reason:    Moderate change: Root 407 vs Org 451
+
+• thinketh-tts-asmr.py
+  Root:      /Users/steven/pythons/thinketh-tts-asmr.py
+  Organized: /Users/steven/pythons/audio_generation/thinketh-tts-asmr.py
+  Reason:    Moderate change: Root 105 vs Org 138
+
+• scriptwrapper.py
+  Root:      /Users/steven/pythons/scriptwrapper.py
+  Organized: /Users/steven/pythons/audio_video_conversion/scriptwrapper.py
+  Reason:    Moderate change: Root 275 vs Org 287
+
+• synthesize.py
+  Root:      /Users/steven/pythons/synthesize.py
+  Organized: /Users/steven/pythons/utilities/synthesize.py
+  Reason:    Moderate change: Root 469 vs Org 514
+
+• scripty.py
+  Root:      /Users/steven/pythons/scripty.py
+  Organized: /Users/steven/pythons/utilities/scripty.py
+  Reason:    Moderate change: Root 515 vs Org 546
+
+• diagnose.py
+  Root:      /Users/steven/pythons/diagnose.py
+  Organized: /Users/steven/pythons/.ARCHIVE/venv_backup/.venv/lib/python3.11/site-packages/setuptools/_vendor/importlib_metadata/diagnose.py
+  Reason:    Moderate change: Root 262 vs Org 243
+
+• alchemy-quiz.py
+  Root:      /Users/steven/pythons/alchemy-quiz.py
+  Organized: /Users/steven/pythons/utilities/alchemy-quiz.py
+  Reason:    Moderate change: Root 160 vs Org 183
+
+• thinketh-tts-scripty.py
+  Root:      /Users/steven/pythons/thinketh-tts-scripty.py
+  Organized: /Users/steven/pythons/audio_generation/thinketh-tts-scripty.py
+  Reason:    Moderate change: Root 150 vs Org 184
+
+• create-sphinx-docs.py
+  Root:      /Users/steven/pythons/create-sphinx-docs.py
+  Organized: /Users/steven/pythons/documentation/create-sphinx-docs.py
+  Reason:    Moderate change: Root 680 vs Org 723
+
+• business-intelligence.py
+  Root:      /Users/steven/pythons/business-intelligence.py
+  Organized: /Users/steven/pythons/utilities/business-intelligence.py
+  Reason:    Moderate change: Root 278 vs Org 315
+
+• reddit-tts-video-maker.py
+  Root:      /Users/steven/pythons/reddit-tts-video-maker.py
+  Organized: /Users/steven/pythons/audio_generation/reddit-tts-video-maker.py
+  Reason:    Moderate change: Root 149 vs Org 166
+
+• snoopbanner.py
+  Root:      /Users/steven/pythons/snoopbanner.py
+  Organized: /Users/steven/pythons/utilities/snoopbanner.py
+  Reason:    Moderate change: Root 427 vs Org 402
+
+• playlist.py
+  Root:      /Users/steven/pythons/playlist.py
+  Organized: /Users/steven/pythons/audio_video_conversion/playlist.py
+  Reason:    Moderate change: Root 213 vs Org 227
+
+• thinketh-tts-adaptive.py
+  Root:      /Users/steven/pythons/thinketh-tts-adaptive.py
+  Organized: /Users/steven/pythons/audio_generation/thinketh-tts-adaptive.py
+  Reason:    Moderate change: Root 125 vs Org 165
+
+• analyze_directories.py
+  Root:      /Users/steven/pythons/analyze_directories.py
+  Organized: /Users/steven/pythons/utilities/analyze_directories.py
+  Reason:    Moderate change: Root 163 vs Org 125
+
+• speech-transcription-mp3-wav.py
+  Root:      /Users/steven/pythons/speech-transcription-mp3-wav.py
+  Organized: /Users/steven/pythons/audio_generation/speech-transcription-mp3-wav.py
+  Reason:    Moderate change: Root 121 vs Org 156
+
+• deep-music-directory-analyzer.py
+  Root:      /Users/steven/pythons/deep-music-directory-analyzer.py
+  Organized: /Users/steven/pythons/audio_generation/deep-music-directory-analyzer.py
+  Reason:    Moderate change: Root 606 vs Org 726
+
+• utils-1.py
+  Root:      /Users/steven/pythons/utils-1.py
+  Organized: /Users/steven/pythons/utilities/utils-1.py
+  Reason:    Moderate change: Root 182 vs Org 168
+
+• audiobook-producer.py
+  Root:      /Users/steven/pythons/audiobook-producer.py
+  Organized: /Users/steven/pythons/audio_generation/audiobook-producer.py
+  Reason:    Moderate change: Root 348 vs Org 386
+
+• merge-external-docs.py
+  Root:      /Users/steven/pythons/merge-external-docs.py
+  Organized: /Users/steven/pythons/documentation/merge-external-docs.py
+  Reason:    Moderate change: Root 314 vs Org 357
+
+• merge-moonlight-and-misc.py
+  Root:      /Users/steven/pythons/merge-moonlight-and-misc.py
+  Organized: /Users/steven/pythons/utilities/merge-moonlight-and-misc.py
+  Reason:    Moderate change: Root 267 vs Org 298
+
+• rich-theme.py
+  Root:      /Users/steven/pythons/rich-theme.py
+  Organized: /Users/steven/pythons/utilities/rich-theme.py
+  Reason:    Moderate change: Root 120 vs Org 133
+
+• analyze-transcribe-missing-audio.py
+  Root:      /Users/steven/pythons/analyze-transcribe-missing-audio.py
+  Organized: /Users/steven/pythons/audio_transcription/analyze-transcribe-missing-audio.py
+  Reason:    Moderate change: Root 275 vs Org 339
+
+• robust.py
+  Root:      /Users/steven/pythons/robust.py
+  Organized: /Users/steven/pythons/utilities/robust.py
+  Reason:    Moderate change: Root 920 vs Org 1064
+
+• walk-directories-recursive.py
+  Root:      /Users/steven/pythons/walk-directories-recursive.py
+  Organized: /Users/steven/pythons/utilities/walk-directories-recursive.py
+  Reason:    Moderate change: Root 219 vs Org 209
+
+• audio-transcription-pipeline.py
+  Root:      /Users/steven/pythons/audio-transcription-pipeline.py
+  Organized: /Users/steven/pythons/audio_generation/audio-transcription-pipeline.py
+  Reason:    Moderate change: Root 100 vs Org 136
+
+• comprehensive-music-content-scan.py
+  Root:      /Users/steven/pythons/comprehensive-music-content-scan.py
+  Organized: /Users/steven/pythons/audio_generation/comprehensive-music-content-scan.py
+  Reason:    Moderate change: Root 601 vs Org 754
+
+• workspace-optimizer.py
+  Root:      /Users/steven/pythons/workspace-optimizer.py
+  Organized: /Users/steven/pythons/utilities/workspace-optimizer.py
+  Reason:    Moderate change: Root 397 vs Org 470
+
+• domination-engine.py
+  Root:      /Users/steven/pythons/domination-engine.py
+  Organized: /Users/steven/pythons/utilities/domination-engine.py
+  Reason:    Moderate change: Root 797 vs Org 838
+
+• process-json.py
+  Root:      /Users/steven/pythons/process-json.py
+  Organized: /Users/steven/pythons/data_processing/process-json.py
+  Reason:    Moderate change: Root 796 vs Org 831
+
+• execute-consolidation.py
+  Root:      /Users/steven/pythons/execute-consolidation.py
+  Organized: /Users/steven/pythons/utilities/execute-consolidation.py
+  Reason:    Moderate change: Root 324 vs Org 368
+
+• podcast-studio.py
+  Root:      /Users/steven/pythons/podcast-studio.py
+  Organized: /Users/steven/pythons/code_analysis/podcast-studio.py
+  Reason:    Moderate change: Root 425 vs Org 454
+
+• simple.py
+  Root:      /Users/steven/pythons/simple.py
+  Organized: /Users/steven/pythons/utilities/simple.py
+  Reason:    Moderate change: Root 5 vs Org 45
+
+• context7_api_client.py
+  Root:      /Users/steven/pythons/context7_api_client.py
+  Organized: /Users/steven/pythons/utilities/context7_api_client.py
+  Reason:    Moderate change: Root 281 vs Org 336
+
+• find-portfolio-content.py
+  Root:      /Users/steven/pythons/find-portfolio-content.py
+  Organized: /Users/steven/pythons/utilities/find-portfolio-content.py
+  Reason:    Moderate change: Root 174 vs Org 198
+
+• ultra.py
+  Root:      /Users/steven/pythons/ultra.py
+  Organized: /Users/steven/pythons/utilities/ultra.py
+  Reason:    Moderate change: Root 1862 vs Org 2759
+
+• intelligent-docs-builder.py
+  Root:      /Users/steven/pythons/intelligent-docs-builder.py
+  Organized: /Users/steven/pythons/documentation/intelligent-docs-builder.py
+  Reason:    Moderate change: Root 370 vs Org 418
+
+• tehsites-complete.py
+  Root:      /Users/steven/pythons/tehsites-complete.py
+  Organized: /Users/steven/pythons/utilities/tehsites-complete.py
+  Reason:    Moderate change: Root 288 vs Org 300
+
+• editorhooks.py
+  Root:      /Users/steven/pythons/editorhooks.py
+  Organized: /Users/steven/pythons/utilities/editorhooks.py
+  Reason:    Moderate change: Root 137 vs Org 127
+
+• merge-files-intelligent.py
+  Root:      /Users/steven/pythons/merge-files-intelligent.py
+  Organized: /Users/steven/pythons/utilities/merge-files-intelligent.py
+  Reason:    Moderate change: Root 752 vs Org 906
+
+• batch_volume_analyzer.py
+  Root:      /Users/steven/pythons/batch_volume_analyzer.py
+  Organized: /Users/steven/pythons/utilities/batch_volume_analyzer.py
+  Reason:    Moderate change: Root 565 vs Org 618
+
+• other-simple.py
+  Root:      /Users/steven/pythons/other-simple.py
+  Organized: /Users/steven/pythons/utilities/other-simple.py
+  Reason:    Moderate change: Root 249 vs Org 238
+
+• undo-collection-and-merge.py
+  Root:      /Users/steven/pythons/undo-collection-and-merge.py
+  Organized: /Users/steven/pythons/utilities/undo-collection-and-merge.py
+  Reason:    Moderate change: Root 192 vs Org 219
+
+• intelligent-code-orchestrator.py
+  Root:      /Users/steven/pythons/intelligent-code-orchestrator.py
+  Organized: /Users/steven/pythons/code_analysis/intelligent-code-orchestrator.py
+  Reason:    Moderate change: Root 469 vs Org 604
+
+• revenue-engine.py
+  Root:      /Users/steven/pythons/revenue-engine.py
+  Organized: /Users/steven/pythons/utilities/revenue-engine.py
+  Reason:    Moderate change: Root 866 vs Org 911
+

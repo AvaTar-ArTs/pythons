@@ -1,0 +1,7 @@
+httplib2
+apiclient
+oauth2client
+moviepy
+scikit-image
+praw
+redvid
