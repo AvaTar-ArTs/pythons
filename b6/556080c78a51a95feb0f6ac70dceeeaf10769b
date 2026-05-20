@@ -1,0 +1,19 @@
+DESIGN.md
+  s_97b2c61602df23::t_ecc78ba67c39db 1-45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "b6556080c78a51a95feb0f6ac70dceeeaf10769b",
+  "prompts": {},
+  "sessions": {
+    "s_97b2c61602df23": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "39d2ae3d-71ab-4c77-8b71-904136dca4be",
+        "model": "gemini-3.1-flash-lite-preview"
+      },
+      "human_author": "steven <steven@newCho.local>"
+    }
+  }
+}
