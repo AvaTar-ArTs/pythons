@@ -1,0 +1,19 @@
+docs/UI_DESIGN_STRATEGY.md
+  s_97b2c61602df23::t_4aa225a99e59fc 1-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "e7e3fc9dca95474d3d32b0389e6693ca555ef336",
+  "prompts": {},
+  "sessions": {
+    "s_97b2c61602df23": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "39d2ae3d-71ab-4c77-8b71-904136dca4be",
+        "model": "gemini-3.1-flash-lite-preview"
+      },
+      "human_author": "steven <steven@newCho.local>"
+    }
+  }
+}
