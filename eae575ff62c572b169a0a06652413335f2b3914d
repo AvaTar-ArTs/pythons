@@ -1,0 +1,35 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.3",
+  "base_commit_sha": "eae575ff62c572b169a0a06652413335f2b3914d",
+  "prompts": {
+    "6965007c7df94cd7": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "bd64c2a3-8e94-4c7c-b7f6-71d7ff3ae0ea",
+        "model": "gemini-2.5-pro"
+      },
+      "human_author": "GPTJunkie <info@gptjunkie.com>",
+      "messages": [],
+      "total_additions": 1314,
+      "total_deletions": 463,
+      "accepted_lines": 851,
+      "overriden_lines": 0,
+      "messages_url": "https://usegitai.com/cas/348b08470f512b6edf3e33bbf415c8c096fbb713a5545a3fd91fe54f50e56a5f"
+    },
+    "aa4a19044bcef81f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d4b47ac8-c2a1-43d0-b0d8-81c5381216d5",
+        "model": "unknown"
+      },
+      "human_author": "GPTJunkie <info@gptjunkie.com>",
+      "messages": [],
+      "total_additions": 4210,
+      "total_deletions": 132,
+      "accepted_lines": 2110,
+      "overriden_lines": 9
+    }
+  }
+}

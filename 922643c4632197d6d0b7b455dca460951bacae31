@@ -1,0 +1,24 @@
+pyproject.toml
+  ef1fb6e22c5092c5 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.3",
+  "base_commit_sha": "922643c4632197d6d0b7b455dca460951bacae31",
+  "prompts": {
+    "ef1fb6e22c5092c5": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "f771fa9a-0759-403a-bc81-61a9678e2e0b",
+        "model": "gemini-2.5-pro"
+      },
+      "human_author": "GPTJunkie <info@gptjunkie.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0,
+      "messages_url": "https://usegitai.com/cas/59296cfaf9aa0e2ba7b8375fe716712998976a79f5ccdf073c2b64ea023af780"
+    }
+  }
+}

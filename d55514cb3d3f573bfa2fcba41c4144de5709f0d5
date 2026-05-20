@@ -1,0 +1,20 @@
+.gitignore
+  s_971d0a3f661fde::t_61c0af0493e5cb 1,5-12,18-21,30-38,42-49
+  s_971d0a3f661fde::t_047eba62aa0c63 22-24,39-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "d55514cb3d3f573bfa2fcba41c4144de5709f0d5",
+  "prompts": {},
+  "sessions": {
+    "s_971d0a3f661fde": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e10f7-925b-71b3-895f-036b714a9e7d",
+        "model": "gpt-5.4"
+      },
+      "human_author": "GPTJunkie <info@gptjunkie.com>"
+    }
+  }
+}
