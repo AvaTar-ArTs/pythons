@@ -131,7 +131,7 @@ class EnhancedAIRecipeGenerator:
             """)
 
             # Enhanced campaigns table
-            cursor.execute('\''
+            cursor.execute("""
                 CREATE TABLE IF NOT EXISTS campaigns (
                     id TEXT PRIMARY KEY,
                     name TEXT NOT NULL,
@@ -201,7 +201,7 @@ class EnhancedAIRecipeGenerator:
 
         self.last_api_call = time.time()
 
-    def generate_recipe(:
+    def generate_recipe(
         self,
         theme: str = None,
         category: str = None,
@@ -275,7 +275,7 @@ class EnhancedAIRecipeGenerator:
             logger.error(f"Recipe generation failed: {e}")
             return self._create_fallback_recipe(theme, category, difficulty, servings)
 
-    def _create_enhanced_prompt(:
+    def _create_enhanced_prompt(
         self, theme: str, category: str, difficulty: str, servings: int
     ) -> str:
         """Create an enhanced prompt for better recipe generation"""
@@ -334,7 +334,7 @@ Make sure the JSON is valid and complete.
             logger.error(f"Response content: {response[:500]}...")
             raise
 
-    def _create_fallback_recipe(:
+    def _create_fallback_recipe(
         self, theme: str, category: str, difficulty: str, servings: int
     ) -> Recipe:
         """Create a fallback recipe when AI generation fails"""
@@ -424,7 +424,7 @@ Make sure the JSON is valid and complete.
             return False
 
     def _load_seasonal_themes(self) -> Dict[str, List[str]]:
-        """Load seasonal themes with more variety'\''
+        """Load seasonal themes with more variety"""
         return {
             "January": [
                 "comfort food",

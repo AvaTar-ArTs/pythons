@@ -8,16 +8,16 @@ This module is part of the AVATARARTS ecosystem.
 For more information about the AVATARARTS project, see the main documentation.
 """
 
-from openai import OpenAI
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 import os
 import subprocess
 
 from dotenv import load_dotenv
+from openai import OpenAI
 
 # Load environment variables from .env
 load_dotenv()
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Directory paths
 VIDEO_DIR = "/Users/steven/Movies/Kath/Katheria_and_Salome_The_Daughters_of_Destinay-30m_compressed_segments"  # Directory containing MP4 files

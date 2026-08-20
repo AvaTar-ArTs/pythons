@@ -1,0 +1,626 @@
+{% import 'enhanced_gallery_macros.jinja' as gallery_macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="{{ gallery_config['title'] }}">
+    <meta property="og:description" content="{{ gallery_config['description'] }}">
+    <meta property="og:image" content="{{ gallery_config['url'] }}/images/photos/{{ background_photo }}">
+    <meta property="og:url" content="{{ gallery_config['url'] }}">
+    <meta property="og:site_name" content="{{ gallery_config['title'] }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="{{ gallery_config['title'] }}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="css/default-skin.css">
+    <link rel="stylesheet" href="css/enhanced-main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>{{ gallery_config['title'] }} - Enhanced Gallery</title>
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #64748b;
+            --accent-color: #f59e0b;
+            --background-dark: #0f172a;
+            --background-light: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --border-color: #334155;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .enhanced-header {
+            background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-light) 100%);
+            min-height: 60vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enhanced-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('{{ gallery_config['url'] }}/images/photos/{{ background_photo }}') center/cover;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .enhanced-header-content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem 0;
+        }
+
+        .gallery-stats {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .filter-controls {
+            background: var(--background-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .filter-group {
+            margin-bottom: 1rem;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .filter-select, .filter-input {
+            background: var(--background-dark);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            width: 100%;
+        }
+
+        .filter-select:focus, .filter-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .search-box input {
+            padding-left: 3rem;
+        }
+
+        .enhanced-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: var(--background-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px var(--shadow-color);
+            border-color: var(--primary-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .item-overlay {
+            opacity: 1;
+        }
+
+        .item-title {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .item-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .item-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .quality-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: var(--background-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .content-analysis {
+            background: var(--background-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .analysis-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .analysis-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .analysis-content {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .color-swatch {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+        }
+
+        .enhanced-navbar {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .floating-actions {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .floating-btn {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        .floating-btn:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            border: 3px solid var(--border-color);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .enhanced-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+            
+            .gallery-stats {
+                padding: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Enhanced Navigation -->
+    <nav class="navbar navbar-expand-lg enhanced-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">{{ gallery_config['title'] }}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stats">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Header -->
+    <section class="enhanced-header" id="home">
+        <div class="container">
+            <div class="enhanced-header-content text-center">
+                <h1 class="display-4 font-weight-bold text-white mb-4">{{ gallery_config['title'] }}</h1>
+                
+                <!-- Gallery Statistics -->
+                <div class="gallery-stats">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <span class="stat-number">{{ images|length }}</span>
+                                <span class="stat-label">Total Images</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <span class="stat-number">{{ images|selectattr('type', 'equalto', 'image')|list|length }}</span>
+                                <span class="stat-label">Photos</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <span class="stat-number">{{ images|selectattr('type', 'equalto', 'video')|list|length }}</span>
+                                <span class="stat-label">Videos</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-item">
+                                <span class="stat-number">{{ images|selectattr('content_analysis.faces_detected', 'equalto', true)|list|length }}</span>
+                                <span class="stat-label">With Faces</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="container" id="filters">
+        <div class="filter-controls">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="filter-group">
+                        <label class="filter-label">Search</label>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" class="filter-input" id="searchInput" placeholder="Search images...">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="filter-group">
+                        <label class="filter-label">Type</label>
+                        <select class="filter-select" id="typeFilter">
+                            <option value="">All Types</option>
+                            <option value="image">Photos</option>
+                            <option value="video">Videos</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="filter-group">
+                        <label class="filter-label">Quality</label>
+                        <select class="filter-select" id="qualityFilter">
+                            <option value="">All Quality</option>
+                            <option value="high">High (A-B)</option>
+                            <option value="medium">Medium (C)</option>
+                            <option value="low">Low (D)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="filter-group">
+                        <label class="filter-label">Faces</label>
+                        <select class="filter-select" id="faceFilter">
+                            <option value="">All Images</option>
+                            <option value="with-faces">With Faces</option>
+                            <option value="no-faces">No Faces</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="filter-group">
+                        <label class="filter-label">Sort By</label>
+                        <select class="filter-select" id="sortFilter">
+                            <option value="date-desc">Date (Newest)</option>
+                            <option value="date-asc">Date (Oldest)</option>
+                            <option value="quality-desc">Quality (Best)</option>
+                            <option value="quality-asc">Quality (Worst)</option>
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="filter-group">
+                        <label class="filter-label">&nbsp;</label>
+                        <button class="btn btn-primary" id="clearFilters" style="width: 100%;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Gallery -->
+    <section class="container" id="gallery">
+        <div class="loading-spinner" id="loadingSpinner">
+            <div class="spinner"></div>
+            <p>Loading images...</p>
+        </div>
+        
+        <div class="enhanced-gallery" id="galleryContainer">
+            {{ gallery_macros.enhanced_gallery_items(images) }}
+        </div>
+        
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No images found</h3>
+            <p>Try adjusting your search criteria or filters</p>
+        </div>
+    </section>
+
+    <!-- Content Analysis Section -->
+    <section class="container" id="stats">
+        <div class="content-analysis">
+            <h3 class="analysis-title">
+                <i class="fas fa-chart-bar"></i>
+                Gallery Analysis
+            </h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="analysis-section">
+                        <h5 class="analysis-title">
+                            <i class="fas fa-palette"></i>
+                            Color Distribution
+                        </h5>
+                        <div class="analysis-content">
+                            <p>Most common colors in your gallery:</p>
+                            <div class="color-palette" id="colorPalette">
+                                <!-- Color swatches will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="analysis-section">
+                        <h5 class="analysis-title">
+                            <i class="fas fa-camera"></i>
+                            Camera Information
+                        </h5>
+                        <div class="analysis-content">
+                            <p>Device and technical details:</p>
+                            <ul id="cameraInfo">
+                                <!-- Camera info will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <button class="floating-btn" id="scrollToTop" title="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button class="floating-btn" id="toggleFilters" title="Toggle Filters">
+            <i class="fas fa-filter"></i>
+        </button>
+        <button class="floating-btn" id="toggleView" title="Toggle View">
+            <i class="fas fa-th"></i>
+        </button>
+    </div>
+
+    <!-- PhotoSwipe Modal -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+    <script src="js/enhanced-main.js"></script>
+</body>
+</html>

@@ -70,7 +70,7 @@ class RevenueDashboard:
             cursor = conn.cursor()
 
             # Revenue goals table
-            cursor.execute('\''
+            cursor.execute("""
                 CREATE TABLE IF NOT EXISTS revenue_goals (
                     id TEXT PRIMARY KEY,
                     name TEXT NOT NULL,
@@ -117,7 +117,7 @@ class RevenueDashboard:
             logger.error(f"Database initialization failed: {e}")
             raise
 
-    def add_revenue_goal(:
+    def add_revenue_goal(
         self, name: str, target_amount: float, deadline: str, system: str
     ) -> str:
         """Add a new revenue goal"""
@@ -155,7 +155,7 @@ class RevenueDashboard:
             logger.error(f"Failed to add revenue goal: {e}")
             return None
 
-    def update_revenue(:
+    def update_revenue(
         self, system: str, amount: float, platform: str = "direct"
     ) -> bool:
         """Update revenue for a system"""
@@ -282,7 +282,7 @@ class RevenueDashboard:
             return {}
 
     def get_optimization_recommendations(self) -> List[Dict[str, Any]]:
-        """Get revenue optimization recommendations'\''
+        """Get revenue optimization recommendations"""
         recommendations = []
 
         try:

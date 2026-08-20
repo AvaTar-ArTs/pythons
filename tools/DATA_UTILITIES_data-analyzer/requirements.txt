@@ -1,0 +1,13 @@
+# Requirements for 07_data_analysis
+# Generated automatically by generate_requirements.py
+
+IPython
+ast
+mysql
+pip
+prompt_toolkit
+pygments
+pylint
+radon
+redis
+settings

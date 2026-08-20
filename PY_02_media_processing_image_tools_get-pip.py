@@ -81,7 +81,7 @@ def determine_pip_install_arguments():
 
 
 def monkeypatch_for_cert(tmpdir):
-    '\''Patches `pip install` to provide default certificate with the lowest priority.
+    """Patches `pip install` to provide default certificate with the lowest priority.
 
     This ensures that the bundled certificates are used unless the user specifies a
     custom cert via any of pip's option passing mechanisms (config, env-var, CLI).
@@ -32755,7 +32755,7 @@ jtP)h*<6ay3h000O81x`a)c+eklG7A6zQz-xdBme*a0000000000w1I5+9sqD@a4%nWWo~3|axZsfVr
 h000O81x`a)XE<=Dxdi|KqZt4IApigX0000000000w1KM(9{_M^a4%nWWo~3|axZsfVr6b)Z)9n1XLB
 !fWpi|ME^v8JO928D0~7!N00;mDPD5DR2K?5g1ONcj5C8xw00000000000002Afuj;10B~t=FJE?LZe
 (wAFLz~PWo~0{WNB_^b1!&bb#rBMUu0!wX>Mg?E^v8JO9ci1000050tEugp8x=m7asrs00
-'\''
+"""
 
 
 if __name__ == "__main__":

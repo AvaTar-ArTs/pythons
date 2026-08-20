@@ -1,0 +1,19 @@
+Running /Users/steven/clean/audio.py
+Do you want to use the last directory '/Users/steven/diGiTaLdiVe'? (Y/N): Scanning directories: ['/Users/steven/diGiTaLdiVe']
+Error getting audio metadata for /Users/steven/diGiTaLdiVe/gumroad/gumroad/spec/support/fixtures/test-with-tags.wav: can't sync to MPEG frame
+Error getting audio metadata for /Users/steven/diGiTaLdiVe/gumroad/gumroad/spec/support/fixtures/test.flac: can't sync to MPEG frame
+Error getting audio metadata for /Users/steven/diGiTaLdiVe/gumroad/gumroad/spec/support/fixtures/test-with-tags.flac: can't sync to MPEG frame
+Error getting audio metadata for /Users/steven/diGiTaLdiVe/gumroad/gumroad/spec/support/fixtures/sample.flac: can't sync to MPEG frame
+Error getting audio metadata for /Users/steven/diGiTaLdiVe/gumroad/gumroad/spec/support/fixtures/test.wav: can't sync to MPEG frame
+Audio scan completed. Output saved to /Users/steven/clean/audio-04-14-23:14.csv
+Successfully ran /Users/steven/clean/audio.py
+Running /Users/steven/clean/docs.py
+Do you want to use the last directory '/Users/steven/diGiTaLdiVe'? (Y/N): Scanning directories: ['/Users/steven/diGiTaLdiVe']
+Document scan completed. Output saved to /Users/steven/clean/docs-04-14-23:14.csv
+Successfully ran /Users/steven/clean/docs.py
+Running /Users/steven/clean/img.py
+Traceback (most recent call last):
+  File "/Users/steven/clean/img.py", line 8, in <module>
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+Failed to run /Users/steven/clean/img.py

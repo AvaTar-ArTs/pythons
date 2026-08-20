@@ -1,0 +1,1 @@
+/Users/steven/sora/story-tools/story-trans.py

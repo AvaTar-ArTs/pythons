@@ -115,7 +115,7 @@ class AIRecipeGenerator:
         """)
 
         # Create campaigns table
-        cursor.execute('\''
+        cursor.execute("""
             CREATE TABLE IF NOT EXISTS campaigns (
                 id TEXT PRIMARY KEY,
                 name TEXT NOT NULL,
@@ -166,7 +166,7 @@ class AIRecipeGenerator:
             self.openai_client = None
 
     def _load_seasonal_themes(self) -> Dict[str, List[str]]:
-        """Load seasonal content themes'\''
+        """Load seasonal content themes"""
         return {
             "january": [
                 "New Year healthy recipes",
@@ -249,7 +249,7 @@ class AIRecipeGenerator:
             },
         ]
 
-    def generate_recipe(:
+    def generate_recipe(
         self,
         theme: str = None,
         category: str = None,
@@ -446,7 +446,7 @@ class AIRecipeGenerator:
             logger.error(f"Failed to save recipe: {e}")
             return False
 
-    def generate_seasonal_campaign(:
+    def generate_seasonal_campaign(
         self, month: str, budget: float = 1000.0
     ) -> ContentCampaign:
         """Generate a seasonal content campaign"""
@@ -646,7 +646,7 @@ class AIRecipeGenerator:
 
     def generate_seo_content(self, recipe: Recipe) -> str:
         """Generate SEO-optimized content for a recipe"""
-        content = f'\''
+        content = f"""
 # {recipe.title}
 
 {recipe.description}
@@ -727,7 +727,7 @@ class AIRecipeGenerator:
 
 
 def main():
-    """Main function to demonstrate the AI Recipe Generator'\''
+    """Main function to demonstrate the AI Recipe Generator"""
     print("🍳 AI Recipe Generator - High-Engagement Content System")
     print("=" * 60)
     print("Path to $10K+ through SEO, affiliate marketing, and return visitors")

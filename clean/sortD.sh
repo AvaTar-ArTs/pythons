@@ -15,11 +15,11 @@ run_script() {
    
 # List of scripts to run
 scripts=(
-    "/Volumes/2T-Xx/clean/img.py"
-    "/Volumes/2T-Xx/clean/audio.py"
-    "/Volumes/2T-Xx/clean/docs.py"
-    "/Volumes/2T-Xx/clean/other.py"
-    "/Volumes/2T-Xx/clean/vids.py" 
+    "/Users/steven/clean/img.py"
+    "/Users/steven/clean/audio.py"
+    "/Users/steven/clean/docs.py"
+    "/Users/steven/clean/other.py"
+    "/Users/steven/clean/vids.py" 
 )
 
 

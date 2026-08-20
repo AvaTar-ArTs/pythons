@@ -1,0 +1,38 @@
+graph TD
+    subgraph H [Horizontal Layer - Tools/Workflow]
+        SP[~/.supremepower]
+        GM[~/.gemini]
+        RC[Runtime Contexts: Cline/Cursor/Qwen]
+    end
+
+    subgraph V [Vertical Layer - Product Stacks]
+        MS[~/my-supremepowers]
+        DT[DeepTutor Root]
+        MP[PYTHON_MARKETPLACE_MASTER]
+    end
+
+    subgraph L [Ledger/Documentation]
+        G[~/Guides]
+    end
+
+    SP -->|Loads Into| RC
+    GM -->|Configures| RC
+    MS -->|Developed With| SP
+    DT -->|Developed With| SP
+    G -.->|Documents| H
+    G -.->|Documents| V
+    MP -.->|Provides Upstream| V
+
+    subgraph F [Functional Taxonomy]
+        Retention[Retention]
+        Reflection[Reflection]
+        Automation[Automation]
+        Discovery[Discovery]
+    end
+
+    RC -.->|Powered by| Retention
+    RC -.->|Powered by| Reflection
+    RC -.->|Powered by| Automation
+    RC -.->|Powered by| Discovery
+
+    RC -->|Uses| CR[code-reviewer]

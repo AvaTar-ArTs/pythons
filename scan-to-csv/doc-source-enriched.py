@@ -23,7 +23,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from exclude_patterns import FULL_EXCLUDED_PATTERNS
+from exclude_patterns import DIR_EXCLUDES, FILE_EXCLUDES
+from scanner_utils import filter_excluded_dirs, is_path_excluded
 
 
 # Configuration
@@ -126,6 +127,12 @@ SUPERPOWERS_CATEGORIES = {
 }
 
 QUIET_MODE = False
+CONTENT_SAMPLE_BYTES = 64 * 1024
+GENERATED_OUTPUT_RE = re.compile(r"(?:.*-meta|enriched-.*)\.csv$", re.IGNORECASE)
+SENSITIVE_FILENAME_RE = re.compile(
+    r"(?:^\.env(?:\..*)?$|credentials?|secrets?|tokens?|passwords?|api[_-]?keys?|apikeys?)",
+    re.IGNORECASE,
+)
 
 
 def get_creation_date(filepath: str) -> str:
@@ -169,7 +176,7 @@ def calculate_content_hash(filepath: str) -> str:
         with open(filepath, "rb") as f:
             for byte_block in iter(lambda: f.read(4096), b""):
                 sha256_hash.update(byte_block)
-        return sha256_hash.hexdigest()[:16]  # First 16 chars
+        return sha256_hash.hexdigest()
     except Exception:
         return "unknown"
 
@@ -205,18 +212,18 @@ def detect_intelligent_category(filename: str, filepath: str, content: str = "")
     """
     # Check filename patterns
     filename_lower = filename.lower()
-    filepath_lower = filepath.lower()
+    path_parts = {part.lower() for part in Path(filepath).parts}
 
     # Path-based detection (highest confidence)
-    if "skill" in filepath_lower:
+    if path_parts.intersection({"skill", "skills"}):
         return ("skill", 0.95)
-    if "agent" in filepath_lower:
+    if path_parts.intersection({"agent", "agents"}):
         return ("agent", 0.95)
-    if "mcp-server" in filepath_lower or "mcp" in filepath_lower:
+    if path_parts.intersection({"mcp-server", "mcp"}):
         return ("mcp-tool", 0.90)
-    if "hook" in filepath_lower:
+    if path_parts.intersection({"hook", "hooks"}):
         return ("hook", 0.85)
-    if "command" in filepath_lower:
+    if path_parts.intersection({"command", "commands"}):
         return ("command", 0.85)
 
     # Filename-based detection
@@ -340,39 +347,65 @@ def get_skill_affinity(intelligent_category: str, concepts: list[str]) -> list[s
     return skill_map.get(intelligent_category, ["brainstorming"])
 
 
-def scan_and_enrich(directories: list[str]) -> list[dict[str, Any]]:
+def scan_and_enrich(
+    directories: list[str],
+    excluded_paths: set[str] | None = None,
+    include_sensitive: bool = False,
+) -> list[dict[str, Any]]:
     """Scan directories and enrich with metadata."""
     rows = []
     file_count = 0
+    excluded = {str(Path(path).expanduser().resolve()) for path in (excluded_paths or set())}
 
     for directory in directories:
-        if not QUIET_MODE:
-            print(f"📁 Scanning: {directory}")
+        directory_path = Path(directory).expanduser().resolve()
+        if not directory_path.is_dir():
+            raise ValueError(f"scan target is not a readable directory: {directory}")
 
-        for root, dirs, files in os.walk(directory):
-            dirs[:] = [
-                d for d in dirs
-                if not any(re.match(pattern, os.path.join(root, d)) for pattern in FULL_EXCLUDED_PATTERNS)
-            ]
+        if not QUIET_MODE:
+            print(f"📁 Scanning: {directory_path}")
+
+        for root, dirs, files in os.walk(directory_path):
+            filter_excluded_dirs(root, dirs, dir_patterns=DIR_EXCLUDES)
 
             for file in files:
                 file_path = os.path.join(root, file)
+                resolved_file_path = str(Path(file_path).resolve())
 
-                if any(re.match(pattern, file_path) for pattern in FULL_EXCLUDED_PATTERNS):
+                if (
+                    resolved_file_path in excluded
+                    or GENERATED_OUTPUT_RE.match(file)
+                    or is_path_excluded(file_path, file_patterns=FILE_EXCLUDES)
+                ):
                     continue
 
                 # Skip broken symlinks or files deleted mid-scan.
                 if not os.path.exists(file_path):
                     if not QUIET_MODE:
-                        print(f"⚠ Skipping missing path: {file_path}", file=sys.stderr)
+                        # v1: print(f"⚠ Skipping missing path: {file_path}", file=sys.stderr)
+                        # v2: distinguish a broken symlink (actionable — shows the dead
+                        # target so you can repoint/remove it) from a genuinely missing path.
+                        if os.path.islink(file_path):
+                            try:
+                                target = os.readlink(file_path)
+                            except OSError:
+                                target = "?"
+                            print(f"⚠ Broken symlink (skipped): {file_path} -> {target}", file=sys.stderr)
+                        else:
+                            print(f"⚠ Skipping missing path: {file_path}", file=sys.stderr)
                     continue
 
-                # Read file content for analysis
-                try:
-                    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-                        content = f.read()
-                except Exception:
-                    content = ""
+                sensitive_skipped = bool(SENSITIVE_FILENAME_RE.search(file)) and not include_sensitive
+                category = detect_category(file)
+
+                # Read only a bounded text sample for classification.
+                content = ""
+                if not sensitive_skipped:
+                    try:
+                        with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                            content = f.read(CONTENT_SAMPLE_BYTES)
+                    except (OSError, UnicodeError):
+                        content = ""
 
                 try:
                     file_size = os.path.getsize(file_path)
@@ -394,19 +427,24 @@ def scan_and_enrich(directories: list[str]) -> list[dict[str, Any]]:
 
                 # File type & classification
                 ext = Path(file).suffix.lower()
-                category = detect_category(file, content)
                 row.update({
                     "file_extension": ext,
                     "category": category,
                     "primary_type": category,
                     "mime_type": MIME_TYPES.get(category, "application/octet-stream"),
-                    "encoding": "utf-8",
+                    "encoding": "sensitive-skipped" if sensitive_skipped else (
+                        "binary" if category in ["image", "audio", "video", "archive", "pdf"] else "utf-8"
+                    ),
                 })
 
                 # Content analysis
-                content_hash = calculate_content_hash(file_path)
+                content_hash = "" if sensitive_skipped else calculate_content_hash(file_path)
                 lines = count_lines(file_path) if category in ["python", "javascript", "typescript", "markdown", "text"] else 0
-                intelligent_category, confidence = detect_intelligent_category(file, file_path, content)
+                try:
+                    relative_path = str(Path(file_path).relative_to(directory_path))
+                except ValueError:
+                    relative_path = file
+                intelligent_category, confidence = detect_intelligent_category(file, relative_path, content)
                 concepts = extract_concepts(content, 5)
 
                 row.update({
@@ -426,7 +464,7 @@ def scan_and_enrich(directories: list[str]) -> list[dict[str, Any]]:
                     "integration_potential": business_value > 0.6,
                     "integration_targets": "agents,skills,hooks,mcp-server" if business_value > 0.7 else "",
                     "estimated_effort": "low" if lines < 200 else ("medium" if lines < 500 else "high"),
-                    "maturity_level": "production" if confidence > 0.8 else ("beta" if confidence > 0.6 else "alpha"),
+                    "maturity_level": "unknown",
                     "roi_potential": round(business_value * 0.9, 2),
                 })
 
@@ -440,7 +478,7 @@ def scan_and_enrich(directories: list[str]) -> list[dict[str, Any]]:
                     "command_related": "activate-agents,list-skills" if business_value > 0.6 else "",
                     "dependencies": "",  # Would be populated by AST analysis
                     "dependents": "",    # Would be populated by reverse grep
-                    "agent_tier": "Tier-0-Canonical" if confidence > 0.9 else "Tier-1-Compatible",
+                    "agent_tier": "unclassified",
                 })
 
                 # Change tracking
@@ -448,17 +486,17 @@ def scan_and_enrich(directories: list[str]) -> list[dict[str, Any]]:
                     "last_modified": get_last_modified(file_path),
                     "modification_count": 0,  # Would come from git history
                     "moved_from": "",
-                    "status": "stable",
+                    "status": "unverified",
                     "last_scan_date": datetime.now().strftime("%m-%d-%y"),
                 })
 
                 # Quality metrics
                 row.update({
                     "documentation_score": 0.85 if "README" in file or "GUIDE" in file.upper() else 0.5,
-                    "test_coverage": 0.0,
-                    "code_standards": "unknown",  # Would come from linter
-                    "security_score": 0.85 if category not in ["python", "javascript"] else 0.7,
-                    "accessibility_score": 0.85 if category in ["markdown", "html"] else 0.0,
+                    "test_coverage": "",
+                    "code_standards": "",
+                    "security_score": "",
+                    "accessibility_score": "",
                 })
 
                 # Relationships & metadata
@@ -467,8 +505,9 @@ def scan_and_enrich(directories: list[str]) -> list[dict[str, Any]]:
                     "tags": "production" if confidence > 0.8 else "experimental",
                     "ownership": agent_affinity[0] if agent_affinity else "system-architect",
                     "last_reviewed": "",
-                    "review_status": "pending",
+                    "review_status": "unreviewed",
                 })
+                row["sensitive_skipped"] = sensitive_skipped
 
                 rows.append(row)
 
@@ -507,14 +546,20 @@ def write_enhanced_csv(output_path: str, rows: list[dict[str, Any]]) -> None:
         "documentation_score", "test_coverage", "code_standards", "security_score", "accessibility_score",
         # Relationships (H)
         "related_files", "tags", "ownership", "last_reviewed", "review_status",
+        "sensitive_skipped",
     ]
+
+    def sanitize_csv_cell(value: Any) -> Any:
+        if isinstance(value, str) and value[:1] in {"=", "+", "-", "@"}:
+            return "'" + value
+        return value
 
     try:
         with open(output_path, "w", newline="", encoding="utf-8") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=columns)
             writer.writeheader()
             for row in rows:
-                writer.writerow({col: row.get(col, "") for col in columns})
+                writer.writerow({col: sanitize_csv_cell(row.get(col, "")) for col in columns})
 
         if not QUIET_MODE:
             print(f"✓ Enhanced CSV written: {output_path}")
@@ -563,6 +608,11 @@ Examples:
         action="store_true",
         help="Suppress progress output"
     )
+    parser.add_argument(
+        "--include-sensitive",
+        action="store_true",
+        help="Include sensitive-looking filenames and content hashes (explicit opt-in)",
+    )
 
     args = parser.parse_args()
     QUIET_MODE = args.quiet
@@ -571,15 +621,27 @@ Examples:
         print("✗ Please provide at least one directory to scan", file=sys.stderr)
         sys.exit(1)
 
-    # Scan and enrich
-    rows = scan_and_enrich(args.directories)
-
     # Determine output path
     if args.output_path:
         output_path = args.output_path
     else:
         folder_name = os.path.basename(os.path.normpath(args.directories[0]))
-        output_path = os.path.join(args.directories[0], f"enriched-{folder_name}.csv")
+        output_path = os.path.join(os.getcwd(), f"{folder_name}-meta.csv")
+
+    # Scan and enrich, excluding the output so reruns remain stable.
+    try:
+        rows = scan_and_enrich(
+            args.directories,
+            excluded_paths={output_path},
+            include_sensitive=args.include_sensitive,
+        )
+    except ValueError as error:
+        print(f"✗ {error}", file=sys.stderr)
+        sys.exit(2)
+
+    if not rows:
+        print("✗ No eligible files found to write", file=sys.stderr)
+        sys.exit(3)
 
     # Write CSV
     write_enhanced_csv(output_path, rows)

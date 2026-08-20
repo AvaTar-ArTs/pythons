@@ -13,12 +13,12 @@ from datetime import datetime
 
 # Directories to merge
 SOURCE_DIRS = [
-    "/Users/steven/.claude-worktrees/pythons",
-    "/Users/steven/pythons-merged-backup",
-    "/Users/steven/pythons-sort",
+    "~/.claude-worktrees/pythons",
+    "~/pythons-merged-backup",
+    "~/pythons-sort",
 ]
 
-TARGET_DIR = "/Users/steven/pythons"
+TARGET_DIR = "~/pythons"
 
 # Exclude patterns
 EXCLUDE_PATTERNS = [

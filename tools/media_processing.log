@@ -1,0 +1,18 @@
+2025-11-05 17:59:08 - WARNING - Attempt 1 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 0.89s before retry.
+2025-11-05 17:59:08 - WARNING - Attempt 1 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 0.75s before retry.
+2025-11-05 17:59:08 - WARNING - Attempt 1 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 0.02s before retry.
+2025-11-05 17:59:08 - WARNING - Attempt 2 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 1.86s before retry.
+2025-11-05 17:59:09 - WARNING - Attempt 2 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 1.66s before retry.
+2025-11-05 17:59:09 - WARNING - Attempt 2 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 1.71s before retry.
+2025-11-05 17:59:10 - WARNING - Attempt 3 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 1.15s before retry.
+2025-11-05 17:59:11 - WARNING - Attempt 3 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 2.95s before retry.
+2025-11-05 17:59:11 - WARNING - Attempt 3 failed with AttributeError("'Audio' object has no attribute 'transcribe'"); waiting 1.60s before retry.
+2025-11-05 17:59:11 - ERROR - Final attempt failed for _call: 'Audio' object has no attribute 'transcribe'
+2025-11-05 17:59:11 - ERROR - Error transcribing Title_Threaded_Through_the_Veil.mp3: 'Audio' object has no attribute 'transcribe'
+2025-11-05 17:59:11 - WARNING - [33m⚠️ Transcription failed for Title_Threaded_Through_the_Veil.mp3, skipping analysis.[0m
+2025-11-05 17:59:13 - ERROR - Final attempt failed for _call: 'Audio' object has no attribute 'transcribe'
+2025-11-05 17:59:13 - ERROR - Error transcribing Threaded_Through_the_Veil.mp3: 'Audio' object has no attribute 'transcribe'
+2025-11-05 17:59:13 - WARNING - [33m⚠️ Transcription failed for Threaded_Through_the_Veil.mp3, skipping analysis.[0m
+2025-11-05 17:59:14 - ERROR - Final attempt failed for _call: 'Audio' object has no attribute 'transcribe'
+2025-11-05 17:59:14 - ERROR - Error transcribing Threaded_Through_the_VeilCinematic_world_fusion_ambient_pads_ritual_percussion_native_flute_ethe.mp3: 'Audio' object has no attribute 'transcribe'
+2025-11-05 17:59:14 - WARNING - [33m⚠️ Transcription failed for Threaded_Through_the_VeilCinematic_world_fusion_ambient_pads_ritual_percussion_native_flute_ethe.mp3, skipping analysis.[0m

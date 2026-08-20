@@ -1,0 +1,296 @@
+CODE QUALITY REPORT - 2025-11-05 11:49:41.052306
+====================================================================================================
+
+Files scanned: 100
+
+SYNTAX ERRORS:
+
+
+FLAKE8 ISSUES:
+
+instagram-scan-leonardo-comprehensive.py:
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:26:23: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:28:21: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:66:23: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:68:21: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:106:23: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:108:21: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:176:23: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:178:21: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:205:29: W503 line break before binary operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:224:23: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:228:21: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:239:19: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:264:23: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:268:13: W503 line break before binary operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:269:13: W503 line break before binary operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:270:13: W503 line break before binary operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:271:13: W503 line break before binary operator
+/Users/steven/Documents/pythons/instagram-scan-leonardo-comprehensive.py:274:21: E226 missing whitespace around arithmetic operator
+
+rename-files-utility.py:
+/Users/steven/Documents/pythons/rename-files-utility.py:15:1: F401 'typing.Tuple' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:15:1: F401 'typing.Set' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:15:1: F401 'typing.Any' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:15:1: F401 'typing.Union' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:16:1: F401 'collections.defaultdict' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:18:1: F401 'hashlib' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:41:5: F401 'cv2' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:42:5: F401 'pytesseract' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:43:5: F401 'PIL.Image' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:43:5: F401 'PIL.ImageOps' imported but unused
+/Users/steven/Documents/pythons/rename-files-utility.py:83:30: F821 undefined name 'CONSTANT_100'
+/Users/steven/Documents/pythons/rename-files-utility.py:84:30: F821 undefined name 'CONSTANT_100'
+/Users/steven/Documents/pythons/rename-files-utility.py:84:45: F821 undefined name 'CONSTANT_1024'
+/Users/steven/Documents/pythons/rename-files-utility.py:84:61: F821 undefined name 'CONSTANT_1024'
+/Users/steven/Documents/pythons/rename-files-utility.py:161:17: W503 line break before binary operator
+/Users/steven/Documents/pythons/rename-files-utility.py:205:25: W503 line break before binary operator
+/Users/steven/Documents/pythons/rename-files-utility.py:206:25: W503 line break before binary operator
+/Users/steven/Documents/pythons/rename-files-utility.py:533:9: F841 local variable 'current_name' is assigned to but never used
+/Users/steven/Documents/pythons/rename-files-utility.py:797:21: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/rename-files-utility.py:798:21: F541 f-string is missing placeholders
+
+setuptools.py:
+/Users/steven/Documents/pythons/setuptools.py:1:1: F401 'pathlib.Path' imported but unused
+/Users/steven/Documents/pythons/setuptools.py:97:1: E302 expected 2 blank lines, found 0
+/Users/steven/Documents/pythons/setuptools.py:107:1: E302 expected 2 blank lines, found 1
+
+save-ai-outputs.py:
+/Users/steven/Documents/pythons/save-ai-outputs.py:7:1: F401 'sys' imported but unused
+/Users/steven/Documents/pythons/save-ai-outputs.py:8:1: F401 'os' imported but unused
+/Users/steven/Documents/pythons/save-ai-outputs.py:31:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/save-ai-outputs.py:32:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/save-ai-outputs.py:33:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/save-ai-outputs.py:34:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/save-ai-outputs.py:35:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/save-ai-outputs.py:43:5: F841 local variable 'title_lower' is assigned to but never used
+/Users/steven/Documents/pythons/save-ai-outputs.py:146:1: W293 blank line contains whitespace
+/Users/steven/Documents/pythons/save-ai-outputs.py:151:1: W293 blank line contains whitespace
+/Users/steven/Documents/pythons/save-ai-outputs.py:165:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/save-ai-outputs.py:166:5: F821 undefined name 'logger'
+
+audio-thinketh.py:
+/Users/steven/Documents/pythons/audio-thinketh.py:10:10: E401 multiple imports on one line
+/Users/steven/Documents/pythons/audio-thinketh.py:24:1: F811 redefinition of unused 'load_dotenv' from line 12
+/Users/steven/Documents/pythons/audio-thinketh.py:56:1: E302 expected 2 blank lines, found 0
+/Users/steven/Documents/pythons/audio-thinketh.py:63:1: E302 expected 2 blank lines, found 1
+/Users/steven/Documents/pythons/audio-thinketh.py:71:17: F821 undefined name 'CONSTANT_300'
+/Users/steven/Documents/pythons/audio-thinketh.py:73:28: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/audio-thinketh.py:76:40: F821 undefined name 'CONSTANT_8192'
+/Users/steven/Documents/pythons/audio-thinketh.py:105:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/audio-thinketh.py:113:34: F821 undefined name 'CONSTANT_500'
+/Users/steven/Documents/pythons/audio-thinketh.py:119:64: E231 missing whitespace after ','
+/Users/steven/Documents/pythons/audio-thinketh.py:121:13: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/audio-thinketh.py:124:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/audio-thinketh.py:125:40: F821 undefined name 'CONSTANT_250'
+/Users/steven/Documents/pythons/audio-thinketh.py:126:52: F821 undefined name 'CONSTANT_6000'
+/Users/steven/Documents/pythons/audio-thinketh.py:132:51: F821 undefined name 'CONSTANT_700'
+/Users/steven/Documents/pythons/audio-thinketh.py:135:66: F821 undefined name 'CONSTANT_1200'
+/Users/steven/Documents/pythons/audio-thinketh.py:135:90: F821 undefined name 'CONSTANT_1200'
+/Users/steven/Documents/pythons/audio-thinketh.py:138:50: F821 undefined name 'CONSTANT_1500'
+/Users/steven/Documents/pythons/audio-thinketh.py:141:65: F821 undefined name 'CONSTANT_1600'
+/Users/steven/Documents/pythons/audio-thinketh.py:141:89: F821 undefined name 'CONSTANT_1800'
+/Users/steven/Documents/pythons/audio-thinketh.py:143:5: F821 undefined name 'logger'
+
+leonardo.py:
+/Users/steven/Documents/pythons/leonardo.py:26:1: F401 'base64' imported but unused
+/Users/steven/Documents/pythons/leonardo.py:26:16: E401 multiple imports on one line
+/Users/steven/Documents/pythons/leonardo.py:49:20: F821 undefined name 'CONSTANT_300'
+/Users/steven/Documents/pythons/leonardo.py:56:29: F821 undefined name 'CONSTANT_400'
+/Users/steven/Documents/pythons/leonardo.py:69:75: F821 undefined name 'CONSTANT_400'
+/Users/steven/Documents/pythons/leonardo.py:73:78: F821 undefined name 'CONSTANT_400'
+/Users/steven/Documents/pythons/leonardo.py:85:52: F821 undefined name 'CONSTANT_8192'
+/Users/steven/Documents/pythons/leonardo.py:101:50: F821 undefined name 'CONSTANT_544'
+/Users/steven/Documents/pythons/leonardo.py:102:51: F821 undefined name 'CONSTANT_960'
+/Users/steven/Documents/pythons/leonardo.py:106:52: F821 undefined name 'CONSTANT_600'
+/Users/steven/Documents/pythons/leonardo.py:116:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:142:25: F821 undefined name 'CONSTANT_400'
+/Users/steven/Documents/pythons/leonardo.py:143:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:154:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:170:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:184:25: F821 undefined name 'CONSTANT_400'
+/Users/steven/Documents/pythons/leonardo.py:185:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:193:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:219:25: F821 undefined name 'CONSTANT_400'
+/Users/steven/Documents/pythons/leonardo.py:220:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:228:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:254:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/leonardo.py:256:9: F821 undefined name 'logger'
+
+instagram-download.py:
+/Users/steven/Documents/pythons/instagram-download.py:7:1: F401 'os' imported but unused
+/Users/steven/Documents/pythons/instagram-download.py:9:1: F401 're' imported but unused
+/Users/steven/Documents/pythons/instagram-download.py:11:1: F401 'collections.defaultdict' imported but unused
+/Users/steven/Documents/pythons/instagram-download.py:11:1: F401 'collections.Counter' imported but unused
+/Users/steven/Documents/pythons/instagram-download.py:12:1: F401 'hashlib' imported but unused
+/Users/steven/Documents/pythons/instagram-download.py:384:9: F841 local variable 'total_projects' is assigned to but never used
+/Users/steven/Documents/pythons/instagram-download.py:390:121: E501 line too long (134 > 120 characters)
+/Users/steven/Documents/pythons/instagram-download.py:399:121: E501 line too long (125 > 120 characters)
+/Users/steven/Documents/pythons/instagram-download.py:411:29: F821 undefined name 'CONSTANT_1000'
+/Users/steven/Documents/pythons/instagram-download.py:472:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:476:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:480:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:484:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:487:5: F841 local variable 'nav' is assigned to but never used
+/Users/steven/Documents/pythons/instagram-download.py:488:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:490:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:490:17: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/instagram-download.py:491:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:494:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:495:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:497:5: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/instagram-download.py:498:9: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/instagram-download.py:500:5: F821 undefined name 'logger'
+
+cross-directory-merger.py:
+/Users/steven/Documents/pythons/cross-directory-merger.py:11:1: E265 block comment should start with '# '
+/Users/steven/Documents/pythons/cross-directory-merger.py:31:1: F401 'os' imported but unused
+/Users/steven/Documents/pythons/cross-directory-merger.py:31:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:32:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:33:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:34:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:35:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:36:1: F401 'collections.defaultdict' imported but unused
+/Users/steven/Documents/pythons/cross-directory-merger.py:36:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:37:1: F401 'typing.Dict' imported but unused
+/Users/steven/Documents/pythons/cross-directory-merger.py:37:1: F401 'typing.Tuple' imported but unused
+/Users/steven/Documents/pythons/cross-directory-merger.py:37:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:38:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:39:1: F401 'json' imported but unused
+/Users/steven/Documents/pythons/cross-directory-merger.py:39:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/cross-directory-merger.py:44:13: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/cross-directory-merger.py:45:14: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/cross-directory-merger.py:46:15: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/cross-directory-merger.py:47:12: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/cross-directory-merger.py:48:16: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/cross-directory-merger.py:49:13: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/cross-directory-merger.py:50:12: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/cross-directory-merger.py:68:9: F841 local variable 'timestamp' is assigned to but never used
+/Users/steven/Documents/pythons/cross-directory-merger.py:69:32: F821 undefined name 'fstr'
+/Users/steven/Documents/pythons/cross-directory-merger.py:135:55: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/cross-directory-merger.py:136:21: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/cross-directory-merger.py:137:27: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/cross-directory-merger.py:201:53: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/cross-directory-merger.py:202:21: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/cross-directory-merger.py:203:27: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/cross-directory-merger.py:270:55: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/cross-directory-merger.py:271:21: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/cross-directory-merger.py:272:27: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/cross-directory-merger.py:333:21: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/cross-directory-merger.py:334:21: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/cross-directory-merger.py:421:55: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/cross-directory-merger.py:422:21: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/cross-directory-merger.py:423:27: E226 missing whitespace around arithmetic operator
+
+stylish-unfollow-tips.py:
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:21:50: F821 undefined name 'CONSTANT_150'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:26:78: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:28:73: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:30:74: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:32:74: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:41:23: F821 undefined name 'CONSTANT_2000'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:42:23: F821 undefined name 'CONSTANT_3500'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:62:30: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:65:77: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:78:21: F821 undefined name 'CONSTANT_100'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:78:35: F821 undefined name 'CONSTANT_700'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:79:28: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:80:27: F821 undefined name 'CONSTANT_125'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:81:29: F821 undefined name 'CONSTANT_400'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:82:34: F821 undefined name 'CONSTANT_3000'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:88:76: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:97:24: F821 undefined name 'CONSTANT_168'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:98:21: F821 undefined name 'CONSTANT_600'
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:102:75: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:113:74: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:115:73: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:117:74: W291 trailing whitespace
+/Users/steven/Documents/pythons/stylish-unfollow-tips.py:122:67: F821 undefined name 'CONSTANT_300'
+
+compare-files.py:
+/Users/steven/Documents/pythons/compare-files.py:3:1: F401 'datetime.datetime' imported but unused
+/Users/steven/Documents/pythons/compare-files.py:52:13: W503 line break before binary operator
+/Users/steven/Documents/pythons/compare-files.py:74:17: W503 line break before binary operator
+/Users/steven/Documents/pythons/compare-files.py:75:17: W503 line break before binary operator
+/Users/steven/Documents/pythons/compare-files.py:129:21: W503 line break before binary operator
+/Users/steven/Documents/pythons/compare-files.py:133:21: W503 line break before binary operator
+/Users/steven/Documents/pythons/compare-files.py:149:17: W503 line break before binary operator
+/Users/steven/Documents/pythons/compare-files.py:150:17: W503 line break before binary operator
+
+openai-text-to-speech.py:
+/Users/steven/Documents/pythons/openai-text-to-speech.py:49:20: F821 undefined name 'Path'
+
+delete.py:
+/Users/steven/Documents/pythons/delete.py:27:54: E203 whitespace before ':'
+
+onedrive-gallery-logic.py:
+/Users/steven/Documents/pythons/onedrive-gallery-logic.py:49:24: F541 f-string is missing placeholders
+/Users/steven/Documents/pythons/onedrive-gallery-logic.py:102:24: F541 f-string is missing placeholders
+
+smart-conservative-renamer.py:
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:10:1: E265 block comment should start with '# '
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:24:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:25:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:26:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:27:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:28:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:29:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:30:1: E402 module level import not at top of file
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:34:14: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:35:15: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:36:12: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:37:13: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:38:16: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:39:13: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:40:12: W605 invalid escape sequence '\C'
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:203:40: E128 continuation line under-indented for visual indent
+/Users/steven/Documents/pythons/smart-conservative-renamer.py:447:22: F821 undefined name 'fstr'
+
+song-process.py:
+/Users/steven/Documents/pythons/song-process.py:15:1: F811 redefinition of unused 'load_dotenv' from line 6
+/Users/steven/Documents/pythons/song-process.py:82:121: E501 line too long (135 > 120 characters)
+/Users/steven/Documents/pythons/song-process.py:83:121: E501 line too long (146 > 120 characters)
+/Users/steven/Documents/pythons/song-process.py:84:121: E501 line too long (146 > 120 characters)
+/Users/steven/Documents/pythons/song-process.py:91:121: E501 line too long (170 > 120 characters)
+
+system-monitor.py:
+/Users/steven/Documents/pythons/system-monitor.py:37:60: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/system-monitor.py:53:60: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/system-monitor.py:67:63: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/system-monitor.py:72:60: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/system-monitor.py:88:60: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/system-monitor.py:102:63: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/system-monitor.py:111:60: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/system-monitor.py:120:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:121:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:122:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:123:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:134:13: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:142:13: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:145:17: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:147:17: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:149:17: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:162:69: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/system-monitor.py:162:75: E226 missing whitespace around arithmetic operator
+/Users/steven/Documents/pythons/system-monitor.py:162:76: F821 undefined name 'CONSTANT_100'
+/Users/steven/Documents/pythons/system-monitor.py:186:13: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:199:40: F821 undefined name 'CONSTANT_200'
+/Users/steven/Documents/pythons/system-monitor.py:200:17: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:202:17: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:205:13: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:216:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:217:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:218:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:219:9: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:226:13: W503 line break before binary operator
+/Users/steven/Documents/pythons/system-monitor.py:230:13: F821 undefined name 'logger'
+/Users/steven/Documents/pythons/system-monitor.py:235:13: F821 undefined name 'logger'
+
+get-simple.py:
+/Users/steven/Documents/pythons/get-simple.py:30:5: E301 expected 1 blank line, found 0
+
+
+COMMON ISSUES:
+Bare except clauses: 4
+Long lines: 78
+Tabs: 0

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Image & Video Model Specs — comparison tables</title>
+<meta name="description" content="A maintained, machine-readable comparison of AI image and video generation models: resolution, aspect ratios, clip duration, audio, watermarks, commercial use, API and open weights.">
+<style>
+  :root{
+    --bg:#fafaf8; --card:#ffffff; --ink:#1c1917; --muted:#78716c;
+    --line:#e7e5e4; --accent:#ea580c; --accent-soft:#fff7ed; --good:#16a34a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#121110; --card:#1c1a19; --ink:#e7e5e4; --muted:#a8a29e;
+           --line:#2e2b29; --accent:#fb923c; --accent-soft:#2a1c10; --good:#4ade80; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 20px 64px}
+  header h1{font-size:1.7rem;margin:0 0 6px;letter-spacing:-.02em}
+  header p{color:var(--muted);margin:0 0 4px;max-width:70ch}
+  .meta{font-size:.82rem;color:var(--muted)}
+  .meta a{color:var(--accent)}
+  nav.tabs{display:flex;gap:8px;margin:22px 0 14px}
+  .tabs button{font:inherit;font-weight:600;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer}
+  .tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+  input[type=search]{font:inherit;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);width:min(340px,100%)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .tablecard{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:auto}
+  table{border-collapse:collapse;width:100%;min-width:980px;font-size:.88rem}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{position:sticky;top:0;background:var(--card);cursor:pointer;user-select:none;white-space:nowrap;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  th:hover{color:var(--accent)}
+  th .arrow{font-size:.7rem}
+  td.name{font-weight:600;white-space:nowrap}
+  td.name a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--muted)}
+  td.name a:hover{color:var(--accent)}
+  .yes{color:var(--good);font-weight:600}
+  .no{color:var(--muted)}
+  .pill{display:inline-block;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.78rem}
+  td.notes{color:var(--muted);min-width:240px}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+  footer a{color:var(--accent);font-weight:600}
+  .err{padding:24px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AI Image &amp; Video Model Specs</h1>
+    <p>Resolution, aspect ratios, clip duration, native audio, watermark policy, commercial use, API availability and open-weights status — for every major generation model, in one sortable table.</p>
+    <p class="meta">Open data (CC BY 4.0) · <a id="repoLink" href="https://github.com/Ninglz/ai-image-video-model-specs">JSON + sources on GitHub</a> · <span id="updated"></span></p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-set="video">Video models</button>
+    <button role="tab" aria-selected="false" data-set="image">Image models</button>
+  </nav>
+
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Filter — e.g. open weights, 4K, audio, ByteDance…">
+    <span class="meta" id="count"></span>
+  </div>
+
+  <div class="tablecard"><div id="tbl" class="err">Loading…</div></div>
+
+  <footer>
+    <p>Every entry links to its official source and carries a <code>last_verified</code> date. Spot something stale? <a href="https://github.com/Ninglz/ai-image-video-model-specs/issues">Open an issue</a> — corrections are the most valuable contribution.</p>
+    <p>Maintained by the team at <a href="https://inkfox.app">InkFox — AI image &amp; video generation workspace</a>, where you can run many of these models side by side. Want to compare outputs instead of spec sheets? <a href="https://inkfox.app">Try them on the same prompt at inkfox.app</a>.</p>
+  </footer>
+</div>
+
+<script>
+const state = { set:'video', q:'', sortKey:null, sortDir:1, data:{} };
+
+const COLS = {
+  video: [
+    ['name','Model'],['developer','Developer'],['modes','Modes'],
+    ['max_resolution','Max res'],['max_duration_seconds','Max clip'],
+    ['aspect_ratios','Ratios'],['native_audio','Audio'],
+    ['api_available','API'],['open_weights','Open weights'],
+    ['pricing_tier','Price'],['watermark','Watermark'],['notes','Notes']
+  ],
+  image: [
+    ['name','Model'],['developer','Developer'],['modes','Modes'],
+    ['max_resolution','Max res'],['text_rendering','Text rendering'],
+    ['aspect_ratios','Ratios'],['api_available','API'],
+    ['open_weights','Open weights'],['pricing_tier','Price'],
+    ['watermark','Watermark'],['notes','Notes']
+  ]
+};
+
+function fmt(key, v, m){
+  if (key === 'name') return `<a href="${m.official_url}" rel="noopener">${v}</a>`;
+  if (Array.isArray(v)) return v.join(', ');
+  if (typeof v === 'boolean') return v ? '<span class="yes">✓</span>' : '<span class="no">—</span>';
+  if (key === 'max_duration_seconds') return v + 's';
+  if (key === 'pricing_tier') return `<span class="pill">${v}</span>`;
+  return v ?? '';
+}
+
+function render(){
+  const cols = COLS[state.set];
+  let rows = (state.data[state.set]?.models || []).slice();
+  if (state.q){
+    const q = state.q.toLowerCase();
+    rows = rows.filter(m => JSON.stringify(m).toLowerCase().includes(q)
+      || (q.includes('open') && m.open_weights)
+      || (q.includes('audio') && m.native_audio));
+  }
+  if (state.sortKey){
+    const k = state.sortKey;
+    rows.sort((a,b)=>{
+      const av = a[k], bv = b[k];
+      if (typeof av === 'number' && typeof bv === 'number') return (av-bv)*state.sortDir;
+      if (typeof av === 'boolean' || typeof bv === 'boolean') return ((bv===true)-(av===true))*state.sortDir;
+      return String(av??'').localeCompare(String(bv??''))*state.sortDir;
+    });
+  }
+  const head = cols.map(([k,label]) =>
+    `<th data-k="${k}">${label} <span class="arrow">${state.sortKey===k ? (state.sortDir>0?'▲':'▼') : ''}</span></th>`).join('');
+  const body = rows.map(m =>
+    `<tr>${cols.map(([k]) => `<td class="${k==='name'?'name':k==='notes'?'notes':''}">${fmt(k, m[k], m)}</td>`).join('')}</tr>`).join('');
+  document.getElementById('tbl').outerHTML =
+    `<table id="tbl"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+  document.getElementById('count').textContent = `${rows.length} models`;
+  document.querySelectorAll('th').forEach(th => th.onclick = () => {
+    const k = th.dataset.k;
+    state.sortDir = state.sortKey === k ? -state.sortDir : 1;
+    state.sortKey = k;
+    render();
+  });
+}
+
+document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x===b));
+  state.set = b.dataset.set; state.sortKey = null; render();
+});
+document.getElementById('q').oninput = e => { state.q = e.target.value.trim(); render(); };
+
+Promise.all([
+  fetch('data/video-models.json').then(r=>r.json()),
+  fetch('data/image-models.json').then(r=>r.json())
+]).then(([v,i]) => {
+  state.data = { video:v, image:i };
+  document.getElementById('updated').textContent = 'Data updated ' + v.last_updated;
+  render();
+}).catch(() => {
+  document.getElementById('tbl').textContent =
+    'Could not load data. View the JSON files directly on GitHub.';
+});
+</script>
+</body>
+</html>

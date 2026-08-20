@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corsera v2 | The Cartographer's Five</title>
+  <meta name="description" content="A curated Coursera landing page for the five Python tracks that best fit the ~/pythons workspace." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="backdrop backdrop-left"></div>
+  <div class="backdrop backdrop-right"></div>
+
+  <main class="shell">
+    <section class="hero panel">
+      <div class="hero-copy">
+        <p class="eyebrow">Corsera v2</p>
+        <h1>The Cartographer's Five</h1>
+        <p class="lede">
+          A curated Coursera field guide for <code>~/pythons</code>, shaped as a working atlas:
+          five courses, one learning rhythm, and a custom persona that turns study into a repeatable practice.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#courses" class="button button-primary">Explore the five picks</a>
+          <a href="../README.md" class="button button-secondary">Return to the bundle</a>
+        </div>
+      </div>
+
+      <aside class="persona-card">
+        <div class="persona-header">
+          <span class="persona-mark"></span>
+          <div>
+            <p class="persona-label">Unique Creative Individual</p>
+            <h2>Learning Cartographer</h2>
+          </div>
+        </div>
+
+        <p class="persona-text">
+          A deliberate learner who maps Python knowledge into usable terrain.
+          Every course becomes a waypoint; every project becomes a trail.
+          The quieter mode of this persona is the steady, reflective Cartographer.
+        </p>
+
+        <ul class="persona-grid">
+          <li><span>Mode</span><strong>Focus first</strong></li>
+          <li><span>Tempo</span><strong>Steady loops</strong></li>
+          <li><span>Goal</span><strong>Reuse in the repo</strong></li>
+          <li><span>Style</span><strong>Calm, precise, practical</strong></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="index-bar panel">
+      <div>
+        <p class="section-kicker">What makes these five matter</p>
+        <h2>Pick courses that pay rent inside the workspace.</h2>
+      </div>
+      <p class="index-note">
+        The bundle leans toward Python fundamentals, data analysis, and automation because those are the lanes the
+        <code>pythons</code> workspace already uses most.
+      </p>
+    </section>
+
+    <section id="courses" class="courses">
+      <article class="course-card panel active" data-course="python-everybody">
+        <div class="course-meta">
+          <span>01</span>
+          <span>Foundations</span>
+        </div>
+        <h3>Programming for Everybody</h3>
+        <p>
+          The cleanest Python reset. Start here if you want syntax, control flow, and confidence before touching automation or data work.
+        </p>
+        <a href="../01_programming_for_everybody.md">Read the course note</a>
+      </article>
+
+      <article class="course-card panel" data-course="specialization">
+        <div class="course-meta">
+          <span>02</span>
+          <span>System build</span>
+        </div>
+        <h3>Python for Everybody Specialization</h3>
+        <p>
+          A broader backbone covering data structures, APIs, and databases. Useful when you want more than just introductory syntax.
+        </p>
+        <a href="../02_python_for_everybody_specialization.md">Read the course note</a>
+      </article>
+
+      <article class="course-card panel" data-course="data-science">
+        <div class="course-meta">
+          <span>03</span>
+          <span>Analysis lane</span>
+        </div>
+        <h3>Introduction to Data Science in Python</h3>
+        <p>
+          One of the strongest matches for the analysis-heavy corners of <code>~/pythons</code>. It bridges Python into real data thinking.
+        </p>
+        <a href="../03_introduction_to_data_science_in_python.md">Read the course note</a>
+      </article>
+
+      <article class="course-card panel" data-course="data-analysis">
+        <div class="course-meta">
+          <span>04</span>
+          <span>Applied data</span>
+        </div>
+        <h3>Data Analysis with Python</h3>
+        <p>
+          The applied toolkit: wrangling, analysis, and structured workflow thinking. Best for projects that need clean tabular results.
+        </p>
+        <a href="../04_data_analysis_with_python.md">Read the course note</a>
+      </article>
+
+      <article class="course-card panel" data-course="automation">
+        <div class="course-meta">
+          <span>05</span>
+          <span>Automation</span>
+        </div>
+        <h3>Python Basics: Automation and Bots</h3>
+        <p>
+          The closest thing to a direct match for scripts, helpers, and workflow tools. Great for turning repetitive tasks into habits.
+        </p>
+        <a href="../05_python_basics_automation_and_bots.md">Read the course note</a>
+      </article>
+    </section>
+
+    <section class="playfield panel">
+      <div>
+        <p class="section-kicker">Version 2 creative layer</p>
+        <h2>One page, three uses.</h2>
+      </div>
+
+      <div class="playfield-grid">
+        <div class="playfield-item">
+          <span>1</span>
+          <h3>Landing page</h3>
+          <p>A visual entry point for the five picks.</p>
+        </div>
+        <div class="playfield-item">
+          <span>2</span>
+          <h3>Atlas</h3>
+          <p>A markdown-friendly map of the learning path.</p>
+        </div>
+        <div class="playfield-item">
+          <span>3</span>
+          <h3>Persona</h3>
+          <p>A unique creative individual that gives the bundle a point of view.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

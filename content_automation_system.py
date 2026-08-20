@@ -79,7 +79,7 @@ class ContentAutomationSystem:
         cursor = conn.cursor()
 
         # Create content strategies table
-        cursor.execute('\''
+        cursor.execute("""
             CREATE TABLE IF NOT EXISTS content_strategies (
                 id TEXT PRIMARY KEY,
                 name TEXT NOT NULL,
@@ -204,7 +204,7 @@ class ContentAutomationSystem:
         return daily_recipes
 
     def _get_current_seasonal_theme(self) -> str:
-        """Get current seasonal theme'\''
+        """Get current seasonal theme"""
         month = datetime.datetime.now().month
         seasonal_themes = {
             1: "New Year healthy recipes",
@@ -287,7 +287,7 @@ class ContentAutomationSystem:
 
     def generate_seo_content(self, recipe: Recipe) -> str:
         """Generate SEO-optimized content"""
-        seo_content = f'\''
+        seo_content = f"""
 # {recipe.title}
 
 {recipe.description}
@@ -339,7 +339,7 @@ A: Store in an airtight container in the refrigerator for up to 3 days.
         return seo_content
 
     def track_revenue(self, recipe_id: str, platform: str, revenue: float, source: str):
-        """Track revenue from content'\''
+        """Track revenue from content"""
         try:
             conn = sqlite3.connect(self.db_path)
             cursor = conn.cursor()
@@ -377,7 +377,7 @@ A: Store in an airtight container in the refrigerator for up to 3 days.
 
             # Get total revenue
             cursor.execute(
-                '\''
+                """
                 SELECT SUM(revenue) FROM revenue_tracking 
                 WHERE date >= date('now', '-{} days')
             """.format(days)
@@ -563,7 +563,7 @@ A: Store in an airtight container in the refrigerator for up to 3 days.
 - Focus on top-performing platforms
 - Optimize underperforming strategies
 - Increase content frequency for high-revenue sources
-'\''
+"""
 
         # Save report
         os.makedirs("reports", exist_ok=True)

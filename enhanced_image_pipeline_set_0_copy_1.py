@@ -463,7 +463,7 @@ class OpenAIClient:
 
         backoff.expo, Exception, max_tries=3, jitter=backoff.full_jitter
     )
-    def analyze_image(:
+    def analyze_image(
         self,
         image_data: str,
         mime_type: str,
@@ -640,7 +640,7 @@ class HybridImageProcessor:
 
         return metadata
 
-    def process_single_image(:
+    def process_single_image(
         self, image_path: Path, base_folder: Path
     ) -> ProcessingResult:
         """Process a single image using hybrid approach."""
@@ -760,7 +760,7 @@ class HybridImageProcessor:
 
         return encoded_string, mime_type
 
-    def _should_use_openai(:
+    def _should_use_openai(
         self, google_results: GoogleVisionResults, metadata: ImageMetadata
     ) -> bool:
         """Determine if OpenAI analysis is needed based on complexity and configuration."""
@@ -806,7 +806,7 @@ class HybridImageProcessor:
         # Default: use Google Vision only for straightforward images
         return False
 
-    def _combine_results(:
+    def _combine_results(
         self,
         google_results: GoogleVisionResults,
         openai_results: OpenAIResults,
@@ -960,7 +960,7 @@ class CSVWriter:
             "total_api_cost",
         ]
 
-    def write_results(:
+    def write_results(
         self, results: List[ProcessingResult], cost_summary: Dict[str, Any]
     ):
         """Write processing results to CSV with cost summary."""
@@ -1129,7 +1129,7 @@ class HybridImagePipeline:
             self.logger.error(f"Pipeline failed: {e}")
             return False
 
-    def _process_sequential(:
+    def _process_sequential(
         self, image_paths: List[Path], base_folder: Path
     ) -> List[ProcessingResult]:
         """Process images sequentially."""
@@ -1152,7 +1152,7 @@ class HybridImagePipeline:
 
         return results
 
-    def _process_concurrent(:
+    def _process_concurrent(
         self, image_paths: List[Path], base_folder: Path, max_workers: int
     ) -> List[ProcessingResult]:
         """Process images concurrently with thread pool."""

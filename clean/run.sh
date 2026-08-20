@@ -19,14 +19,13 @@ run_script() {
     fi
 }
 
-# List of scripts to run
+# List of scripts to run (config.py holds SOURCE_DIRECTORY)
 scripts=(
-    '/Users/steven/clean/clean-organizer/audio.py'
-    '/Users/steven/clean/clean-organizer/config.py'
-    '/Users/steven/clean/clean-organizer/docs.py'
-    '/Users/steven/clean/clean-organizer/img.py'
-    '/Users/steven/clean/clean-organizer/other.py'
-    '/Users/steven/clean/clean-organizer/vids.py'
+    '/Users/steven/clean/audio.py'
+    '/Users/steven/clean/docs.py'
+    '/Users/steven/clean/img.py'
+    '/Users/steven/clean/other.py'
+    '/Users/steven/clean/vids.py'
 )
 
 # Trap exit and errors

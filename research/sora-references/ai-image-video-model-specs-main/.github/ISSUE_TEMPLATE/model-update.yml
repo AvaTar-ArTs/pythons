@@ -1,0 +1,36 @@
+name: Spec correction / model update
+description: Report a wrong or outdated spec, or suggest a model to add
+title: "[data] "
+labels: ["data"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of update?
+      options:
+        - Correction (a listed spec is wrong or stale)
+        - New model suggestion
+        - Model version update (e.g. 2.5 → 3.0)
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model name
+      placeholder: e.g. Kling 2.5 Turbo
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change?
+      description: Current value → correct value, or the new model's key specs.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source link
+      description: Docs, pricing page, changelog or official announcement. Third-party blogs are not sufficient.
+    validations:
+      required: true

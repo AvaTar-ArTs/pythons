@@ -13,8 +13,8 @@ from collections import defaultdict
 from datetime import datetime
 from difflib import SequenceMatcher
 
-TARGET_DIR = "/Users/steven/pythons"
-OUTPUT_DIR = "/Users/steven/pythons/function_analysis"
+TARGET_DIR = "~/pythons"
+OUTPUT_DIR = "~/pythons/function_analysis"
 
 
 def similar(a, b):

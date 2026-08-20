@@ -197,7 +197,8 @@ FULL_EXCLUDED_PATTERNS: list[str] = [
     r".*\.bak.*",
     r".*\.swp.*",
     r".*\.swo.*",
-    r".*~.*",
+    # Backup suffix (do NOT exclude paths that merely contain "~", such as iCloud "com~apple~CloudDocs")
+    r".*~$",
 
     # Locks
     r".*package-lock\.json.*",
@@ -224,4 +225,3 @@ FULL_EXCLUDED_PATTERNS: list[str] = [
 
 # Ecosystem-level alias (identical to full — kept for compatibility)
 ECOSYSTEM_EXCLUDED_PATTERNS = FULL_EXCLUDED_PATTERNS
-

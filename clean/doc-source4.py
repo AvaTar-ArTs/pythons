@@ -1,0 +1,216 @@
+import csv
+import os
+import re
+import sys
+from datetime import datetime
+
+from exclude_patterns import FULL_EXCLUDED_PATTERNS
+
+
+LAST_DIRECTORY_FILE = "docs.txt"
+
+
+def get_creation_date(filepath):
+    """Get the creation date of a file formatted as MM-DD-YY."""
+    try:
+        return datetime.fromtimestamp(os.path.getctime(filepath)).strftime("%m-%d-%y")
+    except Exception as e:
+        print(f"Error getting creation date for {filepath}: {e}")
+        return "Unknown"
+
+
+def format_file_size(size_in_bytes):
+    """Format file size into a human-readable string."""
+    try:
+        if size_in_bytes < 1024:
+            return f"{size_in_bytes:.2f} B"
+        size_in_bytes /= 1024
+        if size_in_bytes < 1024:
+            return f"{size_in_bytes:.2f} KB"
+        size_in_bytes /= 1024
+        if size_in_bytes < 1024:
+            return f"{size_in_bytes:.2f} MB"
+        size_in_bytes /= 1024
+        if size_in_bytes < 1024:
+            return f"{size_in_bytes:.2f} GB"
+        size_in_bytes /= 1024
+        return f"{size_in_bytes:.2f} TB"
+    except Exception as e:
+        print(f"Error formatting file size: {e}")
+        return "Unknown"
+
+
+def generate_dry_run_csv(directories, csv_path):
+    """Scan the given directories and generate a CSV of matching document files."""
+    rows = []
+
+    excluded_patterns = FULL_EXCLUDED_PATTERNS
+
+    file_types = {
+        ".pdf": "Documents",
+        ".csv": "Documents",
+        ".html": "Documents",
+        ".css": "Documents",
+        ".js": "Documents",
+        ".json": "Documents",
+        ".sh": "Documents",
+        ".md": "Documents",
+        ".txt": "Documents",
+        ".doc": "Documents",
+        ".docx": "Documents",
+        ".ppt": "Documents",
+        ".pptx": "Documents",
+        ".xlsx": "Documents",
+        ".py": "Documents",
+        ".xml": "Documents",
+    }
+
+    for directory in directories:
+        for root, dirs, files in os.walk(directory):
+            dirs[:] = [
+                d
+                for d in dirs
+                if not any(
+                    re.match(pattern, os.path.join(root, d))
+                    for pattern in excluded_patterns
+                )
+            ]
+
+            for file in files:
+                file_path = os.path.join(root, file)
+
+                if any(re.match(pattern, file_path) for pattern in excluded_patterns):
+                    continue
+
+                file_ext = os.path.splitext(file)[1].lower()
+
+                if file_ext in file_types:
+                    try:
+                        file_size = format_file_size(os.path.getsize(file_path))
+                        creation_date = get_creation_date(file_path)
+                        rows.append([file, file_size, creation_date, root])
+                    except FileNotFoundError:
+                        print(f"File not found during scan, skipping: {file_path}")
+                        continue
+
+    write_csv(csv_path, rows)
+
+
+def write_csv(csv_path, rows):
+    """Write the collected rows to a CSV file."""
+    with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
+        fieldnames = ["Filename", "File Size", "Creation Date", "Original Path"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(
+                {
+                    "Filename": row[0],
+                    "File Size": row[1],
+                    "Creation Date": row[2],
+                    "Original Path": row[3],
+                }
+            )
+
+
+def get_unique_file_path(base_path):
+    """
+    If base_path exists, append _MMDD.
+    If that also exists, append _MMDD_1, _MMDD_2, etc.
+    """
+    if not os.path.exists(base_path):
+        return base_path
+
+    base, ext = os.path.splitext(base_path)
+    date_suffix = datetime.now().strftime("%m%d")
+
+    new_path = f"{base}_{date_suffix}{ext}"
+    if not os.path.exists(new_path):
+        return new_path
+
+    counter = 1
+    while True:
+        new_path = f"{base}_{date_suffix}_{counter}{ext}"
+        if not os.path.exists(new_path):
+            return new_path
+        counter += 1
+
+
+def save_last_directory(directory):
+    """Save the last scanned directory."""
+    with open(LAST_DIRECTORY_FILE, "w", encoding="utf-8") as file:
+        file.write(directory)
+
+
+def load_last_directory():
+    """Load the last scanned directory if available."""
+    if os.path.exists(LAST_DIRECTORY_FILE):
+        with open(LAST_DIRECTORY_FILE, "r", encoding="utf-8") as file:
+            return file.read().strip()
+    return None
+
+
+def sanitize_filename(name):
+    """Convert a folder name into a safe filename."""
+    return re.sub(r"[^a-zA-Z0-9_-]", "_", name)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        directories = sys.argv[1:]
+    else:
+        directories = []
+        last_directory = load_last_directory()
+
+        while True:
+            if last_directory:
+                use_last = (
+                    input(
+                        f"Do you want to use the last directory '{last_directory}'? (Y/N): "
+                    )
+                    .strip()
+                    .lower()
+                )
+                if use_last == "y":
+                    directories.append(last_directory)
+                    break
+                else:
+                    source_directory = input(
+                        "Please enter a new source directory to scan for document files: "
+                    ).strip()
+            else:
+                source_directory = input(
+                    "Please enter a source directory to scan for document files: "
+                ).strip()
+
+            if source_directory == "":
+                break
+
+            if os.path.isdir(source_directory):
+                directories.append(source_directory)
+                save_last_directory(source_directory)
+                break
+            else:
+                print(f"'{source_directory}' is not a valid directory. Please try again.")
+
+    if directories:
+        print(f"Scanning directories: {directories}")
+
+        folder_names = [
+            sanitize_filename(os.path.basename(os.path.normpath(d)))
+            for d in directories
+        ]
+        joined_folder_names = "_".join(folder_names)
+
+        if not joined_folder_names:
+            joined_folder_names = "root"
+
+        csv_filename = f"docs-{joined_folder_names}.csv"
+        csv_output_path = os.path.join(directories[0], csv_filename)
+        csv_output_path = get_unique_file_path(csv_output_path)
+
+        generate_dry_run_csv(directories, csv_output_path)
+        print(f"Document scan completed. Output saved to {csv_output_path}")
+    else:
+        print("No directories were provided to scan.")
+

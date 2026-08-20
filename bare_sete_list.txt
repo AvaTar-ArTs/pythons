@@ -1,0 +1,17 @@
+aggressive_git_cleanup.sh
+automate-seo-optimization.sh
+avatararts-content-aware-consolidation-script.sh
+avatararts-packaging-script.sh
+avatararts-restructuring-master.sh
+consolidation-setup.sh
+content-quality-analyzer.sh
+format-project-docs-professional.sh
+generate-steven-website-project.sh
+remove-duplicate-files-safe-phase1.sh
+repair-disk-with-sip-workflow.sh
+rsync_icloud.sh
+rsync_sitesuck.sh
+setup-Harbor-Aider.sh
+setup-ai-apis.sh
+setup-cleanconnect.sh
+setup-mamba.sh

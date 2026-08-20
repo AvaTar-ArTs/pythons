@@ -1,0 +1,12 @@
+Sample Text Document
+
+This is a sample text document to test the conversion to PDF.
+
+Features being tested:
+- Plain text formatting
+- Line breaks
+- Paragraphs
+
+This is a new paragraph in the text file.
+
+The conversion should preserve basic formatting and structure.

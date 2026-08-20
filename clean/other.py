@@ -1,15 +1,10 @@
-"""
-Summary of other.py
-
-This module is part of the AVATARARTS ecosystem.
-For more information about the AVATARARTS project, see the main documentation.
-"""
-
 import csv
 import os
 import re
+import sys
 from datetime import datetime
 
+from exclude_patterns import FULL_EXCLUDED_PATTERNS
 
 # Constants
 LAST_DIRECTORY_FILE = "other.txt"
@@ -54,30 +49,7 @@ def format_file_size(size_in_bytes):
 def generate_dry_run_csv(directories, csv_path):
     rows = []
 
-    # Regex patterns for exclusions
-    excluded_patterns = [
-        r"^\..*",  # Hidden files and directories
-        r".*\/venv\/.*",  # venv directories
-        r".*\/\.venv\/.*",  # .venv directories
-        r".*\/my_global_venv\/.*",  # venv directories
-        r".*\/simplegallery\/.*",
-        r".*\/avatararts\/.*",
-        r".*\/github\/.*",
-        r".*\/Documents\/gitHub\/.*",  # Specific gitHub directory
-        r".*\/\.my_global_venv\/.*",  # .venv directories
-        r".*\/node\/.*",  # Any directory named node
-        r".*\/Movies\/capcut\/.*",
-        r".*\/miniconda3\/.*",
-        r".*\/Movies\/movavi\/.*",
-        r".*\/env\/.*",  # env directories
-        r".*\/\.env\/.*",  # .env directories
-        r".*\/Library\/.*",  # Library directories
-        r".*\/\.config\/.*",  # .config directories
-        r".*\/\.spicetify\/.*",  # .spicetify directories
-        r".*\/\.gem\/.*",  # .gem directories
-        r".*\/\.zprofile\/.*",  # .zprofile directories
-        r"^.*\/\..*",  # Any file or directory starting with a dot
-    ]
+    excluded_patterns = FULL_EXCLUDED_PATTERNS
 
     file_types = {
         ".ttf": "Fonts",
@@ -199,45 +171,50 @@ def load_last_directory():
 
 
 if __name__ == "__main__":
-    directories = []
-    last_directory = load_last_directory()
+    # Accept command line arguments for directories
+    if len(sys.argv) > 1:
+        directories = sys.argv[1:]
+    else:
+        # Fallback to interactive mode
+        directories = []
+        last_directory = load_last_directory()
 
-    while True:
-        if last_directory:
-            use_last = (
-                input(
-                    f"Do you want to use the last directory '{last_directory}'? (Y/N): "
+        while True:
+            if last_directory:
+                use_last = (
+                    input(
+                        f"Do you want to use the last directory '{last_directory}'? (Y/N): "
+                    )
+                    .strip()
+                    .lower()
                 )
-                .strip()
-                .lower()
-            )
-            if use_last == "y":
-                directories.append(last_directory)
-                break
+                if use_last == "y":
+                    directories.append(last_directory)
+                    break
+                else:
+                    source_directory = input(
+                        "Please enter a new source directory to scan for other common file types: "
+                    ).strip()
             else:
                 source_directory = input(
-                    "Please enter a new source directory to scan for other common file types: "
+                    "Please enter a source directory to scan for other common file types: "
                 ).strip()
-        else:
-            source_directory = input(
-                "Please enter a source directory to scan for other common file types: "
-            ).strip()
 
-        if source_directory == "":
-            break
-        if os.path.isdir(source_directory):
-            directories.append(source_directory)
-            save_last_directory(source_directory)
-        else:
-            print(f"'{source_directory}' is not a valid directory. Please try again.")
+            if source_directory == "":
+                break
+            if os.path.isdir(source_directory):
+                directories.append(source_directory)
+                save_last_directory(source_directory)
+            else:
+                print(f"'{source_directory}' is not a valid directory. Please try again.")
 
     if directories:
+        print(f"Scanning directories: {directories}")
         current_date = datetime.now().strftime("%m-%d-%H:%M")
         csv_output_path = os.path.join(os.getcwd(), f"other-{current_date}.csv")
         csv_output_path = get_unique_file_path(csv_output_path)
 
         generate_dry_run_csv(directories, csv_output_path)
-        print(f"Dry run completed. Output saved to {csv_output_path}")
-        print(f"other_files-{current_date}.csv")
+        print(f"Other files scan completed. Output saved to {csv_output_path}")
     else:
         print("No directories were provided to scan.")

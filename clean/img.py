@@ -1,15 +1,10 @@
-"""
-Summary of img.py
-
-This module is part of the AVATARARTS ecosystem.
-For more information about the AVATARARTS project, see the main documentation.
-"""
-
 import csv
 import os
 import re
+import sys
 from datetime import datetime
 
+from exclude_patterns import FULL_EXCLUDED_PATTERNS
 from PIL import Image
 
 # Constants
@@ -63,30 +58,7 @@ def format_file_size(size_in_bytes):
 def generate_csv(directories, csv_path):
     rows = []
 
-    # Regex patterns for exclusions
-    excluded_patterns = [
-        r"^\..*",  # Hidden files and directories
-        r".*\/venv\/.*",  # venv directories
-        r".*\/\.venv\/.*",  # .venv directories
-        r".*\/my_global_venv\/.*",  # venv directories
-        r".*\/simplegallery\/.*",
-        r".*\/avatararts\/.*",
-        r".*\/github\/.*",
-        r".*\/Documents\/gitHub\/.*",  # Specific gitHub directory
-        r".*\/\.my_global_venv\/.*",  # .venv directories
-        r".*\/node\/.*",  # Any directory named node
-        r".*\/Movies\/capcut\/.*",
-        r".*\/miniconda3\/.*",
-        r".*\/Movies\/movavi\/.*",
-        r".*\/env\/.*",  # env directories
-        r".*\/\.env\/.*",  # .env directories
-        r".*\/Library\/.*",  # Library directories
-        r".*\/\.config\/.*",  # .config directories
-        r".*\/\.spicetify\/.*",  # .spicetify directories
-        r".*\/\.gem\/.*",  # .gem directories
-        r".*\/\.zprofile\/.*",  # .zprofile directories
-        r"^.*\/\..*",  # Any file or directory starting with a dot
-    ]
+    excluded_patterns = FULL_EXCLUDED_PATTERNS
 
     file_types = {
         ".jpg": "Image",
@@ -199,30 +171,36 @@ def load_last_directory():
 
 
 if __name__ == "__main__":
-    last_directory = load_last_directory()
-
-    if last_directory:
-        directories = [last_directory]
+    # Accept command line arguments for directories
+    if len(sys.argv) > 1:
+        directories = sys.argv[1:]
     else:
-        print(
-            "No last directory found. Please enter a source directory to scan for image files."
-        )
-        source_directory = input(
-            "Please enter a source directory to scan for image files: "
-        ).strip()
-        if os.path.isdir(source_directory):
-            directories = [source_directory]
-            save_last_directory(source_directory)
+        # Fallback to interactive mode
+        last_directory = load_last_directory()
+
+        if last_directory:
+            directories = [last_directory]
         else:
-            print(f"'{source_directory}' is not a valid directory. Exiting.")
-            exit(1)
+            print(
+                "No last directory found. Please enter a source directory to scan for image files."
+            )
+            source_directory = input(
+                "Please enter a source directory to scan for image files: "
+            ).strip()
+            if os.path.isdir(source_directory):
+                directories = [source_directory]
+                save_last_directory(source_directory)
+            else:
+                print(f"'{source_directory}' is not a valid directory. Exiting.")
+                exit(1)
 
     if directories:
+        print(f"Scanning directories: {directories}")
         current_date = datetime.now().strftime("%m-%d-%H-%M")
         csv_output_path = os.path.join(os.getcwd(), f"image_data-{current_date}.csv")
         csv_output_path = get_unique_file_path(csv_output_path)
 
         generate_csv(directories, csv_output_path)
-        print(f"Dry run completed. Output saved to {csv_output_path}")
+        print(f"Image scan completed. Output saved to {csv_output_path}")
     else:
         print("No directories were provided to scan.")

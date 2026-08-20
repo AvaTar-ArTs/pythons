@@ -1,0 +1,68 @@
+"""
+Unit tests for configuration management.
+"""
+
+import pytest
+from core.config import UpscaleConfig
+
+
+class TestUpscaleConfig:
+    """Tests for UpscaleConfig dataclass."""
+
+    def test_default_config(self):
+        """Test default configuration values."""
+        config = UpscaleConfig()
+        assert config.max_file_size_mb == 9.0
+        assert config.target_dpi == 300
+        assert config.base_size == 2000
+        assert config.max_dimension == 4000
+        assert config.quality_range == (90, 20)
+        assert config.quality_step == 10
+        assert config.batch_size == 5
+
+    def test_custom_config(self):
+        """Test custom configuration."""
+        config = UpscaleConfig(
+            max_file_size_mb=10.0,
+            target_dpi=150,
+            batch_size=10
+        )
+        assert config.max_file_size_mb == 10.0
+        assert config.target_dpi == 150
+        assert config.batch_size == 10
+
+    def test_aspect_ratios(self):
+        """Test aspect ratios dictionary."""
+        config = UpscaleConfig()
+        assert '16x9' in config.aspect_ratios
+        assert '1x1' in config.aspect_ratios
+        assert len(config.aspect_ratios) == 9
+
+    def test_get_aspect_ratio(self):
+        """Test get_aspect_ratio method."""
+        config = UpscaleConfig()
+        width, height, name = config.get_aspect_ratio('16x9')
+        assert width == 16
+        assert height == 9
+        assert name == '16:9'
+
+    def test_get_aspect_ratio_default(self):
+        """Test get_aspect_ratio with invalid key."""
+        config = UpscaleConfig()
+        width, height, name = config.get_aspect_ratio('invalid')
+        assert width == 1
+        assert height == 1
+        assert name == '1:1'
+
+    def test_list_aspect_ratios(self):
+        """Test list_aspect_ratios method."""
+        config = UpscaleConfig()
+        ratios = config.list_aspect_ratios()
+        assert '16x9' in ratios
+        assert ratios['16x9'] == '16:9'
+        assert len(ratios) == 9
+
+
+if __name__ == '__main__':
+    pytest.main([__file__, '-v'])
+

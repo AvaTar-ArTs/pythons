@@ -183,7 +183,7 @@ class TrendingContentGenerator:
             logger.error(f"Database initialization failed: {e}")
             raise
 
-    def generate_trending_content(:
+    def generate_trending_content(
         self, keyword: str, content_type: str = "blog_post"
     ) -> SEOContent:
         """Generate SEO-optimized content for trending keyword"""
@@ -571,7 +571,7 @@ class TrendingContentGenerator:
         except Exception as e:
             logger.error(f"Failed to save content: {e}")
 
-    def batch_generate_content(:
+    def batch_generate_content(
         self, keywords: List[str], content_type: str = "blog_post"
     ) -> List[SEOContent]:
         """Generate content for multiple keywords"""

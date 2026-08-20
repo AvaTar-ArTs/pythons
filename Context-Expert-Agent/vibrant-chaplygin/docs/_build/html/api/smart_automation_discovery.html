@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Automation Discovery API &mdash; AI Automation Ecosystem 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AI Automation Ecosystem
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#verify-setup">Verify Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#your-first-automation">Your First Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Systems Overview:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../systems/overview.html">Systems Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../systems/overview.html#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systems/overview.html#system-components">System Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#ai-orchestrator-ultimate">1. AI Orchestrator Ultimate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#intelligent-workflow-builder">2. Intelligent Workflow Builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#smart-automation-discovery">3. Smart Automation Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#unified-content-orchestrator">4. Unified Content Orchestrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#deep-content-analyzer">5. Deep Content Analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#typescript-python-bridge">6. TypeScript-Python Bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#complete-media-prompt-analyzer">7. Complete Media Prompt Analyzer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guides/youtube_automation.html">YouTube Automation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#setup">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#load-environment">1. Load Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#initialize-orchestrator">2. Initialize Orchestrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#generate-video-content">3. Generate Video Content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ts_python_bridge.html">TypeScript-Python Bridge API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#key-features">Key Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#module-reference">Module Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ts_python_bridge.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ts_python_bridge.html#advanced-usage">Advanced Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AI Automation Ecosystem</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Smart Automation Discovery API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/smart_automation_discovery.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="smart-automation-discovery-api">
+<h1>Smart Automation Discovery API<a class="headerlink" href="#smart-automation-discovery-api" title="Link to this heading"></a></h1>
+<p>Discovers automation opportunities</p>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Finds 8+ automation opportunities</p></li>
+<li><p>Estimates $300K+/year value</p></li>
+<li><p>Generates implementation plans</p></li>
+<li><p>ROI analysis</p></li>
+</ul>
+</section>
+<section id="module-SMART_AUTOMATION_DISCOVERY">
+<span id="module-reference"></span><h2>Module Reference<a class="headerlink" href="#module-SMART_AUTOMATION_DISCOVERY" title="Link to this heading"></a></h2>
+<section id="smart-automation-discovery-engine">
+<h3>🎯 SMART AUTOMATION DISCOVERY ENGINE<a class="headerlink" href="#smart-automation-discovery-engine" title="Link to this heading"></a></h3>
+<p>Uses ALL 12 AI APIs to intelligently discover automation opportunities
+across your entire system (~/, ~/pythons, projects)</p>
+<p>Based on deep analysis:
+- 562,868 files (92.60 GB)
+- 63,804 Python files
+- 17,071 Markdown files
+- 24,900 JSON files
+- 35,581 images
+- 1,921 audio files</p>
+<p>Discovers:
+- 🔄 Repetitive tasks that can be automated
+- 🔗 Integration opportunities between tools
+- ⚡ Performance optimization possibilities
+- 🤖 AI enhancement opportunities
+- 💡 Novel workflow combinations</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SMART_AUTOMATION_DISCOVERY.</span></span><span class="sig-name descname"><span class="pre">AutomationOpportunity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">id:</span> <span class="pre">str,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">description:</span> <span class="pre">str,</span> <span class="pre">category:</span> <span class="pre">str,</span> <span class="pre">impact_score:</span> <span class="pre">float,</span> <span class="pre">complexity:</span> <span class="pre">str,</span> <span class="pre">time_saved_monthly:</span> <span class="pre">int,</span> <span class="pre">ai_models_suggested:</span> <span class="pre">~typing.List[str],</span> <span class="pre">implementation_steps:</span> <span class="pre">~typing.List[str],</span> <span class="pre">files_involved:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;,</span> <span class="pre">estimated_roi:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#AutomationOpportunity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>An identified automation opportunity</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.category">
+<span class="sig-name descname"><span class="pre">category</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.category" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.impact_score">
+<span class="sig-name descname"><span class="pre">impact_score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.impact_score" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.complexity">
+<span class="sig-name descname"><span class="pre">complexity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.complexity" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.time_saved_monthly">
+<span class="sig-name descname"><span class="pre">time_saved_monthly</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.time_saved_monthly" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.ai_models_suggested">
+<span class="sig-name descname"><span class="pre">ai_models_suggested</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.ai_models_suggested" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.implementation_steps">
+<span class="sig-name descname"><span class="pre">implementation_steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.implementation_steps" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.files_involved">
+<span class="sig-name descname"><span class="pre">files_involved</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.files_involved" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.estimated_roi">
+<span class="sig-name descname"><span class="pre">estimated_roi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.estimated_roi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">id:</span> <span class="pre">str,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">description:</span> <span class="pre">str,</span> <span class="pre">category:</span> <span class="pre">str,</span> <span class="pre">impact_score:</span> <span class="pre">float,</span> <span class="pre">complexity:</span> <span class="pre">str,</span> <span class="pre">time_saved_monthly:</span> <span class="pre">int,</span> <span class="pre">ai_models_suggested:</span> <span class="pre">~typing.List[str],</span> <span class="pre">implementation_steps:</span> <span class="pre">~typing.List[str],</span> <span class="pre">files_involved:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;,</span> <span class="pre">estimated_roi:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SMART_AUTOMATION_DISCOVERY.</span></span><span class="sig-name descname"><span class="pre">SmartAutomationDiscovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">home_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/Users/steven'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Discovers automation opportunities using AI analysis</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">home_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/Users/steven'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.analyze_home_directory">
+<span class="sig-name descname"><span class="pre">analyze_home_directory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.analyze_home_directory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.analyze_home_directory" title="Link to this definition"></a></dt>
+<dd><p>Analyze home directory structure and file distribution</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.analyze_pythons_directory">
+<span class="sig-name descname"><span class="pre">analyze_pythons_directory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.analyze_pythons_directory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.analyze_pythons_directory" title="Link to this definition"></a></dt>
+<dd><p>Analyze pythons directory for patterns</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.discover_content_pipelines">
+<span class="sig-name descname"><span class="pre">discover_content_pipelines</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity" title="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity"><span class="pre">AutomationOpportunity</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.discover_content_pipelines"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.discover_content_pipelines" title="Link to this definition"></a></dt>
+<dd><p>Discover content creation pipelines that can be automated</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.prioritize_opportunities">
+<span class="sig-name descname"><span class="pre">prioritize_opportunities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity" title="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity"><span class="pre">AutomationOpportunity</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.prioritize_opportunities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.prioritize_opportunities" title="Link to this definition"></a></dt>
+<dd><p>Prioritize opportunities using AI analysis</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.generate_implementation_plan">
+<span class="sig-name descname"><span class="pre">generate_implementation_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opportunity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity" title="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity"><span class="pre">AutomationOpportunity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.generate_implementation_plan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.generate_implementation_plan" title="Link to this definition"></a></dt>
+<dd><p>Generate detailed implementation plan using Claude</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.generate_report">
+<span class="sig-name descname"><span class="pre">generate_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.generate_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.generate_report" title="Link to this definition"></a></dt>
+<dd><p>Generate comprehensive automation discovery report</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.save_implementation_plans">
+<span class="sig-name descname"><span class="pre">save_implementation_plans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'automation_plans'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.save_implementation_plans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.SmartAutomationDiscovery.save_implementation_plans" title="Link to this definition"></a></dt>
+<dd><p>Generate and save implementation plans for all opportunities</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="SMART_AUTOMATION_DISCOVERY.main">
+<span class="sig-prename descclassname"><span class="pre">SMART_AUTOMATION_DISCOVERY.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SMART_AUTOMATION_DISCOVERY.main" title="Link to this definition"></a></dt>
+<dd><p>Main execution</p>
+</dd></dl>
+
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SMART_AUTOMATION_DISCOVERY.</span></span><span class="sig-name descname"><span class="pre">SmartAutomationDiscovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">home_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/Users/steven'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Discovers automation opportunities using AI analysis</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">home_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/Users/steven'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">analyze_home_directory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.analyze_home_directory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Analyze home directory structure and file distribution</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">analyze_pythons_directory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.analyze_pythons_directory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Analyze pythons directory for patterns</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">discover_content_pipelines</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity" title="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity"><span class="pre">AutomationOpportunity</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.discover_content_pipelines"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Discover content creation pipelines that can be automated</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">prioritize_opportunities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity" title="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity"><span class="pre">AutomationOpportunity</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.prioritize_opportunities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>Prioritize opportunities using AI analysis</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">generate_implementation_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opportunity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#SMART_AUTOMATION_DISCOVERY.AutomationOpportunity" title="SMART_AUTOMATION_DISCOVERY.AutomationOpportunity"><span class="pre">AutomationOpportunity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.generate_implementation_plan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Generate detailed implementation plan using Claude</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">generate_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.generate_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Generate comprehensive automation discovery report</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">save_implementation_plans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'automation_plans'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/SMART_AUTOMATION_DISCOVERY.html#SmartAutomationDiscovery.save_implementation_plans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id8" title="Link to this definition"></a></dt>
+<dd><p>Generate and save implementation plans for all opportunities</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="basic-usage">
+<h3>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">SMART_AUTOMATION_DISCOVERY</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Example usage here</span>
+</pre></div>
+</div>
+</section>
+<section id="advanced-usage">
+<h3>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Advanced example here</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h2>
+<p>Full API documentation with all methods and parameters.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Advanced AI Systems.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

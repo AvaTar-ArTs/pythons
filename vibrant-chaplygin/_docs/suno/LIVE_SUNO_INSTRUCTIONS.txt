@@ -1,0 +1,56 @@
+?? LIVE SUNO EXTRACTION - UPDATED SCRIPT
+=========================================
+
+The new script is ALREADY IN YOUR CLIPBOARD!
+
+INSTRUCTIONS:
+=============
+
+1. Go to: https://suno.com/library
+   (Must be logged in!)
+
+2. Open Dev Console:
+   Cmd + Option + I (Mac)
+   F12 (Windows)
+
+3. Paste script:
+   Cmd + V
+   Press Enter
+
+4. WAIT - It will:
+   ? Auto-scroll to load all songs
+   ?? Extract all data
+   ?? Download CSV & TXT files
+   ? Done!
+
+5. Check ~/Downloads/ for:
+   ? suno-collection-[timestamp].csv
+   ? suno-collection-[timestamp].txt
+
+TROUBLESHOOTING:
+================
+
+If it shows "0 songs":
+1. Make sure you're on suno.com/library
+2. Make sure songs are visible on page
+3. Try scrolling down manually first
+4. Wait for page to fully load
+5. Paste script again
+
+If it doesn't scroll:
+1. Click on the page first
+2. Paste script
+3. Watch console for progress
+
+EXPECTED OUTPUT:
+================
+
+   Scroll 1: 20 songs loaded...
+   Scroll 2: 40 songs loaded...
+   ...
+   ? Finished! Loaded 500 songs
+   ? Extracted 500 songs!
+   ? Downloaded: suno-collection-[timestamp].csv
+
+? READY TO PASTE!
+Script is in your clipboard!

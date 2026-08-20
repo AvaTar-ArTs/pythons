@@ -8,18 +8,17 @@ This module is part of the AVATARARTS ecosystem.
 For more information about the AVATARARTS project, see the main documentation.
 """
 
-from openai import OpenAI
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 import os
 import subprocess
 
 from dotenv import load_dotenv
+from openai import OpenAI
 
-# Load environment variables from .env (make sure your OPENAI_API_KEY is stored here)
 # Load environment variables from .env (make sure your OPENAI_API_KEY is stored here)
 env_path = "/Users/steven/.env"
 load_dotenv(dotenv_path=env_path)
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Directory paths
 VIDEO_DIR = (

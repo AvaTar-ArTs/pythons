@@ -108,7 +108,7 @@ class AIReceptionist:
         """)
 
         # Create appointments table
-        cursor.execute('\''
+        cursor.execute("""
             CREATE TABLE IF NOT EXISTS appointments (
                 id TEXT PRIMARY KEY,
                 client_id TEXT NOT NULL,
@@ -266,19 +266,19 @@ class AIReceptionist:
             logger.error(f"Failed to get client by phone: {e}")
             return None
 
-    def generate_ai_response(:
+    def generate_ai_response(
         self,
         client: BusinessClient,
         caller_message: str,
         call_context: Dict[str, Any] = None,
     ) -> str:
-        """Generate AI response for incoming call'\''
+        """Generate AI response for incoming call"""
         if not self.openai_client:
             return "I'm sorry, the AI service is currently unavailable. Please call back later."
 
         try:
             # Build system prompt based on client configuration
-            system_prompt = f'\''
+            system_prompt = f"""
             You are an AI receptionist for {client.name}, a {client.industry} business.
             
             Business Information:
@@ -306,7 +306,7 @@ class AIReceptionist:
             
             Custom Responses:
             {json.dumps(client.custom_responses, indent=2)}
-            '\''
+            """
 
             # Add call context if available
             context_info = ""
@@ -328,7 +328,7 @@ class AIReceptionist:
             logger.error(f"Failed to generate AI response: {e}")
             return "I'm sorry, I'm having trouble processing your request. Please call back later."
 
-    def book_appointment(:
+    def book_appointment(
         self,
         client_id: str,
         customer_name: str,
@@ -374,7 +374,7 @@ class AIReceptionist:
             logger.error(f"Failed to book appointment: {e}")
             return False
 
-    def log_call(:
+    def log_call(
         self,
         client_id: str,
         caller_phone: str,

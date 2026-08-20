@@ -1,0 +1,372 @@
+?? SUNO CSV COMPARISON REPORT
+======================================================================
+Generated: 2025-11-05 00:40:59
+
+FILES ANALYZED (16):
+----------------------------------------------------------------------
+
+Suno Master-0ct2025 - Suno-ScrapeD - songs_master_combined(1).csv
+  Songs: 466
+  Size: 310.3 KB
+
+Suno Master-0ct2025 - Suno-ScrapeD - songs_master_combined.csv
+  Songs: 359
+  Size: 204.8 KB
+
+Suno-ScrapeD - songs2_extracted.csv
+  Songs: 359
+  Size: 204.8 KB
+
+Suno-ScrapeD - songs_master_analytical.csv
+  Songs: 340
+  Size: 204.8 KB
+
+Suno-ScrapeD - songs_master_combined.csv
+  Songs: 1092
+  Size: 710.3 KB
+
+dataset_suno-ai-scraper_05-48-24-634.csv
+  Songs: 30
+  Size: 34.4 KB
+
+dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+  Songs: 30
+  Size: 34.4 KB
+
+dataset_suno-ai-scraper_21-09-00-670.csv
+  Songs: 48
+  Size: 50.4 KB
+
+suno-9-2025 - songs_master_combined.csv
+  Songs: 540
+  Size: 342.9 KB
+
+suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+  Songs: 107
+  Size: 108.6 KB
+
+suno-scrape - short-dataset.csv
+  Songs: 107
+  Size: 108.6 KB
+
+suno_from_html.csv
+  Songs: 510
+  Size: 119.2 KB
+
+suno_links.csv
+  Songs: 26
+  Size: 1.7 KB
+
+suno_links_full_schema.csv
+  Songs: 26
+  Size: 2.1 KB
+
+suno_merged_master_20250904-143205.csv
+  Songs: 754
+  Size: 621.2 KB
+
+
+SUMMARY:
+----------------------------------------------------------------------
+Total songs (all files): 4901
+Unique songs: 569
+Duplicates: 4332
+
+
+DUPLICATE ANALYSIS:
+----------------------------------------------------------------------
+
+Love in Imperfection (Remastered)2
+  ID: 438c6cbf-db00-4454-b498-533d68d73599
+  Found in 14 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Love in Imperfection (Remastered)
+  ID: 88d099ac-41b9-4686-9952-21d648a38602
+  Found in 14 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+No More Love Songs No More Lies v4-2
+  ID: 32eaaf75-05a9-461d-8108-c13dc2b69c4d
+  Found in 14 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Echoes of Yesterday (Remastered)2
+  ID: b485474e-2a2a-4f6c-a8f9-d709c6c294f3
+  Found in 14 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Echoes of Yesterday (Remastered)
+  ID: 898a4878-3aa9-4a6d-aa29-aa3f8b59b10e
+  Found in 14 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+in This aLLey Where i HiDe2 (Remastered)
+  ID: ec502031-1217-4922-8765-8fefeee1e459
+  Found in 14 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Love is rubbish Let's Get Trashy
+  ID: 6e1c96f3-efca-4884-a4c4-b85f30aab33f
+  Found in 14 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Echoes of Moonlight (Remastered)
+  ID: daa4c26a-48f9-427c-a9c2-7bd7a8338825
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Sammy's Serenade (Remastered)2
+  ID: 13d7cb89-85fc-426c-be95-f46af94d0c30
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Sammy's Serenade (Remastered)
+  ID: 3a51190e-a556-4d69-bcbb-3df47162c924
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Kings and Queens of Litter (Remastered)
+  ID: 57838ee5-673a-4243-bbdb-fc96909da1c5
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Kings and Queens of Litter (Remastered)1
+  ID: 056f0d6b-8b18-4e5d-a6f6-d2185b5f5da3
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+in This aLLey Where i HiDe (Remastered)
+  ID: 11d1abc7-f61d-4f4a-bd1f-6493c9d815c2
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Junkyard Symphony Scraps2 (Remastered)
+  ID: bfd85f89-0303-4520-8d65-889705ad9574
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Junkyard Symphony Scraps (Remastered)
+  ID: b90da645-e515-4377-9b05-01fe8d38f6a3
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Recycled Symphony2.1 (Remastered)
+  ID: 9e332f32-de31-40bb-9cec-c4b195b81b82
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Recycled Symphony2 (Remastered)
+  ID: 966b6bf8-ec0a-4206-8a34-02c87ac753b1
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+The Alley King (Remastered)
+  ID: eb53d54c-0e19-4e54-85ec-e264d34fb87d
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+The Alley King (Remastered)1
+  ID: a510338e-7868-45fe-90d1-c9bfbe1b3ff3
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+
+Heartbreak hope and memories-v4-2-1
+  ID: d3fc0768-8405-40bd-a647-56366ba870c6
+  Found in 9 files:
+    - dataset_suno-ai-scraper_05-48-24-634.csv
+    - suno_from_html.csv
+    - dataset_suno-ai-scraper_2025-03-08_05-48-24-634.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv
+    - suno-scrape - short-dataset.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno_merged_master_20250904-143205.csv
+    - suno-scrape - dataset_suno-ai-scraper_2025-03-08_21-09-00-670.csv

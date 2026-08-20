@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unified Content Orchestrator API &mdash; AI Automation Ecosystem 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AI Automation Ecosystem
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#verify-setup">Verify Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#your-first-automation">Your First Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Systems Overview:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../systems/overview.html">Systems Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../systems/overview.html#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systems/overview.html#system-components">System Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#ai-orchestrator-ultimate">1. AI Orchestrator Ultimate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#intelligent-workflow-builder">2. Intelligent Workflow Builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#smart-automation-discovery">3. Smart Automation Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#unified-content-orchestrator">4. Unified Content Orchestrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#deep-content-analyzer">5. Deep Content Analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#typescript-python-bridge">6. TypeScript-Python Bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../systems/overview.html#complete-media-prompt-analyzer">7. Complete Media Prompt Analyzer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guides/youtube_automation.html">YouTube Automation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#setup">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#load-environment">1. Load Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#initialize-orchestrator">2. Initialize Orchestrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guides/youtube_automation.html#generate-video-content">3. Generate Video Content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/youtube_automation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ts_python_bridge.html">TypeScript-Python Bridge API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#key-features">Key Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#module-reference">Module Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ts_python_bridge.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ts_python_bridge.html#advanced-usage">Advanced Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ts_python_bridge.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AI Automation Ecosystem</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Unified Content Orchestrator API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/unified_content_orchestrator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="unified-content-orchestrator-api">
+<h1>Unified Content Orchestrator API<a class="headerlink" href="#unified-content-orchestrator-api" title="Link to this heading"></a></h1>
+<p>Master integration system</p>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Make.com blueprint parsing</p></li>
+<li><p>TypeScript integration</p></li>
+<li><p>Multi-modal content generation</p></li>
+<li><p>YouTube/Instagram pipelines</p></li>
+</ul>
+</section>
+<section id="module-UNIFIED_CONTENT_ORCHESTRATOR">
+<span id="module-reference"></span><h2>Module Reference<a class="headerlink" href="#module-UNIFIED_CONTENT_ORCHESTRATOR" title="Link to this heading"></a></h2>
+<section id="unified-content-orchestrator">
+<h3>🎭 UNIFIED CONTENT ORCHESTRATOR<a class="headerlink" href="#unified-content-orchestrator" title="Link to this heading"></a></h3>
+<p>Integrates ALL your automation systems into one intelligent pipeline:
+- Python AI scripts (748+)
+- Make.com blueprints (YouTube, SEO, content generation)
+- TypeScript content awareness system
+- n8n workflows
+- 12 AI APIs (OpenAI, Claude, Grok, Groq, Gemini, etc.)</p>
+<p>Features:
+🔄 Make.com → Python workflow translation
+🧠 Deep content awareness (semantic + contextual)
+🎯 Multi-modal content generation
+📊 Cross-platform publishing (YouTube, Instagram, WordPress)
+⚡ Parallel processing with intelligent routing
+🎨 Image generation (Leonardo, DALL-E, Stability)
+🎵 Music generation (Suno) + transcription (Whisper)
+📈 SEO optimization + analytics</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UNIFIED_CONTENT_ORCHESTRATOR.</span></span><span class="sig-name descname"><span class="pre">ContentAsset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asset_type:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comments:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_metadata:</span> <span class="pre">~typing.Dict[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~typing.Any]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_scores:</span> <span class="pre">~typing.List[~typing.Dict[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float]]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding:</span> <span class="pre">~typing.List[float]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#ContentAsset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents a content asset (from TypeScript Asset interface)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.content">
+<span class="sig-name descname"><span class="pre">content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.content" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.asset_type">
+<span class="sig-name descname"><span class="pre">asset_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.asset_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.comments">
+<span class="sig-name descname"><span class="pre">comments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.comments" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.context_metadata">
+<span class="sig-name descname"><span class="pre">context_metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.context_metadata" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.tags">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.tags" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.tag_scores">
+<span class="sig-name descname"><span class="pre">tag_scores</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.tag_scores" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.embedding">
+<span class="sig-name descname"><span class="pre">embedding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.embedding" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asset_type:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comments:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_metadata:</span> <span class="pre">~typing.Dict[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">~typing.Any]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_scores:</span> <span class="pre">~typing.List[~typing.Dict[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float]]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding:</span> <span class="pre">~typing.List[float]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UNIFIED_CONTENT_ORCHESTRATOR.</span></span><span class="sig-name descname"><span class="pre">MakecomWorkflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#MakecomWorkflow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents a Make.com workflow (blueprint)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.modules">
+<span class="sig-name descname"><span class="pre">modules</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.modules" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.flow_type">
+<span class="sig-name descname"><span class="pre">flow_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.flow_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.input_source">
+<span class="sig-name descname"><span class="pre">input_source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.input_source" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.output_target">
+<span class="sig-name descname"><span class="pre">output_target</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.output_target" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UNIFIED_CONTENT_ORCHESTRATOR.</span></span><span class="sig-name descname"><span class="pre">ContentPipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ai_models_used</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">seo_optimized</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_modal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#ContentPipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A complete content generation pipeline</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.steps" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.ai_models_used">
+<span class="sig-name descname"><span class="pre">ai_models_used</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.ai_models_used" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.input_data">
+<span class="sig-name descname"><span class="pre">input_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.input_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.output_format">
+<span class="sig-name descname"><span class="pre">output_format</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.output_format" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.seo_optimized">
+<span class="sig-name descname"><span class="pre">seo_optimized</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.seo_optimized" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.multi_modal">
+<span class="sig-name descname"><span class="pre">multi_modal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.multi_modal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ai_models_used</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">seo_optimized</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_modal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UNIFIED_CONTENT_ORCHESTRATOR.</span></span><span class="sig-name descname"><span class="pre">UnifiedContentOrchestrator</span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>The ultimate content orchestration system</p>
+<p>Combines:
+- Make.com workflows
+- Python automation scripts
+- TypeScript content awareness
+- Multi-AI processing</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.parse_makecom_blueprint">
+<span class="sig-name descname"><span class="pre">parse_makecom_blueprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blueprint_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow" title="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow"><span class="pre">MakecomWorkflow</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.parse_makecom_blueprint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.parse_makecom_blueprint" title="Link to this definition"></a></dt>
+<dd><p>Parse Make.com blueprint JSON and convert to executable workflow</p>
+<p>Example blueprint: YouTube Video Description Generator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.makecom_to_python">
+<span class="sig-name descname"><span class="pre">makecom_to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow" title="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow"><span class="pre">MakecomWorkflow</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.makecom_to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.makecom_to_python" title="Link to this definition"></a></dt>
+<dd><p>Convert Make.com workflow to Python code</p>
+<p>Translates visual workflow to executable Python</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.deep_content_analysis">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deep_content_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset"><span class="pre">ContentAsset</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset"><span class="pre">ContentAsset</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.deep_content_analysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.deep_content_analysis" title="Link to this definition"></a></dt>
+<dd><p>Deep content-aware analysis (integrates with TypeScript system)</p>
+<p>Implements:
+- Semantic embedding
+- Contextual analysis
+- Tag inference
+- Confidence calibration</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.generate_youtube_content">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_youtube_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_descriptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.generate_youtube_content"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.generate_youtube_content" title="Link to this definition"></a></dt>
+<dd><p>Complete YouTube content generation pipeline</p>
+<p>Mimics Make.com blueprint but with enhanced AI</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.create_instagram_pipeline">
+<span class="sig-name descname"><span class="pre">create_instagram_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline"><span class="pre">ContentPipeline</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.create_instagram_pipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.create_instagram_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Create Instagram content generation pipeline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.create_music_pipeline">
+<span class="sig-name descname"><span class="pre">create_music_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline"><span class="pre">ContentPipeline</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.create_music_pipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.create_music_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Create music production pipeline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.export_to_n8n">
+<span class="sig-name descname"><span class="pre">export_to_n8n</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipeline</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline"><span class="pre">ContentPipeline</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.export_to_n8n"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.UnifiedContentOrchestrator.export_to_n8n" title="Link to this definition"></a></dt>
+<dd><p>Export pipeline to n8n workflow JSON</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="UNIFIED_CONTENT_ORCHESTRATOR.main">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UNIFIED_CONTENT_ORCHESTRATOR.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UNIFIED_CONTENT_ORCHESTRATOR.main" title="Link to this definition"></a></dt>
+<dd><p>Demo of the unified orchestrator</p>
+</dd></dl>
+
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UNIFIED_CONTENT_ORCHESTRATOR.</span></span><span class="sig-name descname"><span class="pre">UnifiedContentOrchestrator</span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>The ultimate content orchestration system</p>
+<p>Combines:
+- Make.com workflows
+- Python automation scripts
+- TypeScript content awareness
+- Multi-AI processing</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">parse_makecom_blueprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blueprint_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow" title="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow"><span class="pre">MakecomWorkflow</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.parse_makecom_blueprint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Parse Make.com blueprint JSON and convert to executable workflow</p>
+<p>Example blueprint: YouTube Video Description Generator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">makecom_to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow" title="UNIFIED_CONTENT_ORCHESTRATOR.MakecomWorkflow"><span class="pre">MakecomWorkflow</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.makecom_to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Convert Make.com workflow to Python code</p>
+<p>Translates visual workflow to executable Python</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deep_content_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset"><span class="pre">ContentAsset</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentAsset"><span class="pre">ContentAsset</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.deep_content_analysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Deep content-aware analysis (integrates with TypeScript system)</p>
+<p>Implements:
+- Semantic embedding
+- Contextual analysis
+- Tag inference
+- Confidence calibration</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id5">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_youtube_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_descriptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.generate_youtube_content"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>Complete YouTube content generation pipeline</p>
+<p>Mimics Make.com blueprint but with enhanced AI</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">create_instagram_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline"><span class="pre">ContentPipeline</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.create_instagram_pipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Create Instagram content generation pipeline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">create_music_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline"><span class="pre">ContentPipeline</span></a></span></span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.create_music_pipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Create music production pipeline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">export_to_n8n</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipeline</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline" title="UNIFIED_CONTENT_ORCHESTRATOR.ContentPipeline"><span class="pre">ContentPipeline</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UNIFIED_CONTENT_ORCHESTRATOR.html#UnifiedContentOrchestrator.export_to_n8n"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id8" title="Link to this definition"></a></dt>
+<dd><p>Export pipeline to n8n workflow JSON</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="basic-usage">
+<h3>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">UNIFIED_CONTENT_ORCHESTRATOR</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Example usage here</span>
+</pre></div>
+</div>
+</section>
+<section id="advanced-usage">
+<h3>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Advanced example here</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h2>
+<p>Full API documentation with all methods and parameters.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Advanced AI Systems.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

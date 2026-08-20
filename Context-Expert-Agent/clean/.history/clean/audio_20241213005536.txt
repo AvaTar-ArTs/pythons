@@ -1,0 +1,2 @@
+/Users/steven/Music/NocTurnE-meLoDieS
+        r".*\/Documents\/gitHub\/.*",  # Specific gitHub directory

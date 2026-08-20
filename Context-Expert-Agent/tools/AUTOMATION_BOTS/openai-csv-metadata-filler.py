@@ -1,0 +1,153 @@
+import csv
+import json
+import logging
+import os
+from pathlib import Path
+from pathlib import Path as PathLib
+
+from dotenv import load_dotenv
+from tqdm import tqdm
+
+from openai import OpenAI
+
+
+def load_env_d():
+    """Load all .env files from ~/.env.d directory (sophisticated pattern from youtube-load.py)"""
+    env_d_path = PathLib.home() / ".env.d"
+    if env_d_path.exists():
+        for env_file in env_d_path.glob("*.env"):
+            try:
+                with open(env_file) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            # Handle export statements
+                            line = line.removeprefix("export ")
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip().strip('"').strip("'")
+                            # Skip source statements
+                            if not key.startswith("source"):
+                                os.environ[key] = value
+            except Exception as e:
+                # Logger not initialized yet, use print
+                print(f"Warning: Error loading {env_file}: {e}")
+
+
+load_env_d()
+
+# Also load from ~/.env as fallback using dotenv
+try:
+    load_dotenv(os.path.expanduser("~/.env"))
+except ImportError:
+
+    # Load API keys from ~/.env.d/
+
+    for env_file in env_dir.glob("*.env"):
+        load_dotenv(env_file)
+
+
+logger = logging.getLogger(__name__)
+
+
+# Constants
+CONSTANT_200 = 200
+
+
+# CONFIG
+load_dotenv(os.path.expanduser("~/.env"))
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=OPENAI_API_KEY)
+CSV_PATH = Path(
+    str(Path.home())
+    + "/Documents/python/clean/CSV/prompts_expanded_image_data-05-30-22-21.csv",
+)
+OUT_CSV = Path(
+    str(Path.home())
+    + "/Documents/python/clean/CSV/filled_prompts_expanded_image_data-05-30-22-21.csv",
+)
+LOG_PATH = Path(str(Path.home()) + "/Documents/python/clean/CSV/fill_log.txt")
+
+# List analytic fields and prompt fields to fill
+ANALYSIS_FIELDS = [
+    "main_subject",
+    "style",
+    "color_palette",
+    "tags",
+    "orientation",
+    "suggested_products",
+    "SEO_title",
+    "SEO_description",
+    "emotion",
+    "safety_rating",
+    "dominant_keyword",
+]
+PROMPT_PREFIX = "Prompt_"
+
+
+def gpt_fill(context_dict, field, style=None):
+    """gpt_fill function."""
+    sys_prompt = (
+        "You are a creative AI for print-on-demand design and SEO. "
+        "Given image info and the current row's context, fill in the missing field with a relevant, detailed, SEO-optimized answer."
+    )
+    if style:
+        user_prompt = (
+            f"Given the context: {json.dumps(context_dict)}\n"
+            f"Generate a product-ready, descriptive, SEO-friendly image prompt for the style: '{style}'."
+        )
+    else:
+        user_prompt = (
+            f"Given the context: {json.dumps(context_dict)}\n"
+            f"Generate a creative and SEO-optimized value for the field '{field}'."
+        )
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": sys_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        max_tokens=CONSTANT_200,
+        temperature=0.8,
+    )
+    return response.choices[0].message.content.strip()
+
+    """fill_missing_fields function."""
+
+
+def fill_missing_fields(in_csv, out_csv, log_file):
+    with (
+        open(in_csv, newline="", encoding="utf-8") as infile,
+        open(out_csv, "w", newline="", encoding="utf-8") as outfile,
+        open(log_file, "w", encoding="utf-8") as logf,
+    ):
+        reader = csv.DictReader(infile)
+        fieldnames = reader.fieldnames or []
+        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for idx, row in enumerate(
+            tqdm(reader, desc="Filling missing fields", unit="row"),
+        ):
+            context = {k: v for k, v in row.items() if v.strip()}
+            # Fill missing analytic fields
+            for field in ANALYSIS_FIELDS:
+                if field in row and not row[field].strip():
+                    filled = gpt_fill(context, field)
+                    row[field] = filled
+                    logf.write(f"Row {idx+2}, field '{field}' filled: {filled}\n")
+                    context[field] = filled
+            # Fill missing prompt columns
+            for field in fieldnames:
+                if field.startswith(PROMPT_PREFIX) and not row[field].strip():
+                    style = field.replace(PROMPT_PREFIX, "")
+                    filled = gpt_fill(context, field, style=style)
+                    row[field] = filled
+                    logf.write(f"Row {idx+2}, field '{field}' filled: {filled}\n")
+            writer.writerow(row)
+    logger.info(
+        f"\n✅ All missing fields filled. Output: {out_csv}\nLog of filled fields: {log_file}",
+    )
+
+
+if __name__ == "__main__":
+    fill_missing_fields(CSV_PATH, OUT_CSV, LOG_PATH)
