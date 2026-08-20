@@ -25,3 +25,5 @@ __pycache__/
 .env
 .env.d/
 *.log
+audit-repo.py
+repo_audit_log.csv
