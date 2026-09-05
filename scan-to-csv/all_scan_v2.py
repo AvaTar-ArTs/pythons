@@ -97,6 +97,9 @@ def _code_meta(path: str) -> dict:
 
 def scan_one(path: str, *, enable_dedup: bool = False,
              enable_media: bool = True) -> Optional[dict]:
+    # Do not inspect content through links that may escape the requested root.
+    if os.path.islink(path):
+        return None
     try:
         st = os.stat(path)
     except OSError:
@@ -137,11 +140,15 @@ def scan_one(path: str, *, enable_dedup: bool = False,
 # ── Main scan + write ─────────────────────────────────────────────
 
 def scan_and_write(directories, output_csv, *, enable_dedup=False,
-                   enable_media=True, max_workers=4,
-                   include_exts=None):
+                   enable_media=True, max_workers=4, include_exts=None,
+                   follow_root_symlinks=False):
     """Scan directories, write CSV, return (total, written)."""
     file_paths = []
     for top in directories:
+        if os.path.islink(top) and not follow_root_symlinks:
+            raise ValueError(
+                f"scan root is a symlink; refusing by default: {top}"
+            )
         if not os.path.isdir(top):
             print(f"Warning: not a directory: {top}", file=sys.stderr)
             continue
@@ -155,6 +162,8 @@ def scan_and_write(directories, output_csv, *, enable_dedup=False,
                 if include_exts and os.path.splitext(fname)[1].lower() not in include_exts:
                     continue
                 file_paths.append(fpath)
+    # Stable input order makes reports and duplicate ownership reproducible.
+    file_paths.sort()
     total = len(file_paths)
     print(f"Files to scan: {total:,}")
 
@@ -176,13 +185,15 @@ def scan_and_write(directories, output_csv, *, enable_dedup=False,
                 hash_to_paths[row["sha256"]].append(p)
             if i % 500 == 0:
                 print(f"  {i}/{total} scanned", flush=True)
+    rows.sort(key=lambda row: row["path"])
     print(f"  {len(rows):,} files scanned successfully")
 
     # O(1) dedup: path->index lookup once
     dup_count = 0
     if enable_dedup:
         path_to_idx = {r["path"]: idx for idx, r in enumerate(rows)}
-        for h, paths in hash_to_paths.items():
+        for h, paths in sorted(hash_to_paths.items()):
+            paths.sort()
             if len(paths) <= 1:
                 continue
             for p in paths[1:]:
@@ -257,12 +268,24 @@ def main():
     p.add_argument("--no-media", action="store_true", help="Skip media metadata")
     p.add_argument("--workers", type=int, default=4, help="Thread pool size")
     p.add_argument("--types", nargs="*", help="Only include extensions (e.g. .md .py)")
-    p.add_argument("--cleanup", action="store_true", help="Remove .bak / ~ backup files")
-    p.add_argument("--dry-run", action="store_true", help="With --cleanup: show, don't delete")
+    p.add_argument(
+        "--follow-root-symlink",
+        action="store_true",
+        help="Allow scan roots that are symlinks",
+    )
+    p.add_argument("--cleanup", action="store_true", help="Preview .bak / ~ backup cleanup")
+    p.add_argument(
+        "--apply-cleanup",
+        action="store_true",
+        help="Actually remove backup files selected by --cleanup",
+    )
+    p.add_argument("--dry-run", action="store_true", help="Compatibility alias for cleanup preview")
     args = p.parse_args()
 
+    if args.apply_cleanup and not args.cleanup:
+        p.error("--apply-cleanup requires --cleanup")
     if args.cleanup:
-        cleanup_backups(args.directories, dry_run=args.dry_run)
+        cleanup_backups(args.directories, dry_run=not args.apply_cleanup)
         return
 
     include_exts = None
@@ -270,13 +293,17 @@ def main():
         include_exts = {e.lower() if e.startswith(".") else f".{e.lower()}"
                         for e in args.types}
 
-    scan_and_write(
-        args.directories, args.output,
-        enable_dedup=args.dedup,
-        enable_media=not args.no_media,
-        max_workers=args.workers,
-        include_exts=include_exts,
-    )
+    try:
+        scan_and_write(
+            args.directories, args.output,
+            enable_dedup=args.dedup,
+            enable_media=not args.no_media,
+            max_workers=args.workers,
+            include_exts=include_exts,
+            follow_root_symlinks=args.follow_root_symlink,
+        )
+    except ValueError as error:
+        p.error(str(error))
 
 
 if __name__ == "__main__":

@@ -16,9 +16,11 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import json
 import os
 import re
 import sys
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -70,6 +72,11 @@ CATEGORIES_MAP = {
     ".pdf": "pdf",
     ".doc": "document",
     ".docx": "document",
+    ".ppt": "document",
+    ".pptx": "document",
+    ".xls": "document",
+    ".xlsx": "document",
+    ".ods": "document",
     ".txt": "text",
     ".odt": "document",
     ".rtf": "document",
@@ -128,7 +135,15 @@ SUPERPOWERS_CATEGORIES = {
 
 QUIET_MODE = False
 CONTENT_SAMPLE_BYTES = 64 * 1024
-GENERATED_OUTPUT_RE = re.compile(r"(?:.*-meta|enriched-.*)\.csv$", re.IGNORECASE)
+# Inventory inputs should not become inventory rows on a subsequent scan.
+# Keep this intentionally filename-based: a directory named "metadata" is
+# legitimate, while files such as pythons-meta.csv and docs-09-04-23:23.csv
+# are generated catalog artifacts.
+GENERATED_OUTPUT_RE = re.compile(
+    r"(?:.*-meta|enriched-.*|docs-\d{2}-\d{2}-\d{2}:\d{2}|"
+    r".*-scan-(?:audio|docs|images|other|videos)-.*)\.csv$",
+    re.IGNORECASE,
+)
 SENSITIVE_FILENAME_RE = re.compile(
     r"(?:^\.env(?:\..*)?$|credentials?|secrets?|tokens?|passwords?|api[_-]?keys?|apikeys?)",
     re.IGNORECASE,
@@ -351,36 +366,75 @@ def scan_and_enrich(
     directories: list[str],
     excluded_paths: set[str] | None = None,
     include_sensitive: bool = False,
+    follow_root_symlinks: bool = False,
 ) -> list[dict[str, Any]]:
     """Scan directories and enrich with metadata."""
     rows = []
     file_count = 0
+    skipped = Counter()
     excluded = {str(Path(path).expanduser().resolve()) for path in (excluded_paths or set())}
 
+    # Resolve and de-duplicate roots so overlapping arguments do not create
+    # duplicate rows (for example, /pythons and /pythons/scan-to-csv).
+    scan_roots: list[Path] = []
+    seen_roots: set[str] = set()
+
     for directory in directories:
-        directory_path = Path(directory).expanduser().resolve()
+        input_path = Path(directory).expanduser()
+        if input_path.is_symlink() and not follow_root_symlinks:
+            raise ValueError(
+                f"scan root is a symlink; refusing by default: {directory}"
+            )
+        directory_path = input_path.resolve()
         if not directory_path.is_dir():
             raise ValueError(f"scan target is not a readable directory: {directory}")
+        root_key = str(directory_path)
+        if root_key not in seen_roots:
+            seen_roots.add(root_key)
+            scan_roots.append(directory_path)
+
+    # If a parent and child were both supplied, the parent already covers the
+    # child.  Keeping the shallowest roots prevents duplicate CSV rows while
+    # preserving all requested content.
+    scan_roots.sort(key=lambda path: (len(path.parts), str(path).casefold()))
+    retained_roots: list[Path] = []
+    for candidate in scan_roots:
+        if any(candidate == parent or parent in candidate.parents for parent in retained_roots):
+            continue
+        retained_roots.append(candidate)
+    scan_roots = retained_roots
+
+    for directory_path in scan_roots:
 
         if not QUIET_MODE:
             print(f"📁 Scanning: {directory_path}")
 
-        for root, dirs, files in os.walk(directory_path):
+        for root, dirs, files in os.walk(directory_path, followlinks=False):
             filter_excluded_dirs(root, dirs, dir_patterns=DIR_EXCLUDES)
+            dirs[:] = sorted(d for d in dirs if not os.path.islink(os.path.join(root, d)))
 
-            for file in files:
+            for file in sorted(files, key=str.casefold):
                 file_path = os.path.join(root, file)
                 resolved_file_path = str(Path(file_path).resolve())
 
-                if (
-                    resolved_file_path in excluded
-                    or GENERATED_OUTPUT_RE.match(file)
-                    or is_path_excluded(file_path, file_patterns=FILE_EXCLUDES)
-                ):
+                if resolved_file_path in excluded:
+                    skipped["explicit_exclude"] += 1
+                    continue
+                if GENERATED_OUTPUT_RE.match(file):
+                    skipped["generated_inventory"] += 1
+                    continue
+                if is_path_excluded(file_path, file_patterns=FILE_EXCLUDES):
+                    skipped["excluded_pattern"] += 1
+                    continue
+                # A symlink can point outside the requested root and can
+                # change between the existence check and metadata read.
+                if os.path.islink(file_path):
+                    skipped["symlink"] += 1
                     continue
 
                 # Skip broken symlinks or files deleted mid-scan.
                 if not os.path.exists(file_path):
+                    skipped["missing"] += 1
                     if not QUIET_MODE:
                         # v1: print(f"⚠ Skipping missing path: {file_path}", file=sys.stderr)
                         # v2: distinguish a broken symlink (actionable — shows the dead
@@ -410,6 +464,7 @@ def scan_and_enrich(
                 try:
                     file_size = os.path.getsize(file_path)
                 except FileNotFoundError:
+                    skipped["vanished"] += 1
                     if not QUIET_MODE:
                         print(f"⚠ Skipping vanished path: {file_path}", file=sys.stderr)
                     continue
@@ -514,14 +569,39 @@ def scan_and_enrich(
                 if not QUIET_MODE and file_count % 100 == 0:
                     print(f"  ✓ {file_count} files processed...", end="\r")
 
+    rows.sort(key=lambda row: str(row["full_path"]).casefold())
+
     if not QUIET_MODE and file_count > 0:
-        print(f"\n✓ Scan complete: {file_count} files")
+        skipped_text = ", ".join(f"{key}={value}" for key, value in sorted(skipped.items()))
+        suffix = f"; skipped {skipped_text}" if skipped_text else ""
+        print(f"\n✓ Scan complete: {file_count} files{suffix}")
 
     return rows
 
 
-def write_enhanced_csv(output_path: str, rows: list[dict[str, Any]]) -> None:
-    """Write enriched data to CSV."""
+def _report_path(path: str, root: str, *, absolute_paths: bool) -> str:
+    """Return a shareable path representation for a scanned file."""
+    if absolute_paths:
+        return str(path)
+    try:
+        return str(Path(path).relative_to(Path(root)))
+    except ValueError:
+        return Path(path).name
+
+
+def write_enhanced_csv(
+    output_path: str,
+    rows: list[dict[str, Any]],
+    *,
+    absolute_paths: bool = False,
+) -> None:
+    """Write enriched data and a compact duplicate-members sidecar.
+
+    Duplicate paths are intentionally not embedded in every inventory row.
+    Repeating one large member list for every member makes output size
+    quadratic for large groups (especially zero-byte files). The main CSV
+    keeps group identity/count; the sidecar keeps one row per member.
+    """
     if not rows:
         print("⚠ No data to write", file=sys.stderr)
         return
@@ -534,6 +614,8 @@ def write_enhanced_csv(output_path: str, rows: list[dict[str, Any]]) -> None:
         "file_extension", "category", "primary_type", "mime_type", "encoding",
         # Content analysis (C)
         "intelligent_category", "confidence_score", "description", "key_concepts", "content_hash",
+        "duplicate_group", "duplicate_count", "duplicate_paths",
+        "duplicate_basis", "same_filename_in_group",
         "lines_of_code", "complexity_score",
         # Business intelligence (D)
         "predicted_business_value", "integration_potential", "integration_targets", "estimated_effort",
@@ -559,14 +641,146 @@ def write_enhanced_csv(output_path: str, rows: list[dict[str, Any]]) -> None:
             writer = csv.DictWriter(csvfile, fieldnames=columns)
             writer.writeheader()
             for row in rows:
-                writer.writerow({col: sanitize_csv_cell(row.get(col, "")) for col in columns})
+                report_row = dict(row)
+                report_row["original_path"] = (
+                    row.get("original_path", "")
+                    if absolute_paths
+                    else f"root:{Path(row.get('original_path', '')).name}"
+                )
+                report_row["full_path"] = _report_path(
+                    str(row.get("full_path", "")),
+                    str(row.get("original_path", "")),
+                    absolute_paths=absolute_paths,
+                )
+                # Duplicate members are written once each to the sidecar
+                # below. Keep this legacy column empty in the main CSV so
+                # existing consumers can still parse the schema safely.
+                report_row["duplicate_paths"] = ""
+                writer.writerow({col: sanitize_csv_cell(report_row.get(col, "")) for col in columns})
 
         if not QUIET_MODE:
             print(f"✓ Enhanced CSV written: {output_path}")
             print(f"  Columns: {len(columns)}")
             print(f"  Rows: {len(rows)}")
+
+        duplicate_output = str(Path(output_path).with_suffix(".duplicates.csv"))
+        write_duplicate_members_csv(
+            duplicate_output,
+            rows,
+            absolute_paths=absolute_paths,
+        )
     except Exception as e:
         print(f"✗ Error writing CSV: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
+def write_duplicate_members_csv(
+    output_path: str,
+    rows: list[dict[str, Any]],
+    *,
+    absolute_paths: bool = False,
+) -> None:
+    """Write one compact row per duplicate member instead of repeated lists."""
+    columns = [
+        "duplicate_group", "content_hash", "duplicate_count", "duplicate_basis",
+        "same_filename_in_group", "root_id", "relative_path", "absolute_path",
+    ]
+    duplicate_rows = [row for row in rows if row.get("duplicate_group")]
+    duplicate_rows.sort(key=lambda row: (str(row.get("duplicate_group", "")), str(row.get("full_path", "")).casefold()))
+    with open(output_path, "w", newline="", encoding="utf-8") as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=columns)
+        writer.writeheader()
+        for row in duplicate_rows:
+            full_path = str(row.get("full_path", ""))
+            root = str(row.get("original_path", ""))
+            writer.writerow({
+                "duplicate_group": row.get("duplicate_group", ""),
+                "content_hash": row.get("content_hash", ""),
+                "duplicate_count": row.get("duplicate_count", ""),
+                "duplicate_basis": row.get("duplicate_basis", ""),
+                "same_filename_in_group": row.get("same_filename_in_group", ""),
+                "root_id": f"root:{Path(root).name}" if root else "",
+                "relative_path": _report_path(full_path, root, absolute_paths=False),
+                "absolute_path": full_path if absolute_paths else "",
+            })
+    if not QUIET_MODE:
+        print(f"✓ Duplicate members written: {output_path}")
+        print(f"  Rows: {len(duplicate_rows)}")
+
+
+def annotate_duplicates(rows: list[dict[str, Any]]) -> None:
+    """Annotate every row sharing a content hash without duplicating paths."""
+    hash_groups: dict[str, list[dict[str, Any]]] = {}
+    for row in rows:
+        content_hash = row.get("content_hash", "")
+        if content_hash:
+            hash_groups.setdefault(content_hash, []).append(row)
+    for content_hash, group in hash_groups.items():
+        if len(group) < 2:
+            continue
+        duplicate_group = f"sha256:{content_hash[:16]}"
+        same_filename = len({str(item.get("filename", "")) for item in group}) == 1
+        for row in group:
+            row["duplicate_group"] = duplicate_group
+            row["duplicate_count"] = len(group)
+            row["duplicate_paths"] = ""
+            row["duplicate_basis"] = "full_content_sha256"
+            row["same_filename_in_group"] = "yes" if same_filename else "no"
+
+
+def write_scan_summary(
+    output_path: str,
+    rows: list[dict[str, Any]],
+    directories: list[str],
+    summary_path: str,
+    *,
+    absolute_paths: bool = False,
+) -> None:
+    """Write a compact machine-readable summary alongside the CSV."""
+    extensions = Counter(row.get("file_extension", "") or "[none]" for row in rows)
+    categories = Counter(row.get("intelligent_category", "") or "unknown" for row in rows)
+    basic_types = Counter(row.get("category", "") or "unknown" for row in rows)
+    duplicate_groups = {
+        row["duplicate_group"]
+        for row in rows
+        if row.get("duplicate_group")
+    }
+    summary = {
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "scan_roots": (
+            [str(Path(directory).expanduser().resolve()) for directory in directories]
+            if absolute_paths
+            else [f"root:{Path(directory).expanduser().name}" for directory in directories]
+        ),
+        "output_csv": (
+            str(Path(output_path).expanduser().resolve())
+            if absolute_paths
+            else Path(output_path).name
+        ),
+        "row_count": len(rows),
+        "duplicate_group_count": len(duplicate_groups),
+        "duplicate_row_count": sum(1 for row in rows if row.get("duplicate_count", 1) > 1),
+        "sensitive_skipped_count": sum(1 for row in rows if row.get("sensitive_skipped")),
+        "extensions": dict(sorted(extensions.items())),
+        "basic_categories": dict(sorted(basic_types.items())),
+        "intelligent_categories": dict(sorted(categories.items())),
+        "unknown_quality_fields": {
+            "maturity_level": sum(1 for row in rows if row.get("maturity_level") == "unknown"),
+            "review_status": sum(1 for row in rows if row.get("review_status") == "unreviewed"),
+            "status": sum(1 for row in rows if row.get("status") == "unverified"),
+        },
+    }
+    try:
+        summary_file = Path(summary_path).expanduser()
+        summary_file.parent.mkdir(parents=True, exist_ok=True)
+        summary_file.write_text(
+            json.dumps(summary, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        if not QUIET_MODE:
+            print(f"✓ Scan summary written: {summary_file}")
+    except OSError as error:
+        print(f"✗ Error writing scan summary: {error}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -613,6 +827,25 @@ Examples:
         action="store_true",
         help="Include sensitive-looking filenames and content hashes (explicit opt-in)",
     )
+    parser.add_argument(
+        "--follow-root-symlink",
+        action="store_true",
+        help="Allow scan roots that are symlinks",
+    )
+    parser.add_argument(
+        "--summary-output",
+        help="Summary JSON path (default: <output>.summary.json)",
+    )
+    parser.add_argument(
+        "--no-summary",
+        action="store_true",
+        help="Write only the CSV and omit the summary JSON",
+    )
+    parser.add_argument(
+        "--absolute-paths",
+        action="store_true",
+        help="Include absolute filesystem paths in reports (private use only)",
+    )
 
     args = parser.parse_args()
     QUIET_MODE = args.quiet
@@ -628,12 +861,21 @@ Examples:
         folder_name = os.path.basename(os.path.normpath(args.directories[0]))
         output_path = os.path.join(os.getcwd(), f"{folder_name}-meta.csv")
 
+    summary_path = args.summary_output or f"{output_path}.summary.json"
+    excluded_outputs = {output_path}
+    # The duplicate-members sidecar is generated alongside the main CSV and
+    # must also be excluded on reruns to avoid self-indexing.
+    excluded_outputs.add(str(Path(output_path).with_suffix(".duplicates.csv")))
+    if not args.no_summary:
+        excluded_outputs.add(summary_path)
+
     # Scan and enrich, excluding the output so reruns remain stable.
     try:
         rows = scan_and_enrich(
             args.directories,
-            excluded_paths={output_path},
+            excluded_paths=excluded_outputs,
             include_sensitive=args.include_sensitive,
+            follow_root_symlinks=args.follow_root_symlink,
         )
     except ValueError as error:
         print(f"✗ {error}", file=sys.stderr)
@@ -643,8 +885,21 @@ Examples:
         print("✗ No eligible files found to write", file=sys.stderr)
         sys.exit(3)
 
+    # Annotate duplicate content after the scan has collected all hashes.
+    # Every distinct path remains visible; only repeated traversal of the same
+    # resolved path is suppressed earlier.
+    annotate_duplicates(rows)
+
     # Write CSV
-    write_enhanced_csv(output_path, rows)
+    write_enhanced_csv(output_path, rows, absolute_paths=args.absolute_paths)
+    if not args.no_summary:
+        write_scan_summary(
+            output_path,
+            rows,
+            args.directories,
+            summary_path,
+            absolute_paths=args.absolute_paths,
+        )
 
 
 if __name__ == "__main__":

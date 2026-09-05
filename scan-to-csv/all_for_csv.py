@@ -422,7 +422,8 @@ def scan_single_file(fpath: str, enable_metadata: bool, enable_dedup: bool) -> O
 def cleanup_backups(directories: List[str], dry_run: bool = True):
     """
     Analyze and clean up backup files (.bak, .backup_*, ~).
-    Dry-run mode only reports files that would be removed.
+    Dry-run mode only reports files that would be removed. Callers should keep
+    this as the default and require an explicit apply flag for removal.
     """
     print(f"\n🧹 Cleanup backups (dry_run={dry_run})...")
     patterns = [r'.*\.bak$', r'.*\.backup_\d+$', r'.*~$']
@@ -451,9 +452,14 @@ def main():
     parser.add_argument("--no-metadata", action="store_true", help="Skip metadata extraction")
     parser.add_argument("--dedup", action="store_true", help="Enable SHA256 dedup")
     parser.add_argument("--workers", type=int, default=4, help="Parallel workers")
-    parser.add_argument("--cleanup", action="store_true", help="Run backup file cleanup")
+    parser.add_argument("--cleanup", action="store_true", help="Preview backup file cleanup")
+    parser.add_argument(
+        "--apply-cleanup",
+        action="store_true",
+        help="Actually remove backup files selected by --cleanup",
+    )
     parser.add_argument("--csv-enforce", help="CSV file to enforce row limit (suno-937.csv)")
-    parser.add_argument("--dry-run", action="store_true", help="Don't delete, just report")
+    parser.add_argument("--dry-run", action="store_true", help="Compatibility alias for cleanup preview")
     parser.add_argument("--no-excludes", action="store_true", help="Skip exclude patterns (scan everything)")
     args = parser.parse_args()
 
@@ -468,9 +474,12 @@ def main():
         except ImportError:
             pass
 
-    # Analyze/cleanup backups if requested
+    # Cleanup is preview-only unless the user explicitly opts in. This avoids
+    # an accidental destructive action from a remembered command line.
+    if args.apply_cleanup and not args.cleanup:
+        parser.error("--apply-cleanup requires --cleanup")
     if args.cleanup:
-        cleanup_backups(args.directories, dry_run=args.dry_run)
+        cleanup_backups(args.directories, dry_run=not args.apply_cleanup)
 
     # Scan, analyze & format as CSV
     scan_directories(
