@@ -1,4 +1,4 @@
-404: Not Found*.json
+*.json
 suno-476514-*.json
 _archives/*.zip
 *.zip
@@ -16,7 +16,14 @@ __pycache__/
 ENV_D_ANALYSIS_*/
 ENV_D_ZSHRC_COMPARISON_*/
 MULTI_DEPTH_ANALYSIS_*/
-\n# Worktree directory for isolated development environments\n.worktrees/
+# Worktree directory for isolated development environments
+.worktrees/
+.tmp/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+htmlcov/
 OpusReMixClIp/
 __pycache__/
 *.py[cod]

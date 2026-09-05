@@ -44,6 +44,25 @@ This directory contains organized Python projects, tools, scripts, and utilities
 
 ## 🚀 Getting Started
 
+### Verified launcher and tests
+
+Use Python 3.9–3.12:
+
+```bash
+python -m pip install -e '.[dev]'
+python -m pytest tests
+pythons-sort info --all
+pythons-sort run --dry-run function_scanner.py
+```
+
+The launcher lists and runs exact script paths. Standalone scripts have their own
+dependencies and arguments; some still use hardcoded paths. A launcher dry run
+prints the command without importing or executing the selected script. See
+[CLI usage and migration](documentation/CLI.md) for the replacement for the old
+`analyze`, `cleanup`, `dedup`, `organize`, `scan`, `rename`, and `pdf` dispatch.
+
+The organization counts and reports below describe earlier snapshots.
+
 ### For New Users
 1. Browse **[INDEX.md](INDEX.md)** for complete structure
 2. Check **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** for common tasks
