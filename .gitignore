@@ -1,36 +1,118 @@
-*.json
-suno-476514-*.json
-_archives/*.zip
-*.zip
-.DS_Store
-**/.DS_Store
+# ============================================================
+# Secrets / credentials
+# ============================================================
 
-# Python cache
+.env
+.env.*
+!.env.example
+!.env.*.example
+.env.d/
+
+**/clientsecret.json
+**/client_secret.json
+**/client_secrets.json
+**/client_secrets_*.json
+**/*credentials*.json
+
+# Known local credential-bearing files
+**/my_token.py
+
+
+# ============================================================
+# Python runtime / cache
+# ============================================================
+
 __pycache__/
-*.pyc
+**/__pycache__/
+
+*.py[cod]
+*$py.class
 *.pyo
 *.pyd
-.aider*
 
-# Local analysis outputs
-ENV_D_ANALYSIS_*/
-ENV_D_ZSHRC_COMPARISON_*/
-MULTI_DEPTH_ANALYSIS_*/
-# Worktree directory for isolated development environments
-.worktrees/
-.tmp/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+.venv/
+venv/
+
+
+# ============================================================
+# Build / packaging artifacts
+# ============================================================
+
 build/
 dist/
 *.egg-info/
-.pytest_cache/
-htmlcov/
-OpusReMixClIp/
-__pycache__/
-*.py[cod]
-*$py.class
-.venv/
-.env
-.env.d/
+
+
+# ============================================================
+# OS / editor / local AI state
+# ============================================================
+
+.DS_Store
+**/.DS_Store
+
+*.aider*
+.codex-history/
+
+# Keep project instructions/config if intentional.
+# Ignore only machine-local Claude state rather than all .claude content.
+.claude/settings.local.json
+
+.worktrees/
+.tmp/
+
+
+# ============================================================
+# Logs / runtime outputs
+# ============================================================
+
 *.log
-audit-repo.py
+
+OpusReMixClIp/
+
+
+# ============================================================
+# Historical / generated analysis output
+# ============================================================
+
+ENV_D_ANALYSIS_*/
+ENV_D_ZSHRC_COMPARISON_*/
+MULTI_DEPTH_ANALYSIS_*/
+
 repo_audit_log.csv
+
+
+# ============================================================
+# Archives
+# ============================================================
+
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Git LFS should handle intentional media assets instead.
+# Do NOT ignore .mov/.mp4 here if they are deliberately versioned.
+
+
+# ============================================================
+# Specific generated / local files
+# ============================================================
+
+audit-repo.py
+
+
+# ============================================================
+# Legacy/generated JSON policy
+# ============================================================
+
+# TEMPORARY: broad JSON ignore retained from previous policy.
+# Remove this after generated-vs-canonical JSON is classified.
+*.json*
+
+*suno-476514-*.json
